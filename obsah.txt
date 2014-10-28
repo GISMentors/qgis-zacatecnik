@@ -1,0 +1,35 @@
+napady na obsah skoleni
+
+navrhuji vytvořit hrubou kostru a tu postupně zhušťuvat, na konci vypadnou jednotlivé úkony na které vytvoříme slajdy, ukázky.
+
+##co chceme účastníka naučit?
+
+#qgis
+Po dvou dnech si účastník odnese schopnost používat program QGIS.
+Účastník bude rozumět rozdílu QGIS vs ArcMap. Jeho výhody, licence.
+Účastník si nastaví okna mapové kompozice.
+Účastník se bude umět pohybovat v mapovém okně a bude ovládat základní nástroje jako měření.
+Do mapového okna bude umět přidávat standardizované prostorové data [shp,dxf,wms,wfs,wmts,gdb,dbf,txt].
+Účastník si nastaví souřadnicový systém mapového okna (on the fly transformace) a vložených prostorových dat.
+Prostorová data bude umět nastylovat pomocí pravidel.
+Uživatel bude umět vytvořit novou vrstvu SHP, nastavit jí sloupce a datové typy.
+Uživatel bude umět používat editační nástroje jak geometrické tak atributové.
+Účastník si odnese schopnost pracovat v atributové tabulce.
+Účastník bude umět exportovat prostorová data do různých formátů a souřadnicových systémů.
+Mapové dílo bude umět vyexportovat pomocí MapComposeru do různých formátů.
+Bude umět propojovat prostorová data s externími daty pomocí relací [txt,dbf,xls]
+Mapový projekt bude umět zabalit do přenositelného formátu a sdílet jej s kolegy.
+Uživatel se bude orientovat v zásuvných modulech.
+
+#data
+kde oficiálně stáhnout data
+jak se k datům chovat
+souřadnicové systémy
+výměnné formáty
+
+
+##co si účastník odnese
+usb disk s qgisem
+seznam zdrojů dat
+odkazy na informace školení
+informace o dalším vzděl
