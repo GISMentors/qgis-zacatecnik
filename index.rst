@@ -12,6 +12,19 @@ O programu QGIS
    +--------------------------------+
 
 
+Instalace QGIS
+-----------------
+
+.. table::
+   :class: toc
+
+   +--------------------------------+
+   | .. toctree::                   |
+   |   :maxdepth: 2                 |
+   |                                |
+   |   instalation/instalation      |
+   +--------------------------------+
+
 Import dat
 -----------------
 
