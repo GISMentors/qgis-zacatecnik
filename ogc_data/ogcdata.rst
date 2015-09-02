@@ -22,9 +22,8 @@ Nabídka pro načtení vektorové vrstvy se aktivuje v záložce
 \"vrstva/Přidat vektorovou vrstvu\" , nebo ikonou viz [obr 1]
 
 .. figure:: images/qgis_ogc_addvector_icons.png
-            :width: 350px
 
-Obr 1
+   Obr 1
 
 Nejčastější volbou vkládání dat je soubor nebo adresář.
 Volba adresář umožňuje označit složku ve které se nachází vektorová data.
@@ -34,9 +33,8 @@ Vrstvy lze buď označit všechny nebo podržením klávesy ctrl vybrat jen
 požadované vrstvy [obr 2].
 
 .. figure:: images/qgis_ogc_addvector_selectfromfolder.png
-            :width: 350px
-
-Obr 2
+	    
+   Obr 2
 
 Vložení jen jedné vrstvy je možné označením soubor na [obr 1].
 Kliknutím na tlačítko procházet se otevře navigační okno s možností vybrat
@@ -44,9 +42,8 @@ formát vektorových dat [obr 3]. Po potvrzení se označená vrstva načte do
 mapového pole.
 
 .. figure:: images/qgis_ogc_addvector_choose.png
-            :width: 350px
 
-Obr 3
+   Obr 3
 
 Rastrová data
 ^^^^^^^^^^^^^
@@ -55,9 +52,8 @@ Nabídka pro načtení rastrové vrstvy se aktivuje v záložce
 \"vrstva/Přidat rastrovou vrstvu\" , nebo ikonou viz [obr 4]
 
 .. figure:: images/qgis_ogc_addraster_icons.png
-            :width: 350px
 
-Obr 4
+   Obr 4
 
 Nástroj zobrazí okno, kde lze výběrem označit rastrové soubory pro přidání
 do mapy [obr 5]. Podržením klávesy \"ctrl\" je možné vybrat více souborů.
@@ -65,9 +61,8 @@ V pravém spodním rohu se nachází stejně jako u výběru vektorových vrstev
 roletka s podporovanými formáty, pomocí níž lze filtrovat obsah okna.
 
 .. figure:: images/qgis_ogc_addraster_choose.png
-            :width: 350px
-
-Obr 5
+	    
+   Obr 5
 
 
 Výběr souřadnicového systému
@@ -84,9 +79,8 @@ jinou projekcí, měření nebo pro připojování k webovým službám.
 
 
 .. figure:: images/qgis_ogc_set_proj.png
-            :width: 350px
 
-Obr 6
+   Obr 6
 
 
 Síťová data
@@ -120,17 +114,15 @@ V QGISu je správa WMS a WMTS vrstev umístěna do stejného okna. Do správce s
 vstupuje buď ikonkou vlevo, nebo v záložce \"Vrstva/Přidat vrstvu WMS\" [obr 7].
 
 .. figure:: images/qgis_ogc_addwms_icons.png
-            :width: 350px
 
-Obr 7
+   Obr 7
 
 Pokud nejsou ve správci vložené žádné připojení, dá se tak udělat přes
 tlačítko přidat [obr 8].
 
 .. figure:: images/qgis_ogc_addwms_manager.png
-            :width: 350px
 
-Obr 8
+   Obr 8
 
 Přidání a editace připojení služby WMS nebo WMTS probíhá ve formuláři [obr 9].
 Pokud není služba zaheslovaná a nebo není potřeba klást na službu speciální
@@ -139,9 +131,8 @@ jak jej chceme pro vlastní potřebu, a připojovací URL.
 
 
 .. figure:: images/qgis_ogc_addwms_add_edit.png
-            :width: 350px
-
-Obr 9
+	    
+   Obr 9
 
 Pokud je nastaveno připojení ke službě správně, vyberáním požadované služby z
 menu a potvrzením tlačítkem \"Připojit\" proběhne komunikace se serverem.
@@ -170,9 +161,8 @@ jako jedna.
 
 
 .. figure:: images/qgis_ogc_addwms_choose.png
-            :width: 350px
 
-Obr 10
+   Obr 10
 
 Jak bylo zmíňeno, správa WMS a WMTS probíhá ve stejném okně. V předchozím
 kroku bylo ukázáno jak vkládat WMS služby. Pro připojení WMTS služby je
@@ -186,9 +176,8 @@ vybrat jednu vrstvu a potvrdit ok.
 
 
 .. figure:: images/qgis_ogc_addwmts_choose.png
-            :width: 350px
 
-Obr 11
+   Obr 11
 
 Vektorová data
 ^^^^^^^^^^^^^^
@@ -197,27 +186,24 @@ vrstev se aktivuje buď ikonkou vlevo, nebo v záložce
 \"Vrstva/Přidat vrstvu WFS\" [obr 12].
 
 .. figure:: images/qgis_ogc_addwfs_icons.png
-            :width: 350px
-
-Obr 12
+	    
+   Obr 12
 
 Okno správce [obr 13] umožňuje přidání, odebrání služby nebo slouží k výběru
 vrstev.
 
 
 .. figure:: images/qgis_ogc_addwfs_manager.png
-            :width: 350px
 
-Obr 13
+   Obr 13
 
 Formulář přidání nové služby se aktivuje tlačítkem \"Nové\". Ve formuláři [obr 14]
 stačí v případě nezaheslované služby vyplnit pouze URL a pojmenování služby.
 V případě zaheslované služby jsou vyžadovány přihlašovací údaje.
 
 .. figure:: images/qgis_ogc_addwfs_add.png
-            :width: 350px
 
-Obr 14
+   Obr 14
 
 Po potvrzení a připojení ke službě ze správce tlačítkem \"Připojit\" se zobrazí
 poskytované vrstvy WFS serverem [obr 15]. Tak jako v případě WMS lze změnit
@@ -228,6 +214,5 @@ pomocí klávesy \"ctrl\". Potvrzením \"ok\" proběhne přidání vrstev do map
 
 
 .. figure:: images/qgis_ogc_addwfs_choose.png
-            :width: 350px
 
-Obr 15
+   Obr 15

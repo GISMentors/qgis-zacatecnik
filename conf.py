@@ -3,11 +3,14 @@
 import sys
 import os
 
+sys.path.append(os.path.join('..', 'sphinx-template'))
+from utils import get_month_year, get_year
+
 # -- General configuration ------------------------------------------------
 
 # General information about the project.
-project = u'Školení QGIS'
-copyright = u'2014, Vojtěch Dubrovský (GISMentors.eu)'
+project = u'Školení QGIS pro začátečníky'
+copyright = u'2014-%d, Vojtěch Dubrovský (GISMentors.eu)' % get_year()
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -21,7 +24,7 @@ release = '%s alpha' % version
 # -- Options for HTML output ----------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Skoleni-QGIS'
+htmlhelp_basename = 'skoleni-qgis-zacatecnik'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -57,5 +60,7 @@ texinfo_documents = [
      'Miscellaneous'),
     ]
 
-sys.path.append(os.path.join('..', 'sphinx-template'))
 from conf_base import *
+
+todo_include_todos = True
+html_use_index = True

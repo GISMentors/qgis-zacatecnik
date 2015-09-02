@@ -13,9 +13,8 @@ K výběru instalačního souboru se lze dostat proklikem přes hlavní stránku
 `této <http://qgis.org/en/site/forusers/download.html#>`_ stránky.
 
 .. figure:: images/instalation_download_page.png
-            :width: 350px
-
-Obr 1 Stránka stažení instalátoru
+	    
+   Obr 1 Stránka stažení instalátoru
 
 Z webové stránky vyberte verzi kompatibilní s vaším operačním systémem.
 Zda je váš systém 32 bit nebo 64 bit zjistíte otevřením složky \"Počítač\",
@@ -23,15 +22,13 @@ klik pravým tlačítkem do složky, z nabídky vybrat vlastnosti. V novém okv�
 přečíst typ systému.
 
 .. figure:: images/install_pc.png
-            :width: 350px
 
-Obr 2 Složka \"Počítač\"
+   Obr 2 Složka \"Počítač\"
 
 
 .. figure:: images/install_pc_type.png
-            :width: 350px
-
-Obr 3 Typ operačního systému
+	    
+   Obr 3 Typ operačního systému
 
 
 Instalační soubor volíme ze skupiny pro nové uživatele (For New Users).
@@ -50,14 +47,12 @@ Data je možné využít především pro výuku a testování, pokud neplánuje
 využití, nezaškrtávejte během instalace (Obr 5).
 
 .. figure:: images/install_2.png
-            :width: 350px
 
-Obr 4 Volba cesty instalace
+   Obr 4 Volba cesty instalace
 
 .. figure:: images/install_3.png
-            :width: 350px
 
-Obr 5 Datasety k instalaci
+   Obr 5 Datasety k instalaci
 
 
 Pokud proběhla instalace úspěšně, na ploše přibyly dvě ikony.
