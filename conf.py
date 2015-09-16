@@ -3,7 +3,7 @@
 import sys
 import os
 
-sys.path.append(os.path.join('..', 'sphinx-template'))
+sys.path.insert(0, os.path.join('..', 'sphinx-template'))
 from utils import get_month_year, get_year
 
 # -- General configuration ------------------------------------------------
