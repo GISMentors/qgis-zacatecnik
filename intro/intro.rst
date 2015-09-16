@@ -1,23 +1,56 @@
-QGIS
-====
+.. only:: latex
 
-`Quantum GIS <http://qgis.org/en/site/>`_ (zkráceně `QGIS <http://qgis.org/en/site/>`_) je Open Source Geografický Informační Systém.
+   #####
+   Obsah
+   #####
+
+.. only:: html
+                    
+   ****
+   Úvod
+   ****
+
+.. only:: html
+
+   .. image:: images/intro_logo.png
+      :width: 140px
+      :align: left
+
+
+`QGIS <http://qgis.org/en/site/>`_  je Open Source *geografický informační systém*
+(:wikipedia:`GIS`) publikovaný pod všeobecnou licencí GNU GPL.
 Projekt QGIS vznikl v roce 2002, verze s označením 1.0 vyšla však v roce 2009.
-Projekt QGIS je nejrychleji rostoucím Open Source projektem mezi GIS.
-Ke konci roku 2014 výjde verze 2.5, která rozšíří program o další funkcionalitu
-a vyšší stabilitu.
+Mezi hlavní výhody patří zejména rychlost vývoje a rozšiřování jeho funkcionality.
+Tato licence umožňuje používání software i na komerční účely, ale umožňuje i modifikaci zdorjového kódu a jeho následné šíření.
 
-.. figure:: images/intro_logo.png
-   :width: 200px
+Současným konceptem ve vývoji je pravidelné a intenzivní publikování nových verzí.
+Dlouhodobá stabilní verze je doplěna dvěma krátkodobými verzemi.
+
+
+
+.. only:: html
+
+.. tip::
+
+      Text školení je dostupný i v tisknutelné formě `PDF
+      <./skoleni-qgis-zacatecnik.pdf>`_.
    
-   Obr 1
+.. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
+
+.. important:: Školení je zaměřeno na aktuální verzi `QGIS 2.8 Wien
+               <https://www.qgis.org/en/site/forusers/download.html>`_. V
+               jiných verzích není zaručena funkčnost uvedených příkladů. Dále
+               předpokládáme zapnutou *anglickou lokalizaci*, viz
+               :ref:`volba lokalizace <volba-lokalizace>`.
+
+
 
 QGIS je psán v programovacím jazyce C++ a uživatelské prostředí je naprogramováno
 pomocí knihovny Qt. Díky použití těchto rozšířených programovacích prostředků je
 QGIS multiplatformní, tudíž jej lze využívat na většině používaných operačních
 systémech jako je Windows, Linux nebo OS X. QGIS využívá pro práci s prostorovýmy
 daty knihovnu GDAL pro rastrová data a OGR pro vektorová data, díky tomu je možné
-v QGISu otevřít široké spektrum OGC formátů.
+v QGISu pracovat se širokým spektrem OGC, ale i jiných formátů.
 
 .. figure:: images/intro_qgis.png
 
