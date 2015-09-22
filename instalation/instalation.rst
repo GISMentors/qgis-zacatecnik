@@ -1,64 +1,117 @@
-INSTALACE
+Instalace
 =========
+Vývoj QGISu začal v roce 2002 pod názvem *Quantum GIS*. Verze 1.0.0 vyšla v lednu 2009. Později projekt změnil jméno na QGIS. 
+
+.. figure:: images/qgis_versions.png
+	    
+   Úvodní obrazovka verze 1.0.0 a 2.10
 
 Program QGIS je multiplatformní, lze jej tedy nainstalovat na různé operační
-systémy. Následující kapitola popíše kroky pro úspěšné nainstalování QGISu na
-operační systém Windows 7. Postup instalace na operačních systémech Windows
-je vesměs totožné, a tak lze uvedený postup  aplykovat i na jiné verze systém.
+systémy. V současnosti jsou oficiálně podporovány :wikipedia:`MS Windows`, :wikipedia:`Mac OSX`, :wikipedia:`GNU/Linux`, `Android <https://cs.wikipedia.org/wiki/Android_(operační_systém)>`_ (experimentální). V tomto dokmentu je detailně popsán postup instalace pro dvě nejrozšířenější platformy - *MS Windows* a *GNU/Linux*.
 
-Stažení instalačního souboru
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-K výběru instalačního souboru se lze dostat proklikem přes hlavní stránku projektu
-`http://qgis.org/ <http://qgis.org/>`_ nebo z
-`této <http://qgis.org/en/site/forusers/download.html#>`_ stránky.
+GNU/Linux
+=========
+Mám jenom Ubuntu a pro Debian to neodtestuju, neznám Linux terminologii a umím jenom to co si zkusím sama.
 
-.. figure:: images/instalation_download_page.png
+Instalace pro Ubuntu
+--------------------
+
+.. notecmd:: Instalace QGIS
+               
+   .. code-block:: bash
+
+      sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+      sudo apt-get update
+      sudo apt-get install qgis
+
+
+MS Windows
+==========
+
+Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
+
+#. pomocí :ref:`samostaného instalátoru<samostatny-instalator>`
+
+   * *pro začátečníky*
+   * dostupná dlouhodobá stabilní verze, ale i nejnovější (krátkodobá) 
+
+#. v rámci :ref:`OSGeo4W instalátoru <osgeo4w-instalator>`
+
+   * *pro pokročilejší uživatele*
+   * komplexnější řešení umožňující instalaci dalšího softwaru distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
+
+Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS <https://www.qgis.org/en/site/forusers/download.html>`_
+
+.. figure:: images/qgis_windows_download.png
 	    
-   Obr 1 Stránka stažení instalátoru
+   Nabídka instalací pro MS Windows
 
-Z webové stránky vyberte verzi kompatibilní s vaším operačním systémem.
+.. _samostatny-instalator:
+
+Samostatný instalátor
+---------------------
+
+Pokud si uživatel zvolí samostatnou instalaci, tak je nutné aby si vybral již zmíněnou verzi. K dispozici je *dlouhodobá stabilní verze*, nebo *krátkodobá verze*. 
+Krátkodobé verze mají sloužit pro zveřejňování nových funkcionalit v kratších intervalech.
+
+.. tip::
+
+	Pro začínající uživatele je dobré začít nejnovější verzí - není potřeba instalovat dlouhodobou stabilní verzi.
+
+Pak je nutné zvolit instalaci kompatibilní s vaším operačním systémem.
 Zda je váš systém 32 bit nebo 64 bit zjistíte otevřením složky \"Počítač\",
 klik pravým tlačítkem do složky, z nabídky vybrat vlastnosti. V novém okvě lze
 přečíst typ systému.
 
 .. figure:: images/install_pc.png
 
-   Obr 2 Složka \"Počítač\"
+   Složka \"Počítač\"
 
 
 .. figure:: images/install_pc_type.png
 	    
-   Obr 3 Typ operačního systému
+   Typ operačního systému
 
 
-Instalační soubor volíme ze skupiny pro nové uživatele (For New Users).
-Instalační soubor je veliký zhruba 300 MB, stažení může trvat dlouho.
 
-instalace
-^^^^^^^^^
+Proces instalace
+^^^^^^^^^^^^^^^^
 
-Otevřením instalačního souboru začna samotný proces instalace. Instalace QGIS
-nevyžaduje žádné speciální zásahy, a tak je možné jednotlivé kroky po
-nakonfigurování proklikat. Během instalace je vhodné věnovat se dvěma krokům.
-První obrazovkou, keré je potřeba věnovat pozornost, je ta kde se volí cesta
-uložení programu (Obr 4). Druhá obrazovka kde je možno zakročit je volba
-doinstalování testovacích datasetů. Instalace testovacích dat je volitelná.
-Data je možné využít především pro výuku a testování, pokud neplánujete takovéto
-využití, nezaškrtávejte během instalace (Obr 5).
+Po výběru verze k instalaci se tento stáhne a spustí (jako správce).
+Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
+
+.. figure:: images/install_1.png
+
+   Spuštění instalátoru.
 
 .. figure:: images/install_2.png
 
-   Obr 4 Volba cesty instalace
+   Licenční podmínky.
 
 .. figure:: images/install_3.png
 
-   Obr 5 Datasety k instalaci
+   Adresář,kde se QGIS nainstaluje
+
+.. figure:: images/install_4.png
+
+   Volba rozsahu instalace (je možné zvolit i ukázkovou datovou sadu z nabídky).
+
+.. figure:: images/install_5.png
+
+   Dokončení instalace.
 
 
-Pokud proběhla instalace úspěšně, na ploše přibyly dvě ikony.
-\"QGIS Browser\" je program instalovaný v rámci QGIS, jedná se o souborový
-prohlížeč se zaměžením na GIS formáty. V QGIS Browser je možné rychle vytvářet
-nebo manipulovat s různými GIS formáty.
+Pok úspěšné instalaci se na pracovné ploše i v nabídce Start objeví položka QGIS 2.10.1, kterou je možné jednoduše spustit.
+
+.. _osgeo4w-instalator:
+
+OSGeo4W instalátor
+------------------
+
+Pokud si uživatel zvolí tento instalátor, tak se nejedná jenom o instalaci QGISu, ale i dalších součástí jako např. GRASS GIS, SAGA GIS a další. 
+Tento instalátor dovoluje také vybrat si dlouhodobou stabilní, nebo krátkodobou verzi QGISU.
+Instalátor je sestaven podobně jako ten pro samostatnou instalaci QGISu a není potřebné ho popisovat samostatně.
 
 
-\"QGIS Desktop\" bude popsán v další kapitole. Nyní je možné jej zapnout.
+.. note:: Tento způsob instalace není pro zaačátečníky potřebný.
+
