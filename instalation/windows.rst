@@ -1,32 +1,11 @@
-Instalace
-=========
-Vývoj QGISu začal v roce 2002 pod názvem *Quantum GIS*. Verze 1.0.0 vyšla v lednu 2009. Později projekt změnil jméno na QGIS. 
+.. _label: instalace-windows
 
-.. figure:: images/qgis_versions.png
-	    
-   Úvodní obrazovka verze 1.0.0 a 2.10
-
-Program QGIS je multiplatformní, lze jej tedy nainstalovat na různé operační
-systémy. V současnosti jsou oficiálně podporovány :wikipedia:`MS Windows`, :wikipedia:`Mac OSX`, :wikipedia:`GNU/Linux`, `Android <https://cs.wikipedia.org/wiki/Android_(operační_systém)>`_ (experimentální). V tomto dokmentu je detailně popsán postup instalace pro dvě nejrozšířenější platformy - *MS Windows* a *GNU/Linux*.
-
-GNU/Linux
-=========
-Mám jenom Ubuntu a pro Debian to neodtestuju, neznám Linux terminologii a umím jenom to co si zkusím sama.
-
-Instalace pro Ubuntu
---------------------
-
-.. notecmd:: Instalace QGIS
-               
-   .. code-block:: bash
-
-      sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-      sudo apt-get update
-      sudo apt-get install qgis
-
+.. index::
+   single: MS Windows
+   see: MS Windows; Instalace
 
 MS Windows
-==========
+----------
 
 Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 
@@ -49,7 +28,7 @@ Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS <https://www.qgis
 .. _samostatny-instalator:
 
 Samostatný instalátor
----------------------
+=====================
 
 Pokud si uživatel zvolí samostatnou instalaci, tak je nutné aby si vybral již zmíněnou verzi. K dispozici je *dlouhodobá stabilní verze*, nebo *krátkodobá verze*. 
 Krátkodobé verze mají sloužit pro zveřejňování nových funkcionalit v kratších intervalech.
@@ -92,6 +71,8 @@ Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
 
    Adresář,kde se QGIS nainstaluje
 
+.. _nativni-instalator-data:
+
 .. figure:: images/install_4.png
 
    Volba rozsahu instalace (je možné zvolit i ukázkovou datovou sadu z nabídky).
@@ -103,10 +84,14 @@ Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
 
 Pok úspěšné instalaci se na pracovné ploše i v nabídce Start objeví položka QGIS 2.10.1, kterou je možné jednoduše spustit.
 
+.. index::
+   single: OSGeo4W
+   see: OSGeo4W; Instalace
+
 .. _osgeo4w-instalator:
 
 OSGeo4W instalátor
-------------------
+==================
 
 Pokud si uživatel zvolí tento instalátor, tak se nejedná jenom o instalaci QGISu, ale i dalších součástí jako např. GRASS GIS, SAGA GIS a další. 
 Tento instalátor dovoluje také vybrat si dlouhodobou stabilní, nebo krátkodobou verzi QGISU.
@@ -114,4 +99,3 @@ Instalátor je sestaven podobně jako ten pro samostatnou instalaci QGISu a nen�
 
 
 .. note:: Tento způsob instalace není pro zaačátečníky potřebný.
-
