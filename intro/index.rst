@@ -7,17 +7,8 @@ První kroky
 
    ../instalation/index
    prvni_kroky
-   nastaveni_jazyka
 
 
-**************
-Import dat
-**************
-
-.. toctree::
-   :maxdepth: 2
-	      
-   ../ogc_data/ogcdata
 
 
 

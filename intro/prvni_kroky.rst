@@ -40,8 +40,11 @@ Po spuštění programu se objeví standardní pracovní rozhraní systému QGIS
 .. noteadvanced::
 
                 Pokud máte rozpracované projekty v konkrétní verzi a chcete vyskoušet  novou verzi, tak není nutné stávajíci verzi odinstalovat.
+                
                 Jednotlivé verze jsou schopné pracovat vedle sebe. 
                 Navíc jsou schopné přebírat natavení. To například znamená, že pokud používáte určité pluginy tak budou okamžitě dostupné  i v nové verzi. 
+                
+                Platí to i zpětně, když přidáte funkcionalitu v nové verzi, tak je možné ji použít i ve starší verzi (platí pro nástroje kompatibilní pro nainstalované verze).
                 
                 .. figure:: images/qgis_more_versions.png
                             

@@ -82,19 +82,9 @@ plugin \"WFS 2.0\" a pro prohlížení souborů vfk slouží plugin
    :maxdepth: 2
 
    intro/index
+   ogc_data/index
+   misc/index
+   
 
 
 
-
-Import dat
------------------
-
-.. table::
-   :class: toc
-
-   +--------------------------------+
-   | .. toctree::                   |
-   |   :maxdepth: 2                 |
-   |                                |
-   |   ogc_data/ogcdata             |
-   +--------------------------------+
