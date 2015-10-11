@@ -7,6 +7,7 @@ První kroky
 
    ../instalation/index
    prvni_kroky
+   nastaveni_jazyka
 
 
 **************
