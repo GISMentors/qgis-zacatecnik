@@ -8,6 +8,7 @@ První kroky
    ../instalation/index
    prvni_kroky
    popis_rozhrani
+   vektor
 
 
 
