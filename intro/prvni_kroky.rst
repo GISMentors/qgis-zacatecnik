@@ -15,6 +15,8 @@ Spuštění systému QGIS
    
 
 .. figure:: images/qgis_start_win.png
+   :class: small
+   :scale-latex: 50
 
    Spuštění systému QGIS z nabídky Start v MS Windows.
 
@@ -47,8 +49,14 @@ Po spuštění programu se objeví standardní pracovní rozhraní systému QGIS
                 Platí to i zpětně, když přidáte funkcionalitu v nové verzi, tak je možné ji použít i ve starší verzi (platí pro nástroje kompatibilní pro nainstalované verze).
                 
                 .. figure:: images/qgis_more_versions.png
+                   :class: small
+                   :scale-latex: 50
                             
 
                    Výběr z vícero vezí v MS Windows.
-                
+            
+                   
+QGIS projekt
+============
+Aktuální nastavení systému při práci je možné uložit. Takovéto nastavení se ukládá do tzv. projektu. Projekt systému QGIS je standardní soubor s příponou .qgs. Uložení do projektu umožňuje opětovné načtení všech dat i s kompletním nastavením systému.  
                 
