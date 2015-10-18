@@ -6,9 +6,9 @@ To jakým způsobem se data ukládají a co daný způsob přináší za možnos
 
 QGIS s daty pracuje v jejich původním formátu a nepřevádí je. Převod do jiných formátů je možný pomocí knihovny nástrojů.
 
-Pro převod mezi formáty se používá knihovna `GDAL <http://gdal.org/>`_ 
-Přesný seznam podporovaných vektorových formátů i s detailními informacemi je 
-http://gdal.org/ogr_formats.html
+Pro převod mezi formáty se používá knihovna `GDAL <http://gdal.org/>`_.  
+`Zde <http://gdal.org/ogr_formats.html>`_ je dostupný seznam podporovaných vektorových formátů i s doplňujícími informacemi.
+
 
 
 Metadata
