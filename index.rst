@@ -83,6 +83,7 @@ plugin \"WFS 2.0\" a pro prohlížení souborů vfk slouží plugin
 
    intro/index
    ogc_data/index
+   vektor_prace/index
    misc/index
    
 
