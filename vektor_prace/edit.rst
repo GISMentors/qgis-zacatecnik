@@ -46,30 +46,63 @@
 Tvorba nových vrstev a jejich editace
 =====================================
 
-Vytvoření vrstvy a jejích prvků
--------------------------------
+Vytvoření Shapefile vrstvy
+-------------------------
+gi
+Novou vrstvu lze vytovřit pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová Shapefile vrstva`, nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit vrstvu --> Nová Shapefile vrstva`. 
 
-- vytvoření nové vrstvy pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová Shapefile vrstva`
+.. figure:: images/new_layer.png
 
-    - v okně můžeme vybrat bod, linie nebo polygon, zvolit souř. systém vrstvy a přidávat nové atributy atributy
+    Nová vektorová vrstva
+
+
+Při vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový systém vrstvy a pokud je třeba přidáme nové atributy.
+
+Vytváření nového atributu
+
+- Název - název atributu (max. 10 znaků)
+- Typ |selectstring|
     
-- vytvoření a editace nových prvků - spuštění editace vrstvy pomocí tlačítka |mActionToggleEditing| :sup:`Přepnout editaci`
+    - Text (String) - formát buňek je text, nelze použít pro výpočty (max. 255 znaků)
+    - Celé číslo (Intiger) - formát buňek je celé číslo, tedy bez desetinných míst (max. 10 znaků)
+    - Desetinné číslo (Real) - formát buňek je desetinné číslo (max. 10 znaků)
+    - Datum (Date) - formát buňek je datum (max. 20 znaků)
 
-    - |mActionSaveAllEdits| :sup:`Uložit změny vrstvy` - uloží provedené změny do vrstvy
+- Šířka - počet znaků
+- Přesnost - počet desetinných míst
+- pro přidání atributu vrstvy je nutné kliknout na tlačítko |mActionNewAttribute| :item:`Přidat do seznamu atributů` 
+
+Ve spodní části okna máme seznam atributů, které máme ve vrstvě připravené. Atributy lze odstranit označením a kliknutím na tlačítko |mActionDeleteAttribute| :item:`Odstranit atribut`. Automaticky je zde přidaný atribut "id", pokud ho nechceme, lze jej také vymazat.
+
+Pokud máme připraveno, potvrdíme tlačítkem :item:`OK`, v okně zvolíme název vrstvy a adresář, ve kterém se vrstva vytvoří a potvrdíme tlačítkem :item:`Uložit`. Vytvořená vrstva se automaticky nahraje do projektu.
+   
+Editace vrstvy
+--------------   
+   
+Editaci vrstvy spustíme pomocí tlačítka |mActionToggleEditing| :sup:`Přepnout editaci` nebo v hlavním menu :menuselection:`Vrstva --> Přepnout editaci`. Spuštěním režimu editace se aktivují editační funkce v panelu a bude nám umožněno vytvářet nové prvky a jejich atributy, nebo editovat stávající. Vrstva, která je momentálně v režimu editace je v seznamu vrstev znázorěna s editační ikonkou |mActionToggleEditing|.
+
+.. figure:: images/edit_layers_icon.png
+    :scale: 90%
+
+    Znázornění režimu editace vrstvy v seznamu vrstev
+
         
-        - pokud při editaci zapomeneme uložit změny, QGIS se nás sám zeptá při ukončení editace |mActionToggleEditing| :sup:`Přepnout editaci` zda cheme změny uložit
+Režim editace ukončíme opět pomocí tlačítka |mActionToggleEditing| :sup:`Přepnout editaci`. Provedené změny je vhodné průběžně ukládat pomocí ikony |mActionSaveAllEdits| :sup:`Uložit změny vrstvy`. Pokud při editaci zapomeneme uložit změny, QGIS se nás  při ukončení editace zeptá, zda chceme provedené změny uložit či nikoliv.
         
 .. tip:: |mActionAllEdits| :sup:`Aktuální změny` - hromadné ovládání změn a zapínání/vypínaní editací ve vrstvách
 
-bodová vrstva
-^^^^^^^^^^^^^
+Základní editace geometrie
+^^^^^^^^^^^^^^^^^
 
-- vytvoření prvku - |mActionCapturePoint| :sup:`přidat prvek` - přidá bod a můžeme zadat atributy bodu
+bodová vrstva
+.............
+
+- vytvoření prvku - |mActionCapturePoint| :sup:`přidat prvek` - kliknutím přidáme bod a zadáme atributy bodu
 - posun prvku - |mActionMoveFeature| :sup:`přesunout prvek/prvky` - buď přesuneme jeden prvek, více prvků nebo pomocí výběru
 - mazání prvku - odstranit vybrané prvky
 
 liniová vrstva
-^^^^^^^^^^^^^^
+..............
 
 - vytvoření prvku - |mActionCaptureLine| :sup:`přidat prvek` - klikáním vytváříme lomové body (uzly neboli vertexy) linie, pomocí klávesnice :kbd:`backspace` je možné se vrátit se o krok zpět. Pro ukenčení tvorby prvku klikneme pravým tlačítkem a přidáme případné atributy
 - posun prvku - |mActionMoveFeature| :sup:`přesunout prvek/prvky` - buď přesuneme jeden prvek, nebo pomocí výběru více prvků 
@@ -91,7 +124,7 @@ liniová vrstva
     - :guilabel:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na případné místo "překřížení" segmentů (linií)                  
                                            
 polygonová vrstva
-^^^^^^^^^^^^^^^^^
+.................
 
 - vytvoření prvku - |mActionCapturePolygon| :sup:`přidat prvek` - klikáním vytváříme lomové body (uzly neboli vertexy) polygonu, pomocí klávesnice :kbd:`backspace` je možné se vrátit se o krok zpět. Pro ukenčení tvorby prvku klikneme pravým tlačítkem a přidáme případné atributy
 - posun prvku - |mActionMoveFeature| :sup:`přesunout prvek/prvky` - buď přesuneme jeden prvek, nebo více prvků pomocí výběru
@@ -127,13 +160,13 @@ polygonová vrstva
         
         
 Editace atributové tabulky
---------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`), můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy.
 
     - kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty do tabulky
     
-        - v pozdějčích cvičeních si ukážeme jak provádět výpočty atd. pomocí |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
+
         
     - |mActionNewAttribute| :sup:`Nový sloupec` - přidá nový atribut do tabulky
     - |mActionDeleteAttribute| :sup:`Smazat sloupec` - vyvolá nabídku, ze které vybereme sloupce k vymazání
@@ -141,5 +174,6 @@ Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`), 
     
 kalkulátor polí
 ^^^^^^^^^^^^^^^
-|  
+ provádět výpočty atd. pomocí |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
+
 
