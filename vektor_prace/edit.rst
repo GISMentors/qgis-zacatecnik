@@ -16,7 +16,7 @@
    :width: 1.5em
 .. |splitter| image:: ../images/icon/splitter.png
    :width: 1.5em
-.. |mActionReshape| image:: ../images/icon/mActionOpenTable.png
+.. |mActionReshape| image:: ../images/icon/mActionReshape.png
    :width: 1.5em
 .. |mActionMergeFeatures| image:: ../images/icon/mActionMergeFeatures.png
    :width: 1.5em
@@ -51,7 +51,8 @@ Vytvoření Shapefile vrstvy
 Novou vrstvu lze vytovřit pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová Shapefile vrstva`, nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit vrstvu --> Nová Shapefile vrstva`. 
 
 .. figure:: images/new_layer.png
-
+    :scale: 75%
+    
     Nová vektorová vrstva
 
 
@@ -91,27 +92,53 @@ Režim editace ukončíme opět pomocí tlačítka |mActionToggleEditing| :sup:`
 .. tip:: |mActionAllEdits| :sup:`Aktuální změny` - hromadné ovládání změn a zapínání/vypínaní editací ve vrstvách
 
 Základní editace geometrie
-^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-bodová vrstva
-.............
+- |mActionCapturePoint|, |mActionCaptureLine|, |mActionCapturePolygon| :sup:`přidat prvek` - kliknutím vytvoříme prvek (bod), nebo lomové body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku kliknutím pravým tlačítkem a přidáme případné atributy. Při přidávání lomových bodů je možné se vrátit o krok zpět pomocí klávesy :kbd:`backspace`.
 
-- vytvoření prvku - |mActionCapturePoint| :sup:`přidat prvek` - kliknutím přidáme bod a zadáme atributy bodu
-- posun prvku - |mActionMoveFeature| :sup:`přesunout prvek/prvky` - buď přesuneme jeden prvek, více prvků nebo pomocí výběru
+.. figure:: images/edit_polygon.png
+
+    Vytváření nového prvku ve vrstvě polygonů. Pokud by v tomto momentě byla tvorba prvku pravým kliknutím ukončena, polygon by měl tři uzly (tvar trojúhelníku)
+
+- |mActionMoveFeature| :sup:`přesunout prvek/prvky` - tažením přesuneme jeden prvek, nebo více prvků ve výběru
+
+.. figure:: images/edit_polygon_move.png
+
+    Přesun prvku tažením
+    
 - mazání prvku - odstranit vybrané prvky
 
-liniová vrstva
-..............
+- |mActionNodeTool| :sup:`nástroj uzlú` - pomocí nástroje uzlů lze jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením, mazat označením levým klikem a stisknutí klávesy :kbd:'Del'
 
-- vytvoření prvku - |mActionCaptureLine| :sup:`přidat prvek` - klikáním vytváříme lomové body (uzly neboli vertexy) linie, pomocí klávesnice :kbd:`backspace` je možné se vrátit se o krok zpět. Pro ukenčení tvorby prvku klikneme pravým tlačítkem a přidáme případné atributy
-- posun prvku - |mActionMoveFeature| :sup:`přesunout prvek/prvky` - buď přesuneme jeden prvek, nebo pomocí výběru více prvků 
-- editace lomového bodu (změna tvaru) - |mActionNodeTool| :sup:`nástroj uzlú` - lze přesouvat nebo mazat jednotlivé lomové body
-- rozdelění linie - |mActionSplitFeatures| :sup:`rozdělit prvek` - naklikáme "řez" přes místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem, linie se nám v místech průsečíků rozdělí
-- sloučení prvků - |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - výběrem vybereme navazující linie nebo rozdělené linie (z předchozího krku), které chceme spojit
-- změna tvaru linie - |mActionReshape| :sup:`změna tvaru prvku` - obdobně jako při tvorbě nového prvku a rozdělení prvku, lze změnit tvar prvku naklikáním nového tvaru linie přesahující přes linii, kterou cheme měnit - tím změníme průběh linie (ve cvičeních jsme zatím nedělali, ale můžete vyzkoušet)
-- přichytávání kurzoru a tvorba topologicky čisté vrstvy 
+.. figure:: images/edit_polygon_node.png
 
-    - připojení vytvářeného prvku k již vytvořenému prvku lze provést pomocí :guilabel:`přichytávání` (snapping) - :menuselection:`Nastavení --> možnosti přichytávání`
+    Přidání a přesunutí lomového bodu (uzlu, vertexu)
+
+- |mActionSplitFeatures| :sup:`rozdělit objekt` - naklikáme "řez" přes místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem, prvek se nám v místech průsečíků rozdělí
+
+.. figure:: images/edit_polygon_split.png
+
+    Rozdělení polygonu na dva
+
+
+- |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí výběru označíme navazující objekty, které chceme spojit. Při sloučení je třeba zadat atributy "nového" - sloučeného prvku.
+
+.. figure:: images/edit_polygon_merge.png
+
+    Sloučení sousedních polygonů
+
+
+.. note:: TODO:
+
+- |mActionReshape| :sup:`změna tvaru prvku` (linie) - obdobně jako při tvorbě nového prvku a rozdělení prvku, lze změnit tvar prvku naklikáním nového tvaru linie přesahující přes linii, kterou cheme měnit - tím změníme průběh linie (ve cvičeních jsme zatím nedělali, ale můžete vyzkoušet)
+
+- |mActionReshape| :sup:`změna tvaru prvku` (polygon) - obdobně jako při rozdělení prvku, lze změnit tvar prvku naklikáním `řezu`, v tomto případě část s menší plochou bude vymazána - takto můžeme měnit tvar polygonů
+
+Přichytávání (snapping)
+.......................
+
+Připojení vytvářeného prvku k již vytvořenému prvku lze provést pomocí :guilabel:`přichytávání` (snapping) - :menuselection:`Nastavení --> možnosti přichytávání`
+
     - :guilabel:`režim přichytávání...` |selectstring| - pro aktuální vrstvu, všechny vrstvy nebo pomocí pokročílého nastavení pro konkrétní vrstvy
     - :guilabel:`přichytit k` |selectstring| - lomový bod (uzel/vertex), segment (hrana/linie), obojí
     - :guilabel:`tolerance` |selectnumber| - vzdálenost od které se vám kurzor bude k lomovému bodu nebo segmentu přichytávat
@@ -122,19 +149,8 @@ liniová vrstva
         
     - :guilabel:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na případné místo "překřížení" segmentů (linií)                  
                                            
-polygonová vrstva
-.................
 
-- vytvoření prvku - |mActionCapturePolygon| :sup:`přidat prvek` - klikáním vytváříme lomové body (uzly neboli vertexy) polygonu, pomocí klávesnice :kbd:`backspace` je možné se vrátit se o krok zpět. Pro ukenčení tvorby prvku klikneme pravým tlačítkem a přidáme případné atributy
-- posun prvku - |mActionMoveFeature| :sup:`přesunout prvek/prvky` - buď přesuneme jeden prvek, nebo více prvků pomocí výběru
-- editace lomového bodu (změna tvaru) - |mActionNodeTool| :sup:`nástroj uzlú` - lze přesouvat nebo mazat jednotlivé lomové body
-- rozdeleni polygonu - |mActionSplitFeatures| :sup:`rozdělit prvek` - naklikáme `řez` přes místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem, polygon se nám v místech průsečíků rozdělí
-- sloučení prvků - |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - výběrem vybereme navazující polygony nebo rozdělené polygony (z předchozího krku), které chceme spojit
-- změna tvaru polygonu - |mActionReshape| :sup:`změna tvaru prvku` - obdobně jako při rozdělení prvku, lze změnit tvar prvku naklikáním `řezu`, v tomto případě část s menší plochou bude vymazána - takto můžeme měnit tvar polygonů
-- přichytávání kurzoru a tvorba topologicky čisté vrstvy 
-
-    - připojení vytvářeného prvku k již vytvořenému prvku lze provést pomocí :guilabel:`přichytávání` (snapping) - :menuselection:`Nastavení --> možnosti přichytávání`
-    - :guilabel:`režim přichytávání...` |selectstring| - pro aktuální vrstvu, všechny vrstvy nebo pomocí pokročílého nastavení pro konkrétní vrstvy
+    
     
         - pokud chceme mít polygony navazující na sebe, je nutné vybrat :guilabel:`pokročilé nastavení`
         - v pokročilém nastavení, lze parametry nastavit pro každou vrstvu zvlášť, navíc je zde funkce |checkbox| `Avoid intersection`, která zabraňuje polygonům jejich překryv, jednoduše řečeno - po vytvoření navazujícího polygonu můžeme vytvořit polygon přesahující do již existujícího polygonu, tento přesah bude potom automaticky vymazán
