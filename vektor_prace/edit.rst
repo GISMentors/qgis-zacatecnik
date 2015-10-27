@@ -48,7 +48,6 @@ Tvorba nových vrstev a jejich editace
 
 Vytvoření Shapefile vrstvy
 -------------------------
-gi
 Novou vrstvu lze vytovřit pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová Shapefile vrstva`, nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit vrstvu --> Nová Shapefile vrstva`. 
 
 .. figure:: images/new_layer.png
@@ -149,7 +148,7 @@ polygonová vrstva
         
     - :guilabel:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na překryté lomové body a segmenty (v případě nepoužití `Avoid interesection` |checkbox_unchecked|, kdy máte polygony přesahující přes sebe)    
                
-.. tip:: Funkce rozdělení polygonu pomocí linie - |splitter| :sup:`split by lines` ze zásuvného modulu :guilabel:`Digitizing tools`
+.. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter| :sup:`split by lines` ze zásuvného modulu :guilabel:`Digitizing tools`
      
     - nejprve je třeba výběrem označit jak polygon který chceme rozdělit, tak linii, která bude polygon rozdělovat
     - spustíme funkci -> v nabídce |selectstring| vybereme liniovou vrstvu (ve které je vybraný prvek, který bude polygon rozdělovat)
