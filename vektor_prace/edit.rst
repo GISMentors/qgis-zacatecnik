@@ -14,8 +14,6 @@
    :width: 1.5em
 .. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
    :width: 1.5em
-.. |splitter| image:: ../images/icon/splitter.png
-   :width: 1.5em
 .. |mActionReshape| image:: ../images/icon/mActionReshape.png
    :width: 1.5em
 .. |mActionMergeFeatures| image:: ../images/icon/mActionMergeFeatures.png
@@ -106,9 +104,9 @@ Základní editace geometrie
 
     Přesun prvku tažením
     
-- mazání prvku - odstranit vybrané prvky
+.. note:: TODO: - mazání prvku - odstranit vybrané prvky (získat nebo vytvořit ikonku)
 
-- |mActionNodeTool| :sup:`nástroj uzlú` - pomocí nástroje uzlů lze jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením, mazat označením levým klikem a stisknutí klávesy :kbd:'Del'
+- |mActionNodeTool| :sup:`nástroj uzlú` - pomocí nástroje uzlů lze jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením, mazat označením levým klikem a stisknutí klávesy :kbd:`Del`
 
 .. figure:: images/edit_polygon_node.png
 
@@ -121,18 +119,23 @@ Základní editace geometrie
     Rozdělení polygonu na dva
 
 
-- |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí výběru označíme navazující objekty, které chceme spojit. Při sloučení je třeba zadat atributy "nového" - sloučeného prvku.
+- |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí výběru označíme navazující objekty, které chceme spojit. Při sloučení vyskočí okno, ve kterém je možné zadat atributy "nového" - sloučeného prvku. Vychozí hodnota atributů je 'NULL' tedy žádná hodnota.
 
 .. figure:: images/edit_polygon_merge.png
 
     Sloučení sousedních polygonů
 
 
+
+- |mActionReshape| :sup:`změna tvaru prvku` (polygon) - obdobně jako při rozdělení prvku, lze změnit tvar prvku naklikáním `řezu`, v tomto případě část s menší plochou bude vymazána
+
+.. figure:: images/edit_polygon_resh.png
+
+    Změna tvaru polygonu
+
+- |mActionReshape| :sup:`změna tvaru prvku` (linie) - obdobně jako při tvorbě nového prvku a rozdělení prvku, lze změnit tvar prvku naklikáním nového tvaru linie přesahující přes linii, kterou cheme měnit - tím změníme průběh linie
+
 .. note:: TODO:
-
-- |mActionReshape| :sup:`změna tvaru prvku` (linie) - obdobně jako při tvorbě nového prvku a rozdělení prvku, lze změnit tvar prvku naklikáním nového tvaru linie přesahující přes linii, kterou cheme měnit - tím změníme průběh linie (ve cvičeních jsme zatím nedělali, ale můžete vyzkoušet)
-
-- |mActionReshape| :sup:`změna tvaru prvku` (polygon) - obdobně jako při rozdělení prvku, lze změnit tvar prvku naklikáním `řezu`, v tomto případě část s menší plochou bude vymazána - takto můžeme měnit tvar polygonů
 
 Přichytávání (snapping)
 .......................

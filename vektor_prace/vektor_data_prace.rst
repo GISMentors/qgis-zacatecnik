@@ -68,7 +68,7 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie
             
     - :guilabel:`odstupňovaný` - vhodný pro spojité proměnné
         
-            - obdobné jako u předešlého
+            - nastavení obdobné jako u možnosti :guilabel:`kategorizovaný`
             - možnost režimu intervalů a počet tříd
 
     .. figure:: images/symbol_odst.png
@@ -108,4 +108,4 @@ Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít a
 
     Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`, můžeme invertovat výběr. Tedy zruší se aktuální výběr a vytvoří se výběr prvků, které ve výběru nebyly.
     
-    Pomocí nabídky |mActionFilter| v levém dolním rohu lze zvolit filtr zobrazených prvků. Defaultně je nastavený filtr, který zobrazuje všechny prvky ve vrstvě, tedy: |mActionFilter| :item:`Zobrazit všechny prvky`
+    Pomocí nabídky |mActionFilter| v levém dolním rohu lze zvolit filtr zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny prvky ve vrstvě, tedy hodnota: |mActionFilter| :item:`Zobrazit všechny prvky`
