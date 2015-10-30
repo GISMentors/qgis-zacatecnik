@@ -40,6 +40,8 @@
    :width: 1.5em
 .. |splitter| image:: ../images/icon/digitizing_tools/splitter.png
    :width: 1.5em
+.. |plugin| image:: ../images/icon/plugin.png
+   :width: 1.5em
    
 Tvorba nových vrstev a jejich editace
 =====================================
@@ -58,16 +60,16 @@ Při vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový 
 
 Vytváření nového atributu
 
-- Název - název atributu (max. 10 znaků)
-- Typ |selectstring|
+- :item:`Název` - název atributu (max. 10 znaků)
+- :item:`Typ` |selectstring|
     
-    - Text (String) - formát buňek je text, nelze použít pro výpočty (max. 255 znaků)
-    - Celé číslo (Intiger) - formát buňek je celé číslo, tedy bez desetinných míst (max. 10 znaků)
-    - Desetinné číslo (Real) - formát buňek je desetinné číslo (max. 10 znaků)
-    - Datum (Date) - formát buňek je datum (max. 20 znaků)
+    - :option:`Text` (String) - formát buňek je text, nelze použít pro výpočty (max. 255 znaků)
+    - :option:`Celé číslo` (Intiger) - formát buňek je celé číslo, tedy bez desetinných míst (max. 10 znaků)
+    - :option:`Desetinné číslo` (Real) - formát buňek je desetinné číslo (max. 10 znaků)
+    - :option:`Datum` (Date) - formát buňek je datum (max. 20 znaků)
 
-- Šířka - počet znaků
-- Přesnost - počet desetinných míst
+- :item:`Šířka` - počet znaků
+- :item:`Přesnost` - počet desetinných míst
 - pro přidání atributu vrstvy je nutné kliknout na tlačítko |mActionNewAttribute| :item:`Přidat do seznamu atributů` 
 
 Ve spodní části okna máme seznam atributů, které máme ve vrstvě připravené. Atributy lze odstranit označením a kliknutím na tlačítko |mActionDeleteAttribute| :item:`Odstranit atribut`. Automaticky je zde přidaný atribut "id", pokud ho nechceme, lze jej také vymazat.
@@ -92,34 +94,34 @@ Režim editace ukončíme opět pomocí tlačítka |mActionToggleEditing| :sup:`
 Základní editace geometrie
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- |mActionCapturePoint|, |mActionCaptureLine|, |mActionCapturePolygon| :sup:`přidat prvek` - kliknutím vytvoříme prvek (bod), nebo lomové body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku kliknutím pravým tlačítkem a přidáme případné atributy. Při přidávání lomových bodů je možné se vrátit o krok zpět pomocí klávesy :kbd:`backspace`.
+- |mActionCapturePoint|, |mActionCaptureLine|, |mActionCapturePolygon| :sup:`přidat prvek` - kliknutím vytvoříme prvek (bod), nebo lomové body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku kliknutím pravým tlačítkem a přidáme případné atributy. Při přidávání lomových bodů je možné se vrátit o krok zpět pomocí klávesy :kbd:`Backspace` nebo :kbd:`Del`.
 
 .. figure:: images/edit_polygon.png
 
     Vytváření nového prvku ve vrstvě polygonů. Pokud by v tomto momentě byla tvorba prvku pravým kliknutím ukončena, polygon by měl tři uzly (tvar trojúhelníku)
 
-- |mActionMoveFeature| :sup:`přesunout prvek/prvky` - tažením přesuneme jeden prvek, nebo více prvků ve výběru
+- |mActionMoveFeature| :sup:`Přesunout prvek/prvky` - tažením přesuneme jeden prvek, nebo více prvků ve výběru
 
 .. figure:: images/edit_polygon_move.png
 
     Přesun prvku tažením
     
-.. note:: TODO: - mazání prvku - odstranit vybrané prvky (získat nebo vytvořit ikonku)
+.. todo:: (získat nebo vytvořit ikonku) - :sup:`Vymazat vybrané` - smaže vybrané prvky 
 
-- |mActionNodeTool| :sup:`nástroj uzlú` - pomocí nástroje uzlů lze jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením, mazat označením levým klikem a stisknutí klávesy :kbd:`Del`
+- |mActionNodeTool| :sup:`Nástroj uzlú` - pomocí nástroje uzlů lze jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením, mazat označením levým klikem a stisknutí klávesy :kbd:`Del`
 
 .. figure:: images/edit_polygon_node.png
 
     Přidání a přesunutí lomového bodu (uzlu, vertexu)
 
-- |mActionSplitFeatures| :sup:`rozdělit objekt` - naklikáme "řez" přes místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem, prvek se nám v místech průsečíků rozdělí
+- |mActionSplitFeatures| :sup:`Rozdělit objekt` - naklikáme "řez" přes místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem, prvek se nám v místech průsečíků rozdělí
 
 .. figure:: images/edit_polygon_split.png
 
     Rozdělení polygonu na dva
 
 
-- |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí výběru označíme navazující objekty, které chceme spojit. Při sloučení vyskočí okno, ve kterém je možné zadat atributy "nového" - sloučeného prvku. Vychozí hodnota atributů je 'NULL' tedy žádná hodnota.
+- |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí výběru označíme navazující objekty, které chceme spojit. Při sloučení vyskočí okno, ve kterém je možné zadat atributy "nového" - sloučeného prvku. Vychozí hodnota atributů je :option:`NULL` tedy žádná hodnota.
 
 .. figure:: images/edit_polygon_merge.png
 
@@ -127,34 +129,70 @@ Základní editace geometrie
 
 
 
-- |mActionReshape| :sup:`změna tvaru prvku` (polygon) - obdobně jako při rozdělení prvku, lze změnit tvar prvku naklikáním `řezu`, v tomto případě část s menší plochou bude vymazána
+- |mActionReshape| :sup:`Změnit tvar prvků` (polygon) - obdobně jako při rozdělení nebo tvorbě nového prvku, lze naklikáním nového tvaru změnit tvar stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu" vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude část s menší plochou vymazána (:num:`obr. #resh1`).
+
+.. _resh1:
 
 .. figure:: images/edit_polygon_resh.png
 
-    Změna tvaru polygonu
+    Změna tvaru polygonu - zmenšení
+    
+.. figure:: images/edit_polygon_resh2.png
 
-- |mActionReshape| :sup:`změna tvaru prvku` (linie) - obdobně jako při tvorbě nového prvku a rozdělení prvku, lze změnit tvar prvku naklikáním nového tvaru linie přesahující přes linii, kterou cheme měnit - tím změníme průběh linie
+    Změna tvaru polygonu - zvětšení
 
-.. note:: TODO:
+.. figure:: images/edit_line_resh.png
+
+    Změna tvaru linie
 
 Přichytávání (snapping)
 .......................
 
-Připojení vytvářeného prvku k již vytvořenému prvku lze provést pomocí :guilabel:`přichytávání` (snapping) - :menuselection:`Nastavení --> možnosti přichytávání`
+Pro topologicky čistou editaci můžeme pomocí funkce :menuselection:`Nastavení --> Možnosti přichytávání` nastavit přichytávání kurzoru s určitou citlivostí k uzlům či segmentům konkrétních vrstev. Pro aktivaci je nunté vybrat parametr :item:`Přichytit k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem (viz. :num:`obr. #snapvert` a :num:`snapsegm`).
 
-    - :guilabel:`režim přichytávání...` |selectstring| - pro aktuální vrstvu, všechny vrstvy nebo pomocí pokročílého nastavení pro konkrétní vrstvy
-    - :guilabel:`přichytit k` |selectstring| - lomový bod (uzel/vertex), segment (hrana/linie), obojí
-    - :guilabel:`tolerance` |selectnumber| - vzdálenost od které se vám kurzor bude k lomovému bodu nebo segmentu přichytávat
-    - :guilabel:`povolit topologickou editaci` |checkbox| - při aktivaci lze pomocí `nástroje uzlů` posouvat společný lomový bod přichycení (obou prvků najednou!)
+.. figure:: images/snapping.png
     
-        - pokud není aktivní, lomový bod lze oddělit
-        - lze přepínat i mimo vytváření prvků v průběhu editace
+    Základní okono možnosti přichytávání
+
+Jednoduché nastavení přichytávání:
+    
+- :item:`Režim přichytávání...` |selectstring| 
+
+    - :option:`Aktuální vrstva` - přichytávání pouze v rámcí editované vrstvy, ostatní vrstvy ignoruje
+    - :option:`Všechny vrstvy` - přichytávání ke všem vektorovým vrstvám projektu
+    - :option:`Pokročílé` - samostatné nastavení pro jednotlivé vrstvy
+
+- :item:`Přichytit k` |selectstring| 
+    
+    - :option:`Vypnuto` - přichytávání je neaktivní!
+    - :option:`K lomovému bodu` - pouze k lomovým bodům (uzelům/vertexům)(:num:`obr. #snapvert`)
+    - :option:`K segmentu` - pouze k segmentům (hranám/liniím)(:num:`obr. #snapsegm`)
+    - :option:`K lomovému bodu a segmentu` - k obojímu
+    
+- :item:`Tolerance` |selectnumber| - vzdálenost od které se kurzor bude k lomovému bodu nebo segmentu přichytávat, hodnotu lze zadat v mapových jednotkách (vzdálenost na mapě) nebo pixelech (vzdálenost na monitoru)
+
+- :item:`Povolit topologickou editaci` |checkbox| - při aktivaci lze pomocí |mActionNodeTool| :sup:`Nástroj uzlú` posouvat společný lomový bod přichycení obou prvků najednou. Pokud není aktivní, lomový bod lze oddělit
         
-    - :guilabel:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na případné místo "překřížení" segmentů (linií)                  
+- :item:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na případné místo "překřížení" segmentů (linií) 
+
+.. tip:: Nastavení přichytávání lze měnit i v momentě kdy vytváříme prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu (např. :num:`obr. #snapvert` a :num:`snapsegm`).
+
+.. _snapvert:
+
+.. figure:: images/snapping_vertex.png
+    
+    Přichycení kurzoru pouze k lomovému bodu
+
+
+.. _snapsegm:
+
+.. figure:: images/snapping_segment.png
+    
+    Přichycení kurzoru k segmentu
                                            
 
-    
-    
+.. todo:: working on:
+  
         - pokud chceme mít polygony navazující na sebe, je nutné vybrat :guilabel:`pokročilé nastavení`
         - v pokročilém nastavení, lze parametry nastavit pro každou vrstvu zvlášť, navíc je zde funkce |checkbox| `Avoid intersection`, která zabraňuje polygonům jejich překryv, jednoduše řečeno - po vytvoření navazujícího polygonu můžeme vytvořit polygon přesahující do již existujícího polygonu, tento přesah bude potom automaticky vymazán
         
@@ -167,7 +205,7 @@ Připojení vytvářeného prvku k již vytvořenému prvku lze provést pomocí
         
     - :guilabel:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na překryté lomové body a segmenty (v případě nepoužití `Avoid interesection` |checkbox_unchecked|, kdy máte polygony přesahující přes sebe)    
                
-.. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter| :sup:`split by lines` ze zásuvného modulu :guilabel:`Digitizing tools`
+.. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter| :sup:`split by lines` ze zásuvného modulu |plugin| :guilabel:`Digitizing tools`
      
     - nejprve je třeba výběrem označit jak polygon který chceme rozdělit, tak linii, která bude polygon rozdělovat
     - spustíme funkci -> v nabídce |selectstring| vybereme liniovou vrstvu (ve které je vybraný prvek, který bude polygon rozdělovat)
@@ -176,20 +214,17 @@ Připojení vytvářeného prvku k již vytvořenému prvku lze provést pomocí
         - Touto funkcí můžeme nahradit funkci :guilabel:`Avoid intersection` při přichytávání (u linií není možná), nechtěnou část polygonu potom odstraníme. Takto můžeme vytvořit topologicky čistou (bez mezer či přesahů) hranici polygon/linie
         - můžeme takto "vklínit" liniový prvek (cestu, vodní tok, transekt) do polygonu, který tímto rozdělíme na více částí
         
-        
+.. todo:: working on:     
 Editace atributové tabulky
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`), můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy.
 
-    - kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty do tabulky
-    
-
-        
+    - kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty tabulky
     - |mActionNewAttribute| :sup:`Nový sloupec` - přidá nový atribut do tabulky
     - |mActionDeleteAttribute| :sup:`Smazat sloupec` - vyvolá nabídku, ze které vybereme sloupce k vymazání
     
-    
+ 
 kalkulátor polí
 ^^^^^^^^^^^^^^^
  provádět výpočty atd. pomocí |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
