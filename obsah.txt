@@ -4,40 +4,47 @@ navrhuji vytvořit hrubou kostru a tu postupně zhušťuvat, na konci vypadnou j
 
 Struktura skoleni:
 
-uvod do GIS #strucne, jen nutne veci
-    - moznosti GIS #to by se mohlo odvijet od tech tematickych skoleni
-    - data #typy dat, formaty   
+uvod do GIS - strucne, jen nutne veci (podle lidi, jak na tom budou s gisem) - na toto muzeme pouzit skoleni open-source-gis
+
+    - moznosti GIS - nejake priklady z ruznych oboru - potom by se to mohlo odvijet od nejakych tematickych skoleni
+    - data - typy dat, formaty (open-source-gis)  
         - Vektorova data
         - Rastrova data
         - WMS,WFS
-    - souradne systemy #zakladni princip
+    - souradne systemy - zakladni princip (open-source-gis) 
      
-první kroky QGIS
-    - instalace 
-    - pridavani dat
-    - popis prostredi (tlacitka, panely, atd.) #logicky by mohlo byt spise hned pri prvnim spusteni, ale s nahranymi daty to bude nazornejsi)
-    - nastaveni QGIS #vypinani a zapinani zobrazeni panelu, zmena SRS 
+první kroky QGIS - B
 
-Prace s vektorovymi daty 
+    - instalace 
+    - pridavani dat - toto je zatim ze stareho skoleni a myslim ze je to pro nase potreby zbytecne podrobne. Jestli bude cas tak bych tady klidne dal jen zakladni princip pridavani dat (pomoci menu, panelu a browseru), to podrobne jak je ted bych vypsal k jednotlivym kapitolam (vektor k vektoru, rastr k rastrum a wms jako samostatnou kapitolku). Ale to asi az nakonec az bude cas
+    - popis prostredi (tlacitka, panely, atd.) - logicky by mohlo byt spise hned pri prvnim spusteni, ale s nahranymi daty to bude nazornejsi)
+    - nastaveni QGIS - vypinani a zapinani zobrazeni panelu, zmena SRS a dalsi drobnosti 
+
+Prace s vektorovymi daty - O
+
     - symbologie, atributova tabulka, identifikace prvku
     - vytvarení vrstev a jejich prvku, 
     - atributy a jejich editace
-    - atributove a prostorove dotazovani
     - export a import dat (XY data, GPS)
-    - prekryvne operace (clip...), vzdalenostni analyzy (buffer)
+    - atributove (a prostorove dotazovani?) - neco uplne jednoducheho
+    - prekryvne operace (clip...), vzdalenostni analyzy (buffer) - tady mozna jen buffer (pro zacatecniky)
     
-Prace s rastrovymi daty 
-    - barevna interpretace
+Prace s rastrovymi daty
+
+    - barevna interpretace - symbologie
     - analyza povrchu - dem,hs,sklony,orientace
 
 tvorba mapoveho vystupu
+    
     - princip a popis mapoveho kompozitoru
     - tvorba mapove kompozice, 
     - export mapoveho dokumentu
     
-#ostatni
+prip. ostatni - cokoliv, priklady, vychytavky
 - pluginy - princip, a instalace
 - ziskavani a zdroje dat
+
+
 
 
 ##co chceme účastníka naučit?
