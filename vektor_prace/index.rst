@@ -2,6 +2,8 @@
 Práce s vektorovýmy daty
 ************************
 
+.. _vektorova-data-detaily:
+
 .. toctree::
    :maxdepth: 2
 

@@ -29,6 +29,13 @@ Přez ikonku |set_crs| se vyvolá menu pro výběr souřadnicového výběru. Ko
 
     .. important:: Takováto změna se projeví při dalším spuštění systému.
     
+On-the-fly transformace
+^^^^^^^^^^^^^^^^^^^^^^^
+V případě práce s vrstvami, které mají odlišný souřadnicový systém než projekt, tak je ntuné mít povolenou takzvanou "reprojekci" (on the fly transformaci). Toto nastavení je součástí nastavení souřadnicového systému projektu. 
+V případě, že by tato transformace nebyla povolena, tak by se vrstvy s odlišným souřadnicovým systémem nevykreslili v mapovém okně.
+
+Zda je tato transformace povolena je vidět i v stavovém řádku. EPSG kód je doplněn o text "(OTF)".
+    
 .. _sour-system-vrstvy:
 
 Souřadnicový systém nové vrstvy
