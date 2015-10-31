@@ -41,7 +41,8 @@ V první záložce nalezneme základní informace o nahrané vrstvě jako název
 
     Vlastnosti vektorové vrstvy
 
-   
+.. _styl-vrstvy:
+  
 Styl (symbologie) 
 ^^^^^^^^^^^^^^^^^
 
