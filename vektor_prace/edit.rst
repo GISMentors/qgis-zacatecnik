@@ -1,7 +1,7 @@
 .. |selectstring| image:: ../images/icon/selectstring.png
    :width: 2.5em
 .. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 2.5em
+   :width: 1.5em
 .. |checkbox_unchecked| image:: ../images/icon/checkbox_unchecked.png
    :width: 1.5em
 .. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
@@ -31,7 +31,7 @@
 .. |mActionCapturePoint| image:: ../images/icon/mActionCapturePoint.png
    :width: 1.5em
 .. |selectnumber| image:: ../images/icon/selectnumber.png
-   :width: 1.5em
+   :width: 2.5em
 .. |mActionCaptureLine| image:: ../images/icon/mActionCaptureLine.png
    :width: 1.5em
 .. |mActionToggleEditing| image:: ../images/icon/mActionToggleEditing.png
@@ -42,12 +42,16 @@
    :width: 1.5em
 .. |plugin| image:: ../images/icon/plugin.png
    :width: 1.5em
+.. |remove| image:: ../images/icon/remove.png
+   :width: 1.5em
+   
+   
    
 Tvorba nových vrstev a jejich editace
 =====================================
 
 Vytvoření Shapefile vrstvy
--------------------------
+--------------------------
 Novou vrstvu lze vytovřit pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová Shapefile vrstva`, nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit vrstvu --> Nová Shapefile vrstva`. 
 
 .. figure:: images/new_layer.png
@@ -106,9 +110,9 @@ Základní editace geometrie
 
     Přesun prvku tažením
     
-.. todo:: (získat nebo vytvořit ikonku) - :sup:`Vymazat vybrané` - smaže vybrané prvky 
+- |remove| :sup:`Vymazat vybrané` - smaže vybrané prvky 
 
-- |mActionNodeTool| :sup:`Nástroj uzlú` - pomocí nástroje uzlů lze jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením, mazat označením levým klikem a stisknutí klávesy :kbd:`Del`
+- |mActionNodeTool| :sup:`Nástroj uzlú` - pomocí nástroje uzlů lze jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením, mazat označením levým klikem a stisknutí klávesy :kbd:`Backspace` nebo :kbd:`Del`
 
 .. figure:: images/edit_polygon_node.png
 
@@ -129,7 +133,7 @@ Základní editace geometrie
 
 
 
-- |mActionReshape| :sup:`Změnit tvar prvků` (polygon) - obdobně jako při rozdělení nebo tvorbě nového prvku, lze naklikáním nového tvaru změnit tvar stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu" vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude část s menší plochou vymazána (:num:`obr. #resh1`).
+- |mActionReshape| :sup:`Změnit tvar prvků` - obdobně jako při rozdělení nebo tvorbě nového prvku, lze naklikáním nového tvaru změnit tvar stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu" vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude část s menší plochou vymazána (:num:`obr. #resh1`).
 
 .. _resh1:
 
@@ -153,9 +157,7 @@ Pro topologicky čistou editaci můžeme pomocí funkce :menuselection:`Nastaven
 .. figure:: images/snapping.png
     
     Základní okono možnosti přichytávání
-
-Jednoduché nastavení přichytávání:
-    
+ 
 - :item:`Režim přichytávání...` |selectstring| 
 
     - :option:`Aktuální vrstva` - přichytávání pouze v rámcí editované vrstvy, ostatní vrstvy ignoruje
@@ -169,7 +171,7 @@ Jednoduché nastavení přichytávání:
     - :option:`K segmentu` - pouze k segmentům (hranám/liniím)(:num:`obr. #snapsegm`)
     - :option:`K lomovému bodu a segmentu` - k obojímu
     
-- :item:`Tolerance` |selectnumber| - vzdálenost od které se kurzor bude k lomovému bodu nebo segmentu přichytávat, hodnotu lze zadat v mapových jednotkách (vzdálenost na mapě) nebo pixelech (vzdálenost na monitoru)
+- :item:`Tolerance` |selectnumber| - vzdálenost, od které se kurzor bude k lomovému bodu nebo segmentu přichytávat, hodnotu lze zadat v mapových jednotkách (vzdálenost na mapě) nebo pixelech (vzdálenost na monitoru)
 
 - :item:`Povolit topologickou editaci` |checkbox| - při aktivaci lze pomocí |mActionNodeTool| :sup:`Nástroj uzlú` posouvat společný lomový bod přichycení obou prvků najednou. Pokud není aktivní, lomový bod lze oddělit
         
@@ -191,42 +193,38 @@ Jednoduché nastavení přichytávání:
     Přichycení kurzoru k segmentu
                                            
 
-.. todo:: working on:
-  
-        - pokud chceme mít polygony navazující na sebe, je nutné vybrat :guilabel:`pokročilé nastavení`
-        - v pokročilém nastavení, lze parametry nastavit pro každou vrstvu zvlášť, navíc je zde funkce |checkbox| `Avoid intersection`, která zabraňuje polygonům jejich překryv, jednoduše řečeno - po vytvoření navazujícího polygonu můžeme vytvořit polygon přesahující do již existujícího polygonu, tento přesah bude potom automaticky vymazán
-        
-    - :guilabel:`přichytit k` |selectstring| - lomový bod (uzel/vertex), segment (hrana/linie), obojí
-    - :guilabel:`tolerance` |selectnumber| - vzdálenost od které se vám kurzor bude k lomovému bodu nebo segmentu přichytávat
-    - :guilabel:`povolit topologickou editaci` |checkbox| - při aktivaci lze pomocí `nástroje uzlů` posouvat společný lomový bod přichycení (obou prvků najednou!)
+Pokročílý režim přichytávání (:item:`Režim přichytávání...` |selectstring| --> :option:`Pokročílé`)
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+
+.. figure:: images/snapping_adv.png
     
-        - pokud není aktivní, lomový bod lze oddělit
-        - lze přepínat i mimo vytváření prvků v průběhu editace
-        
-    - :guilabel:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na překryté lomové body a segmenty (v případě nepoužití `Avoid interesection` |checkbox_unchecked|, kdy máte polygony přesahující přes sebe)    
-               
-.. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter| :sup:`split by lines` ze zásuvného modulu |plugin| :guilabel:`Digitizing tools`
+    Okno nastavení pokročílého režimu přichytávání
+
+V pokročilém režimu, lze jednotlivé parametry nastavit pro každou vrstvu zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Avoid intersection`, která zabraňuje polygonům jejich překryv, jednoduše řečeno - nový polygon můžeme zakreslit s přesahem do sousedícího polygonu, tento přesah bude potom automaticky vymazán. Takto snadno docílíme čistě navazujících polygonů.
+
+.. figure:: images/snapping_avoid.png
+    
+    Příklad použití :option:`Avoid intersection`. a) bez :option:`Avoid intersection` - polygon se vytvoří tak jak jsme ho zakreslili a překrývá předchozí polygon. Při odstranění nového polygonu bychom viděli opět hranici polygonu jako v prvním kroku. b) :option:`Avoid intersection` - poygon se vytvoří bez překryvu, hranice na sebe čistě navazuje
+                   
+.. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter| :sup:`split by lines` ze zásuvného modulu |plugin| :guilabel:`Digitizing tools`. Touto funkcí můžeme nahradit :option:`Avoid intersection` - u linií není možná. Nechtěnou část polygonu potom ručně odstraníme. Takto můžeme vytvořit topologicky čistou hranici polygon-linie. Také lze takto "vklínit" liniový prvek (cestu, vodní tok, transekt) do polygonu, který tímto rozdělíme na více částí
      
     - nejprve je třeba výběrem označit jak polygon který chceme rozdělit, tak linii, která bude polygon rozdělovat
     - spustíme funkci -> v nabídce |selectstring| vybereme liniovou vrstvu (ve které je vybraný prvek, který bude polygon rozdělovat)
-    - Využití:
-    
-        - Touto funkcí můžeme nahradit funkci :guilabel:`Avoid intersection` při přichytávání (u linií není možná), nechtěnou část polygonu potom odstraníme. Takto můžeme vytvořit topologicky čistou (bez mezer či přesahů) hranici polygon/linie
-        - můžeme takto "vklínit" liniový prvek (cestu, vodní tok, transekt) do polygonu, který tímto rozdělíme na více částí
-        
-.. todo:: working on:     
+
 Editace atributové tabulky
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`), můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy.
+Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`), můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy. V okně atributové tabulky lze editaci ukládat |mActionSaveAllEdits| :sup:`Uložit změny vrstvy` i mazat vybrané prvky |remove| :sup:`Vymazat vybrané`
 
     - kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty tabulky
     - |mActionNewAttribute| :sup:`Nový sloupec` - přidá nový atribut do tabulky
     - |mActionDeleteAttribute| :sup:`Smazat sloupec` - vyvolá nabídku, ze které vybereme sloupce k vymazání
+    - |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
     
- 
-kalkulátor polí
-^^^^^^^^^^^^^^^
+.. todo:: working on:
+Kalkulátor polí
+---------------
  provádět výpočty atd. pomocí |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
 
 

@@ -97,7 +97,8 @@ Na této záložce je nejdříve nutné zaškrtnout políčko :item:`Vytvořit p
 Atributová tabulka
 ------------------
 
-Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít atributovou tabulku` nebo pravým kliknutím vyvoláme kontextové menu a zvolíme :item:`Otevřít atributovou tabulku`. Tato tabulka slouží k prohlížení a editaci atributové složky dat. Kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru. 
+Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít atributovou tabulku` nebo pravým kliknutím vyvoláme kontextové menu a zvolíme :item:`Otevřít atributovou tabulku`. Tato tabulka slouží k prohlížení a editaci atributové složky dat. Kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru. V názvu okna je vypsaný název vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`)
+
 
 .. figure:: images/at_table.png
 
