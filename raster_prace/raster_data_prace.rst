@@ -1,32 +1,28 @@
 .. |mActionAddRasterLayer| image:: ../images/icon/mActionAddRasterLayer.png
    :width: 1.5em
-
 .. |mIconZoom| image:: ../images/icon/mIconZoom.png
    :width: 1.5em
-
 .. |CRS| image:: ../images/icon/CRS.png
    :width: 1.5em
-
 .. |mActionLocalCumulativeCutStretch| image:: ../images/icon/mActionLocalCumulativeCutStretch.png
    :width: 1.5em
-
 .. |mActionFullHistogramStretch| image:: ../images/icon/mActionFullHistogramStretch.png
    :width: 1.5em
-
 .. |symbologyAdd| image:: ../images/icon/symbologyAdd.png
    :width: 1.5em
-
 .. |mActionContextHelp| image:: ../images/icon/mActionContextHelp.png
    :width: 1.5em
-
 .. |symbologyRemove| image:: ../images/icon/symbologyRemove.png
    :width: 1.5em
-
 .. |mActionFileOpen| image:: ../images/icon/mActionFileOpen.png
    :width: 1.5em
-
 .. |mActionFileSave| image:: ../images/icon/mActionFileSave.png
    :width: 1.5em
+.. |checkbox| image:: ../images/icon/checkbox.png
+   :width: 1.5em
+.. |mActionZoomIn| image:: ../images/icon/mActionZoomIn.png
+   :width: 1.5em
+
 
 
 Práca s rastrovými dátami
@@ -101,26 +97,73 @@ Záložka umožňuje nastaviť všeobecnú priehľadnosť, ale taktiež priehľa
 
     .. figure:: images/rst_transparency.png
 
-       Možnosti nastavenia priehľadnosti rastrovej vrstvy
+        Možnosti nastavenia priehľadnosti rastrovej vrstvy
 
-Pyramidy
+Pyramídy
 ^^^^^^^^
 
+Pyramídy sú dátové štruktúry, ktoré typicky obsahujú menšie množstvo dát. Cieľom je znížiť výpočtovú náročnosť pri práci s dátami. Ide o to, že okrem pôvodného rastra v plnom rozlíšení sa vytvorí zjednodušená verzia (kópia s nižším rozlíšením). Na prevzorkovanie sa používajú rôzne metódy, najčastejšie ide o metódu priemerov (*Average*) alebo metódu najbližšieho suseda (Nearest Neighbour). 
+
+.. note:: Oprávnený na takéto úkony je len ten, kto má právo zápisu do adresára s pôvodnými dátami.
+
+.. important:: Je potrebné vedieť, že vytváranie pyramíd môže pozmeniť orginálny raster a preto sa odporúča vytvorenie zálohy pôvodnej bezpyramídovej verzie dát. 
 
 
 Histogram
 ^^^^^^^^^
 
-Metadata
-^^^^^^^^
+QGIS ponúka nástroj na generovanie histogramu rastrovej vrstvy (:num:`obr. #rsthistogram`). Je vytvorený automaticky po kliknutí na voľbu :item:`Vypočítať histogram`. 
+
+    .. _rsthistogram:
+
+    .. figure:: images/rst_histogram.png
+       :class: middle
+
+       Výpočet histogramu rastrovej vrstvy digitálneho výškového modelu terénu
+
+Metaúdaje
+^^^^^^^^^
+Táto záložky by mala poskytovať informácie o danej rastrovej vrstve (ak existujú).  Ide najmä o základný popis dát (nadpis, abstrakt, zoznam kľúčových slov), Url metadát a legendy či iné vlastnosti (ovládač, popis datasetu, veľkosť pixela, súradnicové systémy, rozsah vrstvy, atď.). 
 
 Terénne analýzy
 ---------------
 
-Z digitálneho výškového modelu je možné odvodiť ďalšie informácie o danom území. Ide hlavne o sklon reliéfu a orientáciu svahu voči svetovým stranám.
+Digitálny výškový model terénu je užitočný typ dát, z ktorého je možné odvodiť ďalšie informácie o danom území a tak lepšie vystihnúť charakter skúmaného územia. Ide hlavne o sklon reliéfu a orientáciu svahu voči svetovým stranám.
 
-Hillshade (použitie, význam)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Tieňovaný reliéf (*hillshade*)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ako bolo spomenuté už v časti o nastaveniach transparentnosti rastrových dát, tieňovaný reliéf je využívanou rastrovou vrstvou pri zobrazovaní 2D dát reprezentujúcich 3D javy, pretože s jeho pomocou sa dá dosiahnuť priestorový efekt. Abstraktné informácie o výške terénu v rasti :map:`dmt.tiff` znázorníme  pomocou rastrovej vrstvy tieňovaného reliéfu, tzv. *hillshade*. Ten vytvoríme tak, že z ponuky menu vyberieme :menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`. V dialógovom okne nastavíme názov a cestu k vstupnej (:map:`dmt.tiff`) a výstupnej rastrovej vrstve (:map:`hillshade.tif`), zvolíme režim :item:`Tieňovaný reliéf`, predvolené možnosti režimu teraz nemeníme, zaškrtneme |checkbox| :sup:`Po dokončení načítať do mapového okna` a potvrdíme tlačítkom :item:`OK`. 
+
+.. noteadvanced:: V rámci možností režimu vytvárania tieňovaného reliéfu je možné nastaviť hodnotu zvislého prevýšenia, pomer zvislých a vodorovných jednotiek, azimut či nadmorskú výšku svetla.
+
+Po skončení výpočtu sa v paneli so zoznamom vrstiev objaví novovytvorený tieňovaný reliéf :map:`hillshade`. Aby sme lepšie videli detaily, pomocou |mActionZoomIn| :sup:`Priblížiť` si ohraničíme časť územia. Následne spôsobom, ktorý bol opísaný vyššie nastavíme všeobecnú transparentnosť rastrovej vrstvy :map:`hillshade` na hodnotu :item:`60%`. Dostaneme výsledok znázornený na :num:`obr. #rsthillshade`.
+
+    .. _rsthillshade:
+
+    .. figure:: images/rst_hillshade.png
+       :class: large
+
+       Vytvorenie priestorového efektu dát vďaka tieňovanému reliéfu
+
+.. note:: Rastrová vrstva tieňovaného reliéfu je v menu :item:`Vrstvy` nad vrstvou :map:`dmt.tiff`. Je možné urobiť to opačne, t.j. vrstvu :map:`hillshade` nechať ako podklad a nastaviť transparentnosť digitálneho výškového modelu terénu.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Slope (nastavenie sklonu)
 ^^^^^^^^^^^^^^^^^^^^^^^^^
