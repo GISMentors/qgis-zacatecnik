@@ -9,6 +9,7 @@ Práce s vektorovýmy daty
 
    vektor_data_prace.rst
    edit.rst
+   import_delim.rst
 
 
 
