@@ -13,6 +13,20 @@
 .. |mActionFullHistogramStretch| image:: ../images/icon/mActionFullHistogramStretch.png
    :width: 1.5em
 
+.. |symbologyAdd| image:: ../images/icon/symbologyAdd.png
+   :width: 1.5em
+
+.. |mActionContextHelp| image:: ../images/icon/mActionContextHelp.png
+   :width: 1.5em
+
+.. |symbologyRemove| image:: ../images/icon/symbologyRemove.png
+   :width: 1.5em
+
+.. |mActionFileOpen| image:: ../images/icon/mActionFileOpen.png
+   :width: 1.5em
+
+.. |mActionFileSave| image:: ../images/icon/mActionFileSave.png
+   :width: 1.5em
 
 
 Práca s rastrovými dátami
@@ -40,10 +54,10 @@ Rastrové dáta možno do prostredia QGIS pridať kliknutím na tlačítko |mAct
 Vlastnosti rastrovej vrstvy
 ---------------------------
 
-Na to, aby sme videli a nastavili vlastnosti danej rastrovej vrstvy, použijeme buď ľavý dvojklik na meno vrstvy alebo pravým kliknutím zvolíme z kontextového menu položku :item:`Vlastnosti`. 
+Na to, aby sme videli a nastavili vlastnosti danej rastrovej vrstvy, použijeme buď ľavý dvojklik na meno vrstvy alebo pravým kliknutím zvolíme z kontextového menu položku :item:`Vlastnosti`. Dialógové okno obsahuje šesť záložiek: *Všeobecné*, *Štýl*, *Priehľadnosť*, *Pyramídy*, *Histogram* a *Metadáta*.
 
-Obecné
-^^^^^^
+Všeobecné
+^^^^^^^^^
 
 Prvá záložka poskytuje základné informácie o vrstve ako názov súboru, názov vrstvy v legende s možnosťou editácie, zdroj vrstvy, počet stĺpcov a riadkov, súradnicový referenčný systém, ktorý možno zmeniť kliknutím na tlačítko |CRS| :sup:`Vyberte SRS`. V tejto záložke je možné nastaviť aj viditeľnosť v závislosti na mierke, viď. :num:`obr. #obecneraster`.
 
@@ -76,11 +90,23 @@ Táto záložka slúži na nastavenie farebnosti rastrových dát v mapovom okne
 
        Vylepšenie štýlu rastrovej vrstvy pomocou nástrojovej lišty :item:`Raster`
 
-Průhlednost
-^^^^^^^^^^^
+Priehľadnosť
+^^^^^^^^^^^^
+
+QGIS umožňuje zobrazovať každú vrstvu v mapovom okne s rôznym stupňom priehľadnosti. Má to veľkú výhodu napríklad keď chceme, aby okrem aktuálnej rastrovej vrstvy bola viditeľná aj iná. Typickým príkladom je prekrývanie tieňovaného reliéfu s akoukoľvek farebnou rastrovou vrstvou. Prekrytie a vhodné nastavenie priehľadnosti spôsobí priestorový vzhľad 2D vrstvy. Konkrétnejšie si to ukážeme neskôr.
+
+Záložka umožňuje nastaviť všeobecnú priehľadnosť, ale taktiež priehľadnosť pre každý pixel. V časti o užívateľských nastaveniach transparentnosti (viď. :num:`obr. #rsttransparency` s paletovaným typom vykreslenia pásma pre raster) je možné nastaviť hodnoty pomocou tlačidiel |symbologyAdd| :sup:`Zadať hodnoty ručne` alebo |mActionContextHelp| :sup:`Pridať hodnoty z obrazovky`, ďalej možno |symbologyRemove| :sup:`Odstrániť vybrané riadky`, hodnoty |mActionFileOpen| :sup:`Importovať z` alebo |mActionFileSave| :sup:`Exportovať do` súboru, čo má zmysel hlavne pri detailnejších, časovo náročných prácach. Táto záložka taktiež umožňuje nastavenia pre *no data*.
+
+    .. _rsttransparency:
+
+    .. figure:: images/rst_transparency.png
+
+       Možnosti nastavenia priehľadnosti rastrovej vrstvy
 
 Pyramidy
 ^^^^^^^^
+
+
 
 Histogram
 ^^^^^^^^^
