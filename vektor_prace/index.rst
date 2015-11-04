@@ -1,5 +1,5 @@
 ************************
-Práce s vektorovýmy daty
+Práce s vektorovými daty
 ************************
 
 .. _vektorova-data-detaily:
