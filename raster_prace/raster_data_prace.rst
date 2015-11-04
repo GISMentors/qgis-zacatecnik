@@ -71,7 +71,7 @@ Táto záložka slúži na nastavenie farebnosti rastrových dát v mapovom okne
     .. _stylraster:
 
     .. figure:: images/styl_raster.png
-       :class: large
+       :class: middle
 
        Rôzne štýly tej istej rastovej vrstvy: šedé pásmo (vľavo), pseudofarby (vpravo)
     
@@ -82,7 +82,7 @@ Táto záložka slúži na nastavenie farebnosti rastrových dát v mapovom okne
     .. _stylrstpanel:
 
     .. figure:: images/styl_rst_panel.png
-       :class: large
+       :class: middle
 
        Vylepšenie štýlu rastrovej vrstvy pomocou nástrojovej lišty :item:`Raster`
 
@@ -142,7 +142,7 @@ Po skončení výpočtu sa v paneli so zoznamom vrstiev objaví novovytvorený t
     .. _rsthillshade:
 
     .. figure:: images/rst_hillshade.png
-       :class: large
+       :class: middle
 
        Vytvorenie priestorového efektu dát vďaka tieňovanému reliéfu
 
