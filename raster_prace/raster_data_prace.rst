@@ -22,7 +22,8 @@
    :width: 1.5em
 .. |mActionZoomIn| image:: ../images/icon/mActionZoomIn.png
    :width: 1.5em
-
+.. |mActionShowRasterCalculator| image:: ../images/icon/mActionShowRasterCalculator.png
+   :width: 1.5em
 
 
 Práca s rastrovými dátami
@@ -128,12 +129,20 @@ Táto záložky by mala poskytovať informácie o danej rastrovej vrstve (ak exi
 Terénne analýzy
 ---------------
 
-Digitálny výškový model terénu je užitočný typ dát, z ktorého je možné odvodiť ďalšie informácie o danom území a tak lepšie vystihnúť charakter skúmaného územia. Ide hlavne o sklon reliéfu a orientáciu svahu voči svetovým stranám.
+Digitálny výškový model terénu je užitočný typ dát, z ktorého je možné odvodiť ďalšie informácie o danom území a tak lepšie vystihnúť charakter skúmaného územia. Nástroje pre terénne analýzy a vizualizácie terénu sú dostupné z menu :menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`, viď. :num:`obr. #menudem`. S týmito nástrojmi môžeme odvodiť dátové sady, ktoré neboli úplne evidentné z pôvodného rastra výškopisu. Môže ísť o odvodenie sklonu reliéfu či orientáciu svahu voči svetovým stranám. 
 
-Tieňovaný reliéf (*hillshade*)
+    .. _menudem:
+
+    .. figure:: images/menudem.png
+
+       Nástroje pre terénne analýzy dostupné z menu
+
+.. note:: Nástrojová lišta :item:`Raster` obsahuje okrem možnosti vykonávať terénne analýzy aj nástroje týkajúce sa mapovej algebry, súradnicových systémov, konverzie do iných formátov, orezávanie rastrov, generovanie vrstevníc a iné.
+
+Tieňovaný reliéf (*Hillshade*)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ako bolo spomenuté už v časti o nastaveniach transparentnosti rastrových dát, tieňovaný reliéf je využívanou rastrovou vrstvou pri zobrazovaní 2D dát reprezentujúcich 3D javy, pretože s jeho pomocou sa dá dosiahnuť priestorový efekt. Abstraktné informácie o výške terénu v rasti :map:`dmt.tiff` znázorníme  pomocou rastrovej vrstvy tieňovaného reliéfu, tzv. *hillshade*. Ten vytvoríme tak, že z ponuky menu vyberieme :menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`. V dialógovom okne nastavíme názov a cestu k vstupnej (:map:`dmt.tiff`) a výstupnej rastrovej vrstve (:map:`hillshade.tif`), zvolíme režim :item:`Tieňovaný reliéf`, predvolené možnosti režimu teraz nemeníme, zaškrtneme |checkbox| :sup:`Po dokončení načítať do mapového okna` a potvrdíme tlačítkom :item:`OK`. 
+Ako bolo spomenuté už v časti o nastaveniach transparentnosti rastrových dát, tieňovaný reliéf je využívanou rastrovou vrstvou pri zobrazovaní 2D dát reprezentujúcich 3D javy, pretože s jeho pomocou sa dá dosiahnuť priestorový efekt. Abstraktné informácie o výške terénu v rasti :map:`dmt.tiff` znázorníme  pomocou rastrovej vrstvy tieňovaného reliéfu, tzv. *hillshade*. Ten vytvoríme tak, že z ponuky menu vyberieme :menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`. V dialógovom okne nastavíme názov a cestu k vstupnej (:map:`dmt.tiff`) a výstupnej rastrovej vrstve (:map:`hillshade.tif`), zvolíme režim :item:`Tieňovaný reliéf`, predvolené možnosti režimu ponecháme, zaškrtneme |checkbox| :sup:`Po dokončení načítať do mapového okna` a potvrdíme tlačítkom :item:`OK`. 
 
 .. noteadvanced:: V rámci možností režimu vytvárania tieňovaného reliéfu je možné nastaviť hodnotu zvislého prevýšenia, pomer zvislých a vodorovných jednotiek, azimut či nadmorskú výšku svetla.
 
@@ -148,34 +157,51 @@ Po skončení výpočtu sa v paneli so zoznamom vrstiev objaví novovytvorený t
 
 .. note:: Rastrová vrstva tieňovaného reliéfu je v menu :item:`Vrstvy` nad vrstvou :map:`dmt.tiff`. Je možné urobiť to opačne, t.j. vrstvu :map:`hillshade` nechať ako podklad a nastaviť transparentnosť digitálneho výškového modelu terénu.
 
+Sklon (*Slope*)
+^^^^^^^^^^^^^^^
 
+Jednou z užitočných informácií o teréne je aj sklon, ktorý predstavuje maximálnu zmenu (gradient) výšky medzi susednými bunkami rastra. Rastrovú vrstvu sklonu vygenerujeme obdobne ako tieňovaný reliéf, no použijeme režim :item:`Sklon`. Na :num:`obr. #rstsklon` je znázornený výsledok s farebnou paletou *BrBG*, pričom je použité rozdelenie do 10 rovnakých intervalov.
 
+    .. _rstsklon:
 
+    .. figure:: images/rst_sklon.png
 
+       Rastrová vrstva sklonov reliéfu
 
+Orientácia voči svetovým stranám (*Aspect*)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Na vytvorenie mapy orientácie svahu na svetové strany použijeme režim :item:`Aspekt`.
 
+Použitie rastrovej kalkulačky
+-----------------------------
 
+Pri tvorbe mapy orientácie na svetové strany je lepšie reklasifikovať (rozdeliť) rozsah hodnôt do kategórií sever (1), východ (2), juh (3) a západ (4), pričom sever znamená :item:`0°` a východ :item:`90°`. Jednou z možností je využitie tzv. rastrovej kalkulačky, konkrétne |mActionShowRasterCalculator| :sup:`Raster kalkulátor`. 
 
+Rastrová kalkulačka súvisí s mapovou algebrou. Ide o matematické operácie s rastrovými mapami, ktoré sú akoby matice čísel s priestorovým umiestnením. Pomocou mapovej algebry je možné matematickými, ale i inými operáciami kombinovať viaceré rastrové vrstvy a tým vytvárať nové vrstvy. 
 
+    .. _rstcalculator:
 
+    .. figure:: images/rstcalculator.png
+       :scale: 70%
 
+       Mapová algebra
 
+Ak sme mapu orientácií nazvali :map:`aspect`, výraz bude vyzerať nasledovne: :code:`(("aspect@1"  >= 315)  AND  ("aspect@1" < 45)) * 1 + (("aspect@1"  >= 45)  AND  ("aspect@1" < 135)) * 2 + (("aspect@1"  >= 135)  AND  ("aspect@1" < 225)) * 3 + (("aspect@1"  >= 225)  AND  ("aspect@1" < 315)) * 4`. Reklasifikovanej vrstve následne nastavíme farebnosť a popisy (:num:`obr. #nesw` a :num:`obr. #aspectrecl`).
 
+    .. _nesw:
 
+    .. figure:: images/nesw.png
+       :class: middle
 
+       Reklasifikácia orientácií svahu na svetové strany pomocou mapovej kalkulačky
 
+    .. _aspectrecl:
 
-Slope (nastavenie sklonu)
-^^^^^^^^^^^^^^^^^^^^^^^^^
+    .. figure:: images/aspect_recl.png
 
-Aspect (orientácia na svetové strany)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+       Reklasifikovaná mapa orientácií svahu na svetové strany
 
-Reklasifikácia dát
-------------------
-
-Mapová algebra
---------------
+.. note:: Pri reklasifikáciách sa zvyčajne používa modul GRASS-u :grasscmd:`r.reclass`. Na to je však potrebné nainštalovať zásuvný modul :item:`grass`, ktorý nie je dostupný v každej verzii *QGIS*. Cieľom bolo ukázať, že reklasifikovať sa dá aj bez bez pluginov.
 
 Jednoduchý praktický príklad
 ----------------------------
