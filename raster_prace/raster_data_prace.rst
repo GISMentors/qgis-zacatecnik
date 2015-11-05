@@ -165,6 +165,7 @@ Jednou z užitočných informácií o teréne je aj sklon, ktorý predstavuje ma
     .. _rstsklon:
 
     .. figure:: images/rst_sklon.png
+       :class: middle
 
        Rastrová vrstva sklonov reliéfu
 
@@ -182,7 +183,7 @@ Rastrová kalkulačka súvisí s mapovou algebrou. Ide o matematické operácie 
     .. _rstcalculator:
 
     .. figure:: images/rstcalculator.png
-       :scale: 70%
+       :scale: 60%
 
        Mapová algebra
 
@@ -198,17 +199,33 @@ Ak sme mapu orientácií nazvali :map:`aspect`, výraz bude vyzerať nasledovne:
     .. _aspectrecl:
 
     .. figure:: images/aspect_recl.png
+       :class: middle
 
        Reklasifikovaná mapa orientácií svahu na svetové strany
 
 .. note:: Pri reklasifikáciách sa zvyčajne používa modul GRASS-u :grasscmd:`r.reclass`. Na to je však potrebné nainštalovať zásuvný modul :item:`grass`, ktorý nie je dostupný v každej verzii *QGIS*. Cieľom bolo ukázať, že reklasifikovať sa dá aj bez bez pluginov.
 
-Jednoduchý praktický príklad
-----------------------------
+Generovanie vrstevníc
+---------------------
+
+Z digitálneho modelu terénu sa dá pomocou voľby :menuselection:`Rastr --> Extrakce --> Izolinie` vygenerovať vektorová vrstva izolínií. V dialógovom menu je potrebné nastaviť vstupný a výstupný súbor, hodnotu intervalu medzi vrstevnicami a prípadne názov atribútu vo výslednej vektorovej vrstve. Po spustení výpočtu sa vektorová vrstva automaticky objaví v mapovom okne. Je potrebné nastaviť jej štýl, popis a Ďalšie vlastnosti. Ako môže výsledok vyzerať je na :num:`obr. #izo`. 
+
+    .. _izo:
+
+    .. figure:: images/izo.png
+       :scale: 55%
+
+       Tvorba vektorovej mapy vrstevníc z rastra digitálneho modelu terénu 
+
 
 Zobrazovanie v 3D
 -----------------
 
+Výsledky rastrových dát možno zobraziť v priestore. Umožňuje to plugin :item:`Qgis2threejs`. Inštaluje sa ako ostatné pluginy pomocou :menuselection:`zásuvné moduly --> Spravovať a inštalovať zásuvné moduly`, pričom do poľa :item:`Hledat` zadáme názov požadovaného modulu. Po nainštalovaní modul spustíme z menu ako :menuselection:`Web --> Qgis2threejs`. Objaví sa dialógové okno modulu, kde nastavíme *DEM Layer* na :map:`dmt.tiff`, *Vertical exaggeration* na hodnotu :item:`2` a v paneli *Line* zaškrtneme políčko vedľa novovytvorenej rastrovej vrstvy izolínií. Následne spustíme pomocou :item:`Run`. Výsledok môže vyzerať ako na :num:`obr. #q2t`.
 
+    .. _q2t:
 
-
+    .. figure:: images/q2tmap.png
+       :class: large
+       
+       Digitálny model terénu a vrstevnice s intervalom *25 m* v prostredí web-u 
