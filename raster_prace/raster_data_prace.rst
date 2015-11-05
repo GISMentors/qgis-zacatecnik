@@ -165,6 +165,7 @@ Jednou z užitočných informácií o teréne je aj sklon, ktorý predstavuje ma
     .. _rstsklon:
 
     .. figure:: images/rst_sklon.png
+       :class: middle
 
        Rastrová vrstva sklonov reliéfu
 
@@ -182,7 +183,7 @@ Rastrová kalkulačka súvisí s mapovou algebrou. Ide o matematické operácie 
     .. _rstcalculator:
 
     .. figure:: images/rstcalculator.png
-       :scale: 70%
+       :scale: 60%
 
        Mapová algebra
 
@@ -228,19 +229,3 @@ Výsledky rastrových dát možno zobraziť v priestore. Umožňuje to plugin :i
        :class: large
        
        Digitálny model terénu a vrstevnice s intervalom *25 m* v prostredí web-u 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
