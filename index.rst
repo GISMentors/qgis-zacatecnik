@@ -49,7 +49,7 @@ v QGISu pracovat se širokým spektrem OGC, ale i jiných formátů.
 
 .. figure:: images/intro_qgis.png
 
-   Obr 2
+   Ukázka uživatelského rozhraní QGIS
 
 Program nabízí přehledné uživatelské prostředí. Uživatel má k dispozici širokou
 škálu nástrojů pro prohlížení, modifikaci a export dat.
@@ -59,7 +59,7 @@ náležitostmi. Výsledky je možné exportovat do pdf, nebo obrázku.
 
 .. figure:: images/intro_map.png
 
-   Obr 3
+   Ukázka mapového výstupu vytvořeného v QGIS
 
 QGIS je populární i pro svou rozšiřitelnost pomocí takzvaných \"pluginů\".
 Pluginy jsou dílčí nástroje, které jsou vyvíjeny komunitou kolem QGIS.
@@ -70,7 +70,7 @@ plugin \"WFS 2.0\" a pro prohlížení souborů vfk slouží plugin
 
 .. figure:: images/intro_vfk.png
 
-   Obr 4
+   Ukázka práce s katastrálními daty v QGIS
 
 .. only:: html
              
