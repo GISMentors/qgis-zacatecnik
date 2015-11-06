@@ -10,6 +10,7 @@ Práce s vektorovými daty
    vektor_data_prace.rst
    edit.rst
    import_delim.rst
+   join.rst
 
 
 
