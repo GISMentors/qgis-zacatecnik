@@ -38,7 +38,7 @@ Existují dva způsoby jak mohou být prostorová data v souboru s oddělenými 
     Tabulková data (:num:`obr. #xydata`) převedená do formátu CSV
     
 
-.. note:: Na obrázku :num:`xydata` si můžeme všimnout zápisu desetinných čísel oddělenými čárkou v souboru s hodnotami oddělenými čárkou. V takovém případě musí být hodnota vymezená uvozovkami. Pokud by zde uvozovky nebyly, znamenala by čárka oddělení nového sloupce.
+.. note:: Na obrázku :num:`xydatacsv` si můžeme všimnout zápisu desetinných čísel oddělenými čárkou v souboru s hodnotami oddělenými čárkou. V takovém případě musí být hodnota vymezená uvozovkami. Pokud by zde uvozovky nebyly, znamenala by čárka oddělení nového sloupce.
 
 Import dat
 ----------
@@ -70,7 +70,7 @@ Import se provadí pomocí funkce |mActionAddDelimitedTextLayer| :sup:`Přidat v
     
     - |checkbox| :option:`Oříznout pole` - smaže přebytečné mezery v datech např. na konci nebo začátku záznamu 
     - |checkbox| :option:`Zrušit prázdná pole` - odstraní prázdné sloupce
-    - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou (jako zde :num:`obr. #xydatacsv`)
+    - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou (např. :num:`obr. #xydatacsv`)
     
 - :item:`Definice geometrie`
         
