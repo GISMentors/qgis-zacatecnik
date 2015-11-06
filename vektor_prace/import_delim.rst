@@ -13,7 +13,12 @@
 
 Import dat s oddělenými hodnotami
 =================================
-Data s oddělenými hodnotami (:wikipedia-en:`DSV <delimiter-separated values>`) jsou tabulková data uložená v textovém souboru. V takovém souboru jsou sloupce odděleny specifickým oddělovacím znakem a řádky koncem řádku. Pro oddělení hodnot můžeme použít jakýkoliv znak, ale nejčastěji se stkáváme s hodnotami oddělené čárkou (:wikipedia:`CSV`) nebo tabulátorem (:wikipedia-en:`TSV <Tab-separated_values>`). Soubory tabulkových procesorů lze snadno exportovat do textového souboru s oddělenýmí hodnotami, tyto soubory lze potom prohlížet jak pomocí tabulkových procesorů tak i textových editorů.
+Jestliže máme tabulková data obsahující geografické souřadnice, můžeme tato data poměrně snadno naimportovat a vytvořit z nich vektorovou vrstvu. Při importu pracujeme s daty s oddělenými hodnotami (:wikipedia-en:`DSV <delimiter-separated values>`).
+
+Tabulková data
+--------------
+
+Data s oddělenými hodnotami jsou tabulková data uložená v textovém souboru. V takovém souboru jsou sloupce odděleny specifickým oddělovacím znakem a řádky koncem řádku. Pro oddělení hodnot můžeme použít jakýkoliv znak, ale nejčastěji se stkáváme s hodnotami oddělené čárkou (:wikipedia:`CSV`) nebo tabulátorem (:wikipedia-en:`TSV <Tab-separated_values>`). Soubory tabulkových procesorů lze snadno exportovat do textového souboru s oddělenýmí hodnotami, tyto soubory lze potom prohlížet jak pomocí tabulkových procesorů tak i textových editorů.
 
 Existují dva způsoby jak mohou být prostorová data v souboru s oddělenými hodnotami uložena:
 
@@ -26,6 +31,17 @@ Existují dva způsoby jak mohou být prostorová data v souboru s oddělenými 
     
     Příklad tabulky s vhodnými XY daty
     
+.. _xydatacsv:
+
+.. figure:: images/xydata_csv.png
+    
+    Tabulková data (:num:`obr. #xydata`) převedená do formátu CSV
+    
+
+.. note:: Na obrázku :num:`xydata` si můžeme všimnout zápisu desetinných čísel oddělenými čárkou v souboru s hodnotami oddělenými čárkou. V takovém případě musí být hodnota vymezená uvozovkami. Pokud by zde uvozovky nebyly, znamenala by čárka oddělení nového sloupce.
+
+Import dat
+----------
 
 Import se provadí pomocí funkce |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s odděleným textem`
 
@@ -54,7 +70,7 @@ Import se provadí pomocí funkce |mActionAddDelimitedTextLayer| :sup:`Přidat v
     
     - |checkbox| :option:`Oříznout pole` - smaže přebytečné mezery v datech např. na konci nebo začátku záznamu 
     - |checkbox| :option:`Zrušit prázdná pole` - odstraní prázdné sloupce
-    - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou
+    - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou (jako zde :num:`obr. #xydatacsv`)
     
 - :item:`Definice geometrie`
         
