@@ -20,6 +20,15 @@
    :width: 1.5em
 .. |as_svg| image:: ../images/icon/mActionSaveAsSVG.png
    :width: 1.5em
+.. |up| image:: ../images/icon/symbologyUp.png
+   :width: 1.5em
+.. |down| image:: ../images/icon/symbologyDown.png
+   :width: 1.5em
+.. |add| image:: ../images/icon/symbologyAdd.png
+   :width: 1.5em  
+.. |remove| image:: ../images/icon/symbologyRemove.png
+   :width: 1.5em 
+   
    
 Tvorba mapového výstupu
 =======================
@@ -29,15 +38,13 @@ Systém QGIS dokáže pracovat s různými formáty a také je zobrazovat v mapo
        :class: large
        :scale-latex: 80
  
-       Mapové okno zobrazující vícero vrstev a popisky.
+       Mapové okno zobrazující vrstvy dle jejich stylování.
        
     .. figure:: images/composer_output.png
        :class: large
        :scale-latex: 80
  
        Ukázka výstupu z Map Composeru.
-       
-TODO: udělat hezčí výstup.
 
 Map Composer umožňuje vytvořit z dat výstup v běžně používaných formátech. Takovýmto způsobem je možné prezentovat jednotlivá data, jejich kombinaci, nebo výseldky různých analýz i bez potřeby speciálních systémů.
 
@@ -126,15 +133,41 @@ Obsah legendy je možné upravovat podobným způsobem jako  ostatní prvky (:it
 
 Lze zde však upravit i jednotlivé položky legendy, ubrat, přidat novou, změnit text i zařazení jednotlivých položek v rámci  legendy samotné. 
 
- TODO: přidat obrazek k nastavování položek legendy
+    .. figure:: images/composer_legend.png
+       :class: large
+       :scale-latex: 80
+ 
+       Přidaná legenda a úprava jejich položek
 
     .. tip:: Pokud upravujete legendu, tak se může stát, že se změnami nebudete spokojeni. V případě, že nechcete změny opravovat nazpátek ručně, můžete legendu vygenerovat z dat znova pomocí tlačítka :item:`Update all`
+
+
+Přidání tabulky
+^^^^^^^^^^^^^^^
+
+V některých případech je vhodné umístit do mapového výstupu i část atributové tabulky. Tuto lze přidat pomocí tlačítka |add_attributes|. 
+
+Všeobecná nastavení tabulky a jejího vzhledu se nachází v části :item:`Item properties`. Pokud je v projektu přidáno vícero vrstev, které mají atributovou tabulku, tak se nastaví zdrojová vrstva pro atributovou tabulku do mapového výstupu. 
+
+    .. figure:: images/composer_table.png
+       :class: large
+       :scale-latex: 80
+ 
+       Atributová tabulka vybrané vrstvy přidaná v mapovém výstupu.
+       
+Úprava samotné tabulky se nachází pod tlačítkem :item:`Attributes...`. V tomto menu jsou 2 základní části. V první části se manipuluje s atributy. Zde se vyberou všechny atributy, které se v tabulce mají zobrazit |add| |remove|, jejich pořadí |up| |down|, může se zde nastavit titulek pro atribut, ale i zarovnávání hodnot.
+
+V druhé části se nastavuje řazení dat v tabulce. Řazení se řídí definovanými pravidly. Každé pravidlo musí obsahovat atribut podle kterého se tabulka bude řadit a typ řazení (sestupně nebo vzestupně). Takto nadefinované pravidlo se pak tlačítkem |add| přidá do seznamu pravidel. Jednotlivá pravidla se vypisují do pole pod sebe. Jejich pořadí je možné měnit a ovlivnit tak přesné vypsání tabulky do mapového výstupu.
+       
+    .. figure:: images/attribute_setting.png
+ 
+       Nastavení zobrazení atributové tabulky v mapovém výstupu.
  
 Další prvky
 ^^^^^^^^^^^
 Jako součást mapového výstupu se běžně používají i další prvky.
 
-Měřítko je možné přidat pomocí ikony |add_scale|, dále lze přidat směrovou šipku |add_arrow|, obrázek |add_image| nebo atributovou tabulku |add_attributes|.
+Měřítko je možné přidat pomocí ikony |add_scale|, dále lze přidat směrovou šipku |add_arrow| nebo obrázek |add_image|.
 
     
 Export mapového výstupu
