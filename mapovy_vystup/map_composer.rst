@@ -163,11 +163,26 @@ V druhé části se nastavuje řazení dat v tabulce. Řazení se řídí defino
  
        Nastavení zobrazení atributové tabulky v mapovém výstupu.
  
+Přidání směrové šipky
+^^^^^^^^^^^^^^^^^^^^^ 
+
+Do mapového výstupu lze přidat také směrovou šipku - pomocí ikony |add_arrow|. Směrová šipka  může být vykreslena různou symbologii. Výběr symbologie a další nastavení jsou dostupné v záložce :item:`Item properties`. Lze zde ponechat defaultní styl směrové šipky, kdy se vykresluje jednoduchá šipka. Je možné použít i složitější nastavení - například použít vlastní svg symboly pro začátek a konec šipky. 
+
+    .. figure:: images/arrow.png
+ 
+       Detailní nastavení směrové šipky.
+
+TODO: zeptat se jak detailně popisovat výběra tvorbu symbologie.       
+
+       
+
+ 
+ 
 Další prvky
 ^^^^^^^^^^^
 Jako součást mapového výstupu se běžně používají i další prvky.
 
-Měřítko je možné přidat pomocí ikony |add_scale|, dále lze přidat směrovou šipku |add_arrow| nebo obrázek |add_image|.
+Měřítko je možné přidat pomocí ikony |add_scale| nebo obrázek |add_image|.
 
     
 Export mapového výstupu
