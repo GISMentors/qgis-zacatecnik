@@ -6,3 +6,5 @@ Tvorba mapového výstupu
    :maxdepth: 2
 
    map_composer.rst
+   map_elements.rst
+   export.rst
