@@ -55,9 +55,38 @@ Velikost výřezu a jeho polohu lze měnit pomocí tahání za jeho hrany nebo u
  
            Výřez s obsahem mapového okna a jeho detailní nastavení.
            
-Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu mapového okna. Překreslení dle pozměněného mapového oknaje možné v detailu prvku :item:`Item properties` v části :item:`Main properties` pomocí tlačítka :item:`Update preview`. Lze použít také další nástroje.
+Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu mapového okna. Překreslení dle pozměněného mapového oknaje možné v detailu prvku :item:`Item properties` v části :item:`Main properties` pomocí tlačítka :item:`Update preview`. V této části též lze nastavit přesné měřítko mapového okna. 
 
-TODO: překreslení jinými funkcemi
+V části :item:`Extent` lze přesně nadefinovat rozsah mapového okna v souřadnicovém systému mapového projektu. Pomocí tlačítek lze také nastavit extent z mapového okna :item:`Set to map canvas extent`, nebo naopak zobrazit nadefinovaný extent v mapovém okně :item:`View extent in map canvas`.
+
+    .. figure:: images/map_main_properties.png
+       :class: small
+       :scale-latex: 30
+ 
+       Nastavení měřítka a extentu pro mapové okno.
+       
+Častou součástí mapového výřezu je i souřadnicová mřížka - grid s popisem souřadnic. Grid lze přidat a nastavit v položce :item:`Grids`. Lze nastavit styl gridu (linie, křížky, jiné symboly, jenom rám se souřadnicemi) a dále nastavit interval a styl vykreslování.
+
+    .. tip:: Pro grid lze definovat souřadnicový systém odlišný od projektu.
+
+    .. figure:: images/map_coordinates.png
+
+       Mapové okno s gridem a souřadnicemi.
+       
+    .. figure:: images/map_grids.png
+       :class: small
+       :scale-latex: 30
+        
+       Nastavení gridu pro mapové okno.
+ 
+Nastavení popisků gridu je umístěno v části :item:`Draw coordinates`. Lze nastavit formát vystupu, počet desetinných míst font i barvu.
+Popisky jsou rozděleny do jednotlivých částí mapového okna (levá, pravá, horní, dolní). Každou stranu lze nastavit samostatně - zda se zobrazuje, pozici vůči rámu, orientaci a řazení.
+
+    .. figure:: images/map_decoration.png
+       :class: small
+       :scale-latex: 30
+ 
+       Nastavení zobrazování popisových souřadnic gridu.
 
 
 Titulek
