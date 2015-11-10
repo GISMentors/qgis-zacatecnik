@@ -1,13 +1,65 @@
-Přidávání prostorových dat
-==========================
+Přidávání a export prostorových dat
+===================================
 
 QGIS podporuje široké spektrum prostorových dat. Prostorová data můžeme
 rozdělit podle způsobu uložení na lokální a distribuovaná (síťová).
 V obouch kategoriích se následně vyskytují data rastrová a vektorová.
-Následující kapitoly se snaží čtenáře seznámit s možnostmi vkládání
-prostorových dat do programu QGIS. Kapitoly postihují nejčastější základní
-formáty a připojení dat. Do programu QGIS je možné ať od základu nebo pomocí
-rozšíření vkládat široké spektrum dat, jež nemůže bý obsaženo.
+V této kapitole jsou popsány základní principy připojení a exportu prostorových dat v prgramu QGIS.
+Práce s konkrétními formáty budou potom uvedeny v samostatných kapitolách.
+
+Přidávání dat
+-------------
+
+Data lze přidat pomocí hlavního menu :menuselection:`Vrstva --> Přidat vrstvu-->...`. Na základě vybraného typu dat se nám zobrazí konkrétní dialogové okno s nastavením importu dat.
+
+.. _addlayer:
+
+.. figure:: images/addlayer_menu.png
+
+    Menu přidávání vrstev
+
+.. noteadvanced:: Jak jde vidět na obrázku :num:`addlayer`, u většiny typů dat ůze pro přdiání využít klávesové zkratky
+
+Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu :option:`Spravovat vrstvy`
+
+.. figure:: images/addlayer.png
+
+    nástrojový panel pro přidávání vrstev :option:`Spravovat vrstvy`
+    
+Další možností je přidat data pomocí vestavěného datového katalogu (prohlížeče souborů) a to buď dvojitým kliknutím nebo jednoduchým přetažením souboru do mapového okna nebo okna vrstev (:num:`obr. #browser`). Stisknutím kláves :kbd:`CTRL` a :kbd:`SHIFT` můžeme vybrat a přidat přetažíním více souborů najednou. Pomocí datového katalogu lze také procházet a přidávat soubory přímo z archivu zip.
+
+    .. tip:: pomocí přetažení lze přidat data také přímo ze správce souborů v operačním systému
+
+.. _browser:
+
+.. figure:: images/qgis_ogc_addbrowser.png
+    
+    Přidání vrstvy přetažením souboru do mapového okna nebo seznamu vrstev
+
+
+
+Export dat
+----------
+Pro export vrstvy nebo její částí se používá funkce :menuselection:`Uložit jako...`. Funkci můžeme spustit dvěma způsobi:
+
+V seznamu vrstev označíme vrstvu, kterou chceme exportovat. Spustíme funkci z hlavního menu :menuselection:`Vrstva --> Uložit jako...`
+
+.. figure:: images/saveas.png
+
+    Spuštění exportu z hlavního menu
+
+Elegantnější a rychlejší způsob je spuštění exportu ze seznamu vrstev. Pravým kliknutím na vrstvu vyvoláme kontextové menu a vybereme :menuselection:`Uložit jako...`
+
+.. figure:: images/layer_saveas.png
+    :scale: 90%
+    
+    Spuštění exportu z kontextového menu v seznamu vrstev
+
+
+Jak exportovat konkrétní data se dovzíme v jednotlivých kapitolách
+
+
+.. todo:: následující podkapitoly upravit a rozdělit do konkrétních kapitol, pro síťová data vytvořit novou kapitolu
 
 Lokální data
 ------------
