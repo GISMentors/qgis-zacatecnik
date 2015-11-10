@@ -10,7 +10,22 @@
    :width: 1.5em
 .. |log| image:: ../images/icon/mIconInfo.png
    :width: 1.5em
-   
+.. |mActionZoomOut| image:: ../images/icon/mActionZoomOut.png
+   :width: 1.5em
+.. |mActionZoomIn| image:: ../images/icon/mActionZoomIn.png
+   :width: 1.5em
+.. |mActionZoomLast| image:: ../images/icon/mActionZoomLast.png
+   :width: 1.5em
+.. |mActionZoomNext| image:: ../images/icon/mActionZoomNext.png
+   :width: 1.5em
+.. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
+   :width: 1.5em
+.. |mActionZoomFullExtent| image:: ../images/icon/mActionZoomFullExtent.png
+   :width: 1.5em
+.. |mActionPan| image:: ../images/icon/mActionPan.png
+   :width: 1.5em
+.. |mActionRefresh| image:: ../images/icon/mActionRefresh.png
+    :width: 1.5em
 Popis rozhraní
 --------------
 Po zpuštění systému QGIS se zobrazí standardní rozhraní. 
@@ -98,5 +113,18 @@ V menu se nachází zejména nástroje pro správu systému a jeho nastavení.
 
     .. tip:: Nastavení systému je možné změnit přes :menuselection:`Settings --> Options...`. Prvním důležitým nastavením je volba souřadnicového systému - záložka :item:`CRS`. Zde se nastaví souřadnicový systém  pro nový projekt a zvlášť pro novou vrstvu.
     
-Nástrojová lišta obsahuje základní nástroje pro práci s projektem a vrstvami.
+Nástrojová lišta obsahuje základní nástroje pro práci s projektem a vrstvami. Vypínání a zapínání jednotlivých nástrojových lišt a oken lze provádět pravým kliknutím na panel a výběrem z nabídky
+
+Základní nástroje pro pohyb v okně 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- |mActionZoomIn| :sup:`Přiblížit``, |mActionZoomOut| :sup:`Oddálit` - přiblíží/oddálí vybranou oblast, pro přibližovaní bez vybrání oblasti lze použít i kolečko myši
+- |mActionZoomLast| :sup:`Zvětšit podle posledního výřezu`, |mActionZoomNext| :sup:`Přiblížit na další` - lze vrátit na předchozí stav přiblížení a zpět
+- |mActionZoomToLayer| :sup:`Přiblížení na vrstvu` - přiblíží na rozsah vybrané vrstvy
+- |mActionZoomFullExtent| :sup:`Přiblížení na všechny vrstvy` - přiblíží na všechny vrstvy v projektu
+- |mActionPan| :sup:`Posun mapy` - umožňí posun v mapovém okně tažením, tato funkce lze nahradit stisknutím kolečka myši a následným tažením
+        .. tip:: při posunu pomocí stiknutí kolečka myši můžeme mít aktivní jinou funkci např výběr, vytváření nových prvků atd.
+- |mActionRefresh| :sup:`Obnovit` - obnoví zobrazení všech nahraných dat
+
+
     
