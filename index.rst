@@ -84,6 +84,7 @@ plugin \"WFS 2.0\" a pro prohlížení souborů vfk slouží plugin
    intro/index
    vektor_prace/index
    raster_prace/index
+   sitova_data/index
    mapovy_vystup/index
    misc/index
 
