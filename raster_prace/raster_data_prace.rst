@@ -48,6 +48,8 @@ Rastrové dáta možno do prostredia QGIS pridať kliknutím na tlačítko |mAct
 
 .. tip:: V prípade potreby pridržaním klávesy :kbd:`Ctrl` v dialógu vyberania súborov možno súčasne nahrať viacero vrstiev naraz.
 
+.. todo:: přidat export (Uložit jako...) a popsat možnosti exportu
+
 Vlastnosti rastrovej vrstvy
 ---------------------------
 
