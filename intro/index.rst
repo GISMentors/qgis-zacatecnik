@@ -8,7 +8,6 @@ První kroky
    ../instalation/index
    prvni_kroky
    popis_rozhrani
-   vektor
    ../ogc_data/ogcdata
 
 

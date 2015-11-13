@@ -93,6 +93,20 @@ Na této záložce je nejdříve nutné zaškrtnout políčko :item:`Vytvořit p
 
 .. noteadvanced:: Jako zdroj popisků lze použít i vzorec a to buď přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru |mIconExpression|
 
+Metadata
+^^^^^^^^
+Základní metadata vektorové vrstvy jemžné získat pravým kliknutím na vrstu. V kontextovém menu se nachází položka :item:`Properties`. V záložce :item:`Metadata` jsou v různých záložkách uložené informace o dané vrstvě.
+
+.. figure:: images/vector_metadata.png
+   :scale-latex: 80
+
+   Příklad výpisu metadat vrstvy typu ESRI shapefile.
+
+.. figure:: images/postgis_metadata.png
+   :scale-latex: 80
+
+   Příklad výpisu metadat vrstvy typu Postgis.
+   
 
 Atributová tabulka
 ------------------
