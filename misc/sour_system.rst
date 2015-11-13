@@ -31,7 +31,7 @@ Přez ikonku |set_crs| se vyvolá menu pro výběr souřadnicového výběru. Ko
     
 On-the-fly transformace
 ^^^^^^^^^^^^^^^^^^^^^^^
-V případě práce s vrstvami, které mají odlišný souřadnicový systém než projekt, tak je ntuné mít povolenou takzvanou "reprojekci" (on the fly transformaci). Toto nastavení je součástí nastavení souřadnicového systému projektu. 
+V případě práce s vrstvami, které mají odlišný souřadnicový systém než projekt, tak je nutné mít povolenou takzvanou "reprojekci" (on the fly transformaci). Toto nastavení je součástí nastavení souřadnicového systému projektu. 
 V případě, že by tato transformace nebyla povolena, tak by se vrstvy s odlišným souřadnicovým systémem nevykreslili v mapovém okně.
 
 Zda je tato transformace povolena je vidět i v stavovém řádku. EPSG kód je doplněn o text "(OTF)".
@@ -43,4 +43,4 @@ Souřadnicový systém nové vrstvy
 Pokud budete vytvářet novou vrstvu, nebo přidávat novou vrstvu bez definovaného souř. systému, tak je možné určit jim předdefinovaný souřadnicový systém.
 
 Toto nastavení je dostupné v :menuselection:`Settings --> Options...` záložka :item:`CRS` v části :item:`CRS for new layers`.
-Lze zvolit konkrétní souřadnicový systém (stejný postup jako u :ref:`projektu <sour-system>`), vynutit si pokaždé dotaz pro adání nebo vztáhnout nastavení k aktuálnímu projektu.
+Lze zvolit konkrétní souřadnicový systém (stejný postup jako u :ref:`projektu <sour-system>`), vynutit si pokaždé dotaz pro zadání nebo vztáhnout nastavení k aktuálnímu projektu.

@@ -22,7 +22,7 @@ QGIS se spustí v lokalizaci dle nastavení operačního systému.
 
           Lokalizace QGIS v českém jazyce.
 
-Lokalizaci je však možné nastavi menu :menuselection:`Settings --> Options...` záložka :item:`Locale`
+Lokalizaci je však možné nastavit z menu :menuselection:`Settings --> Options...` záložka :item:`Locale`
 
 .. figure:: images/set_language.png
 

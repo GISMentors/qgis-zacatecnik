@@ -3,7 +3,7 @@
    
 Map composer
 ============
-Systém QGIS dokáže pracovat s různými formáty a také je zobrazovat v mapovém okně. V případě, že je zapotřebí obrazový výstup, který zachová nastavení zobrazování vrstev, tak je nutné využít samostatný nástroj *Map Composer*. Důvodem je, že všechna nastavení -  reference na vrstvy, stylování, popisky a další, se sice ukládají do *.qgs* projektu, ale ten je přenosisetlný pouze do QGIS systému.
+Systém QGIS dokáže pracovat s různými formáty a také je zobrazovat v mapovém okně. V případě, že je zapotřebí obrazový výstup, který zachová nastavení zobrazování vrstev, tak je nutné využít samostatný nástroj *Map Composer*. Důvodem je, že všechna nastavení -  reference na vrstvy, stylování, popisky a další, se sice ukládají do *.qgs* projektu, ale ten je přenositelný pouze do QGIS systému.
 
     .. figure:: images/map_window.png
        :class: large
@@ -17,7 +17,7 @@ Systém QGIS dokáže pracovat s různými formáty a také je zobrazovat v mapo
  
        Ukázka výstupu z Map Composeru.
 
-Map Composer umožňuje vytvořit z dat výstup v běžně používaných formátech, jakými jsou např. *.pdf, .png, .jpeg* a další. Takovýmto způsobem je možné prezentovat jednotlivá data, jejich kombinaci, nebo výseldky různých analýz i bez potřeby speciálních systémů.
+Map Composer umožňuje vytvořit z dat výstup v běžně používaných formátech, jakými jsou např. \*.pdf, \*.png, \*.jpeg* a další. Takovýmto způsobem je možné prezentovat jednotlivá data, jejich kombinaci, nebo výsledky různých analýz i bez potřeby speciálních systémů.
 
 
 Composer manager

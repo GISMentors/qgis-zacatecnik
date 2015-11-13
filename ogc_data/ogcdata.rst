@@ -23,17 +23,17 @@ Data lze přidat pomocí hlavního menu :menuselection:`Vrstva --> Přidat vrstv
 
     Menu přidávání vrstev
 
-.. noteadvanced:: Jak jde vidět na obrázku :num:`addlayer`, u většiny typů dat ůze pro přdiání využít klávesové zkratky
+.. noteadvanced:: Jak jde vidět na obrázku :num:`addlayer`, u většiny typů dat lze pro přidání využít klávesové zkratky.
 
 Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu :option:`Spravovat vrstvy`
 
 .. figure:: images/addlayer.png
 
-    nástrojový panel pro přidávání vrstev :option:`Spravovat vrstvy`
+    Nástrojový panel pro přidávání vrstev :option:`Spravovat vrstvy`
     
-Další možností je přidat data pomocí vestavěného datového katalogu (prohlížeče souborů) a to buď dvojitým kliknutím nebo jednoduchým přetažením souboru do mapového okna nebo okna vrstev (:num:`obr. #browser`). Stisknutím kláves :kbd:`CTRL` a :kbd:`SHIFT` můžeme vybrat a přidat přetažíním více souborů najednou. Pomocí datového katalogu lze také procházet a přidávat soubory přímo z archivu zip.
+Další možností je přidat data pomocí vestavěného datového katalogu (prohlížeče souborů) a to buď dvojitým kliknutím nebo jednoduchým přetažením souboru do mapového okna nebo okna vrstev (:num:`obr. #browser`). Stisknutím kláves :kbd:`CTRL` a :kbd:`SHIFT` můžeme vybrat a přidat přetažením více souborů najednou. Pomocí datového katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 
-    .. tip:: pomocí přetažení lze přidat data také přímo ze správce souborů v operačním systému
+    .. tip:: Pomocí přetažení lze přidat data také přímo ze správce souborů v operačním systému.
 
 .. _browser:
 
@@ -61,18 +61,18 @@ Elegantnější a rychlejší způsob je spuštění exportu ze seznamu vrstev. 
     Spuštění exportu z kontextového menu v seznamu vrstev
 
 
-Jak exportovat konkrétní data se dovzíme v jednotlivých kapitolách
+Jak exportovat konkrétní data se dozvíme v jednotlivých kapitolách.
 
 Výběr souřadnicového systému
 ----------------------------
 
-Při vkládání rastrových nebo vektorových dat se může stát, že po potvrzení výběru je vyžedována specifikace souřadnicového systému vkládaných dat (:num:`obr. #srs`). Okno se zobrazí v případě, pokud vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému, jako například ESRI Shapefile bez souboru končícího příponou prj \*.prj. V okně výběru je možné vyhledat pomocí filtru požadovanou projekci. Zvolení správné projekce je velice důležité pro překrývání více vrstev s jinou projekcí, měření nebo pro připojování k webovým službám.
+Při vkládání rastrových nebo vektorových dat se může stát, že po potvrzení výběru je vyžedována specifikace souřadnicového systému vkládaných dat (:num:`obr. #srs`). Okno se zobrazí v případě, pokud vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému, jako například ESRI Shapefile bez souboru končícího příponou \*.prj. V okně výběru je možné vyhledat pomocí filtru požadovanou projekci. Zvolení správné projekce je velice důležité pro překrývání více vrstev s jinou projekcí, měření nebo pro připojování k webovým službám.
 
 .. _srs:
 
 .. figure:: images/qgis_ogc_set_proj.png
 
-   Volba souřadnicového systému, při vkládání dat
+   Volba souřadnicového systému při vkládání dat
 
 
 .. tip:: Po přidání dat můžeme zkontrolovat jejich pozici v prostoru pomocí funkce |mActionZoomToLayer| :sup:`Přiblížení na vrstvu`, nebo  pomocí funkce |mActionZoomFullExtent| :sup:`Přiblížit na rozměry okna` pozici vůči ostatním vrstvám projektu. Změnu špatně zvoleného systému lze provést ve vlastnostech dané vrstvy v záložce :item:`Obecné`.

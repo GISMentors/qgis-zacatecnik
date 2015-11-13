@@ -25,7 +25,7 @@
 
 Prvky mapového výstupu
 ----------------------
-Mapový výstup může obsahovat různé součásti (mapové pole, legenda, titulek, měřítko a jiné). Nastavení celého výstupu je popsáno kro po kroku až po export výstupu.
+Mapový výstup může obsahovat různé součásti (mapové pole, legenda, titulek, měřítko a jiné). Nastavení celého výstupu je popsáno krok po kroku až po export výstupu.
 
     .. figure:: images/composer_plain.png
        :class: large
@@ -99,8 +99,8 @@ Jednotlivá nastavení  pro obsah tohoto pole jsou opět dostupná přes zálož
 
 Legenda
 ^^^^^^^
-Další obvyklou součástí mapového výstupu je legenda. Ta má popisovat jednotlivé prvky, které jsou zbrazovány.
-Přidání legendy do mapového výstupu je možné pomocí ikonky |add_legend|. Umístění položky legendy do mapového okna se proveden stejně jako u předchozích položek.
+Další obvyklou součástí mapového výstupu je legenda. Ta má popisovat jednotlivé prvky, které jsou zobrazovány.
+Přidání legendy do mapového výstupu je možné pomocí ikonky |add_legend|. Umístění položky legendy do mapového okna je proveden stejně jako u předchozích položek.
 
 Obsah legendy je vygenerován v momentě jejího umístění a je vygenerován z nastavení stylů jednotlivých vrstev zobrazovaných v mapovém okně.
 
