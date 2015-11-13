@@ -16,7 +16,7 @@
 (:wikipedia:`GIS`) publikovaný pod všeobecnou licencí GNU GPL.
 Projekt QGIS vznikl v roce 2002, verze s označením 1.0 vyšla však v roce 2009.
 Mezi hlavní výhody patří zejména rychlost vývoje a rozšiřování jeho funkcionality.
-Tato licence umožňuje používání software i na komerční účely, ale umožňuje i modifikaci zdorjového kódu a jeho následné šíření.
+Tato licence umožňuje používání software i na komerční účely, ale umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
 
 Současným konceptem ve vývoji je pravidelné a intenzivní publikování nových verzí.
 Dlouhodobá stabilní verze je doplěna dvěma krátkodobými verzemi.

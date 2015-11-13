@@ -94,8 +94,8 @@ OSGeo4W instalátor
 ==================
 
 Pokud si uživatel zvolí tento instalátor, tak se nejedná jenom o instalaci QGISu, ale i dalších součástí jako např. GRASS GIS, SAGA GIS a další. 
-Tento instalátor dovoluje také vybrat si dlouhodobou stabilní, nebo krátkodobou verzi QGISU.
+Tento instalátor dovoluje také vybrat si dlouhodobou stabilní, nebo krátkodobou verzi QGISu.
 Instalátor je sestaven podobně jako ten pro samostatnou instalaci QGISu a není potřebné ho popisovat samostatně.
 
 
-.. note:: Tento způsob instalace není pro zaačátečníky potřebný.
+.. note:: Tento způsob instalace není pro začátečníky potřebný.

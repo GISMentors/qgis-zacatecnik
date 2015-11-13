@@ -29,9 +29,9 @@
 Popis rozhraní
 --------------
 Po zpuštění systému QGIS se zobrazí standardní rozhraní. 
-Na obrázku níže jsou označeny základní části sytému.
+Na obrázku níže jsou označeny základní části systému.
 
-.. tip:: Vzhled sysytému QGIS je možné jednoduše měnit dle potřeb. Zobrazování jednotlivých nástrojů je možné upravit a přizpůsobit si tak pracovní prostředí. Pokud budete rozšiřovat funkčnost systému, tak je dobré si vhodně umístit nové nástroje.
+.. tip:: Vzhled systému QGIS je možné jednoduše měnit dle potřeb. Zobrazování jednotlivých nástrojů je možné upravit a přizpůsobit si tak pracovní prostředí. Pokud budete rozšiřovat funkčnost systému, tak je dobré si vhodně umístit nové nástroje.
 
 .. figure:: images/menu_description.png
    :class: large

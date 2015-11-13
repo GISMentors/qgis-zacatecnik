@@ -53,7 +53,7 @@ Po spuštění programu se objeví standardní pracovní rozhraní systému QGIS
                    :scale-latex: 50
                             
 
-                   Výběr z vícero vezí v MS Windows.
+                   Výběr z vícero verzí v MS Windows.
             
                    
 QGIS projekt
