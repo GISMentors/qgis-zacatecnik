@@ -48,7 +48,29 @@ Rastrové dáta možno do prostredia QGIS pridať kliknutím na tlačítko |mAct
 
 .. tip:: V prípade potreby pridržaním klávesy :kbd:`Ctrl` v dialógu vyberania súborov možno súčasne nahrať viacero vrstiev naraz.
 
-.. todo:: přidat export (Uložit jako...) a popsat možnosti exportu
+Export rastrových údajov
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Vďaka knižnici GDAL (Geospatial Data Abstraction Library) je možné čítanie a zápis rastrových GIS formátov v prostredí QGIS. Pre všetky podporované dátové formáty využíva knižnica jednoduchý dátový model. 
+
+Existuje množstvo rastrových formátov, ktoré sú zvyčajne odlíšené podľa prípony súborov. Síce QGIS umožňuje import a zobrazenie veľkého množstva rôznych formátov, exportovať sa dá len do niektorých z nich. 
+
+Dáta možno exportovať dvomi spôsobmi. Ak potrebujeme vrstvu uložiť (exportovať) v tom istom formáte, lebo pracujeme napríklad len s časťou záujmového územia, použijeme voľbu :item:`Uložiť ako`. Nájdeme ju pravým kliknutím myši na mapu v paneli vrstiev (:num:`obr. #saveasmenu`). Objaví sa dialógové okno, kde sa dá nastaviť režim výstupu (surové dáta alebo vykreslený obrázok), názov, súradnicový systém, rozsah, rozlíšenie, možnosti vytvorenia a ďalšie parametre novej exportovanej vrstvy.
+
+    .. _saveasmenu:
+
+    .. figure:: images/saveasmenu.png
+       :class: small
+   
+       Export rastrovej vrstvy pomocou :item:`Uložiť rastrovú vrstvu ako ... `
+
+Ak chceme ... 
+
+ 
+
+
+
+
 
 Vlastnosti rastrovej vrstvy
 ---------------------------
