@@ -15,7 +15,8 @@ Pro převod mezi formáty se používá knihovna `GDAL <http://gdal.org/>`_.
 
 .. toctree::
    :maxdepth: 2
-
+   
+   vektor_import.rst
    vektor_data_prace.rst
    edit.rst
    import_delim.rst
