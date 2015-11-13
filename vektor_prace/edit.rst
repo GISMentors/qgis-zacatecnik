@@ -222,9 +222,49 @@ Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`), 
     - |mActionDeleteAttribute| :sup:`Smazat sloupec` - vyvolá nabídku, ze které vybereme sloupce k vymazání
     - |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
     
-.. todo:: working on:
+.. todo:: dopsat kalkulátor polí
+
 Kalkulátor polí
 ---------------
- provádět výpočty atd. pomocí |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
+Pomocí funkce |mActionCalculateField| :sup:`Otevřít kalkulátor polí` můžeme zadáním výrazu provádět výpočty na základě existujících hodnot v atributové tabulce, nebo funkcí (např. výpočet rozlohy polygonu). Výsledek výrazu můžeme nechat zapsat do nového sloupce, do virtuálního sloupce, nebo lze aktualizovat již existující sloupec.
+
+.. figure:: images/field_calc.png
+    
+    Okno kalkulačky polí
+
+Nejdříve je nutné nastavit zda chceme výsledek zapsat do nového pole, virtuálního pole, nebo pouze aktualizovat existující pole.
+
+
+- :item:`Vytvořit nové pole` |checkbox| - vytvoří nové pole, zde je třeba definovat parametry nového atributu
+    
+    - :item:`Vytvořit virtuální pole` |checkbox| - vytvoří virtuální pole, které se při každé změně automaticky aktualizuje. Nevýhodou může být, že se pole neukládá do zdrojových dat, ale pouze do souboru projektu
+    
+- :item:`Aktualizovat existující pole` |checkbox| - přepíše hodnoty ve vybraném poli
+
+    - |selectstring| - vybereme z nabídky vrstvu, kterou cheme přepsat
+ 
+Nyní můžeme přejít k zadání vlastního výrazu - záložka :item:`Výraz`. 
+
+- levá část okna (:item:`Výraz`) je prostor zadání výrazu, v horní části máme několik tlačítek s vybranými operátory a ve spodní části potom náhled výstupu. 
+
+.. figure:: images/field_calc_exp.png
+    :scale: 80%
+
+    okno pro zápis výrazu
+
+
+.. todo:: dokončit
+
+- pravá část okna (:item:`Funkce`) slouží k rychlému zadání funkcí nebo parametrů do výrazu, v pravé čáasti se k vybrané funkci/parametru zobrazuje nápověda. Požadované položky lze vyhledat pomocí filtru nebo můžeme prohledat různé kategorie. Při zadávání parametru pole nebo hodnoty pole (:option:`Pole a hodnoty`) je možné nechat si zobrazit všechny hodnoty (tlačítko: :item:`všechny jedinečné hodnoty`) nebo prvních 10 hodnot (tlačítko: :item:`10 vzorků`) atributu.
+
+.. figure:: images/field_calc_fun.png
+
+
+    
+.. figure:: images/field_calc_fun_field.png
+    
+
+
+.. noteadvanced:: druhá záložka - :item:`Editor funkcí` umožňuje definovat vlastní funkce pomocí jazyka Python
 
 
