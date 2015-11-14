@@ -10,14 +10,14 @@ from utils import get_month_year, get_year
 
 # General information about the project.
 project = u'Školení QGIS pro začátečníky'
-copyright = u'2014-%d, Vojtěch Dubrovský, Alžbeta Gardoňová, Oto Kaláb (GISMentors.eu)' % get_year()
+copyright = u'2014-%d, Oto Kaláb, Alžbeta Gardoňová, Ľudmila Furtkevičová, Vojtěch Dubrovský  (GISMentors.eu)' % get_year()
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = '0.1'
+version = '0.5'
 # The full version, including alpha/beta/rc tags.
 release = '%s alpha' % version
 
