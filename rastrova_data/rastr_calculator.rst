@@ -1,56 +1,56 @@
-.. |mActionShowRasterCalculator| image:: ../images/icon/mActionShowRasterCalculator.png
+.. |mActionShowRasterCalculator| image:: 
+   ../images/icon/mActionShowRasterCalculator.png
    :width: 1.5em
 
 .. index::
    pair: algebra; mapová algebra
 
 
-Použitie rastrovej kalkulačky
------------------------------
+Použití rastrového kalkulátoru
+------------------------------
 
-Pri tvorbe mapy orientácie na svetové strany je lepšie reklasifikovať
-(rozdeliť) rozsah hodnôt do kategórií sever (1), východ (2),
-juh (3) a západ (4), pričom sever znamená :item:`0°` a východ
-:item:`90°`. Jednou z možností je využitie tzv. rastrovej kalkulačky,
-konkrétne |mActionShowRasterCalculator| :sup:`Raster kalkulátor`.
+Při tvorbě mapy orientace vůči světovým stranám je lepší reklasifikovat
+(rozdělit) rozsah hodnot do kategorií sever (1), východ (2), jih (3) a západ
+(4), přičemž sever znamená :item:`0°` a východ :item:`90°`. Jednou z možností je
+využití tzv. rastrového kalkulátoru, konkrétně |mActionShowRasterCalculator|
+:sup:`Raster kalkulátor`.
 
-Rastrová kalkulačka súvisí s mapovou algebrou. Ide o matematické operácie
-s rastrovými mapami, ktoré sú akoby matice čísel s priestorovým
-umiestnením. Pomocou mapovej algebry je možné matematickými, ale i
-inými operáciami kombinovať viaceré rastrové vrstvy a tým vytvárať
-nové vrstvy.
+Rastrový kalkulátor souvisí s mapovou algebrou. Jedná se o matematické operace s
+rastrovými mapami, které jsou jako matice čísel s prostorovým umístěním. Pomocí
+mapové algebry je možné matematickými, ale i jinými operacemi kombinovat více
+rastrových vrstev a vytvářet tak nové vrstvy.
 
 .. _rstcalculator:
 
 .. figure:: images/rstcalculator.png
    :scale: 60%
 
-   Mapová algebra
+   Princip mapové algebry
 
-Ak sme mapu orientácií nazvali :map:`aspect`, výraz bude vyzerať
-nasledovne: :code:`(("aspect@1" >= 315) AND ("aspect@1" < 45)) * 1 +
-(("aspect@1" >= 45) AND ("aspect@1" < 135)) * 2 + (("aspect@1" >= 135) AND
-("aspect@1" < 225)) * 3 + (("aspect@1" >= 225) AND ("aspect@1" < 315))
-* 4`. Reklasifikovanej vrstve následne nastavíme farebnosť a popisy
-(:num:`#nesw` a :num:`#aspectrecl`).
+Pokud jsme mapu orientací nazvali :map:`aspect`, výraz bude vypadat následovně:
+:code:`(("aspect@1"  >= 315)  AND  ("aspect@1" < 45)) * 1 + (("aspect@1"  
+>= 45)  AND  ("aspect@1" < 135)) * 2 + (("aspect@1"  >= 135)  AND  ("aspect@1" 
+< 225)) * 3 + (("aspect@1"  >= 225)  AND  ("aspect@1" < 315)) * 4`.
+Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:num:`#nesw` a
+:num:`#aspectrecl`).
 
 .. _nesw:
 
 .. figure:: images/nesw.png
    :class: middle
 
-   Reklasifikácia orientácií svahu na svetové strany pomocou mapovej
-   kalkulačky
+   Reklasfikace orientace svahů vůči světovým stranám pomocí mapového kalkulátoru
 
 .. _aspectrecl:
 
 .. figure:: images/aspect_recl.png
    :class: middle
 
-   Reklasifikovaná mapa orientácií svahu na svetové strany
+   Reklasifikovaná mapa orientací svahů vůči světovým stranám 
 
-.. note:: Pri reklasifikáciách sa zvyčajne používa modul GRASS-u
-:grasscmd:`r.reclass`. Na to je však potrebné nainštalovať zásuvný modul
-:item:`grass`, ktorý nie je dostupný v každej verzii *QGIS*. Cieľom bolo
-ukázať, že reklasifikovať sa dá aj bez bez pluginov.
+.. note::
 
+   Při reklasifikacích se obvykle používá modul GRASS-u :grasscmd:`r.reclass`.
+   Na to je však potřebné  nainstalovat zásuvný modul :item:`grass`, který není
+   dostupný v každé verzi *QGIS*. Cílem bylo ukázat, že reklasifikace je možná
+   i bez pluginů. 

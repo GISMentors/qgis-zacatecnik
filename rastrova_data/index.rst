@@ -1,21 +1,20 @@
 .. |mActionAddRasterLayer| image:: ../images/icon/mActionAddRasterLayer.png
    :width: 1.5em
 
-*************************
-Práca s rastrovými dátami
-*************************
+***********************
+Práce s rastrovými daty
+***********************
 
-Rastrové dáta reprezentujú objekty a javy rozdelením priestoru do matice
-diskrétnych buniek (pixelov). Tie sú súčasťou pravidelnej mriežky
-(gridu), pričom každá z buniek gridu má hodnotu, ktorá reprezentuje
-nejakú vlastnosť charakteristickú pre dané miesto. Zväčša ide o spojité
-javy akou je napríklad nadmorská výška reliéfu, teplota ovzdušia či
-letecké a satelitné snímky.
+Rastrová data reprezentují objekty a jevy rozdělením prostoru do matice
+diskrétních buněk (pixelů). Tyto jsou součástí pravidelné mřížky (gridu),
+přičemž každá z buněk gridu má hodnotu, která reprezentuje jednu vlastnost
+charakteristickou pro dané místo. Většinou se jedná o spojité jevy, jakým je
+například nadmořská výška reliéfu, teplota ovzduší či letecké a satelitní
+snímky.
 
-Táto časť školenia opisuje ako pracovať s takýmito dátami v prostredí
-QGIS. Ten totiž podporuje množstvo rozličných rastrových formátov
-vďaka knižnici GDAL.
 
+Tato část školení popisuje jak pracovat s takovýmito daty v prostředí QGIS. Ten
+totiž podporuje množství rozličných  rastrových formátů, díky knihovně GDAL.
 
 
 

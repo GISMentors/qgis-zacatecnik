@@ -1,86 +1,94 @@
 .. |mActionZoomIn| image:: ../images/icon/mActionZoomIn.png
    :width: 1.5em
+.. |checkbox| image:: ../images/icon/checkbox.png
+   :width: 1.5em
 
-Terénne analýzy
+
+Terénní analýzy
 ---------------
 
-Digitálny výškový model terénu je užitočný typ dát, z ktorého
-je možné odvodiť ďalšie informácie o danom území a tak lepšie
-vystihnúť charakter skúmaného územia. Nástroje pre terénne analýzy
-a vizualizácie terénu sú dostupné z menu :menuselection:`Raster -->
-Analýza --> DEM (modely reliéfu)`, viď. :num:`#menudem`. S týmito
-nástrojmi môžeme odvodiť dátové sady, ktoré neboli úplne evidentné
-z pôvodného rastra výškopisu. Môže ísť o odvodenie sklonu reliéfu
-či orientáciu svahu voči svetovým stranám.
+Digitální výškový model terénu je užitečný typ dat, ze kterého je možné odvodit
+další informace o daném území a tak lépe vystihnout charakter zkoumaného území.
+Nástroje pro terénní analýzy a vizualizace terénu jsou dostupné z menu
+:menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`, viz
+:num:`#menudem`. S těmito nástroji můžeme odvodit datové sady, které nebyli
+úplně evidentní z původního rastru výškopisu. Může jít například o odvození 
+sklonu reliéfu nebo orientaci svahu vůči světovým stranám.
 
 .. _menudem:
 
 .. figure:: images/menudem.png
 
-   Nástroje pre terénne analýzy dostupné z menu
+   Nástroje pro terénní analýzy dostupné z menu
 
-.. note:: Nástrojová lišta :item:`Raster` obsahuje okrem možnosti
-vykonávať terénne analýzy aj nástroje týkajúce sa mapovej algebry,
-súradnicových systémov, konverzie do iných formátov, orezávanie rastrov,
-generovanie vrstevníc a iné.
+.. note:: 
 
-Tieňovaný reliéf (*Hillshade*)
+   Nástrojová lišta :item:`Rastr` obsahuje kromě možnosti vykonávat terénní
+   analýzy i nástroje týkajíci se mapové algebry, souřadnicových systémů,
+   konverze do jiných formátů, ořezávání rastrů, generování vrstevnic a jiné.
+
+Stínovaný reliéf (*Hillshade*)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ako bolo spomenuté už v časti o nastaveniach transparentnosti rastrových
-dát, tieňovaný reliéf je využívanou rastrovou vrstvou pri zobrazovaní 2D
-dát reprezentujúcich 3D javy, pretože s jeho pomocou sa dá dosiahnuť
-priestorový efekt. Abstraktné informácie o výške terénu v rasti
-:map:`dmt.tiff` znázorníme pomocou rastrovej vrstvy tieňovaného
-reliéfu, tzv. *hillshade*. Ten vytvoríme tak, že z ponuky menu vyberieme
-:menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`. V dialógovom
-okne nastavíme názov a cestu k vstupnej (:map:`dmt.tiff`) a výstupnej
-rastrovej vrstve (:map:`hillshade.tif`), zvolíme režim :item:`Tieňovaný
-reliéf`, predvolené možnosti režimu ponecháme, zaškrtneme |checkbox|
-:sup:`Po dokončení načítať do mapového okna` a potvrdíme tlačítkom
+Jak již bylo uvedeno v části o nastavení transparentnosti rastrových dat,
+stínovaný reliéf je využívanou rastrovou vrstvou při zobrazování 2D dat
+reprezentujících 3D jevy, protože s jeho pomocí se dá dosáhnout prostorový
+efekt. Abstraktní informace o výšce terénu v rastru :map:`dmt.tiff` znázorníme
+pomocí rastrové vrstvy stínovaného reliéfu, tzv. *hillshade*. Ten vytvoříme tak,
+že z nabídky menu vybereme :menuselection:`Rastr --> Analýza --> DEM (modely 
+reliéfu)`. V dialogovém okně nastavíme název a cestu ke vstupní
+(:map:`dmt.tiff`) a výstupní  rastrové vrstvě (:map:`hillshade.tif`), zvolíme
+režim :item:`Stínovaný reliéf`, předvolené možnosti režimu ponecháme, zaškrtneme
+|checkbox| :sup:`Po dokončení načíst do mapového okna` a potvrdíme tlačítkem
 :item:`OK`.
 
-.. noteadvanced:: V rámci možností režimu vytvárania tieňovaného
-reliéfu je možné nastaviť hodnotu zvislého prevýšenia, pomer zvislých
-a vodorovných jednotiek, azimut či nadmorskú výšku svetla.
+.. noteadvanced:: 
 
-Po skončení výpočtu sa v paneli so zoznamom vrstiev objaví novovytvorený
-tieňovaný reliéf :map:`hillshade`. Aby sme lepšie videli detaily,
-pomocou |mActionZoomIn| :sup:`Priblížiť` si ohraničíme časť
-územia. Následne spôsobom, ktorý bol opísaný vyššie nastavíme
-všeobecnú transparentnosť rastrovej vrstvy :map:`hillshade` na hodnotu
-:item:`60%`. Dostaneme výsledok znázornený na :num:`#rsthillshade`.
+   V rámci možností režimu vytváření stínovaného reliéfu je možné nastavit
+   hodnotu svislého převýšení, poměr svislých a vodorovných jednotek, azimut či
+   nadmořskou výšku světla.
+
+Po ukončení výpočtu se v panelu vrstev objeví nově vytvořený
+stínovaný reliéf :map:`hillshade`. Abychom lépe viděli detaily, pomocí
+|mActionZoomIn| :sup:`Přiblížit` si ohraničíme část území. Následně způsobem,
+který byl popsaný výše nastavíme všeobecnou transparentnost rastrové vrstvy
+:map:`hillshade` na hodnotu :item:`60%`. Dostaneme výsledek znázorněný na
+:num:`#rsthillshade`.
 
 .. _rsthillshade:
 
 .. figure:: images/rst_hillshade.png
    :class: middle
 
-   Vytvorenie priestorového efektu dát vďaka tieňovanému reliéfu
+   Vytvoření prostorového efektu dat díky stínovanému reliéfu
 
-.. note:: Rastrová vrstva tieňovaného reliéfu je v menu :item:`Vrstvy`
-nad vrstvou :map:`dmt.tiff`. Je možné urobiť to opačne, t.j. vrstvu
-:map:`hillshade` nechať ako podklad a nastaviť transparentnosť digitálneho
-výškového modelu terénu.
+.. note::
+
+   Rastrová vrstva stínovaného reliéfu je v menu :item:`Vrstvy` nad vrstvou
+   :map:`dmt.tiff`. Je možné udělat i opačné pořadí vrstev - :map:`hillshade`
+   ponechat jako podklad a nastavit transparentnost digitálního výškového modelu
+   terénu. 
 
 Sklon (*Slope*)
 ^^^^^^^^^^^^^^^
 
-Jednou z užitočných informácií o teréne je aj sklon, ktorý predstavuje
-maximálnu zmenu (gradient) výšky medzi susednými bunkami rastra. Rastrovú
-vrstvu sklonu vygenerujeme obdobne ako tieňovaný reliéf, no použijeme
-režim :item:`Sklon`. Na :num:`#rstsklon` je znázornený výsledok s farebnou
-paletou *BrBG*, pričom je použité rozdelenie do 10 rovnakých intervalov.
+Jedou z užitečných informací o terénu je i sklon, který představuje maximální
+změnu (gradient) výšky mezi sousedními buňky rastru. Rastrovou vrstvu sklonu
+vygenerujeme obdobně jako stínovaný reliéf, no použijeme režim :item:`Sklon`. Na
+:num:`#rstsklon` je znázorněný výsledek s barevnou paletou *BrBG*, přičemž je
+použité  rozdělení do 10 stejných intervalů.
 
 .. _rstsklon:
 
 .. figure:: images/rst_sklon.png
    :class: middle
 
-   Rastrová vrstva sklonov reliéfu
+   Rastrová vrstva sklonu reliéfu
 
-Orientácia voči svetovým stranám (*Aspect*)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Na vytvorenie mapy orientácie svahu na svetové strany použijeme režim
-:item:`Aspekt` a postupujeme obdobne ako pri predchádzajúcich prípadoch.
+Orientace vůči světovým stranám (*Aspect*)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Na vytvoření mapy orientace svahu vůči světovým stranám použijeme režim
+:item:`Aspekt` a postupujeme obdobně jako při předchozích analýzách.
+
 

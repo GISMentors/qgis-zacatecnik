@@ -1,21 +1,21 @@
-Zobrazovanie v 3D
+Zobrazování ve 3D
 -----------------
 
-Výsledky rastrových dát možno zobraziť v priestore. Umožňuje to
-plugin :item:`Qgis2threejs`. Inštaluje sa ako ostatné pluginy pomocou
-:menuselection:`Zásuvné moduly --> Spravovať a inštalovať zásuvné
-moduly`, pričom do poľa :item:`Hledat` zadáme názov požadovaného
-modulu. Po nainštalovaní modul spustíme z menu ako :menuselection:`Web
---> Qgis2threejs`. Objaví sa dialógové okno modulu, kde nastavíme *DEM
-Layer* na :item:`dmt.tiff`, *Vertical exaggeration* na hodnotu :item:`2`
-a v paneli *Line* zaškrtneme políčko vedľa novovytvorenej rastrovej
-vrstvy izolínií. Následne spustíme pomocou :item:`Run`. Výsledok môže
-vyzerať ako na :num:`#q2t`.
+Výsledky rastrových dat možno zobrazit v prostoru. Umožňuje to plugin
+:item:`QGIS2threejs`. Instaluje se stejně jako ostatní pluginy pomocí
+:menuselection:`Zásuvné moduly --> Spravovat a instalovat zásuvné moduly`,
+přičemž do pole :item:`Hledat` zadáme název požadovaného modulu. Po
+nainstalování modul spustíme z menu :menuselection:`Web --> Qgis2threejs`.
+Objeví se dialogové okno modulu, kde nastavíme *DEM Layer* na :map:`dmt.tiff`,
+*Vertical exaggeration* na hodnotu :item:`2` a v panelu *Line* zaškrtneme
+políčko vedle nově vytvořené rastrové vrstvy izolinií. Následně spustíme pomocí 
+:item:`Run`. Výsledek může vypadat jako na :num:`#q2t`.
 
 .. _q2t:
 
 .. figure:: images/q2tmap.png
    :class: large
+       
+   Digitální model terénu a vrstevnice s intervalem *25 m* v prostředí web-u
 
-   Digitálny model terénu a vrstevnice s intervalom *25 m* v prostredí web-u
 

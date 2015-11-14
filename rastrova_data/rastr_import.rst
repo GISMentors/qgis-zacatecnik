@@ -3,26 +3,31 @@
 .. |mIconZoom| image:: ../images/icon/mIconZoom.png
    :width: 1.5em
 
-Nahratie rastrových údajov
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Rastrové dáta možno do prostredia QGIS pridať kliknutím na tlačítko
-|mActionAddRasterLayer| :sup:`Pridať rastrovú vrstvu`, výberom z lišty menu
-pomocou :menuselection:`Vrstva --> Pridať vrstvu --> Pridať rastrovú vrstvu`
-alebo súčasným stlačením kláves :kbd:`Ctrl+Shift+R`. Na :num:`#addraster`
-je znázornenie rastrovej vrstvy :map:`dmt.tiff` z datasetu :data:`EU-DEM
+Nahrání rastrových údajů
+^^^^^^^^^^^^^^^^^^^^^^^^
+Rastrová data je možné do prostředí QGIS přidat kliknutím na tlačítko
+|mActionAddRasterLayer| :sup:`Přidat rastrovou vrstvu`, výběrem z lišty menu
+pomocí :menuselection:`Vrstva --> Přidat vrstvu --> Přidat rastrovou vrstvu`
+nebo současným stlačením kláves :kbd:`Ctrl+Shift+R`. Na :num:`#addraster`
+je znázorněna rastrová vrstva :map:`dmt.tiff` z datasetu :data:`EU-DEM
 (GeoTIFF)`.
+
 
 .. _addraster:
 
 .. figure:: images/add_raster.png
 
-   Nahratie rastrovej vrstvy do QGIS
+   Nahrání rastrové vrstvy do QGIS.  
 
-.. note:: Ak by sa vrstva nezobrazila v mapovom okne ako je to na
-:num:`#addraster`, je potrebné kliknúť pravým tlačítkom na meno vrstvy
-a zvoliť |mIconZoom| :sup:`Priblížiť na vrstvu`.
+.. note::
+	
+   Pokud by se vrstva nezobrazila v mapovém okně jako je to na
+   :num:`#addraster`, je zapotřebí kliknout pravým tlačítkem na jméno vrstvy
+   a zvolit |mIconZoom| :sup:`Přiblížit na vrstvu`.
 
-.. tip:: V prípade potreby pridržaním klávesy :kbd:`Ctrl` v dialógu
-vyberania súborov možno súčasne nahrať viacero vrstiev naraz.
+.. tip::
+
+   V případě potřeby přidržením klávesy :kbd:`Ctrl` v dialogu vybírání
+   souborů lze současně nahrát vícero vrstev najednou.
+
 

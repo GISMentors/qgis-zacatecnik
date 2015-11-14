@@ -1,10 +1,12 @@
-.. |mActionFullHistogramStretch| image:: ../images/icon/mActionFullHistogramStretch.png
+.. |mActionFullHistogramStretch| image:: 
+   ../images/icon/mActionFullHistogramStretch.png
    :width: 1.5em
 .. |checkbox| image:: ../images/icon/checkbox.png
    :width: 1.5em
 .. |CRS| image:: ../images/icon/CRS.png
    :width: 1.5em
-.. |mActionLocalCumulativeCutStretch| image:: ../images/icon/mActionLocalCumulativeCutStretch.png
+.. |mActionLocalCumulativeCutStretch| image:: 
+   ../images/icon/mActionLocalCumulativeCutStretch.png
    :width: 1.5em
 .. |mIconZoom| image:: ../images/icon/mIconZoom.png
    :width: 1.5em
@@ -19,139 +21,139 @@
 .. |mActionFileSave| image:: ../images/icon/mActionFileSave.png
    :width: 1.5em
 
-Vlastnosti rastrovej vrstvy
----------------------------
+Vlastnosti rastrové vrstvy
+--------------------------
 
-Na to, aby sme videli a nastavili vlastnosti danej rastrovej vrstvy,
-použijeme buď ľavý dvojklik na meno vrstvy alebo pravým kliknutím
-zvolíme z kontextového menu položku :item:`Vlastnosti`. Dialógové
-okno obsahuje šesť záložiek: *Všeobecné*, *Štýl*, *Priehľadnosť*,
-*Pyramídy*, *Histogram* a *Metadáta*.
+Na to abychom viděli a nastavili vlastnosti dané rastrové vrstvy, použijeme buď
+levý dvouklik na název vrstvym, nebo pravým klikem zvolíme z kontextového menu
+položku :item:`Vlastnosti`. Dialogové okno obsahuje šest záložek : *Všeobecné*,
+*Styl*, *Průhlednost*, *Pyramidy*, *Histogram* a *Metadata*.
+
 
 Všeobecné
 ^^^^^^^^^
 
-Prvá záložka poskytuje základné informácie o vrstve ako názov súboru,
-názov vrstvy v legende s možnosťou editácie, zdroj vrstvy, počet stĺpcov
-a riadkov, súradnicový referenčný systém, ktorý možno zmeniť kliknutím
-na tlačítko |CRS| :sup:`Vyberte SRS`. V tejto záložke je možné nastaviť
-aj viditeľnosť v závislosti na mierke, viď. :num:`#obecneraster`.
+Prvá záložka poskytuje základní informace o vrstvě jako je název souboru, název
+vrstvy v legendě s možností editace, zdroj vrstvy, počet sloupců a řádků,
+souřadnicový referenční systém, který je možno změnit kliknutím na tlačítko
+|CRS| :sup:`Vyberte SRS`. V této záložce je možné nastavit i viditelnost v
+závislosti na měřítku (:num:`#obecneraster`).
 
 .. _obecneraster:
 
 .. figure:: images/obecne_raster.png
 
-   Vlastnosti rastovej vrstvy
+   Vlastnosti rastové vrstvy
 
-Štýl
+Styl
 ^^^^
-
-Táto záložka slúži na nastavenie farebnosti rastrových dát v mapovom
-okne. Je možné nastaviť vykresľovanie pásma, farby či prevzorkovanie. V
-danej vrstve môžu byť farby invertované, dá sa vylepšovať kontrast,
-sýtosť, jas, rozsah vykresľovaných hodnôt (:num:`#stylraster`).
+Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okně. Je
+možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
+být barvy invertované, dá se vylepšit kontrast, sytost, jas, rosah
+vykreslovaných hodnot (:num:`#stylraster`).
 
 .. _stylraster:
 
 .. figure:: images/styl_raster.png
    :class: middle
+       
+   Různé styly té samé rastrové vrstvy: šedé pásmo(vlevo), pseudobarvy (vpravo)
+    
+.. note:: 
 
-   Rôzne štýly tej istej rastovej vrstvy: šedé pásmo (vľavo),
-   pseudofarby (vpravo)
+   Po nastavení barevné palety je potřebné nezapomenout na tlačítko
+   :item:`Klasifikovat`, které vygeneruje barvy pro konkrétní režim, v našem
+   případě lineární barevná interpolace a invertovaná spojitá paleta *RdYIGn*.
+   Nastavení hodnoty směrodatné odchylky dokáže zabezpečit, aby hodnoty, které
+   se příliš liší od průměru pro vrstvu, nebyli zobrazené.     
+  
+.. noteadvanced:: 
 
-.. note:: Po nastavení farebnej palety je potrebné nezabudnúť na tlačítko
-:item:`Klasifikovat`, ktoré vygeneruje farby pre konkrétny režim, v našom
-prípade lineárna farebná interpolácia a invertovaná spojitá paleta
-*RdYIGn*. Nastavenie hodnoty smerodajnej odchýlky dokáže zabezpečiť, aby
-hodnoty, ktoré sa príliš líšia od priemeru pre vrstvu, neboli zobrazené.
-
-.. noteadvanced:: Ďalšie možnosti štýlovania ponúka lišta
-:item:`Raster`, ktorá sa zapína cez :menuselection:`Zobraziť -->
-Nástrojové lišty --> Raster`. Napríklad prvá položka zľava
-|mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut Stretch`
-automaticky vylepší kontrast na základe minimálnej a maximálnej
-hodnoty bunky v aktuálnej lokálnej časti rastra, pričom berie do úvahy
-východzie limity a odhadnuté hodnoty. Výsledok je na :num:`#stylrstpanel`
-vľavo. Voľba |mActionFullHistogramStretch| :sup:`Roztiahnuť histogram
-na celý dataset` nástrojovej lišty vráti zmeny späť ako boli
-na :num:`#stylraster`, t.j. vyrovná kontrast vzhľadom na celý raster
-podľa skutočných hodnôt. Ak pravým kliknutím na meno vrstvy zvolíme z
-kontextového menu :item:`ZOOM na najvhodnejšie merítko (100%)`, klikneme
-na |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut Stretch`
-a zvolíme |mIconZoom| :sup:`Priblížiť na vrstvu` čím vytvoríme štýl
-znázornený na :num:`#stylrstpanel` vpravo.
+   Další možnosti stylování nabízí lišta :item:`Raster`, která se zapíná přes
+   :menuselection:`Zobrazit --> Nástrojové lišty --> Raster`. Například první
+   položka zleva |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut
+   Stretch` automaticky vylepší kontrast na základě minimální a maximální
+   hodnoty buňky v aktuální lokální části rastru, přičemž bere do úvahy výchozí
+   limity a odhadnuté hodnoty. Výsledek je na :num:`#stylrstpanel` vlevo. Volba
+   |mActionFullHistogramStretch| :sup:`Roztáhnout histogram na celý dataset`
+   nástrojové lišty vrátí změny zpět jak byli na :num:`#stylraster`, t.j. vyrovná
+   kontrast vzhledem na celý rastr dle skutečných hodnot. Pokud pravým
+   kliknutím na název vrstvy zvolíme z kontextového menu :item:`Zoom na
+   nejvhodnější měřítko (100%)`, klikneme na |mActionLocalCumulativeCutStretch|
+   :sup:`Local Cumulative Cut Stretch` a zvolíme |mIconZoom| :sup:`Přiblížit na
+   vrstvu` čímž vytvoříme styl znázorněný na :num:`#stylrstpanel` vpravo. 
 
 .. _stylrstpanel:
 
 .. figure:: images/styl_rst_panel.png
    :class: middle
 
-   Vylepšenie štýlu rastrovej vrstvy pomocou nástrojovej lišty :item:`Raster`
+   Změna stylu rastrové vrstvy pomocí nástrojové lišty :item:`Raster`
 
-Priehľadnosť
-^^^^^^^^^^^^
+Průhlednost
+^^^^^^^^^^^
+QGIS umožňuje zobrazovat každou vrstvu v mapvém okně s různým stupněm
+průhlednosti. Má to velkou výhodu například pokud chceme, aby kromě aktuální
+rastrové vrstvy byla viditelná i jiná vrstva. Typickým příkladem je překryv
+stínovaného reliéfu s jakoukoli barevnou rastrovou vrstvou. Překryv a vhodné
+nastavení průhlednosti způsobí prostorový vzhled 2D vrstvy. Konkrétní příklad je
+uveden později. 
 
-QGIS umožňuje zobrazovať každú vrstvu v mapovom okne s rôznym stupňom
-priehľadnosti. Má to veľkú výhodu napríklad keď chceme, aby okrem
-aktuálnej rastrovej vrstvy bola viditeľná aj iná. Typickým príkladom
-je prekrývanie tieňovaného reliéfu s akoukoľvek farebnou rastrovou
-vrstvou. Prekrytie a vhodné nastavenie priehľadnosti spôsobí priestorový
-vzhľad 2D vrstvy. Konkrétnejšie si to ukážeme neskôr.
-
-Záložka umožňuje nastaviť všeobecnú priehľadnosť, ale taktiež
-priehľadnosť pre každý pixel. V časti o užívateľských nastaveniach
-transparentnosti (viď. :num:`#rsttransparency` s paletovaným typom
-vykreslenia pásma pre raster) je možné nastaviť hodnoty pomocou tlačidiel
-|symbologyAdd| :sup:`Zadať hodnoty ručne` alebo |mActionContextHelp|
-:sup:`Pridať hodnoty z obrazovky`, ďalej možno |symbologyRemove|
-:sup:`Odstrániť vybrané riadky`, hodnoty |mActionFileOpen| :sup:`Importovať
-z` alebo |mActionFileSave| :sup:`Exportovať do` súboru, čo má zmysel
-hlavne pri detailnejších, časovo náročných prácach. Táto záložka
-taktiež umožňuje nastavenia pre *no data*.
+Záložka umožňuje nastavit všeobecnou průhlednot, ale taktéž průhlednost pro
+každý pixel. V části o uživatelských nastaveních transparentnosti (viz.
+:num:`#rsttransparency` s paletovým typom vykreslení pásma pro rastr) je možné
+nastavit hodnoty pomocí tlačítek |symbologyAdd| :sup:`Zadat hodnoty ručně` nebo
+|mActionContextHelp| :sup:`Přidat hodnoty z obrazovky`, dále možno
+|symbologyRemove| :sup:`Odstranit vybrané řádky`, hodnoty |mActionFileOpen|
+:sup:`Importovat z` nebo |mActionFileSave| :sup:`Exportovat do` souboru, comá
+smysl hlavně u detailnějších, časovo náročných pracích. Tato záložka umožňuje
+taky nastavení pro *no data* hodnoty. 
 
 .. _rsttransparency:
 
 .. figure:: images/rst_transparency.png
 
-   Možnosti nastavenia priehľadnosti rastrovej vrstvy
+   Možnosti nastavení průhlednosti rastrové vrstvy
 
-Pyramídy
+
+Pyramidy
 ^^^^^^^^
 
-Pyramídy sú dátové štruktúry, ktoré typicky obsahujú menšie
-množstvo dát. Cieľom je znížiť výpočtovú náročnosť pri práci
-s dátami. Ide o to, že okrem pôvodného rastra v plnom rozlíšení
-sa vytvorí zjednodušená verzia (kópia s nižším rozlíšením). Na
-prevzorkovanie sa používajú rôzne metódy, najčastejšie ide o metódu
-priemerov (*Average*) alebo metódu najbližšieho suseda (Nearest Neighbour).
+Pyramidy jsou datové struktury, které typicky obsahují menší množství dat.
+Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, že se kromě
+původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
+rozlišením pro konkrétní zoom). Na převzorkování se použijí různé metody, 
+nejčastěji jde o metodu průměru (*Average*) nebo metodu nejbližšího souseda 
+(*Nearest Neighbour*).  
 
-.. note:: Oprávnený na takéto úkony je len ten, kto má právo zápisu
-do adresára s pôvodnými dátami.
+.. note::
 
-.. important:: Je potrebné vedieť, že vytváranie pyramíd môže
-pozmeniť orginálny raster a preto sa odporúča vytvorenie zálohy pôvodnej
-bezpyramídovej verzie dát.
+   Oprávněný na takovéto úkony je jenom ten, kdo má právo zápisu do adresáře s
+   původními daty.
+
+.. important::
+
+   Je potřebné vědět, že vytvoření pyramid může pozměnit originální rastr a
+   proto se doporučuje vytvoření zálohy původní bezpyramidové verze dat.
 
 
 Histogram
 ^^^^^^^^^
-
-QGIS ponúka nástroj na generovanie histogramu rastrovej vrstvy
-(:num:`#rsthistogram`). Je vytvorený automaticky po kliknutí na voľbu
-:item:`Vypočítať histogram`.
+QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
+(:num:`#rsthistogram`). Je vytvořen automaticky po kliknutí na volbu
+:item:`Vypočíst histogram`.
 
 .. _rsthistogram:
 
 .. figure:: images/rst_histogram.png
    :class: middle
 
-   Výpočet histogramu rastrovej vrstvy digitálneho výškového modelu terénu
-
-Metaúdaje
-^^^^^^^^^
-Táto záložky by mala poskytovať informácie o danej rastrovej vrstve
-(ak existujú).  Ide najmä o základný popis dát (nadpis, abstrakt, zoznam
-kľúčových slov), Url metadát a legendy či iné vlastnosti (ovládač,
-popis datasetu, veľkosť pixela, súradnicové systémy, rozsah vrstvy,
-atď.).
+   Výpočet histogramu rastrové vrstvy digitálního výškového modelu terénu
+       
+Metadata
+^^^^^^^^
+Tato záložka by měla poskytovat informace o dané rastrové vrstvě (pokud
+existují). Jedná se zejména o záladní popis dat (nadpis, abstrakt, seznam
+klíčových slov), Url metadat a legendy či jiné vlastnosti (ovladač, popis
+datasetu, velikost pixelu, souřadnicový systém, rozsah vrstvy, a další).
 
