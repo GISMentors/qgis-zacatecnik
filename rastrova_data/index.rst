@@ -23,8 +23,8 @@ totiž podporuje množství rozličných  rastrových formátů, díky knihovně
 
    rastr_import
    rastr_export
-   rastr_properties
-   rastr_terrain_analysis
-   rastr_calculator
-   izolines
-   3D_view
+   rastr_vlastnosti
+   rastr_terenni_analyzy
+   rastr_kalkulator
+   vrstevnice
+   zobrazovani_3D
