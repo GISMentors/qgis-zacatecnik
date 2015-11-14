@@ -64,7 +64,7 @@ Jednotlivé části jsou posány níže.
    :scale-latex: 80
    
    Stavový řádek systému QGIS.
-   
+
 Souřadnice
 ^^^^^^^^^^ 
 První část stavového řádku slouží pro orientaci v mapovém okně. Zde se zobrazuje buď aktuální souřadnice ukazatele myši v mapovém okně, nebo tzv. extent (rozsah území aktuálně zobrazeného v mapovém okně). Ukázka obou možností je zobrazena na následujícím obrázku. Jako přepínač mezi uvedenými fukcemi slouží ikona |extents|, resp. |tracking|.

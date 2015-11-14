@@ -1,6 +1,6 @@
 Úvod do systému QGIS
 ---------------------
-Po úspěšné instalaci systému QGIS (dle návodu pro :doc:`GNU/Linux <../instalace/linux>` nebo :doc:`MS Windows <../instalation/windows>`) je možné jej spustit a začít okamžitě pracovat. 
+Po úspěšné instalaci systému QGIS (dle návodu pro :doc:`GNU/Linux <../instalace/linux>` nebo :doc:`MS Windows <../instalace/windows>`) je možné jej spustit a začít okamžitě pracovat. 
 
 .. tip::
       Pro potřeby testování je možné použít připravená geodata. Při instalaci na MS Windows je možné stáhnout dataset již během instalace samotného programu, pomocí volby :ref:`v průběhu instalace <nativni-instalator-data>`. Testovací data je možné `stáhnout <http://qgis.org/downloads/data/>`_ i samostatně.
