@@ -1,3 +1,8 @@
+.. |mActionAddRasterLayer| image:: ../images/icon/mActionAddRasterLayer.png
+   :width: 1.5em
+.. |mIconZoom| image:: ../images/icon/mIconZoom.png
+   :width: 1.5em
+
 Nahratie rastrových údajov
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 

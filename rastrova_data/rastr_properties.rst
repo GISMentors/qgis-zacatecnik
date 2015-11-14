@@ -1,12 +1,10 @@
-.. |mActionFullHistogramStretch| image::
-../images/icon/mActionFullHistogramStretch.png
+.. |mActionFullHistogramStretch| image:: ../images/icon/mActionFullHistogramStretch.png
    :width: 1.5em
 .. |checkbox| image:: ../images/icon/checkbox.png
    :width: 1.5em
 .. |CRS| image:: ../images/icon/CRS.png
    :width: 1.5em
-.. |mActionLocalCumulativeCutStretch| image::
-../images/icon/mActionLocalCumulativeCutStretch.png
+.. |mActionLocalCumulativeCutStretch| image:: ../images/icon/mActionLocalCumulativeCutStretch.png
    :width: 1.5em
 .. |mIconZoom| image:: ../images/icon/mIconZoom.png
    :width: 1.5em
@@ -88,7 +86,7 @@ znázornený na :num:`#stylrstpanel` vpravo.
 .. figure:: images/styl_rst_panel.png
    :class: middle
 
-Vylepšenie štýlu rastrovej vrstvy pomocou nástrojovej lišty :item:`Raster`
+   Vylepšenie štýlu rastrovej vrstvy pomocou nástrojovej lišty :item:`Raster`
 
 Priehľadnosť
 ^^^^^^^^^^^^

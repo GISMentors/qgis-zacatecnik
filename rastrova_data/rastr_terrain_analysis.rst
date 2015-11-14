@@ -82,5 +82,5 @@ paletou *BrBG*, pričom je použité rozdelenie do 10 rovnakých intervalov.
 Orientácia voči svetovým stranám (*Aspect*)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Na vytvorenie mapy orientácie svahu na svetové strany použijeme režim
-:item:`Aspekt`.
+:item:`Aspekt` a postupujeme obdobne ako pri predchádzajúcich prípadoch.
 
