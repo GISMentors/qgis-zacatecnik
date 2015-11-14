@@ -133,7 +133,7 @@ Základní editace geometrie
 
 
 
-- |mActionReshape| :sup:`Změnit tvar prvků` - obdobně jako při rozdělení nebo tvorbě nového prvku, lze naklikáním nového tvaru změnit tvar stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu" vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude část s menší plochou vymazána (:num:`obr. #resh1`).
+- |mActionReshape| :sup:`Změnit tvar prvků` - obdobně jako při rozdělení nebo tvorbě nového prvku, lze naklikáním nového tvaru změnit tvar stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu" vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude část s menší plochou vymazána (:num:`#resh1`).
 
 .. _resh1:
 
@@ -152,7 +152,7 @@ Základní editace geometrie
 Přichytávání (snapping)
 .......................
 
-Pro topologicky čistou editaci můžeme pomocí funkce :menuselection:`Nastavení --> Možnosti přichytávání` nastavit přichytávání kurzoru s určitou citlivostí k uzlům či segmentům konkrétních vrstev. Pro aktivaci je nunté vybrat parametr :item:`Přichytit k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem (viz. :num:`obr. #snapvert` a :num:`snapsegm`).
+Pro topologicky čistou editaci můžeme pomocí funkce :menuselection:`Nastavení --> Možnosti přichytávání` nastavit přichytávání kurzoru s určitou citlivostí k uzlům či segmentům konkrétních vrstev. Pro aktivaci je nunté vybrat parametr :item:`Přichytit k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem (viz. :num:`#snapvert` a :num:`snapsegm`).
 
 .. figure:: images/snapping.png
     
@@ -167,8 +167,8 @@ Pro topologicky čistou editaci můžeme pomocí funkce :menuselection:`Nastaven
 - :item:`Přichytit k` |selectstring| 
     
     - :option:`Vypnuto` - přichytávání je neaktivní!
-    - :option:`K lomovému bodu` - pouze k lomovým bodům (uzelům/vertexům)(:num:`obr. #snapvert`)
-    - :option:`K segmentu` - pouze k segmentům (hranám/liniím)(:num:`obr. #snapsegm`)
+    - :option:`K lomovému bodu` - pouze k lomovým bodům (uzelům/vertexům)(:num:`#snapvert`)
+    - :option:`K segmentu` - pouze k segmentům (hranám/liniím)(:num:`#snapsegm`)
     - :option:`K lomovému bodu a segmentu` - k obojímu
     
 - :item:`Tolerance` |selectnumber| - vzdálenost, od které se kurzor bude k lomovému bodu nebo segmentu přichytávat, hodnotu lze zadat v mapových jednotkách (vzdálenost na mapě) nebo pixelech (vzdálenost na monitoru)
@@ -177,7 +177,7 @@ Pro topologicky čistou editaci můžeme pomocí funkce :menuselection:`Nastaven
         
 - :item:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se bude kurzor přichytávat i na případné místo "překřížení" segmentů (linií) 
 
-.. tip:: Nastavení přichytávání lze měnit i v momentě kdy vytváříme prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu (např. :num:`obr. #snapvert` a :num:`snapsegm`).
+.. tip:: Nastavení přichytávání lze měnit i v momentě kdy vytváříme prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu (např. :num:`#snapvert` a :num:`snapsegm`).
 
 .. _snapvert:
 

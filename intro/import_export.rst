@@ -31,7 +31,7 @@ Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu :option
 
     Nástrojový panel pro přidávání vrstev :option:`Spravovat vrstvy`
     
-Další možností je přidat data pomocí vestavěného datového katalogu (prohlížeče souborů) a to buď dvojitým kliknutím nebo jednoduchým přetažením souboru do mapového okna nebo okna vrstev (:num:`obr. #browser`). Stisknutím kláves :kbd:`CTRL` a :kbd:`SHIFT` můžeme vybrat a přidat přetažením více souborů najednou. Pomocí datového katalogu lze také procházet a přidávat soubory přímo z archivu zip.
+Další možností je přidat data pomocí vestavěného datového katalogu (prohlížeče souborů) a to buď dvojitým kliknutím nebo jednoduchým přetažením souboru do mapového okna nebo okna vrstev (:num:`#browser`). Stisknutím kláves :kbd:`CTRL` a :kbd:`SHIFT` můžeme vybrat a přidat přetažením více souborů najednou. Pomocí datového katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 
     .. tip:: Pomocí přetažení lze přidat data také přímo ze správce souborů v operačním systému.
 
@@ -66,7 +66,7 @@ Jak exportovat konkrétní data se dozvíme v jednotlivých kapitolách.
 Výběr souřadnicového systému
 ----------------------------
 
-Při vkládání rastrových nebo vektorových dat se může stát, že po potvrzení výběru je vyžedována specifikace souřadnicového systému vkládaných dat (:num:`obr. #srs`). Okno se zobrazí v případě, pokud vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému, jako například ESRI Shapefile bez souboru končícího příponou \*.prj. V okně výběru je možné vyhledat pomocí filtru požadovanou projekci. Zvolení správné projekce je velice důležité pro překrývání více vrstev s jinou projekcí, měření nebo pro připojování k webovým službám.
+Při vkládání rastrových nebo vektorových dat se může stát, že po potvrzení výběru je vyžedována specifikace souřadnicového systému vkládaných dat (:num:`#srs`). Okno se zobrazí v případě, pokud vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému, jako například ESRI Shapefile bez souboru končícího příponou \*.prj. V okně výběru je možné vyhledat pomocí filtru požadovanou projekci. Zvolení správné projekce je velice důležité pro překrývání více vrstev s jinou projekcí, měření nebo pro připojování k webovým službám.
 
 .. _srs:
 

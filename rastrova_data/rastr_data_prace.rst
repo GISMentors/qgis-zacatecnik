@@ -38,7 +38,7 @@ Táto časť školenia opisuje ako pracovať s takýmito dátami v prostredí QG
 Nahratie rastrových údajov
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Rastrové dáta možno do prostredia QGIS pridať kliknutím na tlačítko |mActionAddRasterLayer| :sup:`Pridať rastrovú vrstvu`, výberom z lišty menu pomocou :menuselection:`Vrstva --> Pridať vrstvu --> Pridať rastrovú vrstvu` alebo súčasným stlačením kláves :kbd:`Ctrl+Shift+R`. Na :num:`obr. #addraster` je znázornenie rastrovej vrstvy :map:`dmt.tiff` z datasetu :data:`EU-DEM (GeoTIFF)`.
+Rastrové dáta možno do prostredia QGIS pridať kliknutím na tlačítko |mActionAddRasterLayer| :sup:`Pridať rastrovú vrstvu`, výberom z lišty menu pomocou :menuselection:`Vrstva --> Pridať vrstvu --> Pridať rastrovú vrstvu` alebo súčasným stlačením kláves :kbd:`Ctrl+Shift+R`. Na :num:`#addraster` je znázornenie rastrovej vrstvy :map:`dmt.tiff` z datasetu :data:`EU-DEM (GeoTIFF)`.
 
     .. _addraster:
 
@@ -46,7 +46,7 @@ Rastrové dáta možno do prostredia QGIS pridať kliknutím na tlačítko |mAct
 
         Nahratie rastrovej vrstvy do QGIS  
 
-.. note:: Ak by sa vrstva nezobrazila v mapovom okne ako je to na :num:`obr. #addraster`, je potrebné kliknúť pravým tlačítkom na meno vrstvy a zvoliť |mIconZoom| :sup:`Priblížiť na vrstvu`.
+.. note:: Ak by sa vrstva nezobrazila v mapovom okne ako je to na :num:`#addraster`, je potrebné kliknúť pravým tlačítkom na meno vrstvy a zvoliť |mIconZoom| :sup:`Priblížiť na vrstvu`.
 
 .. tip:: V prípade potreby pridržaním klávesy :kbd:`Ctrl` v dialógu vyberania súborov možno súčasne nahrať viacero vrstiev naraz.
 
@@ -57,7 +57,7 @@ Vďaka knižnici |gdal| :sup:`GDAL` (Geospatial Data Abstraction Library) je mo�
 
 Existuje množstvo rastrových formátov, ktoré sú zvyčajne odlíšené podľa prípony súborov. QGIS umožňuje export do veľkého množstva rôznych bežne používaných formátov.  
 
-Dáta možno exportovať dvomi spôsobmi. Ak potrebujeme vrstvu uložiť (exportovať) v tom istom formáte, lebo pracujeme napríklad len s časťou záujmového územia, použijeme voľbu :item:`Uložiť ako`. Nájdeme ju pravým kliknutím myši na mapu v paneli vrstiev. Objaví sa dialógové okno, kde sa dá nastaviť režim výstupu (surové dáta alebo vykreslený obrázok), názov, súradnicový systém, rozsah, rozlíšenie, možnosti vytvorenia a ďalšie parametre novej exportovanej vrstvy. Po spustení sa nová vrstva pridá do mapového okna (:num:`obr. #saveas`). 
+Dáta možno exportovať dvomi spôsobmi. Ak potrebujeme vrstvu uložiť (exportovať) v tom istom formáte, lebo pracujeme napríklad len s časťou záujmového územia, použijeme voľbu :item:`Uložiť ako`. Nájdeme ju pravým kliknutím myši na mapu v paneli vrstiev. Objaví sa dialógové okno, kde sa dá nastaviť režim výstupu (surové dáta alebo vykreslený obrázok), názov, súradnicový systém, rozsah, rozlíšenie, možnosti vytvorenia a ďalšie parametre novej exportovanej vrstvy. Po spustení sa nová vrstva pridá do mapového okna (:num:`#saveas`). 
 
     .. _saveas:
 
@@ -66,7 +66,7 @@ Dáta možno exportovať dvomi spôsobmi. Ak potrebujeme vrstvu uložiť (export
    
        Export rastrovej vrstvy pomocou :item:`Uložiť rastrovú vrstvu ako ... `
 
-Ak potrebujeme rastrovú vrstvu uložiť v inom formáte, použijeme :menuselection:`Raster --> Prevod --> Previesť na iný formát` (:num:`obr. #menu-prevod`). V dialógovom okne nastavíme vstupnú a výstupnú vrstvu, cieľový súradnicový systém, atď.
+Ak potrebujeme rastrovú vrstvu uložiť v inom formáte, použijeme :menuselection:`Raster --> Prevod --> Previesť na iný formát` (:num:`#menu-prevod`). V dialógovom okne nastavíme vstupnú a výstupnú vrstvu, cieľový súradnicový systém, atď.
 
     .. _menu-prevod:
 
@@ -83,7 +83,7 @@ Na to, aby sme videli a nastavili vlastnosti danej rastrovej vrstvy, použijeme 
 Všeobecné
 ^^^^^^^^^
 
-Prvá záložka poskytuje základné informácie o vrstve ako názov súboru, názov vrstvy v legende s možnosťou editácie, zdroj vrstvy, počet stĺpcov a riadkov, súradnicový referenčný systém, ktorý možno zmeniť kliknutím na tlačítko |CRS| :sup:`Vyberte SRS`. V tejto záložke je možné nastaviť aj viditeľnosť v závislosti na mierke, viď. :num:`obr. #obecneraster`.
+Prvá záložka poskytuje základné informácie o vrstve ako názov súboru, názov vrstvy v legende s možnosťou editácie, zdroj vrstvy, počet stĺpcov a riadkov, súradnicový referenčný systém, ktorý možno zmeniť kliknutím na tlačítko |CRS| :sup:`Vyberte SRS`. V tejto záložke je možné nastaviť aj viditeľnosť v závislosti na mierke, viď. :num:`#obecneraster`.
 
     .. _obecneraster:
 
@@ -94,7 +94,7 @@ Prvá záložka poskytuje základné informácie o vrstve ako názov súboru, n�
 Štýl
 ^^^^
 
-Táto záložka slúži na nastavenie farebnosti rastrových dát v mapovom okne. Je možné nastaviť vykresľovanie pásma, farby či prevzorkovanie. V danej vrstve môžu byť farby invertované, dá sa vylepšovať kontrast, sýtosť, jas, rozsah vykresľovaných hodnôt (:num:`obr. #stylraster`). 
+Táto záložka slúži na nastavenie farebnosti rastrových dát v mapovom okne. Je možné nastaviť vykresľovanie pásma, farby či prevzorkovanie. V danej vrstve môžu byť farby invertované, dá sa vylepšovať kontrast, sýtosť, jas, rozsah vykresľovaných hodnôt (:num:`#stylraster`). 
 
     .. _stylraster:
 
@@ -105,7 +105,7 @@ Táto záložka slúži na nastavenie farebnosti rastrových dát v mapovom okne
     
 .. note:: Po nastavení  farebnej palety je potrebné nezabudnúť na tlačítko :item:`Klasifikovat`, ktoré  vygeneruje farby pre konkrétny režim, v našom prípade lineárna farebná interpolácia a invertovaná spojitá paleta *RdYIGn*. Nastavenie hodnoty smerodajnej odchýlky dokáže zabezpečiť, aby hodnoty, ktoré sa príliš líšia od priemeru pre vrstvu, neboli zobrazené.
 
-.. noteadvanced:: Ďalšie možnosti štýlovania ponúka lišta :item:`Raster`, ktorá sa zapína cez :menuselection:`Zobraziť --> Nástrojové lišty --> Raster`. Napríklad prvá položka zľava |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut Stretch` automaticky vylepší kontrast na základe minimálnej a maximálnej hodnoty bunky v aktuálnej lokálnej časti rastra, pričom berie do úvahy východzie limity a odhadnuté hodnoty. Výsledok je na :num:`obr. #stylrstpanel` vľavo. Voľba |mActionFullHistogramStretch| :sup:`Roztiahnuť histogram na celý dataset` nástrojovej lišty vráti zmeny späť ako boli na :num:`obr. #stylraster`, t.j. vyrovná kontrast vzhľadom na celý raster podľa skutočných hodnôt. Ak pravým kliknutím na meno vrstvy zvolíme z kontextového menu :item:`ZOOM na najvhodnejšie merítko (100%)`, klikneme na |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut Stretch` a zvolíme |mIconZoom| :sup:`Priblížiť na vrstvu` čím vytvoríme štýl znázornený na :num:`obr. #stylrstpanel` vpravo.
+.. noteadvanced:: Ďalšie možnosti štýlovania ponúka lišta :item:`Raster`, ktorá sa zapína cez :menuselection:`Zobraziť --> Nástrojové lišty --> Raster`. Napríklad prvá položka zľava |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut Stretch` automaticky vylepší kontrast na základe minimálnej a maximálnej hodnoty bunky v aktuálnej lokálnej časti rastra, pričom berie do úvahy východzie limity a odhadnuté hodnoty. Výsledok je na :num:`#stylrstpanel` vľavo. Voľba |mActionFullHistogramStretch| :sup:`Roztiahnuť histogram na celý dataset` nástrojovej lišty vráti zmeny späť ako boli na :num:`#stylraster`, t.j. vyrovná kontrast vzhľadom na celý raster podľa skutočných hodnôt. Ak pravým kliknutím na meno vrstvy zvolíme z kontextového menu :item:`ZOOM na najvhodnejšie merítko (100%)`, klikneme na |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut Stretch` a zvolíme |mIconZoom| :sup:`Priblížiť na vrstvu` čím vytvoríme štýl znázornený na :num:`#stylrstpanel` vpravo.
 
     .. _stylrstpanel:
 
@@ -119,7 +119,7 @@ Priehľadnosť
 
 QGIS umožňuje zobrazovať každú vrstvu v mapovom okne s rôznym stupňom priehľadnosti. Má to veľkú výhodu napríklad keď chceme, aby okrem aktuálnej rastrovej vrstvy bola viditeľná aj iná. Typickým príkladom je prekrývanie tieňovaného reliéfu s akoukoľvek farebnou rastrovou vrstvou. Prekrytie a vhodné nastavenie priehľadnosti spôsobí priestorový vzhľad 2D vrstvy. Konkrétnejšie si to ukážeme neskôr.
 
-Záložka umožňuje nastaviť všeobecnú priehľadnosť, ale taktiež priehľadnosť pre každý pixel. V časti o užívateľských nastaveniach transparentnosti (viď. :num:`obr. #rsttransparency` s paletovaným typom vykreslenia pásma pre raster) je možné nastaviť hodnoty pomocou tlačidiel |symbologyAdd| :sup:`Zadať hodnoty ručne` alebo |mActionContextHelp| :sup:`Pridať hodnoty z obrazovky`, ďalej možno |symbologyRemove| :sup:`Odstrániť vybrané riadky`, hodnoty |mActionFileOpen| :sup:`Importovať z` alebo |mActionFileSave| :sup:`Exportovať do` súboru, čo má zmysel hlavne pri detailnejších, časovo náročných prácach. Táto záložka taktiež umožňuje nastavenia pre *no data*.
+Záložka umožňuje nastaviť všeobecnú priehľadnosť, ale taktiež priehľadnosť pre každý pixel. V časti o užívateľských nastaveniach transparentnosti (viď. :num:`#rsttransparency` s paletovaným typom vykreslenia pásma pre raster) je možné nastaviť hodnoty pomocou tlačidiel |symbologyAdd| :sup:`Zadať hodnoty ručne` alebo |mActionContextHelp| :sup:`Pridať hodnoty z obrazovky`, ďalej možno |symbologyRemove| :sup:`Odstrániť vybrané riadky`, hodnoty |mActionFileOpen| :sup:`Importovať z` alebo |mActionFileSave| :sup:`Exportovať do` súboru, čo má zmysel hlavne pri detailnejších, časovo náročných prácach. Táto záložka taktiež umožňuje nastavenia pre *no data*.
 
     .. _rsttransparency:
 
@@ -140,7 +140,7 @@ Pyramídy sú dátové štruktúry, ktoré typicky obsahujú menšie množstvo d
 Histogram
 ^^^^^^^^^
 
-QGIS ponúka nástroj na generovanie histogramu rastrovej vrstvy (:num:`obr. #rsthistogram`). Je vytvorený automaticky po kliknutí na voľbu :item:`Vypočítať histogram`. 
+QGIS ponúka nástroj na generovanie histogramu rastrovej vrstvy (:num:`#rsthistogram`). Je vytvorený automaticky po kliknutí na voľbu :item:`Vypočítať histogram`. 
 
     .. _rsthistogram:
 
@@ -156,7 +156,7 @@ Táto záložky by mala poskytovať informácie o danej rastrovej vrstve (ak exi
 Terénne analýzy
 ---------------
 
-Digitálny výškový model terénu je užitočný typ dát, z ktorého je možné odvodiť ďalšie informácie o danom území a tak lepšie vystihnúť charakter skúmaného územia. Nástroje pre terénne analýzy a vizualizácie terénu sú dostupné z menu :menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`, viď. :num:`obr. #menudem`. S týmito nástrojmi môžeme odvodiť dátové sady, ktoré neboli úplne evidentné z pôvodného rastra výškopisu. Môže ísť o odvodenie sklonu reliéfu či orientáciu svahu voči svetovým stranám. 
+Digitálny výškový model terénu je užitočný typ dát, z ktorého je možné odvodiť ďalšie informácie o danom území a tak lepšie vystihnúť charakter skúmaného územia. Nástroje pre terénne analýzy a vizualizácie terénu sú dostupné z menu :menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`, viď. :num:`#menudem`. S týmito nástrojmi môžeme odvodiť dátové sady, ktoré neboli úplne evidentné z pôvodného rastra výškopisu. Môže ísť o odvodenie sklonu reliéfu či orientáciu svahu voči svetovým stranám. 
 
     .. _menudem:
 
@@ -173,7 +173,7 @@ Ako bolo spomenuté už v časti o nastaveniach transparentnosti rastrových dá
 
 .. noteadvanced:: V rámci možností režimu vytvárania tieňovaného reliéfu je možné nastaviť hodnotu zvislého prevýšenia, pomer zvislých a vodorovných jednotiek, azimut či nadmorskú výšku svetla.
 
-Po skončení výpočtu sa v paneli so zoznamom vrstiev objaví novovytvorený tieňovaný reliéf :map:`hillshade`. Aby sme lepšie videli detaily, pomocou |mActionZoomIn| :sup:`Priblížiť` si ohraničíme časť územia. Následne spôsobom, ktorý bol opísaný vyššie nastavíme všeobecnú transparentnosť rastrovej vrstvy :map:`hillshade` na hodnotu :item:`60%`. Dostaneme výsledok znázornený na :num:`obr. #rsthillshade`.
+Po skončení výpočtu sa v paneli so zoznamom vrstiev objaví novovytvorený tieňovaný reliéf :map:`hillshade`. Aby sme lepšie videli detaily, pomocou |mActionZoomIn| :sup:`Priblížiť` si ohraničíme časť územia. Následne spôsobom, ktorý bol opísaný vyššie nastavíme všeobecnú transparentnosť rastrovej vrstvy :map:`hillshade` na hodnotu :item:`60%`. Dostaneme výsledok znázornený na :num:`#rsthillshade`.
 
     .. _rsthillshade:
 
@@ -187,7 +187,7 @@ Po skončení výpočtu sa v paneli so zoznamom vrstiev objaví novovytvorený t
 Sklon (*Slope*)
 ^^^^^^^^^^^^^^^
 
-Jednou z užitočných informácií o teréne je aj sklon, ktorý predstavuje maximálnu zmenu (gradient) výšky medzi susednými bunkami rastra. Rastrovú vrstvu sklonu vygenerujeme obdobne ako tieňovaný reliéf, no použijeme režim :item:`Sklon`. Na :num:`obr. #rstsklon` je znázornený výsledok s farebnou paletou *BrBG*, pričom je použité rozdelenie do 10 rovnakých intervalov.
+Jednou z užitočných informácií o teréne je aj sklon, ktorý predstavuje maximálnu zmenu (gradient) výšky medzi susednými bunkami rastra. Rastrovú vrstvu sklonu vygenerujeme obdobne ako tieňovaný reliéf, no použijeme režim :item:`Sklon`. Na :num:`#rstsklon` je znázornený výsledok s farebnou paletou *BrBG*, pričom je použité rozdelenie do 10 rovnakých intervalov.
 
     .. _rstsklon:
 
@@ -214,7 +214,7 @@ Rastrová kalkulačka súvisí s mapovou algebrou. Ide o matematické operácie 
 
        Mapová algebra
 
-Ak sme mapu orientácií nazvali :map:`aspect`, výraz bude vyzerať nasledovne: :code:`(("aspect@1"  >= 315)  AND  ("aspect@1" < 45)) * 1 + (("aspect@1"  >= 45)  AND  ("aspect@1" < 135)) * 2 + (("aspect@1"  >= 135)  AND  ("aspect@1" < 225)) * 3 + (("aspect@1"  >= 225)  AND  ("aspect@1" < 315)) * 4`. Reklasifikovanej vrstve následne nastavíme farebnosť a popisy (:num:`obr. #nesw` a :num:`obr. #aspectrecl`).
+Ak sme mapu orientácií nazvali :map:`aspect`, výraz bude vyzerať nasledovne: :code:`(("aspect@1"  >= 315)  AND  ("aspect@1" < 45)) * 1 + (("aspect@1"  >= 45)  AND  ("aspect@1" < 135)) * 2 + (("aspect@1"  >= 135)  AND  ("aspect@1" < 225)) * 3 + (("aspect@1"  >= 225)  AND  ("aspect@1" < 315)) * 4`. Reklasifikovanej vrstve následne nastavíme farebnosť a popisy (:num:`#nesw` a :num:`#aspectrecl`).
 
     .. _nesw:
 
@@ -235,7 +235,7 @@ Ak sme mapu orientácií nazvali :map:`aspect`, výraz bude vyzerať nasledovne:
 Generovanie vrstevníc
 ---------------------
 
-Z digitálneho modelu terénu sa dá pomocou voľby :menuselection:`Rastr --> Extrakce --> Izolinie` vygenerovať vektorová vrstva izolínií. V dialógovom menu je potrebné nastaviť vstupný a výstupný súbor, hodnotu intervalu medzi vrstevnicami a prípadne názov atribútu vo výslednej vektorovej vrstve. Po spustení výpočtu sa vektorová vrstva automaticky objaví v mapovom okne. Je potrebné nastaviť jej štýl, popis a Ďalšie vlastnosti. Ako môže výsledok vyzerať je na :num:`obr. #izo`. 
+Z digitálneho modelu terénu sa dá pomocou voľby :menuselection:`Rastr --> Extrakce --> Izolinie` vygenerovať vektorová vrstva izolínií. V dialógovom menu je potrebné nastaviť vstupný a výstupný súbor, hodnotu intervalu medzi vrstevnicami a prípadne názov atribútu vo výslednej vektorovej vrstve. Po spustení výpočtu sa vektorová vrstva automaticky objaví v mapovom okne. Je potrebné nastaviť jej štýl, popis a Ďalšie vlastnosti. Ako môže výsledok vyzerať je na :num:`#izo`. 
 
     .. _izo:
 
@@ -248,7 +248,7 @@ Z digitálneho modelu terénu sa dá pomocou voľby :menuselection:`Rastr --> Ex
 Zobrazovanie v 3D
 -----------------
 
-Výsledky rastrových dát možno zobraziť v priestore. Umožňuje to plugin :item:`Qgis2threejs`. Inštaluje sa ako ostatné pluginy pomocou :menuselection:`zásuvné moduly --> Spravovať a inštalovať zásuvné moduly`, pričom do poľa :item:`Hledat` zadáme názov požadovaného modulu. Po nainštalovaní modul spustíme z menu ako :menuselection:`Web --> Qgis2threejs`. Objaví sa dialógové okno modulu, kde nastavíme *DEM Layer* na :map:`dmt.tiff`, *Vertical exaggeration* na hodnotu :item:`2` a v paneli *Line* zaškrtneme políčko vedľa novovytvorenej rastrovej vrstvy izolínií. Následne spustíme pomocou :item:`Run`. Výsledok môže vyzerať ako na :num:`obr. #q2t`.
+Výsledky rastrových dát možno zobraziť v priestore. Umožňuje to plugin :item:`Qgis2threejs`. Inštaluje sa ako ostatné pluginy pomocou :menuselection:`zásuvné moduly --> Spravovať a inštalovať zásuvné moduly`, pričom do poľa :item:`Hledat` zadáme názov požadovaného modulu. Po nainštalovaní modul spustíme z menu ako :menuselection:`Web --> Qgis2threejs`. Objaví sa dialógové okno modulu, kde nastavíme *DEM Layer* na :map:`dmt.tiff`, *Vertical exaggeration* na hodnotu :item:`2` a v paneli *Line* zaškrtneme políčko vedľa novovytvorenej rastrovej vrstvy izolínií. Následne spustíme pomocou :item:`Run`. Výsledok môže vyzerať ako na :num:`#q2t`.
 
     .. _q2t:
 
