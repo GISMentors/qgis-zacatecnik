@@ -11,12 +11,19 @@
 Export
 ------
 
-Všechna nastavení mapového výstupu jsou součástí mapového projektu. S uložením projektu se tedy uloží i nastavení mapového výstupu.
+Všechna nastavení mapového výstupu jsou součástí mapového projektu. S
+uložením projektu se tedy uloží i nastavení mapového výstupu.
 
-Pokud máte mapový výstup upraven, lze tento výstup uložit nebo vytisknout.
+Pokud máte mapový výstup upraven, lze tento výstup uložit nebo
+vytisknout.
 
-Tisk je možný pres ikonu |print|. Při tisku je nutné zkontrolovat všechna nastavení tisku pro konkrétní tiskárnu.
+Tisk je možný pres ikonu |print|. Při tisku je nutné zkontrolovat
+všechna nastavení tisku pro konkrétní tiskárnu.
 
-Často požadovaným výstupem je také výstup do souboru. V tomto případě lze volit mezi 3 základními typy výstupního souboru - obrázek |as_image|, PDF |as_pdf| nebo SVG |as_svg|.
+Často požadovaným výstupem je také výstup do souboru. V tomto případě
+lze volit mezi 3 základními typy výstupního souboru - obrázek
+|as_image|, PDF |as_pdf| nebo SVG |as_svg|.
 
-    .. tip:: Při exportu mapového výstupu do obrázku je k dispozici široká škála formátů. Z hlediska kvality výstupu, nebo možnosti jeho úpravy je lepší použít PDF nebo SVG.
+    .. tip:: Při exportu mapového výstupu do obrázku je k dispozici
+             široká škála formátů. Z hlediska kvality výstupu, nebo
+             možnosti jeho úpravy je lepší použít PDF nebo SVG.
