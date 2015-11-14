@@ -5,14 +5,16 @@
 Export rastrových údajov
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-Vďaka knižnici |gdal| :sup:`GDAL` (Geospatial Data Abstraction Library) je
-možné čítanie a zápis rastrových GIS formátov v prostredí QGIS. Pre
-všetky podporované dátové formáty využíva knižnica jednoduchý
-dátový model.
-
-Existuje množstvo rastrových formátov, ktoré sú zvyčajne odlíšené
-podľa prípony súborov. QGIS umožňuje export do veľkého množstva
-rôznych bežne používaných formátov.
+Vďaka knižnici |gdal| :sup:`GDAL` (`Geospatial Data Abstraction Library
+<http://gdal.org/>`_) je možné čítanie a zápis rastrových GIS formátov
+v prostredí QGIS. Pre všetky podporované dátové formáty využíva
+knižnica jednoduchý
+dátový model. Existuje množstvo rastrových formátov, ktoré sú zvyčajne
+odlíšené podľa prípony súborov. QGIS umožňuje export do veľkého
+množstva
+rôznych bežne používaných formátov. `Tu
+<http://gdal.org/formats_list.html>`_ je dostupný zoznam rastrových
+formátov aj s doplňujúcimi informáciami.
 
 Dáta možno exportovať dvomi spôsobmi. Ak potrebujeme vrstvu uložiť
 (exportovať) v tom istom formáte, lebo pracujeme napríklad len s časťou
