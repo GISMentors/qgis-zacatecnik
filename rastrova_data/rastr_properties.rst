@@ -39,11 +39,11 @@ a riadkov, súradnicový referenčný systém, ktorý možno zmeniť kliknutím
 na tlačítko |CRS| :sup:`Vyberte SRS`. V tejto záložke je možné nastaviť
 aj viditeľnosť v závislosti na mierke, viď. :num:`#obecneraster`.
 
-    .. _obecneraster:
+.. _obecneraster:
 
-    .. figure:: images/obecne_raster.png
+.. figure:: images/obecne_raster.png
 
-        Vlastnosti rastovej vrstvy
+   Vlastnosti rastovej vrstvy
 
 Štýl
 ^^^^
@@ -53,13 +53,13 @@ okne. Je možné nastaviť vykresľovanie pásma, farby či prevzorkovanie. V
 danej vrstve môžu byť farby invertované, dá sa vylepšovať kontrast,
 sýtosť, jas, rozsah vykresľovaných hodnôt (:num:`#stylraster`).
 
-    .. _stylraster:
+.. _stylraster:
 
-    .. figure:: images/styl_raster.png
-       :class: middle
+.. figure:: images/styl_raster.png
+   :class: middle
 
-       Rôzne štýly tej istej rastovej vrstvy: šedé pásmo (vľavo),
-       pseudofarby (vpravo)
+   Rôzne štýly tej istej rastovej vrstvy: šedé pásmo (vľavo),
+   pseudofarby (vpravo)
 
 .. note:: Po nastavení farebnej palety je potrebné nezabudnúť na tlačítko
 :item:`Klasifikovat`, ktoré vygeneruje farby pre konkrétny režim, v našom
@@ -83,13 +83,12 @@ na |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut Stretch`
 a zvolíme |mIconZoom| :sup:`Priblížiť na vrstvu` čím vytvoríme štýl
 znázornený na :num:`#stylrstpanel` vpravo.
 
-    .. _stylrstpanel:
+.. _stylrstpanel:
 
-    .. figure:: images/styl_rst_panel.png
-       :class: middle
+.. figure:: images/styl_rst_panel.png
+   :class: middle
 
-       Vylepšenie štýlu rastrovej vrstvy pomocou nástrojovej lišty
-       :item:`Raster`
+Vylepšenie štýlu rastrovej vrstvy pomocou nástrojovej lišty :item:`Raster`
 
 Priehľadnosť
 ^^^^^^^^^^^^
@@ -112,11 +111,11 @@ z` alebo |mActionFileSave| :sup:`Exportovať do` súboru, čo má zmysel
 hlavne pri detailnejších, časovo náročných prácach. Táto záložka
 taktiež umožňuje nastavenia pre *no data*.
 
-    .. _rsttransparency:
+.. _rsttransparency:
 
-    .. figure:: images/rst_transparency.png
+.. figure:: images/rst_transparency.png
 
-        Možnosti nastavenia priehľadnosti rastrovej vrstvy
+   Možnosti nastavenia priehľadnosti rastrovej vrstvy
 
 Pyramídy
 ^^^^^^^^
@@ -143,13 +142,12 @@ QGIS ponúka nástroj na generovanie histogramu rastrovej vrstvy
 (:num:`#rsthistogram`). Je vytvorený automaticky po kliknutí na voľbu
 :item:`Vypočítať histogram`.
 
-    .. _rsthistogram:
+.. _rsthistogram:
 
-    .. figure:: images/rst_histogram.png
-       :class: middle
+.. figure:: images/rst_histogram.png
+   :class: middle
 
-       Výpočet histogramu rastrovej vrstvy digitálneho výškového
-       modelu terénu
+   Výpočet histogramu rastrovej vrstvy digitálneho výškového modelu terénu
 
 Metaúdaje
 ^^^^^^^^^

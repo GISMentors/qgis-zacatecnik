@@ -23,23 +23,22 @@ obrázok), názov, súradnicový systém, rozsah, rozlíšenie, možnosti
 vytvorenia a ďalšie parametre novej exportovanej vrstvy. Po spustení sa
 nová vrstva pridá do mapového okna (:num:`#saveas`).
 
-    .. _saveas:
+.. _saveas:
 
-    .. figure:: images/saveas.png
-       :class: middle
+.. figure:: images/saveas.png
+   :class: middle
 
-       Export rastrovej vrstvy pomocou :item:`Uložiť rastrovú vrstvu ako
-       ... `
+   Export rastrovej vrstvy pomocou :item:`Uložiť rastrovú vrstvu ako ... `
 
 Ak potrebujeme rastrovú vrstvu uložiť v inom formáte, použijeme
 :menuselection:`Raster --> Prevod --> Previesť na iný formát`
 (:num:`#menu-prevod`). V dialógovom okne nastavíme vstupnú a výstupnú
 vrstvu, cieľový súradnicový systém, atď.
 
-    .. _menu-prevod:
+.. _menu-prevod:
 
-    .. figure:: images/menu_prevod.png
-       :class: small
+.. figure:: images/menu_prevod.png
+   :class: small
 
-       Export rastrovej vrstvy do iného formátu
+   Export rastrovej vrstvy do iného formátu
 

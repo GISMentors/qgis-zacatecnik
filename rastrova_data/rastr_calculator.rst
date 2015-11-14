@@ -1,6 +1,9 @@
-.. |mActionShowRasterCalculator| image::
-../images/icon/mActionShowRasterCalculator.png
+.. |mActionShowRasterCalculator| image:: ../images/icon/mActionShowRasterCalculator.png
    :width: 1.5em
+
+.. index::
+   pair: algebra; mapová algebra
+
 
 Použitie rastrovej kalkulačky
 -----------------------------
@@ -17,12 +20,12 @@ umiestnením. Pomocou mapovej algebry je možné matematickými, ale i
 inými operáciami kombinovať viaceré rastrové vrstvy a tým vytvárať
 nové vrstvy.
 
-    .. _rstcalculator:
+.. _rstcalculator:
 
-    .. figure:: images/rstcalculator.png
-       :scale: 60%
+.. figure:: images/rstcalculator.png
+   :scale: 60%
 
-       Mapová algebra
+   Mapová algebra
 
 Ak sme mapu orientácií nazvali :map:`aspect`, výraz bude vyzerať
 nasledovne: :code:`(("aspect@1" >= 315) AND ("aspect@1" < 45)) * 1 +
@@ -31,20 +34,20 @@ nasledovne: :code:`(("aspect@1" >= 315) AND ("aspect@1" < 45)) * 1 +
 * 4`. Reklasifikovanej vrstve následne nastavíme farebnosť a popisy
 (:num:`#nesw` a :num:`#aspectrecl`).
 
-    .. _nesw:
+.. _nesw:
 
-    .. figure:: images/nesw.png
-       :class: middle
+.. figure:: images/nesw.png
+   :class: middle
 
-       Reklasifikácia orientácií svahu na svetové strany pomocou mapovej
-       kalkulačky
+   Reklasifikácia orientácií svahu na svetové strany pomocou mapovej
+   kalkulačky
 
-    .. _aspectrecl:
+.. _aspectrecl:
 
-    .. figure:: images/aspect_recl.png
-       :class: middle
+.. figure:: images/aspect_recl.png
+   :class: middle
 
-       Reklasifikovaná mapa orientácií svahu na svetové strany
+   Reklasifikovaná mapa orientácií svahu na svetové strany
 
 .. note:: Pri reklasifikáciách sa zvyčajne používa modul GRASS-u
 :grasscmd:`r.reclass`. Na to je však potrebné nainštalovať zásuvný modul

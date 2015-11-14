@@ -8,11 +8,11 @@ alebo súčasným stlačením kláves :kbd:`Ctrl+Shift+R`. Na :num:`#addraster`
 je znázornenie rastrovej vrstvy :map:`dmt.tiff` z datasetu :data:`EU-DEM
 (GeoTIFF)`.
 
-    .. _addraster:
+.. _addraster:
 
-    .. figure:: images/add_raster.png
+.. figure:: images/add_raster.png
 
-        Nahratie rastrovej vrstvy do QGIS
+   Nahratie rastrovej vrstvy do QGIS
 
 .. note:: Ak by sa vrstva nezobrazila v mapovom okne ako je to na
 :num:`#addraster`, je potrebné kliknúť pravým tlačítkom na meno vrstvy

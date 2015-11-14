@@ -13,11 +13,11 @@ nástrojmi môžeme odvodiť dátové sady, ktoré neboli úplne evidentné
 z pôvodného rastra výškopisu. Môže ísť o odvodenie sklonu reliéfu
 či orientáciu svahu voči svetovým stranám.
 
-    .. _menudem:
+.. _menudem:
 
-    .. figure:: images/menudem.png
+.. figure:: images/menudem.png
 
-       Nástroje pre terénne analýzy dostupné z menu
+   Nástroje pre terénne analýzy dostupné z menu
 
 .. note:: Nástrojová lišta :item:`Raster` obsahuje okrem možnosti
 vykonávať terénne analýzy aj nástroje týkajúce sa mapovej algebry,
@@ -51,12 +51,12 @@ pomocou |mActionZoomIn| :sup:`Priblížiť` si ohraničíme časť
 všeobecnú transparentnosť rastrovej vrstvy :map:`hillshade` na hodnotu
 :item:`60%`. Dostaneme výsledok znázornený na :num:`#rsthillshade`.
 
-    .. _rsthillshade:
+.. _rsthillshade:
 
-    .. figure:: images/rst_hillshade.png
-       :class: middle
+.. figure:: images/rst_hillshade.png
+   :class: middle
 
-       Vytvorenie priestorového efektu dát vďaka tieňovanému reliéfu
+   Vytvorenie priestorového efektu dát vďaka tieňovanému reliéfu
 
 .. note:: Rastrová vrstva tieňovaného reliéfu je v menu :item:`Vrstvy`
 nad vrstvou :map:`dmt.tiff`. Je možné urobiť to opačne, t.j. vrstvu
@@ -72,12 +72,12 @@ vrstvu sklonu vygenerujeme obdobne ako tieňovaný reliéf, no použijeme
 režim :item:`Sklon`. Na :num:`#rstsklon` je znázornený výsledok s farebnou
 paletou *BrBG*, pričom je použité rozdelenie do 10 rovnakých intervalov.
 
-    .. _rstsklon:
+.. _rstsklon:
 
-    .. figure:: images/rst_sklon.png
-       :class: middle
+.. figure:: images/rst_sklon.png
+   :class: middle
 
-       Rastrová vrstva sklonov reliéfu
+   Rastrová vrstva sklonov reliéfu
 
 Orientácia voči svetovým stranám (*Aspect*)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
