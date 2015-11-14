@@ -14,10 +14,10 @@ Táto časť školenia opisuje ako pracovať s takýmito dátami v prostredí QG
 .. toctree::
    :maxdepth: 2
 
-   rastr_import.rst
-   rastr_export.rst
-   rastr_properties.rst
-   rastr_terrain_analysis.rst
-   rastr_calculator.rst
-   izolines.rst
-   3D_view.rst
+   rastr_import
+   rastr_export
+   rastr_properties
+   rastr_terrain_analysis
+   rastr_calculator
+   izolines
+   3D_view
