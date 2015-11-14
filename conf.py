@@ -36,8 +36,8 @@ html_title = project
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    ('index', '%s.tex' % htmlhelp_basename, project,
-     copyright, 'manual'),
+    ('index', '%s-%s.tex' % (htmlhelp_basename, version), project,
+     u'GISMentors', u'manual'),
     ]
 
 # -- Options for manual page output ---------------------------------------
