@@ -105,7 +105,7 @@ epub:
 	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
 
 latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	$(SPHINXBUILD) -E -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
 	sed -i -e 's/\\begin{figure}\[htbp\]/\\begin{figure}\[!ht\]/' \
 		-e 's/\\DUspan{fignote}/\\textcolor{red}/g' \
 		-e 's/\\DUspan{map}/\\texttt/g' \
@@ -119,7 +119,7 @@ latex:
 	      "(use \`make latexpdf' here to do that automatically)."
 
 latexpdf:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex
+	$(MAKE) latex
 	@echo "Running LaTeX files through pdflatex..."
 	$(MAKE) -C $(BUILDDIR)/latex all-pdf
 	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex."

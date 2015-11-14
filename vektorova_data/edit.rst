@@ -193,7 +193,7 @@ Pro topologicky čistou editaci můžeme pomocí funkce :menuselection:`Nastaven
     Přichycení kurzoru k segmentu
                                            
 
-Pokročílý režim přichytávání (:item:`Režim přichytávání...` |selectstring| --> :option:`Pokročílé`)
+Pokročílý režim přichytávání (:item:`Režim přichytávání...` |selectstring| - :option:`Pokročílé`)
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
 
