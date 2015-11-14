@@ -1,6 +1,14 @@
-****
-Úvod
-****
+.. only:: latex
+
+   #####
+   Obsah
+   #####
+
+.. only:: html
+                    
+   ****
+   Úvod
+   ****
 
 .. only:: html
 
@@ -19,14 +27,19 @@ Mezi hlavní výhody patří zejména rychlost vývoje a rozšiřování jeho fu
 Licence GNU GPL umožňuje používání software i pro komerční účely. Podstatné je, že
 umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
 
+.. only:: latex
+
+   .. figure:: images/intro_logo.png
+      :scale-latex: 80
+
+      Logo projektu QGIS
+
 Současným konceptem ve vývoji je pravidelné a intenzivní publikování nových verzí.
 Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
 
-
-
 .. only:: html
 
-.. tip::
+   .. tip::
 
       Text školení je dostupný i v tisknutelné formě `PDF
       <./skoleni-qgis-zacatecnik.pdf>`_.
