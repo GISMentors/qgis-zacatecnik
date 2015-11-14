@@ -82,11 +82,11 @@ plugin \"WFS 2.0\" a pro prohlížení souborů vfk slouží plugin
    :maxdepth: 2
 
    intro/index
-   vektor_prace/index
-   raster_prace/index
-   sitova_data/index
+   vektorova_data/index
+   rastrova_data/index
+   webove_sluzby/index
    mapovy_vystup/index
-   misc/index
+   ruzne/index
 
    
 

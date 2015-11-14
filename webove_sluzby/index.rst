@@ -9,5 +9,5 @@ Pod pojmem síťová data jsou reprezentovány především data přístupná z 
 .. toctree::
    :maxdepth: 2
 
-   sit_data_r.rst
-   sit_data_v.rst
+   rastr.rst
+   vektor.rst

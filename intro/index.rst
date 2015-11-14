@@ -5,10 +5,10 @@ První kroky
 .. toctree::
    :maxdepth: 2
 
-   ../instalation/index
+   ../instalace/index
    prvni_kroky
    popis_rozhrani
-   ../ogc_data/ogcdata
+   import_export
 
 
 
