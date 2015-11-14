@@ -113,9 +113,9 @@ Autoři
 
 Za `GISMentors <http://www.gismentors.cz/>`_:
 
-* `Oto Kaláb <http://www.gismentors.cz/mentors/kalab/>`_ 
 * `Alžbeta Gardoňová <http://www.gismentors.cz/mentors/gardonova/>`_
 *  Ľudmila Furtkevičová
+* `Oto Kaláb <http://www.gismentors.cz/mentors/kalab/>`_ 
 * `Vojtěch Dubrovský <http://www.gismentors.cz/mentors/dubrovsky/>`_
 
 Text dokumentu
