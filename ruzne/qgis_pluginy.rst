@@ -85,7 +85,10 @@ Pod záložkou |plugin-upgrade| :sup:`Aktualizovatelný` sa nachádzajú zásuvn
 moduly, ktoré sú dostupné aj v novšej verzii. Záložka |mActionTransformSettings| 
 :sup:`Nastavení` obsahuje nastavenia týkajúce sa kontroly aktualizácií modulov,
 experimentálnych a neschválených modulov a zobrazuje aj zoznam repozitárov, 
-ktoré sa dajú pridávať, editovať alebo mazať, viď. :num:`#akt-nast`.
+ktoré sa dajú pridávať, editovať alebo mazať, viď. :num:`#akt-nast`. 
+Po zaškrtnutí políčok |checkbox_unchecked| pri položkách
+:item:`Zobrazit také experimentální` a :item:`neschválené moduly` je 
+k dispozícii takmer 500 zásuvných modulov.
 
 .. _akt-nast:
 
@@ -116,6 +119,25 @@ môže pomôcť vyplnenie políčka :item:`Hledat` v dialógovom okne.
 V ďalšej časti si ukážeme niektoré z užitočných a často používaných zásuvných 
 modulov programu QGIS. 
 
+.. only:: latex
+          
+   .. tabularcolumns:: |p{4cm}|p{5cm}|p{4cm}|
+                       
+.. only:: html
+                                 
+   .. cssclass:: border
 
-
++----------------------+------------------+---------------------+
+| Zásuvný modul        | Charakteristika  | Dokumentácia        |
++======================+==================+=====================+
+| Dálnice              | 1                | 110                 |
++----------------------+------------------+---------------------+
+| Rychlostní silnice   | 2                | 100                 |
++----------------------+------------------+---------------------+
+| Silnice 1.třídy      | 3                | 90                  |
++----------------------+------------------+---------------------+
+| Silnice 2.třídy      | 4                | 70                  |
++----------------------+------------------+---------------------+
+| Silnice 3.třídy      | 5                | 60                  |
++----------------------+------------------+---------------------+
 
