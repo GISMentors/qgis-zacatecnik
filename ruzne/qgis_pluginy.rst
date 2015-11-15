@@ -14,6 +14,20 @@
    :width: 1.5em
 .. |star| image:: ../images/icon/osm_star.png
    :width: 1.5em
+.. |1| image:: ../images/icon/dxf2shp_converter.png
+   :width: 1.5em
+.. |2| image:: ../images/icon/roadgraph.png
+   :width: 1.5em
+.. |3| image:: ../images/icon/coordinate_capture.png
+   :width: 1.5em
+.. |4| image:: ../images/icon/mGeorefRun.png
+   :width: 1.5em
+.. |5| image:: ../images/icon/evis_icon.png
+   :width: 1.5em
+.. |6| image:: ../images/icon/gps_importer.png
+   :width: 1.5em
+.. |7| image:: ../images/icon/dem.png
+   :width: 1.5em
 
 QGIS pluginy
 ------------
@@ -116,28 +130,45 @@ rôznej kvality a štádia vývoja. Preto je dobrou pomôckou zobrazenie hodnote
 .. tip:: Ak poznáme aspoň približný názov konkrétneho modulu, pri vyhľadávaní 
 môže pomôcť vyplnenie políčka :item:`Hledat` v dialógovom okne.
 
-V ďalšej časti si ukážeme niektoré z užitočných a často používaných zásuvných 
-modulov programu QGIS. 
+Príklady zásuvných modulov
+==========================
+
+V ďalšej časti si aspoň čiastočne ukážeme niektoré z užitočných a často 
+používaných zásuvných modulov programu QGIS: 
 
 .. only:: latex
           
-   .. tabularcolumns:: |p{4cm}|p{5cm}|p{4cm}|
+   .. tabularcolumns:: |p{5cm}|p{7cm}|
                        
 .. only:: html
                                  
    .. cssclass:: border
 
-+----------------------+------------------+---------------------+
-| Zásuvný modul        | Charakteristika  | Dokumentácia        |
-+======================+==================+=====================+
-| plugin               | 1                |                     |
-+----------------------+------------------+---------------------+
-| plugin               | 1                |                     |
-+----------------------+------------------+---------------------+
-| plugin               | 1                |                     |
-+----------------------+------------------+---------------------+
-|  plugin              | 1                |                     |
-+----------------------+------------------+---------------------+
-| plugin               | 1                |                     |
-+----------------------+------------------+---------------------+
++------------------------------------------------+-------------------------------------------------+
+| Zásuvný modul                			 | Charakteristika  	  	                   |
++================================================+=================================================+
+| |1| :sup:`Konvertor Dxf2Shp` 			 | Konvertuje z formátu ``dxf`` do  formátu ``shp``|
++------------------------------------------------+-------------------------------------------------+
+| |2| :sup:`Zásuvný modul silničního grafu`      | Řeší problém nejkratší cesty                    |
++------------------------------------------------+-------------------------------------------------+
+| |3| :sup:`Získání souřadnic` 			 | Získání souřadnic myši                          |
++------------------------------------------------+-------------------------------------------------+
+| |4| :sup:`Georeferencovač GDAL`		 | Georeferencování rastrů pomocí GDAL             |
++------------------------------------------------+-------------------------------------------------+
+| |5| :sup:`eVis`             			 | Nástroj vizualizace událostí                    |
++------------------------------------------------+-------------------------------------------------+
+| |6| :sup:`GPS nástroje`      			 | Nástroje pro načtení a import dat GPS           |
++------------------------------------------------+-------------------------------------------------+
+| |7| :sup:`Zásuvný modul analýzy terénu rastru` | Nástroj pro analýzu terénu 		           |
++------------------------------------------------+-------------------------------------------------+
+
+OpenLayers Plugin	
+^^^^^^^^^^^^^^^^^
+
+.. _plp:
+
+.. figure:: images/olp.png
+   :scale: 55%
+
+   OpenLayers Plugin z lišty menu
 
