@@ -1,8 +1,10 @@
 .. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
    :width: 1.5em
 .. |mActionZoomFullExtent| image:: ../images/icon/mActionZoomToLayer.png
-   :width: 1.5em
-   
+   :width: 1.5em 
+
+.. _importexport:
+
 Přidávání a export prostorových dat
 ===================================
 
@@ -11,6 +13,8 @@ rozdělit podle způsobu uložení na lokální a distribuovaná (síťová).
 V obouch kategoriích se následně vyskytují data rastrová a vektorová.
 V této kapitole jsou popsány základní principy připojení a exportu prostorových dat v prgramu QGIS.
 Práce s konkrétními formáty budou potom uvedeny v samostatných kapitolách.
+
+.. _vectorimport:
 
 Přidávání dat
 -------------
