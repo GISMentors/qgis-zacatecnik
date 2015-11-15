@@ -126,5 +126,19 @@ Základní nástroje pro pohyb v okně
         .. tip:: při posunu pomocí stiknutí kolečka myši můžeme mít aktivní jinou funkci např výběr, vytváření nových prvků atd.
 - |mActionRefresh| :sup:`Obnovit` - obnoví zobrazení všech nahraných dat
 
+Základní nástroje výběru 
+^^^^^^^^^^^^^^^^^^^^^^^^
+Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní prvky, se kterýmy hodláme dále pracovat. Takové to označení se nazývá :option:`Výběr`
 
-    
+- |mActionSelectRectangle| :sup:`Vybrat prvky oblastí nebo jednoklikem` - nejjednoduší tvorba výběru
+- |mActionSelectPolygon| :sup:`Vybrat prvky polygonem` - vytvořit výběr naklikáním polygonu
+- |mActionSelectFreehand| :sup:`Vybrat prvky kreslením od ruky`
+- |mActionSelectRadius| :sup:`Vybrat prvky poloměrem`
+
+- |mIconExpressionSelect| :sup:`Vabrat prvky pomocí vzorce` - viz. kapitola :ref:`atrdotaz`
+
+- |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` - zruší veškerý výběr
+
+.. tip:: Nástroje pro pohyb v okně na základě výběru
+    - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
+    - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
