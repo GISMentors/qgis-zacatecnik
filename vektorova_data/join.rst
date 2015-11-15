@@ -14,51 +14,68 @@
    :width: 1.5em
 .. |mActionAddDelimitedTextLayer| image:: ../images/icon/mActionAddDelimitedTextLayer.png
    :width: 1.5em
+.. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
+   :width: 1.5em
+
+.. todo:: nachystat data, příklad?
 
 Připojení tabulkových dat 
 =========================
 
-Pokud máme vektorovou vrstvu, můžeme k jejím prvkům připojit data z tabulek. Atributová tabulka vektorové vrstvy i připojovaná tabulka musí mít sloupec, ve kterém budou hodnoty, přes které se bude připojení vytvářet. Podle tohoto sloupce QGIS pozná, který řádek tabulky a prvek ve vrstvě patří k sobě.
+V této kapitole si ukážeme funkci |join| :sup:`Připojení` resp. její využití k připojení tabulkových dat k atributové tabulce vrstvy, kterou máme v projektu. Funkce připojení umožňuje na základě shodných hodnot jednoho atributu připojit atributovou tabulku k vektorové vrstvě. Takto k sobě můžeme připojit atributové tabulky dvou vektorových vrstev. Díky knihovně OGR však lze jako atributovou tabulku nahrát i tabulková data bez geometrie (formáty \*.csv, \*.dbf, \*.ods, \*.xls aj.). To má využití zejména pokud potřebujeme připojit získané tabulky s informacemi o prvcích ve vektorové vrstvě nebo pokud potřebujeme připojit data naměřená v terénu ke známým prvkům nebo např. naměřeným GPS bodům.
 
-.. tip:: Možné využití v praxi:
+.. Pokud máme vektorovou vrstvu, můžeme k jejím prvkům připojit data z tabulek. Atributová tabulka vektorové vrstvy i připojovaná tabulka musí mít sloupec, ve kterém budou hodnoty, přes které se bude připojení vytvářet. Podle tohoto sloupce QGIS pozná, který řádek tabulky a prvek ve vrstvě patří k sobě. 
 
-            - připojení získaných dat v tabulkách k prvkům 
-            - připojení naměřených dat z terénu k prvkům
+.. .. tip:: Možné využití v praxi:
+
+            - připojení získaných informací o prvcích ve vektorové vrstvě
+            - připojení naměřených dat z terénu k prvkům ve vektorové vrstvě
     
 
+Postup připojení
+----------------
+
+Nejprve je vhodné převést naši tabulku na data s oddělenými hodnotami, např. formát :wikipedia:`CSV`, což provedeme přímo v tabulkovém procesoru - při ukládání nebo exportu vybereme formát \*.csv 
+
+Existují dva hlavní způsoby jak nahrát tabulková data jako vrstvu do QGIS:   
+
+1. Stejně jako vektorovou vrstvu, přetažením z prohlížeče nebo pomocí |mActionAddOgrLayer| :sup:`Přidat vektorovou vrstvu`
+
+    \+ lze editovat přímo v QGIS
     
-.. todo:: - .csvt
-          - příklad
-
-.. .. _ptab:
-
-.. .. table:: Poznámky z terénu
-
-   +-----+--------+---------+---------+--------+
-   | bod | biotop | teplota | vlhkost | druh   |
-   +=====+========+=========+=========+========+
-   | 435 | louka  | 29      | 49      | ManRel |
-   +-----+--------+---------+---------+--------+
-   | ... | ...    | ...     | ...     | ...    |
-   +-----+--------+---------+---------+--------+
-   
-
-Postup připojení dat
---------------------
-
-Nejprve je vhodné převést naši tabulku na data s oddělenými hodnotami, např. formát :wikipedia:`CSV`, což provedeme přímo v tabulkovém procesoru - při ukládání nebo exportu vybereme formát .csv 
+    \- interpretuje všechny atributy jako :option:`text`, lze ošetřit vytvořením doplňujícího textového souboru \*.csvt
     
- -  nahrajeme .csv soubor jako vrstvu, buď přetažením z prohlížeče nebo pomocí |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s odděleným textem`, kde bychom zvolili |radiobuttonon| :sup:`Žádna geometrie (pouze atributová tabulka)`
+        - \*.csvt soubor musí být v stejném adresáři a mít stejný název jako přidávaný \*.csv soubor. Dále musí obsahovat pouze jeden řádek, ve kterém jsou uvedeny typy atributů k odpovídajícím sloupcům \*.csv ("Integer","Real","String").
+        
+.. figure:: images/join_csvt.png
+    
+    Ukázka tabulkových dat ve formátu \*.csv (vlevo) a odpovídající soubor \*.csvt (vpravo) 
 
- -  otevřeme vlastnosti vektorové vrstvy, ke které chceme tabulku připojit a zvolíme záložku |join| :sup:`Připojení`
+2. Pomocí |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s odděleným textem`, kde bychom zvolili |radiobuttonon| :sup:`Žádna geometrie (pouze atributová tabulka)`
 
- -  přidáme nové připojení pomocí tlačítka |symbologyAdd|
+    \- nelze editovat přímo v QGIS
+    
+    \+ rozpozná typ atributu (:option:`text`, :option: `Celé číslo` atd.)
+
+
+
+
+
+.. figure:: images/join_layer.png
+    :scale: 70%
+    
+    Zobrazení tabulkových dat v seznamu vrstev
+    
+.. -  nahrajeme .csv soubor jako vrstvu, buď přetažením z prohlížeče nebo pomocí |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s odděleným textem`, kde bychom zvolili |radiobuttonon| :sup:`Žádna geometrie (pouze atributová tabulka)`
+
+Jakmile máme přidána tabulková data otevřeme vlastnosti vektorové vrstvy, ke které chceme tabulku připojit a zvolíme záložku |join| :sup:`Připojení` a přidáme nové připojení pomocí tlačítka |symbologyAdd|. V dialogovém okně (:num:`join`) potom nastavíme parametry připojení.
+
     
 .. _join:
 
 .. figure:: images/join.png
     
-   Okno přidání připojení
+    Okno přidání připojení
     
 |
 
@@ -80,3 +97,15 @@ Nejprve je vhodné převést naši tabulku na data s oddělenými hodnotami, nap
     
  -  po odebrání tabulky ze seznamu vrstev, nebo přímo vymazání souboru .csv se připojení zruší
  -  pro trvalé uložení připojených dat do vektorové vrstvy lze použít funkci exportu vrstvy (:item:`Uložit jako...`)
+ 
+.. .. _ptab:
+
+.. .. table:: Poznámky z terénu
+
+   +-----+--------+---------+---------+--------+--------+
+   | bod | biotop | teplota | vlhkost | druh1  | druh2  |
+   +=====+========+=========+=========+========+========+
+   | 435 | louka  | 29      | 49      | 1      | 0      |
+   +-----+--------+---------+---------+--------+--------+
+   | ... | ...    | ...     | ...     | ...    |        |
+   +-----+--------+---------+---------+--------+--------+
