@@ -28,7 +28,14 @@ napísané v programovacom jazyku `Python <https://www.python.org/>`_ alebo
 Ich kompletný zoznam spolu s príslušnou charakteristikou, informáciami 
 napríklad o použití, potrebnej minimálnej verzii QGISu, domovskej stránke, 
 autoroch, o počte stiahnutí, o tom, ktoré sú označované ako najviac obľúbené 
-či najmenej hodnotené je dostupný `tu <https://plugins.qgis.org/plugins/>`_ .
+či najmenej hodnotené je dostupný `tu <https://plugins.qgis.org/plugins/>`_.
+
+Moduly sú udržiavané vývojovým tímom QGISu 
+(`QGIS Development Team <http://qgis-development-team.software.informer.com/>`_) 
+a sú automaticky súčasťou každej jeho distribúcie. Všetky externé pluginy sú 
+napísané v programovom jazyku Python a udržiavajú ich príslušní autori.
+Chyby (angl. *bugy*) by mali byť zverejnené a dostupné na stránkach 
+`tu <http://hub.qgis.org/projects/qgis-user-plugins>`_.
 
 Správca zásuvných modulov
 =========================
@@ -101,10 +108,7 @@ usporiadanie podľa abecedy, počtu stiahnutí, hlasov alebo stavu (:num:`#rad`)
 .. note:: Je potrebné pripomenúť, že zásuvné moduly v oficiálnych repozitároch 
 boli testované, no jednotlivé repozitáre môžu obsahovať aj menej overené moduly 
 rôznej kvality a štádia vývoja. Preto je dobrou pomôckou zobrazenie hodnotenia 
-či počtu |star| |star| |star|. Moduly sú udržiavané vývojovým tímom QGISu 
-(`QGIS Development Team <http://qgis-development-team.software.informer.com/>`_) 
-a sú automaticky súčasťou každej jeho distribúcie. Všetky externé pluginy sú 
-napísané v programovom jazyku Python a udržiavajú ich príslušní autori. 
+či počtu |star| |star| |star|.  
 
 .. tip:: Ak poznáme aspoň približný názov konkrétneho modulu, pri vyhľadávaní 
 môže pomôcť vyplnenie políčka :item:`Hledat` v dialógovom okne.
