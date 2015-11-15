@@ -38,7 +38,7 @@ kroku až po export výstupu.
 Obsah mapového okna
 ^^^^^^^^^^^^^^^^^^^
 
-Pomocí ikony |add_map| :sub:`Přidat novou mapu` se aktivuje funkce pro 
+Pomocí ikony |add_map| :sup:`Přidat novou mapu` se aktivuje funkce pro 
 přidání výřezu s mapovým oknem. Dalším krokem je umístění výřezu pro 
 mapové okno do pracovní plochy pomocí tažení myši.  Po umístění se do 
 výřezu načte obsah mapového okna.
@@ -119,7 +119,7 @@ Titulek
 ^^^^^^^
 
 Obvyklým požadavkem pro mapový výstup je textové pole s titulkem.
-Textové pole se přidá pomocí ikonky |add_label| :sub:`Přidat nový 
+Textové pole se přidá pomocí ikonky |add_label| :sup:`Přidat nový 
 popísek`. Umístění textového pole probíhá stejně jako je popsané 
 u mapového výřezu.
 
@@ -132,7 +132,7 @@ Legenda
 ^^^^^^^
 Další obvyklou součástí mapového výstupu je legenda. Ta má popisovat
 jednotlivé prvky, které jsou zobrazovány.  Přidání legendy do mapového
-výstupu je možné pomocí ikonky |add_legend| :sub:`Přidat novou legendu`.
+výstupu je možné pomocí ikonky |add_legend| :sup:`Přidat novou legendu`.
 Umístění položky legendy do mapového okna je proveden stejně jako u 
 předchozích položek.
 
@@ -166,7 +166,7 @@ Atributová tabulka
 
 V některých případech je vhodné umístit do mapového výstupu i část
 atributové tabulky. Tuto lze přidat pomocí tlačítka |add_attributes| 
-:sub:`Přidat atributovou tabulku`.
+:sup:`Přidat atributovou tabulku`.
 
 Všeobecná nastavení tabulky a jejího vzhledu se nachází v části
 :item:`Vlastnosti položky`. Pokud je v projektu přidáno vícero vrstev,
@@ -201,7 +201,7 @@ Směrová šipka
 ^^^^^^^^^^^^^ 
 
 Do mapového výstupu lze přidat také směrovou šipku - pomocí ikony
-|add_arrow| :sub:`Přidat šipku`. Směrová šipka může být vykreslena 
+|add_arrow| :sup:`Přidat šipku`. Směrová šipka může být vykreslena 
 různou symbologii. Výběr symbologie a další nastavení jsou dostupné 
 v záložce :item:`Item properties`. Lze zde ponechat defaultní styl 
 směrové šipky, kdy se vykresluje jednoduchá šipka. Je možné použít i
@@ -221,5 +221,5 @@ Další prvky
 
 Jako součást mapového výstupu se běžně používají i další prvky.
 
-Měřítko je možné přidat pomocí ikony |add_scale| :sub:`Přidat nové 
-grafické měřítko` nebo obrázek |add_image| :sub:`Přidat obrázek`.
+Měřítko je možné přidat pomocí ikony |add_scale| :sup:`Přidat nové 
+grafické měřítko` nebo obrázek |add_image| :sup:`Přidat obrázek`.
