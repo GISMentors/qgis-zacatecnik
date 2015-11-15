@@ -47,7 +47,7 @@ Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
 .. important:: Školení je zaměřeno na aktuální LTS verzi `QGIS 2.8 Wien
                <https://www.qgis.org/en/site/forusers/download.html>`_. V
                jiných verzích není zaručena funkčnost uvedených příkladů. Dále
-               předpokládáme zapnutou *anglickou lokalizaci*, viz kapitola
+               předpokládáme zapnutou *českou lokalizaci*, viz kapitola
                :ref:`volba-lokalizace`.
 
 .. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
