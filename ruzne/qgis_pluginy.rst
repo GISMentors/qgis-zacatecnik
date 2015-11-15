@@ -16,17 +16,21 @@
    :width: 1.5em
 .. |1| image:: ../images/icon/dxf2shp_converter.png
    :width: 1.5em
-.. |2| image:: ../images/icon/roadgraph.png
+.. |3| image:: ../images/icon/roadgraph.png
    :width: 1.5em
-.. |3| image:: ../images/icon/coordinate_capture.png
+.. |2| image:: ../images/icon/coordinate_capture.png
    :width: 1.5em
-.. |4| image:: ../images/icon/mGeorefRun.png
+.. |4| image:: ../images/icon/spatialquery.png
    :width: 1.5em
-.. |5| image:: ../images/icon/evis_icon.png
+.. |5| image:: ../images/icon/olp.png
    :width: 1.5em
-.. |6| image:: ../images/icon/gps_importer.png
+.. |6| image:: ../images/icon/mGeorefRun.png
    :width: 1.5em
-.. |7| image:: ../images/icon/dem.png
+.. |7| image:: ../images/icon/evis_icon.png
+   :width: 1.5em
+.. |8| image:: ../images/icon/gps_importer.png
+   :width: 1.5em
+.. |9| image:: ../images/icon/dem.png
    :width: 1.5em
 
 QGIS pluginy
@@ -138,7 +142,7 @@ používaných zásuvných modulov programu QGIS:
 
 .. only:: latex
           
-   .. tabularcolumns:: |p{5cm}|p{7cm}|
+   .. tabularcolumns:: |p{5cm}|p{10cm}|
                        
 .. only:: html
                                  
@@ -147,23 +151,39 @@ používaných zásuvných modulov programu QGIS:
 +------------------------------------------------+-------------------------------------------------+
 | Zásuvný modul                			 | Charakteristika  	  	                   |
 +================================================+=================================================+
-| |1| :sup:`Konvertor Dxf2Shp` 			 | Konvertuje z formátu ``dxf`` do  formátu ``shp``|
+| |1| :sup:`Konvertor Dxf2Shp` 			 | konvertuje formát ``*.dxf`` do formátu ``*.shp``|
 +------------------------------------------------+-------------------------------------------------+
-| |2| :sup:`Zásuvný modul silničního grafu`      | Řeší problém nejkratší cesty                    |
+| |2| :sup:`Získání souřadnic`     		 | získáva souřadnic myši                          |
 +------------------------------------------------+-------------------------------------------------+
-| |3| :sup:`Získání souřadnic` 			 | Získání souřadnic myši                          |
+| |3| :sup:`Zásuvný modul silničního grafu` 	 | řeší problém nejkratší cesty                    |
 +------------------------------------------------+-------------------------------------------------+
-| |4| :sup:`Georeferencovač GDAL`		 | Georeferencování rastrů pomocí GDAL             |
+| |4| :sup:`Zásuvný modul prostorových dotazů`   | tvorba prostorových dotazů			   |
 +------------------------------------------------+-------------------------------------------------+
-| |5| :sup:`eVis`             			 | Nástroj vizualizace událostí                    |
+| |5| :sup:`OpenLayers Plugin`                   | OpenLayers vrstvy			           |
 +------------------------------------------------+-------------------------------------------------+
-| |6| :sup:`GPS nástroje`      			 | Nástroje pro načtení a import dat GPS           |
+| |6| :sup:`Georeferencovač GDAL`		 | georeferencování rastrů pomocí GDAL             |
 +------------------------------------------------+-------------------------------------------------+
-| |7| :sup:`Zásuvný modul analýzy terénu rastru` | Nástroj pro analýzu terénu 		           |
+| |7| :sup:`eVis`             			 | nástroj vizualizace událostí                    |
++------------------------------------------------+-------------------------------------------------+
+| |8| :sup:`GPS nástroje`      			 | nástroje pro načtení a import dat GPS           |
++------------------------------------------------+-------------------------------------------------+
+| |9| :sup:`Zásuvný modul analýzy terénu rastru` | nástroj pro analýzu terénu 		           |
 +------------------------------------------------+-------------------------------------------------+
 
-OpenLayers Plugin	
-^^^^^^^^^^^^^^^^^
+|1| :sup:`Konvertor Dxf2Shp`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|2| :sup:`Získání souřadnic`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|3| :sup:`Zásuvný modul silničního grafu`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|4| :sup:`Zásuvný modul prostorových dotazů`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|5| :sup:`OpenLayers Plugin` 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. _plp:
 
