@@ -26,6 +26,22 @@
    :width: 1.5em
 .. |mActionRefresh| image:: ../images/icon/mActionRefresh.png
     :width: 1.5em
+.. |mActionSelectRectangle| image:: ../images/icon/mActionSelectRectangle.png
+    :width: 1.5em
+.. |mActionSelectPolygon| image:: ../images/icon/mActionSelectPolygon.png
+    :width: 1.5em
+.. |mActionSelectFreehand| image:: ../images/icon/mActionSelectFreehand.png
+    :width: 1.5em
+.. |mActionSelectRadius| image:: ../images/icon/mActionSelectRadius.png
+    :width: 1.5em
+.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
+    :width: 1.5em
+.. |mActionUnselectAttributes| image:: ../images/icon/mActionUnselectAttributes.png
+    :width: 1.5em
+.. |mActionZoomToSelected| image:: ../images/icon/mActionZoomToSelected.png
+    :width: 1.5em
+.. |mActionPanToSelected| image:: ../images/icon/mActionPanToSelected.png
+    :width: 1.5em
     
 Popis rozhraní
 --------------
@@ -190,5 +206,6 @@ Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní prvky
 - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` - zruší veškerý výběr
 
 .. tip:: Nástroje pro pohyb v okně na základě výběru
+
     - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
     - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
