@@ -28,12 +28,20 @@ Mapový výstup může obsahovat různé součásti (mapové pole, legenda,
 titulek, měřítko a jiné). Nastavení celého výstupu je popsáno krok po
 kroku až po export výstupu.
 
-.. figure:: images/composer_plain.png
-   :class: large
-   :scale-latex: 80
+Zobrazení pracovních panelů
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Pro příjemnou práci při tvorbě výsledků je vhodné mít nastavené 
+zobrazování jednotlivých panelů. *Vypnout/zapnout* panel je možné v menu
+:menuselection:`Zobrazení --> Panels`, kde se nastaví viditelnost 
+jednotlivým panelům. Na obrázku :num:`#panels` je zobrazeno doporučené 
+nastavení zobrazených panelů.
+
+.. _panels:
+   
+.. figure:: images/panels.png
  
-            Okno nového mapového výstupu.
-          
+            Nastavení zobrazení s skrytí jednotlivých panelů
+
  
 Obsah mapového okna
 ^^^^^^^^^^^^^^^^^^^
@@ -203,7 +211,7 @@ Směrová šipka
 Do mapového výstupu lze přidat také směrovou šipku - pomocí ikony
 |add_arrow| :sup:`Přidat šipku`. Směrová šipka může být vykreslena 
 různou symbologii. Výběr symbologie a další nastavení jsou dostupné 
-v záložce :item:`Item properties`. Lze zde ponechat defaultní styl 
+v záložce :item:`Vlastnosti položky`. Lze zde ponechat defaultní styl 
 směrové šipky, kdy se vykresluje jednoduchá šipka. Je možné použít i
 složitější nastavení - například použít vlastní svg symboly pro
 začátek a konec šipky.

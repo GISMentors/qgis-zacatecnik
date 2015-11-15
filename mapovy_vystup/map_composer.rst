@@ -81,6 +81,12 @@ Jako první je nutné nastavit vlastnosti pracovní plochy. Toto
 nastavení najdeme v pravé části v záložce :item:`Kompozice` část
 :item:`Papír a kvalita`.
 
+.. figure:: images/composer_plain.png
+   :class: large
+   :scale-latex: 80
+ 
+   Okno nového mapového výstupu.
+
 .. figure:: images/paper_settings.png
    :class: small
                
