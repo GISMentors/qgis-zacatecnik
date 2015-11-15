@@ -15,8 +15,6 @@
 .. |star| image:: ../images/icon/osm_star.png
    :width: 1.5em
 
-
-
 QGIS pluginy
 ------------
 
@@ -25,17 +23,21 @@ QGIS umožňuje prácu so zásuvnými modulmi, tzv. :wikipedia:`plugin
 všeobecnosti ide o softvéry, ktoré nepracujú samostatne, ale ako
 doplnkové moduly inej aplikácie a tým rozširujú jej funkčnosť. V
 súčasnosti existuje pre QGIS viac ako 300 zásuvných modulov. Všetky sú
-napísané v programovacom jazyku `Python <https://www.python.org/>`_ . Mnohé
-z nich sú stále vo vývoji. Ich kompletný zoznam spolu s príslušnou
-charakteristikou, informáciami napríklad o počte stiahnutí, o tom, ktoré
-sú označované ako najviac obľúbené či najmenej hodnotené je dostupný
-`tu <https://plugins.qgis.org/plugins/>`_ .
+napísané v programovacom jazyku `Python <https://www.python.org/>`_ alebo 
+`C++ <https://isocpp.org/>`_. Mnohé z nich sú stále vo vývoji. 
+Ich kompletný zoznam spolu s príslušnou charakteristikou, informáciami 
+napríklad o použití, potrebnej minimálnej verzii QGISu, domovskej stránke, 
+autoroch, o počte stiahnutí, o tom, ktoré sú označované ako najviac obľúbené 
+či najmenej hodnotené je dostupný `tu <https://plugins.qgis.org/plugins/>`_ .
 
-Prejdeme na lištu menu a zobrazíme správcu zásuvných modulov v prostredí
-QGIS tým, že zvolíme položku |plug1| :sup:`Spravovat a instalovat zásuvné
-moduly` pomocou :menuselection:`Zásuvné moduly --> Spravovat a instalovat
+Správca zásuvných modulov
+=========================
+
+V prvom kroku prejdeme na lištu menu a zobrazíme správcu zásuvných modulov 
+v prostredí QGIS tým, že zvolíme položku |plug1| :sup:`Spravovat a instalovat 
+zásuvné moduly` pomocou :menuselection:`Zásuvné moduly --> Spravovat a instalovat
 zásuvné moduly`. Spustí sa dialógové okno (:num:`#vse`), ktoré slúži na
-prehliadanie, zapínanie či vypínanie dostupných modulov. 
+prehliadanie, zapínanie či vypínanie dostupných modulov príslušnej verzie QGISu. 
 
 .. _vse:
 
@@ -99,14 +101,16 @@ usporiadanie podľa abecedy, počtu stiahnutí, hlasov alebo stavu (:num:`#rad`)
 .. note:: Je potrebné pripomenúť, že zásuvné moduly v oficiálnych repozitároch 
 boli testované, no jednotlivé repozitáre môžu obsahovať aj menej overené moduly 
 rôznej kvality a štádia vývoja. Preto je dobrou pomôckou zobrazenie hodnotenia 
-či počtu |star| |star| |star|. 
+či počtu |star| |star| |star|. Moduly sú udržiavané vývojovým tímom QGISu 
+(`QGIS Development Team <http://qgis-development-team.software.informer.com/>`_) 
+a sú automaticky súčasťou každej jeho distribúcie. Všetky externé pluginy sú 
+napísané v programovom jazyku Python a udržiavajú ich príslušní autori. 
 
 .. tip:: Ak poznáme aspoň približný názov konkrétneho modulu, pri vyhľadávaní 
 môže pomôcť vyplnenie políčka :item:`Hledat` v dialógovom okne.
 
 V ďalšej časti si ukážeme niektoré z užitočných a často používaných zásuvných 
 modulov programu QGIS. 
-
 
 
 
