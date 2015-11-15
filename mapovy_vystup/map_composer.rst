@@ -1,5 +1,5 @@
-Map composer
-============
+Tvůrce mapového výstupu (Map composer)
+======================================
 
 Systém QGIS dokáže pracovat s různými formáty a zobrazovat je v
 mapovém okně (viz :num:`#map-window`). Obsah mapového okna lze
@@ -19,13 +19,13 @@ ten je přenositelný pouze do QGIS systému.
    :class: large
    :scale-latex: 80
  
-   Mapové okno zobrazující vrstvy dle jejich stylování.
+   Mapové okno zobrazující vrstvy dle jejich stylování
        
 .. figure:: images/composer_output.png
    :class: large
    :scale-latex: 80
  
-   Ukázka výstupu z Map Composeru.
+   Ukázka výstupu
 
 Map Composer umožňuje vytvořit z dat výstup v běžně používaných
 formátech, jakými jsou např. PDF, PNG, JPEG a další. Takovýmto
@@ -34,22 +34,23 @@ výsledky různých analýz i bez potřeby speciálních kartografických
 systémů.
 
 
-Composer manager
-----------------
+Správce torby mapy
+------------------
 
 Systém QGIS umožňuje vytvářet víc než jeden mapový výstup na daný
-projekt. Zpravování jednotlivých mapových výstupů umožňuje *Composer
-manager* dostupný z menu :menuselection:`Project --> Composer Manager`.
+projekt. Zpravování jednotlivých mapových výstupů umožňuje *Správce 
+tvorby mapy* dostupný z menu :menuselection:`Projekt --> Správce 
+tvůrců mapy`.
 
 .. figure:: images/composer_manager.png
    :class: large
    :scale-latex: 80
  
-   Otevření Composer Manageru z menu.
+   Otevření Správce tvorby mapy z menu.
 
 Zde se nachází okno, kde jsou uvedeny všechny vytvořené mapové
 výstupy. Pokud není doposud žádný vytvořený, tak je seznam prázdný a
-pomocí tlačítka :item:`Add` se dá vytvořit nový.
+pomocí tlačítka :item:`Přidat` se dá vytvořit nový.
 
 .. figure:: images/add_new_composer.png
    :class: small
@@ -64,26 +65,26 @@ výstupu.
         
         
 .. tip:: Existující mapový výstup lze zkopírovat pomocí tlačítka
-         :item:`Duplicate`. Mapový výstup ke zkopírování se označí
+         :item:`Duplikovat`. Mapový výstup ke zkopírování se označí
          a pak se stiskne zmíněné tlačítko. V otevřeném okně se
          pak nastaví nový název mapového výstupu.
 
 Pokud chcete otevřít existující mapový výstup, tak jej v seznamu
-*Composer manageru* vyberte a tlačítkem :item:`Show` otevřete.
+*Správce rvorby mapy* vyberte a tlačítkem :item:`Zobrazit` otevřete.
 Všechny existující mapové výstupy jsou přístupné také z menu
-:menuselection:`Project --> Print Composers`.
+:menuselection:`Projekt --> Tvorba map`.
 
 Nastavení pracovní plochy
 -------------------------
 
 Jako první je nutné nastavit vlastnosti pracovní plochy. Toto
-nastavení najdeme v pravé části v záložce :item:`Composition` část
-:item:`Paper and Quality`.
+nastavení najdeme v pravé části v záložce :item:`Kompozice` část
+:item:`Papír a kvalita`.
 
 .. figure:: images/paper_settings.png
    :class: small
                
-   Zakládání nového mapového výstupu
+   Zakládání nového mapového výstupu - vlastnosti podkladu
 
 Zde se nastaví velikost "papíru", jeho orientace, barva pozadí a
 rozlišení v DPI při exportu. Tyto hodnoty lze přenastavit i v průběhu
