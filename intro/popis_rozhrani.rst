@@ -42,6 +42,15 @@
     :width: 1.5em
 .. |mActionPanToSelected| image:: ../images/icon/mActionPanToSelected.png
     :width: 1.5em
+.. |mActionMeasureArea| image:: ../images/icon/mActionMeasureArea.png
+    :width: 1.5em
+.. |mActionMeasure| image:: ../images/icon/mActionMeasure.png
+    :width: 1.5em
+.. |mActionMeasureAngle| image:: ../images/icon/mActionMeasureAngle.png
+    :width: 1.5em
+
+
+
     
 Popis rozhraní
 --------------
@@ -184,7 +193,7 @@ kliknutím na panel a výběrem z nabídky
 Základní nástroje pro pohyb v okně 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- |mActionZoomIn| :sup:`Přiblížit``, |mActionZoomOut| :sup:`Oddálit` - přiblíží/oddálí vybranou oblast, pro přibližovaní bez vybrání oblasti lze použít i kolečko myši
+- |mActionZoomIn| :sup:`Přiblížit`, |mActionZoomOut| :sup:`Oddálit` - přiblíží/oddálí vybranou oblast, pro přibližovaní bez vybrání oblasti lze použít i kolečko myši
 - |mActionZoomLast| :sup:`Zvětšit podle posledního výřezu`, |mActionZoomNext| :sup:`Přiblížit na další` - lze vrátit na předchozí stav přiblížení a zpět
 - |mActionZoomToLayer| :sup:`Přiblížení na vrstvu` - přiblíží na rozsah vybrané vrstvy
 - |mActionZoomFullExtent| :sup:`Přiblížení na všechny vrstvy` - přiblíží na všechny vrstvy v projektu
@@ -209,3 +218,50 @@ Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní prvky
 
     - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
     - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
+
+Měření v mapovém okně
+^^^^^^^^^^^^^^^^^^^^^
+.. warning:: Nástroje pro měření jsou závislé na souřadnicovém systému. V
+             případě nastavení souřadnicového systému v podobě zem. šířky 
+             a délky bude výsledek měření (délky a plochy) nesprávný. Pro 
+             tento účel je nutné mít správně nastavený mapový souřadnicový
+             systém. Měření v mapovém okně také respektuje nastavení 
+             přichytávání (snapping).
+
+V mapovém okně lze použít pro měření následovné nástroje z hlavního menu.
+
+- |mActionMeasure| :sup:`Měřit linii` :kbd:`Ctrl+Shift+M`
+- |mActionMeasureArea| :sup:`Měřit plochu` :kbd:`Ctrl+Shift+J`
+- |mActionMeasureAngle| :sup:`Měřit úhel` 
+
+Pro měření se kliknutím vybere požadovaný nástroj. Zobrazí se dialogové okno k
+danému typu měření, kde lze vybrat jednotky měření. Kliknutím do mapy se začne
+kreslit požadovaný útvar pro měření. Počas kreslení se určovaná hodnota 
+upravuje dle polohy kurzoru.  Definování prkvu kresbou lze ukončit pravým 
+kliknutím. Nové měření lze začít pomocí tlačítka :item:`Nové`.
+
+.. figure:: images/measure_area.png
+   :class: small
+   :scale-latex: 30
+    
+   Měření plochy - ukázka volby jednotek.
+
+U měření délek se určuje délka jednotlivých segmentů mezi vrcholy, ale i součet
+všech délek.
+
+.. figure:: images/measure_line.png
+   :class: small
+   :scale-latex: 30
+    
+   Měření délky - délky segmentů a celková délka
+
+
+.. tip:: Nastavení měření se nachází v menu :menuselection:`Nastavení -->
+         Možnosti...` záložka :item:`Nástroje mapy` část :item:`Nástroj pro
+         měření`
+         
+         .. figure:: images/measure_units.png
+    
+                     Nastavení měření - jednotky, symbologie, hodnoty
+
+
