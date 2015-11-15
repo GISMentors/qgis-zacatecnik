@@ -48,6 +48,8 @@
     :width: 1.5em
 .. |mActionMeasureAngle| image:: ../images/icon/mActionMeasureAngle.png
     :width: 1.5em
+.. |mActionIdentify| image:: ../images/icon/mActionIdentify.png
+    :width: 1.5em
 
 
 
@@ -138,14 +140,19 @@ předdefinovaného seznamu měřítek.
 
 Překreslování mapového okna
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^           
-Vykreslování v mapovém okně je možné nastavit různým způsobem. Standardně se kresba v mapovém okně překresluje při následujících akcích:
+Vykreslování v mapovém okně je možné nastavit různým způsobem. Standardně se
+kresba v mapovém okně překresluje při následujících akcích:
     * přidání nové vrstvy
     * posun nebo zoomování mapového okna
     * změna velikosti QGIS okna
     * změna viditelnosti vrsty
     
-V některých případech může překreslování mapového okna trvat déle než je vhodné. V takovýchto případech je možné upravit nastavení vykreslování a :ref:`stylování <styl-vrstvy>` jednotlivých vrstev.
-V případě, že překreslování není potřebné, tak je možné jej potlačit - mapové okno se nebude překreslovat. Pro takovéto nastavení je v stavovém menu položka s checkboxem :item:`Vykreslování`.
+V některých případech může překreslování mapového okna trvat déle než je
+vhodné. V takovýchto případech je možné upravit nastavení vykreslování a
+:ref:`stylování <styl-vrstvy>` jednotlivých vrstev.  V případě, že
+překreslování není potřebné, tak je možné jej potlačit - mapové okno se nebude
+překreslovat. Pro takovéto nastavení je v stavovém menu položka s checkboxem
+:item:`Vykreslování`.
 
 .. tip:: 
    Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné udělat
@@ -264,4 +271,39 @@ všech délek.
     
                      Nastavení měření - jednotky, symbologie, hodnoty
 
+Identifikace prvku
+^^^^^^^^^^^^^^^^^^
+Nástroj pro identifikaci prvku slouží pro získání informací o interaktivně
+vybraném prvku v mapovém okně. Pro identifikaci je možné použít menu
+:menuselection:`Zobrazit --> Identifikovat prvky`, použít klávesovou zkratku 
+:kbd:`Ctrl+Shift+I` nebo ikonu |mActionIdentify| :sup:`Identifikovat prvky`. 
+
+Po vyvolaní nástroje pro identifikaci se kliknutím v mapě vyberou prvky, které
+cheme idetifikovat.
+
+.. figure:: images/feature_info.png
+   :class: small
+   :scale-latex: 30
+    
+   Výsledek identifikace prvku
+
+
+Výsledky identifikace se zobrazují v pop-up okně ve formě strojové struktury.
+Pokud vybíráme prevky ve vícero vrstvách, tak první úrovní rozdělení je
+jméno vrstvy. Na další úrovni je atribut nastavený v menu vrstvy
+:menuselection:`Vlastnosti --> Zobrazení`. Nadalší úrovni se zobrazují 3 skupiny
+infromací:
+
+- Odvozené - informace, které nejsou mezi atributy, ale jsou určené při
+  identifikaci (plocha, obvod, délka, poloha - dle typu prvku)
+- Akce - interaktivní položky, které vyvolají akci  (menu vrstvy 
+  :menuselection:`Vlastnosti --> Akce`)
+- Vlastnosti - seznam atributů daného objektu (z atributové tabulky).
+
+Při vícero vrstvách v mapovém okně lze nastavit režim výběru (v spodní části
+okna) a formu zobrazování.
+
+Při pravém kliku na detail v tabulce  se vyvolá kontextové menu, které umožňuje
+různé možnosti od zoomování na vybraný prvek, kopírování hodnot,práci s výběrem
+až ponastavení dané vrstvy.
 
