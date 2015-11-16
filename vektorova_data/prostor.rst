@@ -2,31 +2,24 @@
    :width: 1.5em
 .. |selectstring| image:: ../images/icon/selectstring.png
    :width: 1.5em
-.. |img| image:: ../images/icon/img.png
-   :width: 1.5em
-.. |img| image:: ../images/icon/img.png
-   :width: 1.5em
-.. |img| image:: ../images/icon/img.png
-   :width: 1.5em
-      
-
-.. todo:: vytvořit příklad bufferu a popsat postup, na tocích nebo MZCHU
-         struktura jak v grass školení - Překrytí (union), Průnik (intersect), Spojení vektorových map (merge), vyloučení
 
 Prostorové analýzy
 ==================
 
 V prostředí QGIS máme k dispozici širokou škálu funkcí pro prostorové analýzy 
 vektorových dat. Základní funkce nalezneme v hlavním menu 
-:menuselection:`Vektor --> Nástroje geoprocessingu`. Další možností jak 
-spouštět analýzy je pomocí okna :item:`Nástroje zpracování`, které sdružuje 
-funkce z knihovny OGR/GDAL a dalších dostupných externích nástrojů jako jsou 
-například GRASS, SAGA nebo R.
+:menuselection:`Vektor --> Nástroje geoprocessingu`.
 
-.. figure:: images/geoprocess.png
-    :scale: 90%
-    
-    Okno :item:`Nástroje zpracování` (Pokročilé zobrazení)
+.. noteadvanced:: Další možností jak 
+    spouštět analýzy je pomocí okna :item:`Nástroje zpracování`, které sdružuje 
+    funkce z knihovny OGR/GDAL a dalších dostupných externích nástrojů jako jsou 
+    například GRASS, SAGA nebo R. Jednotlivé funkce lze rychle vyhledávat 
+    pomocí filtru v horní části oknu (nutno zadat anglický název funkce)
+
+    .. figure:: images/geoprocess.png
+       :scale: 70%
+        
+       Okno :item:`Nástroje zpracování` (Pokročilé zobrazení)
 
 
 Obalová zóna (buffer)
@@ -57,6 +50,13 @@ vrstvu obalových zónVytváření obalových zón nalezneme v menu
     - vysoká hodnota (max. 99) - více uzlů - pomalejší výpočty, více odpovídá 
     kruhu 
 
+.. _aprox:
+
+.. figure:: images/prost_buffer_seg.png
+    
+    Obalová zóny s rozdílným počtem segmentů pro aproximaci 
+    (vlevo 5, vpravo 50)
+
 - |checkbox|:option:`Vzdálenost obalové zóny`  - vzdálenost v metrech 
   (v závislosti nastavení QGIS a použitého SRS)
 - |checkbox|:option:`Pole vzdálenosti obalové zóny` - aktivujeme pokud máme v 
@@ -70,23 +70,42 @@ vrstvu obalových zónVytváření obalových zón nalezneme v menu
 - |checkbox|:option:`Přidat výsledek do mapového okna` - výsledná vrstva se 
   nahraje do projektu
 
-.. _aprox:
 
-.. figure:: images/prost_buffer_seg.png
-    
-    Obalová zóny body s rozdílným počtem segmentů pro aproximaci 
-    (vlevo 5, vpravo 50)
-
-
-V následujícím příkladu jsme vytvořili obalovou zónu 10km kolem dálnic 
+V následujícím příkladu jsme vytvořili obalovou zónu 10 km kolem dálnic 
 (s možností rozpuštění výsledků).
 
 .. figure:: images/prost_buffer_dalnice.png
        
-    Dialogové okno obalové zóny
+    Příklad obalové zóny 10 km okolo dálnic
 
-
-Překryvné operace
+Překryvné analýzy
 -----------------
 
-.. todo:: úvod překryvných operací, jedno okno, popsat, uvézt příklady
+Další skupinou prostorových analýz jsou tzv. překryvné anlýzy. Princepem je 
+interakce prvků jedné nebo více vektorových vrstvev. Pro dosažení 
+správného výsledku je nutné aby vrstvy byly ve shodném souřadnicovém systému. 
+Překryvné operace opět nalezneme v menu 
+:menuselection:`Vektor --> Nástroje geoprocessingu -->`
+
+.. todo:: popsat okno
+
+.. todo:: uvézt příklady
+
+Průsečík...
+^^^^^^^^^^^
+
+Sjednotit...
+^^^^^^^^^^^^
+
+Symetrický rozdíl...
+^^^^^^^^^^^^^^^^^^^^
+
+Ořezávač...
+^^^^^^^^^^^
+
+Rozdíl...
+^^^^^^^^^
+
+Rozpustit...
+^^^^^^^^^^^^
+
