@@ -42,6 +42,13 @@
    :width: 1.5em
 .. |askcorcopy| image:: ../ruzne/images/p_askcorcopy.png
    :width: 1.5em
+.. |mActionNewVectorLayer| image:: ../images/icon/mActionNewVectorLayer.png
+   :width: 1.5em
+.. |selectcreatelayer| image:: ../images/icon/selectcreatelayer.png
+   :width: 1.5em
+
+
+
 
 
 QGIS pluginy
@@ -258,7 +265,7 @@ typu.
 .. figure:: images/p_path_nast.png
    :scale: 55%
 
-   Nastavenia zásuvného modulu cestnho grafu
+   Nastavenia zásuvného modulu cestného grafu
 
 .. _path-vector:
 
@@ -295,6 +302,42 @@ ako to znázorňuje :num:`#path-menu`.
 
 |4| :sup:`Zásuvný modul prostorových dotazů`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Týmto zásuvným modulom môžeme vykonávať rôzne priestorové dotazy. Medzi dostupné 
+priestorové vzťahy patrí vzťah dotyku, rozpojenia, kríženia, vzťah pretínania 
+či prekrytia. Funkcionalita je založená na knižnici 
+`GEOS <https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&redirect=no#GEOS_Library>`_. 
+Vždy je nutné pracovať s vrstvou obsahujúcou zdrojové prvky a vrstvou 
+s referenčnými prvkami.
+
+So zásuvným modulom začneme pracovať tak, že klikneme na ikonu modulu |4| alebo
+z menu ako :menuselection:`Vektor --> Prostorový dotaz --> Prostorový dotaz`. 
+Potom v dialógovom okne s názvom *Prostorový dotaz* nastavíme zdrojové a 
+referenčné vrstvy, priestorový vzťah (operátor) a zvolíme či ide o nový výber 
+alebo vyberáme z už existujúceho výberu.
+
+Ukážeme si to na príklade výberu všetkých obcí v Českej republike (:map:`obce`), 
+v ktorých sa nachádza požiarna stanica (:map:`pozarni_stanice`). Použitie je
+znázornené na :num:`#p-pr-dot`. Po tom ako prebehne výber zvolením 
+:item:`Použít` sa otvorí ďalšie okno (na :num:`#p-pr-dot` vpravo). V tomto kroku 
+može používateľ tlačítkom |mActionNewVectorLayer| vytvoriť vektorovú vrstvu 
+z výberu, |selectcreatelayer| môže pokračovať s výberom a robiť subselekcie, 
+voľbou |checkbox| dokáže približovať sa k výsledným položkám, prípadne 
+zapisovať správy. 
+
+.. _p-pr-dot:
+
+.. figure:: images/p_pd_menu.png
+   :scale: 60%
+
+   Použitie zásuvného modulu priestorových dotazov (prvok obsahuje ...)
+
+.. _p-pr-vysl:
+
+.. figure:: images/p_pd_vysl.png
+   :scale: 70%
+
+   Obce Českej republiky s požiarnou stanicou
 
 |5| :sup:`OpenLayers Plugin` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
