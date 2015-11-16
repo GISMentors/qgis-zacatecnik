@@ -72,7 +72,7 @@ do dialogového okna:
     Výpis počtu vybraných prvků (v levé části stavového řádku)
     
 .. noteadvanced:: Výběr lze vytvořit i na základě geometrie (prostorové 
-    dotazování) a to pomocí funkce |select_location| 
+    dotazování) a to pomocí funkce |select_location|
     :sup:`Vybrat podle umístění...`. Také můžeme pomocí funkcí 
     |random_selection| :sup:`Náhodný výběr...`/|sub_selection| 
     :sup:`Náhodný výběr v podmonožinách...` tvořit náhodné výběry z prvků. Tyto 
