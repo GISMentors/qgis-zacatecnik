@@ -39,7 +39,7 @@ vybrat další možnosti práce s výběrem pomocí atributového dotazu.
     
     Další možnosti práce s výběrem pomocí atributového dotazu
 
-.. tip:: V levém dolním rohu stavového řádku vidíme aktuální počet vybraných 
+.. tip:: V levé části stavového řádku vidíme aktuální počet vybraných 
     prvků
     
 Uvedeme si jednoduchý příklad atributového dotazu. Z vrstvy Velkoplošných 
@@ -64,7 +64,9 @@ hodnotou OP". Výraz, který potřebujeme vepsat do dialogového okna:
     Výsledek atributového dotazu ("KAT" = 'OP' or "KAT" = 'NP') ve vrstvě 
     Velkoplošných zvláště chráněných území 
     
-
+.. figure:: images/select_exp_vzchu_status.png
+    
+    Výpis počtu vybraných prvků (v levé části stavového řádku)
     
 .. noteadvanced:: Výběr lze vytvořit i na základě geometrie (prostorové 
     dotazování) a to pomocí funkce |select_location| :sup:
