@@ -275,8 +275,14 @@ v podobe polylínie, ktorá sa dá exportovať ako nová vektorová vrstva (pou�
 :item:`Export`). Tlačidlo :item:`Vyčistit` slúži na vymazanie obsahu políčok.
 Postup je znázornený na :num:`#path`.
 
-Ak nevidíme panel :item:`Nejkratší cesta`, pridáme ju z menu lišty 
-:item:`Zobrazit` ako to znázorňuje :num:`#path-menu`.
+.. _path:
+
+.. figure:: images/p_path.png
+   :scale: 60%
+
+   Použitie zásuvného modulu cestného grafu a výpočet najoptimálnejšej cesty
+
+.. tip:: Ak nevidíme panel :item:`Nejkratší cesta`, pridáme ju z menu lišty :item:`Zobrazit` ako to znázorňuje :num:`#path-menu`.
 
     .. _path-menu:
     
@@ -284,13 +290,6 @@ Ak nevidíme panel :item:`Nejkratší cesta`, pridáme ju z menu lišty
        :scale: 55%
 
        Zobrazenie dialógového okna na výpočet najkratšej cesty
-
-.. _path:
-
-.. figure:: images/p_path.png
-   :scale: 60%
-
-   Použitie zásuvného modulu cestného grafu a výpočet najoptimálnejšej cesty
 
 |4| :sup:`Zásuvný modul prostorových dotazů`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
