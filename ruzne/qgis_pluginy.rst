@@ -237,6 +237,61 @@ East North. Ikona |askcorcopy| umožňuje súradnice kopírovať do schránky v 
 |3| :sup:`Zásuvný modul silničního grafu`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Vo vstve polylínií modul vypočíta a následne vykreslí najkratšiu cestu medzi 
+dvoma zvolenými bodmi. Je napísaný v programovacom jazyku C++. Umožňuje určiť 
+najoptimálnejšiu trasu na základe dĺžky alebo času.  Výsledok je automaticky 
+exportovaný ako nová vektorová vrstva. 
+
+.. note:: Pri počítaní najkratšej cesty sa odporúča nastaviť súradnicový systém
+projektu podľa súradnicového systému vrstvy polylínií. 
+
+Zásuvný modul cestného grafu aktivujeme v 
+:ref:`paneli správcu zásuvných modulov <spravca-plugin>`. V lište menu prejdeme 
+na :menuselection:`Vektor --> Silniční graf --> Nastavení`. Zobrazí sa okno,
+kde vyplníme základné nastavenia ako jednotku času, vzdialenosti, topologickú
+toleranciu a ďalšie, viď. :num:`#path-nast`. Na predstvenie modulu použijeme
+vektorovú vrstva ciest Českej republiky zobrazenú na :num:`path-vector` podľa 
+typu.
+
+.. _path-nast:
+
+.. figure:: images/p_path_nast.png
+   :scale: 55%
+
+   Nastavenia zásuvného modulu cestnho grafu
+
+.. _path-vector:
+
+.. figure:: images/p_path_vector.png
+   :scale: 60%
+
+   Cesty Českej republiky zobrazené podľa typu.
+
+V paneli :item:`Nejkratší cesta` použijeme |2| a v mapovom okne kliknutím 
+zvolíme začiatočný a koncový bod cesty. Zobrazí sa ako zelená, resp. červená 
+bodka. Následne nastavíme kritérium, t.j. dĺžku alebo čas a potvrdíme stlačením
+:item:`Vypočítat`. Po prebehnutí výpočtu sa v mapovom okne zobrazí výsledok 
+v podobe polylínie, ktorá sa dá exportovať ako nová vektorová vrstva (použitím
+:item:`Export`). Tlačidlo :item:`Vyčistit` slúži na vymazanie obsahu políčok.
+Postup je znázornený na :num:`#path`.
+
+Ak nevidíme panel :item:`Nejkratší cesta`, pridáme ju z menu lišty 
+:item:`Zobrazit` ako to znázorňuje :num:`#path-menu`.
+
+    .. _path-menu:
+    
+    .. figure:: images/p_path_menu.png
+       :scale: 55%
+
+       Zobrazenie dialógového okna na výpočet najkratšej cesty
+
+.. _path:
+
+.. figure:: images/p_path.png
+   :scale: 60%
+
+   Použitie zásuvného modulu cestného grafu a výpočet najoptimálnejšej cesty
+
 |4| :sup:`Zásuvný modul prostorových dotazů`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
