@@ -22,8 +22,7 @@ Pro převod mezi formáty se používá knihovna `GDAL <http://gdal.org/>`_.
    import_delim.rst
    join.rst
    atr_dotaz.rst
-   buffer.rst
-   prekryv.rst
+   prostor.rst
 
 
 
