@@ -216,9 +216,6 @@ okno súvisiace so súradnicovými systémami, systém nastavíme.
 
    Dialógové okno modulu na prevod AutoCAD DXF súboru na súbor Shapefile
 
-.. todo:: ??? Export inserts ??? + ??? výstup sa pridá do zoznamu vrstiev 
-ako "Data layer" ???
-
 |2| :sup:`Získání souřadnic`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -320,9 +317,9 @@ Ukážeme si to na príklade výberu všetkých obcí v Českej republike (:map:
 v ktorých sa nachádza požiarna stanica (:map:`pozarni_stanice`). Použitie je
 znázornené na :num:`#p-pr-dot`. Po tom ako prebehne výber zvolením 
 :item:`Použít` sa otvorí ďalšie okno (na :num:`#p-pr-dot` vpravo). V tomto kroku 
-može používateľ tlačítkom |mActionNewVectorLayer| vytvoriť vektorovú vrstvu 
-z výberu, |selectcreatelayer| môže pokračovať s výberom a robiť subselekcie, 
-voľbou |checkbox| dokáže približovať sa k výsledným položkám, prípadne 
+možeme tlačítkom |mActionNewVectorLayer| vytvoriť vektorovú vrstvu 
+z výberu, |selectcreatelayer| môžeme pokračovať s výberom a robiť subselekcie, 
+voľbou |checkbox| dokážeme približovať sa k výsledným položkám, prípadne 
 zapisovať správy. 
 
 .. _p-pr-dot:
@@ -342,6 +339,13 @@ zapisovať správy.
 |5| :sup:`OpenLayers Plugin` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+*OpenLayers Plugin* (:menuselection:`Web --> OpenLayers Plugin`) umožňuje 
+pridávať do mapového okna množstvo obrazových služieb z Google, Bing, Yahoo 
+a OpenStreetMap (:num:`#plp`). Satelitné snímky týchto služieb sa môžu líšiť 
+ako dátumom, tak kvalitou v závislosti od lokality či poskytovateľa. Podmienkou 
+pre použitie zásuvného modulu je dobrý prístup k internetu. Na :num:`p-olm` 
+je príklad načítania štyroch rôznych vrstiev s detailom pre tú istú oblasť.
+
 .. _plp:
 
 .. figure:: images/olp.png
@@ -349,3 +353,11 @@ zapisovať správy.
 
    OpenLayers Plugin z lišty menu
 
+.. _p-olm:
+
+.. figure:: images/p_olm.png
+   :class: large
+
+   Ukážka vrstiev OpenStreetMap :fignote:`(1)`, OpenCycleMap :fignote:`(2)`, Bing Road :fignote:`(3)` a MapQuest-OSM :fignote:`(4)` pre vybranú časť Prahy.
+
+.. note:: Ostatné zo spomenutých modulov sú (budú) obsahom Školenia pre pokročilých.
