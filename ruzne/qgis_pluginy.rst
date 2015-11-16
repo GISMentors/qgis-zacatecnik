@@ -34,7 +34,14 @@
    :width: 1.5em
 .. |checkbox| image:: ../images/icon/checkbox.png
    :width: 1.5em
-
+.. |geographic| image:: ../images/icon/checkbox.png
+   :width: 1.5em
+.. |reticle| image:: ../ruzne/images/p_reticle.png
+   :width: 1.5em
+.. |askcor| image:: ../ruzne/images/p_askcor.png
+   :width: 1.5em
+.. |askcorcopy| image:: ../ruzne/images/p_askcorcopy.png
+   :width: 1.5em
 
 
 QGIS pluginy
@@ -198,7 +205,7 @@ okno súvisiace so súradnicovými systémami, systém nastavíme.
 .. _dxf2shp:
 
 .. figure:: images/p_dxf2shp.png
-   :scale: 55%
+   :scale: 70%
 
    Dialógové okno modulu na prevod AutoCAD DXF súboru na súbor Shapefile
 
@@ -207,6 +214,25 @@ ako "Data layer" ???
 
 |2| :sup:`Získání souřadnic`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Tento zásuvný modul sa používa veľmi jednoducho a umožňuje zobrazenie súradníc
+myši pre dva vybrané súradnicové systémy. Dialógové okno je na :num:`#zis-sur`.
+Kliknutím na ikonu |geographic| nastavíme požadovaný súradnicový systém, 
+zvolením |2| :sup:`Zapnout získávání` sa myš zmení na |reticle|. 
+Po kliknutí do mapového okna sa objaví malá červená bodka. Jej súradnice 
+v súradnicovom systéme projektu sa zobrazia v okne vedľa symbolu |askcor|. 
+Na :num:`#zis-sur` sú na ukážku zobrazené súradnice vybraného bodu v 
+súradnicových systémoch S-JTSK (Greenwich) Krovak a S-JTSK (Greenwich) Krovak 
+East North. Ikona |askcorcopy| umožňuje súradnice kopírovať do schránky v podobe 
+štyroch hodnôt (pre :num:`#zis-sur` by to bolo ``4494520.158,-2880372.147,
+4746310.700,2931421.671``).
+
+.. _zis-sur:
+
+.. figure:: images/p_zis_sur.png
+   :scale: 55%
+
+   Dialógové okno modulu na zobrazenie súradníc z mapového okna
 
 |3| :sup:`Zásuvný modul silničního grafu`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -220,7 +246,7 @@ ako "Data layer" ???
 .. _plp:
 
 .. figure:: images/olp.png
-   :scale: 55%
+   :scale: 70%
 
    OpenLayers Plugin z lišty menu
 
