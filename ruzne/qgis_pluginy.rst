@@ -32,6 +32,10 @@
    :width: 1.5em
 .. |9| image:: ../images/icon/dem.png
    :width: 1.5em
+.. |checkbox| image:: ../images/icon/checkbox.png
+   :width: 1.5em
+
+
 
 QGIS pluginy
 ------------
@@ -54,6 +58,8 @@ a sú automaticky súčasťou každej jeho distribúcie. Všetky externé plugin
 napísané v programovom jazyku Python a udržiavajú ich príslušní autori.
 Chyby (angl. *bugy*) by mali byť zverejnené a dostupné na stránkach 
 `tu <http://hub.qgis.org/projects/qgis-user-plugins>`_.
+
+.. _spravca-plugin:
 
 Správca zásuvných modulov
 =========================
@@ -172,6 +178,32 @@ používaných zásuvných modulov programu QGIS:
 
 |1| :sup:`Konvertor Dxf2Shp`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+V prípade, že máme k dispozícii súbor AutoCAD DXF 
+(`Drawing Exchange Format <https://en.wikipedia.org/wiki/AutoCAD_DXF>`_), 
+do prostredia programu QGIS ho vieme načítať vďaka zásuvnému 
+modulu *Konvertor Dxf2Shp*. Ako intuitívne napovedá názov, prevedieme na 
+*Shapefile*.
+
+Po načítaní modulu pomocou :ref:`správcu zásuvných modulov <spravca-plugin>`
+sa po kliknutí na ikonu |1| objaví dialógové okno, kde je potrebné nastaviť
+vstupný ``*.dxf`` súbor, názov, cestu a typ nového ``*.shp`` súboru, 
+viď. :num:`#dxf2shp`. Povolenie |checkbox| :sup:`Exportovat textové značky`
+vytvorí extra bodovú vrstvu s označeniami a príslušná ``*.dbf`` tabuľka bude
+obsahovať "textové" informácie zo súboru ``*.dxf``. 
+
+.. note:: Ak sa po spustení modulu tlačidlom :item:`OK` zobrazí dialógové
+okno súvisiace so súradnicovými systémami, systém nastavíme.
+
+.. _dxf2shp:
+
+.. figure:: images/p_dxf2shp.png
+   :scale: 55%
+
+   Dialógové okno modulu na prevod AutoCAD DXF súboru na súbor Shapefile
+
+.. todo:: ??? Export inserts ??? + ??? výstup sa pridá do zoznamu vrstiev 
+ako "Data layer" ???
 
 |2| :sup:`Získání souřadnic`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
