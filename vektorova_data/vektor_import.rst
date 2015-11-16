@@ -17,8 +17,8 @@ princip přidávání a exportu dat v QGIS najdeme v kapitole :ref:`importexport
 Pro čtení a zápis vektorových formátů používá QGIS knihovnu OGR. V režimu čtení 
 lze vektorová data také načíst přímo z archivu zip a gzip.
 
-Přidávání vektorových dat dat
------------------------------
+Přidávání vektorových dat
+-------------------------
 
 Nabídka pro načtení vektorové vrstvy se aktivuje v záložce
 :menuselection:`Vrstva --> Přidat vrstvu --> Přidat vektorovou vrstvu`, 

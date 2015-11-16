@@ -8,7 +8,7 @@ Díky knihovně |gdal| :sup:`GDAL` (Geospatial Data Abstraction Library) je mož
 čtení a zápis rastrových GIS formátů v prostředí QGIS. Pro všechny podporované
 datové formáty využívá knihovna jednoduchý datový model.
 
-Existuje množství rastrových formátů, které jsou obvykle oldišené dle přípony
+Existuje množství rastrových formátů, které jsou obvykle odlišené dle přípony
 souborů. QGIS umožňuje export do velkého množství různých běžně používaných
 formátů. `Zde <http://gdal.org/formats_list.html>`_ je dostupný seznam rastrových
 formátů i s doplňujícími informacemi.
@@ -30,7 +30,7 @@ exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
    
    Export rastrové vrstvy pomocí :item:`Uložit rastrovou vrstvu jako ...`
 
-Pokud potřebujeme rastrovou vrsvtu uožit v jiném formátu, použijeme
+Pokud potřebujeme rastrovou vrstvu uložit v jiném formátu, použijeme
 :menuselection:`Raster --> Převod --> Převíst na jiný formát` 
 (:num:`#menu-prevod`). V dialogovém okně nastavíme vstupní vrstvu, cílový
 souřadnicový systém a ostatní dle potřeby.

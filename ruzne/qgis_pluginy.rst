@@ -282,7 +282,9 @@ Postup je znázornený na :num:`#path`.
 
    Použitie zásuvného modulu cestného grafu a výpočet najoptimálnejšej cesty
 
-.. tip:: Ak nevidíme panel :item:`Nejkratší cesta`, pridáme ju z menu lišty :item:`Zobrazit` ako to znázorňuje :num:`#path-menu`.
+.. tip:: Ak nevidíme panel :item:`Nejkratší cesta`, pridáme ju z menu lišty 
+:item:`Zobrazit` (:menuselection:`Zobrazit --> Panely --> Nejkratší cesta`) 
+ako to znázorňuje :num:`#path-menu`.
 
     .. _path-menu:
     

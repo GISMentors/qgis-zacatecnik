@@ -92,7 +92,7 @@ vykreslovaných hodnot (:num:`#stylraster`).
 
 Průhlednost
 ^^^^^^^^^^^
-QGIS umožňuje zobrazovat každou vrstvu v mapvém okně s různým stupněm
+QGIS umožňuje zobrazovat každou vrstvu v mapovém okně s různým stupněm
 průhlednosti. Má to velkou výhodu například pokud chceme, aby kromě aktuální
 rastrové vrstvy byla viditelná i jiná vrstva. Typickým příkladem je překryv
 stínovaného reliéfu s jakoukoli barevnou rastrovou vrstvou. Překryv a vhodné
@@ -124,7 +124,7 @@ Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, ž
 původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
 rozlišením pro konkrétní zoom). Na převzorkování se použijí různé metody, 
 nejčastěji jde o metodu průměru (*Average*) nebo metodu nejbližšího souseda 
-(*Nearest Neighbour*).  
+(*Nearest Neighbour*).
 
 .. note::
 
@@ -153,7 +153,7 @@ QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
 Metadata
 ^^^^^^^^
 Tato záložka by měla poskytovat informace o dané rastrové vrstvě (pokud
-existují). Jedná se zejména o záladní popis dat (nadpis, abstrakt, seznam
+existují). Jedná se zejména o základní popis dat (nadpis, abstrakt, seznam
 klíčových slov), Url metadat a legendy či jiné vlastnosti (ovladač, popis
 datasetu, velikost pixelu, souřadnicový systém, rozsah vrstvy, a další).
 
