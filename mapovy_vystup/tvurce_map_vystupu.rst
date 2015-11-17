@@ -1,14 +1,16 @@
-Tvůrce mapového výstupu (Map composer)
-======================================
+Tvůrce mapy (Map Composer)
+==========================
 
 Systém QGIS dokáže pracovat s různými formáty a zobrazovat je v
 mapovém okně (viz :num:`#map-window`). Obsah mapového okna lze
-jednoduše vyexportovat do obrázku. V případě, že je zapotřebí mapový
-výstup určený pro tisk, který zachová nastavení zobrazování vrstev,
-tak je nutné využít samostatný nástroj *Map Composer (Tvůrce mapového
-výstupu)*. Důvodem je, že všechna nastavení (reference na vrstvy,
-stylování, popisky a další) se sice ukládají do *.qgs* projektu, ale
-ten je přenositelný pouze do QGIS systému.
+jednoduše vyexportovat do obrázku (:menuselection:`Projekt --> Uložit
+jako obrázek`). V případě, že je zapotřebí mapový výstup určený pro
+tisk, který zachová nastavení zobrazování vrstev, tak je nutné využít
+samostatný nástroj *Tvůrce mapy (Map Composer)*
+:menuselection:`Projekt --> Tvůrce mapy`. Důvodem je, že všechna
+nastavení (reference na vrstvy, stylování, popisky a další) se sice
+ukládají do *.qgs* projektu, ale ten je přenositelný pouze v rámci
+QGIS systému.
 
 .. todo:: nerozumim posledni vete (ML), composer prejima nastaveni z
           projektu anebo ne?
@@ -19,23 +21,23 @@ ten je přenositelný pouze do QGIS systému.
    :class: large
    :scale-latex: 80
  
-   Mapové okno zobrazující vrstvy dle jejich stylování
+   Mapové okno zobrazující vrstvy dle jejich stylování.
        
 .. figure:: images/composer_output.png
    :class: large
    :scale-latex: 80
  
-   Ukázka výstupu
+   Ukázka mapového výstupu vytvořeného v Map Composeru.
 
-Map Composer umožňuje vytvořit z dat výstup v běžně používaných
-formátech, jakými jsou např. PDF, PNG, JPEG a další. Takovýmto
-způsobem je možné prezentovat jednotlivá data, jejich kombinaci nebo
-výsledky různých analýz i bez potřeby speciálních kartografických
-systémů.
+Map Composer umožňuje vytvořit na základě dat mapový výstup v běžně
+používaných formátech, jakými jsou např. PDF, PNG, JPEG a
+další. Takovýmto způsobem je možné prezentovat jednotlivá data, jejich
+kombinaci nebo výsledky různých analýz i bez potřeby speciálních
+kartografických systémů.
 
 
-Správce torby mapy
-------------------
+Správce tvorby mapy
+-------------------
 
 Systém QGIS umožňuje vytvářet víc než jeden mapový výstup na daný
 projekt. Zpravování jednotlivých mapových výstupů umožňuje *Správce 
@@ -70,7 +72,7 @@ výstupu.
          pak nastaví nový název mapového výstupu.
 
 Pokud chcete otevřít existující mapový výstup, tak jej v seznamu
-*Správce rvorby mapy* vyberte a tlačítkem :item:`Zobrazit` otevřete.
+*Správce tvorby mapy* vyberte a tlačítkem :item:`Zobrazit` otevřete.
 Všechny existující mapové výstupy jsou přístupné také z menu
 :menuselection:`Projekt --> Tvorba map`.
 
@@ -90,7 +92,7 @@ nastavení najdeme v pravé části v záložce :item:`Kompozice` část
 .. figure:: images/paper_settings.png
    :class: small
                
-   Zakládání nového mapového výstupu - vlastnosti podkladu
+   Zakládání nového mapového výstupu - vlastnosti podkladu.
 
 Zde se nastaví velikost "papíru", jeho orientace, barva pozadí a
 rozlišení v DPI při exportu. Tyto hodnoty lze přenastavit i v průběhu
