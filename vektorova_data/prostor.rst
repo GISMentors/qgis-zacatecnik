@@ -3,6 +3,9 @@
 .. |selectstring| image:: ../images/icon/selectstring.png
    :width: 1.5em
 
+.. todo:: přidat u překryvných analýz obrázky prakticých příkladů 
+   (i na bodech)
+
 Prostorové analýzy
 ==================
 
@@ -14,7 +17,7 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
     spouštět analýzy je pomocí okna :item:`Nástroje zpracování`, které sdružuje 
     funkce z knihovny OGR/GDAL a dalších dostupných externích nástrojů jako jsou 
     například GRASS, SAGA nebo R. Jednotlivé funkce lze rychle vyhledávat 
-    pomocí filtru v horní části oknu (nutno zadat anglický název funkce)
+    pomocí filtru v horní části okna (nutno zadat anglický název funkce)
 
     .. figure:: images/geoprocess.png
        :scale: 70%
@@ -22,15 +25,15 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
        Okno :item:`Nástroje zpracování` (Adnvanced interface - pokročilé 
        zobrazení)
 
-
 Obalová zóna (buffer)
 ---------------------
 
 Jednou z nejzákladnějších prostorových analýz je obalová zóna. Obalové zńoy jsou
 reprezentovány polygony s hranicí o dané vzdálenosti od prvků. U bodových 
 prvků má obalová zóna tvar kruhu (nebo aproximace kruhu), u linií a polygonů se 
-kružnice generují kolem uzlů. Cílem analýzy je tedy vytvořit novou polygonovou 
-vrstvu obalových zónVytváření obalových zón nalezneme v menu 
+hranice obalové zóny generuje vzdálenostmi od uzlů. Cílem analýzy je tedy 
+vytvořit novou polygonovou vrstvu obalových zónVytváření obalových zón 
+nalezneme v menu 
 :menuselection:`Vektor --> Nástroje geoprocessingu --> Obalové zóny...`
 
 
@@ -47,12 +50,12 @@ vrstvu obalových zónVytváření obalových zón nalezneme v menu
   
   .. note:: Pokud máme vybrané nějaké prvky, je automaticky aktivováno
   
-- :item:`Segmentů proaproximaci` |checkbox| - míra aproximace kruhu při tvorbě 
+- :item:`Segmentů pro aproximaci` |checkbox| - míra aproximace kruhu při tvorbě 
   obalové zóny (:num:`aprox`)
     
     - nízká hodnota (min. 5) - méně uzlů - rychlejší výpočty, ale méně přesné
     - vysoká hodnota (max. 99) - více uzlů - pomalejší výpočty, více odpovídá 
-    kruhu 
+      kruhu 
 
 .. _aprox:
 
@@ -70,10 +73,9 @@ vrstvu obalových zónVytváření obalových zón nalezneme v menu
 - |checkbox|:option:`Rozpustit výsledky obalové zóny` - zaškrtneme, pokud 
   nechceme aby se nám výsledné obalové zóny překrývaly, výsledkem analýzy je 
   jeden prvek.
-- :item:`Vstupní vektorová vrsvta` - zadáme cestu a název výstupního souboru
+- :item:`Vstupní shapefile` - zadáme cestu a název výstupního souboru
 - |checkbox|:option:`Přidat výsledek do mapového okna` - výsledná vrstva se 
   nahraje do projektu
-
 
 V následujícím příkladu jsme vytvořili obalovou zónu 10 km kolem dálnic 
 (s možností rozpuštění výsledků).
@@ -95,28 +97,30 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 .. figure:: images/prost_okno.png
     :scale: 90%
     
-    Popis
+    Okno funkce překryvné analýzy (Oříznout...)
     
-    
-.. todo:: popsat okno
-
-.. todo:: ? přidat obrázky prakticých příkladů (i na bodech)
-
+- :item:`Vstupní vektorová vrsvta` |selectstring| - vstupní vrstva
+- |checkbox|:option:`Použít pouze vybrané prvky` - akce se provede jen pro 
+  prvky ve výběru
+- :item:`...` |selectstring| - druhá vrstva, která vstupuje do analýzy
+- :item:`Vstupní shapefile` - zadáme cestu a název výstupního souboru
+- |checkbox|:option:`Přidat výsledek do mapového okna` - výsledná vrstva se 
+  nahraje do projektu
 
 .. figure:: images/prost_puvod.png
     
-    Popis
+    Původní vrstvy vstupující do ukázkových příkladů
 
 
 Průsečík...
 ^^^^^^^^^^^
 
 Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Každý 
-prvek nese atributy obou vstupních vrstev (narozdíl od funkce :ref:`orez`). 
+prvek nese atributy obou vstupních vrstev. 
 
-.. figure:: images/prost_prus.png
+.. figure:: images/prost_prus.png 
     
-    Popis
+    Výsledek funkce Průsečík...
 
 Sjednotit...
 ^^^^^^^^^^^^
@@ -125,41 +129,52 @@ vytvořeny nové prvky.
 
 .. figure:: images/prost_sjed.png
     
-    Popis
+    Výsledek funkce Sjednotit...
     
 Symetrický rozdíl...
 ^^^^^^^^^^^^^^^^^^^^
 Vytvoří novou vrstvu, kde v místech překryvu vrstev nejsou vytvořeny prvky. 
-Prvky vznikají pouze tam kde se vstupvní vrstvy nepřekrývají.
+Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.
 
 .. figure:: images/prost_sym.png
     
-    Popis
+    Výsledek funkce Symetrický rozdíl...
 
 .. _orez:
 
 Ořezávač...
 ^^^^^^^^^^^
-Ořeže :option:`Vstupní vektorovou vrstvu` vrstvou vybranou v nabídce 
-:option:`Oříznout vrstvu`. Prvky výstupní vrstvy nesou atributy pouze z vrstvy 
-zadané jako :option:`Vstupní vektorová vrstva`
+Vytvoří novou vrstvu, ve které je :option:`Vstupní vektorová vrstva` ořezána 
+vrstvou vybranou v nabídce :option:`Oříznout vrstvu`. Prvky výstupní vrstvy 
+nesou atributy pouze z vrstvy zadané jako :option:`Vstupní vektorová vrstva`.
 
 .. figure:: images/prost_orez.png
     
-    Popis
+    Výsledek funkce Ořezání... - čtverec jsme ořezali podle kruhu
 
 
 Rozdíl...
 ^^^^^^^^^
+Vytvoří novou vrstvu, která je rozdílem vstupních vrstev. Ve :option:`Vstupní 
+vektorové vrstvě` se odstraní plochy, které se překrývají s vrstvou v 
+nabídce :option:`Rozdíl ve vrstvě`.
 
 .. figure:: images/prost_rozd.png
     
-    Popis
+    Výsledek funkce Rozdíl... - vrstva čtverce s rozdílem ve vrstvě kruhu
 
 Rozpustit...
 ^^^^^^^^^^^^
+Vytvoří novou vrstvu, ve které jsou definované prvky jedné vrstvy shloučeny do 
+jednoho. V nabídce :item:`Pole rozpuštění` můžeme vybrat buď atribut pro který 
+chceme rozpuštění aplikovat. Pokud chceme aplikovat pro všechny prvky, 
+zvolíme :option:`--- Rozpustit vše ---`.
 
+.. figure:: images/prost_rozp_okno.png
+    :scale: 90%
+    
+    Okno funkce Rozpustit...
+    
 .. figure:: images/prost_rozp.png
     
-    Popis
-
+    Výsledek funkce Rozpustit... (vstupní vrstva: výsledek Sjednocení...)
