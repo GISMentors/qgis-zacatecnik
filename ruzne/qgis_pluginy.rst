@@ -1,4 +1,4 @@
-.. |plug1| image:: ../images/icon/mActionShowRasterCalculator.png
+.. |plug1| image:: ../images/icon/mActionShowPluginManager.png
    :width: 1.5em
 .. |checkbox_unchecked| image:: ../images/icon/checkbox_unchecked.png
    :width: 1.5em
@@ -54,105 +54,112 @@
 QGIS pluginy
 ------------
 
-QGIS umožňuje prácu so zásuvnými modulmi, tzv. :wikipedia:`plugin
-<https://en.wikipedia.org/wiki/Plug-in>`-mi. Vo
-všeobecnosti ide o softvéry, ktoré nepracujú samostatne, ale ako
-doplnkové moduly inej aplikácie a tým rozširujú jej funkčnosť. V
-súčasnosti existuje pre QGIS viac ako 300 zásuvných modulov. Všetky sú
-napísané v programovacom jazyku `Python <https://www.python.org/>`_ alebo 
-`C++ <https://isocpp.org/>`_. Mnohé z nich sú stále vo vývoji. 
-Ich kompletný zoznam spolu s príslušnou charakteristikou, informáciami 
-napríklad o použití, potrebnej minimálnej verzii QGISu, domovskej stránke, 
-autoroch, o počte stiahnutí, o tom, ktoré sú označované ako najviac obľúbené 
-či najmenej hodnotené je dostupný `tu <https://plugins.qgis.org/plugins/>`_.
+QGIS umožňuje práci se zásuvnými moduly, tzv. :wikipedia:`plugin
+<https://en.wikipedia.org/wiki/Plug-in_(computing)>` -mi. Ve všeobecnosti se
+jedná o softvéry, které nepracují samostatně, ale jako doplňkové moduly jiné
+aplikace a tím rozšiřujú její funkčnost. V současnosti existuje pro QGIS víc než
+300 zásuvných modulů. Všechny jsou napsané v programovacím jazyku `Python 
+<https://www.python.org/>`_ nebo `C++ <https://isocpp.org/>`_. Mnohé z nich jsou
+stále ve vývoji. Jejich kompletní seznam spolu s příslušnou charakteristikou,
+informacemi například o použití, potřebné minimální verzi QGISu, domovské
+stránce, autorech, o počtu stáhnutí, o tom, které jsou označené jako
+nejoblíbenější je dostupný `zde <https://plugins.qgis.org/plugins/>`_.
+    
 
-Moduly sú udržiavané vývojovým tímom QGISu 
-(`QGIS Development Team <http://qgis-development-team.software.informer.com/>`_) 
-a sú automaticky súčasťou každej jeho distribúcie. Všetky externé pluginy sú 
-napísané v programovom jazyku Python a udržiavajú ich príslušní autori.
-Chyby (angl. *bugy*) by mali byť zverejnené a dostupné na stránkach 
-`tu <http://hub.qgis.org/projects/qgis-user-plugins>`_.
+Moduly jsou udržované vývojovým týmem QGISu (`QGIS Development Team 
+<http://qgis-development-team.software.informer.com/>`_) a jsou automaticky
+součástí každé jeho distribuce. Všechny externí pluginy jsou napsané v
+programovacím jazce Python a jsou udržovány příslušnými autory. Chyby (angl.
+*bugy*) by měli být zveřejnovány  a dostupné na stránkách `projektu 
+<http://hub.qgis.org/projects/qgis-user-plugins>`_.
+
 
 .. _spravca-plugin:
 
-Správca zásuvných modulov
-=========================
+Správce zásuvných modulů
+========================
 
-V prvom kroku prejdeme na lištu menu a zobrazíme správcu zásuvných modulov 
-v prostredí QGIS tým, že zvolíme položku |plug1| :sup:`Spravovat a instalovat 
-zásuvné moduly` pomocou :menuselection:`Zásuvné moduly --> Spravovat a instalovat
-zásuvné moduly`. Spustí sa dialógové okno (:num:`#vse`), ktoré slúži na
-prehliadanie, zapínanie či vypínanie dostupných modulov príslušnej verzie QGISu. 
+V prvník kroku v menu zvolíme :menuselection:`Zásuvné moduly --> Spravovat a instalovat
+zásuvné moduly` (|plug1| :sup:`Spravovat a instalovat zásuvné moduly`).
+Spustí se dialogové okno (:num:`#vse`), které slouží na prohlížení, vypínání a
+zapínání  dostupných modulů příslušné verze QGISu.
 
 .. _vse:
 
 .. figure:: images/p_vse.png
    :scale: 55%
 
-   Správca zásuvných modulov v prostredí QGIS
+   Správce zásuvných modulů v prostředí QGIS
 
-Pod položkou |plugin-installed| :sup:`Instalované` nájdeme tie, ktoré boli 
-nainštalované automaticky pri inštalácii QGISu. Z nich sú niektoré načítané,
-iné možno dočasne povoliť alebo zakázať zaškrtnutím ikonky |checkbox_unchecked|. 
-V prípade, že klikneme na niektorý z nich, zobrazí sa jeho charakteristika alebo 
-účel spolu s ďalšími informáciami ako je názov, popis, počet hodnotení
-a stiahnutí modulu, reprezentujúca ikonka, kategória, inštalovaná či
-dostupná verzia, autor, zoznam zmien a iné. Na :num:`plugininfo` je znázornený 
-príklad zásuvného modulu s názvom |q2t| :sup:`Qgis2threejs`.
+Pod položkou |plugin-installed| :sup:`Instalované` najdeme ty, které byli
+nainstalované automaticky při instalaci QGISu. Z nich jsou některé načtené, jiné
+lze dočasně povolit nebo zakázat zaškrtnutím ikonky |checkbox_unchecked|.
+V případě, že klikneme na některý z modulů, zobrazí se jeho charakteristika nebo
+účel, spolu s dalšími informacemi jako je název, popis, počet hodnocení a
+stáhnutí modulu,reprezentující ikona, kategorie, instalovaná nebo dostupná
+verze, autor, seznam změn a další. Na :num:`plugininfo`  je znázorněný příklad
+zásuvného modulu s názvem |q2t| :sup:`Qgis2threejs`.
 
 .. _plugininfo:
 
 .. figure:: images/p_info.png
    :scale: 55%
 
-   Charakteristika zásuvného modulu na prehliadanie 3D objektov vo webovom prehliadači
+   Charakteristika zásuvného modulu na prohlížení 3D objektů ve webovém
+   prohlížeči.
 
-Zoznam všetkých plugin-ov možno zobraziť a konkrétny modul načítať zvolením 
-|plugin| :sup:`Nenainstalovano` a spustením :item:`Instalovat zásuvný modul`. 
-Následne sa dá tento modul preinštalovať alebo úplne odinštalovať 
-(:num:`#p-instal`). 
+Seznam všech dostupných pluginů možno zobrazit a konkrétní modul načíst zvolením
+|plugin| :sup:`Nenainstalováno` a spuštěním :item:`Instalovat zásuvný modul`.
+Následně se dá tento modul přeinstalovat nebo úplně odinstalovat 
+(:num:`#p-instal`).  
+
 
 .. _p-instal:
 
 .. figure:: images/p_instal.png
    :scale: 55%
 
-   Zoznam nenainštalovaných modulov :fignote:`(1)`, inštalácia :fignote:`(2)`, možnosť odinštalovania :fignote:`(3)` alebo preinštalovania :fignote:`(4)` ktoréhokoľvek z nich
+   Seznam nenainstalovaných modulů :fignote:`(1)`, instalace :fignote:`(2)`,
+   možnost odinstalování :fignote:`(3)` nebo přeinstalování :fignote:`(4)`
+   kteréhokoli z modulů
 
-Pod záložkou |plugin-upgrade| :sup:`Aktualizovatelný` sa nachádzajú zásuvné 
-moduly, ktoré sú dostupné aj v novšej verzii. Záložka |mActionTransformSettings| 
-:sup:`Nastavení` obsahuje nastavenia týkajúce sa kontroly aktualizácií modulov,
-experimentálnych a neschválených modulov a zobrazuje aj zoznam repozitárov, 
-ktoré sa dajú pridávať, editovať alebo mazať, viď. :num:`#akt-nast`. 
-Po zaškrtnutí políčok |checkbox_unchecked| pri položkách
-:item:`Zobrazit také experimentální` a :item:`neschválené moduly` je 
-k dispozícii takmer 500 zásuvných modulov.
+Pod záložkou |plugin-upgrade| :sup:`Aktualizovatelný` se nachází zásuvné moduly,
+které jsou dostupné i v novější verzi. Záložka |mActionTransformSettings| 
+:sup:`Nastavení` obsahuje nastavení týkající se kontroly aktualizací modulů,
+experimentálních a neschválených modulů a zobrazuje i seznam repozitářů, které
+lze přidávat editovat nebo mazat, viz :num:`#akt-nast`.
+Po zaškrtnutí políček |checkbox_unchecked|  při položkách :item:`Zobrazit také 
+experimentální` a :item:`neschválené moduly` je k dispozici téměř 500 zásuvných
+modulů.
+
 
 .. _akt-nast:
 
 .. figure:: images/p_akt_nast.png
    :scale: 55%
 
-   Záložky súvisiace s aktualizáciami a nastaveniami zásuvných modulov
+   Záložky svisející s aktualizacemi a nastavením zásuvných modulov
 
-.. tip:: Zoznam zásuvných modulov môže užívateľ usporiadať ako mu vyhovuje. 
-Po stlačení pravého tlačidla myši v zozname modulov je k dispozícii ich 
-usporiadanie podľa abecedy, počtu stiahnutí, hlasov alebo stavu (:num:`#rad`).
+.. tip:: Seznam zásuvních modulů může uživatel uspořádat dle svých potřeb.
+   Po stisknutí pravého tlačítka myši v seznamu modulů jek dispozici jejich
+   uspořádání dle abecedy, počtu stáhnutí, hlasů nebo stavu (:num:`#rad`).
 
     .. _rad:
 
     .. figure:: images/p_rad.png
        :scale: 55%
 
-       Možnosti zoradenia zásuvných modulov
-    
-.. note:: Je potrebné pripomenúť, že zásuvné moduly v oficiálnych repozitároch 
-boli testované, no jednotlivé repozitáre môžu obsahovať aj menej overené moduly 
-rôznej kvality a štádia vývoja. Preto je dobrou pomôckou zobrazenie hodnotenia 
-či počtu |star| |star| |star|.  
+       Možnosti seřazení zásuvných modulů
 
-.. tip:: Ak poznáme aspoň približný názov konkrétneho modulu, pri vyhľadávaní 
-môže pomôcť vyplnenie políčka :item:`Hledat` v dialógovom okne.
+.. note:: Je zapotřebí připomenout, že zásuvné moduly v oficiálních repozitářech
+   byli testovány, no jednotlivé repozitáře mohou obsahovat i méně ověřené
+   moduly různé kvality a stádia vývoje. Proto je dobrou pomůckou zobrazení
+   hodnocení či počtu  |star| |star| |star|.  
+
+.. tip:: Pokud známe alespoň přibližný název konkrétního modulu, při vyhledávání
+   může vyplnění políčka :item:`Hledat` v dialogovém okně.   
+
+ 
 
 Príklady zásuvných modulov
 ==========================
@@ -217,7 +224,7 @@ okno súvisiace so súradnicovými systémami, systém nastavíme.
    Dialógové okno modulu na prevod AutoCAD DXF súboru na súbor Shapefile
 
 |2| :sup:`Získání souřadnic`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Tento zásuvný modul sa používa veľmi jednoducho a umožňuje zobrazenie súradníc
 myši pre dva vybrané súradnicové systémy. Dialógové okno je na :num:`#zis-sur`.
