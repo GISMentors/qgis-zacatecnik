@@ -161,11 +161,11 @@ modulů.
 
  
 
-Príklady zásuvných modulov
-==========================
+Příklady zásuvních modulů
+=========================
 
-V ďalšej časti si aspoň čiastočne ukážeme niektoré z užitočných a často 
-používaných zásuvných modulov programu QGIS: 
+V další části si částečně ukážeme některé z užitečných a často používaných
+zásuvních modulů programu QGIS: 
 
 .. only:: latex
           
@@ -180,7 +180,7 @@ používaných zásuvných modulov programu QGIS:
 +================================================+=================================================+
 | |1| :sup:`Konvertor Dxf2Shp` 			 | konvertuje formát ``*.dxf`` do formátu ``*.shp``|
 +------------------------------------------------+-------------------------------------------------+
-| |2| :sup:`Získání souřadnic`     		 | získáva souřadnic myši                          |
+| |2| :sup:`Získání souřadnic`     		 | získáva souřadnice myši                         |
 +------------------------------------------------+-------------------------------------------------+
 | |3| :sup:`Zásuvný modul silničního grafu` 	 | řeší problém nejkratší cesty                    |
 +------------------------------------------------+-------------------------------------------------+
@@ -197,14 +197,14 @@ používaných zásuvných modulov programu QGIS:
 | |9| :sup:`Zásuvný modul analýzy terénu rastru` | nástroj pro analýzu terénu 		           |
 +------------------------------------------------+-------------------------------------------------+
 
-|1| :sup:`Konvertor Dxf2Shp`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-V prípade, že máme k dispozícii súbor AutoCAD DXF 
-(`Drawing Exchange Format <https://en.wikipedia.org/wiki/AutoCAD_DXF>`_), 
-do prostredia programu QGIS ho vieme načítať vďaka zásuvnému 
-modulu *Konvertor Dxf2Shp*. Ako intuitívne napovedá názov, prevedieme na 
-*Shapefile*.
+|1| :sup:`Konvertor Dxf2Shp`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+V případě, že máme k dispozici soubor AutoCAD DXF (`Drawing Exchange Format 
+<https://en.wikipedia.org/wiki/AutoCAD_DXF>`_), do prostředí programu QGIS ho
+umíme načíst díky zásuvnému modulu *Konvertor Dxf2Shp*. Již z názvu vyplývá, že
+soubor je převeden do formátu *Shapefile*.
 
 Po načítaní modulu pomocou :ref:`správcu zásuvných modulov <spravca-plugin>`
 sa po kliknutí na ikonu |1| objaví dialógové okno, kde je potrebné nastaviť
@@ -213,145 +213,142 @@ viď. :num:`#dxf2shp`. Povolenie |checkbox| :sup:`Exportovat textové značky`
 vytvorí extra bodovú vrstvu s označeniami a príslušná ``*.dbf`` tabuľka bude
 obsahovať "textové" informácie zo súboru ``*.dxf``. 
 
-.. note:: Ak sa po spustení modulu tlačidlom :item:`OK` zobrazí dialógové
-okno súvisiace so súradnicovými systémami, systém nastavíme.
+.. note:: Když se po spuštění modulu tlačítkem :item:`OK` zobrazí dialogové
+   okno související se souřadnicovými systémy, systém nastavíme.
 
 .. _dxf2shp:
 
 .. figure:: images/p_dxf2shp.png
    :scale: 70%
 
-   Dialógové okno modulu na prevod AutoCAD DXF súboru na súbor Shapefile
+   Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile
 
 |2| :sup:`Získání souřadnic`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Tento zásuvný modul sa používa veľmi jednoducho a umožňuje zobrazenie súradníc
-myši pre dva vybrané súradnicové systémy. Dialógové okno je na :num:`#zis-sur`.
-Kliknutím na ikonu |geographic| nastavíme požadovaný súradnicový systém, 
-zvolením |2| :sup:`Zapnout získávání` sa myš zmení na |reticle|. 
-Po kliknutí do mapového okna sa objaví malá červená bodka. Jej súradnice 
-v súradnicovom systéme projektu sa zobrazia v okne vedľa symbolu |askcor|. 
-Na :num:`#zis-sur` sú na ukážku zobrazené súradnice vybraného bodu v 
-súradnicových systémoch S-JTSK (Greenwich) Krovak a S-JTSK (Greenwich) Krovak 
-East North. Ikona |askcorcopy| umožňuje súradnice kopírovať do schránky v podobe 
-štyroch hodnôt (pre :num:`#zis-sur` by to bolo ``4494520.158,-2880372.147,
-4746310.700,2931421.671``).
+Tento zásuvný modul se používá velmi jednoduše a umožňuje zobrazení souřadnic
+myši pro dva vybrané souřadnicové systémy. Dialogové okno je na :num:`#zis-sur`.
+Kliknutím na ikonu |geographic| nastavíme požadovaný souřadnicový systém,
+zvolením |2| :sup:`Zapnout získávání` se symbol myši změní na |reticle|. Po
+kliknutí do mapového okna se objeví malá červená tečka. Její souřadnice v souř.
+systému projektu se zobrazí v okně vedle symbolu |askcor|. Na :num:`#zis-sur`
+jsou na ukázku zobrazené  souřadnice vybraného bodu v souřadnicových systémech
+S-JTSK (Greenwich) Krovak a S-JTSK (Greenwich) Krovak East North. Ikona
+|askcorcopy| umožňuje souřadnice kopírovat do schránky v podobě čtyř hodnot (pro
+:num:`#zis-sur`  by to bylo ``4494520.158,-2880372.147,
+4746310.700,2931421.671``). 
 
 .. _zis-sur:
 
 .. figure:: images/p_zis_sur.png
    :scale: 55%
 
-   Dialógové okno modulu na zobrazenie súradníc z mapového okna
+   Dialogové okno modulu na zobrazení souřadnic z mapového okna
 
 |3| :sup:`Zásuvný modul silničního grafu`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Vo vstve polylínií modul vypočíta a následne vykreslí najkratšiu cestu medzi 
-dvoma zvolenými bodmi. Je napísaný v programovacom jazyku C++. Umožňuje určiť 
-najoptimálnejšiu trasu na základe dĺžky alebo času.  Výsledok je automaticky 
-exportovaný ako nová vektorová vrstva. 
+Ve vrstvě polylinií modul vypočte a následně vykreslí nejkratší cestu mezi dvěma
+zvolenými body. Je napsaný v programovacím jazyku C++. Umožňuje určit
+nejoptimálnější trasu  na základě délky nebo času. Výsledek je automaticky
+exportován jako nová vektorová vrstva. 
 
-.. note:: Pri počítaní najkratšej cesty sa odporúča nastaviť súradnicový systém
-projektu podľa súradnicového systému vrstvy polylínií. 
+.. note:: Při výpočtu nejkratší cesty se doporučuje nastavit souřadnicový systém
+   projektu dle souřadnicového systému vrstvy polylínií. 
 
-Zásuvný modul cestného grafu aktivujeme v 
-:ref:`paneli správcu zásuvných modulov <spravca-plugin>`. V lište menu prejdeme 
-na :menuselection:`Vektor --> Silniční graf --> Nastavení`. Zobrazí sa okno,
-kde vyplníme základné nastavenia ako jednotku času, vzdialenosti, topologickú
-toleranciu a ďalšie, viď. :num:`#path-nast`. Na predstvenie modulu použijeme
-vektorovú vrstva ciest Českej republiky zobrazenú na :num:`path-vector` podľa 
-typu.
+Zásuvný modul cestného grafu aktivujeme v :ref:`panelu správce zásuvných modulů 
+<spravca-plugin>`. V liště menu přejdeme na :menuselection:`Vektor --> 
+Silniční graf --> Nastavení`. Zobrazí se okno, kde vyplníme základní nastavení
+jako jednotku času, vzdálenosti, topologickou toleranci a další, viz. 
+:num:`#path-nast`. Na nastavení modulu použijeme vektorovou vrstvu cest České
+republiky zobrazenou na :num:`path-vector` dle typu.
 
 .. _path-nast:
 
 .. figure:: images/p_path_nast.png
    :scale: 55%
 
-   Nastavenia zásuvného modulu cestného grafu
+   Nastavení zásuvného modulu cestného grafu
 
 .. _path-vector:
 
 .. figure:: images/p_path_vector.png
    :scale: 60%
 
-   Cesty Českej republiky zobrazené podľa typu.
+   Cesty České republiky zobrazené dle jejich typu.
 
-V paneli :item:`Nejkratší cesta` použijeme |2| a v mapovom okne kliknutím 
-zvolíme začiatočný a koncový bod cesty. Zobrazí sa ako zelená, resp. červená 
-bodka. Následne nastavíme kritérium, t.j. dĺžku alebo čas a potvrdíme stlačením
-:item:`Vypočítat`. Po prebehnutí výpočtu sa v mapovom okne zobrazí výsledok 
-v podobe polylínie, ktorá sa dá exportovať ako nová vektorová vrstva (použitím
-:item:`Export`). Tlačidlo :item:`Vyčistit` slúži na vymazanie obsahu políčok.
-Postup je znázornený na :num:`#path`.
+V panelu :item:`Nejkratší cesta` použijeme |2| a v mapovém okně kliknutím zvolíme
+počáteční a koncový bod cesty. Zobrazí se jako zelená, resp. červená tečka.
+Následně nastavíme kritérium, t.j. délku nebo čas a potvrdíme stisknutím 
+:item:`Vypočítat`. Po proběhnutí výpočtu  se v mapovém okně zobrazí výsledek v
+podobě polylinie, která se dá exportovat jako nová vektorová vrstva (použitím 
+:item:`Export`).Tlačítko :item:`Vyčistit` slouží na smazání obsahu políček.
+Postup je znázorněný na :num:`#path`.
 
 .. _path:
 
 .. figure:: images/p_path.png
    :scale: 60%
 
-   Použitie zásuvného modulu cestného grafu a výpočet najoptimálnejšej cesty
+   Použití zásuvného modulu cestného grafu a výpočet nejoptimálnější cesty
 
-.. tip:: Ak nevidíme panel :item:`Nejkratší cesta`, pridáme ju z menu lišty 
-:item:`Zobrazit` (:menuselection:`Zobrazit --> Panely --> Nejkratší cesta`) 
-ako to znázorňuje :num:`#path-menu`.
-
+.. tip:: Pokud nevidíme panel :item:`Nejkratší cesta`, přidáme ho z menu lišty 
+   :item:`Zobrazit` (:menuselection:`Zobrazit --> Panely --> Nejkratší cesta`),
+   jak je to znázorněno na :num:`#path-menu`.
+  
     .. _path-menu:
     
     .. figure:: images/p_path_menu.png
        :scale: 55%
 
-       Zobrazenie dialógového okna na výpočet najkratšej cesty
+       Zobrazení dialogového okna na výpočet nejkratší cesty
 
 |4| :sup:`Zásuvný modul prostorových dotazů`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Pomocí tohoto zásuvného modulu lze vykonávat různé prostorové dotazy. Mezi dostupné
+prostorové  vztahy patří vztah dotyku, rozpojení, křížení, protínání nebo
+překryvu. Funkcionalita je založená na knihovně 
+`GEOS <https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&redirect=no#GEOS_Library>`_.
+Vždy je nutné pracovat s vrstvou obsahující zdrojové prvky a vrstvou s
+referenčními prvky. 
 
-Týmto zásuvným modulom môžeme vykonávať rôzne priestorové dotazy. Medzi dostupné 
-priestorové vzťahy patrí vzťah dotyku, rozpojenia, kríženia, vzťah pretínania 
-či prekrytia. Funkcionalita je založená na knižnici 
-`GEOS <https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&redirect=no#GEOS_Library>`_. 
-Vždy je nutné pracovať s vrstvou obsahujúcou zdrojové prvky a vrstvou 
-s referenčnými prvkami.
+Se zásuvným modulem začneme pracovat tak, že klikneme na ikonu modulu |4| nebo z
+menu jako :menuselection:`Vektor --> Prostorový dotaz --> Prostorový dotaz`.
+Potom v dialogovém okně s názvem *Prostorový dotaz* nastavíme zdrojové a
+referenční vrstvy, prostorový vztah (operátor) a zvolíme zda se jedná o nový
+výběr, nebo vybíráme z již existujícího výběru.
 
-So zásuvným modulom začneme pracovať tak, že klikneme na ikonu modulu |4| alebo
-z menu ako :menuselection:`Vektor --> Prostorový dotaz --> Prostorový dotaz`. 
-Potom v dialógovom okne s názvom *Prostorový dotaz* nastavíme zdrojové a 
-referenčné vrstvy, priestorový vzťah (operátor) a zvolíme či ide o nový výber 
-alebo vyberáme z už existujúceho výberu.
-
-Ukážeme si to na príklade výberu všetkých obcí v Českej republike (:map:`obce`), 
-v ktorých sa nachádza požiarna stanica (:map:`pozarni_stanice`). Použitie je
-znázornené na :num:`#p-pr-dot`. Po tom ako prebehne výber zvolením 
-:item:`Použít` sa otvorí ďalšie okno (na :num:`#p-pr-dot` vpravo). V tomto kroku 
-možeme tlačítkom |mActionNewVectorLayer| vytvoriť vektorovú vrstvu 
-z výberu, |selectcreatelayer| môžeme pokračovať s výberom a robiť subselekcie, 
-voľbou |checkbox| dokážeme približovať sa k výsledným položkám, prípadne 
-zapisovať správy. 
+Ukážeme si to na příkladě výběru všech obcí v České republice (:map:`obce`), ve
+kterých se nachází požární stanice (:map:`pozarni_stanice`).Použití je znázorněné
+na :num:`#p-pr-dot`. Po proběhnutí výběru zvolením :item:`Použít` se otevře
+další okno (na :num:`#p-pr-dot` vpravo). V tomto kroku můžeme tlačítkem 
+|mActionNewVectorLayer| vytvořit vektorovou vrstvu z výběru, |selectcreatelayer|
+můžeme pokračovat s výběrem a provádět dalším podvýběry, volbou |checkbox|
+se dokážeme přibližovat k výsledným objektům, případně zapisovat zprávy.  
 
 .. _p-pr-dot:
 
 .. figure:: images/p_pd_menu.png
    :scale: 60%
 
-   Použitie zásuvného modulu priestorových dotazov (prvok obsahuje ...)
+   Použití zásuvného modulu prostorových dotazů (prvek obsahuje ...)
 
 .. _p-pr-vysl:
 
 .. figure:: images/p_pd_vysl.png
    :scale: 70%
 
-   Obce Českej republiky s požiarnou stanicou
+   Obce České republiky s požární stanicí
 
 |5| :sup:`OpenLayers Plugin` 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*OpenLayers Plugin* (:menuselection:`Web --> OpenLayers Plugin`) umožňuje 
-pridávať do mapového okna množstvo obrazových služieb z Google, Bing, Yahoo 
-a OpenStreetMap (:num:`#plp`). Satelitné snímky týchto služieb sa môžu líšiť 
-ako dátumom, tak kvalitou v závislosti od lokality či poskytovateľa. Podmienkou 
-pre použitie zásuvného modulu je dobrý prístup k internetu. Na :num:`p-olm` 
-je príklad načítania štyroch rôznych vrstiev s detailom pre tú istú oblasť.
+*OpenLayers Plugin* (:menuselection:`Web --> OpenLayers Plugin`)  umožňuje
+přidávat do mapového okna množství obrazových služeb z Google, Bing, Yahoo a
+OpenStreetMap (:num:`#plp`). Satelitní snímky těchto služeb se mohou lišit jak
+datumem, tak kvalitou v závislosti od lokality nebo poskytovatele. Podmínkou pro
+použití zásuvného modulu je dobrý přístup k internetu. Na :num:`p-olm`  je
+příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
 
 .. _plp:
 
@@ -365,6 +362,7 @@ je príklad načítania štyroch rôznych vrstiev s detailom pre tú istú oblas
 .. figure:: images/p_olm.png
    :class: large
 
-   Ukážka vrstiev OpenStreetMap :fignote:`(1)`, OpenCycleMap :fignote:`(2)`, Bing Road :fignote:`(3)` a MapQuest-OSM :fignote:`(4)` pre vybranú časť Prahy.
+   Ukážka vrstev OpenStreetMap :fignote:`(1)`, OpenCycleMap :fignote:`(2)`, Bing
+   Road :fignote:`(3)` a MapQuest-OSM :fignote:`(4)` pro vybranou část Prahy.
 
-.. note:: Ostatné zo spomenutých modulov sú (budú) obsahom Školenia pre pokročilých.
+.. note:: Další ze zmíněných modulů jsou (budou) obsahem Školení pro pokročilé.
