@@ -111,9 +111,8 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 Průsečík...
 ^^^^^^^^^^^
 
-Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Každý prvek 
-nese atributy obou vstupních vrstev (narozdíl od funkce :ref:`orez`). 
-
+Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Každý 
+prvek nese atributy obou vstupních vrstev (narozdíl od funkce :ref:`orez`). 
 
 .. figure:: images/prost_prus.png
     

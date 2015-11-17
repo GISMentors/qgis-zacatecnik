@@ -36,7 +36,8 @@
     :width: 1.5em
 .. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
     :width: 1.5em
-.. |mActionUnselectAttributes| image:: ../images/icon/mActionUnselectAttributes.png
+.. |mActionUnselectAttributes| image:: 
+   ../images/icon/mActionUnselectAttributes.png
     :width: 1.5em
 .. |mActionZoomToSelected| image:: ../images/icon/mActionZoomToSelected.png
     :width: 1.5em
@@ -200,31 +201,46 @@ kliknutím na panel a výběrem z nabídky
 Základní nástroje pro pohyb v okně 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- |mActionZoomIn| :sup:`Přiblížit`, |mActionZoomOut| :sup:`Oddálit` - přiblíží/oddálí vybranou oblast, pro přibližovaní bez vybrání oblasti lze použít i kolečko myši
-- |mActionZoomLast| :sup:`Zvětšit podle posledního výřezu`, |mActionZoomNext| :sup:`Přiblížit na další` - lze vrátit na předchozí stav přiblížení a zpět
-- |mActionZoomToLayer| :sup:`Přiblížení na vrstvu` - přiblíží na rozsah vybrané vrstvy
-- |mActionZoomFullExtent| :sup:`Přiblížení na všechny vrstvy` - přiblíží na všechny vrstvy v projektu
-- |mActionPan| :sup:`Posun mapy` - umožňí posun v mapovém okně tažením, tato funkce lze nahradit stisknutím kolečka myši a následným tažením
-        .. tip:: při posunu pomocí stiknutí kolečka myši můžeme mít aktivní jinou funkci např výběr, vytváření nových prvků atd.
+- |mActionZoomIn| :sup:`Přiblížit`, |mActionZoomOut| :sup:`Oddálit` -
+  přiblíží/oddálí vybranou oblast, pro přibližovaní bez vybrání
+  oblasti lze použít i kolečko myši
+- |mActionZoomLast| :sup:`Zvětšit podle posledního výřezu`,
+  |mActionZoomNext| :sup:`Přiblížit na další` - lze vrátit na předchozí
+  stav přiblížení a zpět
+- |mActionZoomToLayer| :sup:`Přiblížení na vrstvu` - přiblíží na
+  rozsah vybrané vrstvy
+- |mActionZoomFullExtent| :sup:`Přiblížení na všechny vrstvy` -
+  přiblíží na všechny vrstvy v projektu
+- |mActionPan| :sup:`Posun mapy` - umožňí posun v mapovém okně tažením,
+  tato funkce lze nahradit stisknutím kolečka myši a následným tažením
+        .. tip:: při posunu pomocí stiknutí kolečka myši můžeme mít
+           aktivní jinou funkci např výběr, vytváření nových prvků atd.
 - |mActionRefresh| :sup:`Obnovit` - obnoví zobrazení všech nahraných dat
 
-Základní nástroje výběru 
+Základní nástroje výběru
 ^^^^^^^^^^^^^^^^^^^^^^^^
-Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní prvky, se kterýmy hodláme dále pracovat. Takové to označení se nazývá :option:`Výběr`
+Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní
+prvky, se kterýmy hodláme dále pracovat. Takové to označení se nazývá
+:option:`Výběr`
 
-- |mActionSelectRectangle| :sup:`Vybrat prvky oblastí nebo jednoklikem` - nejjednoduší tvorba výběru
-- |mActionSelectPolygon| :sup:`Vybrat prvky polygonem` - vytvořit výběr naklikáním polygonu
+- |mActionSelectRectangle| :sup:`Vybrat prvky oblastí nebo jednoklikem` -
+  nejjednoduší tvorba výběru
+- |mActionSelectPolygon| :sup:`Vybrat prvky polygonem` - vytvořit výběr
+  naklikáním polygonu
 - |mActionSelectFreehand| :sup:`Vybrat prvky kreslením od ruky`
 - |mActionSelectRadius| :sup:`Vybrat prvky poloměrem`
 
-- |mIconExpressionSelect| :sup:`Vabrat prvky pomocí vzorce` - viz. kapitola :ref:`atrdotaz`
+- |mIconExpressionSelect| :sup:`Vabrat prvky pomocí vzorce` - viz. kapitola
+  :ref:`atrdotaz`
 
-- |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` - zruší veškerý výběr
+- |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` -
+  zruší veškerý výběr
 
 .. tip:: Nástroje pro pohyb v okně na základě výběru
 
     - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
     - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
+
 
 Měření v mapovém okně
 ^^^^^^^^^^^^^^^^^^^^^
