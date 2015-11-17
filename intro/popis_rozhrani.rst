@@ -36,8 +36,7 @@
     :width: 1.5em
 .. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
     :width: 1.5em
-.. |mActionUnselectAttributes| image:: 
-   ../images/icon/mActionUnselectAttributes.png
+.. |mActionUnselectAttributes| image:: ../images/icon/mActionUnselectAttributes.png
     :width: 1.5em
 .. |mActionZoomToSelected| image:: ../images/icon/mActionZoomToSelected.png
     :width: 1.5em
@@ -60,11 +59,10 @@ Popis rozhraní
 Po zpuštění systému QGIS se zobrazí standardní rozhraní. 
 Na obrázku níže jsou označeny základní části systému.
 
-.. tip:: 
-       Vzhled systému QGIS je možné jednoduše měnit dle potřeb. Zobrazování
-       jednotlivých nástrojů je možné upravit a přizpůsobit si tak pracovní 
-       prostředí. Pokud budete rozšiřovat funkčnost systému, tak je dobré si 
-       vhodně umístit nové nástroje.
+.. tip::  Vzhled systému QGIS je možné jednoduše měnit dle potřeb. Zobrazování
+   jednotlivých nástrojů je možné upravit a přizpůsobit si tak pracovní 
+   prostředí. Pokud budete rozšiřovat funkčnost systému, tak je dobré si 
+   vhodně umístit nové nástroje.
 
 .. figure:: images/menu_description.png
    :class: large
@@ -128,16 +126,15 @@ předdefinovaného seznamu měřítek.
     
    Výběr měřítka z předdefinovaného seznamu.
 
-.. tip:: 
-   Seznam předdefinovaných měřítek je možné upravit. V menu 
+.. tip:: Seznam předdefinovaných měřítek je možné upravit. V menu 
    :menuselection:`Nastavení --> Možnosti...` záložka :item:`Nástroje mapy` je
    část Předdefinovaná měřítka. Nové měřítko je možné přidat pomocí ikonky 
    |addscale| :sup:`Přidat předdefinované měřítko` a nebo odstránit pomocí
    |removescale| :sup:`Odstranit vybrané`. 
 
-        .. figure:: images/predefined_scales.png
+         .. figure:: images/predefined_scales.png
  
-           Menu pro upravení předdefinovaných měřítek.
+            Menu pro upravení předdefinovaných měřítek.
 
 Překreslování mapového okna
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^           
@@ -155,9 +152,8 @@ překreslování není potřebné, tak je možné jej potlačit - mapové okno s
 překreslovat. Pro takovéto nastavení je v stavovém menu položka s checkboxem
 :item:`Vykreslování`.
 
-.. tip:: 
-   Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné udělat
-   stisknutím klávesy :item:`Esc`.
+.. tip:: Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné 
+   udělat stisknutím klávesy :item:`Esc`.
 
 Souřadnicový systém
 ^^^^^^^^^^^^^^^^^^^        
@@ -166,8 +162,7 @@ okna. Aktuální EPSG kód souřadnicového systému je vidět přímo ve stavov
 vedle ikony |geographic|.
 
 
-.. tip:: 
-   Souřadnicové systémy je možné vybírat podle EPSG kódu. Po instalaci je
+.. tip:: Souřadnicové systémy je možné vybírat podle EPSG kódu. Po instalaci je
    defaultně nastaven souřadnicový systém WGS 84. Pro potřeby zpracování geodat 
    na území ČR se však většinou používá souřadnicový systém s EPSG kódem 5514
    (S-JTSK). Nastavení přes stavový řádek je však platné jenom pro aktuální
@@ -175,11 +170,11 @@ vedle ikony |geographic|.
    systému. Jak nastavit defaultní souřadnicový systém je popsáno v
    :ref:`nastavení souřadnicového systému <sour-system>`.
 
-.. noteadvanced:: 
-   V případě, že uživatel potřebuje zjistit detaily o jakékoli aktivitě
-   systému, tak je možné prohlídnout si všechny informace. Záložku s jednotlivými
-   logovacími zprávami je možné otevřít pomocí ikonky |log| :sub:`Zprávy`. Tyto
-   zprávy jsou podstatné zejména v případě neočekávaného chování.
+.. noteadvanced:: V případě, že uživatel potřebuje zjistit detaily o jakékoli 
+   aktivitě systému, tak je možné prohlídnout si všechny informace. Záložku s 
+   jednotlivými logovacími zprávami je možné otevřít pomocí ikonky |log| 
+   :sup:`Zprávy`. Tyto zprávy jsou podstatné zejména v případě neočekávaného 
+   chování.
 
 Hlavní menu (5)
 ===============
@@ -188,8 +183,7 @@ a druhou je nástrojová lišta.
 
 V menu se nachází zejména nástroje pro správu systému a jeho nastavení.
 
-.. tip:: 
-   Nastavení systému je možné změnit přes :menuselection:`Nastavení -->
+.. tip:: Nastavení systému je možné změnit přes :menuselection:`Nastavení -->
    Možnosti...`. Prvním důležitým nastavením je volba souřadnicového systému -
    záložka :item:`SRS`. Zde se nastaví souřadnicový systém  pro nový projekt a
    zvlášť pro novou vrstvu.
@@ -245,11 +239,10 @@ prvky, se kterýmy hodláme dále pracovat. Takové to označení se nazývá
 Měření v mapovém okně
 ^^^^^^^^^^^^^^^^^^^^^
 .. warning:: Nástroje pro měření jsou závislé na souřadnicovém systému. V
-             případě nastavení souřadnicového systému v podobě zem. šířky 
-             a délky bude výsledek měření (délky a plochy) nesprávný. Pro 
-             tento účel je nutné mít správně nastavený mapový souřadnicový
-             systém. Měření v mapovém okně také respektuje nastavení 
-             přichytávání (snapping).
+   případě nastavení souřadnicového systému v podobě zem. šířky a délky 
+   bude výsledek měření (délky a plochy) nesprávný. Pro tento účel je 
+   nutné mít správně nastavený mapový souřadnicový systém. Měření v 
+   mapovém okně také respektuje nastavení přichytávání (snapping).
 
 V mapovém okně lze použít pro měření následovné nástroje z hlavního menu.
 
