@@ -17,7 +17,7 @@
 .. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
    :width: 1.5em
 
-.. todo:: nachystat data, příklad?
+.. todo:: nachystat data, obrázek výsledku
 
 Připojení tabulkových dat 
 =========================
