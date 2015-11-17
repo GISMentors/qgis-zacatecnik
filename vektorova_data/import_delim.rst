@@ -11,6 +11,8 @@
 .. |mActionRefresh| image:: ../images/icon/mActionRefresh.png
    :width: 1.5em
 
+.. todo:: nakonec přidat obrázek s výsledkem
+
 Import dat s oddělenými hodnotami
 =================================
 Jestliže máme tabulková data obsahující geografické souřadnice, můžeme tato data poměrně snadno naimportovat a vytvořit z nich vektorovou vrstvu. Při importu pracujeme s daty s oddělenými hodnotami (:wikipedia-en:`DSV <delimiter-separated values>`).

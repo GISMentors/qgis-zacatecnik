@@ -23,6 +23,7 @@
 .. |mIconExpression| image:: ../images/icon/mIconExpression.png
    :width: 1.5em  
    
+.. todo:: do budouna: přidat a popsat subsadu prvků
 
 Vlastnosti vrstvy
 =================

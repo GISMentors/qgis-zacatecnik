@@ -26,5 +26,5 @@ lze volit mezi 3 základními typy výstupního souboru - obrázek
 jako PDF` nebo SVG |as_svg| :sup:`Exportovat jako SVG`.
 
 .. tip:: Při exportu mapového výstupu do obrázku je k dispozici
-         široká škála formátů. Z hlediska kvality výstupu, nebo
+         široká škála formátů. Z hlediska kvality výstupu nebo
          možnosti jeho úpravy je lepší použít PDF nebo SVG.

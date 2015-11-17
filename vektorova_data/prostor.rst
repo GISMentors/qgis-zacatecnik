@@ -19,7 +19,8 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
     .. figure:: images/geoprocess.png
        :scale: 70%
         
-       Okno :item:`Nástroje zpracování` (Pokročilé zobrazení)
+       Okno :item:`Nástroje zpracování` (Adnvanced interface - pokročilé 
+       zobrazení)
 
 
 Obalová zóna (buffer)
@@ -43,6 +44,9 @@ vrstvu obalových zónVytváření obalových zón nalezneme v menu
   vytvoření obalových zón
 - |checkbox|:option:`Použít pouze vybrané prvky` - vytvoří obalovou zónu jen pro 
   prvky ve výběru
+  
+  .. note:: Pokud máme vybrané nějaké prvky, je automaticky aktivováno
+  
 - :item:`Segmentů proaproximaci` |checkbox| - míra aproximace kruhu při tvorbě 
   obalové zóny (:num:`aprox`)
     
@@ -82,30 +86,81 @@ Překryvné analýzy
 -----------------
 
 Další skupinou prostorových analýz jsou tzv. překryvné anlýzy. Princepem je 
-interakce prvků jedné nebo více vektorových vrstvev. Pro dosažení 
-správného výsledku je nutné aby vrstvy byly ve shodném souřadnicovém systému. 
-Překryvné operace opět nalezneme v menu 
+vytvořit novou vektorovou vrstvu na základě interakce prvků jedné nebo více 
+vektorových vrstvev. Pro dosažení správného výsledku je nutné aby vrstvy byly 
+ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu 
 :menuselection:`Vektor --> Nástroje geoprocessingu -->`
 
+
+.. figure:: images/prost_okno.png
+    :scale: 90%
+    
+    Popis
+    
+    
 .. todo:: popsat okno
 
-.. todo:: uvézt příklady
+.. todo:: ? přidat obrázky prakticých příkladů (i na bodech)
+
+
+.. figure:: images/prost_puvod.png
+    
+    Popis
+
 
 Průsečík...
 ^^^^^^^^^^^
 
+Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Každý prvek 
+nese atributy obou vstupních vrstev (narozdíl od funkce :ref:`orez`). 
+
+
+.. figure:: images/prost_prus.png
+    
+    Popis
+
 Sjednotit...
 ^^^^^^^^^^^^
+Vytvoří novou vrstvu se všemi původnímy prvky, v místech překryvu vrstev jsou 
+vytvořeny nové prvky.
 
+.. figure:: images/prost_sjed.png
+    
+    Popis
+    
 Symetrický rozdíl...
 ^^^^^^^^^^^^^^^^^^^^
+Vytvoří novou vrstvu, kde v místech překryvu vrstev nejsou vytvořeny prvky. 
+Prvky vznikají pouze tam kde se vstupvní vrstvy nepřekrývají.
+
+.. figure:: images/prost_sym.png
+    
+    Popis
+
+.. _orez:
 
 Ořezávač...
 ^^^^^^^^^^^
+Ořeže :option:`Vstupní vektorovou vrstvu` vrstvou vybranou v nabídce 
+:option:`Oříznout vrstvu`. Prvky výstupní vrstvy nesou atributy pouze z vrstvy 
+zadané jako :option:`Vstupní vektorová vrstva`
+
+.. figure:: images/prost_orez.png
+    
+    Popis
+
 
 Rozdíl...
 ^^^^^^^^^
 
+.. figure:: images/prost_rozd.png
+    
+    Popis
+
 Rozpustit...
 ^^^^^^^^^^^^
+
+.. figure:: images/prost_rozp.png
+    
+    Popis
 

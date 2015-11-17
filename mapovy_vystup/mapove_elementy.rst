@@ -40,7 +40,7 @@ nastavení zobrazených panelů.
    
 .. figure:: images/panels.png
  
-            Nastavení zobrazení s skrytí jednotlivých panelů
+            Nastavení zobrazení a skrytí jednotlivých panelů.
 
  
 Obsah mapového okna
@@ -60,12 +60,12 @@ výřezu načte obsah mapového okna.
 Velikost výřezu a jeho polohu lze měnit pomocí tahání za jeho hrany
 nebo uchopení za jeho obsah a posun.
 
-.. tip:: Výřez s mapovým oknem má vícero dalších
-         nastavení. Rozšířené nastavení je dostupné pro každý
-         prvek přidaný do mapového výstupu. V části :item:`Položky`
-         se nachází přehled všech prvků přidaných v mapovém
-         výstupu. Označením vybraného prvku se v části :item:`Vlastnosti
-         položky` otevře detailní nastevní konkrétního mapového prvku.
+.. tip:: Výřez s mapovým oknem má vícero dalších nastavení. Rozšířené
+   nastavení je dostupné pro každý prvek přidaný do mapového
+   výstupu. V části :item:`Položky` se nachází přehled všech
+   prvků přidaných v mapovém výstupu. Označením vybraného prvku
+   se v části :item:`Vlastnosti položky` otevře detailní
+   nastavení konkrétního mapového prvku.
         
         .. figure:: images/map_items.png
            :class: small
@@ -74,16 +74,16 @@ nebo uchopení za jeho obsah a posun.
            Výřez s obsahem mapového okna a jeho detailní nastavení.
            
 Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu
-mapového okna. Překreslení dle pozměněného mapového oknaje možné v
+mapového okna. Překreslení dle pozměněného mapového okna je možné v
 detailu prvku :item:`Vlatnosti položky` v části :item:`Hlavní vlastnosti`
 pomocí tlačítka :item:`Aktualizovat náhled`. V této části též lze nastavit
 přesné měřítko mapového okna.
 
 V části :item:`Rozsahy` lze přesně nadefinovat rozsah mapového okna v
 souřadnicovém systému mapového projektu. Pomocí tlačítek lze také
-nastavit extent z mapového okna :item:`Nastavit na rozsah mapového okna`, 
-nebo naopak, zobrazit nadefinovaný extent v mapovém okně :item:`Zonrazit rozsah
-v mapovém okně`.
+nastavit rozsah (extent) z mapového okna :item:`Nastavit na rozsah
+mapového okna` nebo naopak, zobrazit nadefinovaný extent v mapovém
+okně :item:`Zobrazit rozsah v mapovém okně`.
 
 .. figure:: images/map_main_properties.png
    :class: small
@@ -144,29 +144,27 @@ výstupu je možné pomocí ikonky |add_legend| :sup:`Přidat novou legendu`.
 Umístění položky legendy do mapového okna je proveden stejně jako u 
 předchozích položek.
 
-Obsah legendy je vygenerován v momentě jejího umístění a je
-vygenerován z nastavení stylů jednotlivých vrstev zobrazovaných v
-mapovém okně.
+Obsah legendy je vygenerován v momentě jejího umístění a na základě
+nastavení stylů jednotlivých vrstev zobrazovaných v mapovém okně.
 
 Obsah legendy je možné upravovat podobným způsobem jako ostatní prvky
-(:item:`Vlastnosti položky`). Lze zde upravit název, zarovnání,
-odsazování a další vizuální nastavení pro zobrazování legendy.
+(:item:`Vlastnosti položky`). Lze upravit název, zarovnání, odsazování
+a další vizuální nastavení pro zobrazování legendy. 
 
-Lze zde však upravit i jednotlivé položky legendy, ubrat, přidat
-novou, změnit text i zařazení jednotlivých položek v rámci legendy
-samotné.
+Dále lze upravit i jednotlivé položky legendy, ubrat, přidat novou,
+změnit text i zařazení jednotlivých položek v rámci legendy samotné.
 
 .. figure:: images/composer_legend.png
    :class: large
    :scale-latex: 80
  
-   Přidaná legenda a úprava jejich položek
+   Přidaná legenda a úprava jejich položek.
 
 
 .. tip:: Pokud upravujete legendu, tak se může stát, že se změnami
-         nebudete spokojeni. V případě, že nechcete změny
-         opravovat nazpátek ručně, můžete legendu vygenerovat z
-         dat znova pomocí tlačítka :item:`Aktualizovat vše`
+         nebudete spokojeni. V případě, že nechcete změny v nastavení
+         provést ručně, můžete legendu vygenerovat z dat znova pomocí
+         tlačítka :item:`Aktualizovat vše`.
 
 
 Atributová tabulka
@@ -205,8 +203,8 @@ tabulky do mapového výstupu.
 
    Nastavení zobrazení atributové tabulky v mapovém výstupu.
  
-Směrová šipka
-^^^^^^^^^^^^^ 
+Směrová šipka (růžice)
+^^^^^^^^^^^^^^^^^^^^^^
 
 Do mapového výstupu lze přidat také směrovou šipku - pomocí ikony
 |add_arrow| :sup:`Přidat šipku`. Směrová šipka může být vykreslena 
