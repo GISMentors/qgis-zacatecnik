@@ -5,6 +5,6 @@ Tvorba mapového výstupu
 .. toctree::
    :maxdepth: 2
 
-   map_composer
-   map_elements
+   tvurce_map_vystupu
+   mapove_elementy
    export
