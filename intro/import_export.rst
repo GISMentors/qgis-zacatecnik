@@ -10,7 +10,7 @@ Přidávání a export geodat
 
 QGIS podporuje široké spektrum geodat. Prostorová data můžeme
 rozdělit podle způsobu uložení na lokální a distribuovaná (síťová).
-V obouch kategoriích se následně vyskytují data rastrová a vektorová.
+V obou kategoriích se následně vyskytují data rastrová a vektorová.
 V této kapitole jsou popsány základní principy připojení a exportu
 prostorových
 dat v prgramu QGIS. Práce s konkrétními formáty budou potom uvedeny v
