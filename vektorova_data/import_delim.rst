@@ -34,7 +34,7 @@ do textového souboru s oddělenýmí hodnotami, tyto soubory lze potom
 prohlížet jak pomocí tabulkových procesorů tak i textových editorů.
 
 
-Existují dva způsoby jak mohou být prostorová data v souboru s oddělenými
+Existují dva způsoby jak mohou být geodata v souboru s oddělenými
 hodnotami uložena:
 
     - jako x,y souřadnice bodů v oddělených slopcích (tzv. XY data)
