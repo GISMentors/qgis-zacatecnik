@@ -5,8 +5,8 @@
 .. |mIconConnect| image:: ../images/icon/mIconConnect.png
    :width: 1.5em
 
-Vektorová síťová data
-=====================
+Webové služby poskytující vektorová data
+========================================
 
 Připojení WFS služby
 --------------------

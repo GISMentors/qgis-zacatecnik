@@ -1,10 +1,10 @@
-**********************
-Práce se síťovými daty
-**********************
+*****************************
+Práce s webovými službami OGC
+*****************************
 
-Pod pojmem síťová data jsou reprezentovány především data přístupná
-z internetu jako WMS a WFS. Mnohé společnosti používají k ukládání
-dat serverové řešení, které není přístupné z internetu, a tak
+Pod pojmem webové služby OGC jsou reprezentovány především data
+přístupná z internetu jako WMS a WFS. Mnohé společnosti používají k
+ukládání dat serverové řešení, které není přístupné z internetu, a tak
 připojení k databázi PostGIS můžeme provést i z lokální sítě.
 
 .. tip:: Data nahraná z WMS a WFS sereverů lze exportovat do vybraných formátu.

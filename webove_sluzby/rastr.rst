@@ -6,16 +6,16 @@
    :width: 1.5em
    
    
-Rastrová síťová data
-====================
+Webové služby poskytující rastrová data
+=======================================
 
-Existuje více variant síťových rastrových služeb. Nejrozšířenější
-službou je WMS. Rychlejší, ale méně používanou alternativou k WMS je 
-WMTS, kde \"T\" v názvu znamená \"Tile\", tedy dlaždice. WMTS přistupuje k 
-již předgenerovaným dlaždicím, tudíž tolik nezatěžuje server a data se ke 
-klientovi dostanou rychleji. Rastrová data je možné ukládat a následně je 
-zobrazovat přímo v databázích. QGIS poskytuje možnosti jak pracovat s daty z 
-databází PostGIS nebo Oracle.
+Existuje více variant. Nejrozšířenější službou je WMS. Rychlejší, ale
+méně používanou alternativou k WMS je WMTS, kde \"T\" v názvu znamená
+\"Tile\", tedy dlaždice. WMTS přistupuje k již předgenerovaným
+dlaždicím, tudíž tolik nezatěžuje server a data se ke klientovi
+dostanou rychleji. Rastrová data je možné ukládat a následně je
+zobrazovat přímo v databázích. QGIS poskytuje možnosti jak pracovat s
+daty z databází PostGIS nebo Oracle.
 
 Připojení WMS služby
 --------------------
