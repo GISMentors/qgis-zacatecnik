@@ -51,18 +51,17 @@
 .. |mActionIdentify| image:: ../images/icon/mActionIdentify.png
     :width: 1.5em
 
-
-
     
 Popis rozhraní
 --------------
-Po zpuštění systému QGIS se zobrazí standardní rozhraní. 
+
+Po spuštění systému QGIS se zobrazí standardní rozhraní. 
 Na obrázku níže jsou označeny základní části systému.
 
-.. tip::  Vzhled systému QGIS je možné jednoduše měnit dle potřeb. Zobrazování
-   jednotlivých nástrojů je možné upravit a přizpůsobit si tak pracovní 
-   prostředí. Pokud budete rozšiřovat funkčnost systému, tak je dobré si 
-   vhodně umístit nové nástroje.
+.. tip:: Vzhled systému QGIS je možné jednoduše měnit dle
+   potřeb. Zobrazování jednotlivých nástrojů je možné upravit a
+   přizpůsobit si tak pracovní prostředí. Pokud budete rozšiřovat
+   funkčnost systému, tak je dobré si vhodně umístit nové nástroje.
 
 .. figure:: images/menu_description.png
    :class: large
@@ -72,26 +71,31 @@ Na obrázku níže jsou označeny základní části systému.
    
 Mapové okno (1)
 ===============
+
 V tomto okně se vykreslují všechny mapové vrstvy.
 
 Přepínač vrstev / Panel prohlížeče (2)
 ======================================
-Přepínač vrstev zobrazuje všechny přidané vrstvy. Jejich zobrazení poskytuje
-rychlou  informaci o jejich pozici a grafickém zobrazení v mapovém okně.
-Kliknutím pravého tlačítka na vybranou vrstvu se vyvolá kontextové menu k dané
-vrstvě. V tomto menu je možné najít vše od stylování vrstvy až po exportdat.
 
-Panel prohlížeče slouží k zjedodušení přístupu ke geodatám. Umožňuje
+Přepínač vrstev zobrazuje všechny přidané vrstvy. Jejich zobrazení
+poskytuje rychlou informaci o jejich pozici a grafickém zobrazení v
+mapovém okně.  Kliknutím pravého tlačítka na vybranou vrstvu se vyvolá
+kontextové menu k dané vrstvě. V tomto menu je možné najít vše od
+stylování vrstvy až po export dat.
+
+Panel prohlížeče slouží k zjednodušení přístupu ke geodatům. Umožňuje
 přistupovat k různým typům dat, např. vektorovým, rastrovým, databázím,
 službám.
 
 
 Postranní menu (3)
 ==================
+
 Menu s nástroji pro přidávání vrstev, nebo vytváření nových.  
 
 Stavový řádek (4)
 =================
+
 Obsahuje základní informace o nastavení mapového okna. 
 Jednotlivé části jsou posány níže.
 
@@ -103,6 +107,7 @@ Jednotlivé části jsou posány níže.
 
 Souřadnice
 ^^^^^^^^^^ 
+
 První část stavového řádku slouží pro orientaci v mapovém okně. Zde se
 zobrazuje buď aktuální souřadnice ukazatele myši v mapovém okně, nebo tzv.
 extent (rozsah území aktuálně zobrazeného v mapovém okně). Ukázka obou možností
@@ -116,6 +121,7 @@ slouží ikona |extents| :sup:`Přepnout rozšíření a zobrazení pozice myši
   
 Měřítko
 ^^^^^^^   
+
 Další funkcí je měřítko. Tato funkce zobrazuje aktuální měřítko mapového okna.
 Umožňuje také překreslení mapového okna do jiného měřítka pomocí výběru z
 předdefinovaného seznamu měřítek.
@@ -128,16 +134,18 @@ předdefinovaného seznamu měřítek.
 
 .. tip:: Seznam předdefinovaných měřítek je možné upravit. V menu 
    :menuselection:`Nastavení --> Možnosti...` záložka :item:`Nástroje mapy` je
-   část Předdefinovaná měřítka. Nové měřítko je možné přidat pomocí ikonky 
+   část :item:`Předdefinovaná měřítka`. Nové měřítko je možné přidat pomocí ikonky 
    |addscale| :sup:`Přidat předdefinované měřítko` a nebo odstránit pomocí
    |removescale| :sup:`Odstranit vybrané`. 
 
          .. figure:: images/predefined_scales.png
- 
+            :class: middle
+            
             Menu pro upravení předdefinovaných měřítek.
 
 Překreslování mapového okna
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^           
+
 Vykreslování v mapovém okně je možné nastavit různým způsobem. Standardně se
 kresba v mapovém okně překresluje při následujících akcích:
     * přidání nové vrstvy
@@ -153,32 +161,34 @@ překreslovat. Pro takovéto nastavení je v stavovém menu položka s checkboxe
 :item:`Vykreslování`.
 
 .. tip:: Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné 
-   udělat stisknutím klávesy :item:`Esc`.
+   provést stisknutím klávesy :item:`Esc`.
 
 Souřadnicový systém
 ^^^^^^^^^^^^^^^^^^^        
+
 Mezi nejdůležitější nastavení patří nastavení souřadnicového systému mapového
 okna. Aktuální EPSG kód souřadnicového systému je vidět přímo ve stavovém řádku
 vedle ikony |geographic|.
 
+.. tip:: Souřadnicové systémy je možné vybírat podle EPSG kódu. Po
+   instalaci je defaultně nastaven souřadnicový systém WGS 84
+   (:epsg:`4326`). Pro potřeby zpracování geodat na území ČR se však
+   většinou používá souřadnicový systém :epsg:`5514`
+   (S-JTSK). Nastavení přes stavový řádek je však platné jenom pro
+   aktuální projekt. Po opětovném spuštění se systém spustí v
+   defaultním souřadnicovém systému. Jak nastavit defaultní
+   souřadnicový systém je popsáno v kapitole :ref:`sour-system`.
 
-.. tip:: Souřadnicové systémy je možné vybírat podle EPSG kódu. Po instalaci je
-   defaultně nastaven souřadnicový systém WGS 84. Pro potřeby zpracování geodat 
-   na území ČR se však většinou používá souřadnicový systém s EPSG kódem 5514
-   (S-JTSK). Nastavení přes stavový řádek je však platné jenom pro aktuální
-   projekt. Po opětovném spuštění se systém spustí v defaultním souřadnicovém
-   systému. Jak nastavit defaultní souřadnicový systém je popsáno v
-   :ref:`nastavení souřadnicového systému <sour-system>`.
-
-.. noteadvanced:: V případě, že uživatel potřebuje zjistit detaily o jakékoli 
-   aktivitě systému, tak je možné prohlídnout si všechny informace. Záložku s 
-   jednotlivými logovacími zprávami je možné otevřít pomocí ikonky |log| 
-   :sup:`Zprávy`. Tyto zprávy jsou podstatné zejména v případě neočekávaného 
-   chování.
+.. noteadvanced:: Pokud potřebuje zjistit detaily o jakékoli aktivitě
+   systému, tak si nechte vypisovat tzv. logovací zprávy. Záložku s
+   jednotlivými logovacími zprávami je možné otevřít pomocí ikonky
+   |log| :sup:`Zprávy`. Tyto zprávy jsou podstatné zejména v případě
+   neočekávaného chování systému.
 
 Hlavní menu (5)
 ===============
-Hlavní menu pozůstává z dvou základních částí. První je standardní menu v liště
+
+Hlavní menu se skládá ze dvou základních částí. První je standardní menu v liště
 a druhou je nástrojová lišta.
 
 V menu se nachází zejména nástroje pro správu systému a jeho nastavení.
@@ -190,7 +200,7 @@ V menu se nachází zejména nástroje pro správu systému a jeho nastavení.
     
 Nástrojová lišta obsahuje základní nástroje pro práci s projektem a vrstvami.
 Vypínání a zapínání jednotlivých nástrojových lišt a oken lze provádět pravým
-kliknutím na panel a výběrem z nabídky
+kliknutím na panel a výběrem z nabídky.
 
 Základní nástroje pro pohyb v okně 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -207,15 +217,16 @@ Základní nástroje pro pohyb v okně
   přiblíží na všechny vrstvy v projektu
 - |mActionPan| :sup:`Posun mapy` - umožňí posun v mapovém okně tažením,
   tato funkce lze nahradit stisknutím kolečka myši a následným tažením
-        .. tip:: při posunu pomocí stiknutí kolečka myši můžeme mít
-           aktivní jinou funkci např výběr, vytváření nových prvků atd.
+        .. tip:: Při posunu pomocí stiknutí kolečka myši můžeme mít
+           aktivní jinou funkci, např. výběr, vytváření nových prvků atd.
 - |mActionRefresh| :sup:`Obnovit` - obnoví zobrazení všech nahraných dat
 
 Základní nástroje výběru
 ^^^^^^^^^^^^^^^^^^^^^^^^
+
 Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní
-prvky, se kterýmy hodláme dále pracovat. Takové to označení se nazývá
-:option:`Výběr`
+prvky, se kterými hodláme dále pracovat. Tato označení se nazývá
+:option:`Výběr`.
 
 - |mActionSelectRectangle| :sup:`Vybrat prvky oblastí nebo jednoklikem` -
   nejjednoduší tvorba výběru
@@ -235,16 +246,17 @@ prvky, se kterýmy hodláme dále pracovat. Takové to označení se nazývá
     - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
     - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
 
-
 Měření v mapovém okně
 ^^^^^^^^^^^^^^^^^^^^^
-.. warning:: Nástroje pro měření jsou závislé na souřadnicovém systému. V
-   případě nastavení souřadnicového systému v podobě zem. šířky a délky 
-   bude výsledek měření (délky a plochy) nesprávný. Pro tento účel je 
-   nutné mít správně nastavený mapový souřadnicový systém. Měření v 
-   mapovém okně také respektuje nastavení přichytávání (snapping).
 
-V mapovém okně lze použít pro měření následovné nástroje z hlavního menu.
+.. warning:: Nástroje pro měření jsou závislé na souřadnicovém
+   systému. V případě nastavení zeměpisného souřadnicového systému
+   bude výsledek měření (délky a plochy) uveden ve stupních. Pro tento
+   účel je nutné mít správně nastavený mapový souřadnicový
+   systém. Měření v mapovém okně také respektuje nastavení
+   přichytávání (tzv. snapping).
+
+V mapovém okně lze použít pro měření následující nástroje z hlavního menu.
 
 - |mActionMeasure| :sup:`Měřit linii` :kbd:`Ctrl+Shift+M`
 - |mActionMeasureArea| :sup:`Měřit plochu` :kbd:`Ctrl+Shift+J`
@@ -257,7 +269,6 @@ upravuje dle polohy kurzoru.  Definování prkvu kresbou lze ukončit pravým
 kliknutím. Nové měření lze začít pomocí tlačítka :item:`Nové`.
 
 .. figure:: images/measure_area.png
-   :class: small
    :scale-latex: 30
     
    Měření plochy - ukázka volby jednotek.
@@ -266,53 +277,52 @@ U měření délek se určuje délka jednotlivých segmentů mezi vrcholy, ale i
 všech délek.
 
 .. figure:: images/measure_line.png
-   :class: small
    :scale-latex: 30
     
-   Měření délky - délky segmentů a celková délka
-
+   Měření délky - délky segmentů a celková délka.
 
 .. tip:: Nastavení měření se nachází v menu :menuselection:`Nastavení -->
          Možnosti...` záložka :item:`Nástroje mapy` část :item:`Nástroj pro
-         měření`
+         měření`.
          
          .. figure:: images/measure_units.png
-    
-                     Nastavení měření - jednotky, symbologie, hodnoty
+            :class: middle
+               
+            Nastavení měření - jednotky, symbologie, hodnoty.
 
 Identifikace prvku
 ^^^^^^^^^^^^^^^^^^
+
 Nástroj pro identifikaci prvku slouží pro získání informací o interaktivně
 vybraném prvku v mapovém okně. Pro identifikaci je možné použít menu
 :menuselection:`Zobrazit --> Identifikovat prvky`, použít klávesovou zkratku 
 :kbd:`Ctrl+Shift+I` nebo ikonu |mActionIdentify| :sup:`Identifikovat prvky`. 
 
 Po vyvolaní nástroje pro identifikaci se kliknutím v mapě vyberou prvky, které
-cheme idetifikovat.
+chceme idetifikovat.
 
 .. figure:: images/feature_info.png
    :class: small
    :scale-latex: 30
     
-   Výsledek identifikace prvku
+   Výsledek identifikace prvku.
 
 
-Výsledky identifikace se zobrazují v pop-up okně ve formě strojové struktury.
-Pokud vybíráme prevky ve vícero vrstvách, tak první úrovní rozdělení je
-jméno vrstvy. Na další úrovni je atribut nastavený v menu vrstvy
-:menuselection:`Vlastnosti --> Zobrazení`. Nadalší úrovni se zobrazují 3 skupiny
-infromací:
+Výsledky identifikace se zobrazují v pop-up okně ve formě stromové
+struktury.  Pokud vybíráme prvky ve vícero vrstvách, tak první úrovní
+rozdělení je jméno vrstvy. Na další úrovni je atribut nastavený v menu
+vrstvy :menuselection:`Vlastnosti --> Zobrazení`. Na další úrovni se
+zobrazují 3 skupiny infromací:
 
 - Odvozené - informace, které nejsou mezi atributy, ale jsou určené při
-  identifikaci (plocha, obvod, délka, poloha - dle typu prvku)
+  identifikaci (plocha, obvod, délka, poloha - dle typu prvku),
 - Akce - interaktivní položky, které vyvolají akci  (menu vrstvy 
-  :menuselection:`Vlastnosti --> Akce`)
+  :menuselection:`Vlastnosti --> Akce`),
 - Vlastnosti - seznam atributů daného objektu (z atributové tabulky).
 
-Při vícero vrstvách v mapovém okně lze nastavit režim výběru (v spodní části
-okna) a formu zobrazování.
+Při vícero vrstvách lze v mapovém okně nastavit režim výběru (v spodní
+části okna) a formu zobrazování.
 
-Při pravém kliku na detail v tabulce  se vyvolá kontextové menu, které umožňuje
-různé možnosti od zoomování na vybraný prvek, kopírování hodnot,práci s výběrem
-až ponastavení dané vrstvy.
-
+Při pravém kliku na detail v tabulce se vyvolá kontextové menu, které
+umožňuje různé možnosti od zoomování na vybraný prvek, kopírování
+hodnot, práci s výběrem až po nastavení dané vrstvy.

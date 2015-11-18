@@ -76,4 +76,5 @@ Aktuální nastavení systému QGIS při práci je možné uložit. Takovéto
 nastavení se ukládá do tzv. projektu. Projekt systému QGIS je
 standardní soubor s příponou ``.qgs``. Uložení do projektu umožňuje
 opětovné načtení všech dat i s kompletním nastavením systému.
-                
+
+.. todo:: pridat ikonky ?
