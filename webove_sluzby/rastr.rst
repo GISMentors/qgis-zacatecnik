@@ -27,8 +27,8 @@ obav přistupovat k jakékoliv publikované službě. V QGISu je správa WMS a W
 vrstev umístěna do stejného okna. 
 
 Správce WMS a WMTS spustíme v záložce :menuselection:`Vrstva --> Přidat vrstvu 
---> Přidat vrstvu WMS`, ikonou |mActionAddWmsLayer| přidání vektorové vrstvy 
-nebo pomocí klávesové zkratky :kbd:`Ctrl+Shift+W`
+--> Přidat vrstvu WMS`, ikonou |mActionAddWmsLayer| 
+:sup:`Přidat vrstvu WMS/WMTS` nebo pomocí klávesové zkratky :kbd:`Ctrl+Shift+W`
 
 .. figure:: images/qgis_ogc_addwms_manager.png
 
