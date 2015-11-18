@@ -33,6 +33,7 @@ oddělené čárkou (:wikipedia:`CSV`) nebo tabulátorem (:wikipedia-en:`TSV
 do textového souboru s oddělenýmí hodnotami, tyto soubory lze potom
 prohlížet jak pomocí tabulkových procesorů tak i textových editorů.
 
+
 Existují dva způsoby jak mohou být prostorová data v souboru s oddělenými
 hodnotami uložena:
 
@@ -57,6 +58,11 @@ hodnotami uložena:
   čárkou. V takovém případě musí být hodnota vymezená uvozovkami. Pokud
   by zde uvozovky nebyly, znamenala by čárka oddělení nového sloupce.
 
+
+.. tip:: Pokud máme v tabulce souřadnice zapsané v takové formě,
+   že je nedokážeme importovat, můžeme pro úpravu použít jednoduché funkce 
+   tabulkového procesoru (LEFT, RIGHT, MID atd.)
+   
 Import dat
 ----------
 
@@ -112,7 +118,7 @@ vrstvu s odděleným textem`
           souřadnice ve tvaru DMS (degrees-minutes-seconds) - stupně,
           minuty, vteříny
 
-    - |radiobuttonon| :sup:`Well known text (WKT)`- souřadnice uložené
+    - |radiobuttonon| :sup:`Well known text (WKT)` - souřadnice uložené
       jako řetězec WKT (např. POINT(1.525622 51.20836))
 
         - :option:`Pole geometrie` |selectstring| - výběr sloupce, ve
@@ -136,9 +142,11 @@ vrstvu s odděleným textem`
 
 Po potvrzení importu stisknutím tlačítka :item:`Ok` se objeví okno,
 kde musíme definovat souřadnicový systém, ve kterém jsou importované
-souřadnice zapsány.
+souřadnice zapsány. Pokud chceme naimportovaná data uložit jako vrstvu, musíme 
+exportovat (:option:`Uložit jako...)
 
-.. tip:: Pokud máme v tabulce souřadnice zapsané v takové formě,
-   že je nedokážeme importovat, můžeme hodnoty upravit pomocí funkcí
-   tabulkového procesoru (LEFT, RIGHT atd.)
+.. figure:: images/xydata_vysledek.png
+    
+    Výsledná vrstva bodů
+
 
