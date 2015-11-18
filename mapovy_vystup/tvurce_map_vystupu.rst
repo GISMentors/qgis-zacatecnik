@@ -3,17 +3,14 @@ Tvůrce mapy (Map Composer)
 
 Systém QGIS dokáže pracovat s různými formáty a zobrazovat je v
 mapovém okně (viz :num:`#map-window`). Obsah mapového okna lze
-jednoduše vyexportovat do obrázku (:menuselection:`Projekt --> Uložit
-jako obrázek`). V případě, že je zapotřebí mapový výstup určený pro
-tisk, který zachová nastavení zobrazování vrstev, tak je nutné využít
-samostatný nástroj *Tvůrce mapy (Map Composer)*
-:menuselection:`Projekt --> Tvůrce mapy`. Důvodem je, že všechna
-nastavení (reference na vrstvy, stylování, popisky a další) se sice
-ukládají do *.qgs* projektu, ale ten je přenositelný pouze v rámci
-QGIS systému.
+jednoduše vyexportovat jako obrázku (:menuselection:`Projekt -->
+Uložit jako obrázek`). To však v řadě případů nemusí stačit, hlavně
+když vyžadujeme mapový výstup určený pro tisk.
 
-.. todo:: nerozumim posledni vete (ML), composer prejima nastaveni z
-          projektu anebo ne?
+Pro vytvoření mapového výstupu určeného pro tisk, který si zachová
+nastavení vrstev (stylování, popisky a další) z projektu, slouží
+samostatný nástroj *Tvůrce mapy (Map Composer)*. Tento nástroj je
+dostupný z menu :menuselection:`Projekt --> Tvůrce mapy`.
 
 .. _map-window:
           
