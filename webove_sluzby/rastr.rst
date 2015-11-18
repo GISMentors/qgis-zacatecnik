@@ -114,4 +114,4 @@ dvojitým kliknutím nebo přetažením z datového katalogu (prohlížeče).
 .. figure:: images/qgis_ogc_addwms_browser.png
    :scale: 90%
  
-   Záložka :item:`Sady dlaždic` při připojení na WMTS server
+   Práce s WMS/WMTS službami v okně prohlížeče
