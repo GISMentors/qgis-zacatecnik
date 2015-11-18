@@ -33,7 +33,7 @@ klávesové zkratky :kbd:`Ctrl+Shift+V`
    Dialogové okno přidání vektorové vrstvy
 
 Nejčastější volbou vkládání dat je soubor nebo adresář. Vložení
-jedné vrstvy je možné označením :item:`Typ zdroe` - |checkbox|
+jedné vrstvy je možné označením :item:`Typ zdroje` - |checkbox|
 :option:`soubor`. Kliknutím na tlačítko :item:`procházet` se otevře
 navigační okno s možností vybrat vektorová data. Po potvrzení se
 označená vrstva načte do mapového pole.
