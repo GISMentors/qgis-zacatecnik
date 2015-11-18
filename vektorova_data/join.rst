@@ -34,6 +34,11 @@ zejména pokud potřebujeme připojit získané tabulky s informacemi
 o prvcích ve vektorové vrstvě nebo pokud potřebujeme připojit data
 naměřená v terénu ke známým prvkům nebo např. naměřeným GPS bodům.
 
+Postup si ukážeme na připojení tabulky získané z databáze chráněných území 
+(drusop.nature.cz) k vektorové vrstvě velkoplošných zvláště chráněných území 
+(AOPK). Připojením získáme informaci pod jaké orgány ochrany přírody spadají 
+jednotlivá území.
+
 .. Pokud máme vektorovou vrstvu, můžeme k jejím prvkům připojit data z
    tabulek. Atributová tabulka vektorové vrstvy i připojovaná tabulka musí
    mít sloupec, ve kterém budou hodnoty, přes které se bude připojení
@@ -91,6 +96,12 @@ atributová tabulka)`
     :scale: 70%
 
     Zobrazení tabulkových dat v seznamu vrstev
+    
+.. figure:: images/join_atribut.png
+    
+   Atributové tabulky vektorové vrstvy (nahoře) a importované tabulky (dole). 
+   V tomto případě budeme připojovat pomocí atributů "kod" a "Kód", které jsou 
+   souhlasné.
 
 Jakmile máme přidána tabulková data otevřeme vlastnosti vektorové
 vrstvy, ke které chceme tabulku připojit a zvolíme záložku |join|
@@ -108,10 +119,10 @@ připojení.
 |
 
 - :item:`Připojit vrstvu` |selectstring| - vyberem vrstvu (.csv tabulku)
-- :item:`Připojit pole` |selectstring| - vyberem atribut (týká se tabulky
-  .csv), který chceme připojit
-- :item:`Cílové pole` |selectstring| - vybereme souhlasný atribut,
-  přes který se bude tabulka připojovat
+- :item:`Připojit pole` |selectstring| - vybereme atribut (týká se tabulky .csv)
+  , přes který chceme data připojit
+- :item:`Cílové pole` |selectstring| - vybereme souhlasný atribut (vektorové 
+  vrstvy ), ke kterému se bude tabulka připojovat
 - |checkbox| :item:`Kešovat připojenou vrstvu ve virtuální paměti` -
   pro rychlejší práci s daty
 - |checkbox| :item:`Choose which fields are joined` - zaškrtneme pokud
@@ -119,12 +130,18 @@ připojení.
 - |checkbox| :item:`Custom field name prefix` - zde můžeme zvolit vlastní
   předponu názvů připojených atributů (jejich sloupců)
 
-- po přidání se připojení objeví v seznamu, zavřeme vlastnsti a
- můžeme překontrolovat připojení zobrazením atributové tabulky vrstvy.
+- po přidání se připojení objeví v seznamu
 
     - pomocí tlačítka |symbologyEdit| lze připojení editovat
     - pomocí tlačítka |symbologyRemove| lze připojení ručit
 
+- zavřeme vlastnsti a můžeme překontrolovat připojení zobrazením 
+  atributové tabulky vrstvy. Připojené atributy se zobrazí na konci tabulky.
+  
+.. figure:: images/join_priklad.png
+    
+   Popis
+   
 - s takto připojenou tabulkou můžeme dále pracovat stejně jako by byla
   přímo ve vektorové vrstvě (např.měnit symbol, provádět dotazování
   a analýzy)
@@ -137,3 +154,5 @@ připojení.
       .csv se připojení zruší
     - pro trvalé uložení připojených dat do vektorové vrstvy lze použít
       funkci exportu vrstvy (:item:`Uložit jako...`)
+
+
