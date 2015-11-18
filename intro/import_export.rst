@@ -31,7 +31,7 @@ dialogové okno s nastavením importu dat.
 
     Menu přidávání vrstev
 
-.. noteadvanced:: Jak jde vidět na obrázku :num:`addlayer`, u většiny
+.. noteadvanced:: Jak jde vidět na obrázku :num:`addlayer`, u většiny 
    typů dat lze pro přidání využít klávesové zkratky.
 
 Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu
@@ -49,7 +49,7 @@ vybrat a přidat přetažením více souborů najednou. Pomocí datového
 katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 
     .. tip:: Pomocí přetažení lze přidat data také přímo ze správce
-    souborů v operačním systému.
+       souborů v operačním systému.
 
 .. _browser:
 
@@ -63,7 +63,7 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 Export dat
 ----------
 Pro export vrstvy nebo její částí se používá funkce
-:menuselection:`Uložit jako...`. Funkci můžeme spustit dvěma způsobi:
+:menuselection:`Uložit jako...`. Funkci můžeme spustit dvěma způsoby:
 
 V seznamu vrstev označíme vrstvu, kterou chceme exportovat. Spustíme
 funkci z hlavního menu :menuselection:`Vrstva --> Uložit jako...`
