@@ -8,18 +8,19 @@
    see: Linux; Instalace
 
 
-Instalace na GNU/Linux - Ubuntu
--------------------------------
+Instalace pod GNU/Linux - Ubuntu
+--------------------------------
 
 Instalace programů v systému Ubuntu je založená na tzv. balíčcích, které jsou k
 dispozici v repozitářích.
-Některé repozitáře můžou obsahovat starší verze systému QGIS, ptoro je nutné
+Některé repozitáře můžou obsahovat starší verze systému QGIS, proto je nutné
 dbát na způsob instalace. Instalace v Ubuntu je popsána ve dvou základních
-způsobech - instalace přes *terminál* a pomocí *Centra softvéru pro Ubuntu*.
+způsobech - instalace přes *Terminál* a pomocí *Centra softweru pro Ubuntu*.
 
 Terminál
 ========
-Instalace přes terminál, která je níže podrobně rozepsaná se skládá ze tří
+
+Instalace v terminálu, která je níže podrobně rozepsaná, se skládá ze tří
 základních částí. První krok přidá konkrétní repozitář pro získání systému QGIS.
 Druhý krok slouží k aktualizaci seznamu repozitářu a jejich obsahu. Třetí krok
 je samotná instalace programu.
@@ -38,3 +39,5 @@ Centrum softwaru pro Ubuntu
 
 Jedná se o jednoduchého grafického správce balíčků pro instalaci. Je dostupný z
 menu přes ikonu |aplikace_ikona|.
+
+.. todo:: opravit ikonku a pridat screenshot

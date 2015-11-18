@@ -4,8 +4,8 @@
    single: MS Windows
    see: MS Windows; Instalace
 
-MS Windows
-----------
+Instalace pod MS Windows
+------------------------
 
 Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 
@@ -17,41 +17,44 @@ Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 #. v rámci :ref:`OSGeo4W instalátoru <osgeo4w-instalator>`
 
    * *pro pokročilejší uživatele*
-   * komplexnější řešení umožňující instalaci dalšího softwaru distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
+   * komplexnější řešení umožňující instalaci dalšího softwaru
+     distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
 
-Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS <https://www.qgis.org/en/site/forusers/download.html>`_
+Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS
+<https://www.qgis.org/en/site/forusers/download.html>`_.
 
 .. figure:: images/qgis_windows_download.png
-	    
-   Nabídka instalací pro MS Windows
+   :class: large
+        
+   Nabídka instalací pro MS Windows.
 
 .. _samostatny-instalator:
 
 Samostatný instalátor
 =====================
 
-Pokud si uživatel zvolí samostatnou instalaci, tak je nutné aby si vybral již zmíněnou verzi. K dispozici je *dlouhodobá stabilní verze*, nebo *krátkodobá verze*. 
-Krátkodobé verze mají sloužit pro zveřejňování nových funkcionalit v kratších intervalech.
+Pokud si uživatel zvolí samostatnou instalaci, tak je nutné, aby si
+vybral již danou verzi. K dispozici je *dlouhodobá stabilní verze* (LTS),
+nebo *krátkodobá verze*.  Krátkodobé verze mají sloužit pro
+zveřejňování nových funkcionalit v kratších intervalech.
 
 .. tip::
-
-	Pro začínající uživatele je dobré začít nejnovější verzí - není potřeba instalovat dlouhodobou stabilní verzi.
+	Pro začínající uživatele je dobré začít nejnovější verzí -
+	není potřeba instalovat dlouhodobou stabilní verzi.
 
 Pak je nutné zvolit instalaci kompatibilní s vaším operačním systémem.
-Zda je váš systém 32 bit nebo 64 bit zjistíte otevřením složky \"Počítač\",
-klik pravým tlačítkem do složky, z nabídky vybrat vlastnosti. V novém okvě lze
-přečíst typ systému.
+Zda je váš systém 32 bitový nebo 64 bitový zjistíte otevřením složky
+\"Počítač\", klik pravým tlačítkem do složky, z nabídky vybrat
+vlastnosti. V novém okvě lze přečíst typ systému.
 
 .. figure:: images/install_pc.png
 
-   Složka \"Počítač\"
+   Složka \"Počítač\".
 
 
 .. figure:: images/install_pc_type.png
 	    
-   Typ operačního systému
-
-
+   Typ operačního systému.
 
 Proces instalace
 ^^^^^^^^^^^^^^^^
@@ -69,7 +72,7 @@ Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
 
 .. figure:: images/install_3.png
 
-   Adresář,kde se QGIS nainstaluje
+   Adresář, kde se QGIS nainstaluje.
 
 .. _nativni-instalator-data:
 
@@ -82,7 +85,8 @@ Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
    Dokončení instalace.
 
 
-Pok úspěšné instalaci se na pracovné ploše i v nabídce Start objeví položka QGIS 2.10.1, kterou je možné jednoduše spustit.
+Pok úspěšné instalaci se na pracovné ploše i v nabídce Start objeví
+položka QGIS 2.10.1, kterou je možné jednoduše spustit.
 
 .. index::
    single: OSGeo4W
@@ -93,9 +97,14 @@ Pok úspěšné instalaci se na pracovné ploše i v nabídce Start objeví polo
 OSGeo4W instalátor
 ==================
 
-Pokud si uživatel zvolí tento instalátor, tak se nejedná jenom o instalaci QGISu, ale i dalších součástí jako např. GRASS GIS, SAGA GIS a další. 
-Tento instalátor dovoluje také vybrat si dlouhodobou stabilní, nebo krátkodobou verzi QGISu.
-Instalátor je sestaven podobně jako ten pro samostatnou instalaci QGISu a není potřebné ho popisovat samostatně.
+Instalátor OSGeo4W je dostupný na adrese:
+https://trac.osgeo.org/osgeo4w/.
+
+Pokud si uživatel zvolí tento instalátor, tak se nejedná jenom o
+instalaci QGISu, ale i dalších součástí jako např. GRASS GIS, SAGA GIS
+a další.  I zde si můžete vybrat mezi dlouhodobou stabilní nebo
+krátkodobou verzi QGISu.  Instalátor funguje podobně jako ten pro
+samostatnou instalaci QGISu a není potřebné ho popisovat samostatně.
 
 
-.. note:: Tento způsob instalace není pro začátečníky potřebný.
+.. note:: Tento způsob instalace QGISu není pro začátečníky vhodný.
