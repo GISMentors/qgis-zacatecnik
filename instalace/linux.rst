@@ -33,7 +33,7 @@ je samotná instalace programu.
       sudo apt-get install qgis
 
 
-Centrum softvéru pro Ubuntu
+Centrum softwaru pro Ubuntu
 ===========================
 
 Jedná se o jednoduchého grafického správce balíčků pro instalaci. Je dostupný z
