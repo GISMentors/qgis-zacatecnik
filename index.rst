@@ -30,9 +30,9 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
 .. only:: latex
 
    .. figure:: images/intro_logo.png
-      :scale-latex: 80
+      :scale-latex: 90
 
-      Logo projektu QGIS
+      Logo projektu QGIS.
 
 Současným konceptem ve vývoji je pravidelné a intenzivní publikování nových verzí.
 Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
