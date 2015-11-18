@@ -122,11 +122,11 @@ Základní editace geometrie
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - |mActionCapturePoint|, |mActionCaptureLine|, |mActionCapturePolygon|
-:sup:`přidat prvek` - kliknutím vytvoříme prvek (bod), nebo lomové
-body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku
-kliknutím pravým tlačítkem a přidáme případné atributy. Při
-přidávání lomových bodů je možné se vrátit o krok zpět pomocí
-klávesy :kbd:`Backspace` nebo :kbd:`Del`.
+  :sup:`přidat prvek` - kliknutím vytvoříme prvek (bod), nebo lomové
+  body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku
+  kliknutím pravým tlačítkem a přidáme případné atributy. Při
+  přidávání lomových bodů je možné se vrátit o krok zpět pomocí
+  klávesy :kbd:`Backspace` nebo :kbd:`Del`.
 
 .. figure:: images/edit_polygon.png
 
