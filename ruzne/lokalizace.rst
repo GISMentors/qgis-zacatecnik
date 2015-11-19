@@ -1,28 +1,31 @@
 Lokalizace
 ----------
-V současné době je možné vybrat si ze skoro 30 jazykových variant programu.
-Jejich úrovně jsou různé.
+
+V současné době je možné vybrat si ze skoro 30 jazykových variant programu QGIS.
+Úrovně lokalizace jsou různé, čeština patří k těm kvalitnějším.
 
 .. noteadvanced::
                 
    Jednotlivé překlady je možno ovlivnit. Připojit se k překladatelům je možné
    na oficiálních `stránkách QGIS 
-   <https://qgis.org/en/site/getinvolved/translate.html>`_ .
+   <https://qgis.org/en/site/getinvolved/translate.html>`_.
                 
    .. figure:: images/translations.png
 
-               Popis systému pro tvorbu lokalizací
+               Popis systému pro tvorbu lokalizací.
                             
           
 .. _volba-lokalizace:
 
 Volba lokalizace
 ================
+
 QGIS se spustí v lokalizaci dle nastavení operačního systému.
 
 .. figure:: images/cs_lokalizace.png
-
-            Lokalizace QGIS v českém jazyce.
+   :class: large
+           
+   Lokalizace QGIS v českém jazyce.
 
 Lokalizaci je však možné nastavit z menu :menuselection:`Nastavení -->
 Možnosti...` záložka :item:`Lokalizace`
@@ -31,5 +34,5 @@ Možnosti...` záložka :item:`Lokalizace`
 
             Menu pro nastavení jazykové lokalizace.
           
-Aby se změna nastavení jazyka projevila, je nutné systém vypnout. Po opětovném 
-spuštění se změna lokalizace projeví. 
+Aby se změna nastavení jazyka projevila, je nutné systém QGIS vypnout. Po opětovném 
+spuštění se změna lokalizace již projeví. 
