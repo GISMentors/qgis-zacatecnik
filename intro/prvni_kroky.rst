@@ -77,4 +77,9 @@ nastavení se ukládá do tzv. projektu. Projekt systému QGIS je
 standardní soubor s příponou ``.qgs``. Uložení do projektu umožňuje
 opětovné načtení všech dat i s kompletním nastavením systému.
 
+.. noteadvanced:: QGIS projekt je ukládán jako ``.xml``soubor. Tento fakt
+   umožǔje jeho editaci i mimo samotného QGIS. Je však nutné znát jeho
+   strukturu.
+  
+
 .. todo:: pridat ikonky ?
