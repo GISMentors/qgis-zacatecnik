@@ -56,7 +56,7 @@ takové prvky, které mají buď atribut :option:`KAT` s hodnotou :option:`NP` n
 atribut :option:`KAT` s hodnotou :option:`OP`". Výraz, který potřebujeme vepsat 
 do dialogového okna:
     
-.. code-block:: bash
+.. code-block:: sql
 
     "KAT" = 'OP' or "KAT" = 'NP' 
     
