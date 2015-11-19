@@ -91,5 +91,10 @@ Orientace vůči světovým stranám (*Aspect*)
 Pro vytvoření mapy orientace svahu vůči světovým stranám použijeme režim
 :item:`Aspekt` a postupujeme obdobně jako při předchozích analýzách.
 
-.. todo:: chybi obrazek
+.. _rstaspekt:
+
+.. figure:: images/aspekt.png
+   :class: middle
+
+   Rastrová vrstva orientace svahu.
 

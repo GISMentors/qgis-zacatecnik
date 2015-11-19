@@ -2,13 +2,16 @@
 Práce s webovými službami OGC
 *****************************
 
-Pod pojmem webové služby OGC jsou reprezentovány především data
-přístupná z internetu jako WMS a WFS. Mnohé společnosti používají k
-ukládání dat serverové řešení, které není přístupné z internetu, a tak
-připojení k databázi PostGIS můžeme provést i z lokální sítě.
+Pod pojmem webové služby OGC si lze představit přístup k datům v rámci
+sítě Internet. Nejrozšířenějšími službami jsou :wikipedia:`WMS` (Web
+Map Service) a :wikipedia:`WFS` (Web Feature Service).
 
-.. tip:: Data nahraná z WMS a WFS sereverů lze exportovat do vybraných formátu.
-   Postup je stejný jako u lokálních rastrových a vektorových dat 
+.. note:: Mnohé společnosti používají k ukládání dat serverové řešení,
+          které není přístupné z internetu, ale pouze v rámci lokální sítě
+          (intranetu).
+
+.. tip:: Data nahraná z WMS a WFS služeb lze exportovat do vybraných formátu.
+   Postup je stejný jako u lokálních rastrových a vektorových dat.
 
 .. toctree::
    :maxdepth: 2
