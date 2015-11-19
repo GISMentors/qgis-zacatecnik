@@ -11,18 +11,30 @@
    :width: 1.5em
 .. |mActionRefresh| image:: ../images/icon/mActionRefresh.png
    :width: 1.5em
+.. |gps_importer| image:: ../images/icon/gps_importer.png
+   :width: 1.5em
+.. |create_gpx| image:: ../images/icon/create_gpx.png
+   :width: 1.5em  
+.. |import_gpx| image:: ../images/icon/import_gpx.png
+   :width: 1.5em  
+.. |inputtext| image:: ../images/icon/inputtext.png
+   :width: 1.5em
+.. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
+   :width: 1.5em
 
-.. todo:: nakonec přidat obrázek s výsledkem
+Import dat s oddělenými hodnotami a GPS dat
+===========================================
 
-Import dat s oddělenými hodnotami
-=================================
+Data s oddělenými hodnotami
+---------------------------
+
 Jestliže máme tabulková data obsahující geografické souřadnice,
 můžeme tato data poměrně snadno naimportovat a vytvořit z nich
 vektorovou vrstvu. Při importu pracujeme s daty s oddělenými hodnotami
 (:wikipedia-en:`DSV <delimiter-separated values>`).
 
 Tabulková data
---------------
+^^^^^^^^^^^^^^
 
 Data s oddělenými hodnotami jsou tabulková data uložená v textovém
 souboru. V takovém souboru jsou sloupce odděleny specifickým
@@ -64,7 +76,7 @@ hodnotami uložena:
    tabulkového procesoru (LEFT, RIGHT, MID atd.)
    
 Import dat
-----------
+^^^^^^^^^^
 
 Import se provadí pomocí funkce |mActionAddDelimitedTextLayer| :sup:`Přidat
 vrstvu s odděleným textem`
@@ -150,3 +162,60 @@ exportovat (:option:`Uložit jako...)
     Výsledná vrstva bodů
 
 
+GPS data
+--------
+K práci s GPS daty QGIS používá plugin :guilabel:`GPS Nástroje`, který by měl 
+být v základní instalici QGIS nainstalovaný a aktivní. V panelu nástrojů se 
+plugin zobrazí jako ikona |import_gpx| :sup:`GPS nástroje`. Pro ukládání GPS 
+dat je mnoho různých formátů. QGIS používá standardní výměnný formát GPX 
+(GPS eXchange format).
+
+.. _gps:
+
+.. figure:: images/gpstools.png
+    :scale: 60 %
+    
+    Okno pluginu GPS Nástroje
+
+Získání .gpx souboru z GPS přístroje
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. figure:: images/gpstools2.png
+    :scale: 60 %
+    
+    Získání GPX souboru z GPS přístroje pomocí pluginu GPS nástroje
+
+- pomocí pluginu |gps_importer| :sup:`GPS Nástroje`v záložce 
+  :guilabel:`Stáhnout z GPS`
+        
+   - :guilabel:`GPS zařízení` |selectstring| - typ našeho GPS přístroje
+   - :guilabel:`Port` |selectstring| - např. usb
+   - :guilabel:`Typ prvku` |selectstring| - prvky které cheme stáhnout z 
+     GPS
+   - :guilabel:`Název vrstvy` - jak se bude vrstva jmenovat
+   - :guilabel:`Výstupní soubor` - zadáme cestu a název 
+     souboru a to buď ručně nebo pomocí tlačítka :guilabel:`Uložit jako...`
+        
+- použitím externího software pro získání .gpx souboru
+        
+        - software od výrobce GPS
+        - volně dstupný software 
+..      - volně dstupný software `EasyGPS <http://www.easygps.com/>`_ 
+    
+Import .gpx souboru
+^^^^^^^^^^^^^^^^^^^
+- použitím pluginu |gps_importer| :sup:`GPS Nástroje` 
+
+    - po otevření pluginu (obr: :ref:`gps`) zadáme cestu a název souboru 
+      a to buď ručně nebo pomocí   tlačítka :guilabel:`Procházet`
+    - potvrdíme tlačítkem :guilabel:`OK` a vybereme data, která chceme vložit
+   
+- stejně jako přidání vektorových dat |mActionAddOgrLayer| :sup:`přidání 
+  vektorové vrstvy` nebo přetažením s prohlížeče souborů - v tomto případě 
+  data nelze editovat!
+      
+Vytvoření .gpx souboru
+^^^^^^^^^^^^^^^^^^^^^^
+    
+- pomocí tlačítka |create_gpx| :sup:`Vytvořit novou vrstvu GPX`
+- export bodové nebo liniové vrstvy pomocí :guilabel:`Uložit jako...` s 
+  výběrem formátu .gpx
