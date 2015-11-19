@@ -15,17 +15,18 @@ Při tvorbě mapy orientace vůči světovým stranám je lepší reklasifikovat
 využití tzv. rastrového kalkulátoru, konkrétně |mActionShowRasterCalculator|
 :sup:`Raster kalkulátor`.
 
-Rastrový kalkulátor souvisí s mapovou algebrou. Jedná se o matematické operace s
-rastrovými mapami, které jsou jako matice čísel s prostorovým umístěním. Pomocí
-mapové algebry je možné matematickými, ale i jinými operacemi kombinovat více
-rastrových vrstev a vytvářet tak nové vrstvy.
+Rastrový kalkulátor souvisí s mapovou algebrou. Jedná se o matematické
+operace s rastrovými mapami, které jsou reprezentovány jako matice
+čísel s prostorovým umístěním. Pomocí mapové algebry je možné
+matematickými, ale i jinými operacemi kombinovat více rastrových
+vrstev a vytvářet tak nové vrstvy.
 
 .. _rstcalculator:
 
 .. figure:: images/rstcalculator.png
-   :scale: 60%
-
-   Princip mapové algebry
+   :class: small
+        
+   Princip mapové algebry.
 
 Pokud jsme mapu orientací nazvali :map:`aspect`, výraz bude vypadat následovně:
 :code:`(("aspect@1"  >= 315)  AND  ("aspect@1" < 45)) * 1 + (("aspect@1"  
@@ -37,20 +38,22 @@ Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:num:`#nesw`
 .. _nesw:
 
 .. figure:: images/nesw.png
-   :class: middle
+   :class: large
 
-   Reklasfikace orientace svahů vůči světovým stranám pomocí mapového kalkulátoru
+   Reklasfikace orientace svahů vůči světovým stranám pomocí mapového kalkulátoru.
 
 .. _aspectrecl:
 
 .. figure:: images/aspect_recl.png
    :class: middle
 
-   Reklasifikovaná mapa orientací svahů vůči světovým stranám 
+   Reklasifikovaná mapa orientací svahů vůči světovým stranám. 
 
-.. note::
+.. noteadvanced::
 
-   Při reklasifikacích se obvykle používá modul GRASS-u :grasscmd:`r.reclass`.
-   Na to je však potřebné  nainstalovat zásuvný modul :item:`grass`, který není
-   dostupný v každé verzi *QGIS*. Cílem bylo ukázat, že reklasifikace je možná
-   i bez pluginů. 
+   Při reklasifikacích se obvykle používá modul systému GRASS
+   :grasscmd:`r.reclass` (viz školení :skoleni:`GRASS GIS pro
+   začátečníky <grass-gis-zacatecnik>`).  Na to je však potřebné
+   nainstalovat zásuvný modul :item:`GRASS`, který není dostupný v
+   každé verzi *QGIS*. Cílem bylo ukázat, že reklasifikace je možná i
+   bez pluginů.

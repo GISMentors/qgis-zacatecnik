@@ -19,7 +19,7 @@ sklonu reliéfu nebo orientaci svahu vůči světovým stranám.
 
 .. figure:: images/menudem.png
 
-   Nástroje pro terénní analýzy dostupné z menu
+   Nástroje pro terénní analýzy dostupné z menu.
 
 .. note:: 
 
@@ -60,7 +60,7 @@ který byl popsaný výše nastavíme všeobecnou transparentnost rastrové vrst
 .. figure:: images/rst_hillshade.png
    :class: middle
 
-   Vytvoření prostorového efektu dat díky stínovanému reliéfu
+   Vytvoření prostorového efektu dat díky stínovanému reliéfu.
 
 .. note::
 
@@ -72,9 +72,9 @@ který byl popsaný výše nastavíme všeobecnou transparentnost rastrové vrst
 Sklon (*Slope*)
 ^^^^^^^^^^^^^^^
 
-Jedou z užitečných informací o terénu je i sklon, který představuje maximální
+Jednou z užitečných informací o terénu je i sklon, který představuje maximální
 změnu (gradient) výšky mezi sousedními buňky rastru. Rastrovou vrstvu sklonu
-vygenerujeme obdobně jako stínovaný reliéf, no použijeme režim :item:`Sklon`. Na
+vygenerujeme obdobně jako stínovaný reliéf, pouze použijeme režim :item:`Sklon`. Na
 :num:`#rstsklon` je znázorněný výsledek s barevnou paletou *BrBG*, přičemž je
 použité  rozdělení do 10 stejných intervalů.
 
@@ -83,12 +83,13 @@ použité  rozdělení do 10 stejných intervalů.
 .. figure:: images/rst_sklon.png
    :class: middle
 
-   Rastrová vrstva sklonu reliéfu
+   Rastrová vrstva sklonu reliéfu.
 
 Orientace vůči světovým stranám (*Aspect*)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Na vytvoření mapy orientace svahu vůči světovým stranám použijeme režim
+Pro vytvoření mapy orientace svahu vůči světovým stranám použijeme režim
 :item:`Aspekt` a postupujeme obdobně jako při předchozích analýzách.
 
+.. todo:: chybi obrazek
 
