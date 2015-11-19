@@ -40,7 +40,7 @@ nastavení zobrazených panelů.
    
 .. figure:: images/panels.png
  
-            Nastavení zobrazení a skrytí jednotlivých panelů.
+   Nastavení zobrazení a skrytí jednotlivých panelů.
 
  
 Obsah mapového okna
@@ -55,7 +55,7 @@ výřezu načte obsah mapového okna.
    :class: large
    :scale-latex: 80
  
-            Výřez s obsahem mapového okna a jeho detailní nastavení.
+   Výřez s obsahem mapového okna a jeho detailní nastavení.
        
 Velikost výřezu a jeho polohu lze měnit pomocí tahání za jeho hrany
 nebo uchopení za jeho obsah a posun.
@@ -89,7 +89,7 @@ okně :item:`Zobrazit rozsah v mapovém okně`.
    :class: small
    :scale-latex: 30
  
-            Nastavení měřítka a extentu pro mapové okno.
+   Nastavení měřítka a extentu pro mapové okno.
        
 Častou součástí mapového výřezu je i souřadnicová mřížka - grid s
 popisem souřadnic. Grid lze přidat a nastavit v položce
@@ -102,13 +102,13 @@ vykreslování.
 
 .. figure:: images/map_coordinates.png
 
-            Mapové okno s gridem a souřadnicemi.
+   Mapové okno s gridem a souřadnicemi.
        
 .. figure:: images/map_grids.png
    :class: small
    :scale-latex: 30
         
-            Nastavení gridu pro mapové okno.
+   Nastavení gridu pro mapové okno.
  
 Nastavení popisků gridu je umístěno v části :item:`Vykreslit
 souřadnice`. Lze nastavit formát vystupu, počet desetinných míst font
@@ -120,7 +120,7 @@ zda se zobrazuje, pozici vůči rámu, orientaci a řazení.
    :class: small
    :scale-latex: 30
  
-       Nastavení zobrazování popisových souřadnic gridu.
+   Nastavení zobrazování popisových souřadnic gridu.
 
 
 Titulek
@@ -161,10 +161,9 @@ změnit text i zařazení jednotlivých položek v rámci legendy samotné.
    Přidaná legenda a úprava jejich položek.
 
 
-.. tip:: Pokud upravujete legendu, tak se může stát, že se změnami
-         nebudete spokojeni. V případě, že nechcete změny v nastavení
-         provést ručně, můžete legendu vygenerovat z dat znova pomocí
-         tlačítka :item:`Aktualizovat vše`.
+.. tip:: Pokud upravujete legendu, tak se může stát, že se změnami nebudete 
+   spokojeni. V případě, že nechcete změny v nastavení provést ručně, můžete 
+   legendu vygenerovat z dat znova pomocí tlačítka :item:`Aktualizovat vše`.
 
 
 Atributová tabulka
@@ -206,26 +205,40 @@ tabulky do mapového výstupu.
 Směrová šipka (růžice)
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Do mapového výstupu lze přidat také směrovou šipku - pomocí ikony
-|add_arrow| :sup:`Přidat šipku`. Směrová šipka může být vykreslena 
-různou symbologii. Výběr symbologie a další nastavení jsou dostupné 
-v záložce :item:`Vlastnosti položky`. Lze zde ponechat defaultní styl 
-směrové šipky, kdy se vykresluje jednoduchá šipka. Je možné použít i
-složitější nastavení - například použít vlastní svg symboly pro
-začátek a konec šipky.
+Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony |add_arrow| 
+:sup:`Přidat šipku`. Směrová růžice může být vykreslena různou symbologii. 
+Výběr symbologie a další nastavení jsou dostupné v záložce :item:`Vlastnosti 
+položky`. Lze zde ponechat defaultní styl prvku, kdy se vykresluje jednoduchá 
+šipka. Je možné použít i složitější nastavení - například použít vlastní svg 
+symboly pro začátek a konec šipky.
 
 .. figure:: images/arrow.png
    :class: small
    :scale-latex: 30 
  
-       Detailní nastavení směrové šipky.
+   Detailní nastavení směrové šipky.
 
-.. todo:: zeptat se jak detailně popisovat výběra tvorbu symbologie.
+
+Měřítko
+^^^^^^^
+Běžnou součástí výstupu je také měřítko. To lze přidat pomocí ikony |add_scale|
+:sup:`Přidat nové grafické měřítko` a vložením prvku do výstupu. Výběr stylu a
+další nastavení je dostupné v záložce :item:`Vlastnosti položky` viz
+:num:`#legenda-nastaveni`. Nejdůležitější je výběr stylu legendy v položce :item:`Styl`. 
+Lze vybrat z grafických měřítek nebo zvolit číselné měřítko. Dále lze nastavit
+jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měřítka.
+
+.. _legenda-nastaveni:
+
+.. figure:: images/legenda_nastaveni.png
+   :class: small
+   :scale-latex: 30 
  
+   Detailní nastavení směrové šipky.
+
+
 Další prvky
 ^^^^^^^^^^^
 
-Jako součást mapového výstupu se běžně používají i další prvky.
-
-Měřítko je možné přidat pomocí ikony |add_scale| :sup:`Přidat nové 
-grafické měřítko` nebo obrázek |add_image| :sup:`Přidat obrázek`.
+Jako součást mapového výstupu se dá použít i například obrázek. Lze jej přidat 
+pomocí ikony  |add_image| :sup:`Přidat obrázek`.
