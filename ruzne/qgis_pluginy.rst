@@ -48,16 +48,13 @@
    :width: 1.5em
 
 
-
-
-
 QGIS pluginy
 ------------
 
-QGIS umožňuje práci se zásuvnými moduly, tzv. :wikipedia:`plugin
-<https://en.wikipedia.org/wiki/Plug-in_(computing)>` -mi. Ve všeobecnosti se
-jedná o softvéry, které nepracují samostatně, ale jako doplňkové moduly jiné
-aplikace a tím rozšiřujú její funkčnost. V současnosti existuje pro QGIS víc než
+QGIS umožňuje práci se zásuvnými moduly, tzv. :wikipedia:`pluginy
+<https://en.wikipedia.org/wiki/Plug-in_(computing)>`. Ve všeobecnosti se
+jedná o software, které nepracuje samostatně, ale jako doplňkový modul jiné
+aplikace a tím rozšiřuje její funkčnost. V současnosti existuje pro QGIS víc než
 300 zásuvných modulů. Všechny jsou napsané v programovacím jazyku `Python 
 <https://www.python.org/>`_ nebo `C++ <https://isocpp.org/>`_. Mnohé z nich jsou
 stále ve vývoji. Jejich kompletní seznam spolu s příslušnou charakteristikou,
@@ -66,11 +63,12 @@ stránce, autorech, o počtu stáhnutí, o tom, které jsou označené jako
 nejoblíbenější je dostupný `zde <https://plugins.qgis.org/plugins/>`_.
     
 
-Moduly jsou udržované vývojovým týmem QGISu (`QGIS Development Team 
-<http://qgis-development-team.software.informer.com/>`_) a jsou automaticky
-součástí každé jeho distribuce. Všechny externí pluginy jsou napsané v
-programovacím jazce Python a jsou udržovány příslušnými autory. Chyby (angl.
-*bugy*) by měli být zveřejnovány  a dostupné na stránkách `projektu 
+Moduly jsou udržované vývojovým týmem QGISu (`QGIS Development Team
+<http://qgis-development-team.software.informer.com/>`_) a jsou
+automaticky součástí každé jeho distribuce. Externí pluginy jsou
+napsané v programovacím jazyce Python a jsou udržovány příslušnými
+autory. Chyby (angl.  *bugy*) v modulech by měli být zveřejnovány a
+dostupné na stránkách `projektu
 <http://hub.qgis.org/projects/qgis-user-plugins>`_.
 
 
@@ -79,7 +77,7 @@ programovacím jazce Python a jsou udržovány příslušnými autory. Chyby (an
 Správce zásuvných modulů
 ========================
 
-V prvník kroku v menu zvolíme :menuselection:`Zásuvné moduly --> Spravovat a instalovat
+V prvním kroku v menu zvolíme :menuselection:`Zásuvné moduly --> Spravovat a instalovat
 zásuvné moduly` (|plug1| :sup:`Spravovat a instalovat zásuvné moduly`).
 Spustí se dialogové okno (:num:`#vse`), které slouží na prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
@@ -87,28 +85,26 @@ zapínání  dostupných modulů příslušné verze QGISu.
 .. _vse:
 
 .. figure:: images/p_vse.png
-   :scale: 55%
 
-   Správce zásuvných modulů v prostředí QGIS
+   Správce zásuvných modulů v prostředí QGIS.
 
-Pod položkou |plugin-installed| :sup:`Instalované` najdeme ty, které byli
+Pod položkou |plugin-installed| :sup:`Instalované` najdeme ty, které byly
 nainstalované automaticky při instalaci QGISu. Z nich jsou některé načtené, jiné
 lze dočasně povolit nebo zakázat zaškrtnutím ikonky |checkbox_unchecked|.
 V případě, že klikneme na některý z modulů, zobrazí se jeho charakteristika nebo
 účel, spolu s dalšími informacemi jako je název, popis, počet hodnocení a
-stáhnutí modulu,reprezentující ikona, kategorie, instalovaná nebo dostupná
+stáhnutí modulu, reprezentující ikona, kategorie, instalovaná nebo dostupná
 verze, autor, seznam změn a další. Na :num:`plugininfo`  je znázorněný příklad
 zásuvného modulu s názvem |q2t| :sup:`Qgis2threejs`.
 
 .. _plugininfo:
 
 .. figure:: images/p_info.png
-   :scale: 55%
 
    Charakteristika zásuvného modulu na prohlížení 3D objektů ve webovém
    prohlížeči.
 
-Seznam všech dostupných pluginů možno zobrazit a konkrétní modul načíst zvolením
+Seznam všech dostupných pluginů je možno zobrazit a konkrétní modul načíst zvolením
 |plugin| :sup:`Nenainstalováno` a spuštěním :item:`Instalovat zásuvný modul`.
 Následně se dá tento modul přeinstalovat nebo úplně odinstalovat 
 (:num:`#p-instal`).  
@@ -117,11 +113,11 @@ Následně se dá tento modul přeinstalovat nebo úplně odinstalovat
 .. _p-instal:
 
 .. figure:: images/p_instal.png
-   :scale: 55%
-
+   :class: middle
+        
    Seznam nenainstalovaných modulů :fignote:`(1)`, instalace :fignote:`(2)`,
    možnost odinstalování :fignote:`(3)` nebo přeinstalování :fignote:`(4)`
-   kteréhokoli z modulů
+   kteréhokoli z modulů.
 
 Pod záložkou |plugin-upgrade| :sup:`Aktualizovatelný` se nachází zásuvné moduly,
 které jsou dostupné i v novější verzi. Záložka |mActionTransformSettings| 
@@ -132,16 +128,15 @@ Po zaškrtnutí políček |checkbox_unchecked|  při položkách :item:`Zobrazit
 experimentální` a :item:`neschválené moduly` je k dispozici téměř 500 zásuvných
 modulů.
 
-
 .. _akt-nast:
 
 .. figure:: images/p_akt_nast.png
-   :scale: 55%
-
-   Záložky svisející s aktualizacemi a nastavením zásuvných modulov
+   :class: middle
+   
+   Záložky svisející s aktualizacemi a nastavením zásuvných modulů.
 
 .. tip:: Seznam zásuvních modulů může uživatel uspořádat dle svých potřeb.
-   Po stisknutí pravého tlačítka myši v seznamu modulů jek dispozici jejich
+   Po stisknutí pravého tlačítka myši v seznamu modulů je k dispozici jejich
    uspořádání dle abecedy, počtu stáhnutí, hlasů nebo stavu (:num:`#rad`).
 
     .. _rad:
@@ -149,10 +144,10 @@ modulů.
     .. figure:: images/p_rad.png
        :scale: 55%
 
-       Možnosti seřazení zásuvných modulů
+       Možnosti seřazení zásuvných modulů.
 
 .. note:: Je zapotřebí připomenout, že zásuvné moduly v oficiálních repozitářech
-   byli testovány, no jednotlivé repozitáře mohou obsahovat i méně ověřené
+   byly testovány, nicméně jednotlivé repozitáře mohou obsahovat i méně ověřené
    moduly různé kvality a stádia vývoje. Proto je dobrou pomůckou zobrazení
    hodnocení či počtu  |star| |star| |star|.  
 
@@ -182,7 +177,7 @@ zásuvních modulů programu QGIS:
 +------------------------------------------------+-------------------------------------------------+
 | |2| :sup:`Získání souřadnic`     		 | získáva souřadnice myši                         |
 +------------------------------------------------+-------------------------------------------------+
-| |3| :sup:`Zásuvný modul silničního grafu` 	 | řeší problém nejkratší cesty                    |
+| |3| :sup:`Zásuvný modul síťových analýz` 	 | řeší problém nejkratší cesty                    |
 +------------------------------------------------+-------------------------------------------------+
 | |4| :sup:`Zásuvný modul prostorových dotazů`   | tvorba prostorových dotazů			   |
 +------------------------------------------------+-------------------------------------------------+
@@ -206,14 +201,15 @@ V případě, že máme k dispozici soubor AutoCAD DXF (`Drawing Exchange Format
 umíme načíst díky zásuvnému modulu *Konvertor Dxf2Shp*. Již z názvu vyplývá, že
 soubor je převeden do formátu *Shapefile*.
 
-Po načítaní modulu pomocou :ref:`správcu zásuvných modulov <spravca-plugin>`
-sa po kliknutí na ikonu |1| objaví dialógové okno, kde je potrebné nastaviť
-vstupný ``*.dxf`` súbor, názov, cestu a typ nového ``*.shp`` súboru, 
-viď. :num:`#dxf2shp`. Povolenie |checkbox| :sup:`Exportovat textové značky`
-vytvorí extra bodovú vrstvu s označeniami a príslušná ``*.dbf`` tabuľka bude
-obsahovať "textové" informácie zo súboru ``*.dxf``. 
+Po načítení modulu ze :ref:`správce zásuvných modulů <spravca-plugin>`
+se po kliknutí na ikonu |1| objeví dialogové okno, kde je zapotřebí
+nastavit vstupní ``*.dxf`` soubor, název, cestu a typ nového ``*.shp``
+souboru, viz. :num:`#dxf2shp`. Volba |checkbox| :sup:`Exportovat
+textové značky` vytvoří navíc bodovou vrstvu s označeními a příslušná
+``*.dbf`` tabulka bude obsahovat "textové" informace ze souboru
+``*.dxf``.
 
-.. note:: Když se po spuštění modulu tlačítkem :item:`OK` zobrazí dialogové
+.. note:: Pokud se po spuštění modulu tlačítkem :item:`OK` zobrazí dialogové
    okno související se souřadnicovými systémy, systém nastavíme.
 
 .. _dxf2shp:
@@ -221,32 +217,32 @@ obsahovať "textové" informácie zo súboru ``*.dxf``.
 .. figure:: images/p_dxf2shp.png
    :scale: 70%
 
-   Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile
+   Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile.
 
 |2| :sup:`Získání souřadnic`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Tento zásuvný modul se používá velmi jednoduše a umožňuje zobrazení souřadnic
-myši pro dva vybrané souřadnicové systémy. Dialogové okno je na :num:`#zis-sur`.
-Kliknutím na ikonu |geographic| nastavíme požadovaný souřadnicový systém,
-zvolením |2| :sup:`Zapnout získávání` se symbol myši změní na |reticle|. Po
-kliknutí do mapového okna se objeví malá červená tečka. Její souřadnice v souř.
-systému projektu se zobrazí v okně vedle symbolu |askcor|. Na :num:`#zis-sur`
-jsou na ukázku zobrazené  souřadnice vybraného bodu v souřadnicových systémech
-S-JTSK (Greenwich) Krovak a S-JTSK (Greenwich) Krovak East North. Ikona
-|askcorcopy| umožňuje souřadnice kopírovat do schránky v podobě čtyř hodnot (pro
-:num:`#zis-sur`  by to bylo ``4494520.158,-2880372.147,
-4746310.700,2931421.671``). 
+Tento zásuvný modul se používá velmi jednoduše a umožňuje zobrazení
+souřadnic myši pro dva vybrané souřadnicové systémy. Dialogové okno je
+zobrazeno na :num:`#zis-sur`.  Kliknutím na ikonu |geographic|
+nastavíme požadovaný souřadnicový systém, zvolením |2| :sup:`Zapnout
+získávání` se symbol myši změní na |reticle|. Po kliknutí do mapového
+okna se objeví malá červená tečka. Její souřadnice v souřadnicovém  systému
+projektu se zobrazí v okně vedle symbolu |askcor|. Na :num:`#zis-sur`
+jsou na ukázku zobrazené souřadnice vybraného bodu v souřadnicových
+systémech S-JTSK (Greenwich) Krovak a S-JTSK (Greenwich) Krovak East
+North. Ikona |askcorcopy| umožňuje souřadnice kopírovat do schránky v
+podobě čtyř hodnot (pro :num:`#zis-sur` by to bylo
+``4494520.158,-2880372.147, 4746310.700,2931421.671``).
 
 .. _zis-sur:
 
 .. figure:: images/p_zis_sur.png
-   :scale: 55%
 
-   Dialogové okno modulu na zobrazení souřadnic z mapového okna
+   Dialogové okno modulu na zobrazení souřadnic z mapového okna.
 
-|3| :sup:`Zásuvný modul silničního grafu`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|3| :sup:`Zásuvný modul síťových analýz`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Ve vrstvě polylinií modul vypočte a následně vykreslí nejkratší cestu mezi dvěma
 zvolenými body. Je napsaný v programovacím jazyku C++. Umožňuje určit
@@ -256,7 +252,7 @@ exportován jako nová vektorová vrstva.
 .. note:: Při výpočtu nejkratší cesty se doporučuje nastavit souřadnicový systém
    projektu dle souřadnicového systému vrstvy polylínií. 
 
-Zásuvný modul cestného grafu aktivujeme v :ref:`panelu správce zásuvných modulů 
+Zásuvný modul aktivujeme v :ref:`panelu správce zásuvných modulů 
 <spravca-plugin>`. V liště menu přejdeme na :menuselection:`Vektor --> 
 Silniční graf --> Nastavení`. Zobrazí se okno, kde vyplníme základní nastavení
 jako jednotku času, vzdálenosti, topologickou toleranci a další, viz. 
@@ -266,16 +262,16 @@ republiky zobrazenou na :num:`path-vector` dle typu.
 .. _path-nast:
 
 .. figure:: images/p_path_nast.png
-   :scale: 55%
-
-   Nastavení zásuvného modulu cestného grafu
+   :class: small
+                    
+   Nastavení zásuvného modulu cestného grafu.
 
 .. _path-vector:
 
 .. figure:: images/p_path_vector.png
    :scale: 60%
 
-   Cesty České republiky zobrazené dle jejich typu.
+   Silnice České republiky zobrazené dle jejich typu.
 
 V panelu :item:`Nejkratší cesta` použijeme |2| a v mapovém okně kliknutím zvolíme
 počáteční a koncový bod cesty. Zobrazí se jako zelená, resp. červená tečka.
@@ -288,9 +284,9 @@ Postup je znázorněný na :num:`#path`.
 .. _path:
 
 .. figure:: images/p_path.png
-   :scale: 60%
-
-   Použití zásuvného modulu cestného grafu a výpočet nejoptimálnější cesty
+   :class: middle
+        
+   Použití zásuvného modulu síťových analýz a výpočet nejoptimálnější cesty.
 
 .. tip:: Pokud nevidíme panel :item:`Nejkratší cesta`, přidáme ho z menu lišty 
    :item:`Zobrazit` (:menuselection:`Zobrazit --> Panely --> Nejkratší cesta`),
@@ -299,12 +295,13 @@ Postup je znázorněný na :num:`#path`.
     .. _path-menu:
     
     .. figure:: images/p_path_menu.png
-       :scale: 55%
-
-       Zobrazení dialogového okna na výpočet nejkratší cesty
+       :class: small
+       
+       Zobrazení dialogového okna na výpočet nejkratší cesty.
 
 |4| :sup:`Zásuvný modul prostorových dotazů`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Pomocí tohoto zásuvného modulu lze vykonávat různé prostorové dotazy. Mezi dostupné
 prostorové  vztahy patří vztah dotyku, rozpojení, křížení, protínání nebo
 překryvu. Funkcionalita je založená na knihovně 
@@ -319,7 +316,7 @@ referenční vrstvy, prostorový vztah (operátor) a zvolíme zda se jedná o no
 výběr, nebo vybíráme z již existujícího výběru.
 
 Ukážeme si to na příkladě výběru všech obcí v České republice (:map:`obce`), ve
-kterých se nachází požární stanice (:map:`pozarni_stanice`).Použití je znázorněné
+kterých se nachází požární stanice (:map:`pozarni_stanice`). Použití je znázorněné
 na :num:`#p-pr-dot`. Po proběhnutí výběru zvolením :item:`Použít` se otevře
 další okno (na :num:`#p-pr-dot` vpravo). V tomto kroku můžeme tlačítkem 
 |mActionNewVectorLayer| vytvořit vektorovou vrstvu z výběru, |selectcreatelayer|
@@ -329,16 +326,15 @@ se dokážeme přibližovat k výsledným objektům, případně zapisovat zprá
 .. _p-pr-dot:
 
 .. figure:: images/p_pd_menu.png
-   :scale: 60%
-
-   Použití zásuvného modulu prostorových dotazů (prvek obsahuje ...)
+   :class: middle
+        
+   Použití zásuvného modulu prostorových dotazů (prvek obsahuje ...).
 
 .. _p-pr-vysl:
 
 .. figure:: images/p_pd_vysl.png
-   :scale: 70%
 
-   Obce České republiky s požární stanicí
+   Obce České republiky s požární stanicí.
 
 |5| :sup:`OpenLayers Plugin` 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -355,7 +351,7 @@ příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
 .. figure:: images/olp.png
    :scale: 70%
 
-   OpenLayers Plugin z lišty menu
+   OpenLayers Plugin z lišty menu.
 
 .. _p-olm:
 
@@ -365,4 +361,5 @@ příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
    Ukážka vrstev OpenStreetMap :fignote:`(1)`, OpenCycleMap :fignote:`(2)`, Bing
    Road :fignote:`(3)` a MapQuest-OSM :fignote:`(4)` pro vybranou část Prahy.
 
-.. note:: Další ze zmíněných modulů jsou (budou) obsahem Školení pro pokročilé.
+.. note:: Další ze zmíněných modulů budou obsahem školení QGIS pro
+          pokročilé a to především GRASS plugin.
