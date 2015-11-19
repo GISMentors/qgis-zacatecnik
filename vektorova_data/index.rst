@@ -23,7 +23,7 @@ doplňujícími informacemi je dostupný na `stránce projektu
    editace.rst
    import_delim.rst
    join.rst
-   atr_dotaz.rst
+   dotazovani.rst
    prostor.rst
 
 
