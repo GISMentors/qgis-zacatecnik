@@ -18,7 +18,9 @@ operační systémy. V současnosti jsou oficiálně podporovány
 :wikipedia:`MS Windows`, :wikipedia:`Mac OSX`, :wikipedia:`GNU/Linux`,
 `Android <https://cs.wikipedia.org/wiki/Android_(operační_systém)>`_
 (experimentální). V tomto dokumentu je detailně popsán postup instalace
-pro dvě nejrozšířenější platformy - *MS Windows* a *GNU/Linux*.
+pro dvě nejrozšířenější platformy - *MS Windows* a *GNU/Linux*. Kompletní
+návody pro instalaci na všech dostupních platformách jsou dostupné `zde <https://www.qgis.org/en/site/forusers/alldownloads.html>`_
+
 
 .. only:: html
           
