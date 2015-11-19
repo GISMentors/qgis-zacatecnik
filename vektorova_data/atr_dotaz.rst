@@ -8,12 +8,20 @@
    :width: 1.5em 
 .. |sub_selection| image:: ../images/icon/random_selection.png
    :width: 1.5em 
-   
+.. |selectstring| image:: ../images/icon/selectstring.png
+   :width: 1.5em
+.. |checkbox| image:: ../images/icon/checkbox.png
+   :width: 1.5em  
+
+
+
+Atributové a prostorové dotazování
+==================================
 
 .. _atrdotaz:
 
 Atributové dotazování
-=====================
+---------------------
 
 Atributové dotazování slouží k vytvoření výběru prvků z vektorové vrstvy 
 dle námi zadaných kritérií. 
@@ -70,11 +78,60 @@ do dialogového okna:
 .. figure:: images/select_exp_vzchu_status.png
     
     Výpis počtu vybraných prvků (v levé části stavového řádku)
+   
     
-.. noteadvanced:: Výběr lze vytvořit i na základě geometrie (prostorové 
-    dotazování) a to pomocí funkce |select_location|
-    :sup:`Vybrat podle umístění...`. Také můžeme pomocí funkcí 
-    |random_selection| :sup:`Náhodný výběr...`/|sub_selection| 
-    :sup:`Náhodný výběr v podmonožinách...` tvořit náhodné výběry z prvků. Tyto 
-    funkce najdeme v hlavním menu :menuselection:`Vektor --> Výzkumné nástroje`
+Prostorové dotazování
+---------------------
 
+Prostorové dotazování slouží k vytvoření výběru prvků na základě prostorového 
+vstahu dvou vektorových vrstev. Funkce, která toto umožňuje je 
+|select_location| :sup:`Vybrat podle umístění...` a vajde me ji v menu 
+:menuselection:`Vektor --> Výzkumné nástroje --> Vybrat podle umístění...`
+
+.. figure:: images/select_by_location.png
+    :scale: 90 %
+    
+    Okno :guilabel:`Vybrat podle umístění`
+
+
+- :guilabel:`Vybrat vrstvy v` |selectstring| - vyberem vrstvu, ve které chceme 
+  tvořit výběr 
+- :guilabel:`které protínají prvky v` |selectstring| - vyberem vrstvu, podle 
+  které se prvky budou vybírat
+- |checkbox| :guilabel:`Include input features that intersect the selection 
+  features` - vybere prvky, které se jakkoliv protínají
+- |checkbox| :guilabel:`Zahrnout vstupní prvky, které se dotýkají prvků 
+  výběru` - vybere prvky se společnou hranicí, nebo lomovým bodem
+- |checkbox| :guilabel:`Zahrnout vstupní prvky, které překrývají/protínají prvky 
+  výběru` - vybere pouze prvky, které se protínají jen z části
+- |checkbox| :guilabel:`Zahrnout vstupní prvky zcela uvnitř prvků 
+  výběru` - vybere pouze prvky, které se protínají celou rozhlohou (např. celý 
+  polygon uvnitř polygonu)
+- |checkbox| :guilabel:`Pouze vybrané prvky` - nový výběr se bude vytvářet nad 
+  aktuálním výběrem
+- možnosti výběru |selectstring| 
+        
+    - :guilabel:`vytvořením nového výběru` - zruší stávající výběr a vytvoří 
+      zcela nový
+    - :guilabel:`přidáním do aktuálního výběru` - k aktuálnímu výběru přidá 
+      nadefinovaný výběr
+    - :guilabel:`odstraněním z aktuálního výběru` - z aktuálního výběru odebere 
+      prvky, které nadefinujeme
+      
+Příklad prostorového dtazu (:num:`sellocpriklad`)- Zajímá nás, která maoplošná chráněná území leží 
+celou rozlohou ve velkoplošném chráněném území. Prostorový dotaz bude vypadat 
+takto: vyber prvky z vrstvy "maloplosna_uzemi", které jsou prvky zcela uvnitř 
+prvků ve vrstvě "velkoplosna_uzemi".
+
+.. _sellocpriklad:
+ 
+.. figure:: images/select_by_location_priklad.png
+    :scale: 90 %
+    
+    Výběr maloplošných chráněných území, které leží uvnitř velkoplošných 
+    chráněných územích
+
+.. noteadvanced:: Pomocí funkcí 
+   |random_selection| :sup:`Náhodný výběr...`/|sub_selection| :sup:`Náhodný 
+   výběr v podmonožinách...` můžeme tvořit náhodné výběry z prvků. Tyto 
+   funkce najdeme v hlavním menu :menuselection:`Vektor --> Výzkumné nástroje`
