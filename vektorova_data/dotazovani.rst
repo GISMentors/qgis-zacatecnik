@@ -27,7 +27,7 @@ Atributové dotazování slouží k vytvoření výběru prvků z vektorové vrs
 dle námi zadaných kritérií. 
 Funkce, která toto umožňuje je |mIconExpressionSelect| :sup:`Vabrat prvky pomocí 
 vzorce` a můžeme jí spustit buď z nástrojového panelu nebo z atributové tabulky 
-dané vrstvy. Dialogové okno vypdá obdobně jako okno kalkulátoru polí 
+dané vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí 
 |mActionCalculateField| a zadávání výrazu zde funguje na stejném principu. 
 Tedy v levé části okna (:item:`Výraz`) je prostor pro zadání požadovaného výrazu 
 a pravá část okna (:item:`Funkce`) slouží k rychlému přidání funkcí nebo 
@@ -35,8 +35,7 @@ parametrů do výrazu.
 
 .. figure:: images/select_exp.png
     
-    Okno atributového dotazování
-
+    Okno atributového dotazování.
 
 Po zadání našeho výrazu potvrdíme tlačítkem |mIconExpressionSelect|
 :item:`Vybrat` čímž se nám vytvoří požadovaný výběr. Z nabídky vedle tlačítka 
@@ -45,19 +44,19 @@ můžeme vybrat další možnosti práce s výběrem pomocí atributového dotaz
 .. figure:: images/select_exp_fun.png
     :scale: 100%
     
-    Další možnosti práce s výběrem pomocí atributového dotazu
+    Další možnosti práce s výběrem pomocí atributového dotazu.
 
 .. tip:: V levé části stavového řádku vidíme aktuální počet vybraných 
-    prvků (viz. :num:`expstatus`)
+    prvků (viz. :num:`expstatus`).
     
-Uvedeme si jednoduchý příklad atributového dotazu. Z vrstvy Velkoplošných 
-zvláště chráněných území, potřebujeme vybrat národní parky a jejich ochranná 
+Uvedeme si jednoduchý příklad atributového dotazu. Z vrstvy *Velkoplošných 
+zvláště chráněných území*, potřebujeme vybrat národní parky a jejich ochranná 
 pásma. Podmínkou samozřejmě je, že musíme mít takovou informaci o prvcích v 
 atributové tabulce.
 
 .. figure:: images/select_exp_vzchu_at.png
     
-    Informace o prvcích v atributové tabulce
+    Informace o prvcích v atributové tabulce.
     
 Formulace našeho dotazu by v mluveném slově vypadala přibližně takto: "Vyber 
 takové prvky, které mají buď atribut :option:`KAT` s hodnotou :option:`NP` nebo 
@@ -69,39 +68,41 @@ do dialogového okna:
     "KAT" = 'OP' or "KAT" = 'NP' 
     
 .. figure:: images/select_exp_vzchu.png
-    
-    Výsledek atributového dotazu ("KAT" = 'OP' or "KAT" = 'NP') ve vrstvě 
-    Velkoplošných zvláště chráněných území 
+   :class: middle
+                    
+   Výsledek atributového dotazu ("KAT" = 'OP' or "KAT" = 'NP') ve vrstvě 
+   Velkoplošných zvláště chráněných území .
     
 .. _expstatus:
     
 .. figure:: images/select_exp_vzchu_status.png
-    
-    Výpis počtu vybraných prvků (v levé části stavového řádku)
+   :class: middle
+                    
+   Výpis počtu vybraných prvků (v levé části stavového řádku).
    
     
 Prostorové dotazování
 ---------------------
 
 Prostorové dotazování slouží k vytvoření výběru prvků na základě prostorového 
-vstahu dvou vektorových vrstev. Funkce, která toto umožňuje je 
-|select_location| :sup:`Vybrat podle umístění...` a vajde me ji v menu 
+vztahu dvou vektorových vrstev. Funkce, která toto umožňuje je 
+|select_location| :sup:`Vybrat podle umístění...` a najdeme ji v menu 
 :menuselection:`Vektor --> Výzkumné nástroje --> Vybrat podle umístění...`
 
 .. figure:: images/select_by_location.png
     :scale: 90 %
     
-    Okno :guilabel:`Vybrat podle umístění`
+    Okno :guilabel:`Vybrat podle umístění`.
 
 
-- :guilabel:`Vybrat vrstvy v` |selectstring| - vyberem vrstvu, ve které chceme 
+- :guilabel:`Vybrat vrstvy v` |selectstring| - vybereme vrstvu, ve které chceme 
   tvořit výběr 
-- :guilabel:`které protínají prvky v` |selectstring| - vyberem vrstvu, podle 
+- :guilabel:`které protínají prvky v` |selectstring| - vybereme vrstvu, podle 
   které se prvky budou vybírat
 - |checkbox| :guilabel:`Include input features that intersect the selection 
   features` - vybere prvky, které se jakkoliv protínají
 - |checkbox| :guilabel:`Zahrnout vstupní prvky, které se dotýkají prvků 
-  výběru` - vybere prvky se společnou hranicí, nebo lomovým bodem
+  výběru` - vybere prvky se společnou hranicí nebo lomovým bodem
 - |checkbox| :guilabel:`Zahrnout vstupní prvky, které překrývají/protínají prvky 
   výběru` - vybere pouze prvky, které se protínají jen z části
 - |checkbox| :guilabel:`Zahrnout vstupní prvky zcela uvnitř prvků 
@@ -118,20 +119,20 @@ vstahu dvou vektorových vrstev. Funkce, která toto umožňuje je
     - :guilabel:`odstraněním z aktuálního výběru` - z aktuálního výběru odebere 
       prvky, které nadefinujeme
       
-Příklad prostorového dtazu (:num:`sellocpriklad`)- Zajímá nás, která maoplošná chráněná území leží 
-celou rozlohou ve velkoplošném chráněném území. Prostorový dotaz bude vypadat 
-takto: vyber prvky z vrstvy "maloplosna_uzemi", které jsou prvky zcela uvnitř 
-prvků ve vrstvě "velkoplosna_uzemi".
+Příklad prostorového dotazu (:num:`sellocpriklad`) - zajímá nás, která
+maloplošná chráněná území leží celou rozlohou ve velkoplošném chráněném
+území. Prostorový dotaz bude vypadat takto: vyber prvky z vrstvy
+:map:`maloplosna_uzemi`, které jsou prvky zcela uvnitř prvků ve vrstvě
+:map:`velkoplosna_uzemi`.
 
 .. _sellocpriklad:
  
 .. figure:: images/select_by_location_priklad.png
-    :scale: 90 %
     
-    Výběr maloplošných chráněných území, které leží uvnitř velkoplošných 
-    chráněných územích
+   Výběr maloplošných chráněných území, které leží uvnitř velkoplošných 
+   chráněných územích.
 
 .. noteadvanced:: Pomocí funkcí 
    |random_selection| :sup:`Náhodný výběr...`/|sub_selection| :sup:`Náhodný 
    výběr v podmonožinách...` můžeme tvořit náhodné výběry z prvků. Tyto 
-   funkce najdeme v hlavním menu :menuselection:`Vektor --> Výzkumné nástroje`
+   funkce najdeme v hlavním menu :menuselection:`Vektor --> Výzkumné nástroje`.
