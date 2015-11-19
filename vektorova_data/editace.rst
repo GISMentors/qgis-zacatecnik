@@ -53,27 +53,28 @@ Tvorba nových vrstev a jejich editace
 
 Vytvoření Shapefile vrstvy
 --------------------------
-Novou vrstvu lze vytovřit pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová
-Shapefile vrstva`, nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit
+
+Novou vrstvu lze vytvořit pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová
+Shapefile vrstva` nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit
 vrstvu --> Nová Shapefile vrstva`.
 
 .. figure:: images/new_layer.png
     :scale: 75%
 
-    Nová vektorová vrstva
-
+    Nová vektorová vrstva.
 
 Při vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový
-systém vrstvy a pokud je třeba přidáme nové atributy.
+systém vrstvy a pokud je třeba tak přidáme nové atributy.
 
-Vytváření nového atributu
+Vytváření nového atributu:
 
-- :item:`Název` - název atributu (max. 10 znaků)
+- :item:`Název` - název atributu (max. 10 znaků) - toto omezení
+  vychází z formátu Esri Shapefile, který je zde použit
 - :item:`Typ` |selectstring|
 
     - :option:`Text` (String) - formát buňek je text, nelze použít pro
       výpočty (max. 255 znaků)
-    - :option:`Celé číslo` (Intiger) - formát buňek je celé číslo,
+    - :option:`Celé číslo` (Integer) - formát buňek je celé číslo,
       tedy bez desetinných míst (max. 10 znaků)
     - :option:`Desetinné číslo` (Real) - formát buňek je desetinné
       číslo (max. 10 znaků)
@@ -89,7 +90,7 @@ připravené. Atributy lze odstranit označením a kliknutím na tlačítko
 |mActionDeleteAttribute| :item:`Odstranit atribut`. Automaticky je zde
 přidaný atribut "id", pokud ho nechceme, lze jej také vymazat.
 
-Pokud máme připraveno, potvrdíme tlačítkem :item:`OK`, v okně zvolíme
+Pokud máme vše nastaveno, potvrdíme tlačítkem :item:`OK`. V okně zvolíme
 název vrstvy a adresář, ve kterém se vrstva vytvoří a potvrdíme
 tlačítkem :item:`Uložit`. Vytvořená vrstva se automaticky nahraje
 do projektu.
@@ -102,12 +103,12 @@ Editaci vrstvy spustíme pomocí tlačítka |mActionToggleEditing|
 Přepnout editaci`. Spuštěním režimu editace se aktivují editační funkce
 v panelu a bude nám umožněno vytvářet nové prvky a jejich atributy,
 nebo editovat stávající. Vrstva, která je momentálně v režimu editace
-je v seznamu vrstev znázorěna s editační ikonkou |mActionToggleEditing|.
+je v seznamu vrstev znázorněna s editační ikonkou |mActionToggleEditing|.
 
 .. figure:: images/edit_layers_icon.png
     :scale: 90%
 
-    Znázornění režimu editace vrstvy v seznamu vrstev
+    Znázornění režimu editace vrstvy v seznamu vrstev.
 
 
 Režim editace ukončíme opět pomocí tlačítka |mActionToggleEditing|
@@ -117,7 +118,7 @@ editaci zapomeneme uložit změny, QGIS se nás  při ukončení editace
 zeptá, zda chceme provedené změny uložit či nikoliv.
 
 .. tip:: |mActionAllEdits| :sup:`Aktuální změny` - hromadné ovládání
-   změn a zapínání/vypínaní editací ve vrstvách
+   změn a zapínání/vypínaní editací ve vrstvách.
 
 Základní editace geometrie
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -133,14 +134,14 @@ Základní editace geometrie
 
     Vytváření nového prvku ve vrstvě polygonů. Pokud by v tomto momentě
     byla tvorba prvku pravým kliknutím ukončena, polygon by měl tři uzly
-    (tvar trojúhelníku)
+    (tvar trojúhelníku).
 
 - |mActionMoveFeature| :sup:`Přesunout prvek/prvky` - tažením přesuneme
-  jeden prvek, nebo více prvků ve výběru
+  jeden prvek nebo více prvků ve výběru
 
 .. figure:: images/edit_polygon_move.png
 
-    Přesun prvku tažením
+    Přesun prvku tažením.
 
 - |remove| :sup:`Vymazat vybrané` - smaže vybrané prvky
 
@@ -151,7 +152,7 @@ Základní editace geometrie
 
 .. figure:: images/edit_polygon_node.png
 
-    Přidání a přesunutí lomového bodu (uzlu, vertexu)
+    Přidání a přesunutí lomového bodu (uzlu, vertexu).
 
 - |mActionSplitFeatures| :sup:`Rozdělit objekt` - naklikáme "řez" přes
   místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem,
@@ -159,7 +160,7 @@ Základní editace geometrie
 
 .. figure:: images/edit_polygon_split.png
 
-    Rozdělení polygonu na dva
+    Rozdělení polygonu na dva.
 
 
 - |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí
@@ -168,10 +169,9 @@ Základní editace geometrie
   prvku. Vychozí hodnota atributů je :option:`NULL` tedy žádná hodnota.
 
 .. figure:: images/edit_polygon_merge.png
-
-    Sloučení sousedních polygonů
-
-
+   :class: middle
+        
+   Sloučení sousedních polygonů.
 
 - |mActionReshape| :sup:`Změnit tvar prvků` - obdobně jako při rozdělení
   nebo tvorbě nového prvku, lze naklikáním nového tvaru změnit tvar
@@ -183,15 +183,15 @@ Základní editace geometrie
 
 .. figure:: images/edit_polygon_resh.png
 
-    Změna tvaru polygonu - zmenšení
+    Změna tvaru polygonu - zmenšení.
 
 .. figure:: images/edit_polygon_resh2.png
 
-    Změna tvaru polygonu - zvětšení
+    Změna tvaru polygonu - zvětšení.
 
 .. figure:: images/edit_line_resh.png
 
-    Změna tvaru linie
+    Změna tvaru linie.
 
 Přichytávání (snapping)
 .......................
@@ -205,7 +205,7 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
 
 .. figure:: images/snapping.png
 
-    Základní okono možnosti přichytávání
+    Základní okono možnosti přichytávání.
 
 - :item:`Režim přichytávání...` |selectstring|
 
@@ -219,9 +219,9 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
 
     - :option:`Vypnuto` - přichytávání je neaktivní!
     - :option:`K lomovému bodu` - pouze k lomovým bodům
-      (uzelům/vertexům)(:num:`#snapvert`)
+      (uzelům/vertexům, :num:`#snapvert`)
     - :option:`K segmentu` - pouze k segmentům
-      (hranám/liniím)(:num:`#snapsegm`)
+      (hranám/liniím, :num:`#snapsegm`)
     - :option:`K lomovému bodu a segmentu` - k obojímu
 
 - :item:`Tolerance` |selectnumber| - vzdálenost, od které se kurzor bude
@@ -237,7 +237,7 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
   bude kurzor přichytávat i na případné místo "překřížení" segmentů
   (linií)
 
-.. tip:: Nastavení přichytávání lze měnit i v momentě kdy vytváříme
+.. tip:: Nastavení přichytávání lze měnit i v momentě, kdy vytváříme
    prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
    (např. :num:`#snapvert` a :num:`snapsegm`).
 
@@ -245,14 +245,14 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
 
 .. figure:: images/snapping_vertex.png
 
-    Přichycení kurzoru pouze k lomovému bodu
+    Přichycení kurzoru pouze k lomovému bodu.
 
 
 .. _snapsegm:
 
 .. figure:: images/snapping_segment.png
 
-    Přichycení kurzoru k segmentu
+    Přichycení kurzoru k segmentu.
 
 
 Pokročílý režim přichytávání 
@@ -264,9 +264,9 @@ Pokročílý režim přichytávání
 
 .. figure:: images/snapping_adv.png
 
-    Okno nastavení pokročílého režimu přichytávání
+    Okno nastavení pokročílého režimu přichytávání.
 
-V pokročilém režimu, lze jednotlivé parametry nastavit pro každou vrstvu
+V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
 zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Avoid
 intersection`, která zabraňuje polygonům jejich překryv, jednoduše
 řečeno - nový polygon můžeme zakreslit s přesahem do sousedícího
@@ -280,7 +280,7 @@ docílíme čistě navazujících polygonů.
     překrývá předchozí polygon. Při odstranění nového polygonu bychom
     viděli opět hranici polygonu jako v prvním kroku. b) :option:`Avoid
     intersection` - poygon se vytvoří bez překryvu, hranice na sebe
-    čistě navazuje
+    čistě navazuje.
 
 .. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter|
    :sup:`split by lines` ze zásuvného modulu |plugin| :guilabel:`Digitizing
@@ -288,12 +288,12 @@ docílíme čistě navazujících polygonů.
    není možná. Nechtěnou část polygonu potom ručně odstraníme. Takto
    můžeme vytvořit topologicky čistou hranici polygon-linie. Také lze takto
    "vklínit" liniový prvek (cestu, vodní tok, transekt) do polygonu, který
-   tímto rozdělíme na více částí
+   tímto rozdělíme na více částí:
 
     - nejprve je třeba výběrem označit jak polygon který chceme rozdělit,
       tak linii, která bude polygon rozdělovat
-    - spustíme funkci -> v nabídce |selectstring| vybereme liniovou vrstvu
-      (ve které je vybraný prvek, který bude polygon rozdělovat)
+    - spustíme funkci ``->`` v nabídce |selectstring| vybereme liniovou vrstvu
+      (ve které je vybraný prvek a který bude polygon rozdělovat)
 
 Editace atributové tabulky
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -315,25 +315,24 @@ Kalkulátor polí
 ---------------
 Pomocí funkce |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
 můžeme zadáním výrazu provádět výpočty na základě existujících
-hodnot v atributové tabulce, nebo funkcí (např. výpočet rozlohy
+hodnot v atributové tabulce nebo funkcí (např. výpočet rozlohy
 polygonu). Výsledek výrazu můžeme nechat zapsat do nového sloupce,
 do virtuálního sloupce, nebo lze aktualizovat již existující sloupec.
 
 .. figure:: images/field_calc.png
 
-    Okno kalkulačky polí
+    Okno kalkulačky polí.
 
 Nejdříve je nutné nastavit zda chceme výsledek zapsat do nového pole,
 virtuálního pole, nebo pouze aktualizovat existující pole.
 
-
 - :item:`Vytvořit nové pole` |checkbox| - vytvoří nové pole, zde je
-třeba definovat parametry nového atributu
+  třeba definovat parametry nového atributu
 
-    - :item:`Vytvořit virtuální pole` |checkbox| - vytvoří virtuální
-      pole, které se při každé změně automaticky aktualizuje. Nevýhodou
-      může být, že se pole neukládá do zdrojových dat, ale pouze do
-      souboru projektu
+- :item:`Vytvořit virtuální pole` |checkbox| - vytvoří virtuální
+  pole, které se při každé změně automaticky aktualizuje. Nevýhodou
+  může být, že se pole neukládá do zdrojových dat, ale pouze do
+  souboru projektu
 
 - :item:`Aktualizovat existující pole` |checkbox| - přepíše hodnoty ve
   vybraném poli
@@ -350,19 +349,19 @@ Levá část okna (:item:`Výraz`) je prostor zadání výrazu, v horní
 .. figure:: images/field_calc_exp.png
     :scale: 80%
 
-    okno pro zápis výrazu
+    Okno pro zápis výrazu.
 
 Pravá část okna (:item:`Funkce`) slouží k rychlému zadání funkcí
 nebo parametrů do výrazu, v pravé části se k vybrané funkci/parametru
 zobrazuje nápověda. Požadované položky lze vyhledat pomocí filtru nebo
 prohledáním příslušných kategorií. Přídání funkce nebo hodnoty
-pole pomocí okna funkcí se provádí dvojklikem na položku
+pole pomocí okna funkcí se provádí dvojklikem na položku.
 
 .. figure:: images/field_calc_fun.png
 
-    Prohledávání funkcí v kategoriích
+    Prohledávání funkcí v kategoriích.
 
-Při zadávání parametru pole nebo hodnoty pole (:option:`Pole a hodnoty`)
+Při zadávání parametru pole nebo hodnoty pole (:item:`Pole a hodnoty`)
 je možné nechat si zobrazit všechny hodnoty (tlačítko: :item:`všechny
 jedinečné hodnoty`) nebo prvních 10 hodnot (tlačítko: :item:`10 vzorků`)
 atributu.
@@ -370,30 +369,27 @@ atributu.
 .. figure:: images/field_calc_fun_field.png
 
     Zobrazení všech hodnot konkrétního atributu pomocí tlačítka
-    :item:`všechny jedinečné hodnoty`
-
-
+    :item:`všechny jedinečné hodnoty`.
 
 .. figure:: images/field_calc_area.png
 
     Příklad jednoduchého výpočtu plochy polygonů vypsáním výrazu
-    "$area"
+    "$area".
 
-
-
-.. noteadvanced:: druhá záložka - :item:`Editor funkcí` umožňuje
+.. noteadvanced:: Druhá záložka - :item:`Editor funkcí` umožňuje
    definovat vlastní funkce pomocí jazyka Python
    
 .. tip:: Editovat stávající atributy lze i přímo z atributové tabulky a to 
     pomocí panelu (:num:`editpanel`), který se aktivuje po přepnutí do režimu 
     editace . Zde vybereme atribut, který chceme editovat a zadáme požadovaný 
     výraz (ručně nebo pomocí dialogu |mIconExpression|), potom potvrdíme 
-    aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.
+    aktualizaci buď pro všechny prvky nebo jen pro prvky vybrané.
 
     .. _editpanel:
     
     .. figure:: images/field_edit_panel.png
-    
-        Panel editace atributů v atributové tabulce
+       :class: middle
+            
+       Panel editace atributů v atributové tabulce.
 
 
