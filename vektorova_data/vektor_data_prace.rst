@@ -30,25 +30,26 @@ Vlastnosti vrstvy
 Vlastnosti
 ----------
 
-Vlastnosti vyvoláme dvojklikem na vrstvu, nebo pravým kliknutím vyvoláme
-kontextové menu a zvolíme :item:`Vlastnosti`
+Vlastnosti vyvoláme dvojklikem na vrstvu nebo pravým tlačítkem myši
+kontextové menu a zvolíme :item:`Vlastnosti`.
 
 Obecné
 ^^^^^^
 
 V první záložce nalezneme základní informace o nahrané vrstvě jako
-název vrstvy, zdroj, kódování znaků, SRS ...
+název vrstvy, zdroj, kódování znaků, souřadnicový systém (SRS) a
+další.
 
 .. figure:: images/properties.png
 
-    Vlastnosti vektorové vrstvy
+    Vlastnosti vektorové vrstvy.
 
 .. _styl-vrstvy:
 
 Styl (symbologie)
 ^^^^^^^^^^^^^^^^^
 
-Pomocí rolovací nabídky |selectstring| vybereme typ symbologie
+Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
 
 - :guilabel:`jednoduchý symbol` - zde máme na výběr z uložených
   symbolů. V levém sloupci máme zobrazený typ symbolu a jeho jednotlivé
@@ -93,7 +94,7 @@ prvkům popisek na základě jednoho z atributů.
 
 .. figure:: images/labels.png
 
-    Vlastnosti popisků vrstvy
+    Vlastnosti popisků vrstvy.
 
 Na této záložce je nejdříve nutné zaškrtnout políčko :item:`Vytvořit
 popisky vrstvy z` a poté pomocí rolovací nabídky vybrat zdrojový atribut
@@ -103,11 +104,11 @@ možnosti umístění a vykreslování.
 
 .. figure:: images/labels_sample.png
 
-    Příklad popisků s použitím obalové zóny textu
+    Příklad popisků s použitím obalové zóny textu.
 
 .. noteadvanced:: Jako zdroj popisků lze použít i vzorec a to buď
     přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru 
-    |mIconExpression|
+    |mIconExpression|.
 
 Metadata
 ^^^^^^^^
@@ -116,12 +117,12 @@ V záložce :item:`Metadata` je možné získat základní metadata vektorové v
 .. figure:: images/vector_metadata.png
    :scale-latex: 80
 
-   Příklad výpisu metadat vrstvy typu ESRI shapefile.
+   Příklad výpisu metadat vrstvy ve formátu ESRI shapefile.
 
 .. figure:: images/postgis_metadata.png
    :scale-latex: 80
 
-   Příklad výpisu metadat vrstvy typu Postgis.
+   Příklad výpisu metadat vrstvy ve formátu PostGIS.
 
 
 Atributová tabulka
@@ -129,25 +130,23 @@ Atributová tabulka
 
 Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít
 atributovou tabulku` nebo pravým kliknutím vyvoláme kontextové menu
-a zvolíme :item:`Otevřít atributovou tabulku`. Tato tabulka slouží
+a zvolíme :item:`Otevřít atributovou tabulku`. Tabulka slouží
 k prohlížení a editaci atributové složky dat. Kliknutím na číslo
 řádku můžeme označit jednotlivé prvky do výběru. V názvu okna je
 vypsaný název vrstvy, celkový počet prvků (`Features total`), počet
-odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`)
+odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`).
 
 
 .. figure:: images/at_table.png
 
-    Atributová tabulka vrstvy
-
-
+    Atributová tabulka vrstvy.
 
 .. tip:: Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
    nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
    vybraná data zpřehlední.
 
    Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`, 
-   můžeme invertovat výběr. Tedy zruší se aktuální výběr a 
+   můžeme invertovat výběr. Zruší se aktuální výběr a 
    vytvoří se výběr prvků, které ve výběru nebyly.
 
    Pomocí nabídky |mActionFilter| v levém dolním rohu lze zvolit filtr 
