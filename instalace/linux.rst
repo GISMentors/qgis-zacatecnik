@@ -8,8 +8,8 @@
    see: Linux; Instalace
 
 
-Instalace pod GNU/Linux - Ubuntu
---------------------------------
+GNU/Linux - Ubuntu
+------------------
 
 Instalace programů v systému Ubuntu je založená na tzv. balíčcích, které jsou k
 dispozici v repozitářích.
@@ -37,15 +37,17 @@ je samotná instalace programu.
 Centrum softwaru pro Ubuntu
 ===========================
 
-Jedná se o jednoduchého grafického správce balíčků pro instalaci. Je dostupný z
-menu přes ikonu |aplikace_ikona|. Ve vyhledávacím okně lze zadat "QGIS" a
-následně se vypíše dostupná aplikace. Pomocí tlačítka :item:`Další informace`
-lze otevřít detailní popis nabízeného systému. Hlavní informací je zejména verze
-QGIS systému, kteou instalací získáme. Samotnou instalaci lze provést tlačítkem
-:item:`Nainstalovat`.
+Jedná se o jednoduchého grafického správce balíčků umožňující jejich
+instalaci. Je dostupný z menu přes ikonu |aplikace_ikona|. Ve
+vyhledávacím okně lze zadat "QGIS" a následně se vypíšou všechny
+dostupné aplikace. Pomocí tlačítka :item:`Další informace` lze otevřít
+detailní popis nabízeného systému. Hlavní informací je zejména verze
+systému QGIS, kterou instalací získáme. Samotnou instalaci lze provést
+tlačítkem :item:`Nainstalovat`.
 
 .. figure:: images/centrum_soft.png
-
+   :class: middle
+        
    Výběr QGISu přes Centrum softwaru pro Ubuntu.
 
-.. todo:: opravit ikonku a pridat screenshot
+.. todo:: chybi ikonka

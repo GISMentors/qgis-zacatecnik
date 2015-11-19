@@ -4,8 +4,8 @@
    single: MS Windows
    see: MS Windows; Instalace
 
-Instalace pod MS Windows
-------------------------
+MS Windows
+----------
 
 Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 
