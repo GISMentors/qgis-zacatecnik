@@ -12,11 +12,11 @@ charakteristickou pro dané místo. Většinou se jedná o spojité jevy, jakým
 například nadmořská výška reliéfu, teplota ovzduší či letecké a satelitní
 snímky.
 
-
-Tato část školení popisuje jak pracovat s takovýmito daty v prostředí QGIS. Ten
-totiž podporuje množství rozličných  rastrových formátů, díky knihovně GDAL.
-
-
+Tato část školení popisuje jak pracovat s takovýmito daty v prostředí
+QGIS. Ten totiž podporuje množství rozličných rastrových formátů, díky
+knihovně GDAL. Seznam podporovaných rastrových formátů i s
+doplňujícími informacemi je dostupný na `stránce projektu
+<http://gdal.org/formats_list.html>`_.
 
 .. toctree::
    :maxdepth: 2
