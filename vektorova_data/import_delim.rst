@@ -39,7 +39,7 @@ Tabulková data
 Data s oddělenými hodnotami jsou tabulková data uložená v textovém
 souboru. V takovém souboru jsou sloupce odděleny specifickým
 oddělovacím znakem a řádky koncem řádku. Pro oddělení hodnot
-můžeme použít jakýkoliv znak, ale nejčastěji se stkáváme s hodnotami
+můžeme použít jakýkoliv znak, ale nejčastěji se setkáváme s hodnotami
 oddělené čárkou (:wikipedia:`CSV`) nebo tabulátorem (:wikipedia-en:`TSV
 <Tab-separated_values>`). Soubory tabulkových procesorů lze snadno exportovat
 do textového souboru s oddělenýmí hodnotami, tyto soubory lze potom
@@ -56,13 +56,13 @@ hodnotami uložena:
 
 .. figure:: images/xydata.png
 
-    Příklad tabulky s vhodnými XY daty
+    Příklad tabulky s vhodnými XY daty.
 
 .. _xydatacsv:
 
 .. figure:: images/xydata_csv.png
 
-    Tabulková data (:num:`#xydata`) převedená do formátu CSV
+    Tabulková data (:num:`#xydata`) převedená do formátu CSV.
 
 
 .. note:: Na obrázku :num:`xydatacsv` si můžeme všimnout zápisu
@@ -79,24 +79,24 @@ Import dat
 ^^^^^^^^^^
 
 Import se provadí pomocí funkce |mActionAddDelimitedTextLayer| :sup:`Přidat
-vrstvu s odděleným textem`
+vrstvu s odděleným textem`.
 
 .. _delimited:
 
 .. figure:: images/delimited.png
 
     Okno funkce |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s
-    odděleným textem`
+    odděleným textem`.
 
 |
 
 - :item:`Jméno souboru` - cesta a název souboru, můžeme vyhledat soubor
   pomocí tlačítka :item:`Procházet...`
-- :item:`Název vrstvy` - název nově vzniklé vrstva
-- :item:`Formát souboru` |radiobuttonon| - vybreme typ oddělení hodnot
+- :item:`Název vrstvy` - název nově vzniklé vrstvy
+- :item:`Formát souboru` |radiobuttonon| - vybereme typ oddělení hodnot
   v textovém souboru
 
-    - |radiobuttonon| :sup:`CSV (hodnoty oddělené čárkou)` - standartní
+    - |radiobuttonon| :sup:`CSV (hodnoty oddělené čárkou)` - standardní
       .csv soubor s hodnotami oddělenými čárkou
     - |radiobuttonon| :sup:`Vlastní oddělovače` - výběr libovolného
       oddělovače
@@ -106,8 +106,8 @@ vrstvu s odděleným textem`
 - :item:`Možnost záznamu`
 
     - :item:`Počet řádků k vypuštění` |selectnumber| - vynechá
-      zdadaný počet rádků na začátku (shora)
-    - |checkbox| :item:`První záznam obsahuje názvi polí` - zaškrtneme
+      zadaný počet rádků na začátku
+    - |checkbox| :item:`První záznam obsahuje názvi polí` - zaškrtneme,
       pokud máme v tabulce jako první řádek názvy sloupců
 
 - :item:`Možnosti pole`
@@ -115,7 +115,7 @@ vrstvu s odděleným textem`
     - |checkbox| :option:`Oříznout pole` - smaže přebytečné mezery v
       datech např. na konci nebo začátku záznamu
     - |checkbox| :option:`Zrušit prázdná pole` - odstraní prázdné sloupce
-    - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme
+    - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme,
       pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou
       (např. :num:`#xydatacsv`)
 
@@ -126,12 +126,12 @@ vrstvu s odděleným textem`
 
         - :option:`X pole`, `Y pole` |selectstring| - výběr sloupců,
           ve kterých jsou zapsané souřadnice
-        - |checkbox| :option:`DMS souřadnice` - zašrtneme pokud máme
+        - |checkbox| :option:`DMS souřadnice` - zašrtneme, pokud máme
           souřadnice ve tvaru DMS (degrees-minutes-seconds) - stupně,
           minuty, vteříny
 
     - |radiobuttonon| :sup:`Well known text (WKT)` - souřadnice uložené
-      jako řetězec WKT (např. POINT(1.525622 51.20836))
+      jako řetězec WKT (např. ``POINT(1.525622 51.20836)``)
 
         - :option:`Pole geometrie` |selectstring| - výběr sloupce, ve
           kterém jsou zapsané souřadnice
@@ -145,7 +145,7 @@ vrstvu s odděleným textem`
 
     - |checkbox| :option:`Použít prostorový index` - vytvoří prostorový
       index pro rychlejší práci s daty - vhodnější pro objemné soubory
-    - |checkbox| :option:`Use subset index` - vytvoří index subsady prvků
+    - |checkbox| :option:`Use subset index` - vytvoří index podmnožiny prvků
     - |checkbox| :option:`Sledovat soubor` - sledování změn souboru za
       běhu QGIS, při aktualizaci |mActionRefresh| se projeví změny souboru
       (např. přidání dalších dat do řádků) ve vrstvě
@@ -155,19 +155,21 @@ vrstvu s odděleným textem`
 Po potvrzení importu stisknutím tlačítka :item:`Ok` se objeví okno,
 kde musíme definovat souřadnicový systém, ve kterém jsou importované
 souřadnice zapsány. Pokud chceme naimportovaná data uložit jako vrstvu, musíme 
-exportovat (:option:`Uložit jako...)
+exportovat (:guilabel:`Uložit jako...`).
 
 .. figure:: images/xydata_vysledek.png
     
-    Výsledná vrstva bodů
+    Výsledná vrstva bodů.
 
 
 GPS data
 --------
-K práci s GPS daty QGIS používá plugin :guilabel:`GPS Nástroje`, který by měl 
-být v základní instalici QGIS nainstalovaný a aktivní. V panelu nástrojů se 
-plugin zobrazí jako ikona |import_gpx| :sup:`GPS nástroje`. Pro ukládání GPS 
-dat je mnoho různých formátů. QGIS používá standardní výměnný formát GPX 
+
+K práci s GPS daty QGIS používá plugin :guilabel:`GPS Nástroje`, který
+by měl být v základní instalaci QGIS nainstalovaný a aktivní. V panelu
+nástrojů se plugin zobrazí jako ikona |import_gpx| :sup:`GPS
+nástroje`. Pro ukládání GPS dat je mnoho různých formátů. QGIS používá
+standardní výměnný formát :wikipedia-en:`GPX <GPS_Exchange_Format>`
 (GPS eXchange format).
 
 .. _gps:
@@ -175,21 +177,21 @@ dat je mnoho různých formátů. QGIS používá standardní výměnný formát
 .. figure:: images/gpstools.png
     :scale: 60 %
     
-    Okno pluginu GPS Nástroje
+    Okno pluginu GPS Nástroje.
 
 Získání .gpx souboru z GPS přístroje
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: images/gpstools2.png
     :scale: 60 %
     
-    Získání GPX souboru z GPS přístroje pomocí pluginu GPS nástroje
+    Získání GPX souboru z GPS přístroje pomocí pluginu GPS nástroje.
 
-- pomocí pluginu |gps_importer| :sup:`GPS Nástroje`v záložce 
+- pomocí pluginu |gps_importer| :sup:`GPS Nástroje` v záložce 
   :guilabel:`Stáhnout z GPS`
         
    - :guilabel:`GPS zařízení` |selectstring| - typ našeho GPS přístroje
    - :guilabel:`Port` |selectstring| - např. usb
-   - :guilabel:`Typ prvku` |selectstring| - prvky které cheme stáhnout z 
+   - :guilabel:`Typ prvku` |selectstring| - prvky, které chceme stáhnout z 
      GPS
    - :guilabel:`Název vrstvy` - jak se bude vrstva jmenovat
    - :guilabel:`Výstupní soubor` - zadáme cestu a název 
@@ -205,12 +207,12 @@ Import .gpx souboru
 ^^^^^^^^^^^^^^^^^^^
 - použitím pluginu |gps_importer| :sup:`GPS Nástroje` 
 
-    - po otevření pluginu (obr: :ref:`gps`) zadáme cestu a název souboru 
+    - po otevření pluginu (:num:`#gps`) zadáme cestu a název souboru 
       a to buď ručně nebo pomocí   tlačítka :guilabel:`Procházet`
     - potvrdíme tlačítkem :guilabel:`OK` a vybereme data, která chceme vložit
    
 - stejně jako přidání vektorových dat |mActionAddOgrLayer| :sup:`přidání 
-  vektorové vrstvy` nebo přetažením s prohlížeče souborů - v tomto případě 
+  vektorové vrstvy` nebo přetažením z prohlížeče souborů - v tomto případě 
   data nelze editovat!
       
 Vytvoření .gpx souboru
