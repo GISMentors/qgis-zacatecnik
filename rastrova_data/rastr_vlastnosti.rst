@@ -24,29 +24,32 @@
 Vlastnosti rastrové vrstvy
 --------------------------
 
-Na to abychom viděli a nastavili vlastnosti dané rastrové vrstvy, použijeme buď
-levý dvouklik na název vrstvym, nebo pravým klikem zvolíme z kontextového menu
-položku :item:`Vlastnosti`. Dialogové okno obsahuje šest záložek : *Všeobecné*,
-*Styl*, *Průhlednost*, *Pyramidy*, *Histogram* a *Metadata*.
+Dialog pro nastavení vlastností dané rastrové vrstvy vyvoláme buď
+levým dvouklikem nad danou vrstvou nebo pravým klikem z kontextového
+menu zvolíme položku :item:`Vlastnosti`.
+
+Dialogové okno obsahuje šest záložek : *Všeobecné*, *Styl*,
+*Průhlednost*, *Pyramidy*, *Histogram* a *Metadata*.
 
 
 Všeobecné
 ^^^^^^^^^
 
-Prvá záložka poskytuje základní informace o vrstvě jako je název souboru, název
+První záložka poskytuje základní informace o vrstvě jako je název souboru, název
 vrstvy v legendě s možností editace, zdroj vrstvy, počet sloupců a řádků,
-souřadnicový referenční systém, který je možno změnit kliknutím na tlačítko
-|CRS| :sup:`Vyberte SRS`. V této záložce je možné nastavit i viditelnost v
+souřadnicový referenční systém (ten je možno změnit kliknutím na tlačítko
+|CRS| :sup:`Vyberte SRS`). V této záložce je možné nastavit i viditelnost v
 závislosti na měřítku (:num:`#obecneraster`).
 
 .. _obecneraster:
 
 .. figure:: images/obecne_raster.png
 
-   Vlastnosti rastové vrstvy
+   Vlastnosti rastové vrstvy.
 
 Styl
 ^^^^
+
 Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okně. Je
 možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
 být barvy invertované, dá se vylepšit kontrast, sytost, jas, rosah
@@ -55,9 +58,9 @@ vykreslovaných hodnot (:num:`#stylraster`).
 .. _stylraster:
 
 .. figure:: images/styl_raster.png
-   :class: middle
+   :class: large
        
-   Různé styly té samé rastrové vrstvy: šedé pásmo(vlevo), pseudobarvy (vpravo)
+   Různé styly té samé rastrové vrstvy: šedé pásmo (vlevo), pseudobarvy (vpravo).
     
 .. note:: 
 
@@ -76,22 +79,23 @@ vykreslovaných hodnot (:num:`#stylraster`).
    hodnoty buňky v aktuální lokální části rastru, přičemž bere do úvahy výchozí
    limity a odhadnuté hodnoty. Výsledek je na :num:`#stylrstpanel` vlevo. Volba
    |mActionFullHistogramStretch| :sup:`Roztáhnout histogram na celý dataset`
-   nástrojové lišty vrátí změny zpět jak byli na :num:`#stylraster`, t.j. vyrovná
+   nástrojové lišty vrátí změny zpět jak byly na :num:`#stylraster`, t.j. vyrovná
    kontrast vzhledem na celý rastr dle skutečných hodnot. Pokud pravým
    kliknutím na název vrstvy zvolíme z kontextového menu :item:`Zoom na
    nejvhodnější měřítko (100%)`, klikneme na |mActionLocalCumulativeCutStretch|
    :sup:`Local Cumulative Cut Stretch` a zvolíme |mIconZoom| :sup:`Přiblížit na
    vrstvu` čímž vytvoříme styl znázorněný na :num:`#stylrstpanel` vpravo. 
 
-.. _stylrstpanel:
+   .. _stylrstpanel:
 
-.. figure:: images/styl_rst_panel.png
-   :class: middle
+   .. figure:: images/styl_rst_panel.png
+      :class: middle
 
-   Změna stylu rastrové vrstvy pomocí nástrojové lišty :item:`Raster`
+      Změna stylu rastrové vrstvy pomocí nástrojové lišty :item:`Raster`.
 
 Průhlednost
 ^^^^^^^^^^^
+
 QGIS umožňuje zobrazovat každou vrstvu v mapovém okně s různým stupněm
 průhlednosti. Má to velkou výhodu například pokud chceme, aby kromě aktuální
 rastrové vrstvy byla viditelná i jiná vrstva. Typickým příkladem je překryv
@@ -99,21 +103,22 @@ stínovaného reliéfu s jakoukoli barevnou rastrovou vrstvou. Překryv a vhodn�
 nastavení průhlednosti způsobí prostorový vzhled 2D vrstvy. Konkrétní příklad je
 uveden později. 
 
-Záložka umožňuje nastavit všeobecnou průhlednot, ale taktéž průhlednost pro
+Záložka umožňuje nastavit všeobecnou průhlednost, ale taktéž průhlednost pro
 každý pixel. V části o uživatelských nastaveních transparentnosti (viz.
-:num:`#rsttransparency` s paletovým typom vykreslení pásma pro rastr) je možné
+:num:`#rsttransparency` s paletovým typem vykreslení pásma pro rastr) je možné
 nastavit hodnoty pomocí tlačítek |symbologyAdd| :sup:`Zadat hodnoty ručně` nebo
 |mActionContextHelp| :sup:`Přidat hodnoty z obrazovky`, dále možno
 |symbologyRemove| :sup:`Odstranit vybrané řádky`, hodnoty |mActionFileOpen|
-:sup:`Importovat z` nebo |mActionFileSave| :sup:`Exportovat do` souboru, comá
-smysl hlavně u detailnějších, časovo náročných pracích. Tato záložka umožňuje
-taky nastavení pro *no data* hodnoty. 
+:sup:`Importovat z` nebo |mActionFileSave| :sup:`Exportovat do` souboru. Což má
+smysl hlavně u detailnějších, časově náročných pracích. Tato záložka umožňuje
+taky nastavení *no data* hodnoty (tzv. žádná data). 
 
 .. _rsttransparency:
 
 .. figure:: images/rst_transparency.png
-
-   Možnosti nastavení průhlednosti rastrové vrstvy
+   :class: middle
+        
+   Možnosti nastavení průhlednosti rastrové vrstvy.
 
 
 Pyramidy
@@ -122,13 +127,13 @@ Pyramidy
 Pyramidy jsou datové struktury, které typicky obsahují menší množství dat.
 Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, že se kromě
 původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
-rozlišením pro konkrétní zoom). Na převzorkování se použijí různé metody, 
+rozlišením pro konkrétní přiblížení). Na převzorkování se použijí různé metody, 
 nejčastěji jde o metodu průměru (*Average*) nebo metodu nejbližšího souseda 
 (*Nearest Neighbour*).
 
 .. note::
 
-   Oprávněný na takovéto úkony je jenom ten, kdo má právo zápisu do adresáře s
+   Pro vytvoření pyramid musíte mít právo zápisu do adresáře s
    původními daty.
 
 .. important::
@@ -148,12 +153,12 @@ QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
 .. figure:: images/rst_histogram.png
    :class: middle
 
-   Výpočet histogramu rastrové vrstvy digitálního výškového modelu terénu
+   Výpočet histogramu rastrové vrstvy digitálního výškového modelu terénu.
        
 Metadata
 ^^^^^^^^
 Tato záložka by měla poskytovat informace o dané rastrové vrstvě (pokud
 existují). Jedná se zejména o základní popis dat (nadpis, abstrakt, seznam
-klíčových slov), Url metadat a legendy či jiné vlastnosti (ovladač, popis
+klíčových slov), URL metadat a legendy či jiné vlastnosti (ovladač, popis
 datasetu, velikost pixelu, souřadnicový systém, rozsah vrstvy, a další).
 
