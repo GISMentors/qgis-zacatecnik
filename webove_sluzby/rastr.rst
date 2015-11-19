@@ -77,8 +77,8 @@ parametrů služby a výběru vrstev proběhne přidání vrstvy do mapového po
 tlačítkem přidat. Pokud bylo vybráno více vrstev, jeví se v seznamu vrstev jako 
 jedna.
 
-
-
+Připojení WMTS služby
+---------------------
 
 Jak bylo zmíňeno, správa WMS a WMTS probíhá ve stejném okně. V předchozím
 kroku bylo ukázáno jak vkládat WMS služby. Pro připojení WMTS služby je potřeba 
@@ -95,6 +95,15 @@ najednou, stačí vybrat jednu vrstvu a potvrdit tlačítkem :item:`Ok`.
 .. figure:: images/qgis_ogc_addwmts_choose.png
 
    Záložka :item:`Sady dlaždic` při připojení na WMTS server
+   
+
+.. warning:: V současných verzích QGIS musíme při zadání URL WMTS serveru 
+    přesně specifikovat, že se jedná o WMTS. Za URL tedy přidáme:
+
+    .. code-block:: none
+    
+       ?SERVICE=WMTS&REQUEST=GetCapabilities
+       
 
 Práce s WMS/WMTS službami v okně prohlížeče
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
