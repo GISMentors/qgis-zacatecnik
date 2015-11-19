@@ -44,7 +44,8 @@
    :width: 1.5em
 .. |remove| image:: ../images/icon/remove.png
    :width: 1.5em
-
+.. |mIconExpression| image:: ../images/icon/mIconExpression.png
+   :width: 1.5em
 
 
 Tvorba nových vrstev a jejich editace
@@ -254,9 +255,11 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
     Přichycení kurzoru k segmentu
 
 
-Pokročílý režim přichytávání (:item:`Režim přichytávání...`
-|selectstring| - :option:`Pokročílé`)
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Pokročílý režim přichytávání 
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+(:item:`Režim přichytávání...` |selectstring| - :option:`Pokročílé`)
+
 
 
 .. figure:: images/snapping_adv.png
@@ -380,5 +383,17 @@ atributu.
 
 .. noteadvanced:: druhá záložka - :item:`Editor funkcí` umožňuje
    definovat vlastní funkce pomocí jazyka Python
+   
+.. tip:: Editovat stávající atributy lze i přímo z atributové tabulky a to 
+    pomocí panelu (:num:`editpanel`), který se aktivuje po přepnutí do režimu 
+    editace . Zde vybereme atribut, který chceme editovat a zadáme požadovaný 
+    výraz (ručně nebo pomocí dialogu |mIconExpression|), potom potvrdíme 
+    aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.
+
+    .. _editpanel:
+    
+    .. figure:: images/field_edit_panel.png
+    
+        Panel editace atributů v atributové tabulce
 
 
