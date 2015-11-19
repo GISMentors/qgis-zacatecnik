@@ -24,7 +24,7 @@ doplňujícími informacemi je dostupný na `stránce projektu
    import_delim.rst
    join.rst
    dotazovani.rst
-   prostor.rst
+   prostorove_analyzy.rst
 
 
 
