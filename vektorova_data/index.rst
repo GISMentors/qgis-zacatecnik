@@ -20,7 +20,7 @@ doplňujícími informacemi je dostupný na `stránce projektu
    
    vektor_import.rst
    vektor_data_prace.rst
-   edit.rst
+   editace.rst
    import_delim.rst
    join.rst
    atr_dotaz.rst
