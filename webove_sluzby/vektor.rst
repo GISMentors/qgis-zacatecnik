@@ -47,8 +47,8 @@ souřadnicový systém sloužící ke stahování dat. Změna se provádí pod t
 
 
 
-Vkládání síťových dat pomocí panele prohlížeče
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Práce s WFS službami v okně prohlížeče
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Procházet, editovat a přidávat WFS připojení lze také pomocí panele 
 prohlížeče (:num:`wfsbrowser`). Vyvoláním kontextového menu pravým kliknutím na položku můžeme provádět vybrané akce.
 

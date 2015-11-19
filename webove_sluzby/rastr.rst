@@ -96,10 +96,11 @@ najednou, stačí vybrat jednu vrstvu a potvrdit tlačítkem :item:`Ok`.
 
    Záložka :item:`Sady dlaždic` při připojení na WMTS server
 
-Vkládání síťových dat pomocí panele prohlížeče
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Práce s WMS/WMTS službami v okně prohlížeče
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Procházet, editovat a přidávat WMS/WMTS připojení lze také pomocí panele 
-prohlížeče (:num:`wmsbrowser`). Vyvoláním kontextového menu pravým kliknutím na položku můžeme provádět vybrané akce.
+prohlížeče (:num:`wmsbrowser`). Vyvoláním kontextového menu pravým kliknutím na 
+položku můžeme provádět vybrané akce.
 
 - |mIconWms| WMS - vytvoření připojení
 - |mIconConnect| konkrétní připojení - editace, odstranění
