@@ -18,7 +18,8 @@ Správce WFS spustíme v záložce :menuselection:`Vrstva --> Přidat vrstvu
 
    Okno správce WFS služeb
 
-Okno správce umožňuje přidání, odebrání služby nebo k nahrání vrstev do projektu. Formulář přidání nové služby se aktivuje tlačítkem :item:`Nové`. Ve
+Okno správce umožňuje přidání, odebrání služby nebo k nahrání vrstev do 
+projektu. Formulář přidání nové služby se aktivuje tlačítkem :item:`Nové`. Ve
 formuláři (:num:`wfsform`) stačí v případě nezaheslované služby vyplnit pouze 
 URL a pojmenování služby. V případě zaheslované služby jsou vyžadovány 
 přihlašovací údaje.
@@ -31,7 +32,8 @@ přihlašovací údaje.
    Formulář přidání WFS služby
 
 Po potvrzení a připojení ke službě ze správce tlačítkem
-:item:`Připojit` se zobrazí seznam vrstvev poskytované WFS serverem (:num:`wfslayers`). 
+:item:`Připojit` se zobrazí seznam vrstvev poskytované WFS serverem 
+(:num:`wfslayers`). 
 
 .. _wfslayers:
 
@@ -43,14 +45,16 @@ Výběr více vrstev pro přidání lze opět uskutečnit pomocí klávesy :kbd:
 vrstvy se v takovém případě nahrají do seznamu vrstev samostatně 
 (jako při přidávání lokálních dat). Tak jako v případě WMS lze změnit 
 souřadnicový systém sloužící ke stahování dat. Změna se provádí pod tlačítkem
-:item:`Změnit ...` ve spodní pravé části okna. Potvrzením :item:`Ok` proběhne přidání vrstev do mapy.
+:item:`Změnit ...` ve spodní pravé části okna. Potvrzením :item:`Ok` proběhne 
+přidání vrstev do mapy.
 
 
 
 Práce s WFS službami v okně prohlížeče
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Procházet, editovat a přidávat WFS připojení lze také pomocí panele 
-prohlížeče (:num:`wfsbrowser`). Vyvoláním kontextového menu pravým kliknutím na položku můžeme provádět vybrané akce.
+prohlížeče (:num:`wfsbrowser`). Vyvoláním kontextového menu pravým kliknutím 
+na položku můžeme provádět vybrané akce.
 
 - |mIconWfs| WFS - vytvoření připojení
 - |mIconWfs| konkrétní připojení - editace, odstranění
