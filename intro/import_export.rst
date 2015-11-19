@@ -53,9 +53,10 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 .. _browser:
 
 .. figure:: images/qgis_ogc_addbrowser.png
-
-    Přidání vrstvy přetažením souboru do mapového okna nebo seznamu
-    vrstev.
+   :class: large
+        
+   Přidání vrstvy přetažením souboru do mapového okna nebo seznamu
+   vrstev.
 
 Export dat
 ----------
