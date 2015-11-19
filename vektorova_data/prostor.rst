@@ -178,3 +178,18 @@ zvolíme :option:`--- Rozpustit vše ---`.
 .. figure:: images/prost_rozp.png
     
     Výsledek funkce Rozpustit... (vstupní vrstva: výsledek Sjednocení...)
+    
+V následujícím příkladu provedeme sjednocení vrstvy velkoplošných chráněných 
+území a obalové zóny dálnic (10 km).
+   
+.. figure:: images/prost_sjed_priklad.png
+    
+    Sjednocení vrstvy velkoplošných chráněných území a obalové zóny dálnic 
+    (10 km)
+    
+Díky tomu, že vytvořená vrstva sjednocení nese atributy obou vstupních vrstev 
+(obalová zóna nesla pouze atribut "typ" s hodnotou "dalnice"), můžeme zjistit 
+různé informace. Například odfiltrováním 10tého prvku, tedy prvku, který 
+představuje obalovou zónu nezasahující do žádného velkoplošného chráněného 
+území, můžeme snadno vypočítat poměr chráněného území, do kterého zasahuje 
+obalová zóna 10 km od dálnic.
