@@ -49,5 +49,3 @@ tlačítkem :item:`Nainstalovat`.
    :class: middle
         
    Výběr QGISu přes Centrum softwaru pro Ubuntu.
-
-.. todo:: chybi ikonka
