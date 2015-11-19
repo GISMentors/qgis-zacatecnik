@@ -34,7 +34,7 @@ klávesové zkratky :kbd:`Ctrl+Shift+V`
 
 Nejčastější volbou vkládání dat je soubor nebo adresář. Vložení
 jedné vrstvy je možné označením :item:`Typ zdroje` - |checkbox|
-:option:`soubor`. Kliknutím na tlačítko :item:`procházet` se otevře
+:option:`soubor`. Kliknutím na tlačítko :item:`Procházet` se otevře
 navigační okno s možností vybrat vektorová data. Po potvrzení se
 označená vrstva načte do mapového pole.
 
@@ -44,7 +44,7 @@ označená vrstva načte do mapového pole.
 
 Volba adresář umožňuje označit
 složku, ve které se nachází vektorová data. Potvrzením tlačítkem
-:item:`otevřít` QGIS připraví všechna dostupná data uložená ve
+:item:`Otevřít` QGIS připraví všechna dostupná data uložená ve
 složce k načtení. Objeví se potvrzující okno se všemi dostupnými
 vrstvami. Vrstvy lze buď označit všechny nebo podrženímklávesy
 :kbd:`Ctrl` vybrat jen požadované vrstvy (:num:`vecfolder`). Další
@@ -73,7 +73,7 @@ vrstvy a další volitelné parametry.
     Okno exportu vektorové vrstvy
 
 
-.. tip:: pokud potřebujeme exportovat pouze část vrstvy nebo konkrétní 
+.. tip:: Pokud potřebujeme exportovat pouze část vrstvy nebo konkrétní 
     zájmové prvky, musíme tyto chtěné prvky nejprve označit výběrem 
     (např. |mActionSelectRectangle| :sup:`Vybrat prvky oblastí nebo jednoklikem` 
     nebo |mIconExpressionSelect| :sup:`Vabrat prvky pomocí vzorce`), potom 
