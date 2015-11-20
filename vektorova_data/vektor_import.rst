@@ -6,8 +6,6 @@
    :width: 1.5em
 .. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
    :width: 1.5em
-.. |ogr| image:: ../images/icon/ogr.png
-   :width: 1.5em
 
 Přidání a export dat
 ====================
