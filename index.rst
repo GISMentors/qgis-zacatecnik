@@ -39,8 +39,7 @@ Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
 
 .. only:: html
 
-   .. tip::
-
+..   .. tip::
       Text školení je dostupný i v tisknutelné formě `PDF
       <./skoleni-qgis-zacatecnik.pdf>`_.
    
