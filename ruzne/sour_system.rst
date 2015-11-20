@@ -27,7 +27,7 @@ začít nové projekty s tímto SRS*.
    :class: large
    :scale-latex: 80
  
-       Menu pro nastavení CRS projektu.
+   Menu pro nastavení CRS projektu.
 
 Přes ikonku |set_crs| :sup:`Vyberte SRS` se vyvolá menu pro výběr souřadnicového
 systému. Konkrétní souřadnicový systém je možné vybrat z nabídky nebo použít
