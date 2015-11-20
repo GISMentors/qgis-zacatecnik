@@ -237,7 +237,7 @@ podobě čtyř hodnot (pro :num:`#zis-sur` by to bylo
 
 .. _zis-sur:
 
-.. figure:: images/p_zis_sur.png
+.. figure:: images/p_zis_sur2.png
 
    Dialogové okno modulu na zobrazení souřadnic z mapového okna.
 
