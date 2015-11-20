@@ -74,9 +74,10 @@ Existují dva hlavní způsoby jak nahrát tabulková data jako vrstvu do QGIS:
           sloupcům \*.csv ("Integer","Real","String").
 
 .. figure:: images/join_csvt.png
+   :scale-latex: 70
 
-    Ukázka tabulkových dat ve formátu \*.csv (vlevo) a odpovídající
-    soubor \*.csvt (vpravo)
+   Ukázka tabulkových dat ve formátu \*.csv (vlevo) a odpovídající
+   soubor \*.csvt (vpravo)
 
 2. Pomocí |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s odděleným
 textem`, kde bychom zvolili |radiobuttonon| :sup:`Žádna geometrie (pouze
@@ -88,11 +89,13 @@ atributová tabulka)`
 
 .. figure:: images/join_layer.png
     :scale: 70%
-
+    :scale-latex: 35
+    
     Zobrazení tabulkových dat v seznamu vrstev.
     
 .. figure:: images/join_atribut.png
-    
+   :scale-latex: 65
+   
    Atributové tabulky vektorové vrstvy (nahoře) a importované tabulky (dole). 
    V tomto případě budeme připojovat pomocí atributů "kod" a "Kód", které jsou 
    souhlasné.
@@ -106,8 +109,9 @@ připojení.
 .. _join:
 
 .. figure:: images/join.png
+   :scale-latex: 40
 
-    Okno přidání připojení.
+   Okno přidání připojení.
 
 - :item:`Připojit vrstvu` |selectstring| - vyberem vrstvu (.csv tabulku)
 - :item:`Připojit pole` |selectstring| - vybereme atribut (týká se tabulky .csv)

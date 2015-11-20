@@ -21,7 +21,8 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
 
     .. figure:: images/geoprocess.png
        :class: small
-                        
+       :scale-latex: 40
+       
        Okno :item:`Nástroje zpracování` (Adnvanced interface - pokročilé 
        zobrazení).
 
@@ -37,10 +38,10 @@ polygonovou vrstvu obalových zón. Tuto funkci najdeme v menu
 :menuselection:`Vektor --> Nástroje geoprocessingu --> Obalové
 zóny...`
 
-
 .. figure:: images/prost_buffer.png
    :class: small
-        
+   :scale-latex: 40
+
    Dialogové okno obalové zóny.
     
 
@@ -61,9 +62,10 @@ zóny...`
 .. _aprox:
 
 .. figure:: images/prost_buffer_seg.png
-    
-    Obalová zóny s rozdílným počtem segmentů pro aproximaci 
-    (vlevo 5, vpravo 50).
+   :scale-latex: 45
+
+   Obalová zóny s rozdílným počtem segmentů pro aproximaci 
+   (vlevo 5, vpravo 50).
 
 - |checkbox|:option:`Vzdálenost obalové zóny`  - vzdálenost v metrech 
   (v závislosti nastavení QGIS a použitého SRS)
@@ -82,8 +84,9 @@ V následujícím příkladu jsme vytvořili obalovou zónu 10 km kolem dálnic
 (s možností rozpuštění výsledků).
 
 .. figure:: images/prost_buffer_dalnice.png
-       
-    Příklad obalové zóny 10 km okolo dálnic.
+   :scale-latex: 48
+    
+   Příklad obalové zóny 10 km okolo dálnic.
 
 Překryvné analýzy
 -----------------
@@ -97,6 +100,7 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 
 .. figure:: images/prost_okno.png
    :class: small
+   :scale-latex: 35
     
    Okno funkce překryvné analýzy (Oříznout...).
     
@@ -110,7 +114,8 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 
 .. figure:: images/prost_puvod.png
    :class: middle
-                    
+   :scale-latex: 60
+
    Původní vrstvy vstupující do ukázkových příkladů.
 
 Průsečík
@@ -120,8 +125,9 @@ Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Ka�
 prvek nese atributy obou vstupních vrstev. 
 
 .. figure:: images/prost_prus.png 
-    
-    Výsledek funkce Průsečík.
+   :scale-latex: 35
+
+   Výsledek funkce Průsečík.
 
 Sjednotit
 ^^^^^^^^^
@@ -129,8 +135,9 @@ Vytvoří novou vrstvu se všemi původnímy prvky, v místech překryvu vrstev 
 vytvořeny nové prvky.
 
 .. figure:: images/prost_sjed.png
-    
-    Výsledek funkce Sjednotit.
+   :scale-latex: 35
+
+   Výsledek funkce Sjednotit.
     
 Symetrický rozdíl
 ^^^^^^^^^^^^^^^^^
@@ -138,8 +145,9 @@ Vytvoří novou vrstvu, kde v místech překryvu vrstev nejsou vytvořeny prvky.
 Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.
 
 .. figure:: images/prost_sym.png
-    
-    Výsledek funkce Symetrický rozdíl.
+   :scale-latex: 35 
+
+   Výsledek funkce Symetrický rozdíl.
 
 .. _orez:
 
@@ -150,9 +158,9 @@ vrstvou vybranou v nabídce `Oříznout vrstvu`. Prvky výstupní vrstvy
 nesou atributy pouze z vrstvy zadané jako `Vstupní vektorová vrstva`.
 
 .. figure:: images/prost_orez.png
-    
-    Výsledek funkce Ořezání... - čtverec jsme ořezali podle kruhu.
-
+   :scale-latex: 35
+		    
+   Výsledek funkce Ořezání... - čtverec jsme ořezali podle kruhu.
 
 Rozdíl
 ^^^^^^
@@ -161,8 +169,13 @@ vektorové vrstvě` se odstraní plochy, které se překrývají s vrstvou v
 nabídce `Rozdíl ve vrstvě`.
 
 .. figure:: images/prost_rozd.png
+   :scale-latex: 35
     
-    Výsledek funkce Rozdíl - vrstva čtverce s rozdílem ve vrstvě kruhu.
+   Výsledek funkce Rozdíl - vrstva čtverce s rozdílem ve vrstvě kruhu.
+
+.. raw:: latex
+
+   \newpage
 
 Rozpustit
 ^^^^^^^^^
@@ -174,21 +187,24 @@ zvolíme :item:`--- Rozpustit vše ---`.
 
 .. figure:: images/prost_rozp_okno.png
    :class: small
+   :scale-latex: 32
     
    Okno funkce Rozpustit.
     
 .. figure:: images/prost_rozp.png
-    
-    Výsledek funkce Rozpustit (vstupní vrstva: výsledek Sjednocení).
+   :scale-latex: 32
+ 
+   Výsledek funkce Rozpustit (vstupní vrstva: výsledek Sjednocení).
     
 V následujícím příkladu provedeme sjednocení vrstvy velkoplošných chráněných 
 území a obalové zóny dálnic (10 km).
    
 .. figure:: images/prost_sjed_priklad.png
-    
-    Sjednocení vrstvy velkoplošných chráněných území a obalové zóny dálnic 
-    (10 km).
-    
+   :scale-latex: 55
+ 
+   Sjednocení vrstvy velkoplošných chráněných území a obalové zóny dálnic 
+   (10 km).
+
 Díky tomu, že vytvořená vrstva sjednocení nese atributy obou vstupních vrstev 
 (obalová zóna nesla pouze atribut "typ" s hodnotou "dalnice"), můžeme zjistit 
 různé informace. Například odfiltrováním 10tého prvku, tedy prvku, který 

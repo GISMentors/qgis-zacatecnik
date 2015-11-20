@@ -61,9 +61,9 @@ hodnotami uložena:
 .. _xydatacsv:
 
 .. figure:: images/xydata_csv.png
+   :scale-latex: 45
 
-    Tabulková data (:num:`#xydata`) převedená do formátu CSV.
-
+   Tabulková data (:num:`#xydata`) převedená do formátu CSV.
 
 .. note:: Na obrázku :num:`xydatacsv` si můžeme všimnout zápisu
   desetinných čísel oddělenými čárkou v souboru s hodnotami oddělenými
@@ -84,11 +84,9 @@ vrstvu s odděleným textem`.
 .. _delimited:
 
 .. figure:: images/delimited.png
-
+   
     Okno funkce |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s
     odděleným textem`.
-
-|
 
 - :item:`Jméno souboru` - cesta a název souboru, můžeme vyhledat soubor
   pomocí tlačítka :item:`Procházet...`
@@ -182,9 +180,10 @@ standardní výměnný formát :wikipedia-en:`GPX <GPS_Exchange_Format>`
 Získání .gpx souboru z GPS přístroje
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: images/gpstools2.png
-    :scale: 60 %
-    
-    Získání GPX souboru z GPS přístroje pomocí pluginu GPS nástroje.
+   :scale: 60 %
+   :scale-latex: 45
+
+   Získání GPX souboru z GPS přístroje pomocí pluginu GPS nástroje.
 
 - pomocí pluginu |gps_importer| :sup:`GPS Nástroje` v záložce 
   :guilabel:`Stáhnout z GPS`

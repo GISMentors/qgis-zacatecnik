@@ -25,7 +25,8 @@ Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS
 
 .. figure:: images/qgis_windows_download.png
    :class: large
-        
+   :scale-latex: 85
+
    Nabídka instalací pro MS Windows.
 
 .. _samostatny-instalator:
@@ -80,10 +81,13 @@ Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
 
    Volba rozsahu instalace (je možné zvolit i ukázkovou datovou sadu z nabídky).
 
+.. raw:: latex
+
+	 \clearpage
+
 .. figure:: images/install_5.png
 
    Dokončení instalace.
-
 
 Pok úspěšné instalaci se na pracovné ploše i v nabídce Start objeví
 položka QGIS 2.10.1, kterou je možné jednoduše spustit.

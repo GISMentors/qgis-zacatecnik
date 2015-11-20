@@ -13,7 +13,12 @@ je možné jej spustit a začít okamžitě pracovat.
 
 Spuštění systému QGIS
 =====================
+
 Úspěšně nainstalovaný systém by měl být dostupný z hlavní nabídky operačního systému.
+
+.. raw:: latex
+
+	 \newpage
 
 .. figure:: images/linux_start.png
 
@@ -25,8 +30,6 @@ Spuštění systému QGIS
    :scale-latex: 50
 
    Spuštění systému QGIS z nabídky Start v MS Windows.
-
-  
 
 .. notecmd:: Spuštění QGIS
 
@@ -45,7 +48,8 @@ přizpůsobuje dle aktuálního nastavení funkčnosti. Popis jednotlivých
  
  .. figure:: images/run_qgis.png
     :class: large
-         
+    :scale-latex: 85
+
     Vzhled QGIS po spuštění.
 
 .. noteadvanced::
@@ -57,15 +61,14 @@ přizpůsobuje dle aktuálního nastavení funkčnosti. Popis jednotlivých
                 Jednotlivé verze jsou schopné pracovat vedle sebe.
                 Navíc jsou schopné přebírat nastavení. To například
                 znamená, že pokud používáte určité pluginy, tak budou
-                okamžitě dostupné i v nové verzi.
-                
-                Platí to i zpětně, když přidáte funkcionalitu v nové
-                verzi, tak je možné ji použít i ve starší verzi (platí
-                pro nástroje kompatibilní pro nainstalované verze).
+                okamžitě dostupné i v nové verzi. Platí to i zpětně,
+                když přidáte funkcionalitu v nové verzi, tak je možné
+                ji použít i ve starší verzi (platí pro nástroje
+                kompatibilní pro nainstalované verze).
                 
                 .. figure:: images/qgis_more_versions.png
                    :class: small
-                   :scale-latex: 50
+                   :scale-latex: 40
                             
                    Výběr z vícero verzí QGIS v MS Windows.
                               
@@ -82,6 +85,5 @@ opětovné načtení všech dat i s kompletním nastavením systému.
    editovat i mimo samotný QGIS. Je však nutné znát strukturu formátu a
    proto tento postup lze doporučit opravdu pro pokročilé uživatele a
    spíše v extremních případech.
-  
 
 .. todo:: pridat ikonky ?

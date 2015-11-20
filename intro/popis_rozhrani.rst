@@ -128,7 +128,7 @@ předdefinovaného seznamu měřítek.
 
 .. figure:: images/choose_scale.png
    :class: small
-   :scale-latex: 30
+   :scale-latex: 50
     
    Výběr měřítka z předdefinovaného seznamu.
 
@@ -269,7 +269,7 @@ upravuje dle polohy kurzoru.  Definování prkvu kresbou lze ukončit pravým
 kliknutím. Nové měření lze začít pomocí tlačítka :item:`Nové`.
 
 .. figure:: images/measure_area.png
-   :scale-latex: 30
+   :scale-latex: 50
     
    Měření plochy - ukázka volby jednotek.
 
@@ -277,7 +277,7 @@ U měření délek se určuje délka jednotlivých segmentů mezi vrcholy, ale i
 všech délek.
 
 .. figure:: images/measure_line.png
-   :scale-latex: 30
+   :scale-latex: 50
     
    Měření délky - délky segmentů a celková délka.
 
@@ -287,7 +287,8 @@ všech délek.
          
          .. figure:: images/measure_units.png
             :class: middle
-               
+            :scale-latex: 50
+
             Nastavení měření - jednotky, symbologie, hodnoty.
 
 Identifikace prvku
@@ -303,7 +304,7 @@ chceme idetifikovat.
 
 .. figure:: images/feature_info.png
    :class: small
-   :scale-latex: 30
+   :scale-latex: 45
     
    Výsledek identifikace prvku.
 

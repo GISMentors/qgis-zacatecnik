@@ -59,9 +59,10 @@ Shapefile vrstva` nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit
 vrstvu --> Nová Shapefile vrstva`.
 
 .. figure:: images/new_layer.png
-    :scale: 75%
-
-    Nová vektorová vrstva.
+   :class: small
+   :scale-latex: 40
+   
+   Nová vektorová vrstva.
 
 Při vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový
 systém vrstvy a pokud je třeba tak přidáme nové atributy.
@@ -107,7 +108,8 @@ je v seznamu vrstev znázorněna s editační ikonkou |mActionToggleEditing|.
 
 .. figure:: images/edit_layers_icon.png
     :scale: 90%
-
+    :scale-latex: 40
+    
     Znázornění režimu editace vrstvy v seznamu vrstev.
 
 
@@ -260,11 +262,10 @@ Pokročílý režim přichytávání
 
 (:item:`Režim přichytávání...` |selectstring| - :option:`Pokročílé`)
 
-
-
 .. figure:: images/snapping_adv.png
+   :scale-latex: 60
 
-    Okno nastavení pokročílého režimu přichytávání.
+   Okno nastavení pokročílého režimu přichytávání.
 
 V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
 zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Avoid
@@ -272,6 +273,10 @@ intersection`, která zabraňuje polygonům jejich překryv, jednoduše
 řečeno - nový polygon můžeme zakreslit s přesahem do sousedícího
 polygonu, tento přesah bude potom automaticky vymazán. Takto snadno
 docílíme čistě navazujících polygonů.
+
+.. raw:: latex
+	 
+   \newpage
 
 .. figure:: images/snapping_avoid.png
 
@@ -301,7 +306,7 @@ Editace atributové tabulky
 Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`),
 můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy. V okně
 atributové tabulky lze editaci ukládat |mActionSaveAllEdits| :sup:`Uložit
-změny vrstvy` i mazat vybrané prvky |remove| :sup:`Vymazat vybrané`
+změny vrstvy` i mazat vybrané prvky |remove| :sup:`Vymazat vybrané`:
 
     - kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty
       tabulky
@@ -348,7 +353,8 @@ Levá část okna (:item:`Výraz`) je prostor zadání výrazu, v horní
 
 .. figure:: images/field_calc_exp.png
     :scale: 80%
-
+    :scale-latex: 40
+    
     Okno pro zápis výrazu.
 
 Pravá část okna (:item:`Funkce`) slouží k rychlému zadání funkcí
@@ -360,6 +366,11 @@ pole pomocí okna funkcí se provádí dvojklikem na položku.
 .. figure:: images/field_calc_fun.png
 
     Prohledávání funkcí v kategoriích.
+    :scale-latex: 45
+
+.. raw:: latex
+
+   \newpage
 
 Při zadávání parametru pole nebo hodnoty pole (:item:`Pole a hodnoty`)
 je možné nechat si zobrazit všechny hodnoty (tlačítko: :item:`všechny

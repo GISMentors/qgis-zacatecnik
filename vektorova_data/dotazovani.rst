@@ -34,7 +34,8 @@ a pravá část okna (:item:`Funkce`) slouží k rychlému přidání funkcí ne
 parametrů do výrazu.
 
 .. figure:: images/select_exp.png
-    
+    :scale-latex: 60
+
     Okno atributového dotazování.
 
 Po zadání našeho výrazu potvrdíme tlačítkem |mIconExpressionSelect|
@@ -69,7 +70,8 @@ do dialogového okna:
     
 .. figure:: images/select_exp_vzchu.png
    :class: middle
-                    
+   :scale-latex: 70
+   
    Výsledek atributového dotazu ("KAT" = 'OP' or "KAT" = 'NP') ve vrstvě 
    Velkoplošných zvláště chráněných území .
     
@@ -77,7 +79,8 @@ do dialogového okna:
     
 .. figure:: images/select_exp_vzchu_status.png
    :class: middle
-                    
+   :scale-latex: 55
+   
    Výpis počtu vybraných prvků (v levé části stavového řádku).
    
     
@@ -90,10 +93,10 @@ vztahu dvou vektorových vrstev. Funkce, která toto umožňuje je
 :menuselection:`Vektor --> Výzkumné nástroje --> Vybrat podle umístění...`
 
 .. figure:: images/select_by_location.png
-    :scale: 90 %
-    
-    Okno :guilabel:`Vybrat podle umístění`.
-
+   :scale: 90 %
+   :scale-latex: 55
+   
+   Okno :guilabel:`Vybrat podle umístění`.
 
 - :guilabel:`Vybrat vrstvy v` |selectstring| - vybereme vrstvu, ve které chceme 
   tvořit výběr 

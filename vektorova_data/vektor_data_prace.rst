@@ -74,8 +74,9 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
     - pro vytvoření kategorii kliknout na :guilabel:`klasifikovat`
 
 .. figure:: images/symbol_kat.png
+   :scale-latex: 60
 
-    Kategorizovaná symbologie.
+   Kategorizovaná symbologie.
 
 - :guilabel:`odstupňovaný` - vhodný pro spojité proměnné
 
@@ -83,9 +84,10 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
     - možnost režimu intervalů a počet tříd
 
 .. figure:: images/symbol_odst.png
+   :scale-latex: 60
 
-    Odstupňovaná symbologie.
-
+   Odstupňovaná symbologie.
+    
 Popisky
 ^^^^^^^
 
@@ -93,8 +95,9 @@ Kromě rozlišení prvků pomocí symbologie, lze také přidat k jednotlivým
 prvkům popisek na základě jednoho z atributů.
 
 .. figure:: images/labels.png
+   :scale-latex: 60
 
-    Vlastnosti popisků vrstvy.
+   Vlastnosti popisků vrstvy.
 
 Na této záložce je nejdříve nutné zaškrtnout políčko :item:`Vytvořit
 popisky vrstvy z` a poté pomocí rolovací nabídky vybrat zdrojový atribut
@@ -138,8 +141,9 @@ odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`).
 
 
 .. figure:: images/at_table.png
+   :scale-latex: 60
 
-    Atributová tabulka vrstvy.
+   Atributová tabulka vrstvy.
 
 .. tip:: Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
    nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 

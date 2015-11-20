@@ -24,7 +24,11 @@ Instalace v terminálu, která je níže podrobně rozepsaná, se skládá ze t�
 základních částí. První krok přidá konkrétní repozitář pro získání systému QGIS.
 Druhý krok slouží k aktualizaci seznamu repozitářu a jejich obsahu. Třetí krok
 je samotná instalace programu.
+
+.. raw:: latex
  
+	 \newpage
+
 .. notecmd:: Instalace QGIS
                
    .. code-block:: bash

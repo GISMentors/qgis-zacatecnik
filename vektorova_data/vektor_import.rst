@@ -27,7 +27,8 @@ ikonou |mActionAddOgrLayer| :sup:`přidání vektorové vrstvy` nebo pomocí
 klávesové zkratky :kbd:`Ctrl+Shift+V`.
 
 .. figure:: images/qgis_ogc_addvector_icons.png
-
+   :scale-latex: 40
+   
    Dialogové okno přidání vektorové vrstvy.
 
 Nejčastější volbou vkládání dat je soubor nebo adresář. Vložení jedné
@@ -38,7 +39,8 @@ potvrzení se označená vrstva načte do mapového okna.
 
 .. figure:: images/vector_import_layer.png
    :class: large
-        
+   :scale-latex: 85
+   
    Nahrání vektorové vrstvy do QGIS.
 
 Volba :item:`Adresář` umožňuje označit složku, ve které se nachází
@@ -66,8 +68,9 @@ výstupní formát (např. ``*.kml``, ``*.shp``, ``*.gpx``), souřadnicový
 systém vrstvy a další volitelné parametry.
 
 .. figure:: images/vector_saveas.png
+   :scale-latex: 45
 
-    Okno exportu vektorové vrstvy.
+   Okno exportu vektorové vrstvy.
 
 
 .. tip:: Pokud potřebujeme exportovat pouze část prvků vrstvy nebo

@@ -30,7 +30,7 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
 .. only:: latex
 
    .. figure:: images/intro_logo.png
-      :scale-latex: 90
+      :scale-latex: 150
 
       Logo projektu QGIS.
 
