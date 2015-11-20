@@ -230,10 +230,10 @@ získávání` se symbol myši změní na |reticle|. Po kliknutí do mapového
 okna se objeví malá červená tečka. Její souřadnice v souřadnicovém  systému
 projektu se zobrazí v okně vedle symbolu |askcor|. Na :num:`#zis-sur`
 jsou na ukázku zobrazené souřadnice vybraného bodu v souřadnicových
-systémech S-JTSK (Greenwich) Krovak a S-JTSK (Greenwich) Krovak East
-North. Ikona |askcorcopy| umožňuje souřadnice kopírovat do schránky v
+systémech s EPSG 4326 (WGS 84) a 5514 (S-JTSK (Greenwich) / Krovak East North). 
+Ikona |askcorcopy| umožňuje souřadnice kopírovat do schránky v
 podobě čtyř hodnot (pro :num:`#zis-sur` by to bylo
-``4494520.158,-2880372.147, 4746310.700,2931421.671``).
+``13.71955,49.85887,-796222.963,-1061087.065``).
 
 .. _zis-sur:
 
