@@ -204,6 +204,8 @@ V případě, že máme k dispozici soubor AutoCAD DXF (`Drawing Exchange Format
 umíme načíst díky zásuvnému modulu *Konvertor Dxf2Shp*. Již z názvu vyplývá, že
 soubor je převeden do formátu *Shapefile*.
 
+.. _dxf2shp:
+
 .. figure:: images/p_dxf2shp.png
    :scale: 70%
    :scale-latex: 45
@@ -220,8 +222,6 @@ textové značky` vytvoří navíc bodovou vrstvu s označeními a příslušná
 
 .. note:: Pokud se po spuštění modulu tlačítkem :item:`OK` zobrazí dialogové
    okno související se souřadnicovými systémy, systém nastavíme.
-
-.. _dxf2shp:
 
 |2| :sup:`Získání souřadnic`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
