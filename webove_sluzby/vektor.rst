@@ -16,7 +16,8 @@ Správce WFS spustíme v záložce :menuselection:`Vrstva --> Přidat vrstvu
 :sup:`Přidání vrstvu WFS`.
 
 .. figure:: images/qgis_ogc_addwfs_manager.png
-
+   :scale-latex: 45
+   
    Okno správce WFS služeb.
 
 Okno správce umožňuje přidání, odebrání služby a nahrání vrstev do 
@@ -29,6 +30,7 @@ přihlašovací údaje.
 
 .. figure:: images/qgis_ogc_addwfs_add.png
    :class: small
+   :scale-latex: 35
 
    Formulář přidání WFS služby.
 
@@ -67,5 +69,6 @@ dvojitým kliknutím nebo přetažením z datového katalogu (prohlížeče).
 
 .. figure:: images/qgis_ogc_addwfs_browser.png
    :class: small
- 
+   :scale-latex: 35
+   
    Práce s WFS službami v okně prohlížeče.

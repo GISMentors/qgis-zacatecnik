@@ -36,12 +36,16 @@ zobrazování jednotlivých panelů. *Vypnout/zapnout* panel je možné v menu
 jednotlivým panelům. Na obrázku :num:`#panels` je zobrazeno doporučené 
 nastavení zobrazených panelů.
 
+.. raw:: latex
+
+   \newpage
+
 .. _panels:
    
 .. figure:: images/panels.png
- 
+   :scale-latex: 45
+   
    Nastavení zobrazení a skrytí jednotlivých panelů.
-
  
 Obsah mapového okna
 ^^^^^^^^^^^^^^^^^^^
@@ -60,6 +64,10 @@ výřezu načte obsah mapového okna.
 Velikost výřezu a jeho polohu lze měnit pomocí tahání za jeho hrany
 nebo uchopení za jeho obsah a posun.
 
+.. raw:: latex
+
+   \newpage
+
 .. tip:: Výřez s mapovým oknem má vícero dalších nastavení. Rozšířené
    nastavení je dostupné pro každý prvek přidaný do mapového
    výstupu. V části :item:`Položky` se nachází přehled všech
@@ -69,7 +77,7 @@ nebo uchopení za jeho obsah a posun.
         
         .. figure:: images/map_items.png
            :class: small
-           :scale-latex: 30
+           :scale-latex: 38
  
            Výřez s obsahem mapového okna a jeho detailní nastavení.
            
@@ -87,7 +95,7 @@ okně :item:`Zobrazit rozsah v mapovém okně`.
 
 .. figure:: images/map_main_properties.png
    :class: small
-   :scale-latex: 30
+   :scale-latex: 40
  
    Nastavení měřítka a extentu pro mapové okno.
        
@@ -101,12 +109,13 @@ vykreslování.
              projektu.
 
 .. figure:: images/map_coordinates.png
-
+   :scale-latex: 75
+   
    Mapové okno s gridem a souřadnicemi.
        
 .. figure:: images/map_grids.png
    :class: small
-   :scale-latex: 30
+   :scale-latex: 50
         
    Nastavení gridu pro mapové okno.
  
@@ -118,8 +127,8 @@ zda se zobrazuje, pozici vůči rámu, orientaci a řazení.
 
 .. figure:: images/map_decoration.png
    :class: small
-   :scale-latex: 30
- 
+   :scale-latex: 50
+		 
    Nastavení zobrazování popisových souřadnic gridu.
 
 
@@ -214,13 +223,14 @@ symboly pro začátek a konec šipky.
 
 .. figure:: images/arrow.png
    :class: small
-   :scale-latex: 30 
+   :scale-latex: 45
  
    Detailní nastavení směrové šipky.
 
 
 Měřítko
 ^^^^^^^
+
 Běžnou součástí výstupu je také měřítko. To lze přidat pomocí ikony |add_scale|
 :sup:`Přidat nové grafické měřítko` a vložením prvku do výstupu. Výběr stylu a
 další nastavení je dostupné v záložce :item:`Vlastnosti položky` viz
@@ -234,7 +244,7 @@ jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měří
    :class: small
    :scale-latex: 30 
  
-   Detailní nastavení směrové šipky.
+   Detailní nastavení měřítka.
 
 
 Další prvky

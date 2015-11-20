@@ -59,7 +59,8 @@ který byl popsaný výše nastavíme všeobecnou transparentnost rastrové vrst
 
 .. figure:: images/rst_hillshade.png
    :class: middle
-
+   :scale-latex: 65
+   
    Vytvoření prostorového efektu dat díky stínovanému reliéfu.
 
 .. note::

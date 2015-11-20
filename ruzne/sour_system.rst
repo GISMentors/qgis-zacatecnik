@@ -25,9 +25,9 @@ začít nové projekty s tímto SRS*.
 
 .. figure:: images/set_crs.png
    :class: large
-   :scale-latex: 80
+   :scale-latex: 55
  
-   Menu pro nastavení CRS projektu.
+   Dialog pro nastavení CRS projektu.
 
 Přes ikonku |set_crs| :sup:`Vyberte SRS` se vyvolá menu pro výběr souřadnicového
 systému. Konkrétní souřadnicový systém je možné vybrat z nabídky nebo použít
@@ -35,8 +35,9 @@ filtrovací pole pro rychlejší vyhledání. Filtrovat lze pomocí EPSG kódu n
 také dle názvu souřadnicového systému.
 
 .. figure:: images/choose_crs.png
- 
-       Okno pro výběr CRS.
+   :scale-latex: 55 
+   
+   Okno pro výběr CRS.
 
 .. important:: Takováto změna se projeví při dalším spuštění systému.
     

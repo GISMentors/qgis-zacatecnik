@@ -26,6 +26,7 @@ exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
 
 .. figure:: images/saveas.png
    :class: large
+   :scale-latex: 85
    
    Export rastrové vrstvy pomocí :item:`Uložit rastrovou vrstvu jako ...`.
 
@@ -37,6 +38,7 @@ souřadnicový systém a ostatní dle potřeby.
 .. _menu-prevod:
 
 .. figure:: images/menu_prevod.png
+   :scale-latex: 45
    
    Export rastrové vrstvy do jiného formátu.
 

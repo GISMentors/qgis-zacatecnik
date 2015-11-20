@@ -39,9 +39,9 @@ Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
 
 .. only:: html
 
-..   .. tip::
-      Text školení je dostupný i v tisknutelné formě `PDF
-      <./skoleni-qgis-zacatecnik.pdf>`_.
+.. tip::
+   Text školení je dostupný i v tisknutelné formě `PDF
+   <./skoleni-qgis-zacatecnik.pdf>`_.
    
 .. important:: Školení je zaměřeno na aktuální LTS verzi `QGIS 2.8 Wien
                <https://www.qgis.org/en/site/forusers/download.html>`_. V
@@ -49,7 +49,22 @@ Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
                předpokládáme zapnutou *českou lokalizaci*, viz kapitola
                :ref:`volba-lokalizace`.
 
+.. index::
+   pair: datové sady; ke stažení
+
+.. notedata::
+
+   *Data ke školení* je stažitelná jako `zip archiv
+   <http://training.gismentors.eu/geodata/qgis/data.zip>`_ (435
+   MB), rastrová data `DMT
+   <http://training.gismentors.eu/geodata/qgis/dmt.zip>`_
+   (97 MB).
+
 .. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
+
+.. raw:: latex
+
+   \newpage
 
 QGIS je psán v programovacím jazyce C++ a uživatelské prostředí je
 naprogramováno pomocí knihovny Qt. Díky použití těchto rozšířených
@@ -61,6 +76,7 @@ daty v rastrové anebo vektorové reprezentaci knihovnu `GDAL
 spektrem formátů a webových služeb OGC, ale i jiných formátů.
 
 .. figure:: images/intro_qgis.png
+   :scale-latex: 65
 
    Ukázka uživatelského rozhraní QGIS.
 
@@ -71,6 +87,7 @@ V tiskovém modulu lze vytvářet z nahraných dat výstupy se všemy kartografi
 náležitostmi. Výsledky je možné exportovat do formátu PDF nebo obrázku.
 
 .. figure:: images/intro_map.png
+   :scale-latex: 65
 
    Ukázka mapového výstupu vytvořeného v QGIS.
 
@@ -84,7 +101,8 @@ souborů ve formátu Výměnného formátu katastru slouží plugin `VFK
 <http://freegis.fsv.cvut.cz/gwiki/VFK_/_QGIS_plugin>`_.
 
 .. figure:: images/intro_vfk.png
-
+   :scale-latex: 75
+   
    Ukázka práce s katastrálními daty v QGIS pomocí VFK pluginu.
 
 .. only:: html

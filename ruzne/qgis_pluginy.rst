@@ -82,6 +82,10 @@ zásuvné moduly` (|plug1| :sup:`Spravovat a instalovat zásuvné moduly`).
 Spustí se dialogové okno (:num:`#vse`), které slouží na prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
 
+.. raw:: latex
+
+   \newpage
+
 .. _vse:
 
 .. figure:: images/p_vse.png
@@ -143,6 +147,7 @@ modulů.
 
     .. figure:: images/p_rad.png
        :scale: 55%
+       :scale-latex: 60
 
        Možnosti seřazení zásuvných modulů.
 
@@ -153,8 +158,6 @@ modulů.
 
 .. tip:: Pokud známe alespoň přibližný název konkrétního modulu, při vyhledávání
    může vyplnění políčka :item:`Hledat` v dialogovém okně.   
-
- 
 
 Příklady zásuvních modulů
 =========================
@@ -201,6 +204,12 @@ V případě, že máme k dispozici soubor AutoCAD DXF (`Drawing Exchange Format
 umíme načíst díky zásuvnému modulu *Konvertor Dxf2Shp*. Již z názvu vyplývá, že
 soubor je převeden do formátu *Shapefile*.
 
+.. figure:: images/p_dxf2shp.png
+   :scale: 70%
+   :scale-latex: 45
+   
+   Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile.
+
 Po načítení modulu ze :ref:`správce zásuvných modulů <spravca-plugin>`
 se po kliknutí na ikonu |1| objeví dialogové okno, kde je zapotřebí
 nastavit vstupní ``*.dxf`` soubor, název, cestu a typ nového ``*.shp``
@@ -213,11 +222,6 @@ textové značky` vytvoří navíc bodovou vrstvu s označeními a příslušná
    okno související se souřadnicovými systémy, systém nastavíme.
 
 .. _dxf2shp:
-
-.. figure:: images/p_dxf2shp.png
-   :scale: 70%
-
-   Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile.
 
 |2| :sup:`Získání souřadnic`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -263,14 +267,16 @@ republiky zobrazenou na :num:`path-vector` dle typu.
 
 .. figure:: images/p_path_nast.png
    :class: small
-                    
+   :scale-latex: 35
+
    Nastavení zásuvného modulu cestného grafu.
 
 .. _path-vector:
 
 .. figure:: images/p_path_vector.png
    :scale: 60%
-
+   :scale-latex: 90
+   
    Silnice České republiky zobrazené dle jejich typu.
 
 V panelu :item:`Nejkratší cesta` použijeme |2| a v mapovém okně kliknutím zvolíme
@@ -281,6 +287,10 @@ podobě polylinie, která se dá exportovat jako nová vektorová vrstva (použi
 :item:`Export`).Tlačítko :item:`Vyčistit` slouží na smazání obsahu políček.
 Postup je znázorněný na :num:`#path`.
 
+.. raw:: latex
+
+   \newpage
+	 
 .. _path:
 
 .. figure:: images/p_path.png
@@ -296,6 +306,7 @@ Postup je znázorněný na :num:`#path`.
     
     .. figure:: images/p_path_menu.png
        :class: small
+       :scale-latex: 40
        
        Zobrazení dialogového okna na výpočet nejkratší cesty.
 
@@ -350,7 +361,8 @@ příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
 
 .. figure:: images/olp.png
    :scale: 70%
-
+   :scale-latex: 40
+   
    OpenLayers Plugin z lišty menu.
 
 .. _p-olm:

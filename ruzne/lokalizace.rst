@@ -11,10 +11,10 @@ V současné době je možné vybrat si ze skoro 30 jazykových variant programu
    <https://qgis.org/en/site/getinvolved/translate.html>`_.
                 
    .. figure:: images/translations.png
+	       :scale-latex: 85
 
                Popis systému pro tvorbu lokalizací.
-                            
-          
+
 .. _volba-lokalizace:
 
 Volba lokalizace
@@ -24,15 +24,17 @@ QGIS se spustí v lokalizaci dle nastavení operačního systému.
 
 .. figure:: images/cs_lokalizace.png
    :class: large
-           
+   :scale-latex: 85
+   
    Lokalizace QGIS v českém jazyce.
 
 Lokalizaci je však možné nastavit z menu :menuselection:`Nastavení -->
 Možnosti...` záložka :item:`Lokalizace`
 
 .. figure:: images/set_language.png
+   :scale-latex: 55
 
-            Menu pro nastavení jazykové lokalizace.
+   Menu pro nastavení jazykové lokalizace.
           
 Aby se změna nastavení jazyka projevila, je nutné systém QGIS vypnout. Po opětovném 
 spuštění se změna lokalizace již projeví. 

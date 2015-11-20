@@ -53,7 +53,7 @@ pomocí tlačítka :item:`Přidat` se dá vytvořit nový.
 
 .. figure:: images/add_new_composer.png
    :class: small
-   :scale-latex: 30
+   :scale-latex: 45
  
    Zakládání nového mapového výstupu.
 
@@ -82,13 +82,14 @@ nastavení najdeme v pravé části v záložce :item:`Kompozice` část
 
 .. figure:: images/composer_plain.png
    :class: large
-   :scale-latex: 80
+   :scale-latex: 70
  
    Okno nového mapového výstupu.
 
 .. figure:: images/paper_settings.png
    :class: small
-               
+   :scale-latex: 40
+   
    Zakládání nového mapového výstupu - vlastnosti podkladu.
 
 Zde se nastaví velikost "papíru", jeho orientace, barva pozadí a

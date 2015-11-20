@@ -30,6 +30,10 @@ Správce WMS a WMTS spustíme v záložce :menuselection:`Vrstva --> Přidat vrs
 --> Přidat vrstvu WMS`, ikonou |mActionAddWmsLayer| 
 :sup:`Přidat vrstvu WMS/WMTS` nebo pomocí klávesové zkratky :kbd:`Ctrl+Shift+W`.
 
+.. raw:: latex
+
+   \newpage
+
 .. figure:: images/qgis_ogc_addwms_manager.png
 
    Okno správce WM(T)S služeb.
@@ -46,6 +50,7 @@ název služby, připojovací URL a potvrdíme tlačítkem :item:`Ok`.
 
 .. figure:: images/qgis_ogc_addwms_add_edit.png
    :class: small
+   :scale-latex: 30
    
    Okno přidání/editace WMS vrstvy.
 
@@ -126,5 +131,6 @@ dvojitým kliknutím nebo přetažením z datového katalogu (prohlížeče).
 
 .. figure:: images/qgis_ogc_addwms_browser.png
    :class: small
- 
+   :scale-latex: 30
+   
    Práce s WMS/WMTS službami v okně prohlížeče.

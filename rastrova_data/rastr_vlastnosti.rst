@@ -44,7 +44,8 @@ závislosti na měřítku (:num:`#obecneraster`).
 .. _obecneraster:
 
 .. figure:: images/obecne_raster.png
-
+   :scale-latex: 50
+   
    Vlastnosti rastové vrstvy.
 
 Styl
@@ -54,6 +55,10 @@ Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okn�
 možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
 být barvy invertované, dá se vylepšit kontrast, sytost, jas, rosah
 vykreslovaných hodnot (:num:`#stylraster`).
+
+.. raw:: latex
+   
+   \newpage
 
 .. _stylraster:
 
@@ -117,7 +122,8 @@ taky nastavení *no data* hodnoty (tzv. žádná data).
 
 .. figure:: images/rst_transparency.png
    :class: middle
-        
+   :scale-latex: 65
+
    Možnosti nastavení průhlednosti rastrové vrstvy.
 
 
