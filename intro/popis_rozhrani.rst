@@ -51,7 +51,10 @@
 .. |mActionIdentify| image:: ../images/icon/mActionIdentify.png
     :width: 1.5em
 
-    
+
+.. index::
+   single: rozhraní - popis
+
 Popis rozhraní
 --------------
 
@@ -68,11 +71,17 @@ Na obrázku níže jsou označeny základní části systému.
    :scale-latex: 80
 
    Základní části systému QGIS (detailní popis částí je níže).
+
+.. index::
+   pair: mapové okno; rozhraní - popis
    
 Mapové okno (1)
 ===============
 
 V tomto okně se vykreslují všechny mapové vrstvy.
+
+.. index::  
+   pair: přepínač vrstev; rozhraní - popis
 
 Přepínač vrstev / Panel prohlížeče (2)
 ======================================
@@ -87,11 +96,18 @@ Panel prohlížeče slouží k zjednodušení přístupu ke geodatům. Umožňuj
 přistupovat k různým typům dat, např. vektorovým, rastrovým, databázím,
 službám.
 
+.. index::  
+   pair: postranní menu; rozhraní - popis
+
 
 Postranní menu (3)
 ==================
 
 Menu s nástroji pro přidávání vrstev, nebo vytváření nových.  
+
+.. index::
+   single: stavový řádek
+   pair: stavový řádek; rozhraní - popis
 
 Stavový řádek (4)
 =================
@@ -104,6 +120,9 @@ Jednotlivé části jsou posány níže.
    :scale-latex: 80
    
    Stavový řádek systému QGIS.
+
+.. index::
+   pair: souřadnice mapového okna; stavový řádek
 
 Souřadnice
 ^^^^^^^^^^ 
@@ -118,7 +137,10 @@ slouží ikona |extents| :sup:`Přepnout rozšíření a zobrazení pozice myši
 .. figure:: images/coordinates_extent.png
     
    Možnosti zobrazení souřadnic ukazatele myši nebo rozsahu mapového okna.
-  
+
+.. index::
+   pair: měřítko; stavový řádek
+
 Měřítko
 ^^^^^^^   
 
@@ -143,6 +165,9 @@ předdefinovaného seznamu měřítek.
             
             Menu pro upravení předdefinovaných měřítek.
 
+.. index::
+   pair: překreslování mapového okna; stavový řádek
+
 Překreslování mapového okna
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^           
 
@@ -162,6 +187,9 @@ překreslovat. Pro takovéto nastavení je v stavovém menu položka s checkboxe
 
 .. tip:: Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné 
    provést stisknutím klávesy :item:`Esc`.
+
+.. index::
+   pair: souřadnicový systém mapového okna; stavový řádek
 
 Souřadnicový systém
 ^^^^^^^^^^^^^^^^^^^        
@@ -185,6 +213,11 @@ vedle ikony |geographic|.
    |log| :sup:`Zprávy`. Tyto zprávy jsou podstatné zejména v případě
    neočekávaného chování systému.
 
+.. index::
+   single: hlavní menu   
+   see: hlavní menu; rozhraní - popis
+
+
 Hlavní menu (5)
 ===============
 
@@ -201,6 +234,11 @@ V menu se nachází zejména nástroje pro správu systému a jeho nastavení.
 Nástrojová lišta obsahuje základní nástroje pro práci s projektem a vrstvami.
 Vypínání a zapínání jednotlivých nástrojových lišt a oken lze provádět pravým
 kliknutím na panel a výběrem z nabídky.
+
+.. index::
+   single: pohyb v okně   
+   see: pohyb v okně; rozhraní - popis
+
 
 Základní nástroje pro pohyb v okně 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -220,6 +258,11 @@ Základní nástroje pro pohyb v okně
         .. tip:: Při posunu pomocí stiknutí kolečka myši můžeme mít
            aktivní jinou funkci, např. výběr, vytváření nových prvků atd.
 - |mActionRefresh| :sup:`Obnovit` - obnoví zobrazení všech nahraných dat
+
+.. index::
+   single: výběr v mapě  
+   see: výběr v mapě; rozhraní - popis
+
 
 Základní nástroje výběru
 ^^^^^^^^^^^^^^^^^^^^^^^^
@@ -245,6 +288,11 @@ prvky, se kterými hodláme dále pracovat. Tato označení se nazývá
 
     - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
     - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
+
+.. index::
+   single: měření   
+   see: měření; rozhraní - popis
+
 
 Měření v mapovém okně
 ^^^^^^^^^^^^^^^^^^^^^
@@ -290,6 +338,11 @@ všech délek.
             :scale-latex: 50
 
             Nastavení měření - jednotky, symbologie, hodnoty.
+
+.. index::
+   single: identifikace prvku   
+   see: identifikace prvku; rozhraní - popis
+
 
 Identifikace prvku
 ^^^^^^^^^^^^^^^^^^

@@ -11,6 +11,9 @@ je možné jej spustit a začít okamžitě pracovat.
       instalace <nativni-instalator-data>`. Testovací data je možné
       `stáhnout <http://qgis.org/downloads/data/>`_ i samostatně.
 
+.. index::
+   single: spuštění QGIS
+
 Spuštění systému QGIS
 =====================
 
@@ -71,7 +74,11 @@ přizpůsobuje dle aktuálního nastavení funkčnosti. Popis jednotlivých
                    :scale-latex: 40
                             
                    Výběr z vícero verzí QGIS v MS Windows.
-                              
+
+.. index::
+   single: QGIS projekt
+
+
 QGIS projekt
 ============
 

@@ -15,6 +15,10 @@ kapitole jsou popsány základní principy připojení a exportu geodat v
 programu QGIS. Práce s konkrétními formáty budou potom uvedeny v
 samostatných kapitolách.
 
+.. index::
+   pair: import dat; rozhraní - popis
+
+
 .. _vectorimport:
 
 Přidávání dat
@@ -63,6 +67,10 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 
    Přidání vrstvy přetažením souboru do mapového okna nebo seznamu
    vrstev.
+
+.. index::
+   pair: export dat; rozhraní - popis
+
 
 Export dat
 ----------
