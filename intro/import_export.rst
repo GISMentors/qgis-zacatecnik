@@ -71,7 +71,6 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 .. index::
    pair: export dat; rozhraní - popis
 
-
 Export dat
 ----------
 Pro export vrstvy nebo její částí se používá funkce

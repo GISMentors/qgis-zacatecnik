@@ -1,3 +1,6 @@
+.. index::
+   see: tvůrce map
+
 Tvůrce mapy (Map Composer)
 ==========================
 
@@ -31,6 +34,9 @@ používaných formátech, jakými jsou např. PDF, PNG, JPEG a
 další. Takovýmto způsobem je možné prezentovat jednotlivá data, jejich
 kombinaci nebo výsledky různých analýz i bez potřeby speciálních
 kartografických systémů.
+
+.. index::
+   pair: tvůrce map; správce tvorby mapy
 
 
 Správce tvorby mapy
@@ -72,6 +78,10 @@ Pokud chcete otevřít existující mapový výstup, tak jej v seznamu
 *Správce tvorby mapy* vyberte a tlačítkem :item:`Zobrazit` otevřete.
 Všechny existující mapové výstupy jsou přístupné také z menu
 :menuselection:`Projekt --> Tvorba map`.
+
+.. index::
+   pair: tvůrce map; nastavení pracovní plochy
+
 
 Nastavení pracovní plochy
 -------------------------

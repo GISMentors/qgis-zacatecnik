@@ -7,6 +7,8 @@
 .. |as_svg| image:: ../images/icon/mActionSaveAsSVG.png
    :width: 1.5em
 
+.. index::
+   single: export mapového výstupu
 
 Export
 ------

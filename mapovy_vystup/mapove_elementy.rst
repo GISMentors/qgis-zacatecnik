@@ -21,12 +21,19 @@
 .. |remove| image:: ../images/icon/symbologyRemove.png
    :width: 1.5em 
 
+.. index::
+   single: mapové elementy
+
 Prvky mapového výstupu
 ----------------------
 
 Mapový výstup může obsahovat různé součásti (mapové pole, legenda,
 titulek, měřítko a jiné). Nastavení celého výstupu je popsáno krok po
 kroku až po export výstupu.
+
+.. index::
+   pair: tvůrce map; nastavení pracovních panelů
+
 
 Zobrazení pracovních panelů
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -47,6 +54,10 @@ nastavení zobrazených panelů.
    
    Nastavení zobrazení a skrytí jednotlivých panelů.
  
+.. index::
+   pair: mapové elementy; obsah mapového okna
+
+
 Obsah mapového okna
 ^^^^^^^^^^^^^^^^^^^
 
@@ -98,7 +109,10 @@ okně :item:`Zobrazit rozsah v mapovém okně`.
    :scale-latex: 40
  
    Nastavení měřítka a extentu pro mapové okno.
-       
+
+.. index::
+   pair: mapové elementy; souřadnicová mřížka 
+
 Častou součástí mapového výřezu je i souřadnicová mřížka - grid s
 popisem souřadnic. Grid lze přidat a nastavit v položce
 :item:`Mřížky`. Lze nastavit styl gridu (linie, křížky, jiné symboly,
@@ -131,7 +145,9 @@ zda se zobrazuje, pozici vůči rámu, orientaci a řazení.
 		 
    Nastavení zobrazování popisových souřadnic gridu.
 
-
+.. index::
+   pair: mapové elementy; titulek
+   
 Titulek
 ^^^^^^^
 
@@ -144,6 +160,8 @@ Jednotlivá nastavení pro obsah tohoto pole jsou opět dostupná přes
 záložku :item:`Vlastnosti položky`. Lze zde nastavit samotný text, jeho
 font, zarovnání, orámování, pozadí a další různé.
 
+.. index::
+   pair: mapové elementy; legenda
 
 Legenda
 ^^^^^^^
@@ -174,6 +192,8 @@ změnit text i zařazení jednotlivých položek v rámci legendy samotné.
    spokojeni. V případě, že nechcete změny v nastavení provést ručně, můžete 
    legendu vygenerovat z dat znova pomocí tlačítka :item:`Aktualizovat vše`.
 
+.. index::
+   pair: mapové elementy; atributová tabulka
 
 Atributová tabulka
 ^^^^^^^^^^^^^^^^^^
@@ -211,6 +231,9 @@ tabulky do mapového výstupu.
 
    Nastavení zobrazení atributové tabulky v mapovém výstupu.
  
+.. index::
+   pair: mapové elementy; směrová růžice
+
 Směrová šipka (růžice)
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -227,6 +250,8 @@ symboly pro začátek a konec šipky.
  
    Detailní nastavení směrové šipky.
 
+.. index::
+   pair: mapové elementy; měřítko
 
 Měřítko
 ^^^^^^^
@@ -246,6 +271,8 @@ jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měří
  
    Detailní nastavení měřítka.
 
+.. index::
+   pair: mapové elementy; další prvky mapového výstupu
 
 Další prvky
 ^^^^^^^^^^^
