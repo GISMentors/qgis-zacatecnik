@@ -64,7 +64,7 @@ zóny...`
 .. figure:: images/prost_buffer_seg.png
    :scale-latex: 45
 
-   Obalová zóny s rozdílným počtem segmentů pro aproximaci 
+   Obalová zóna s rozdílným počtem segmentů pro aproximaci 
    (vlevo 5, vpravo 50).
 
 - |checkbox|:option:`Vzdálenost obalové zóny`  - vzdálenost v metrech 
