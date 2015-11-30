@@ -8,3 +8,4 @@ Různé
    lokalizace
    sour_system
    qgis_pluginy
+   ukoly
