@@ -1,6 +1,9 @@
 .. |gdal| image:: ../images/icon/gdal.png
    :width: 1.5em
 
+.. index::
+   pair: rastrová data; export dat
+
 Export rastrových údajů
 ^^^^^^^^^^^^^^^^^^^^^^^
 

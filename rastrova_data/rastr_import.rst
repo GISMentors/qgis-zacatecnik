@@ -3,6 +3,9 @@
 .. |mIconZoom| image:: ../images/icon/mIconZoom.png
    :width: 1.5em
 
+.. index::
+   pair: rastrová data; import dat
+
 Nahrání rastrových údajů
 ^^^^^^^^^^^^^^^^^^^^^^^^
 Rastrová data je možné do prostředí QGIS přidat kliknutím na tlačítko
