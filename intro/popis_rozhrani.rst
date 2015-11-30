@@ -55,6 +55,8 @@
 .. index::
    single: rozhraní - popis
 
+.. _popisrozhrani:
+
 Popis rozhraní
 --------------
 
