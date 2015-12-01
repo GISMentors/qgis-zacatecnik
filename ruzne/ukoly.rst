@@ -41,10 +41,10 @@ Data:
 
 Riešenie:
 ^^^^^^^^^
-1. Nástrojom *Buffer* vytvoriť obalovú zónu 100 km okolo Prahy
-2. Nástrojom *Dissolve* zlúčiť prvky triedy, tj. vytvoriť triedu hranice ČR
-3. Nástrojom *Intersect* vytvoriť prienik vrstiev
-4. V novom atribútovom poli vypočítať percentá vybranej plochy k sume pôvodnej 
+1. Nástrojom *Buffer* vytvoríme obalovú zónu 100 km okolo Prahy.
+2. Nástrojom *Dissolve* zlúčime prvky triedy, t.j. vytvoríme triedu hranice ČR.
+3. Nástrojom *Intersect* vytvoríme prienik vrstiev.
+4. V novom atribútovom poli vypočítame percentá vybranej plochy k sume pôvodnej. 
 
 Postup v programovom prostredí QGIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -99,8 +99,8 @@ a povolíme |box_yes| :sup:`Přidat výsledek do mapového okna` a potvrdíme ``
    Tvorba obalovej zóny veľkosti 100 km okolo hraníc Prahy.
 
 V mapovom okne pribudne nová vektorová vrstva :map:`P100km`. Nastavíme jej štýl 
-(pravým tlačidlom myši :menuselection:`Vlastnosti --> Styl`), napr. ako to je na 
-:num:`#u-p100km-styl` (transparená výplň, ohraničenie červené a široké 1 mm).
+:menuselection:`pravým tlačidlom myši --> Vlastnosti --> Styl`, napríklad ako na 
+:num:`#u-p100km-styl` transparentná výplň, ohraničenie červené a široké 1 mm.
 
 .. _u-p100km-styl:
 
@@ -140,7 +140,6 @@ stlačením |mIconEditable|.
 .. note:: Výraz nemusíme písať ručne. V strednom poli dialógového okna kalkulačky
 	  je množstvo položiek. V našom prípade vyberieme 
 	  :menuselection:`Geometrie --> $area (dvojklik)`.
-
 
 .. _u-area:
 
