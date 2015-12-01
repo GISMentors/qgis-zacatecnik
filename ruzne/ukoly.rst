@@ -35,7 +35,7 @@ Priestorové analýzy
 ^^^^^^^^^^
 Koľko percent územia ČR je vo vzdialenosti 100 km od hraníc Prahy?
 
-Data: 
+Dáta: 
 ^^^^^
 :map:`kraje.shp`
 
@@ -173,4 +173,88 @@ výsledok ``"area"/"area_sum * 100"``. Ten je na :num:`#vysledok-u1` (48,6%
    :scale: 70%
         
    Výpočet percentuálneho zastúpenia územia vo vzdialenosti do 100 km od Prahy.
+
+Úloha č.2:
+^^^^^^^^^^
+Nájdite vhodné parcely pre výstavbu nového stavebného objektu. Kvôli prípadnému 
+hluku musia byť vzdialené aspoň 300 m od železníc, ich výmera musí byť minimálne 
+20 ha a mali by sa nachádzať mimo mestskej časti Praha 6, 7 a Praha 8.
+
+.. _data-ul2:
+
+Dáta: 
+^^^^^
+:map:`spravniobvody.shp, parcely.shp, zeleznice.shp`
+
+Riešenie:
+^^^^^^^^^
+1. Nástrojom *Dissolve* zlúčime správne obvody a vytvoríme vrstvu celej Prahy.
+2. Nástrojom *Clip* orežeme vrstvu železníc podľa hranice Prahy.
+3. Nástrojom *Buffer* vytvoríme obalovú zónu 300 m okolo pražských železníc.
+4. Vyberieme správne obvody Praha 6, 7 a 8 a nástrojom *Union* ich zjednotíme
+   s obalovou zónou okolo železníc (negatívne oblasti)
+5. Vyberieme všetky parcely s rozlohou väčšou ako 20 ha.
+6. Z vybraných parciel vyberieme tie, ktoré sú v negatívnej oblasti.
+7. Nástrojom *Difference* vytvoríme vrstvu vhodných parciel pre nový stavebný 
+   objekt.
+
+Postup v programovom prostredí QGIS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Do mapového okna cez |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu` pridáme
+potrebné :ref:`dáta <data-ul2>`. 
+
+Vídíme, že vrstva železníc je pre celú Českú republiku. Časti mimo Prahy 
+nebudeme potrebovať, preto vrstvu orežeme. Musíme si vytvoriť hranicu mesta. 
+Z menu :menuselection:`Vektor --> Nástroje geoporcessingu` vyberieme nástroj 
+|dissolve| :sup:`Rozpustit`, kde ako vstupnú vektorovú vrstvu nastavíme 
+:map:`spravniobvody`, pole rozpustenia na ``--- Rozpustit vše ---`` 
+a výstup uložíme ako :map:`praha`.
+Potom použijeme nástroj na orezanie |clipper| :sup:`Ořezávač`. Vstupom bude 
+vektor železníc Českej republiky, orezávať budeme podľa novovytvorenej hranice 
+Prahy :map:`Praha` a výsledok uložíme ako :map:`zeleznice_p`, teda železnice 
+len na území Prahy. Dialógové okná nástrojov *Dissolve* a *Clip* sú na 
+:num:`#dissolve-clip`. Následne môžeme každej vrstve 
+:ref:`nastaviť štýl<styl-vrstvy>`, čím si vstupné dáta prehľadne zobrazíme 
+(:num:`#vstup-ul2`). 
+
+.. _dissolve-clip:
+
+.. figure:: images/u-dissolve-clip.png
+   :scale: 55%
+        
+   Použitie nástrojov *Dissolve* a *Clip*.
+
+.. note:: Na :num:`#vstup-ul2` je pre vektorovú vrstvu :map:`parcely` 
+	  nastavená jednoduchá priehľadná výplň a šedé ohraničenie 
+	  s transparentnosťou ``10%``, symbol vrstvy :map:`zeleznice_p` 
+	  je nastavený na ``Resident``, správne obvody 
+	  sú farebne kategorizované podľa poľa :dbcolumn:`nazev`, pričom hodnoty
+	  tohto atribútu sú vykreslené.
+
+.. _vstup-ul2:
+
+.. figure:: images/u-vstup-ul2.png
+   :class: middle
+        
+   Správne obvody, parcely a železnice Prahy.
+
+.. tip:: V tomto kroku je dobré si projekt uložiť, a to pomocou 
+	 :menuselection:`Projekt --> Uložiť`. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
