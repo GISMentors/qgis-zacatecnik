@@ -32,6 +32,8 @@
    :width: 1.5em
 .. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
    :width: 1.5em
+.. |clipper| image:: ../images/icon/clip.png
+   :width: 1.5em
 
 
 Úkoly
@@ -212,12 +214,11 @@ Riešenie:
 Postup v programovom prostredí QGIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Do mapového okna cez |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu` pridáme
-potrebné :ref:`dáta <data-ul2>`. 
-
-Vídíme, že vrstva železníc je pre celú Českú republiku. Časti mimo Prahy 
+Do mapového okna pomocou |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu` 
+importujeme potrebné :ref:`dáta <data-ul2>`. Vídíme, že vrstva železníc je pre 
+celú Českú republiku. Časti mimo Prahy však 
 nebudeme potrebovať, preto vrstvu orežeme. Musíme si vytvoriť hranicu mesta. 
-Z menu :menuselection:`Vektor --> Nástroje geoporcessingu` vyberieme nástroj 
+Z menu :menuselection:`Vektor --> Nástroje geoprocessingu` vyberieme nástroj 
 |dissolve| :sup:`Rozpustit`, kde ako vstupnú vektorovú vrstvu nastavíme 
 :map:`spravniobvody`, pole rozpustenia na ``--- Rozpustit vše ---`` 
 a výstup uložíme ako :map:`praha`.
