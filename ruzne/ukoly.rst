@@ -192,6 +192,8 @@ Dáta:
 ^^^^^
 :map:`spravniobvody.shp, parcely.shp, zeleznice.shp`
 
+.. _riešenie-ul2:
+
 Riešenie:
 ^^^^^^^^^
 1. Nástrojom *Dissolve* zlúčime správne obvody a vytvoríme vrstvu celej Prahy.
@@ -300,4 +302,20 @@ Využijeme geoprocessný nástroj |union| :sup:`Sjednotit`. Vznikne výstup
         
    Zjednotenie negatívnych oblastí :fignote:`(1)`, spojenie do súvislého 
    vektora :fignote:`(2)` a zobrazenie v mapovom okne :fignote:`(3)`.
+
+Pokračujeme krokom č. 5, viď. :ref:`Riešenie<riešenie-ul2>`. Postup je obdobný
+ako pri výbere správnych obvodov pomocou |mIconExpressionSelect| 
+:sup:`Vybrat prvky pomocí vzorce`. Výraz ``"vymeraparc" > 200000`` je ten, 
+ktorým vyberieme parcely s výmerou nad 20 ha (:num:`#parcely20ha`).
+
+.. _parcely20ha:
+
+.. figure:: images/u-parcely20ha.png
+   :scale: 70%
+        
+   Výber parciel s výmerou nad 20 hektárov.
+
+
+
+
 
