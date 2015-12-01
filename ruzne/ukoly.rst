@@ -82,9 +82,14 @@ analýzu |buffer| :sup:`Buffer`. Z menu lišty vyberieme
 :menuselection:`Vektor --> Nástroje geoprocessingu --> Obalové zóny`.
 V dialógovom okne nastavíme vstupnú vrstvu, t.j. :map:`kraje`, zaklikneme
 |box_yes| :sup:`Použít pouze vybrané prvky`, keďže chceme obalovú zónu len 
-okolo konkrétneho kraja, mieru aproximácie necháme predvolenú, nastavíme však 
-veľkosť obalovej zóny v metroch, názov výstupného súboru a povolíme |box_yes| 
-:sup:`Přidat výsledek do mapového okna` a potvrdíme ``OK`` (:num:`#u-p100km`).  
+okolo konkrétneho kraja. Mieru aproximácie zvýšime na ``70``, pretože 
+predvolená hodnota ``5`` segmentov je málo na to, aby obalová zóna odpovedala 
+kruhu. Ďalej nastavíme veľkosť obalovej zóny v metroch, názov výstupného súboru 
+a povolíme |box_yes| :sup:`Přidat výsledek do mapového okna` a potvrdíme ``OK`` 
+(:num:`#u-p100km`).  
+
+.. note:: Maximálny možný počet segmentov na aproximáciu je ``99``. Výhodou je 
+	  síce presnejší výsledok, no výpočty môžu byť pomalšie.
 
 .. _u-p100km:
 
@@ -155,18 +160,18 @@ vrstvy :map:`hraniceCR` a :map:`P100km`. Výsledok je na :num:`#intersect-map`.
         
    Výsledok nástroja *Intersect*, územie Českej republiky vo vzdialenosti 100 km od hraníc Prahy.
 
-Posledným krokom je určenie percentuálnoho zastúpenia plochy republiky
+Posledným krokom je určenie percentuálneho zastúpenia plochy republiky
 do 100 km od Prahy. Najprv vypočítame plochu prieniku :map:`hraniceCR_intersect`,
 pričom postupujeme podobne ako pri ploche vrstvy :map:`hraniceCR` (vytvoríme
 stĺpec s názvom :dbcolumn:`area`). Potom pridáme nový atribút 
 :dbcolumn:`procento`, do ktorého pomocou mapovej kalkulačky vložíme 
-výsledok ``"area"/"area_sum * 100"``. Ten je na :num:`#vysledok-u1` (48,1% 
+výsledok ``"area"/"area_sum * 100"``. Ten je na :num:`#vysledok-u1` (48,6% 
 územia Českej republiky je vo vzdialenosti do 100 km od hraníc Prahy).
 
 .. _vysledok-u1:
 
 .. figure:: images/u-vysledok-u1.png
-   :scale: 60%
+   :scale: 70%
         
    Výpočet percentuálneho zastúpenia územia vo vzdialenosti do 100 km od Prahy.
 
