@@ -25,12 +25,12 @@
 Úkoly
 -----
 
-Prostorové analýzy
-==================
+Priestorové analýzy
+===================
 
 Úloha č.1:
 ^^^^^^^^^^
-Kolik procent území ČR je ve vzdálenosti do 100 km od hranic Prahy?
+Koľko percent územia ČR je vo vzdialenosti 100 km od hraníc Prahy?
 
 Data: 
 ^^^^^
@@ -43,9 +43,8 @@ Riešenie:
 3. Nástrojom *Intersect* vytvoriť prienik vrstiev
 4. V novom atribútovom poli vypočítať percentá vybranej plochy k sume pôvodnej 
 
-Výsledek: 
-^^^^^^^^^
-48,1%
+Postup v programovom prostredí QGIS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Po spustení programu QGIS sa zobrazí štandardné rozhranie, viď. :ref:`Popis 
 rozhraní <popisrozhrani>`. Predvolene je súradnicový systém projektu nastavený
