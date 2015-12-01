@@ -20,6 +20,9 @@
    :width: 1.5em
 .. |intersect| image:: ../images/icon/intersect.png
    :width: 1.5em
+.. |mActionSaveEdits| image:: ../images/icon/mActionSaveEdits.png
+   :width: 1.5em
+
 
 
 Úkoly
@@ -91,7 +94,7 @@ veľkosť obalovej zóny v metroch, názov výstupného súboru a povolíme |box
    Tvorba obalovej zóny veľkosti 100 km okolo hraníc Prahy.
 
 V mapovom okne pribudne nová vektorová vrstva :map:`P100km`. Nastavíme jej štýl 
-(pravým tlačidlom myši :menuselection:`Vlastnosti --> Styl`), napr. ako na 
+(pravým tlačidlom myši :menuselection:`Vlastnosti --> Styl`), napr. ako to je na 
 :num:`#u-p100km-styl` (transparená výplň, ohraničenie červené a široké 1 mm).
 
 .. _u-p100km-styl:
@@ -101,8 +104,9 @@ V mapovom okne pribudne nová vektorová vrstva :map:`P100km`. Nastavíme jej š
         
    Nastavenie štýlu obalovej zóny.
 
-Ďalej vytvoríme vrstvu, ktorá je zjednotením všetkých krajov, resp. vrstvu 
-Českej republiky. Využijeme nástroj geoprocessingu |dissolve| :sup:`Rozpustit`. 
+Ďalej vytvoríme zjednotenie všetkých krajov, resp. vrstvu Českej republiky.
+Budeme ju potrebovať na určenie plochy celej krajiny. Využijeme nástroj 
+geoprocessingu |dissolve| :sup:`Rozpustit`. 
 Predtým ešte zrušíme vybraný kraj Prahy pomocou 
 |mIconSelectRemove| :sup:`Zrušit výber prvků ve všech vrstvách`. Výstupnú 
 vektorovú vrstvu nazveme :map:`hraniceCR`. Dialógové okno je na 
@@ -119,16 +123,19 @@ Otvoríme atribútovú tabuľku vrstvy :map:`hraniceCR` (pravým ``Otevřít
 atributovou tabulku``) a kvôli prehľadnosti vymažeme 
 všetky stĺpce okrem prvého tak, že najprv zapneme editovací mód kliknutím na 
 |mIconEditable| :sup:`Prepnout režim editaci`, potom zvolíme 
-|mActionDeleteAttribute| :sup:`Smazat sloupec` a označíme ich názvy.
-Potom použijeme kalkulačku polí, t.j. |mActionCalculateField| :sup:`Otevřít 
-kalkulátor polí` a vytvoríme nový stĺpec s názvom :dbcolumn:`area_sum`, 
-do ktorého vložíme hodnotu plochy polygónu. Typ výstupného poľa nastavíme ako 
-``real``, šírku napr. ``10`` a ako výraz napíšeme ``$area`` (:num:`#u-area`).
-Zmeny uložíme opätovným stlačením |mIconEditable|.
+|mActionDeleteAttribute| :sup:`Smazat sloupec` a označíme názvy tých atribútov, 
+ktoré chceme vymazať. Potom použijeme kalkulačku polí, t.j. ikona v hornej lište
+atibútovej tabuľky |mActionCalculateField| :sup:`Otevřít kalkulátor polí`. 
+Vytvoríme nové pole s názvom :dbcolumn:`area_sum` (ako desatinné číslo), 
+do ktorého vložíme hodnotu plochy polygónu. Typ výstupného poľa nastavíme teda 
+ako ``real``, šírku napr. ``15`` a ako výraz napíšeme ``$area`` (:num:`#u-area`).
+Zmeny uložíme ikonou |mActionSaveEdits| a editovací režim vypneme opätovným 
+stlačením |mIconEditable|.
 
-Nepotrebné stĺpce vymažeme aj vo vrstve :map:`P100km`.
-Potom použijeme nástroj |intersect| :sup:`Průsečník`, kde vstupom budú 
-vrstvy :map:`hraniceCR` a :map:`P100km`. Výsledok je na :num:`#intersect-map`.
+.. note:: Výraz nemusíme písať ručne. V strednom poli dialógového okna kalkulačky
+	  je množstvo položiek. V našom prípade vyberieme 
+	  :menuselection:`Geometrie --> $area (dvojklik)`.
+
 
 .. _u-area:
 
@@ -137,20 +144,24 @@ vrstvy :map:`hraniceCR` a :map:`P100km`. Výsledok je na :num:`#intersect-map`.
         
    Vytvorenie atribútu s výmerou Českej republiky.
 
+Nepotrebné stĺpce vymažeme aj vo vrstve :map:`P100km`.
+Potom použijeme nástroj |intersect| :sup:`Průsečník`, kde vstupom budú 
+vrstvy :map:`hraniceCR` a :map:`P100km`. Výsledok je na :num:`#intersect-map`.
+
 .. _intersect-map:
 
 .. figure:: images/u_intersect-map.png
    :class: middle
         
-   Územie Českej republiky vo vzdialenosti 100 km od hraníc Prahy.
+   Výsledok nástroja *Intersect*, územie Českej republiky vo vzdialenosti 100 km od hraníc Prahy.
 
 Posledným krokom je určenie percentuálnoho zastúpenia plochy republiky
 do 100 km od Prahy. Najprv vypočítame plochu prieniku :map:`hraniceCR_intersect`,
 pričom postupujeme podobne ako pri ploche vrstvy :map:`hraniceCR` (vytvoríme
 stĺpec s názvom :dbcolumn:`area`). Potom pridáme nový atribút 
 :dbcolumn:`procento`, do ktorého pomocou mapovej kalkulačky vložíme 
-výsledok ``"area"/"area_sum * 100"``, ktorý je na :num:`#vysledok-u1` 
-( 48,1% územia Českej republiky je vo vzdialenosti do 100 km od hraníc Prahy).
+výsledok ``"area"/"area_sum * 100"``. Ten je na :num:`#vysledok-u1` (48,1% 
+územia Českej republiky je vo vzdialenosti do 100 km od hraníc Prahy).
 
 .. _vysledok-u1:
 
