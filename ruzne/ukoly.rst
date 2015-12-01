@@ -206,9 +206,8 @@ Riešenie:
 4. Vyberieme správne obvody Praha 6, 7 a 8 a nástrojom *Union* ich zjednotíme
    s obalovou zónou okolo železníc (negatívne oblasti)
 5. Vyberieme všetky parcely s rozlohou väčšou ako 20 ha.
-6. Z vybraných parciel vyberieme tie, ktoré sú v negatívnej oblasti.
-7. Nástrojom *Difference* vytvoríme vrstvu vhodných parciel pre nový stavebný 
-   objekt.
+6. Z vybraných parciel vyberieme tie, ktoré nie sú v negatívnej oblasti.
+7. Výsledok zobrazíme.
 
 Postup v programovom prostredí QGIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
