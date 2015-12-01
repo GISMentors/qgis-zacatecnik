@@ -28,6 +28,10 @@
    :width: 1.5em
 .. |union| image:: ../images/icon/union.png
    :width: 1.5em
+.. |select_location| image:: ../images/icon/select_location.png
+   :width: 1.5em
+.. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
+   :width: 1.5em
 
 
 Úkoly
@@ -183,7 +187,7 @@ výsledok ``"area"/"area_sum * 100"``. Ten je na :num:`#vysledok-u1` (48,6%
 Úloha č.2:
 ^^^^^^^^^^
 Nájdite vhodné parcely pre výstavbu nového stavebného objektu. Kvôli prípadnému 
-hluku musia byť vzdialené aspoň 300 m od železníc, ich výmera musí byť minimálne 
+hluku musia byť vzdialené aspoň 500 m od železníc, ich výmera musí byť minimálne 
 20 ha a mali by sa nachádzať mimo mestskej časti Praha 6, 7 a Praha 8.
 
 .. _data-ul2:
@@ -275,7 +279,8 @@ a týmto spôsobom napíšeme do ľavého okna výraz ``"nazev" = 'Praha 6' OR
 ktorým z vrstvy správnych obvodov vyberieme Prahu 6, Prahu 7 a Prahu 8. 
 Potom pravým tlačidlo myši na vrstvu :map`spravniobvody` výber uložíme pomocou
 `Uložiť jako`, nazveme ju :map:`praha_neg`. Dbáme na to, aby políčko 
-|box_no| :sup:`Uložit pouze vybrané prvky` bolo zašktnuté |box_yes|.
+|box_no| :sup:`Uložit pouze vybrané prvky` bolo zašktnuté |box_yes| a 
+skontrolujeme aj súradnicový systém s EPSG:5514.
 
 .. note:: Operátor ``OR`` na nachádza v položke ``Operátory``.
 
@@ -306,7 +311,9 @@ Využijeme geoprocessný nástroj |union| :sup:`Sjednotit`. Vznikne výstup
 Pokračujeme krokom č. 5, viď. :ref:`Riešenie<riešenie-ul2>`. Postup je obdobný
 ako pri výbere správnych obvodov pomocou |mIconExpressionSelect| 
 :sup:`Vybrat prvky pomocí vzorce`. Výraz ``"vymeraparc" > 200000`` je ten, 
-ktorým vyberieme parcely s výmerou nad 20 ha (:num:`#parcely20ha`).
+ktorým vyberieme parcely s výmerou nad 20 ha (:num:`#parcely20ha`). Vybrané
+prvky uložíme ako nový vektor :map:`parcely_20ha` a výber zrušíme ikonkou
+|mIconSelectRemove|.
 
 .. _parcely20ha:
 
@@ -315,7 +322,35 @@ ktorým vyberieme parcely s výmerou nad 20 ha (:num:`#parcely20ha`).
         
    Výber parciel s výmerou nad 20 hektárov.
 
+Z týchto parciel je potrebné vyselektovať tie, ktoré nie sú v negatívnej oblasti.
+Najprv označíme všetky prvky vrstvy :map:`parcely_25ha`, napríklad vyberieme 
+všetky ``gml_id`` pomocou |mIconExpressionSelect| 
+:sup:`Vybrat prvky pomocí vzorce`. Následne z hlavnej lišty spustíme dialógové 
+okno |select_location| :sup:`Vybrat podle umíštění`. Nájdeme ho v položke 
+:menuselection:`Vektor --> Výzkumné nástroje`. Zaškrtneme |box_yes| 
+:sup:`Include input features that intersect the selection features`, |box_yes| 
+:sup:`Zahrnout vstupní prvky, které překrývají/protínají prvky výběru` a keďže
+chceme práve tie parcely, ktoré zadané podmienky nespĺňajú, zvolíme možnosť
+``odstraněním z aktuálneho výběru`` (:num:`#vybrat-umisteni`).
 
+.. _vybrat-umisteni:
 
+.. figure:: images/u-vybrat-umisteni.png
+   :scale: 70%
+        
+   Výber parciel podľa umiestnenia metódou odstránenia z aktuálneho výberu.
 
+Výsledok (podmnožina :map:`parcely_20ha`) uložíme pomocou ``Uložit jako``, 
+a znázorníme na podklade pôvodného záujmového územia (:num:`#vysledok-ul2`).
+Pre lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`.
 
+.. note:: Pre zvýraznenie výsledku je priehľadnosť vrstvy správnych celkov 
+	  nastavená na ``70`` 
+	  (:menuselection:`Vlastnosti --> Styl --> Průhlednost vrstvy`).
+
+.. _vysledok-ul2:
+
+.. figure:: images/u-vysledok-u2.png
+   :class: middle
+        
+   Vhodné parcely pre výstavbu nového stavebného objektu.
