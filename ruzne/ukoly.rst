@@ -48,20 +48,21 @@ Postup v programovom prostredí QGIS
 
 Po spustení programu QGIS sa zobrazí štandardné rozhranie, viď. :ref:`Popis 
 rozhraní <popisrozhrani>`. Predvolene je súradnicový systém projektu nastavený
-na WGS 84, čo vidíme dole vpravo (EPSG:4326). Budeme pracovať s dátami
-Českej republiky, kde sa obvykle používa súradnicový systém S-JTSK (EPSG:5514).
+na WGS 84 s EPSG:4326, čo vidíme v stavovom riadku dole vpravo. Budeme pracovať 
+s dátami Českej republiky, kde sa obvykle používa súradnicový systém S-JTSK 
+(EPSG:5514).
 
 V prvom kroku preto nastavíme súradnicový systém projektu. Z menu lišty
 vyberieme :menuselection:`Nastavení --> Možnosti`. Otvorí sa dialógové okno,
 kde v záložke :item:`SRS` nastavíme ``Vždy začít nové projekty s tímto SRS`` na
-``EPSG:5514 - S-JTSK (Greenwich)/Křovak East North`` a to kliknutím ikonku |srs|
-:sup:`Vyberte SRS`. Tento súradnicový systém nastavíme aj pre nové vrstvy
+``EPSG:5514 - S-JTSK (Greenwich)/Křovak East North`` a to kliknutím na ikonku 
+|srs| :sup:`Vyberte SRS`. Tento súradnicový systém nastavíme aj pre nové vrstvy
 v položke ``SRS pro nové vrstvy`` a ``Použít výchozí SRS``. Na záver povolíme
 |box_yes| ``"on-the-fly" SRS transformaci`` v prípade, že by sme v projekte 
 pracovali s vrstvami súradnicového systému, ktorý je odlišný od systému projektu.
 Postup je opísaný v časti :ref:`Souřadnicový systém<sour-system>`.
 
-V ďalšom kroku klinknutím na |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu` 
+V ďalšom kroku kliknutím na |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu` 
 do mapového okna pridáme vrstvu :map:`kraje.shp`. Tlačidlom |mActionSelect| 
 :sup:`Vybrat prvky oblastí nebo jednoklikem` klikneme do mapy na miesto, 
 kde sa nachádza kraj Praha (:num:`#u-select-praha`).
@@ -89,9 +90,9 @@ veľkosť obalovej zóny v metroch, názov výstupného súboru a povolíme |box
         
    Tvorba obalovej zóny veľkosti 100 km okolo hraníc Prahy.
 
-V mapovom okne pribudne vrstva :map:`P100km`. Nastavíme jej štýl (pravým 
-tlačidlom myši :menuselection:`Vlastnosti --> Styl`), napr. ako na 
-:num:`#u-p100km-styl`.
+V mapovom okne pribudne nová vektorová vrstva :map:`P100km`. Nastavíme jej štýl 
+(pravým tlačidlom myši :menuselection:`Vlastnosti --> Styl`), napr. ako na 
+:num:`#u-p100km-styl` (transparená výplň, ohraničenie červené a široké 1 mm).
 
 .. _u-p100km-styl:
 
