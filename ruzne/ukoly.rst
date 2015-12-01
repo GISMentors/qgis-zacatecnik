@@ -190,7 +190,7 @@ Riešenie:
 ^^^^^^^^^
 1. Nástrojom *Dissolve* zlúčime správne obvody a vytvoríme vrstvu celej Prahy.
 2. Nástrojom *Clip* orežeme vrstvu železníc podľa hranice Prahy.
-3. Nástrojom *Buffer* vytvoríme obalovú zónu 300 m okolo pražských železníc.
+3. Nástrojom *Buffer* vytvoríme obalovú zónu 500 m okolo pražských železníc.
 4. Vyberieme správne obvody Praha 6, 7 a 8 a nástrojom *Union* ich zjednotíme
    s obalovou zónou okolo železníc (negatívne oblasti)
 5. Vyberieme všetky parcely s rozlohou väčšou ako 20 ha.
@@ -221,7 +221,7 @@ len na území Prahy. Dialógové okná nástrojov *Dissolve* a *Clip* sú na
 .. _dissolve-clip:
 
 .. figure:: images/u-dissolve-clip.png
-   :scale: 55%
+   :scale: 70%
         
    Použitie nástrojov *Dissolve* a *Clip*.
 
@@ -242,6 +242,20 @@ len na území Prahy. Dialógové okná nástrojov *Dissolve* a *Clip* sú na
 .. tip:: V tomto kroku je dobré si projekt uložiť, a to pomocou 
 	 :menuselection:`Projekt --> Uložiť`. 
 
+Teraz pristúpime k tvorbe obalovej zóny okolo pražských železníc, na čo 
+využijeme analýzu |buffer| :sup:`Buffer`. V jeho dialógovom okne nastavíme 
+vstup, mieru aproximácie na ``70``, veľkosť obalovej zóny na ``500 m``, 
+zaklikneme |box_yes| :sup:`Rozpustit výsledky obalové zóny`, aby 
+bola obalová zóna celistvá a výstup uložíme ako :map:`zeleznice_pb`, 
+povolíme |box_yes| :sup:`Přidat výsledek do mapového okna` a spustíme ``OK``, 
+viď. :num:`#zeleznice-buffer`).
+
+.. _zeleznice-buffer:
+
+.. figure:: images/u-zeleznice-buffer.png
+   :scale: 70%
+        
+   Obalová zóna 500 m okolo vektorovej vrstvy pražských železníc.
 
 
 
