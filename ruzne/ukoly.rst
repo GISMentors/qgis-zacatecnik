@@ -2,6 +2,8 @@
    :width: 1.5em
 .. |box_yes| image:: ../images/icon/checkbox.png
    :width: 1.5em
+.. |box_no| image:: ../images/icon/checkbox_unchecked.png
+   :width: 1.5em
 .. |mIconVectorLayer| image:: ../images/icon/mIconVectorLayer.png
    :width: 1.5em
 .. |mActionSelect| image:: ../images/icon/mActionSelect.png
@@ -22,7 +24,10 @@
    :width: 1.5em
 .. |mActionSaveEdits| image:: ../images/icon/mActionSaveEdits.png
    :width: 1.5em
-
+.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
+   :width: 1.5em
+.. |union| image:: ../images/icon/union.png
+   :width: 1.5em
 
 
 Úkoly
@@ -157,7 +162,8 @@ vrstvy :map:`hraniceCR` a :map:`P100km`. Výsledok je na :num:`#intersect-map`.
 .. figure:: images/u_intersect-map.png
    :class: middle
         
-   Výsledok nástroja *Intersect*, územie Českej republiky vo vzdialenosti 100 km od hraníc Prahy.
+   Výsledok nástroja *Intersect*, územie Českej republiky vo vzdialenosti 100 km 
+   od hraníc Prahy.
 
 Posledným krokom je určenie percentuálneho zastúpenia plochy republiky
 do 100 km od Prahy. Najprv vypočítame plochu prieniku :map:`hraniceCR_intersect`,
@@ -257,18 +263,41 @@ viď. :num:`#zeleznice-buffer`).
         
    Obalová zóna 500 m okolo vektorovej vrstvy pražských železníc.
 
+Pokračujeme výberom správnych obvodov, kde sa parcela pre nový stavebný objekt
+nemá nachádzať. V okne vrstiev označíme vektor :map:`spravniobvody` a v menu 
+klikneme na |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`. 
+V strednej časti dialógového okna nájdeme položku ``Pole a hodnoty``, dvojklikom
+zvolíme ``nazev``, v pravej časti klikneme na ``všechny jedinečné hodnoty`` 
+a týmto spôsobom napíšeme do ľavého okna výraz ``"nazev" = 'Praha 6' OR 
+"nazev" = 'Praha 7' OR "nazev" = 'Praha 8'`` (:num:`#vyraz678`), 
+ktorým z vrstvy správnych obvodov vyberieme Prahu 6, Prahu 7 a Prahu 8. 
+Potom pravým tlačidlo myši na vrstvu :map`spravniobvody` výber uložíme pomocou
+`Uložiť jako`, nazveme ju :map:`praha_neg`. Dbáme na to, aby políčko 
+|box_no| :sup:`Uložit pouze vybrané prvky` bolo zašktnuté |box_yes|.
 
+.. note:: Operátor ``OR`` na nachádza v položke ``Operátory``.
 
+.. _vyraz678:
 
+.. figure:: images/u-vyraz678.png
+   :scale: 60%
+        
+   Výber správnych obvodov, kde vhodné parcely nebudeme hľadať.
 
+.. note:: Po exporte zrušíme vybrané obvody Prahy pomocou |mIconSelectRemove| 
+	  :sup:`Zrušit výber prvků ve všech vrstvách`.
 
+Nasleduje spojenie "negatívnych" zón. Cieľom je dostať vektorovú vrstvu, 
+ktorá je zjednotením obalovej zóny železníc a neželaných správnych obvodov.
+Využijeme geoprocessný nástroj |union| :sup:`Sjednotit`. Vznikne výstup 
+(napríklad :map:`oblasti_neg1`), na ktorý opäť použijeme |dissolve| 
+:sup:`Rozpustit`. Výsledok pomenujeme :map:`oblasti_neg` (:num:`#neg`).
 
+.. _neg:
 
-
-
-
-
-
-
-
+.. figure:: images/u-neg.png
+   :class: middle
+        
+   Zjednotenie negatívnych oblastí :fignote:`(1)`, spojenie do súvislého 
+   vektora :fignote:`(2)` a zobrazenie v mapovom okne :fignote:`(3)`.
 
