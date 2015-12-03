@@ -268,7 +268,7 @@ vstup, mieru aproximácie na ``70``, veľkosť obalovej zóny na ``500 m``,
 zaklikneme |box_yes| :sup:`Rozpustit výsledky obalové zóny`, aby 
 bola obalová zóna celistvá a výstup uložíme ako :map:`zeleznice_pb`, 
 povolíme |box_yes| :sup:`Přidat výsledek do mapového okna` a spustíme ``OK``, 
-viď. :num:`#zeleznice-buffer`).
+viď. :num:`#zeleznice-buffer`.
 
 .. _zeleznice-buffer:
 
