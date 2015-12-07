@@ -55,7 +55,11 @@ Riešenie:
 2. Nástrojom *Dissolve* zlúčime kraje a vytvoríme vrstvu hranice ČR.
 3. Vypočítame plochu ČR.
 4. Nástrojom *Intersect* vytvoríme prienik obalovej zóny s hranicou ČR.
-5. Vypočítame plochu prieniku a percentá vybranej plochy k sume pôvodnej. 
+5. Vypočítame plochu prieniku a percentá vybranej plochy k sume pôvodnej.
+
+.. note:: Postup riešenia v programe ArcGIS Desktop je dostupný
+	  `TU <http://maps.fsv.cvut.cz/frvsgis/web.html>`_. S Open Source 
+	  programom QGIS však dosiahneme presne rovnaké výsledky.
 
 Postup v programovom prostredí QGIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
