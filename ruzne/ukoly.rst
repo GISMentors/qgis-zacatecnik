@@ -199,48 +199,51 @@ hranic Prahy).
         
    Výpočet procentuálního zastoupení území ve vzdálenosti do 100 km od Prahy.
 
-Úloha č.2:
-^^^^^^^^^^
+Úkol č.2:
+^^^^^^^^^
+Najděte vhodné parcely pro výstavbu nového stavebního objektu. Kvůli připadnému
+hluku musí být vzdálené alespoň 500 m od železnic, jejich výměra musí být
+minimálně 20 ha a měli by se nacházet mimo městské části Praha 6, 7 a Praha 8.
+
 Nájdite vhodné parcely pre výstavbu nového stavebného objektu. Kvôli prípadnému 
 hluku musia byť vzdialené aspoň 500 m od železníc, ich výmera musí byť minimálne 
 20 ha a mali by sa nachádzať mimo mestskej časti Praha 6, 7 a Praha 8.
 
 .. _data-ul2:
 
-Dáta: 
+Data: 
 ^^^^^
 :map:`spravniobvody.shp, parcely.shp, zeleznice.shp`
 
 .. _riešenie-ul2:
 
-Riešenie:
-^^^^^^^^^
-1. Nástrojom *Dissolve* zlúčime správne obvody a vytvoríme vrstvu celej Prahy.
-2. Nástrojom *Clip* orežeme vrstvu železníc podľa hranice Prahy.
-3. Nástrojom *Buffer* vytvoríme obalovú zónu 500 m okolo pražských železníc.
-4. Vyberieme správne obvody Praha 6, 7 a 8 a nástrojom *Union* ich zjednotíme
-   s obalovou zónou okolo železníc (negatívne oblasti)
-5. Vyberieme všetky parcely s rozlohou väčšou ako 20 ha.
-6. Z vybraných parciel vyberieme tie, ktoré nie sú v negatívnej oblasti.
-7. Výsledok zobrazíme.
+Řešení:
+^^^^^^^
+1. Nástrojem *Dissolve* sloučíme správní obvody a vytvoříme vrstvu celé Prahy.
+2. Nástrojem *Clip* ořežeme vrstvu železnic podle hranic Prahy.
+3. Nástrojem *Buffer* vytvoříme obalovou zónu 500 m kolem pražských železnic.
+4. Vybereme správní obvody Praha 6, 7 a 8 a nástrojem *Union* je sjednotíme s
+   obalovou zónou kolem železnic (negativní oblasti).
+5. Vybereme všechny parcely s rozlohou větší než 20 ha.
+6. Z vybraných parcel vybereme ty, které nejsou v negativní oblasti.
+7. Výsledek zobrazíme.   
 
-Postup v programovom prostredí QGIS
+Postup v programovém prostředí QGIS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Do mapového okna pomocou |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu` 
-importujeme potrebné :ref:`dáta <data-ul2>`. Vídíme, že vrstva železníc je pre 
-celú Českú republiku. Časti mimo Prahy však 
-nebudeme potrebovať, preto vrstvu orežeme. Musíme si vytvoriť hranicu mesta. 
-Z menu :menuselection:`Vektor --> Nástroje geoprocessingu` vyberieme nástroj 
-|dissolve| :sup:`Rozpustit`, kde ako vstupnú vektorovú vrstvu nastavíme 
-:map:`spravniobvody`, pole rozpustenia na ``--- Rozpustit vše ---`` 
-a výstup uložíme ako :map:`praha`.
-Potom použijeme nástroj na orezanie |clipper| :sup:`Ořezávač`. Vstupom bude 
-vektor železníc Českej republiky, orezávať budeme podľa novovytvorenej hranice 
-Prahy :map:`Praha` a výsledok uložíme ako :map:`zeleznice_p`, teda železnice 
-len na území Prahy. Dialógové okná nástrojov *Dissolve* a *Clip* sú na 
-:num:`#dissolve-clip`. Následne môžeme každej vrstve 
-:ref:`nastaviť štýl<styl-vrstvy>`, čím si vstupné dáta prehľadne zobrazíme 
+Do mapového okna pomocí |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu`
+importujeme potřebná :ref:`data <data-ul2>`. Vidíme, že vrstva železnic je pro
+celou Českou republiku. Části mimo Prahy ale nebudeme potřebovat, proto vrstvu
+ořežeme. Musíme si vytvořit hranici města. Z menu  :menuselection:`Vektor --> 
+Nástroje geoprocessingu` vybereme nástroj |dissolve| :sup:`Rozpustit`, kde jako
+vstupní vektorovou vrstvu nastavíme :map:`spravniobvody`, pole rozpuštěí na 
+``--- Rozpustit vše ---`` a výstup uložíme jako :map:`praha`.
+Potom použijeme nástroj na ořezání |clipper| :sup:`Ořezávač`. Vstupem bude
+vektor železnic České republiky, ořezávat budeme podle nově vytvořené hranice
+Prahy :map:`Praha` a výsledek uložíme jako :map:`zeleznice_p`, teda železnice
+jen na území Prahy. Dialogová okna nástrojů *Dissolve* a *Clip* jsou na 
+:num:`#dissolve-clip`. Následně můžeme každé vrstvě 
+:ref:`nastavit styl<styl-vrstvy>`, čím si vstupní data přehledně zobrazíme 
 (:num:`#vstup-ul2`). 
 
 .. _dissolve-clip:
@@ -248,117 +251,119 @@ len na území Prahy. Dialógové okná nástrojov *Dissolve* a *Clip* sú na
 .. figure:: images/u-dissolve-clip.png
    :scale: 70%
         
-   Použitie nástrojov *Dissolve* a *Clip*.
+   Použití nástrojů *Dissolve* a *Clip*.
 
-.. note:: Na :num:`#vstup-ul2` je pre vektorovú vrstvu :map:`parcely` 
-	  nastavená jednoduchá priehľadná výplň a šedé ohraničenie 
-	  s transparentnosťou ``10%``, symbol vrstvy :map:`zeleznice_p` 
-	  je nastavený na ``Resident``, správne obvody 
-	  sú farebne kategorizované podľa poľa :dbcolumn:`nazev`, pričom hodnoty
-	  tohto atribútu sú vykreslené.
+.. note:: Na :num:`#vstup-ul2` je pro vektorovou vrstvu :map:`parcely` nastavena
+   jednoduchá průhledná výplň a šedé ohraničenie s transparentností ``10%``, 
+   symbol vrstvy :map:`zeleznice_p` je nastavený na ``Resident``, správní obvody
+   jsou barevně kategorizované dle pole :dbcolumn:`nazev`, pričemž hodnoty tohto
+   atributu jsou vykresleny.
+
 
 .. _vstup-ul2:
 
 .. figure:: images/u-vstup-ul2.png
    :class: middle
         
-   Správne obvody, parcely a železnice Prahy.
+   Správní obvody, parcely a železnice Prahy.
 
-.. tip:: V tomto kroku je dobré si projekt uložiť, a to pomocou 
-	 :menuselection:`Projekt --> Uložiť`. 
+.. tip:: V tomto kroku je dobré si projekt uložit, a to pomocí 
+	 :menuselection:`Projekt --> Uložit`. 
 
-Teraz pristúpime k tvorbe obalovej zóny okolo pražských železníc, na čo 
-využijeme analýzu |buffer| :sup:`Buffer`. V jeho dialógovom okne nastavíme 
-vstup, mieru aproximácie na ``70``, veľkosť obalovej zóny na ``500 m``, 
-zaklikneme |box_yes| :sup:`Rozpustit výsledky obalové zóny`, aby 
-bola obalová zóna celistvá a výstup uložíme ako :map:`zeleznice_pb`, 
-povolíme |box_yes| :sup:`Přidat výsledek do mapového okna` a spustíme ``OK``, 
-viď. :num:`#zeleznice-buffer`.
-
+Teď přistoupíme k tvorbě obalové zóny kolem pražských železnic, na co využijeme
+analýzu |buffer| :sup:`Buffer`. V jednom dialogovém okně nastavíme vstup, míru
+aproximace na ``70``,  velikost obalové zóny na ``500 m``, zaklikneme |box_yes| 
+:sup:`Rozpustit výsledky obalové zóny`, aby byla obalová zóna celistvá a výstup
+uložíme jako :map:`zeleznice_pb`, povolíme |box_yes| :sup:`Přidat výsledek do 
+mapového okna` a spustíme ``OK``, viz. :num:`#zeleznice-buffer`.
+ 
 .. _zeleznice-buffer:
 
 .. figure:: images/u-zeleznice-buffer.png
    :scale: 70%
         
-   Obalová zóna 500 m okolo vektorovej vrstvy pražských železníc.
+   Obalová zóna 500 m kolem vektorové vrstvy pražských železnic.
 
-Pokračujeme výberom správnych obvodov, kde sa parcela pre nový stavebný objekt
-nemá nachádzať. V okne vrstiev označíme vektor :map:`spravniobvody` a v menu 
-klikneme na |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`. 
-V strednej časti dialógového okna nájdeme položku ``Pole a hodnoty``, dvojklikom
-zvolíme ``nazev``, v pravej časti klikneme na ``všechny jedinečné hodnoty`` 
-a týmto spôsobom napíšeme do ľavého okna výraz ``"nazev" = 'Praha 6' OR 
-"nazev" = 'Praha 7' OR "nazev" = 'Praha 8'`` (:num:`#vyraz678`), 
-ktorým z vrstvy správnych obvodov vyberieme Prahu 6, Prahu 7 a Prahu 8. 
-Potom pravým tlačidlo myši na vrstvu :map`spravniobvody` výber uložíme pomocou
-`Uložiť jako`, nazveme ju :map:`praha_neg`. Dbáme na to, aby políčko 
-|box_no| :sup:`Uložit pouze vybrané prvky` bolo zašktnuté |box_yes| a 
-skontrolujeme aj súradnicový systém s EPSG:5514.
+Pokračujeme výběrem správních obvodů, kde se parcela pro nový stavební objekt
+nemá nacházet. V okně vrstev označíme vektor :map:`spravniobvody`  a v menu
+klikneme na |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`.  V
+střední části dialogového okna najdeme položku ``Pole a hodnoty``, dvouklikem
+zvolíme ``nazev``, v pravé části klikneme na ``všechny jedinečné hodnoty``  a
+tímto způsobem napíšeme do levého okna výraz  ``"nazev" = 'Praha 6' OR 
+"nazev" = 'Praha 7' OR "nazev" = 'Praha 8'`` (:num:`#vyraz678`), kterým z vrstvy
+správních obvodů vybereme Prahu 6, 7 a 8. Pak přes klikntuí pravého tlačítka na
+vrstvu :map:`spravniobvody` výběr uložíme pomocí `Uložit jako`, nazveme ji 
+:map:`praha_neg`. Dbáme na to, aby políčko |box_no| :sup:`Uložit pouze vybrané 
+prvky` bylo zaškrtnuté |box_yes| a  zkontrolujeme i souřadnicový systém s
+EPSG:5514.
 
-.. note:: Operátor ``OR`` na nachádza v položke ``Operátory``.
+
+.. note:: Operátor ``OR`` se nachází v položce ``Operátory``.
 
 .. _vyraz678:
 
 .. figure:: images/u-vyraz678.png
    :scale: 60%
         
-   Výber správnych obvodov, kde vhodné parcely nebudeme hľadať.
+   Výběr správních obvodů, kde budeme hledat vhodné parcely.
 
-.. note:: Po exporte zrušíme vybrané obvody Prahy pomocou |mIconSelectRemove| 
-	  :sup:`Zrušit výber prvků ve všech vrstvách`.
+.. note:: Po exportu zrušíme vybrané obvody Prahy pomocí |mIconSelectRemove| 
+	  :sup:`Zrušit výběr prvků ve všech vrstvách`.
 
-Nasleduje spojenie "negatívnych" zón. Cieľom je dostať vektorovú vrstvu, 
-ktorá je zjednotením obalovej zóny železníc a neželaných správnych obvodov.
-Využijeme geoprocessný nástroj |union| :sup:`Sjednotit`. Vznikne výstup 
-(napríklad :map:`oblasti_neg1`), na ktorý opäť použijeme |dissolve| 
-:sup:`Rozpustit`. Výsledok pomenujeme :map:`oblasti_neg` (:num:`#neg`).
+Následuje spojení "negativních" zón. Cílem je dostat vektorovou vrstvu, která je
+sjednocením obalové zóny železnic a nepožadovaných správních obvodů. Využijeme
+geoprocessný nástroj |union| :sup:`Sjednotit`. Vznikne výstup (například 
+:map:`oblasti_neg1`), na který opět použijeme  |dissolve| :sup:`Rozpustit`.
+Výsledek pojmenujeme :map:`oblasti_neg` (:num:`#neg`).
 
 .. _neg:
 
 .. figure:: images/u-neg.png
    :class: middle
         
-   Zjednotenie negatívnych oblastí :fignote:`(1)`, spojenie do súvislého 
-   vektora :fignote:`(2)` a zobrazenie v mapovom okne :fignote:`(3)`.
+   Sjednocení negatívních oblastí :fignote:`(1)`, spojení do souvislého 
+   vektoru :fignote:`(2)` a zobrazení v mapovém okně :fignote:`(3)`.
 
-Pokračujeme krokom č. 5, viď. :ref:`Riešenie<riešenie-ul2>`. Postup je obdobný
-ako pri výbere správnych obvodov pomocou |mIconExpressionSelect| 
-:sup:`Vybrat prvky pomocí vzorce`. Výraz ``"vymeraparc" > 200000`` je ten, 
-ktorým vyberieme parcely s výmerou nad 20 ha (:num:`#parcely20ha`). Vybrané
-prvky uložíme ako nový vektor :map:`parcely_20ha` a výber zrušíme ikonkou
+Pak pokračujeme krokem č. 5, viz :ref:`Řešení<riešenie-ul2>`. Postup je obdobný
+jako při výběru správních obvodů pomocí |mIconExpressionSelect| 
+:sup:`Vybrat prvky pomocí vzorce`. Výraz ``"vymeraparc" > 200000`` je ten,
+kterým vybereme parcely  s výměrou nad 20 ha (:num:`#parcely20ha`). Vybrané
+prvky uložíme jako nový vektor :map:`parcely_20ha` a výběr zrušíme ikonkou 
 |mIconSelectRemove|.
+  
 
 .. _parcely20ha:
 
 .. figure:: images/u-parcely20ha.png
    :scale: 70%
         
-   Výber parciel s výmerou nad 20 hektárov.
+   Výběr parcel s výměrou nad 20 hektarů.
 
-Z týchto parciel je potrebné vyselektovať tie, ktoré nie sú v negatívnej oblasti.
-Najprv označíme všetky prvky vrstvy :map:`parcely_25ha`, napríklad vyberieme 
-všetky ``gml_id`` pomocou |mIconExpressionSelect| 
-:sup:`Vybrat prvky pomocí vzorce`. Následne z hlavnej lišty spustíme dialógové 
-okno |select_location| :sup:`Vybrat podle umíštění`. Nájdeme ho v položke 
+Z těchto parcel je potřebné vyselektovat ty, které nejsou v negativní oblasti.
+Nejdříve označíme všechny prvky vrstvy :map:`parcely_25ha`, například vybereme
+všechny ``gml_id`` pomocí |mIconExpressionSelect| 
+:sup:`Vybrat prvky pomocí vzorce`. Následně z hlavní lišty spustíme dialogové
+okno |select_location| :sup:`Vybrat podle umíštění`. Najdeme jej v položce 
 :menuselection:`Vektor --> Výzkumné nástroje`. Zaškrtneme |box_yes| 
 :sup:`Include input features that intersect the selection features`, |box_yes| 
-:sup:`Zahrnout vstupní prvky, které překrývají/protínají prvky výběru` a keďže
-chceme práve tie parcely, ktoré zadané podmienky nespĺňajú, zvolíme možnosť
+:sup:`Zahrnout vstupní prvky, které překrývají/protínají prvky výběru` a jelikož
+chceme právě ty parcely, které zadané podmínky nesplňují, zvolíme možnost 
 ``odstraněním z aktuálneho výběru`` (:num:`#vybrat-umisteni`).
+  
 
 .. _vybrat-umisteni:
 
 .. figure:: images/u-vybrat-umisteni.png
    :scale: 70%
         
-   Výber parciel podľa umiestnenia metódou odstránenia z aktuálneho výberu.
+   Výběr parcel podle umístění metodou odstranění z aktuálního výběru.
 
-Výsledok (podmnožina :map:`parcely_20ha`) uložíme pomocou ``Uložit jako``, 
-a znázorníme na podklade pôvodného záujmového územia (:num:`#vysledok-ul2`).
-Pre lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`.
+Výsledek (podmnožina :map:`parcely_20ha`) uložíme pomocí ``Uložit jako``, a
+znázorníme na podkladě původního zájmového území (:num:`#vysledok-ul2`).
+Pro lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`. 
 
-.. note:: Pre zvýraznenie výsledku je priehľadnosť vrstvy správnych celkov 
-	  nastavená na ``70`` 
+.. note:: Pro zvýraznění výsledku je průhlednost vrstvy správních celků 
+	  nastavena na ``70`` 
 	  (:menuselection:`Vlastnosti --> Styl --> Průhlednost vrstvy`).
 
 .. _vysledok-ul2:
@@ -366,4 +371,4 @@ Pre lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`
 .. figure:: images/u-vysledok-u2.png
    :class: middle
         
-   Vhodné parcely pre výstavbu nového stavebného objektu.
+   Vhodné parcely pro výstavbu nového stavebního objektu.
