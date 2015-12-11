@@ -116,7 +116,8 @@ velikost obalové zóny v metrech, název výstupního souboru a povolíme |box_
 
 .. figure:: images/u-p100km.png
    :class: small
-      
+   :scale: 75
+   
    Tvorba obalové zóny velikosti 100 km kolem hranice Prahy.
 
 Do mapového okna se přidá nová vektorová vrstva :map:`P100km`. Nastavíme jí styl
@@ -158,13 +159,17 @@ stisknutím |mIconEditable|.
 	  je množství položek. V našem případě vybereme 
           :menuselection:`Geometrie --> $area (dvojklik)`.
 
+.. raw:: latex
+
+   \newpage
+
 .. _u-area:
 
 .. figure:: images/u-hraniceCR-area.png
         
    Vytvoření atributu s výměrou České republiky.
 
-Pak použijeme nástroj |intersect| :sup:`Průsečník`, kde vstupem budou vrstvy 
+Poté použijeme nástroj |intersect| :sup:`Průsečník`, kde vstupem budou vrstvy 
 :map:`hraniceCR` a :map:`P100km`. Výsledek je zobrazen na :num:`#intersect-map`.     
 
 .. _intersect-map:
@@ -195,7 +200,8 @@ hranic Prahy).
 .. _vysledok-u1:
 
 .. figure:: images/u-vysledok-u1.png
-        
+   :scale-latex: 50
+   
    Výpočet procentuálního zastoupení území ve vzdálenosti do 100 km od Prahy.
 
 Příklad 2
@@ -252,19 +258,18 @@ data přehledně zobrazíme (:num:`#vstup-ul2`).
 
    Použití nástrojů *Dissolve* a *Clip*.
 
-.. note:: Na :num:`#vstup-ul2` je pro vektorovou vrstvu :map:`parcely` nastavena
-   jednoduchá průhledná výplň a šedé ohraničení s transparentností ``10%``, 
-   symbol vrstvy :map:`zeleznice_p` je nastavený na ``Resident``, správní obvody
-   jsou barevně kategorizované dle pole :dbcolumn:`nazev`, pričemž hodnoty tohto
-   atributu jsou vykresleny.
-
-
 .. _vstup-ul2:
 
 .. figure:: images/u-vstup-ul2.png
    :class: middle
         
    Správní obvody, parcely a železnice Prahy.
+
+.. note:: Na :num:`#vstup-ul2` je pro vektorovou vrstvu :map:`parcely` nastavena
+   jednoduchá průhledná výplň a šedé ohraničení s transparentností ``10%``, 
+   symbol vrstvy :map:`zeleznice_p` je nastavený na ``Resident``, správní obvody
+   jsou barevně kategorizované dle pole :dbcolumn:`nazev`, pričemž hodnoty tohto
+   atributu jsou vykresleny.
 
 .. tip:: V tomto kroku je dobré si projekt uložit, a to pomocí 
 	 :menuselection:`Projekt --> Uložit`. 
@@ -304,6 +309,10 @@ zaškrtnuté |box_yes| a zkontrolujeme i souřadnicový systém
 
 
 .. note:: Operátor ``OR`` se nachází v položce ``Operátory``.
+
+.. raw:: latex
+
+   \newpage
 
 .. _vyraz678:
 
@@ -369,6 +378,10 @@ Pro lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`
 	  nastavena na ``70`` 
 	  (:menuselection:`Vlastnosti --> Styl --> Průhlednost vrstvy`).
 
+.. raw:: latex
+	 
+   \newpage
+	 
 .. _vysledok-ul2:
 
 .. figure:: images/u-vysledok-u2.png
