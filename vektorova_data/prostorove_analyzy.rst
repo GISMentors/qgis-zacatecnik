@@ -207,7 +207,7 @@ V následujícím příkladu provedeme sjednocení vrstvy velkoplošných chrán
 
 Díky tomu, že vytvořená vrstva sjednocení nese atributy obou vstupních vrstev 
 (obalová zóna nesla pouze atribut "typ" s hodnotou "dalnice"), můžeme zjistit 
-různé informace. Například odfiltrováním 10tého prvku, tedy prvku, který 
+různé informace. Například odfiltrováním 10. prvku, tedy prvku, který 
 představuje obalovou zónu nezasahující do žádného velkoplošného chráněného 
 území, můžeme snadno vypočítat poměr chráněného území, do kterého zasahuje 
 obalová zóna 10 km od dálnic.

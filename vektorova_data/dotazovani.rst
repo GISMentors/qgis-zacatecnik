@@ -25,7 +25,7 @@ Atributové dotazování
 
 Atributové dotazování slouží k vytvoření výběru prvků z vektorové vrstvy 
 dle námi zadaných kritérií. 
-Funkce, která toto umožňuje je |mIconExpressionSelect| :sup:`Vabrat prvky pomocí 
+Funkce, která toto umožňuje je |mIconExpressionSelect| :sup:`Vybrat prvky pomocí 
 vzorce` a můžeme jí spustit buď z nástrojového panelu nebo z atributové tabulky 
 dané vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí 
 |mActionCalculateField| a zadávání výrazu zde funguje na stejném principu. 
