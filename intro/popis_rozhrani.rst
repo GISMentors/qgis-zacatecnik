@@ -280,7 +280,7 @@ prvky, se kterými hodláme dále pracovat. Tato označení se nazývá
 - |mActionSelectFreehand| :sup:`Vybrat prvky kreslením od ruky`
 - |mActionSelectRadius| :sup:`Vybrat prvky poloměrem`
 
-- |mIconExpressionSelect| :sup:`Vabrat prvky pomocí vzorce` - viz. kapitola
+- |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce` - viz. kapitola
   :ref:`atrdotaz`
 
 - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` -
