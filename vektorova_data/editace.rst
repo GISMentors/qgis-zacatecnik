@@ -46,7 +46,8 @@
    :width: 1.5em
 .. |mIconExpression| image:: ../images/icon/mIconExpression.png
    :width: 1.5em
-
+.. |mActionNewVectorLayer| image:: ../images/icon/mActionNewVectorLayer.png
+   :width: 1.5em
 
 Tvorba nových vrstev a jejich editace
 =====================================
@@ -54,7 +55,7 @@ Tvorba nových vrstev a jejich editace
 Vytvoření Shapefile vrstvy
 --------------------------
 
-Novou vrstvu lze vytvořit pomocí tlačítka |mActionAddOgrLayer| :sup:`Nová
+Novou vrstvu lze vytvořit pomocí tlačítka |mActionNewVectorLayer| :sup:`Nová
 Shapefile vrstva` nebo v hlavním menu :menuselection:`Vrstva --> Vytvořit
 vrstvu --> Nová Shapefile vrstva`.
 
