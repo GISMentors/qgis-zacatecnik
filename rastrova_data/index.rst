@@ -28,4 +28,3 @@ doplňujícími informacemi je dostupný na `stránce projektu
    rastr_kalkulator
    vrstevnice
    zobrazovani_3D
-   georeferencovani
