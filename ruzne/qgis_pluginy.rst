@@ -67,7 +67,7 @@ Moduly jsou udržované vývojovým týmem QGISu (`QGIS Development Team
 <http://qgis-development-team.software.informer.com/>`_) a jsou
 automaticky součástí každé jeho distribuce. Externí pluginy jsou
 napsané v programovacím jazyce Python a jsou udržovány příslušnými
-autory. Chyby (angl.  *bugy*) v modulech by měli být zveřejnovány a
+autory. Chyby, angl.  *bugy* v modulech by měli být zveřejnovány a
 dostupné na stránkách `projektu
 <http://hub.qgis.org/projects/qgis-user-plugins>`_.
 
@@ -78,7 +78,7 @@ Správce zásuvných modulů
 ========================
 
 V prvním kroku v menu zvolíme :menuselection:`Zásuvné moduly --> Spravovat a instalovat
-zásuvné moduly` (|plug1| :sup:`Spravovat a instalovat zásuvné moduly`).
+zásuvné moduly`, ikona |plug1|.
 Spustí se dialogové okno (:num:`#vse`), které slouží na prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
 
@@ -109,7 +109,7 @@ zásuvného modulu s názvem |q2t| :sup:`Qgis2threejs`.
    prohlížeči.
 
 Seznam všech dostupných pluginů je možno zobrazit a konkrétní modul načíst zvolením
-|plugin| :sup:`Nenainstalováno` a spuštěním :item:`Instalovat zásuvný modul`.
+|plugin| :sup:`Nenainstalováno` a spuštěním `Instalovat zásuvný modul`.
 Následně se dá tento modul přeinstalovat nebo úplně odinstalovat 
 (:num:`#p-instal`).  
 
@@ -128,8 +128,8 @@ které jsou dostupné i v novější verzi. Záložka |mActionTransformSettings|
 :sup:`Nastavení` obsahuje nastavení týkající se kontroly aktualizací modulů,
 experimentálních a neschválených modulů a zobrazuje i seznam repozitářů, které
 lze přidávat editovat nebo mazat, viz :num:`#akt-nast`.
-Po zaškrtnutí políček |checkbox_unchecked|  při položkách :item:`Zobrazit také 
-experimentální` a :item:`neschválené moduly` je k dispozici téměř 500 zásuvných
+Po zaškrtnutí políček |checkbox_unchecked|  při položkách `Zobrazit také 
+experimentální` a `neschválené moduly` je k dispozici téměř 500 zásuvných
 modulů.
 
 .. _akt-nast:
@@ -154,10 +154,10 @@ modulů.
 .. note:: Je zapotřebí připomenout, že zásuvné moduly v oficiálních repozitářech
    byly testovány, nicméně jednotlivé repozitáře mohou obsahovat i méně ověřené
    moduly různé kvality a stádia vývoje. Proto je dobrou pomůckou zobrazení
-   hodnocení či počtu  |star| |star| |star|.  
+   hodnocení či počtu  |star| |star| |star|.
 
 .. tip:: Pokud známe alespoň přibližný název konkrétního modulu, při vyhledávání
-   může vyplnění políčka :item:`Hledat` v dialogovém okně.   
+   může vyplnění políčka `Hledat` v dialogovém okně. 
 
 Příklady zásuvních modulů
 =========================
@@ -279,12 +279,12 @@ republiky zobrazenou na :num:`path-vector` dle typu.
    
    Silnice České republiky zobrazené dle jejich typu.
 
-V panelu :item:`Nejkratší cesta` použijeme |2| a v mapovém okně kliknutím zvolíme
+V panelu `Nejkratší cesta` použijeme |2| a v mapovém okně kliknutím zvolíme
 počáteční a koncový bod cesty. Zobrazí se jako zelená, resp. červená tečka.
 Následně nastavíme kritérium, t.j. délku nebo čas a potvrdíme stisknutím 
-:item:`Vypočítat`. Po proběhnutí výpočtu  se v mapovém okně zobrazí výsledek v
+`Vypočítat`. Po proběhnutí výpočtu  se v mapovém okně zobrazí výsledek v
 podobě polylinie, která se dá exportovat jako nová vektorová vrstva (použitím 
-:item:`Export`).Tlačítko :item:`Vyčistit` slouží na smazání obsahu políček.
+`Export`).Tlačítko `Vyčistit` slouží na smazání obsahu políček.
 Postup je znázorněný na :num:`#path`.
 
 .. raw:: latex
@@ -298,8 +298,8 @@ Postup je znázorněný na :num:`#path`.
         
    Použití zásuvného modulu síťových analýz a výpočet nejoptimálnější cesty.
 
-.. tip:: Pokud nevidíme panel :item:`Nejkratší cesta`, přidáme ho z menu lišty 
-   :item:`Zobrazit` (:menuselection:`Zobrazit --> Panely --> Nejkratší cesta`),
+.. tip:: Pokud nevidíme panel `Nejkratší cesta`, přidáme ho z menu lišty 
+   `Zobrazit` (:menuselection:`Zobrazit --> Panely --> Nejkratší cesta`),
    jak je to znázorněno na :num:`#path-menu`.
   
     .. _path-menu:
@@ -328,7 +328,7 @@ výběr, nebo vybíráme z již existujícího výběru.
 
 Ukážeme si to na příkladě výběru všech obcí v České republice (:map:`obce`), ve
 kterých se nachází požární stanice (:map:`pozarni_stanice`). Použití je znázorněné
-na :num:`#p-pr-dot`. Po proběhnutí výběru zvolením :item:`Použít` se otevře
+na :num:`#p-pr-dot`. Po proběhnutí výběru zvolením `Použít` se otevře
 další okno (na :num:`#p-pr-dot` vpravo). V tomto kroku můžeme tlačítkem 
 |mActionNewVectorLayer| vytvořit vektorovou vrstvu z výběru, |selectcreatelayer|
 můžeme pokračovat s výběrem a provádět dalším podvýběry, volbou |checkbox|
