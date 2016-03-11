@@ -61,7 +61,7 @@ Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
 .. notedata::
 
    *Data ke školení* je stažitelná jako `zip archiv
-   <http://training.gismentors.eu/geodata/qgis/data.zip>`_ (435
+   <http://training.gismentors.eu/geodata/qgis/data.zip>`_ (436
    MB), rastrová data `DMT
    <http://training.gismentors.eu/geodata/qgis/dmt.zip>`_
    (97 MB).
