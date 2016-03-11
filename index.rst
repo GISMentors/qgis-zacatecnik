@@ -41,7 +41,7 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
       Logo projektu QGIS.
 
 Současným konceptem ve vývoji je pravidelné a intenzivní publikování nových verzí.
-Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
+Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
 
 .. only:: html
 
@@ -49,7 +49,7 @@ Dlouhodobá stabilní verze (LTS) je doplněna dvěma krátkodobými verzemi.
    Text školení je dostupný i v tisknutelné formě `PDF
    <./skoleni-qgis-zacatecnik.pdf>`_.
    
-.. important:: Školení je zaměřeno na aktuální LTS verzi `QGIS 2.8 Wien
+.. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 2.8 Wien
                <https://www.qgis.org/en/site/forusers/download.html>`_. V
                jiných verzích není zaručena funkčnost uvedených příkladů. Dále
                předpokládáme zapnutou *českou lokalizaci*, viz kapitola
