@@ -200,6 +200,10 @@ Mezi nejdůležitější nastavení patří nastavení souřadnicového systému
 okna. Aktuální EPSG kód souřadnicového systému je vidět přímo ve stavovém řádku
 vedle ikony |geographic|.
 
+.. note:: Podrobnější informace k problematice souřadnicových systémů
+          ve školení :skoleni:`Open Source GIS
+	  <open-source-gis/soursystemy/index.html>`.
+
 .. tip:: Souřadnicové systémy je možné vybírat podle EPSG kódu. Po
    instalaci je defaultně nastaven souřadnicový systém WGS 84
    (:epsg:`4326`). Pro potřeby zpracování geodat na území ČR se však
