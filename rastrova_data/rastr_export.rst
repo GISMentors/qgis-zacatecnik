@@ -20,7 +20,7 @@ uložit (exportovat) v tom samém formátu, protože pracujeme například
 jenom s částí zájmového území, použijeme volbu :item:`Uložit
 jako`. Tato volba je dostupná z kontextového menu na vybranou
 vrstvou. Objeví se dialogové okno, kde se dá nastavit režim výstupu
-(surová data nebo vykreslený obrázek), název, souřadnicvý systém,
+(surová data nebo vykreslený obrázek), název, souřadnicový systém,
 rozsah, rozlišení, možnosti vytvoření a další parametry nově
 exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
 (:num:`#saveas`).

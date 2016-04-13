@@ -13,13 +13,13 @@ souvisejicích témat je detailně popsáno v podkladech školení
 Souřadnicový systém projektu
 ============================
 
-Po instalaci je nastaven souřadnicový systém projeku na *WGS 84*
+Po instalaci je nastaven souřadnicový systém projektu na *WGS 84*
 (:epsg:`4326`).  Pokud budete pracovat s daty pro území ČR, tak je
 pravděpodobné, že budou v souřadnicovém systému S-JTSK (:epsg:`5514`).
 
 Pro další práci je vhodné nastavit souřadnicový systém projektu, aby
 se systém pokaždé otevřel s požadovaným nastavením. Toto nastavení je
-menu v :menuselection:`Nastavení --> Možnosti...` záložka
+v menu :menuselection:`Nastavení --> Možnosti...` záložka
 :item:`SRS`. V části *Výchozí SRS pro nové projekty* je položka *Vždy
 začít nové projekty s tímto SRS*.
 
@@ -51,7 +51,7 @@ souřadnicového systému projektu.  V případě, že by tato transformace
 nebyla povolena, tak by se vrstvy s odlišným souřadnicovým systémem
 nevykreslily v mapovém okně korektně (tak aby se překrývaly).
 
-Zda je tato transformace povolena je vidět i v stavovém řádku. EPSG kód je
+Zda je tato transformace povolena, je vidět i v stavovém řádku. EPSG kód je
 doplněn o text "(OTF)".
     
 .. _sour-system-vrstvy:

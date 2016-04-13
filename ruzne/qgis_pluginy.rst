@@ -79,7 +79,7 @@ Správce zásuvných modulů
 
 V prvním kroku v menu zvolíme :menuselection:`Zásuvné moduly --> Spravovat a instalovat
 zásuvné moduly`, ikona |plug1|.
-Spustí se dialogové okno (:num:`#vse`), které slouží na prohlížení, vypínání a
+Spustí se dialogové okno (:num:`#vse`), které slouží k prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
 
 .. raw:: latex
@@ -127,7 +127,7 @@ Pod záložkou |plugin-upgrade| :sup:`Aktualizovatelný` se nachází zásuvné 
 které jsou dostupné i v novější verzi. Záložka |mActionTransformSettings| 
 :sup:`Nastavení` obsahuje nastavení týkající se kontroly aktualizací modulů,
 experimentálních a neschválených modulů a zobrazuje i seznam repozitářů, které
-lze přidávat editovat nebo mazat, viz :num:`#akt-nast`.
+lze přidávat, editovat nebo mazat, viz :num:`#akt-nast`.
 Po zaškrtnutí políček |checkbox_unchecked|  při položkách `Zobrazit také 
 experimentální` a `neschválené moduly` je k dispozici téměř 500 zásuvných
 modulů.
@@ -137,9 +137,9 @@ modulů.
 .. figure:: images/p_akt_nast.png
    :class: middle
    
-   Záložky svisející s aktualizacemi a nastavením zásuvných modulů.
+   Záložky související s aktualizacemi a nastavením zásuvných modulů.
 
-.. tip:: Seznam zásuvních modulů může uživatel uspořádat dle svých potřeb.
+.. tip:: Seznam zásuvných modulů může uživatel uspořádat dle svých potřeb.
    Po stisknutí pravého tlačítka myši v seznamu modulů je k dispozici jejich
    uspořádání dle abecedy, počtu stáhnutí, hlasů nebo stavu (:num:`#rad`).
 
@@ -178,7 +178,7 @@ zásuvních modulů programu QGIS:
 +================================================+=================================================+
 | |1| :sup:`Konvertor Dxf2Shp` 			 | konvertuje formát ``*.dxf`` do formátu ``*.shp``|
 +------------------------------------------------+-------------------------------------------------+
-| |2| :sup:`Získání souřadnic`     		 | získáva souřadnice myši                         |
+| |2| :sup:`Získání souřadnic`     		 | získává souřadnice myši                         |
 +------------------------------------------------+-------------------------------------------------+
 | |3| :sup:`Zásuvný modul síťových analýz` 	 | řeší problém nejkratší cesty                    |
 +------------------------------------------------+-------------------------------------------------+
@@ -212,10 +212,10 @@ soubor je převeden do formátu *Shapefile*.
    
    Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile.
 
-Po načítení modulu ze :ref:`správce zásuvných modulů <spravca-plugin>`
+Po načtení modulu ze :ref:`správce zásuvných modulů <spravca-plugin>`
 se po kliknutí na ikonu |1| objeví dialogové okno, kde je zapotřebí
 nastavit vstupní ``*.dxf`` soubor, název, cestu a typ nového ``*.shp``
-souboru, viz. :num:`#dxf2shp`. Volba |checkbox| :sup:`Exportovat
+souboru, viz :num:`#dxf2shp`. Volba |checkbox| :sup:`Exportovat
 textové značky` vytvoří navíc bodovou vrstvu s označeními a příslušná
 ``*.dbf`` tabulka bude obsahovat "textové" informace ze souboru
 ``*.dxf``.
@@ -254,12 +254,12 @@ nejoptimálnější trasu  na základě délky nebo času. Výsledek je automati
 exportován jako nová vektorová vrstva. 
 
 .. note:: Při výpočtu nejkratší cesty se doporučuje nastavit souřadnicový systém
-   projektu dle souřadnicového systému vrstvy polylínií. 
+   projektu dle souřadnicového systému vrstvy polylinií. 
 
 Zásuvný modul aktivujeme v :ref:`panelu správce zásuvných modulů 
 <spravca-plugin>`. V liště menu přejdeme na :menuselection:`Vektor --> 
 Silniční graf --> Nastavení`. Zobrazí se okno, kde vyplníme základní nastavení
-jako jednotku času, vzdálenosti, topologickou toleranci a další, viz. 
+jako jednotku času, vzdálenosti, topologickou toleranci a další, viz 
 :num:`#path-nast`. Na nastavení modulu použijeme vektorovou vrstvu cest České
 republiky zobrazenou na :num:`path-vector` dle typu.
 
@@ -323,7 +323,7 @@ referenčními prvky.
 Se zásuvným modulem začneme pracovat tak, že klikneme na ikonu modulu |4| nebo z
 menu jako :menuselection:`Vektor --> Prostorový dotaz --> Prostorový dotaz`.
 Potom v dialogovém okně s názvem *Prostorový dotaz* nastavíme zdrojové a
-referenční vrstvy, prostorový vztah (operátor) a zvolíme zda se jedná o nový
+referenční vrstvy, prostorový vztah (operátor) a zvolíme, zda se jedná o nový
 výběr, nebo vybíráme z již existujícího výběru.
 
 Ukážeme si to na příkladě výběru všech obcí v České republice (:map:`obce`), ve
@@ -370,8 +370,8 @@ příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
 .. figure:: images/p_olm.png
    :class: large
 
-   Ukážka vrstev OpenStreetMap :fignote:`(1)`, OpenCycleMap :fignote:`(2)`, Bing
+   Ukázka vrstev OpenStreetMap :fignote:`(1)`, OpenCycleMap :fignote:`(2)`, Bing
    Road :fignote:`(3)` a MapQuest-OSM :fignote:`(4)` pro vybranou část Prahy.
 
 .. note:: Další ze zmíněných modulů budou obsahem školení QGIS pro
-          pokročilé a to především GRASS plugin.
+          pokročilé, a to především GRASS plugin.

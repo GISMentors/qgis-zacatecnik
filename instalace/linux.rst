@@ -22,7 +22,7 @@ Terminál
 
 Instalace v terminálu, která je níže podrobně rozepsaná, se skládá ze tří
 základních částí. První krok přidá konkrétní repozitář pro získání systému QGIS.
-Druhý krok slouží k aktualizaci seznamu repozitářu a jejich obsahu. Třetí krok
+Druhý krok slouží k aktualizaci seznamu repozitářů a jejich obsahu. Třetí krok
 je samotná instalace programu.
 
 .. raw:: latex

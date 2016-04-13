@@ -76,7 +76,7 @@ v záložce :item:`SRS` nastavíme ``Vždy začít nové projekty s tímto SRS``
 ``EPSG:5514 - S-JTSK (Greenwich)/Křovak East North`` a to kliknutím na ikonku 
 |srs| :sup:`Vyberte SRS`. Tento souřadnicový systém nastavíme i pro nové vrstvy
 v položce ``SRS pro nové vrstvy`` a ``Použít výchozí SRS``. Na závěr povolíme 
-|box_yes| ``"on-the-fly" SRS transformaci`` pro případ, že by jsme v projektu
+|box_yes| ``"on-the-fly" SRS transformaci`` pro případ, že bychom v projektu
 pracovali s vrstvami v souřadnicovém systému, který je odlišný od systému
 projektu. Postup je popsaný v kapitole :ref:`Souřadnicový systém<sour-system>`.
     
@@ -155,7 +155,7 @@ např. ``15`` a jako výraz napíšeme ``$area`` (:num:`#u-area`).  Změny
 uložíme ikonou |mActionSaveEdits| a editovací režim vypneme opětovným
 stisknutím |mIconEditable|.
 
-.. note:: Výraz nemusíme psát ručně. V středném poli dialogového okna kalkulačky
+.. note:: Výraz nemusíme psát ručně. V středním poli dialogového okna kalkulačky
 	  je množství položek. V našem případě vybereme 
           :menuselection:`Geometrie --> $area (dvojklik)`.
 
@@ -194,7 +194,7 @@ názvem :dbcolumn:`area`).
 
 Pak přidáme nový atribut :dbcolumn:`procento`, do kterého pomocí mapové
 kalkulačky vložíme výsledek ``"area"/"area_sum * 100"``.  Ten je na 
-:num:`#vysledok-u1` (48,6% území České republiky je ve vzdálenosti do 100 km od
+:num:`#vysledok-u1` (48,6 % území České republiky je ve vzdálenosti do 100 km od
 hranic Prahy). 
 
 .. _vysledok-u1:
@@ -208,9 +208,9 @@ Příklad 2
 =========
 
 Najděte vhodné parcely na území Hlavního města Prahy pro výstavbu
-nového stavebního objektu. Kvůli připadnému hluku musí být vzdálené
+nového stavebního objektu. Kvůli případnému hluku musí být vzdálené
 alespoň 500 m od železnic, jejich výměra musí být minimálně 20 ha a
-měli by se nacházet mimo městské části Praha 6, 7 a Praha 8.
+měly by se nacházet mimo městské části Praha 6, 7 a Praha 8.
 
 .. _data-ul2:
 
@@ -246,9 +246,9 @@ Rozpustit vše ---`` a výstup uložíme jako :map:`praha`.  Potom
 použijeme nástroj na ořezání |clipper| :sup:`Ořezávač`. Vstupem bude
 vektor železnic České republiky, ořezávat budeme podle nově vytvořené
 polygonové vrstvy :map:`Praha` a výsledek uložíme jako
-:map:`zeleznice_p`, teda železnice pouze na území Prahy. Dialogová okna
+:map:`zeleznice_p`, tedy železnice pouze na území Prahy. Dialogová okna
 nástrojů *Dissolve* a *Clip* jsou zobrazeny na :num:`#dissolve-clip`. Následně
-můžeme každé vrstvě :ref:`nastavit styl<styl-vrstvy>`, čím si vstupní
+můžeme každé vrstvě :ref:`nastavit styl<styl-vrstvy>`, čímž si vstupní
 data přehledně zobrazíme (:num:`#vstup-ul2`).
 
 .. _dissolve-clip:
@@ -268,7 +268,7 @@ data přehledně zobrazíme (:num:`#vstup-ul2`).
 .. note:: Na :num:`#vstup-ul2` je pro vektorovou vrstvu :map:`parcely` nastavena
    jednoduchá průhledná výplň a šedé ohraničení s transparentností ``10%``, 
    symbol vrstvy :map:`zeleznice_p` je nastavený na ``Resident``, správní obvody
-   jsou barevně kategorizované dle pole :dbcolumn:`nazev`, pričemž hodnoty tohto
+   jsou barevně kategorizované dle pole :dbcolumn:`nazev`, pričemž hodnoty tohoto
    atributu jsou vykresleny.
 
 .. tip:: V tomto kroku je dobré si projekt uložit, a to pomocí 
@@ -279,7 +279,7 @@ nástroj |buffer| :sup:`Buffer`. V jednom dialogovém okně nastavíme vstup, m�
 aproximace na ``70``,  velikost obalové zóny na ``500 m``, zaklikneme |box_yes| 
 :sup:`Rozpustit výsledky obalové zóny`, aby byla obalová zóna celistvá a výstup
 uložíme jako :map:`zeleznice_pb`, povolíme |box_yes| :sup:`Přidat výsledek do 
-mapového okna` a spustíme ``OK``, viz. :num:`#zeleznice-buffer`.
+mapového okna` a spustíme ``OK``, viz :num:`#zeleznice-buffer`.
  
 .. _zeleznice-buffer:
 
@@ -359,9 +359,9 @@ všechny ``gml_id`` pomocí |mIconExpressionSelect|
 okno |select_location| :sup:`Vybrat podle umíštění`. Najdeme jej v položce 
 :menuselection:`Vektor --> Výzkumné nástroje`. Zaškrtneme |box_yes| 
 :sup:`Include input features that intersect the selection features`, |box_yes| 
-:sup:`Zahrnout vstupní prvky, které překrývají/protínají prvky výběru` a jelikož
+:sup:`Zahrnout vstupní prvky, které překrývají/protínají prvky výběru`, a jelikož
 chceme právě ty parcely, které zadané podmínky nesplňují, zvolíme možnost 
-``odstraněním z aktuálneho výběru`` (:num:`#vybrat-umisteni`).
+``odstraněním z aktuálního výběru`` (:num:`#vybrat-umisteni`).
   
 
 .. _vybrat-umisteni:
@@ -370,7 +370,7 @@ chceme právě ty parcely, které zadané podmínky nesplňují, zvolíme možno
         
    Výběr parcel podle umístění metodou odstranění z aktuálního výběru.
 
-Výsledek (podmnožina :map:`parcely_20ha`) uložíme pomocí ``Uložit jako``, a
+Výsledek (podmnožina :map:`parcely_20ha`) uložíme pomocí ``Uložit jako`` a
 zobrazíme na podkladě původního zájmového území (:num:`#vysledok-ul2`).
 Pro lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`. 
 

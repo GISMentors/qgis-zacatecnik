@@ -159,7 +159,7 @@ předdefinovaného seznamu měřítek.
 .. tip:: Seznam předdefinovaných měřítek je možné upravit. V menu 
    :menuselection:`Nastavení --> Možnosti...` záložka :item:`Nástroje mapy` je
    část :item:`Předdefinovaná měřítka`. Nové měřítko je možné přidat pomocí ikonky 
-   |addscale| :sup:`Přidat předdefinované měřítko` a nebo odstránit pomocí
+   |addscale| :sup:`Přidat předdefinované měřítko` a nebo odstranit pomocí
    |removescale| :sup:`Odstranit vybrané`. 
 
          .. figure:: images/predefined_scales.png
@@ -178,13 +178,13 @@ kresba v mapovém okně překresluje při následujících akcích:
     * přidání nové vrstvy
     * posun nebo zoomování mapového okna
     * změna velikosti QGIS okna
-    * změna viditelnosti vrsty
+    * změna viditelnosti vrstvy
     
-V některých případech může překreslování mapového okna trvat déle než je
+V některých případech může překreslování mapového okna trvat déle, než je
 vhodné. V takovýchto případech je možné upravit nastavení vykreslování a
 :ref:`stylování <styl-vrstvy>` jednotlivých vrstev.  V případě, že
 překreslování není potřebné, tak je možné jej potlačit - mapové okno se nebude
-překreslovat. Pro takovéto nastavení je v stavovém menu položka s checkboxem
+překreslovat. Pro takovéto nastavení je ve stavovém řádku položka s checkboxem
 :item:`Vykreslování`.
 
 .. tip:: Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné 
@@ -213,7 +213,7 @@ vedle ikony |geographic|.
    defaultním souřadnicovém systému. Jak nastavit defaultní
    souřadnicový systém je popsáno v kapitole :ref:`sour-system`.
 
-.. noteadvanced:: Pokud potřebuje zjistit detaily o jakékoli aktivitě
+.. noteadvanced:: Pokud potřebujete zjistit detaily o jakékoli aktivitě
    systému, tak si nechte vypisovat tzv. logovací zprávy. Záložku s
    jednotlivými logovacími zprávami je možné otevřít pomocí ikonky
    |log| :sup:`Zprávy`. Tyto zprávy jsou podstatné zejména v případě
@@ -250,7 +250,7 @@ Základní nástroje pro pohyb v okně
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - |mActionZoomIn| :sup:`Přiblížit`, |mActionZoomOut| :sup:`Oddálit` -
-  přiblíží/oddálí vybranou oblast, pro přibližovaní bez vybrání
+  přiblíží/oddálí vybranou oblast, pro přibližování bez vybrání
   oblasti lze použít i kolečko myši
 - |mActionZoomLast| :sup:`Zvětšit podle posledního výřezu`,
   |mActionZoomNext| :sup:`Přiblížit na další` - lze vrátit na předchozí
@@ -259,9 +259,9 @@ Základní nástroje pro pohyb v okně
   rozsah vybrané vrstvy
 - |mActionZoomFullExtent| :sup:`Přiblížení na všechny vrstvy` -
   přiblíží na všechny vrstvy v projektu
-- |mActionPan| :sup:`Posun mapy` - umožňí posun v mapovém okně tažením,
-  tato funkce lze nahradit stisknutím kolečka myši a následným tažením
-        .. tip:: Při posunu pomocí stiknutí kolečka myši můžeme mít
+- |mActionPan| :sup:`Posun mapy` - umožní posun v mapovém okně tažením,
+  tuto funkci lze nahradit stisknutím kolečka myši a následným tažením
+        .. tip:: Při posunu pomocí stisknutí kolečka myši můžeme mít
            aktivní jinou funkci, např. výběr, vytváření nových prvků atd.
 - |mActionRefresh| :sup:`Obnovit` - obnoví zobrazení všech nahraných dat
 
@@ -278,13 +278,13 @@ prvky, se kterými hodláme dále pracovat. Tato označení se nazývá
 :option:`Výběr`.
 
 - |mActionSelectRectangle| :sup:`Vybrat prvky oblastí nebo jednoklikem` -
-  nejjednoduší tvorba výběru
+  nejjednodušší tvorba výběru
 - |mActionSelectPolygon| :sup:`Vybrat prvky polygonem` - vytvořit výběr
   naklikáním polygonu
 - |mActionSelectFreehand| :sup:`Vybrat prvky kreslením od ruky`
 - |mActionSelectRadius| :sup:`Vybrat prvky poloměrem`
 
-- |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce` - viz. kapitola
+- |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce` - viz kapitola
   :ref:`atrdotaz`
 
 - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` -
@@ -318,7 +318,7 @@ V mapovém okně lze použít pro měření následující nástroje z hlavního
 
 Pro měření se kliknutím vybere požadovaný nástroj. Zobrazí se dialogové okno k
 danému typu měření, kde lze vybrat jednotky měření. Kliknutím do mapy se začne
-kreslit požadovaný útvar pro měření. Počas kreslení se určovaná hodnota 
+kreslit požadovaný útvar pro měření. Během kreslení se určovaná hodnota 
 upravuje dle polohy kurzoru.  Definování prkvu kresbou lze ukončit pravým 
 kliknutím. Nové měření lze začít pomocí tlačítka :item:`Nové`.
 
@@ -358,8 +358,8 @@ vybraném prvku v mapovém okně. Pro identifikaci je možné použít menu
 :menuselection:`Zobrazit --> Identifikovat prvky`, použít klávesovou zkratku 
 :kbd:`Ctrl+Shift+I` nebo ikonu |mActionIdentify| :sup:`Identifikovat prvky`. 
 
-Po vyvolaní nástroje pro identifikaci se kliknutím v mapě vyberou prvky, které
-chceme idetifikovat.
+Po vyvolání nástroje pro identifikaci se kliknutím v mapě vyberou prvky, které
+chceme identifikovat.
 
 .. figure:: images/feature_info.png
    :class: small
@@ -372,7 +372,7 @@ Výsledky identifikace se zobrazují v pop-up okně ve formě stromové
 struktury.  Pokud vybíráme prvky ve vícero vrstvách, tak první úrovní
 rozdělení je jméno vrstvy. Na další úrovni je atribut nastavený v menu
 vrstvy :menuselection:`Vlastnosti --> Zobrazení`. Na další úrovni se
-zobrazují 3 skupiny infromací:
+zobrazují 3 skupiny informací:
 
 - Odvozené - informace, které nejsou mezi atributy, ale jsou určené při
   identifikaci (plocha, obvod, délka, poloha - dle typu prvku),

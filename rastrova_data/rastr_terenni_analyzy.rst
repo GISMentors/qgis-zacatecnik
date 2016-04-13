@@ -10,8 +10,8 @@ Terénní analýzy
 Digitální výškový model terénu je užitečný typ dat, ze kterého je možné odvodit
 další informace o daném území a tak lépe vystihnout charakter zkoumaného území.
 Nástroje pro terénní analýzy a vizualizace terénu jsou dostupné z menu
-:menuselection:`Raster --> Analýza --> DEM (modely reliéfu)`, viz
-:num:`#menudem`. S těmito nástroji můžeme odvodit datové sady, které nebyli
+:menuselection:`Rastr --> Analýza --> DEM (modely reliéfu)`, viz
+:num:`#menudem`. S těmito nástroji můžeme odvodit datové sady, které nebyly
 úplně evidentní z původního rastru výškopisu. Může jít například o odvození 
 sklonu reliéfu nebo orientaci svahu vůči světovým stranám.
 
@@ -24,7 +24,7 @@ sklonu reliéfu nebo orientaci svahu vůči světovým stranám.
 .. note:: 
 
    Nástrojová lišta :item:`Rastr` obsahuje kromě možnosti vykonávat terénní
-   analýzy i nástroje týkajíci se mapové algebry, souřadnicových systémů,
+   analýzy i nástroje týkající se mapové algebry, souřadnicových systémů,
    konverze do jiných formátů, ořezávání rastrů, generování vrstevnic a jiné.
 
 Stínovaný reliéf (*Hillshade*)
@@ -32,8 +32,8 @@ Stínovaný reliéf (*Hillshade*)
 
 Jak již bylo uvedeno v části o nastavení transparentnosti rastrových dat,
 stínovaný reliéf je využívanou rastrovou vrstvou při zobrazování 2D dat
-reprezentujících 3D jevy, protože s jeho pomocí se dá dosáhnout prostorový
-efekt. Abstraktní informace o výšce terénu v rastru :map:`dmt.tiff` znázorníme
+reprezentujících 3D jevy, protože s jeho pomocí se dá dosáhnout prostorového
+efektu. Abstraktní informace o výšce terénu v rastru :map:`dmt.tiff` znázorníme
 pomocí rastrové vrstvy stínovaného reliéfu, tzv. *hillshade*. Ten vytvoříme tak,
 že z nabídky menu vybereme :menuselection:`Rastr --> Analýza --> DEM (modely 
 reliéfu)`. V dialogovém okně nastavíme název a cestu ke vstupní
@@ -51,7 +51,7 @@ režim :item:`Stínovaný reliéf`, předvolené možnosti režimu ponecháme, z
 Po ukončení výpočtu se v panelu vrstev objeví nově vytvořený
 stínovaný reliéf :map:`hillshade`. Abychom lépe viděli detaily, pomocí
 |mActionZoomIn| :sup:`Přiblížit` si ohraničíme část území. Následně způsobem,
-který byl popsaný výše nastavíme všeobecnou transparentnost rastrové vrstvy
+který byl popsaný výše, nastavíme všeobecnou transparentnost rastrové vrstvy
 :map:`hillshade` na hodnotu :item:`60%`. Dostaneme výsledek znázorněný na
 :num:`#rsthillshade`.
 

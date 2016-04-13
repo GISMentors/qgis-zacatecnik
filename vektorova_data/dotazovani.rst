@@ -26,7 +26,7 @@ Atributové dotazování
 Atributové dotazování slouží k vytvoření výběru prvků z vektorové vrstvy 
 dle námi zadaných kritérií. 
 Funkce, která toto umožňuje je |mIconExpressionSelect| :sup:`Vybrat prvky pomocí 
-vzorce` a můžeme jí spustit buď z nástrojového panelu nebo z atributové tabulky 
+vzorce` a můžeme jí spustit buď z nástrojového panelu, nebo z atributové tabulky 
 dané vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí 
 |mActionCalculateField| a zadávání výrazu zde funguje na stejném principu. 
 Tedy v levé části okna (:item:`Výraz`) je prostor pro zadání požadovaného výrazu 
@@ -39,7 +39,7 @@ parametrů do výrazu.
     Okno atributového dotazování.
 
 Po zadání našeho výrazu potvrdíme tlačítkem |mIconExpressionSelect|
-:item:`Vybrat` čímž se nám vytvoří požadovaný výběr. Z nabídky vedle tlačítka 
+:item:`Vybrat`, čímž se nám vytvoří požadovaný výběr. Z nabídky vedle tlačítka 
 můžeme vybrat další možnosti práce s výběrem pomocí atributového dotazu.
 
 .. figure:: images/select_exp_fun.png
@@ -48,7 +48,7 @@ můžeme vybrat další možnosti práce s výběrem pomocí atributového dotaz
     Další možnosti práce s výběrem pomocí atributového dotazu.
 
 .. tip:: V levé části stavového řádku vidíme aktuální počet vybraných 
-    prvků (viz. :num:`expstatus`).
+    prvků (viz :num:`expstatus`).
     
 Uvedeme si jednoduchý příklad atributového dotazu. Z vrstvy *Velkoplošných 
 zvláště chráněných území*, potřebujeme vybrat národní parky a jejich ochranná 
@@ -109,7 +109,7 @@ vztahu dvou vektorových vrstev. Funkce, která toto umožňuje je
 - |checkbox| :guilabel:`Zahrnout vstupní prvky, které překrývají/protínají prvky 
   výběru` - vybere pouze prvky, které se protínají jen z části
 - |checkbox| :guilabel:`Zahrnout vstupní prvky zcela uvnitř prvků 
-  výběru` - vybere pouze prvky, které se protínají celou rozhlohou (např. celý 
+  výběru` - vybere pouze prvky, které se protínají celou rozlohou (např. celý 
   polygon uvnitř polygonu)
 - |checkbox| :guilabel:`Pouze vybrané prvky` - nový výběr se bude vytvářet nad 
   aktuálním výběrem

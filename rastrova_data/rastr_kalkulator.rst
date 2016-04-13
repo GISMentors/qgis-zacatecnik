@@ -13,7 +13,7 @@ Při tvorbě mapy orientace vůči světovým stranám je lepší reklasifikovat
 (rozdělit) rozsah hodnot do kategorií sever (1), východ (2), jih (3) a západ
 (4), přičemž sever znamená :item:`0°` a východ :item:`90°`. Jednou z možností je
 využití tzv. rastrového kalkulátoru, konkrétně |mActionShowRasterCalculator|
-:sup:`Raster kalkulátor`.
+:sup:`Rastrový kalkulátor`.
 
 Rastrový kalkulátor souvisí s mapovou algebrou. Jedná se o matematické
 operace s rastrovými mapami, které jsou reprezentovány jako matice

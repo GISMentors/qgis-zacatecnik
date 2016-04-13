@@ -46,7 +46,7 @@ Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu
    Nástrojový panel pro přidávání vrstev Spravovat vrstvy
 
 Další možností je přidat data pomocí vestavěného datového katalogu
-(prohlížeče souborů) a to buď dvojitým kliknutím nebo jednoduchým
+(prohlížeče souborů), a to buď dvojitým kliknutím, nebo jednoduchým
 přetažením souboru do mapového okna nebo okna vrstev
 (:num:`#browser`). Pomocí kláves :kbd:`CTRL` nebo :kbd:`SHIFT` můžeme
 vybrat a přidat přetažením více souborů najednou. Pomocí datového
@@ -76,7 +76,7 @@ Export dat
 Pro export vrstvy nebo její částí se používá funkce
 :menuselection:`Uložit jako...`. Funkci můžeme spustit dvěma způsoby:
 
-V seznamu vrstev označíme vrstvu, kterou chceme exportovat a vybereme
+V seznamu vrstev označíme vrstvu, kterou chceme exportovat, a vybereme
 z hlavního menu :menuselection:`Vrstva --> Uložit jako...`
 
 .. figure:: images/saveas.png

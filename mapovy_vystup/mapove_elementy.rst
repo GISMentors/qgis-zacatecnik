@@ -39,7 +39,7 @@ Zobrazení pracovních panelů
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Pro příjemnou práci při tvorbě výsledků je vhodné mít nastavené 
 zobrazování jednotlivých panelů. *Vypnout/zapnout* panel je možné v menu
-:menuselection:`Zobrazení --> Panels`, kde se nastaví viditelnost 
+:menuselection:`Zobrazit --> Panely`, kde se nastaví viditelnost 
 jednotlivým panelům. Na obrázku :num:`#panels` je zobrazeno doporučené 
 nastavení zobrazených panelů.
 
@@ -94,7 +94,7 @@ nebo uchopení za jeho obsah a posun.
            
 Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu
 mapového okna. Překreslení dle pozměněného mapového okna je možné v
-detailu prvku :item:`Vlatnosti položky` v části :item:`Hlavní vlastnosti`
+detailu prvku :item:`Vlastnosti položky` v části :item:`Hlavní vlastnosti`
 pomocí tlačítka :item:`Aktualizovat náhled`. V této části též lze nastavit
 přesné měřítko mapového okna.
 
@@ -168,7 +168,7 @@ Legenda
 Další obvyklou součástí mapového výstupu je legenda. Ta má popisovat
 jednotlivé prvky, které jsou zobrazovány.  Přidání legendy do mapového
 výstupu je možné pomocí ikonky |add_legend| :sup:`Přidat novou legendu`.
-Umístění položky legendy do mapového okna je proveden stejně jako u 
+Umístění položky legendy do mapového okna je provedeno stejně jako u 
 předchozích položek.
 
 Obsah legendy je vygenerován v momentě jejího umístění a na základě
@@ -185,7 +185,7 @@ změnit text i zařazení jednotlivých položek v rámci legendy samotné.
    :class: large
    :scale-latex: 80
  
-   Přidaná legenda a úprava jejich položek.
+   Přidaná legenda a úprava jejích položek.
 
 
 .. tip:: Pokud upravujete legendu, tak se může stát, že se změnami nebudete 
@@ -220,8 +220,8 @@ se v tabulce mají zobrazit |add| |remove|, jejich pořadí |up| |down|,
 může se zde nastavit titulek pro atribut, ale i zarovnávání hodnot.
 
 V druhé části se nastavuje řazení dat v tabulce. Řazení se řídí
-definovanými pravidly. Každé pravidlo musí obsahovat atribut podle
-kterého se tabulka bude řadit a typ řazení (sestupně nebo
+definovanými pravidly. Každé pravidlo musí obsahovat atribut, podle
+kterého se tabulka bude řadit, a typ řazení (sestupně nebo
 vzestupně). Takto nadefinované pravidlo se pak tlačítkem |add| přidá
 do seznamu pravidel. Jednotlivá pravidla se vypisují do pole pod
 sebe. Jejich pořadí je možné měnit a ovlivnit tak přesné vypsání
@@ -238,7 +238,7 @@ Směrová šipka (růžice)
 ^^^^^^^^^^^^^^^^^^^^^^
 
 Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony |add_arrow| 
-:sup:`Přidat šipku`. Směrová růžice může být vykreslena různou symbologii. 
+:sup:`Přidat šipku`. Směrová růžice může být vykreslena různou symbologií. 
 Výběr symbologie a další nastavení jsou dostupné v záložce :item:`Vlastnosti 
 položky`. Lze zde ponechat defaultní styl prvku, kdy se vykresluje jednoduchá 
 šipka. Je možné použít i složitější nastavení - například použít vlastní svg 

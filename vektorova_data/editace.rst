@@ -66,7 +66,7 @@ vrstvu --> Nová Shapefile vrstva`.
    Nová vektorová vrstva.
 
 Při vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový
-systém vrstvy a pokud je třeba tak přidáme nové atributy.
+systém vrstvy, a pokud je třeba, přidáme nové atributy.
 
 Vytváření nového atributu:
 
@@ -74,13 +74,13 @@ Vytváření nového atributu:
   vychází z formátu Esri Shapefile, který je zde použit
 - :item:`Typ` |selectstring|
 
-    - :option:`Text` (String) - formát buňek je text, nelze použít pro
+    - :option:`Text` (String) - formát buněk je text, nelze použít pro
       výpočty (max. 255 znaků)
-    - :option:`Celé číslo` (Integer) - formát buňek je celé číslo,
+    - :option:`Celé číslo` (Integer) - formát buněk je celé číslo,
       tedy bez desetinných míst (max. 10 znaků)
-    - :option:`Desetinné číslo` (Real) - formát buňek je desetinné
+    - :option:`Desetinné číslo` (Real) - formát buněk je desetinné
       číslo (max. 10 znaků)
-    - :option:`Datum` (Date) - formát buňek je datum (max. 20 znaků)
+    - :option:`Datum` (Date) - formát buněk je datum (max. 20 znaků)
 
 - :item:`Šířka` - počet znaků
 - :item:`Přesnost` - počet desetinných míst
@@ -103,8 +103,8 @@ Editace vrstvy
 Editaci vrstvy spustíme pomocí tlačítka |mActionToggleEditing|
 :sup:`Přepnout editaci` nebo v hlavním menu :menuselection:`Vrstva -->
 Přepnout editaci`. Spuštěním režimu editace se aktivují editační funkce
-v panelu a bude nám umožněno vytvářet nové prvky a jejich atributy,
-nebo editovat stávající. Vrstva, která je momentálně v režimu editace
+v panelu a bude nám umožněno vytvářet nové prvky a jejich atributy
+nebo editovat stávající. Vrstva, která je momentálně v režimu editace,
 je v seznamu vrstev znázorněna s editační ikonkou |mActionToggleEditing|.
 
 .. figure:: images/edit_layers_icon.png
@@ -118,7 +118,7 @@ Režim editace ukončíme opět pomocí tlačítka |mActionToggleEditing|
 :sup:`Přepnout editaci`. Provedené změny je vhodné průběžně ukládat
 pomocí ikony |mActionSaveAllEdits| :sup:`Uložit změny vrstvy`. Pokud při
 editaci zapomeneme uložit změny, QGIS se nás  při ukončení editace
-zeptá, zda chceme provedené změny uložit či nikoliv.
+zeptá, zda chceme provedené změny uložit, či nikoliv.
 
 .. tip:: |mActionAllEdits| :sup:`Aktuální změny` - hromadné ovládání
    změn a zapínání/vypínaní editací ve vrstvách.
@@ -150,7 +150,7 @@ Základní editace geometrie
 
 - |mActionNodeTool| :sup:`Nástroj uzlú` - pomocí nástroje uzlů lze
   jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením,
-  mazat označením levým klikem a stisknutí klávesy :kbd:`Backspace`
+  mazat označením levým klikem a stisknutím klávesy :kbd:`Backspace`
   nebo :kbd:`Del`
 
 .. figure:: images/edit_polygon_node.png
@@ -169,7 +169,7 @@ Základní editace geometrie
 - |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí
   výběru označíme navazující objekty, které chceme spojit. Při sloučení
   vyskočí okno, ve kterém je možné zadat atributy "nového" - sloučeného
-  prvku. Vychozí hodnota atributů je :option:`NULL` tedy žádná hodnota.
+  prvku. Výchozí hodnota atributů je :option:`NULL`, tedy žádná hodnota.
 
 .. figure:: images/edit_polygon_merge.png
    :class: middle
@@ -177,7 +177,7 @@ Základní editace geometrie
    Sloučení sousedních polygonů.
 
 - |mActionReshape| :sup:`Změnit tvar prvků` - obdobně jako při rozdělení
-  nebo tvorbě nového prvku, lze naklikáním nového tvaru změnit tvar
+  nebo tvorbě nového prvku lze naklikáním nového tvaru změnit tvar
   stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu"
   vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude
   část s menší plochou vymazána (:num:`#resh1`).
@@ -202,27 +202,27 @@ Přichytávání (snapping)
 Pro topologicky čistou editaci můžeme pomocí funkce
 :menuselection:`Nastavení --> Možnosti přichytávání` nastavit
 přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
-konkrétních vrstev. Pro aktivaci je nunté vybrat parametr :item:`Přichytit
+konkrétních vrstev. Pro aktivaci je nutné vybrat parametr :item:`Přichytit
 k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
-(viz. :num:`#snapvert` a :num:`snapsegm`).
+(viz :num:`#snapvert` a :num:`snapsegm`).
 
 .. figure:: images/snapping.png
 
-    Základní okono možnosti přichytávání.
+    Základní okno možnosti přichytávání.
 
 - :item:`Režim přichytávání...` |selectstring|
 
-    - :option:`Aktuální vrstva` - přichytávání pouze v rámcí editované
+    - :option:`Aktuální vrstva` - přichytávání pouze v rámci editované
       vrstvy, ostatní vrstvy ignoruje
     - :option:`Všechny vrstvy` - přichytávání ke všem vektorovým
       vrstvám projektu
-    - :option:`Pokročílé` - samostatné nastavení pro jednotlivé vrstvy
+    - :option:`Pokročilé` - samostatné nastavení pro jednotlivé vrstvy
 
 - :item:`Přichytit k` |selectstring|
 
     - :option:`Vypnuto` - přichytávání je neaktivní!
     - :option:`K lomovému bodu` - pouze k lomovým bodům
-      (uzelům/vertexům, :num:`#snapvert`)
+      (uzlům/vertexům, :num:`#snapvert`)
     - :option:`K segmentu` - pouze k segmentům
       (hranám/liniím, :num:`#snapsegm`)
     - :option:`K lomovému bodu a segmentu` - k obojímu
@@ -261,12 +261,12 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
 Pokročílý režim přichytávání 
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
-(:item:`Režim přichytávání...` |selectstring| - :option:`Pokročílé`)
+(:item:`Režim přichytávání...` |selectstring| - :option:`Pokročilé`)
 
 .. figure:: images/snapping_adv.png
    :scale-latex: 60
 
-   Okno nastavení pokročílého režimu přichytávání.
+   Okno nastavení pokročilého režimu přichytávání.
 
 V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
 zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Avoid
@@ -282,10 +282,10 @@ docílíme čistě navazujících polygonů.
 .. figure:: images/snapping_avoid.png
 
     Příklad použití :option:`Avoid intersection`. a) bez :option:`Avoid
-    intersection` - polygon se vytvoří tak jak jsme ho zakreslili a
+    intersection` - polygon se vytvoří tak, jak jsme ho zakreslili, a
     překrývá předchozí polygon. Při odstranění nového polygonu bychom
     viděli opět hranici polygonu jako v prvním kroku. b) :option:`Avoid
-    intersection` - poygon se vytvoří bez překryvu, hranice na sebe
+    intersection` - polygon se vytvoří bez překryvu, hranice na sebe
     čistě navazuje.
 
 .. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter|
@@ -296,7 +296,7 @@ docílíme čistě navazujících polygonů.
    "vklínit" liniový prvek (cestu, vodní tok, transekt) do polygonu, který
    tímto rozdělíme na více částí:
 
-    - nejprve je třeba výběrem označit jak polygon který chceme rozdělit,
+    - nejprve je třeba výběrem označit jak polygon, který chceme rozdělit,
       tak linii, která bude polygon rozdělovat
     - spustíme funkci ``->`` v nabídce |selectstring| vybereme liniovou vrstvu
       (ve které je vybraný prvek a který bude polygon rozdělovat)
@@ -329,7 +329,7 @@ do virtuálního sloupce, nebo lze aktualizovat již existující sloupec.
 
     Okno kalkulačky polí.
 
-Nejdříve je nutné nastavit zda chceme výsledek zapsat do nového pole,
+Nejdříve je nutné nastavit, zda chceme výsledek zapsat do nového pole,
 virtuálního pole, nebo pouze aktualizovat existující pole.
 
 - :item:`Vytvořit nové pole` |checkbox| - vytvoří nové pole, zde je
@@ -361,7 +361,7 @@ Levá část okna (:item:`Výraz`) je prostor zadání výrazu, v horní
 Pravá část okna (:item:`Funkce`) slouží k rychlému zadání funkcí
 nebo parametrů do výrazu, v pravé části se k vybrané funkci/parametru
 zobrazuje nápověda. Požadované položky lze vyhledat pomocí filtru nebo
-prohledáním příslušných kategorií. Přídání funkce nebo hodnoty
+prohledáním příslušných kategorií. Přidání funkce nebo hodnoty
 pole pomocí okna funkcí se provádí dvojklikem na položku.
 
 .. figure:: images/field_calc_fun.png
@@ -390,12 +390,12 @@ atributu.
 
 .. noteadvanced:: Druhá záložka - :item:`Editor funkcí` umožňuje
    definovat vlastní funkce pomocí jazyka Python
-   
-.. tip:: Editovat stávající atributy lze i přímo z atributové tabulky a to 
+
+.. tip:: Editovat stávající atributy lze i přímo z atributové tabulky, a to 
     pomocí panelu (:num:`editpanel`), který se aktivuje po přepnutí do režimu 
-    editace . Zde vybereme atribut, který chceme editovat a zadáme požadovaný 
+    editace . Zde vybereme atribut, který chceme editovat, a zadáme požadovaný 
     výraz (ručně nebo pomocí dialogu |mIconExpression|), potom potvrdíme 
-    aktualizaci buď pro všechny prvky nebo jen pro prvky vybrané.
+    aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.
 
     .. _editpanel:
     
