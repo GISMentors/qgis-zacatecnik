@@ -77,8 +77,8 @@ vykreslovaných hodnot (:num:`#stylraster`).
   
 .. noteadvanced:: 
 
-   Další možnosti stylování nabízí lišta :item:`Raster`, která se zapíná přes
-   :menuselection:`Zobrazit --> Nástrojové lišty --> Raster`. Například první
+   Další možnosti stylování nabízí lišta :item:`Rastr`, která se zapíná přes
+   :menuselection:`Zobrazit --> Nástrojové lišty --> Rastr`. Například první
    položka zleva |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut
    Stretch` automaticky vylepší kontrast na základě minimální a maximální
    hodnoty buňky v aktuální lokální části rastru, přičemž bere do úvahy výchozí
@@ -89,7 +89,7 @@ vykreslovaných hodnot (:num:`#stylraster`).
    kliknutím na název vrstvy zvolíme z kontextového menu :item:`Zoom na
    nejvhodnější měřítko (100%)`, klikneme na |mActionLocalCumulativeCutStretch|
    :sup:`Local Cumulative Cut Stretch` a zvolíme |mIconZoom| :sup:`Přiblížit na
-   vrstvu` čímž vytvoříme styl znázorněný na :num:`#stylrstpanel` vpravo. 
+   vrstvu`, čímž vytvoříme styl znázorněný na :num:`#stylrstpanel` vpravo. 
 
    .. _stylrstpanel:
 
@@ -109,7 +109,7 @@ nastavení průhlednosti způsobí prostorový vzhled 2D vrstvy. Konkrétní př
 uveden později. 
 
 Záložka umožňuje nastavit všeobecnou průhlednost, ale taktéž průhlednost pro
-každý pixel. V části o uživatelských nastaveních transparentnosti (viz.
+každý pixel. V části o uživatelských nastaveních transparentnosti (viz
 :num:`#rsttransparency` s paletovým typem vykreslení pásma pro rastr) je možné
 nastavit hodnoty pomocí tlačítek |symbologyAdd| :sup:`Zadat hodnoty ručně` nebo
 |mActionContextHelp| :sup:`Přidat hodnoty z obrazovky`, dále možno
@@ -144,7 +144,7 @@ nejčastěji jde o metodu průměru (*Average*) nebo metodu nejbližšího souse
 
 .. important::
 
-   Je potřebné vědět, že vytvoření pyramid může pozměnit originální rastr a
+   Je potřebné vědět, že vytvoření pyramid může pozměnit originální rastr, a
    proto se doporučuje vytvoření zálohy původní bezpyramidové verze dat.
 
 
@@ -166,5 +166,5 @@ Metadata
 Tato záložka by měla poskytovat informace o dané rastrové vrstvě (pokud
 existují). Jedná se zejména o základní popis dat (nadpis, abstrakt, seznam
 klíčových slov), URL metadat a legendy či jiné vlastnosti (ovladač, popis
-datasetu, velikost pixelu, souřadnicový systém, rozsah vrstvy, a další).
+datasetu, velikost pixelu, souřadnicový systém, rozsah vrstvy a další).
 

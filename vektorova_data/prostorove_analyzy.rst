@@ -15,7 +15,7 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
 
 .. noteadvanced:: Další možností jak 
     spouštět analýzy je pomocí okna :item:`Nástroje zpracování`, které sdružuje 
-    funkce z knihovny GDAL a dalších dostupných externích nástrojů jako jsou 
+    funkce z knihovny GDAL a dalších dostupných externích nástrojů, jako jsou 
     například GRASS GIS, SAGA nebo R. Jednotlivé funkce lze rychle vyhledávat 
     pomocí filtru v horní části okna (nutno zadat anglický název funkce).
 
@@ -23,7 +23,7 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
        :class: small
        :scale-latex: 40
        
-       Okno :item:`Nástroje zpracování` (Adnvanced interface - pokročilé 
+       Okno :item:`Nástroje zpracování` (Advanced interface - pokročilé 
        zobrazení).
 
 Obalová zóna (buffer)
@@ -69,10 +69,10 @@ zóny...`
 
 - |checkbox|:option:`Vzdálenost obalové zóny`  - vzdálenost v metrech 
   (v závislosti nastavení QGIS a použitého SRS)
-- |checkbox|:option:`Pole vzdálenosti obalové zóny` - aktivujeme pokud máme v 
-  atributové tabulce sloupec, ve kterém máme definovanou vzdálenost. Vhodné 
+- |checkbox|:option:`Pole vzdálenosti obalové zóny` - aktivujeme, pokud máme v 
+  atributové tabulce sloupec, ve kterém máme definovanou vzdálenost. Vhodné, 
   pokud potřebujeme pro různé prvky různě velké obalové zóny (např. kategorie 
-  vodních toků, nebo komunikací)
+  vodních toků nebo komunikací)
 - |checkbox|:option:`Rozpustit výsledky obalové zóny` - zaškrtneme, pokud 
   nechceme, aby se nám výsledné obalové zóny překrývaly, výsledkem analýzy je 
   jeden prvek
@@ -93,7 +93,7 @@ Překryvné analýzy
 
 Další skupinou prostorových analýz jsou tzv. překryvné analýzy. Princepem je 
 vytvořit novou vektorovou vrstvu na základě interakce prvků jedné nebo více 
-vektorových vrstvev. Pro dosažení správného výsledku je nutné, aby vrstvy byly 
+vektorových vrstev. Pro dosažení správného výsledku je nutné, aby vrstvy byly 
 ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu 
 :menuselection:`Vektor --> Nástroje geoprocessingu`.
 
@@ -131,7 +131,7 @@ prvek nese atributy obou vstupních vrstev.
 
 Sjednotit
 ^^^^^^^^^
-Vytvoří novou vrstvu se všemi původnímy prvky, v místech překryvu vrstev jsou 
+Vytvoří novou vrstvu se všemi původními prvky, v místech překryvu vrstev jsou 
 vytvořeny nové prvky.
 
 .. figure:: images/prost_sjed.png

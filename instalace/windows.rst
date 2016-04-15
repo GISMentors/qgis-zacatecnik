@@ -89,7 +89,7 @@ Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
 
    Dokončení instalace.
 
-Pok úspěšné instalaci se na pracovné ploše i v nabídce Start objeví
+Pok úspěšné instalaci se na pracovní ploše i v nabídce Start objeví
 položka QGIS 2.10.1, kterou je možné jednoduše spustit.
 
 .. index::

@@ -67,7 +67,7 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
          měnit jejich pořadí |symbologyUp|, |symbologyDown|. Tímto způsobem 
          si můžeme vytvořit vlastní symbologii.
 
-- :guilabel:`kategorizovaný` - vhodný pro katogoriální proměnné
+- :guilabel:`kategorizovaný` - vhodný pro kategoriální proměnné
 
     - :guilabel:`sloupec` - pro výběr atributu
     - :guilabel:`barevný rozsah` - výběr barev
@@ -91,7 +91,7 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
 Popisky
 ^^^^^^^
 
-Kromě rozlišení prvků pomocí symbologie, lze také přidat k jednotlivým
+Kromě rozlišení prvků pomocí symbologie lze také přidat k jednotlivým
 prvkům popisek na základě jednoho z atributů.
 
 .. figure:: images/labels.png
@@ -109,7 +109,7 @@ možnosti umístění a vykreslování.
 
     Příklad popisků s použitím obalové zóny textu.
 
-.. noteadvanced:: Jako zdroj popisků lze použít i vzorec a to buď
+.. noteadvanced:: Jako zdroj popisků lze použít i vzorec, a to buď
     přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru 
     |mIconExpression|.
 
@@ -149,7 +149,7 @@ odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`).
    nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
    vybraná data zpřehlední.
 
-   Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`, 
+   Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`
    můžeme invertovat výběr. Zruší se aktuální výběr a 
    vytvoří se výběr prvků, které ve výběru nebyly.
 

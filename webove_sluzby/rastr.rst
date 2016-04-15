@@ -85,7 +85,7 @@ vrstev jako jedna.
 Připojení WMTS služby
 ---------------------
 
-Jak bylo zmíňeno, správa WMS a WMTS probíhá ve stejném dialogovém
+Jak bylo zmíněno, správa WMS a WMTS probíhá ve stejném dialogovém
 okně. V předchozím kroku bylo ukázáno jak vkládat WMS služby. Pro
 připojení WMTS služby je potřeba v nabídce přidání nového spojení
 zadat URL na platný WMTS server.  Po vybrání služby a připojení přes

@@ -42,14 +42,14 @@ oddělovacím znakem a řádky koncem řádku. Pro oddělení hodnot
 můžeme použít jakýkoliv znak, ale nejčastěji se setkáváme s hodnotami
 oddělené čárkou (:wikipedia:`CSV`) nebo tabulátorem (:wikipedia-en:`TSV
 <Tab-separated_values>`). Soubory tabulkových procesorů lze snadno exportovat
-do textového souboru s oddělenýmí hodnotami, tyto soubory lze potom
-prohlížet jak pomocí tabulkových procesorů tak i textových editorů.
+do textového souboru s oddělenými hodnotami, tyto soubory lze potom
+prohlížet jak pomocí tabulkových procesorů, tak i textových editorů.
 
 
-Existují dva způsoby jak mohou být geodata v souboru s oddělenými
+Existují dva způsoby, jak mohou být geodata v souboru s oddělenými
 hodnotami uložena:
 
-    - jako x,y souřadnice bodů v oddělených slopcích (tzv. XY data)
+    - jako x,y souřadnice bodů v oddělených sloupcích (tzv. XY data)
     - jako well-known text (:wikipedia-en:`WKT <Well-known_text>`)
 
 .. _xydata:
@@ -124,7 +124,7 @@ vrstvu s odděleným textem`.
 
         - :option:`X pole`, `Y pole` |selectstring| - výběr sloupců,
           ve kterých jsou zapsané souřadnice
-        - |checkbox| :option:`DMS souřadnice` - zašrtneme, pokud máme
+        - |checkbox| :option:`DMS souřadnice` - zaškrtneme, pokud máme
           souřadnice ve tvaru DMS (degrees-minutes-seconds) - stupně,
           minuty, vteříny
 
@@ -137,7 +137,7 @@ vrstvu s odděleným textem`.
 
     - |radiobuttonon| :sup:`Žádna geometrie (pouze atributová tabulka)` -
       přidá pouze tabulku, stejného výsledku dosáhneme, když do projektu
-      přidáme .csv soubor přetažením s prohlížeče souborů
+      přidáme .csv soubor přetažením z prohlížeče souborů
 
 - :item:`Nastavení vrstvy`
 
@@ -194,20 +194,20 @@ Získání .gpx souboru z GPS přístroje
      GPS
    - :guilabel:`Název vrstvy` - jak se bude vrstva jmenovat
    - :guilabel:`Výstupní soubor` - zadáme cestu a název 
-     souboru a to buď ručně nebo pomocí tlačítka :guilabel:`Uložit jako...`
+     souboru, a to buď ručně, nebo pomocí tlačítka :guilabel:`Uložit jako...`
         
 - použitím externího software pro získání .gpx souboru
         
         - software od výrobce GPS
-        - volně dstupný software 
-..      - volně dstupný software `EasyGPS <http://www.easygps.com/>`_ 
+        - volně dostupný software 
+..      - volně dostupný software `EasyGPS <http://www.easygps.com/>`_ 
     
 Import .gpx souboru
 ^^^^^^^^^^^^^^^^^^^
 - použitím pluginu |gps_importer| :sup:`GPS Nástroje` 
 
-    - po otevření pluginu (:num:`#gps`) zadáme cestu a název souboru 
-      a to buď ručně nebo pomocí   tlačítka :guilabel:`Procházet`
+    - po otevření pluginu (:num:`#gps`) zadáme cestu a název souboru,
+      a to buď ručně, nebo pomocí   tlačítka :guilabel:`Procházet`
     - potvrdíme tlačítkem :guilabel:`OK` a vybereme data, která chceme vložit
    
 - stejně jako přidání vektorových dat |mActionAddOgrLayer| :sup:`přidání 

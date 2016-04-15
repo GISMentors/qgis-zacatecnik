@@ -3,9 +3,9 @@ Práce s vektorovými daty
 ************************
 
 V systému QGIS lze pracovat s různými formáty vektorových dat.
-Vektorová data se standardně dělí dle typu geometrie na bodové,
-liniové a plošné.  To jakým způsobem se data ukládají a co daný způsob
-přináší za možnosti se může velice lišit.
+Vektorová data se standardně dělí dle typu geometrie na bodová,
+liniová a plošná.  To, jakým způsobem se data ukládají a co daný způsob
+přináší za možnosti, se může velice lišit.
 
 QGIS s daty pracuje v jejich původním formátu a nepřevádí je. Převod
 do jiných formátů je možný pomocí knihovny nástrojů.

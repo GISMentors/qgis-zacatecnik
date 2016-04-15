@@ -34,7 +34,7 @@ naměřená v terénu ke známým prvkům nebo např. naměřeným GPS bodům.
 
 Postup si ukážeme na připojení tabulky získané z databáze chráněných území 
 (http://drusop.nature.cz) k vektorové vrstvě velkoplošných zvláště chráněných území 
-(AOPK). Připojením získáme informaci pod jaké orgány ochrany přírody spadají 
+(AOPK). Připojením získáme informaci, pod jaké orgány ochrany přírody spadají 
 jednotlivá území.
 
 .. Pokud máme vektorovou vrstvu, můžeme k jejím prvkům připojit data z
@@ -100,8 +100,8 @@ atributová tabulka)`
    V tomto případě budeme připojovat pomocí atributů "kod" a "Kód", které jsou 
    souhlasné.
 
-Jakmile máme přidána tabulková data, tak otevřeme vlastnosti vektorové
-vrstvy, ke které chceme tabulku připojit a zvolíme záložku |join|
+Jakmile máme přidána tabulková data, otevřeme vlastnosti vektorové
+vrstvy, ke které chceme tabulku připojit, zvolíme záložku |join|
 :sup:`Připojení` a přidáme nové připojení pomocí tlačítka
 |symbologyAdd|. V dialogovém okně (:num:`join`) potom nastavíme parametry
 připojení.
@@ -113,7 +113,7 @@ připojení.
 
    Okno přidání připojení.
 
-- :item:`Připojit vrstvu` |selectstring| - vyberem vrstvu (.csv tabulku)
+- :item:`Připojit vrstvu` |selectstring| - vybereme vrstvu (.csv tabulku)
 - :item:`Připojit pole` |selectstring| - vybereme atribut (týká se tabulky .csv)
   , přes který chceme data připojit
 - :item:`Cílové pole` |selectstring| - vybereme souhlasný atribut (vektorové 
@@ -138,8 +138,8 @@ připojení.
         
    Výsledek spojení tabulek.
    
-- s takto připojenou tabulkou můžeme dále pracovat stejně jako by byla
-  přímo ve vektorové vrstvě (např.měnit symbol, provádět dotazování
+- s takto připojenou tabulkou můžeme dále pracovat stejně, jako by byla
+  přímo ve vektorové vrstvě (např. měnit symbol, provádět dotazování
   a analýzy)
 
 .. note:: Při připojení se zdrojová data (vektorové vrstvy ani připojené
