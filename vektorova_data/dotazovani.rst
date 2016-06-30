@@ -25,8 +25,8 @@ Atributové dotazování
 
 Atributové dotazování slouží k vytvoření výběru prvků z vektorové vrstvy 
 dle námi zadaných kritérií. 
-Funkce, která toto umožňuje je |mIconExpressionSelect| :sup:`Vybrat prvky pomocí 
-vzorce` a můžeme jí spustit buď z nástrojového panelu, nebo z atributové tabulky 
+Funkce, která toto umožňuje, je |mIconExpressionSelect| :sup:`Vybrat prvky pomocí 
+vzorce` a můžeme ji spustit buď z nástrojového panelu, nebo z atributové tabulky 
 dané vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí 
 |mActionCalculateField| a zadávání výrazu zde funguje na stejném principu. 
 Tedy v levé části okna (:item:`Výraz`) je prostor pro zadání požadovaného výrazu 
@@ -88,7 +88,7 @@ Prostorové dotazování
 ---------------------
 
 Prostorové dotazování slouží k vytvoření výběru prvků na základě prostorového 
-vztahu dvou vektorových vrstev. Funkce, která toto umožňuje je 
+vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je 
 |select_location| :sup:`Vybrat podle umístění...` a najdeme ji v menu 
 :menuselection:`Vektor --> Výzkumné nástroje --> Vybrat podle umístění...`
 

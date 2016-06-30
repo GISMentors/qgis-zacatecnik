@@ -25,7 +25,7 @@ Vlastnosti rastrové vrstvy
 --------------------------
 
 Dialog pro nastavení vlastností dané rastrové vrstvy vyvoláme buď
-levým dvouklikem nad danou vrstvou nebo pravým klikem z kontextového
+levým dvouklikem nad danou vrstvou, nebo pravým klikem z kontextového
 menu zvolíme položku :item:`Vlastnosti`.
 
 Dialogové okno obsahuje šest záložek : *Všeobecné*, *Styl*,
@@ -46,14 +46,14 @@ závislosti na měřítku (:num:`#obecneraster`).
 .. figure:: images/obecne_raster.png
    :scale-latex: 50
    
-   Vlastnosti rastové vrstvy.
+   Vlastnosti rastrové vrstvy.
 
 Styl
 ^^^^
 
 Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okně. Je
 možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
-být barvy invertované, dá se vylepšit kontrast, sytost, jas, rosah
+být barvy invertované, dá se vylepšit kontrast, sytost, jas, rozsah
 vykreslovaných hodnot (:num:`#stylraster`).
 
 .. raw:: latex
@@ -73,7 +73,7 @@ vykreslovaných hodnot (:num:`#stylraster`).
    :item:`Klasifikovat`, které vygeneruje barvy pro konkrétní režim, v našem
    případě lineární barevná interpolace a invertovaná spojitá paleta *RdYIGn*.
    Nastavení hodnoty směrodatné odchylky dokáže zabezpečit, aby hodnoty, které
-   se příliš liší od průměru pro vrstvu, nebyli zobrazené.     
+   se příliš liší od průměru pro vrstvu, nebyly zobrazené.     
   
 .. noteadvanced:: 
 
@@ -96,15 +96,15 @@ vykreslovaných hodnot (:num:`#stylraster`).
    .. figure:: images/styl_rst_panel.png
       :class: middle
 
-      Změna stylu rastrové vrstvy pomocí nástrojové lišty :item:`Raster`.
+      Změna stylu rastrové vrstvy pomocí nástrojové lišty :item:`Rastr`.
 
 Průhlednost
 ^^^^^^^^^^^
 
 QGIS umožňuje zobrazovat každou vrstvu v mapovém okně s různým stupněm
-průhlednosti. Má to velkou výhodu například pokud chceme, aby kromě aktuální
+průhlednosti. To je velmi výhodné, pokud například chceme, aby kromě aktuální
 rastrové vrstvy byla viditelná i jiná vrstva. Typickým příkladem je překryv
-stínovaného reliéfu s jakoukoli barevnou rastrovou vrstvou. Překryv a vhodné
+stínovaného reliéfu jakoukoli barevnou rastrovou vrstvou. Překryv a vhodné
 nastavení průhlednosti způsobí prostorový vzhled 2D vrstvy. Konkrétní příklad je
 uveden později. 
 
@@ -114,8 +114,8 @@ každý pixel. V části o uživatelských nastaveních transparentnosti (viz
 nastavit hodnoty pomocí tlačítek |symbologyAdd| :sup:`Zadat hodnoty ručně` nebo
 |mActionContextHelp| :sup:`Přidat hodnoty z obrazovky`, dále možno
 |symbologyRemove| :sup:`Odstranit vybrané řádky`, hodnoty |mActionFileOpen|
-:sup:`Importovat z` nebo |mActionFileSave| :sup:`Exportovat do` souboru. Což má
-smysl hlavně u detailnějších, časově náročných pracích. Tato záložka umožňuje
+:sup:`Importovat z` nebo |mActionFileSave| :sup:`Exportovat do` souboru. To má
+smysl hlavně u detailnějších, časově náročných prací. Tato záložka umožňuje
 taky nastavení *no data* hodnoty (tzv. žádná data). 
 
 .. _rsttransparency:

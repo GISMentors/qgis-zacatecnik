@@ -106,8 +106,8 @@ vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému,
 jako například ESRI Shapefile bez souboru končícího příponou \*.prj. V
 okně výběru je možné vyhledat souřadnicové systémy pomocí
 filtru. Zvolení správného souřadnicového systému je velice důležité,
-pokud máte v mapovém okně načteny data v různých souřadnicových
-systémech a dochází tak k transformaci, při měření nebo připojování k
+pokud máte v mapovém okně načtena data v různých souřadnicových
+systémech, a dochází tak k transformaci, při měření nebo připojování k
 webovým službám.
 
 .. _srs:

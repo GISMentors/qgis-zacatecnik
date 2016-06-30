@@ -114,8 +114,8 @@ připojení.
    Okno přidání připojení.
 
 - :item:`Připojit vrstvu` |selectstring| - vybereme vrstvu (.csv tabulku)
-- :item:`Připojit pole` |selectstring| - vybereme atribut (týká se tabulky .csv)
-  , přes který chceme data připojit
+- :item:`Připojit pole` |selectstring| - vybereme atribut (týká se tabulky .csv),
+  přes který chceme data připojit
 - :item:`Cílové pole` |selectstring| - vybereme souhlasný atribut (vektorové 
   vrstvy), ke kterému se bude tabulka připojovat
 - |checkbox| :item:`Kešovat připojenou vrstvu ve virtuální paměti` -

@@ -93,7 +93,7 @@ připravené. Atributy lze odstranit označením a kliknutím na tlačítko
 přidaný atribut "id", pokud ho nechceme, lze jej také vymazat.
 
 Pokud máme vše nastaveno, potvrdíme tlačítkem :item:`OK`. V okně zvolíme
-název vrstvy a adresář, ve kterém se vrstva vytvoří a potvrdíme
+název vrstvy a adresář, ve kterém se vrstva vytvoří, a potvrdíme
 tlačítkem :item:`Uložit`. Vytvořená vrstva se automaticky nahraje
 do projektu.
 

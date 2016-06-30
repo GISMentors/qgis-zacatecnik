@@ -88,9 +88,9 @@ standardní soubor s příponou ``.qgs``. Uložení do projektu umožňuje
 opětovné načtení všech dat i s kompletním nastavením systému.
 
 .. noteadvanced:: QGIS projekt je ukládán jako ``.xml``
-   soubor. Vzhledem k tomu, že se jedná o textovový formát lze jej
-   editovat i mimo samotný QGIS. Je však nutné znát strukturu formátu a
-   proto tento postup lze doporučit opravdu pro pokročilé uživatele a
-   spíše v extremních případech.
+   soubor. Vzhledem k tomu, že se jedná o textový formát, lze jej
+   editovat i mimo samotný QGIS. Je však nutné znát strukturu formátu, a
+   proto tento postup lze doporučit pro opravdu pokročilé uživatele a
+   spíše v extrémních případech.
 
 .. todo:: pridat ikonky ?

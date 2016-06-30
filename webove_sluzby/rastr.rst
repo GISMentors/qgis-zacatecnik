@@ -38,12 +38,12 @@ Správce WMS a WMTS spustíme v záložce :menuselection:`Vrstva --> Přidat vrs
 
    Okno správce WM(T)S služeb.
    
-Pokud nejsou ve správci vložené žádné připojení, dá se tak udělat přes tlačítko 
+Pokud nejsou ve správci vložená žádná připojení, dá se tak udělat přes tlačítko 
 :item:`Nové`.
 
 Přidání a editace připojení služby WMS nebo WMTS probíhá ve formuláři
-(:num:`wmsedit`). Pro úspěšné vložení (pokud není služba zaheslovaná a
-nebo není potřeba klást na službu speciální požadavky) stačí zadat
+(:num:`wmsedit`). Pro úspěšné vložení (pokud není služba zaheslovaná
+anebo není potřeba klást na službu speciální požadavky) stačí zadat
 název služby, připojovací URL a potvrdíme tlačítkem :item:`Ok`.
 
 .. _wmsedit:

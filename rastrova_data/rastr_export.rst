@@ -34,7 +34,7 @@ exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
    Export rastrové vrstvy pomocí :item:`Uložit rastrovou vrstvu jako ...`.
 
 Pokud potřebujeme rastrovou vrstvu uložit v jiném formátu, použijeme
-:menuselection:`Raster --> Převod --> Převíst na jiný formát` 
+:menuselection:`Rastr --> Převod --> Převést na jiný formát` 
 (:num:`#menu-prevod`). V dialogovém okně nastavíme vstupní vrstvu, cílový
 souřadnicový systém a ostatní dle potřeby.
 
