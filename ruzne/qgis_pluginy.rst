@@ -67,7 +67,7 @@ Moduly jsou udržované vývojovým týmem QGISu (`QGIS Development Team
 <http://qgis-development-team.software.informer.com/>`_) a jsou
 automaticky součástí každé jeho distribuce. Externí pluginy jsou
 napsané v programovacím jazyce Python a jsou udržovány příslušnými
-autory. Chyby, angl.  *bugy* v modulech by měli být zveřejnovány a
+autory. Chyby, angl.  *bugy* v modulech by měly být zveřejnovány a
 dostupné na stránkách `projektu
 <http://hub.qgis.org/projects/qgis-user-plugins>`_.
 
@@ -153,11 +153,11 @@ modulů.
 
 .. note:: Je zapotřebí připomenout, že zásuvné moduly v oficiálních repozitářech
    byly testovány, nicméně jednotlivé repozitáře mohou obsahovat i méně ověřené
-   moduly různé kvality a stádia vývoje. Proto je dobrou pomůckou zobrazení
+   moduly různé kvality a stadia vývoje. Proto je dobrou pomůckou zobrazení
    hodnocení či počtu  |star| |star| |star|.
 
 .. tip:: Pokud známe alespoň přibližný název konkrétního modulu, při vyhledávání
-   může vyplnění políčka `Hledat` v dialogovém okně. 
+   může pomoci vyplnění políčka `Hledat` v dialogovém okně. 
 
 Příklady zásuvních modulů
 =========================
@@ -250,7 +250,7 @@ podobě čtyř hodnot (pro :num:`#zis-sur` by to bylo
 
 Ve vrstvě polylinií modul vypočte a následně vykreslí nejkratší cestu mezi dvěma
 zvolenými body. Je napsaný v programovacím jazyku C++. Umožňuje určit
-nejoptimálnější trasu  na základě délky nebo času. Výsledek je automaticky
+optimální trasu  na základě délky nebo času. Výsledek je automaticky
 exportován jako nová vektorová vrstva. 
 
 .. note:: Při výpočtu nejkratší cesty se doporučuje nastavit souřadnicový systém
@@ -284,7 +284,7 @@ počáteční a koncový bod cesty. Zobrazí se jako zelená, resp. červená te
 Následně nastavíme kritérium, t.j. délku nebo čas a potvrdíme stisknutím 
 `Vypočítat`. Po proběhnutí výpočtu  se v mapovém okně zobrazí výsledek v
 podobě polylinie, která se dá exportovat jako nová vektorová vrstva (použitím 
-`Export`).Tlačítko `Vyčistit` slouží na smazání obsahu políček.
+`Export`). Tlačítko `Vyčistit` slouží na smazání obsahu políček.
 Postup je znázorněný na :num:`#path`.
 
 .. raw:: latex

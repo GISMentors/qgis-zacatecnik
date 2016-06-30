@@ -91,7 +91,7 @@ V následujícím příkladu jsme vytvořili obalovou zónu 10 km kolem dálnic
 Překryvné analýzy
 -----------------
 
-Další skupinou prostorových analýz jsou tzv. překryvné analýzy. Princepem je 
+Další skupinou prostorových analýz jsou tzv. překryvné analýzy. Principem je 
 vytvořit novou vektorovou vrstvu na základě interakce prvků jedné nebo více 
 vektorových vrstev. Pro dosažení správného výsledku je nutné, aby vrstvy byly 
 ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu 
@@ -181,7 +181,7 @@ Rozpustit
 ^^^^^^^^^
 
 Vytvoří novou vrstvu, ve které jsou definované prvky jedné vrstvy sloučeny do 
-jednoho. V nabídce :item:`Pole rozpuštění` můžeme vybrat atribut pro který 
+jednoho. V nabídce :item:`Pole rozpuštění` můžeme vybrat atribut, pro který 
 chceme rozpuštění aplikovat. Pokud chceme aplikovat pro všechny prvky, 
 zvolíme :item:`--- Rozpustit vše ---`.
 

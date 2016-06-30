@@ -59,7 +59,7 @@ Data
 
 .. note:: Postup řešení v programu ArcGIS Desktop je dostupný `zde 
    <http://maps.fsv.cvut.cz/frvsgis/web.html>`_. S Open Source programem QGIS
-   však lze dosáhnout stejný výsledek.
+   však lze dosáhnout stejného výsledku.
 
 Postup v QGIS
 ^^^^^^^^^^^^^
@@ -73,7 +73,7 @@ kde se obvykle používá souřadnicový systém S-JTSK (:epsg:`5514`).
 V prvním kroku proto nastavíme souřadnicový systém projektu. Z menu lišty
 vybereme :menuselection:`Nastavení --> Možnosti`. Otevře se dialogové okno, kde
 v záložce :item:`SRS` nastavíme ``Vždy začít nové projekty s tímto SRS`` na
-``EPSG:5514 - S-JTSK (Greenwich)/Křovak East North`` a to kliknutím na ikonku 
+``EPSG:5514 - S-JTSK (Greenwich)/Krovak East North``, a to kliknutím na ikonku 
 |srs| :sup:`Vyberte SRS`. Tento souřadnicový systém nastavíme i pro nové vrstvy
 v položce ``SRS pro nové vrstvy`` a ``Použít výchozí SRS``. Na závěr povolíme 
 |box_yes| ``"on-the-fly" SRS transformaci`` pro případ, že bychom v projektu
