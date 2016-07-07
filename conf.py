@@ -60,6 +60,10 @@ texinfo_documents = [
      'Miscellaneous'),
     ]
 
+html_favicon = "images/favicon.ico"
+
+sys.path.append(os.path.join('..', 'sphinx-template'))
+
 from conf_base import *
 
 todo_include_todos = False
