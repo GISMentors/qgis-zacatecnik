@@ -49,7 +49,7 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
    Text školení je dostupný i v tisknutelné formě `PDF
    <./skoleni-qgis-zacatecnik.pdf>`_.
    
-.. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 2.8 Wien
+.. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 2.14 Essen
                <https://www.qgis.org/en/site/forusers/download.html>`_. V
                jiných verzích není zaručena funkčnost uvedených příkladů. Dále
                předpokládáme zapnutou *českou lokalizaci*, viz kapitola

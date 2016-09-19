@@ -1,6 +1,6 @@
 .. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
    :width: 1.5em
-.. |mActionZoomFullExtent| image:: ../images/icon/mActionZoomToLayer.png
+.. |mActionZoomFullExtent| image:: ../images/icon/mActionZoomFullExtent.png
    :width: 1.5em
 
 .. _importexport:
@@ -89,7 +89,7 @@ vrstev. Pravým kliknutím na vrstvu vyvoláme kontextové menu a vybereme
 :menuselection:`Uložit jako...`
 
 .. figure:: images/layer_saveas.png
-   :class: middle
+   :class: small
    :scale-latex: 30
 
    Spuštění exportu z kontextového menu v seznamu vrstev.
