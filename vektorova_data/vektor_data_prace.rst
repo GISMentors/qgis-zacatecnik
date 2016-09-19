@@ -28,6 +28,40 @@
 
 Vlastnosti vrstvy
 =================
+Atributová tabulka
+------------------
+
+Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít
+atributovou tabulku` nebo pravým kliknutím vyvoláme kontextové menu
+a zvolíme :item:`Otevřít atributovou tabulku`. Tabulka slouží
+k prohlížení a editaci atributové složky dat. Kliknutím na číslo
+řádku můžeme označit jednotlivé prvky do výběru. V názvu okna je
+vypsaný název vrstvy, celkový počet prvků (`Features total`), počet
+odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`).
+
+
+.. figure:: images/at_table.png
+   :scale-latex: 60
+
+   Atributová tabulka vrstvy.
+
+.. tip:: Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
+   nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
+   vybraná data zpřehlední.
+
+   Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`
+   můžeme invertovat výběr. Zruší se aktuální výběr a 
+   vytvoří se výběr prvků, které ve výběru nebyly.
+
+   Pomocí nabídky |mActionFilter| v levém dolním rohu lze zvolit filtr 
+   zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny 
+   prvky ve vrstvě, tedy hodnota: |mActionFilter| :item:`Zobrazit všechny 
+   prvky`
+
+.. noteadvanced:: Pomocí funkce |rendererCategorizedSymbol| :sup:`Pravidla 
+   podmíněného formátování` lze pole v atributové tabulce  stylizovat na 
+   podle námi definovaných pravidel
+
 
 Vlastnosti
 ----------
@@ -129,38 +163,3 @@ V záložce :item:`Metadata` je možné získat základní metadata vektorové v
    :scale-latex: 80
 
    Příklad výpisu metadat vrstvy ve formátu PostGIS.
-
-
-Atributová tabulka
-------------------
-
-Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít
-atributovou tabulku` nebo pravým kliknutím vyvoláme kontextové menu
-a zvolíme :item:`Otevřít atributovou tabulku`. Tabulka slouží
-k prohlížení a editaci atributové složky dat. Kliknutím na číslo
-řádku můžeme označit jednotlivé prvky do výběru. V názvu okna je
-vypsaný název vrstvy, celkový počet prvků (`Features total`), počet
-odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`).
-
-
-.. figure:: images/at_table.png
-   :scale-latex: 60
-
-   Atributová tabulka vrstvy.
-
-.. tip:: Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
-   nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
-   vybraná data zpřehlední.
-
-   Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`
-   můžeme invertovat výběr. Zruší se aktuální výběr a 
-   vytvoří se výběr prvků, které ve výběru nebyly.
-
-   Pomocí nabídky |mActionFilter| v levém dolním rohu lze zvolit filtr 
-   zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny 
-   prvky ve vrstvě, tedy hodnota: |mActionFilter| :item:`Zobrazit všechny 
-   prvky`
-
-.. noteadvanced:: Pomocí funkce |rendererCategorizedSymbol| :sup:`Pravidla 
-   podmíněného formátování` lze pole v atributové tabulce  stylizovat na 
-   podle námi definovaných pravidel
