@@ -22,6 +22,8 @@
    :width: 1.5em
 .. |mIconExpression| image:: ../images/icon/mIconExpression.png
    :width: 1.5em
+.. |rendererCategorizedSymbol| image:: ../images/icon/rendererCategorizedSymbol.png
+   :width: 1.5em
 
 
 Vlastnosti vrstvy
@@ -99,11 +101,12 @@ prvkům popisek na základě jednoho z atributů.
 
    Vlastnosti popisků vrstvy.
 
-Na této záložce je nejdříve nutné zaškrtnout políčko :item:`Vytvořit
-popisky vrstvy z` a poté pomocí rolovací nabídky vybrat zdrojový atribut
-popisku. Tím se nám otevřou možnosti stylizace popisků, kde můžeme
-nastavit formát textu, obalovou zónu kolem textu, pozadí, stínování,
-možnosti umístění a vykreslování.
+Na této záložce je nejdříve nutné vybrat z rolovací nabídky |selectstring| 
+polužku  :guilabel:`Zobrazit popisky pro tuto vrstvu`. Tím se nám otevřou 
+možnosti stylizace popisků, kde můžeme nastavit formát textu, obalovou zónu 
+kolem textu, pozadí, stínování, možnosti umístění a vykreslování. Nejdříve je 
+ale nutné nastavit zdroj popisku. Pomocí rolovací nabídky :guilabel:`Popisky z` 
+vybreme zdrojový atribut popisku.
 
 .. figure:: images/labels_sample.png
 
@@ -158,3 +161,6 @@ odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`).
    prvky ve vrstvě, tedy hodnota: |mActionFilter| :item:`Zobrazit všechny 
    prvky`
 
+.. noteadvanced:: Pomocí funkce |rendererCategorizedSymbol| :sup:`Pravidla 
+   podmíněného formátování` lze pole v atributové tabulce  stylizovat na 
+   podle námi definovaných pravidel
