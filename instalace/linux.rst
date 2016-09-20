@@ -20,22 +20,70 @@ způsobech - instalace přes *Terminál* a pomocí *Centra softweru pro Ubuntu*.
 Terminál
 ========
 
-Instalace v terminálu, která je níže podrobně rozepsaná, se skládá ze tří
-základních částí. První krok přidá konkrétní repozitář pro získání systému QGIS.
-Druhý krok slouží k aktualizaci seznamu repozitářů a jejich obsahu. Třetí krok
-je samotná instalace programu.
+Podrobný postup jak nainstalovat požadovanou verzi (Latest/Long Term) lze 
+nálezt v instalační příručce v 
+`QGIS dokumentaci <https://www.qgis.org/en/site/forusers/alldownloads.html#linux>`_. 
+Zde také naleznete odkazy na repozitáře těchto verzí.
 
-.. raw:: latex
- 
-	 \newpage
+Instalaci můžeme provézt dvěma základními způsoby, a to buď se závislostmi na 
+repozitáři *ubuntugis* či nikoliv. V obou případech musíme přidat repozitář do 
+zdroju softwaru systému (přes aplikaci :item:`software-sources` nebo editací 
+souboru :item:`/etc/apt/sources.list`. Zdoje přidáme v následujícím tvaru:
+
+.. notecmd:: Přidání repozitářů pro instalaci QGIS
+               
+   .. code-block:: bash
+
+      deb     *repository* *codename* main
+      deb-src *repository* *codename* main
+
+V případě, že chcete instalovat QGIS se závislostmi na repozitáři *ubuntugis*, 
+ale ještě jej nemáte ve zdrojích, je nutné přidat:
+
+.. notecmd:: Přidání repozitářů pro instalaci QGIS
+               
+   .. code-block:: bash
+
+      deb     http://ppa.launchpad.net/ubuntugis/ubuntugis-unstable/ubuntu 
+      *codename* main
+
+nebo přímo v terminálu zadat příkaz:
+
+.. notecmd:: Přidání repozitářů pro instalaci QGIS
+               
+   .. code-block:: bash
+
+      sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
+
+Příklad pro případnou instalaci LTR verze na Ubuntu 16.04 (LTS) Xenial bez 
+*ubuntugis*:
 
 .. notecmd:: Instalace QGIS
                
    .. code-block:: bash
 
-      sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable
-      sudo apt-get update
-      sudo apt-get install qgis python-qgis qgis-plugin-grass 
+      deb     http://qgis.org/debian-ltr xenial main
+      deb-src http://qgis.org/debian-ltr xenial main
+
+
+Samotný příkaz k instalaci:
+
+.. notecmd:: Instalace QGIS
+               
+   .. code-block:: bash
+
+       sudo apt-get update
+       sudo apt-get install qgis python-qgis qgis-plugin-grass
+
+V některých pípadech je poro instalaci nutné přidat klíč:
+
+.. notecmd:: Instalace QGIS
+               
+   .. code-block:: bash
+      
+      sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key 
+      073D307A618E5811
+
 
 Centrum softwaru pro Ubuntu
 ===========================
