@@ -9,8 +9,10 @@
 Webové služby poskytující rastrová data
 =======================================
 
-Existuje více variant. Nejrozšířenější službou je WMS. Rychlejší, ale
-méně používanou alternativou k WMS je WMTS, kde \"T\" v názvu znamená
+Existuje více variant. Nejrozšířenější službou je :skoleni:`WMS
+<open-source-gis/standardy/ogc/wms.html>`. Rychlejší, ale méně
+používanou alternativou k WMS je :skoleni:`WMTS
+<open-source-gis/standardy/ogc/wmts.html>`, kde \"T\" v názvu znamená
 \"Tile\", tedy dlaždice. WMTS přistupuje k již předgenerovaným
 dlaždicím, tudíž tolik nezatěžuje server a data se ke klientovi
 dostanou rychleji. Rastrová data je možné ukládat a následně je
@@ -20,11 +22,12 @@ daty v databázích PostGIS nebo Oracle.
 Připojení WMS služby
 --------------------
 
-Bezesporu nejpoužívanější webovou službou je WMS (Web Map Service). Služba WMS 
-se postupem času vyvíjela a dnes můžeme narazit na různé 
-verze 1.0.0, 1.1.1 nebo 1.3.0. QGIS podporuje všechny verze WMS, a tak lze bez
-obav přistupovat k jakékoliv publikované službě. V QGISu je správa WMS a WMTS 
-vrstev umístěna do stejného okna. 
+Bezesporu nejpoužívanější webovou službou je :skoleni:`WMS
+<open-source-gis/standardy/ogc/wms.html>` (Web Map Service). Služba
+WMS se postupem času vyvíjela a dnes můžeme narazit na různé verze
+1.0.0, 1.1.1 nebo 1.3.0. QGIS podporuje všechny verze WMS, a tak lze
+bez obav přistupovat k jakékoliv publikované službě. V QGISu je správa
+WMS a WMTS vrstev umístěna do stejného okna.
 
 Správce WMS a WMTS spustíme v záložce :menuselection:`Vrstva --> Přidat vrstvu 
 --> Přidat vrstvu WMS`, ikonou |mActionAddWmsLayer| 
@@ -85,14 +88,15 @@ vrstev jako jedna.
 Připojení WMTS služby
 ---------------------
 
-Jak bylo zmíněno, správa WMS a WMTS probíhá ve stejném dialogovém
-okně. V předchozím kroku bylo ukázáno jak vkládat WMS služby. Pro
-připojení WMTS služby je potřeba v nabídce přidání nového spojení
-zadat URL na platný WMTS server.  Po vybrání služby a připojení přes
-tlačítko :item:`Připojit` proběhne komunikace s WMTS serverem. Po
-navázání spojení se ve správci vrstev aktivuje záložka :item:`Sady
-dlaždic` (:num:`wmts`). Tabulka zobrazuje dostupné vrstvy ze
-serveru. V jednotlivých sloupcích je možné číst informace o názvu
+Jak bylo zmíněno, správa WMS a :skoleni:`WMTS
+<open-source-gis/standardy/ogc/wmts.html>` probíhá ve stejném
+dialogovém okně. V předchozím kroku bylo ukázáno jak vkládat WMS
+služby. Pro připojení WMTS služby je potřeba v nabídce přidání nového
+spojení zadat URL na platný WMTS server.  Po vybrání služby a
+připojení přes tlačítko :item:`Připojit` proběhne komunikace s WMTS
+serverem. Po navázání spojení se ve správci vrstev aktivuje záložka
+:item:`Sady dlaždic` (:num:`wmts`). Tabulka zobrazuje dostupné vrstvy
+ze serveru. V jednotlivých sloupcích je možné číst informace o názvu
 vrstvy, poskytovaném formátu i souřadnicovém systému. V tabulce není
 možné vybrat více vrstev najednou, stačí vybrat jednu vrstvu a
 potvrdit tlačítkem :item:`Ok`.

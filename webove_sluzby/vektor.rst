@@ -11,9 +11,10 @@ Webové služby poskytující vektorová data
 Připojení WFS služby
 --------------------
 
-Správce WFS spustíme v záložce :menuselection:`Vrstva --> Přidat vrstvu 
---> Přidat vrstvu WFS` nebo pomocí ikony |mActionAddWfsLayer| 
-:sup:`Přidání vrstvu WFS`.
+Správce :skoleni:`WFS <open-source-gis/standardy/ogc/wfs.html>`
+spustíme v záložce :menuselection:`Vrstva --> Přidat vrstvu --> Přidat
+vrstvu WFS` nebo pomocí ikony |mActionAddWfsLayer| :sup:`Přidání
+vrstvu WFS`.
 
 .. figure:: images/qgis_ogc_addwfs_manager.png
    :scale-latex: 45

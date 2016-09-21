@@ -3,8 +3,10 @@ Práce s webovými službami OGC
 *****************************
 
 Pod pojmem webové služby OGC si lze představit přístup k datům v rámci
-sítě Internet. Nejrozšířenějšími službami jsou :wikipedia:`WMS` (Web
-Map Service) a :wikipedia:`WFS` (Web Feature Service).
+sítě Internet. Nejrozšířenějšími službami jsou :skoleni:`WMS
+<open-source-gis/standardy/ogc/wms.html>` (Web Map Service) a
+:skoleni:`WFS
+<open-source-gis/standardy/ogc/wfs.html>` (Web Feature Service).
 
 .. note:: Mnohé společnosti používají k ukládání dat serverové řešení,
           které není přístupné z internetu, ale pouze v rámci lokální sítě
