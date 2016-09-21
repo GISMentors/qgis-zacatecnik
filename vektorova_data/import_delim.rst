@@ -105,7 +105,7 @@ vrstvu s odděleným textem`.
 
     - :item:`Počet řádků k vypuštění` |selectnumber| - vynechá
       zadaný počet rádků na začátku
-    - |checkbox| :item:`První záznam obsahuje názvi polí` - zaškrtneme,
+    - |checkbox| :item:`První záznam obsahuje názvy polí` - zaškrtneme,
       pokud máme v tabulce jako první řádek názvy sloupců
 
 - :item:`Možnosti pole`
