@@ -83,7 +83,8 @@ spektrem formátů a webových služeb OGC, ale i jiných formátů.
 
 .. figure:: images/intro_qgis.png
    :scale-latex: 65
-
+   :class: middle
+        
    Ukázka uživatelského rozhraní QGIS.
 
 Program nabízí přehledné uživatelské prostředí. Uživatel má k dispozici širokou
@@ -94,7 +95,8 @@ náležitostmi. Výsledky je možné exportovat do formátu PDF nebo obrázku.
 
 .. figure:: images/intro_map.png
    :scale-latex: 65
-
+   :class: middle
+        
    Ukázka mapového výstupu vytvořeného v QGIS.
 
 QGIS je populární i pro svou rozšiřitelnost pomocí takzvaných
@@ -108,7 +110,8 @@ souborů ve formátu Výměnného formátu katastru slouží plugin `VFK
 
 .. figure:: images/intro_vfk.png
    :scale-latex: 75
-   
+   :class: middle
+        
    Ukázka práce s katastrálními daty v QGIS pomocí VFK pluginu.
 
 .. only:: html
