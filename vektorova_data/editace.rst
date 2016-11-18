@@ -315,7 +315,9 @@ změny vrstvy` i mazat vybrané prvky |remove| :sup:`Vymazat vybrané`:
       do tabulky
     - |mActionDeleteAttribute| :sup:`Smazat sloupec` - vyvolá nabídku,
       ze které vybereme sloupce k vymazání
-    - |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
+    - |mActionCalculateField| :sup:`Otevřít kalkulátor polí` - pomocí 
+      kalkulátoru polí lze vytvářet nebo aktualizovat sloupce (atributy) na 
+      základě zadaného výrazu (vzorce)
 
 Kalkulátor polí
 ---------------
