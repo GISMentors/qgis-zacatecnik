@@ -1,5 +1,8 @@
-.. |mActionSelect| image:: ../images/icon/mActionSelect.png
+.. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
    :width: 1.5em
+.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelectpng
+   :width: 1.5em
+
 
 
 Ukázka zpracování dat
@@ -86,3 +89,106 @@ V našem případě bude definice připojení vypadat jako na následujícím ob
 
 Po tomto kroku máme všechy data z vrstvy stat připojené ke stávajícím atributům
 vrstvy obce a můžeme je využít na další zpracování.
+
+Výpočet podílu zemědělské půdy v obcích
+=======================================
+
+Data, které jsme si v předchozím kroku připojili obsahují i atribut určující 
+*rozlohu zemědělské půdy v daném území* :item:`30.12` a také *celkovou rozlohu 
+území obce* :item:`30.13`. 
+Z těchto hodnot spočteme **podíl zemědělské půdy pro všechny obce v procentech**
+, tuto hodnotu uložíme jako nový atribut (můžeme a nemusíme) a následně uděláme
+vizualizaci těchto hodnot.
+
+Pomocí |mActionCalculateField| :sup:`Kalkulčka polí` si nadefinujeme výpočet 
+hledané hodnoty a jejich uložení do nového atributu. Na :num:`fieldcalc1`
+je zadáno vytvoření nového atributu :item:`zem_puda_p` (desetiné čílo). Výpočet
+hodnoty je **podíl atributu zemědělské plochy k celkové ploše a převod na procenta**.
+
+.. _fieldcalc1:
+
+.. figure:: images/stat_field_calc1.png
+   :class: small
+        
+   Po dokončení výpočtu se přidá nový atribut, který definuje procento území 
+   které zabírá zemědělská plocha v každé obci. Nově přidaný atribut je nutné 
+   uložit.
+
+Dalším krokem je vizualizace těchto hodnot
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+U vrstvy obce nastavíme *odstupňované stylování* podle atributu 
+:item:`zem_puda_p` a zvolíme si další možnosti - jako je barevný rozsah, 
+počet kategorií a jejich rozdělení a další. 
+Při tvorbě takovéhoto stylování je nutné dbát na následné použití dat.
+
+.. _clasification1:
+
+.. figure:: images/stat_clasification1.png
+   :class: large
+        
+   Příklad klasifikace a výsledné zobrazení v mapovém okně
+
+
+
+Výpočet nezaměstnanosti v obcích
+================================
+
+Jedná se o podobný příklad jako je ten předešlý. Použijeme data o *počtu 
+obyvatelů ve věku 15-64 let* :item:`37.10` a *počet nezaměstnaných* :item:`8.3`.
+Zajímavý může  být i výpočet s hodnotou *nezaměstnaných absolventů* :item:`8.4`
+anebo *nezaměstnaných nad 12 měsíců* :item:`8.5`.
+
+Opět použijeme |mActionCalculateField| :sup:`Kalkulčka polí` . 
+Vytvoříme nové pole s názvem :item:`nezam_celk` a hodnotu spočteme jako **podíl
+nezaměstnaných a obyvatelů mezi 14 a 65 přepočten na procenta**. 
+Nově votvořené pole obsahuje hodnoty procentuální nezaměstnanosti pro každou obec.
+
+.. _fieldcalc2:
+
+.. figure:: images/stat_field_calc2.png
+   :class: small
+        
+Pro vizualizaci zopakujeme postup tvorby stylu z předchozího příkladu. 
+Možné stylování a výseldek je zobrazen na obr :num:`#clasification2`
+
+.. _clasification2:
+
+.. figure:: images/stat_clasification2.png
+   :class: large
+        
+   Příklad stylování a výslední zobrazení v mapovém okně
+
+
+Výběr obcí podle vícero atributů
+================================
+
+Data zle samozřejmě použít i k výběru. Jedním z příkladů je výběr území, kde 
+dlouhodobě nezaměstnaní (:item:`8.5`) tvoří víc než 50% všech nezaměstnaných 
+(:item:`8.3`).
+
+Atributové dotazování je popsáno v samostatné `části <http://training.gismentors.eu/qgis-zacatecnik/vektorova_data/dotazovani.html#atributove-dotazovani>`_
+
+Použijeme funkci |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`. 
+Tento nástroj nám umožní napsat podmínku, pomocí které se vyberou pouze prvky, 
+které splňují podmínku.
+
+V našem případě bude vypadat vzorec jako na obrázku :num:`#attrib`.
+Po provedení se výběr aplikuje v mapovém okně i atributové tabulce - 
+:num:`#attrib2`. 
+Je zde vidět, že z celkového počtu 6253 obcí je naší **podmínku splňuje 749 obcí**.
+
+.. _attrib:
+
+.. figure:: images/stat_attribute_select1.png
+   :class: small
+        
+   Výběr obcí pomocí výrazu podílu dlouhodobě nezaměstnaných nad 50% s výsledkem
+
+.. _attrib2:
+
+.. figure:: images/stat_attribute_select2.png
+   :class: large
+        
+   Výsledek výběru v mapovém okně a atributové tabulce
+
