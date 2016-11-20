@@ -1,194 +1,221 @@
+.. |srs| image:: ../images/icon/mActionSetProjection.png
+   :width: 1.5em
+.. |box_yes| image:: ../images/icon/checkbox.png
+   :width: 1.5em
+.. |box_no| image:: ../images/icon/checkbox_unchecked.png
+   :width: 1.5em
+.. |mIconVectorLayer| image:: ../images/icon/mIconVectorLayer.png
+   :width: 1.5em
+.. |mActionSelect| image:: ../images/icon/mActionSelect.png
+   :width: 1.5em
+.. |buffer| image:: ../images/icon/buffer.png
+   :width: 1.5em
+.. |dissolve| image:: ../images/icon/dissolve.png
+   :width: 1.5em
+.. |mIconSelectRemove| image:: ../images/icon/mIconSelectRemove.png
+   :width: 1.5em
+.. |mIconEditable| image:: ../images/icon/mIconEditable.png
+   :width: 1.5em
+.. |mActionDeleteAttribute| image:: ../images/icon/mActionDeleteAttribute.png
+   :width: 1.5em
 .. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
    :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelectpng
+.. |intersect| image:: ../images/icon/intersect.png
+   :width: 1.5em
+.. |mActionSaveEdits| image:: ../images/icon/mActionSaveEdits.png
+   :width: 1.5em
+.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
+   :width: 1.5em
+.. |union| image:: ../images/icon/union.png
+   :width: 1.5em
+.. |select_location| image:: ../images/icon/select_location.png
+   :width: 1.5em
+.. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
+   :width: 1.5em
+.. |clipper| image:: ../images/icon/clip.png
    :width: 1.5em
 
+Ukázka kombinace prostorových funkcí a dotazů
+=============================================
+
+Najděte vhodné parcely na území Hlavního města Prahy pro výstavbu
+nového stavebního objektu. Kvůli případnému hluku musí být vzdálené
+alespoň 500 m od železnic, jejich výměra musí být minimálně 20 ha a
+měly by se nacházet mimo městské části Praha 6, 7 a Praha 8.
+
+.. _data-ul2:
+
+Data
+^^^^
+:map:`spravniobvody.shp, parcely.shp, zeleznice.shp`
+
+.. _reseni-ul2:
+
+Řešení
+^^^^^^
+
+1. Nástrojem *Dissolve* sloučíme správní obvody a vytvoříme polygonovou vrstvu Prahy.
+2. Nástrojem *Clip* ořežeme vrstvu železnic podle polygonu Prahy.
+3. Nástrojem *Buffer* vytvoříme obalovou zónu 500 m kolem pražských železnic.
+4. Vybereme správní obvody Praha 6, 7 a 8 a nástrojem *Union* je sjednotíme s
+   obalovou zónou kolem železnic (negativní oblasti).
+5. Vybereme všechny parcely s rozlohou větší než 20 ha.
+6. Z vybraných parcel vybereme ty, které nejsou v negativní oblasti.
+7. Výsledek zobrazíme.   
+
+Postup v QGIS
+^^^^^^^^^^^^^
+
+Do mapového okna pomocí |mIconVectorLayer| :sup:`Přidat vektorovou
+vrstvu` přidáme potřebná :ref:`data <data-ul2>`. Vidíme, že vrstva
+železnic je pro celou Českou republiku. Části mimo Prahy ale nebudeme
+potřebovat, proto vrstvu ořežeme. Musíme si vytvořit hranici města. Z
+menu :menuselection:`Vektor --> Nástroje geoprocessingu` vybereme
+nástroj |dissolve| :sup:`Rozpustit`, kde jako vstupní vektorovou
+vrstvu nastavíme :map:`spravniobvody`, pole rozpuštění na ``---
+Rozpustit vše ---`` a výstup uložíme jako :map:`praha`.  Potom
+použijeme nástroj na ořezání |clipper| :sup:`Ořezávač`. Vstupem bude
+vektor železnic České republiky, ořezávat budeme podle nově vytvořené
+polygonové vrstvy :map:`Praha` a výsledek uložíme jako
+:map:`zeleznice_p`, tedy železnice pouze na území Prahy. Dialogová okna
+nástrojů *Dissolve* a *Clip* jsou zobrazeny na :num:`#dissolve-clip`. Následně
+můžeme každé vrstvě :ref:`nastavit styl<styl-vrstvy>`, čímž si vstupní
+data přehledně zobrazíme (:num:`#vstup-ul2`).
+
+.. _dissolve-clip:
+
+.. figure:: images/u-dissolve-clip.png
+   :class: middle
+
+   Použití nástrojů *Dissolve* a *Clip*.
+
+.. _vstup-ul2:
+
+.. figure:: images/u-vstup-ul2.png
+   :class: middle
+        
+   Správní obvody, parcely a železnice Prahy.
+
+.. note:: Na :num:`#vstup-ul2` je pro vektorovou vrstvu :map:`parcely` nastavena
+   jednoduchá průhledná výplň a šedé ohraničení s transparentností ``10%``, 
+   symbol vrstvy :map:`zeleznice_p` je nastavený na ``Resident``, správní obvody
+   jsou barevně kategorizované dle pole :dbcolumn:`nazev`, pričemž hodnoty tohoto
+   atributu jsou vykresleny.
+
+.. tip:: V tomto kroku je dobré si projekt uložit, a to pomocí 
+	 :menuselection:`Projekt --> Uložit`. 
+
+Teď přistoupíme k tvorbě obalové zóny kolem pražských železnic, na to využijeme
+nástroj |buffer| :sup:`Buffer`. V jednom dialogovém okně nastavíme vstup, míru
+aproximace na ``70``,  velikost obalové zóny na ``500 m``, zaklikneme |box_yes| 
+:sup:`Rozpustit výsledky obalové zóny`, aby byla obalová zóna celistvá a výstup
+uložíme jako :map:`zeleznice_pb`, povolíme |box_yes| :sup:`Přidat výsledek do 
+mapového okna` a spustíme ``OK``, viz :num:`#zeleznice-buffer`.
+ 
+.. _zeleznice-buffer:
+
+.. figure:: images/u-zeleznice-buffer.png
+   :class: small
+   
+   Obalová zóna 500 m kolem vektorové vrstvy pražských železnic.
+
+Pokračujeme výběrem správních obvodů, kde se parcela pro nový stavební
+objekt nemá nacházet. V okně vrstev označíme vektor
+:map:`spravniobvody` a v menu klikneme na |mIconExpressionSelect|
+:sup:`Vybrat prvky pomocí vzorce`.  V střední části dialogového okna
+najdeme položku ``Pole a hodnoty``, dvouklikem zvolíme ``nazev``, v
+pravé části klikneme na ``všechny jedinečné hodnoty`` a tímto způsobem
+napíšeme do levého okna výraz (:num:`#vyraz678`), kterým z vrstvy
+správních obvodů vybereme Prahu 6, 7 a 8.
+
+.. code-block:: sql
+
+   "nazev" = 'Praha 6' OR "nazev" = 'Praha 7' OR "nazev" = 'Praha 8'
+
+Pak přes pravé tlačítko myši nad vrstvou :map:`spravniobvody` výběr
+uložíme pomocí `Uložit jako`, nazveme jej :map:`praha_neg`. Dbáme na
+to, aby políčko |box_no| :sup:`Uložit pouze vybrané prvky` bylo
+zaškrtnuté |box_yes| a zkontrolujeme i souřadnicový systém
+:epsg:`5514`.
 
 
-Ukázka zpracování dat
----------------------
+.. note:: Operátor ``OR`` se nachází v položce ``Operátory``.
 
-V následující ukázce je popsán postup zpracování dat o obcích ČR, které jsou 
-získány z `RÚIANu <http://www.cuzk.cz/ruian/RUIAN.aspx>`_. Tyto data zkombinujeme z daty, která jsou poskytována
-`Statistickým úřadem <https://www.czso.cz/>`_. 
+.. raw:: latex
 
-Tento postup je zkloubením základních postupů, které jsou součástí školení pro 
-začátečníky. Požadovaným výsledkem je jednak grafická vizualizace různých 
-statistických údajů, které jsou odvozeny ze základních ukazatelů, ale také 
-zkloubení dat pomocí prostorových analýz s jinými datovými sadami.
+   \newpage
 
+.. _vyraz678:
 
-Podkladová data
-===============
+.. figure:: images/u-vyraz678.png
+   :class: middle
+   
+   Výběr správních obvodů, kde budeme hledat vhodné parcely.
 
-Jak již bylo zmíněno, budeme používat datovou sadu **obcí ČR** z datasetu *RÚIAN*. 
+.. note:: Po exportu zrušíme vybrané obvody Prahy pomocí |mIconSelectRemove| 
+	  :sup:`Zrušit výběr prvků ve všech vrstvách`.
 
-Další datová sada pochází ze statistického úřadu. Tyto data poskytují různorodé
-údaje definující sadu faktorů popisující každou obec. 
-Data je možné získat `zde <https://www.czso.cz/csu/czso/csu_a_uzemne_analyticke_podklady>`_
-(**Aktuální údaje za všechny obce ČR (data mimo SLDB)**) i s popisem evidovaných hodnot.
+Následuje spojení "negativních" zón. Cílem je dostat vektorovou vrstvu, která je
+sjednocením obalové zóny železnic a nepožadovaných správních obvodů. Využijeme
+nástroj |union| :sup:`Sjednotit`. Vznikne výstup (například 
+:map:`oblasti_neg1`), na který opět použijeme  |dissolve| :sup:`Rozpustit`.
+Výsledek pojmenujeme :map:`oblasti_neg` (:num:`#neg`).
 
+.. _neg:
 
-Příprava dat
-============
-
-Jako první si načteme vrstvu obcí. Můžeme použít například data ze `školení QGIS 
-<http://training.gismentors.eu/geodata/qgis/data.zip>`_.
-
-Data stáhnuté ze statistického úřadu si upravíme pro import do QGISu. Jako první
-si odstraníme řádky 1-3,5,6 a takto upravenou tabulku si uložíme do formátu 
-:map:`CSV`.
-
-.. warning:: Některé sloupce, které mají číslenou hodnotu je vhodné upravit. 
-   Například sloupce spadající pod kategorii 30 (výměry druhů pozemků) obsahujou
-   pomlčku. Při importu 
-   takovýchto dat bude pak atribut používán jako *textový řetězec* a ne jako 
-   *číslo*.
-
-   Takovéto hodnoty je lepší hromadně nahradit vhodnou hodnotou.
-   Podobný případ se týká například sloupce 8.5 (počet dlouhodobě 
-   nezaměstnaných). Zde jsou sice uvedeny všude *čísla*, ale pokud je celé číslo
-   čtyřciferné tak jsou stovky a tisíce *odděleny mezerou*. I tento případ je
-   nutné opravit, jinak *není možné provádět matematické operace*.
-
-   Obě opravy je možné udělat jak před importem, tak až po importu. Výběr záleží
-   na uživateli.
-
-Takto upravený soubor načteme podle `postupu <http://training.gismentors.eu/qgis-zacatecnik/vektorova_data/import_delim.html>`_
-s ohledem na to, že importujeme *data bez geometrie*. 
-Vrstvu pro naše účely pojmenujeme :item:`stat`
-
-.. _imported_data:
-
-.. figure:: images/stat_imported_data.png
+.. figure:: images/u-neg.png
    :class: large
         
-   Import tabulkových dat a zobrazení obou datových sad v QGISu.
+   Sjednocení negativních oblastí :fignote:`(1)`, spojení do souvislého 
+   vektoru :fignote:`(2)` a zobrazení v mapovém okně :fignote:`(3)`.
 
+Pak pokračujeme krokem č. 5, viz :ref:`Řešení<reseni-ul2>`. Postup je obdobný
+jako při výběru správních obvodů pomocí |mIconExpressionSelect| 
+:sup:`Vybrat prvky pomocí vzorce`. Výraz ``"vymeraparc" > 200000`` je ten,
+kterým vybereme parcely  s výměrou nad 20 ha (:num:`#parcely20ha`). Vybrané
+prvky uložíme jako nový vektor :map:`parcely_20ha` a výběr zrušíme ikonkou 
+|mIconSelectRemove|.
+  
 
-Připojení dat
-=============
+.. _parcely20ha:
 
-Dalším krokem je připojení dat z vrstvy :item:`stat` k vrstvě :item:`obce` tak,
-abychom u každé obce viděli všechny atributy z obou vrstev.
-
-Klíčovým je atribut podle kterého se data z obou vrstev spárujou. V tomto
-případě použijeme kód obce. Tento atribut se nachází v obou vrstvách - v jedné 
-je pojmenován **kod_ob** a v druhé **kodobce**. Je to číselný identifikátor 
-unikátní pro každou obec v ČR. Samotné připojení je popsáno `zde 
-<http://training.gismentors.eu/qgis-zacatecnik/vektorova_data/join.html>`_. 
-V našem případě bude definice připojení vypadat jako na následujícím obrázku 
-:num:`#join`.
-
-.. _join:
-
-.. figure:: images/stat_join.png
-   :class: small
+.. figure:: images/u-parcely20ha.png
         
-   Připojení atributů vrstvy stat k vrstvě obce.
+   Výběr parcel s výměrou nad 20 hektarů.
 
-Po tomto kroku máme všechy data z vrstvy stat připojené ke stávajícím atributům
-vrstvy obce a můžeme je využít na další zpracování.
+Z těchto parcel je potřebné vybrat ty, které nejsou v negativní oblasti.
+Nejdříve označíme všechny prvky vrstvy :map:`parcely_25ha`, například vybereme
+všechny ``gml_id`` pomocí |mIconExpressionSelect| 
+:sup:`Vybrat prvky pomocí vzorce`. Následně z hlavní lišty spustíme dialogové
+okno |select_location| :sup:`Vybrat podle umíštění`. Najdeme jej v položce 
+:menuselection:`Vektor --> Výzkumné nástroje`. Zaškrtneme |box_yes| 
+:sup:`Include input features that intersect the selection features`, |box_yes| 
+:sup:`Zahrnout vstupní prvky, které překrývají/protínají prvky výběru`, a jelikož
+chceme právě ty parcely, které zadané podmínky nesplňují, zvolíme možnost 
+``odstraněním z aktuálního výběru`` (:num:`#vybrat-umisteni`).
+  
 
-Výpočet podílu zemědělské půdy v obcích
-=======================================
+.. _vybrat-umisteni:
 
-Data, které jsme si v předchozím kroku připojili obsahují i atribut určující 
-*rozlohu zemědělské půdy v daném území* :item:`30.12` a také *celkovou rozlohu 
-území obce* :item:`30.13`. 
-Z těchto hodnot spočteme **podíl zemědělské půdy pro všechny obce v procentech**
-, tuto hodnotu uložíme jako nový atribut (můžeme a nemusíme) a následně uděláme
-vizualizaci těchto hodnot.
-
-Pomocí |mActionCalculateField| :sup:`Kalkulčka polí` si nadefinujeme výpočet 
-hledané hodnoty a jejich uložení do nového atributu. Na :num:`fieldcalc1`
-je zadáno vytvoření nového atributu :item:`zem_puda_p` (desetiné čílo). Výpočet
-hodnoty je **podíl atributu zemědělské plochy k celkové ploše a převod na procenta**.
-
-.. _fieldcalc1:
-
-.. figure:: images/stat_field_calc1.png
-   :class: small
+.. figure:: images/u-vybrat-umisteni.png
         
-   Po dokončení výpočtu se přidá nový atribut, který definuje procento území 
-   které zabírá zemědělská plocha v každé obci. Nově přidaný atribut je nutné 
-   uložit.
+   Výběr parcel podle umístění metodou odstranění z aktuálního výběru.
 
-Dalším krokem je vizualizace těchto hodnot
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Výsledek (podmnožina :map:`parcely_20ha`) uložíme pomocí ``Uložit jako`` a
+zobrazíme na podkladě původního zájmového území (:num:`#vysledok-ul2`).
+Pro lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`. 
 
-U vrstvy obce nastavíme *odstupňované stylování* podle atributu 
-:item:`zem_puda_p` a zvolíme si další možnosti - jako je barevný rozsah, 
-počet kategorií a jejich rozdělení a další. 
-Při tvorbě takovéhoto stylování je nutné dbát na následné použití dat.
+.. note:: Pro zvýraznění výsledku je průhlednost vrstvy správních celků 
+	  nastavena na ``70`` 
+	  (:menuselection:`Vlastnosti --> Styl --> Průhlednost vrstvy`).
 
-.. _clasification1:
+.. raw:: latex
+	 
+   \newpage
+	 
+.. _vysledok-ul2:
 
-.. figure:: images/stat_clasification1.png
-   :class: large
+.. figure:: images/u-vysledok-u2.png
+   :class: middle
         
-   Příklad klasifikace a výsledné zobrazení v mapovém okně
-
-
-
-Výpočet nezaměstnanosti v obcích
-================================
-
-Jedná se o podobný příklad jako je ten předešlý. Použijeme data o *počtu 
-obyvatelů ve věku 15-64 let* :item:`37.10` a *počet nezaměstnaných* :item:`8.3`.
-Zajímavý může  být i výpočet s hodnotou *nezaměstnaných absolventů* :item:`8.4`
-anebo *nezaměstnaných nad 12 měsíců* :item:`8.5`.
-
-Opět použijeme |mActionCalculateField| :sup:`Kalkulčka polí` . 
-Vytvoříme nové pole s názvem :item:`nezam_celk` a hodnotu spočteme jako **podíl
-nezaměstnaných a obyvatelů mezi 14 a 65 přepočten na procenta**. 
-Nově votvořené pole obsahuje hodnoty procentuální nezaměstnanosti pro každou obec.
-
-.. _fieldcalc2:
-
-.. figure:: images/stat_field_calc2.png
-   :class: small
-        
-Pro vizualizaci zopakujeme postup tvorby stylu z předchozího příkladu. 
-Možné stylování a výseldek je zobrazen na obr :num:`#clasification2`
-
-.. _clasification2:
-
-.. figure:: images/stat_clasification2.png
-   :class: large
-        
-   Příklad stylování a výslední zobrazení v mapovém okně
-
-
-Výběr obcí podle vícero atributů
-================================
-
-Data zle samozřejmě použít i k výběru. Jedním z příkladů je výběr území, kde 
-dlouhodobě nezaměstnaní (:item:`8.5`) tvoří víc než 50% všech nezaměstnaných 
-(:item:`8.3`).
-
-Atributové dotazování je popsáno v samostatné `části <http://training.gismentors.eu/qgis-zacatecnik/vektorova_data/dotazovani.html#atributove-dotazovani>`_
-
-Použijeme funkci |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`. 
-Tento nástroj nám umožní napsat podmínku, pomocí které se vyberou pouze prvky, 
-které splňují podmínku.
-
-V našem případě bude vypadat vzorec jako na obrázku :num:`#attrib`.
-Po provedení se výběr aplikuje v mapovém okně i atributové tabulce - 
-:num:`#attrib2`. 
-Je zde vidět, že z celkového počtu 6253 obcí je naší **podmínku splňuje 749 obcí**.
-
-.. _attrib:
-
-.. figure:: images/stat_attribute_select1.png
-   :class: small
-        
-   Výběr obcí pomocí výrazu podílu dlouhodobě nezaměstnaných nad 50% s výsledkem
-
-.. _attrib2:
-
-.. figure:: images/stat_attribute_select2.png
-   :class: large
-        
-   Výsledek výběru v mapovém okně a atributové tabulce
-
+   Vhodné parcely pro výstavbu nového stavebního objektu.

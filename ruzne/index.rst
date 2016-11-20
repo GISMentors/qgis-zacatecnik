@@ -3,8 +3,7 @@ Různé
 *****
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 	      
    qgis_pluginy
    priklady
-   priklad_2
