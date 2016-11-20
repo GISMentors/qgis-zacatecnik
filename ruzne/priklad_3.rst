@@ -1,6 +1,6 @@
 .. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
    :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelectpng
+.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
    :width: 1.5em
 
 Ukázka zpracování dat
@@ -192,3 +192,110 @@ Je zde vidět, že z celkového počtu 6253 obcí je naší **podmínku splňuje
         
    Výsledek výběru v mapovém okně a atributové tabulce
 
+
+Výběr obcí, které leží do 20 km od dálnic a do 10km  od rychlostních silnic
+=========================================================================== 
+
+K této analýze potřebujeme vrstvu obcí, jako v předešlých případech. 
+Druhou vrstvou je vrstva silnic z datasetu OpenStreetMap - opět lze použít data
+připravené pro školení - `zde <http://training.gismentors.eu/geodata/qgis/data.zip>`_.
+
+Nová atribut s hodnotou vzdálenosti
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ze zadání vyplývá, že budeme hledat obalovou zónu silnic. 
+Nejde ale o konstantní vzdálenost, ale o hodnotu odvíjející se od existující
+kategorie silnice.
+
+Stávající atributy vrstvy :item:`silnice` doplníme o nový atribut :item:`okoli`,
+který vyplníme pro typ silnice = 1 (dálnice) hodnotou 20000 a pro typ silnice =
+2 (rychlostní komunikace) 10000. 
+
+Použijeme |mActionCalculateField| :sup:`Kalkulčka polí`  pro nové pole typu 
+*integer* a pomocí výrazu *CASE* vyplníme hodnoty dle požadavku - jako na 
+obrázku :num:`#fieldcalc3`.
+ 
+.. _fieldcalc3:
+
+.. figure:: images/stat_field_calc3.png
+   :class: medium
+
+   Podmíněný výpočet nového atributu a ukázka výsledku a atributové tabulce.
+
+.. note:: Prostorové analýzy pracují v základních jednotkách souřadnicových 
+   systémů. V případě práce v S-JTSK (EPSG:5514) se jedná o metry. Proto
+   zadáváme 20 kilometrů jako 20 000 metrů.
+
+Výběr dálnic a rychlostních silnic
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Dalším krokem je **výběr pouze dálnic a rychlostních cest**. Tento výběr lze 
+provést různými způsoby:
+
+1. použijeme **výběr prvku pomocí vzorce** a jako vzorec použijeme vzorec
+   **typ = 1 OR typ = 2**
+2. použijeme **výběr prvku pomocí vzorce** a jako vzorec použijeme nově 
+   vytvořený atribut a vzorec **okoli IS NOT NULL** (hodnota NULL je u ostatních
+   kategorií) anebo **okoli = 20000 OR okoli = 10000**
+3. použijeme **kategorizované stylování** podle atributu typ, necháme zobrazit
+   pouze hledané kategorie a provedene **výběr prvků v mapovém okně** (můžeme v
+   ybrat pouze prvky, které se v mapovém okně zobrazují)
+
+.. _selectroads:
+
+.. figure:: images/stat_select_roads.png
+   :class: large
+
+   Tři různé způsoby jak do výběru vybrat pouze  silnice a rychlostní cesty.
+
+Tvorba obalové zóny
+^^^^^^^^^^^^^^^^^^^
+
+Pokud máme vybrané jenom požadované kategorie silnic, tak na nich můžeme
+vytvořit obalovou zónu. 
+Použijeme prostorovou analýzu `obalová zóna <http://training.gismentors.eu/qgis-zacatecnik/vektorova_data/prostorove_analyzy.html#obalova-zona-buffer>`_
+:menuselection:`Vektor-->Nástroje geoprocessingu-->Obalové zóny ...`.
+
+Podstatné je použít *pouze vybrané prvky*, velikost bufferu určit atributem
+:item:`okoli`. V tomto případě použijeme i možnost *"rozpustit obalovou zónu"*.
+
+Výsledkem této analýzy je nová *polygonová vrstva*. 
+Po přidání do mapového okna a překrytí obou vrstev je vidět, že analýza má
+očekávaný výsledek. 
+
+.. _buffer:
+
+.. figure:: images/stat_buffer.png
+   :class: large
+
+   Nastavení tvorby obalové zóny a zobrazení výsledku v mapovém okně.
+
+Prostorový výběr
+^^^^^^^^^^^^^^^^
+
+Posledním krokem je geometrický výběr.
+Ten nám má vybrat **všechny obce které se nachází v obalové zóně** vytvořené v
+předchozím kroku.
+
+Použijeme tedy funkci :menuselection:`Vektor-->Výzkumné nástroje-->Vybrat podle umísténí...`
+. Podstatné je dobře nadefinovat její kroky - vybíráme prvky z vrstvy
+:item:`obce`, které protínají prvky v :item:`silnice_okoli`. Co je
+nejdůležitější - jestli chceme obce, které do vrstvy okolí zasahují byť jeno
+m malým kouskem, anebo musí být celé uvnitř, což záleží na požadavcích.
+
+V našem případě chceme jenom obce, které **leží celou svou plochou uvnitř**.
+Celé nastavení výběru, zobrazení výsledku výběru v mapovém okně i ukázka
+atributové tabulky je  na obr :num:`#selectedareas`. 
+
+Výsledkem tohoto úkolu je **3120 obcí** které se nachází v zadané vzdálenosti od 
+dálnic a rychlostních komunikací.
+
+Pro zobrazení v mapovém okně je nutné pohrát si s vykreslováním jednotlivých
+vrstev a s jejich průsvitností.
+
+.. _selectedareas:
+
+.. figure:: images/stat_selected_areas.png
+   :class: large
+
+   Prostorový výběr, zobrazení v mapovém okně a detail atributové tabulky.
