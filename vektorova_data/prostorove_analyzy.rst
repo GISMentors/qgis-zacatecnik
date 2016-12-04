@@ -26,6 +26,8 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
        Okno :item:`Nástroje zpracování` (Advanced interface - pokročilé 
        zobrazení).
 
+.. _buffer:
+
 Obalová zóna (buffer)
 ---------------------
 
