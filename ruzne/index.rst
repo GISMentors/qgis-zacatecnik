@@ -7,3 +7,4 @@ Různé
 	      
    qgis_pluginy
    priklady
+   styly
