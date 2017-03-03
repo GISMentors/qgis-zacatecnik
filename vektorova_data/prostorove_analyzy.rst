@@ -116,7 +116,7 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 
 .. figure:: images/prost_puvod.png
    :class: middle
-   :scale-latex: 60
+   :scale-latex: 50
 
    Původní vrstvy vstupující do ukázkových příkladů.
 
@@ -133,6 +133,7 @@ prvek nese atributy obou vstupních vrstev.
 
 Sjednotit
 ^^^^^^^^^
+
 Vytvoří novou vrstvu se všemi původními prvky, v místech překryvu vrstev jsou 
 vytvořeny nové prvky.
 
@@ -143,6 +144,7 @@ vytvořeny nové prvky.
     
 Symetrický rozdíl
 ^^^^^^^^^^^^^^^^^
+
 Vytvoří novou vrstvu, kde v místech překryvu vrstev nejsou vytvořeny prvky. 
 Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.
 
@@ -161,11 +163,12 @@ nesou atributy pouze z vrstvy zadané jako `Vstupní vektorová vrstva`.
 
 .. figure:: images/prost_orez.png
    :scale-latex: 35
-		    
+
    Výsledek funkce Ořezání... - čtverec jsme ořezali podle kruhu.
 
 Rozdíl
 ^^^^^^
+
 Vytvoří novou vrstvu, která je rozdílem vstupních vrstev. Ve `Vstupní 
 vektorové vrstvě` se odstraní plochy, které se překrývají s vrstvou v 
 nabídce `Rozdíl ve vrstvě`.
@@ -202,7 +205,7 @@ V následujícím příkladu provedeme sjednocení vrstvy velkoplošných chrán
 území a obalové zóny dálnic (10 km).
    
 .. figure:: images/prost_sjed_priklad.png
-   :scale-latex: 55
+   :scale-latex: 75
  
    Sjednocení vrstvy velkoplošných chráněných území a obalové zóny dálnic 
    (10 km).

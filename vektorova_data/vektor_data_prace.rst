@@ -155,11 +155,11 @@ Metadata
 V záložce :item:`Metadata` je možné získat základní metadata vektorové vrstvy.
 
 .. figure:: images/vector_metadata.png
-   :scale-latex: 80
+   :scale-latex: 70
 
    Příklad výpisu metadat vrstvy ve formátu ESRI shapefile.
 
 .. figure:: images/postgis_metadata.png
-   :scale-latex: 80
+   :scale-latex: 70
 
    Příklad výpisu metadat vrstvy ve formátu PostGIS.

@@ -55,10 +55,6 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 .. tip:: Pomocí přetažení lze přidat data také přímo ze správce
          souborů v operačním systému.
 
-.. raw:: latex
-
-   \newpage
-
 .. _browser:
 
 .. figure:: images/qgis_ogc_addbrowser.png
@@ -109,6 +105,10 @@ filtru. Zvolení správného souřadnicového systému je velice důležité,
 pokud máte v mapovém okně načtena data v různých souřadnicových
 systémech, a dochází tak k transformaci, při měření nebo připojování k
 webovým službám.
+
+.. raw:: latex
+
+   \clearpage
 
 .. _srs:
 

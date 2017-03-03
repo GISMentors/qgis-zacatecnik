@@ -91,8 +91,9 @@ nachází kraj Hlavního města Prahy (:num:`#u-select-praha`).
 .. _u-select-praha:
 
 .. figure:: images/u-select-praha.png
-   :class: middle
-        
+   :class: middle 
+   :scale-latex: 65
+       
    Výběr území Prahy kliknutím do mapového okna.
 
 Následně vytvoříme obalovou zónu 100 km od hranice Prahy. Použijeme prostorovou
@@ -114,7 +115,8 @@ velikost obalové zóny v metrech, název výstupního souboru a povolíme |box_
 .. figure:: images/u-p100km.png
    :class: small
    :scale: 75
-   
+   :scale-latex: 45
+
    Tvorba obalové zóny velikosti 100 km kolem hranice Prahy.
 
 Do mapového okna se přidá nová vektorová vrstva :map:`P100km`. Nastavíme jí styl

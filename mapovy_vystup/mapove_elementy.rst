@@ -86,11 +86,11 @@ nebo uchopení za jeho obsah a posun.
    se v části :item:`Vlastnosti položky` otevře detailní
    nastavení konkrétního mapového prvku.
         
-        .. figure:: images/map_items.png
-           :class: small
-           :scale-latex: 38
+   .. figure:: images/map_items.png
+      :class: small
+      :scale-latex: 35
  
-           Výřez s obsahem mapového okna a jeho detailní nastavení.
+      Výřez s obsahem mapového okna a jeho detailní nastavení.
            
 Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu
 mapového okna. Překreslení dle pozměněného mapového okna je možné v
@@ -109,6 +109,10 @@ okně :item:`Zobrazit rozsah v mapovém okně`.
    :scale-latex: 40
  
    Nastavení měřítka a extentu pro mapové okno.
+
+.. raw:: latex
+
+   \newpage
 
 .. index::
    pair: mapové elementy; souřadnicová mřížka 
@@ -129,7 +133,7 @@ vykreslování.
        
 .. figure:: images/map_grids.png
    :class: small
-   :scale-latex: 50
+   :scale-latex: 45
         
    Nastavení gridu pro mapové okno.
  
@@ -141,8 +145,8 @@ zda se zobrazuje, pozici vůči rámu, orientaci a řazení.
 
 .. figure:: images/map_decoration.png
    :class: small
-   :scale-latex: 50
-		 
+   :scale-latex: 45
+
    Nastavení zobrazování popisových souřadnic gridu.
 
 .. index::
@@ -183,7 +187,7 @@ změnit text i zařazení jednotlivých položek v rámci legendy samotné.
 
 .. figure:: images/composer_legend.png
    :class: large
-   :scale-latex: 80
+   :scale-latex: 60
  
    Přidaná legenda a úprava jejích položek.
 
@@ -209,7 +213,7 @@ atributovou tabulku do mapového výstupu.
 
 .. figure:: images/composer_table.png
    :class: large
-   :scale-latex: 80
+   :scale-latex: 60
  
    Atributová tabulka vybrané vrstvy přidaná v mapovém výstupu.
        
@@ -243,6 +247,10 @@ Výběr symbologie a další nastavení jsou dostupné v záložce :item:`Vlastn
 položky`. Lze zde ponechat defaultní styl prvku, kdy se vykresluje jednoduchá 
 šipka. Je možné použít i složitější nastavení - například použít vlastní svg 
 symboly pro začátek a konec šipky.
+
+.. raw:: latex
+
+   \newpage
 
 .. figure:: images/arrow.png
    :class: small

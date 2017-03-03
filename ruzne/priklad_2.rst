@@ -86,6 +86,7 @@ data přehledně zobrazíme (:num:`#vstup-ul2`).
 
 .. figure:: images/u-dissolve-clip.png
    :class: middle
+   :scale-latex: 65
 
    Použití nástrojů *Dissolve* a *Clip*.
 
@@ -93,6 +94,7 @@ data přehledně zobrazíme (:num:`#vstup-ul2`).
 
 .. figure:: images/u-vstup-ul2.png
    :class: middle
+   :scale-latex: 70
         
    Správní obvody, parcely a železnice Prahy.
 

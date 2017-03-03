@@ -55,8 +55,9 @@ hodnotami uložena:
 .. _xydata:
 
 .. figure:: images/xydata.png
-
-    Příklad tabulky s vhodnými XY daty.
+   :scale-latex: 45
+              
+   Příklad tabulky s vhodnými XY daty.
 
 .. _xydatacsv:
 
@@ -156,6 +157,7 @@ souřadnice zapsány. Pokud chceme naimportovaná data uložit jako vrstvu, mus�
 exportovat (:guilabel:`Uložit jako...`).
 
 .. figure:: images/xydata_vysledek.png
+   :scale-latex: 50
     
     Výsledná vrstva bodů.
 
@@ -174,7 +176,8 @@ standardní výměnný formát :wikipedia-en:`GPX <GPS_Exchange_Format>`
 
 .. figure:: images/gpstools.png
     :scale: 60 %
-    
+    :scale-latex: 50
+
     Okno pluginu GPS Nástroje.
 
 Získání .gpx souboru z GPS přístroje

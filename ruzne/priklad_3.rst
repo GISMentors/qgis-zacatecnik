@@ -129,6 +129,7 @@ nutné dbát na následné použití dat.
 
 .. figure:: images/stat_clasification1.png
    :class: large
+   :scale-latex: 90
         
    Příklad klasifikace a výsledné zobrazení v mapovém okně.
 
@@ -149,6 +150,7 @@ nezaměstnanosti pro každou obec.
 .. _fieldcalc2:
 
 .. figure:: images/stat_field_calc2.png
+   :scale-latex: 55
         
 Pro vizualizaci zopakujeme postup tvorby stylu z předchozího příkladu. 
 Možné stylování a výsledek je zobrazen na :num:`#clasification2`.
@@ -157,7 +159,8 @@ Možné stylování a výsledek je zobrazen na :num:`#clasification2`.
 
 .. figure:: images/stat_clasification2.png
    :class: large
-        
+   :scale-latex: 90
+              
    Příklad stylování a výslední zobrazení v mapovém okně.
 
 Výběr obcí podle vícero atributů
@@ -182,6 +185,7 @@ provedení se výběr aplikuje v mapovém okně i atributové tabulce -
 .. _attrib:
 
 .. figure:: images/stat_attribute_select1.png
+   :scale-latex: 50
         
    Výběr obcí pomocí výrazu podílu dlouhodobě nezaměstnaných nad 50% s
    výsledkem.
@@ -190,7 +194,8 @@ provedení se výběr aplikuje v mapovém okně i atributové tabulce -
 
 .. figure:: images/stat_attribute_select2.png
    :class: large
-        
+   :scale-latex: 85
+              
    Výsledek výběru v mapovém okně a atributové tabulce.
 
 
@@ -220,7 +225,8 @@ požadavku - jako na obrázku :num:`#fieldcalc3`.
 
 .. figure:: images/stat_field_calc3.png
    :class: large
-
+   :scale-latex: 85
+              
    Podmíněný výpočet nového atributu a ukázka výsledku v atributové tabulce.
 
 .. note:: Prostorové analýzy pracují s mapovými jednotkami
@@ -270,7 +276,8 @@ očekávaný výsledek.
 
 .. figure:: images/stat_buffer.png
    :class: large
-
+   :scale-latex: 85
+              
    Nastavení tvorby obalové zóny a zobrazení výsledku v mapovém okně.
 
 Prostorový dotaz
@@ -292,16 +299,17 @@ obalové zóny*.  Celé nastavení výběru, zobrazení výsledku výběru v
 mapovém okně i ukázka atributové tabulky je uvedeno na
 :num:`#selectedareas`.
 
+.. _selectedareas:
+
+.. figure:: images/stat_selected_areas.png
+   :class: large
+   :scale-latex: 100
+              
+   Prostorový výběr, zobrazení v mapovém okně a detail atributové
+   tabulky.
+
 Výsledkem tohoto výběru je *3120 obcí*, které se nachází v zadané
 vzdálenosti od dálnic a rychlostních komunikací.
 
 Pro zobrazení v mapovém okně je nutné pohrát si s vykreslováním
 jednotlivých vrstev a jejich průhledností.
-
-.. _selectedareas:
-
-.. figure:: images/stat_selected_areas.png
-   :class: large
-
-   Prostorový výběr, zobrazení v mapovém okně a detail atributové
-   tabulky.

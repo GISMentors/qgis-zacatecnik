@@ -44,7 +44,7 @@ závislosti na měřítku (:num:`#obecneraster`).
 .. _obecneraster:
 
 .. figure:: images/obecne_raster.png
-   :scale-latex: 50
+   :scale-latex: 70
    
    Vlastnosti rastrové vrstvy.
 
@@ -56,14 +56,11 @@ možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrs
 být barvy invertované, dá se vylepšit kontrast, sytost, jas, rozsah
 vykreslovaných hodnot (:num:`#stylraster`).
 
-.. raw:: latex
-   
-   \newpage
-
 .. _stylraster:
 
 .. figure:: images/styl_raster.png
    :class: large
+   :scale-latex: 90
        
    Různé styly té samé rastrové vrstvy: šedé pásmo (vlevo), pseudobarvy (vpravo).
     

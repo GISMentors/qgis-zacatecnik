@@ -39,6 +39,7 @@ Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:num:`#nesw`
 
 .. figure:: images/nesw.png
    :class: large
+   :scale-latex: 65
 
    Reklasfikace orientace svahů vůči světovým stranám pomocí mapového kalkulátoru.
 

@@ -72,7 +72,7 @@ dostupné na stránkách `projektu
 <http://hub.qgis.org/projects/qgis-user-plugins>`_.
 
 
-.. _spravca-plugin:
+.. _spravce-plugin:
 
 Správce zásuvných modulů
 ========================
@@ -82,13 +82,10 @@ zásuvné moduly`, ikona |plug1|.
 Spustí se dialogové okno (:num:`#vse`), které slouží k prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
 
-.. raw:: latex
-
-   \newpage
-
 .. _vse:
 
 .. figure:: images/p_vse.png
+   :scale-latex: 45
 
    Správce zásuvných modulů v prostředí QGIS.
 
@@ -212,7 +209,7 @@ soubor je převeden do formátu *Shapefile*.
    
    Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile.
 
-Po načtení modulu ze :ref:`správce zásuvných modulů <spravca-plugin>`
+Po načtení modulu ze :ref:`správce zásuvných modulů <spravce-plugin>`
 se po kliknutí na ikonu |1| objeví dialogové okno, kde je zapotřebí
 nastavit vstupní ``*.dxf`` soubor, název, cestu a typ nového ``*.shp``
 souboru, viz :num:`#dxf2shp`. Volba |checkbox| :sup:`Exportovat
@@ -257,11 +254,15 @@ exportován jako nová vektorová vrstva.
    projektu dle souřadnicového systému vrstvy polylinií. 
 
 Zásuvný modul aktivujeme v :ref:`panelu správce zásuvných modulů 
-<spravca-plugin>`. V liště menu přejdeme na :menuselection:`Vektor --> 
+<spravce-plugin>`. V liště menu přejdeme na :menuselection:`Vektor --> 
 Silniční graf --> Nastavení`. Zobrazí se okno, kde vyplníme základní nastavení
 jako jednotku času, vzdálenosti, topologickou toleranci a další, viz 
 :num:`#path-nast`. Na nastavení modulu použijeme vektorovou vrstvu cest České
 republiky zobrazenou na :num:`path-vector` dle typu.
+
+.. raw:: latex
+
+   \newpage
 
 .. _path-nast:
 
@@ -275,7 +276,7 @@ republiky zobrazenou na :num:`path-vector` dle typu.
 
 .. figure:: images/p_path_vector.png
    :scale: 60%
-   :scale-latex: 90
+   :scale-latex: 100
    
    Silnice České republiky zobrazené dle jejich typu.
 
@@ -290,7 +291,7 @@ Postup je znázorněný na :num:`#path`.
 .. raw:: latex
 
    \newpage
-	 
+
 .. _path:
 
 .. figure:: images/p_path.png

@@ -341,7 +341,7 @@ všech délek.
          
          .. figure:: images/measure_units.png
             :class: middle
-            :scale-latex: 50
+            :scale-latex: 65
 
             Nastavení měření - jednotky, symbologie, hodnoty.
 
@@ -363,7 +363,7 @@ chceme identifikovat.
 
 .. figure:: images/feature_info.png
    :class: small
-   :scale-latex: 45
+   :scale-latex: 50
     
    Výsledek identifikace prvku.
 

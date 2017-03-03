@@ -72,7 +72,8 @@ panelu vrstev (legenda).
 
 .. figure:: images/style_parcely.png
    :class: large
-
+   :scale-latex: 85
+              
    Výsledek předchozích kroků stylování v mapovém okně a panelu vrstev.
 
 Nastavení stylu stavebních objektů
@@ -108,11 +109,16 @@ popisky pro legendu.
 Výsledná kombinace obou stylů vrstev je ještě upravena změnou průhlednosti 
 vrstvy :map:`parcel` (barvy jsou na :num:`#vysledek` jemnější).
 
+.. raw:: latex
+
+   \newpage
+
 .. _vysledek:
 
 .. figure:: images/style_parcely_stavby.png
    :class: large
-
+   :scale-latex: 85
+   
    Zobrazení obou vrstev v mapovém okně. V panelu vrstev je vidět upravené
    legendy u každé vrstvy.
 

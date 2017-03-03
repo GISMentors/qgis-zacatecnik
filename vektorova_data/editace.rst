@@ -275,10 +275,6 @@ intersection`, která zabraňuje polygonům jejich překryv, jednoduše
 polygonu, tento přesah bude potom automaticky vymazán. Takto snadno
 docílíme čistě navazujících polygonů.
 
-.. raw:: latex
-	 
-   \newpage
-
 .. figure:: images/snapping_avoid.png
 
     Příklad použití :option:`Avoid intersection`. a) bez :option:`Avoid
@@ -321,6 +317,7 @@ změny vrstvy` i mazat vybrané prvky |remove| :sup:`Vymazat vybrané`:
 
 Kalkulátor polí
 ---------------
+
 Pomocí funkce |mActionCalculateField| :sup:`Otevřít kalkulátor polí`
 můžeme zadáním výrazu provádět výpočty na základě existujících
 hodnot v atributové tabulce nebo funkcí (např. výpočet rozlohy
@@ -367,9 +364,9 @@ prohledáním příslušných kategorií. Přidání funkce nebo hodnoty
 pole pomocí okna funkcí se provádí dvojklikem na položku.
 
 .. figure:: images/field_calc_fun.png
-
+   :scale-latex: 45
+                          
     Prohledávání funkcí v kategoriích.
-    :scale-latex: 45
 
 .. raw:: latex
 

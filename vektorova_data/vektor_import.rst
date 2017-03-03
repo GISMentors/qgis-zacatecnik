@@ -27,7 +27,7 @@ ikonou |mActionAddOgrLayer| :sup:`přidání vektorové vrstvy` nebo pomocí
 klávesové zkratky :kbd:`Ctrl+Shift+V`.
 
 .. figure:: images/qgis_ogc_addvector_icons.png
-   :scale-latex: 40
+   :scale-latex: 37
    
    Dialogové okno přidání vektorové vrstvy.
 

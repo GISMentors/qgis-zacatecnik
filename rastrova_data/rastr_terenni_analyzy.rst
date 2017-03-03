@@ -59,7 +59,7 @@ který byl popsaný výše, nastavíme všeobecnou transparentnost rastrové vrs
 
 .. figure:: images/rst_hillshade.png
    :class: middle
-   :scale-latex: 65
+   :scale-latex: 55
    
    Vytvoření prostorového efektu dat díky stínovanému reliéfu.
 
@@ -83,7 +83,8 @@ použité  rozdělení do 10 stejných intervalů.
 
 .. figure:: images/rst_sklon.png
    :class: middle
-
+   :scale-latex: 65
+              
    Rastrová vrstva sklonu reliéfu.
 
 Orientace vůči světovým stranám (*Aspect*)
@@ -96,6 +97,7 @@ Pro vytvoření mapy orientace svahu vůči světovým stranám použijeme reži
 
 .. figure:: images/aspekt.png
    :class: middle
-
+   :scale-latex: 65
+              
    Rastrová vrstva orientace svahu.
 
