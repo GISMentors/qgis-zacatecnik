@@ -52,8 +52,7 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
 .. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 2.14 Essen
                <https://www.qgis.org/en/site/forusers/download.html>`_. V
                jiných verzích není zaručena funkčnost uvedených příkladů. Dále
-               předpokládáme zapnutou *českou lokalizaci*, viz kapitola
-               :ref:`volba-lokalizace`.
+               předpokládáme zapnutou *českou lokalizaci*.
 
 .. index::
    pair: datové sady; ke stažení
