@@ -34,7 +34,7 @@ dialogové okno s nastavením importu dat.
 
     Menu přidávání vrstev.
 
-.. noteadvanced:: Jak jde vidět na obrázku :num:`addlayer`, u většiny 
+.. noteadvanced:: Jak jde vidět na :numref:`addlayer`, u většiny 
    typů dat lze pro přidání využít klávesové zkratky.
 
 Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu
@@ -48,7 +48,7 @@ Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu
 Další možností je přidat data pomocí vestavěného datového katalogu
 (prohlížeče souborů), a to buď dvojitým kliknutím, nebo jednoduchým
 přetažením souboru do mapového okna nebo okna vrstev
-(:num:`#browser`). Pomocí kláves :kbd:`CTRL` nebo :kbd:`SHIFT` můžeme
+(:numref:`browser`). Pomocí kláves :kbd:`CTRL` nebo :kbd:`SHIFT` můžeme
 vybrat a přidat přetažením více souborů najednou. Pomocí datového
 katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 
@@ -97,7 +97,7 @@ Výběr souřadnicového systému
 
 Při vkládání rastrových nebo vektorových dat se může stát, že po
 potvrzení výběru je vyžadována specifikace souřadnicového systému
-vkládaných dat (:num:`#srs`). Okno se zobrazí v případě, pokud
+vkládaných dat (:numref:`srs`). Okno se zobrazí v případě, pokud
 vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému,
 jako například ESRI Shapefile bez souboru končícího příponou \*.prj. V
 okně výběru je možné vyhledat souřadnicové systémy pomocí
@@ -105,10 +105,6 @@ filtru. Zvolení správného souřadnicového systému je velice důležité,
 pokud máte v mapovém okně načtena data v různých souřadnicových
 systémech, a dochází tak k transformaci, při měření nebo připojování k
 webovým službám.
-
-.. raw:: latex
-
-   \clearpage
 
 .. _srs:
 

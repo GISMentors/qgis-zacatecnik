@@ -46,16 +46,21 @@ zveřejňování nových funkcionalit v kratších intervalech.
 Pak je nutné zvolit instalaci kompatibilní s vaším operačním systémem.
 Zda je váš systém 32 bitový nebo 64 bitový zjistíte otevřením složky
 \"Počítač\", klik pravým tlačítkem do složky, z nabídky vybrat
-vlastnosti. V novém okvě lze přečíst typ systému.
+vlastnosti. V novém okně lze zjistit typ systému.
 
 .. figure:: images/install_pc.png
+   :scale-latex: 75
 
    Složka \"Počítač\".
 
-
 .. figure:: images/install_pc_type.png
-	    
+   :scale-latex: 75
+
    Typ operačního systému.
+
+.. raw:: latex
+
+   \clearpage
 
 Proces instalace
 ^^^^^^^^^^^^^^^^

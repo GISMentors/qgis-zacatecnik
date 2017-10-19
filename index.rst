@@ -36,7 +36,7 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
 .. only:: latex
 
    .. figure:: images/intro_logo.png
-      :scale-latex: 150
+      :width-latex: 150
 
       Logo projektu QGIS.
 
@@ -98,6 +98,10 @@ náležitostmi. Výsledky je možné exportovat do formátu PDF nebo obrázku.
         
    Ukázka mapového výstupu vytvořeného v QGIS.
 
+.. raw:: latex
+
+   \newpage
+
 QGIS je populární i pro svou rozšiřitelnost pomocí takzvaných
 zásuvných modulů (tzv. "pluginů").  Pluginy jsou dílčí nástroje, které
 jsou vyvíjeny komunitou kolem QGIS.  Pomocí pluginů je možné dopnit do
@@ -129,9 +133,9 @@ souborů ve formátu Výměnného formátu katastru slouží plugin `VFK
    mapovy_vystup/index
    ruzne/index
 
-*******
+=======
 Dodatky
-*******
+=======
 
 O dokumentu
 ===========

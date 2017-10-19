@@ -143,8 +143,9 @@ ale nutné nastavit zdroj popisku. Pomocí rolovací nabídky :guilabel:`Popisky
 vybreme zdrojový atribut popisku.
 
 .. figure:: images/labels_sample.png
+   :scale-latex: 47
 
-    Příklad popisků s použitím obalové zóny textu.
+   Příklad popisků s použitím obalové zóny textu.
 
 .. noteadvanced:: Jako zdroj popisků lze použít i vzorec, a to buď
     přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru 
@@ -152,14 +153,15 @@ vybreme zdrojový atribut popisku.
 
 Metadata
 ^^^^^^^^
+
 V záložce :item:`Metadata` je možné získat základní metadata vektorové vrstvy.
 
 .. figure:: images/vector_metadata.png
-   :scale-latex: 70
+   :scale-latex: 65
 
    Příklad výpisu metadat vrstvy ve formátu ESRI shapefile.
 
 .. figure:: images/postgis_metadata.png
-   :scale-latex: 70
+   :scale-latex: 65
 
    Příklad výpisu metadat vrstvy ve formátu PostGIS.
