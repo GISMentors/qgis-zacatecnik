@@ -11,7 +11,7 @@ modulu, kde nastavíme *DEM Layer* na :map:`dmt.tiff`, *Vertical
 exaggeration* na hodnotu :item:`2` a v panelu *Line* zaškrtneme
 políčko vedle nově vytvořené rastrové vrstvy izolinií. Následně
 spustíme pomocí :item:`Run`. Výsledek může vypadat jako na
-:num:`#q2t`.
+:numref:`q2t`.
 
 .. _q2t:
 

@@ -81,7 +81,7 @@ vrstvách - v jedné je pojmenován *kod_ob* a v druhé *kodobce*. Je to
 číselný identifikátor unikátní pro každou obec v ČR. Samotné připojení
 je popsáno v kapitole :doc:`../vektorova_data/join`.  V našem případě
 bude definice připojení vypadat jako na následujícím obrázku
-:num:`#join`.
+:numref:`join`.
 
 .. _join:
 
@@ -105,7 +105,7 @@ hodnotu uložíme jako nový atribut (můžeme a nemusíme) a následně
 provedeme vizualizaci těchto hodnot.
 
 Pomocí |mActionCalculateField| :sup:`Kalkulčka polí` si nadefinujeme výpočet 
-hledané hodnoty a jejich uložení do nového atributu. Na :num:`fieldcalc1`
+hledané hodnoty a jejich uložení do nového atributu. Na :numref:`fieldcalc1`
 je zadáno vytvoření nového atributu :dbcolumn:`zem_puda_p` (desetiné čílo). Výpočet
 hodnoty je *podíl atributu zemědělské plochy k celkové ploše a převod na procenta*.
 
@@ -153,7 +153,7 @@ nezaměstnanosti pro každou obec.
    :scale-latex: 55
         
 Pro vizualizaci zopakujeme postup tvorby stylu z předchozího příkladu. 
-Možné stylování a výsledek je zobrazen na :num:`#clasification2`.
+Možné stylování a výsledek je zobrazen na :numref:`clasification2`.
 
 .. _clasification2:
 
@@ -177,9 +177,9 @@ Použijeme funkci |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`.
 Tento nástroj nám umožní napsat podmínku, pomocí které se vyberou pouze prvky, 
 které ji splňují.
 
-V našem případě bude vypadat vzorec jako na :num:`#attrib`.  Po
+V našem případě bude vypadat vzorec jako na :numref:`attrib`.  Po
 provedení se výběr aplikuje v mapovém okně i atributové tabulce -
-:num:`#attrib2`.  Je zde vidět, že z celkového počtu 6253 obcí
+:numref:`attrib2`.  Je zde vidět, že z celkového počtu 6253 obcí
 *podmínku splňuje 749 obcí*.
 
 .. _attrib:
@@ -219,7 +219,7 @@ pro *typ = 2* (rychlostní komunikace) 10000.
 
 Použijeme |mActionCalculateField| :sup:`Kalkulčka polí` pro nový
 atribut typu *integer* a pomocí výrazu *CASE* vyplníme hodnoty dle
-požadavku - jako na obrázku :num:`#fieldcalc3`.
+požadavku - jako na obrázku :numref:`fieldcalc3`.
  
 .. _fieldcalc3:
 
@@ -297,7 +297,7 @@ uvnitř, což záleží na požadavcích.
 V našem případě hledáme obce, které *leží celou svou plochou uvnitř
 obalové zóny*.  Celé nastavení výběru, zobrazení výsledku výběru v
 mapovém okně i ukázka atributové tabulky je uvedeno na
-:num:`#selectedareas`.
+:numref:`selectedareas`.
 
 .. _selectedareas:
 

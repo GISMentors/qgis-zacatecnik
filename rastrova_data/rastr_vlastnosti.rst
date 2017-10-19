@@ -39,7 +39,7 @@ První záložka poskytuje základní informace o vrstvě jako je název souboru
 vrstvy v legendě s možností editace, zdroj vrstvy, počet sloupců a řádků,
 souřadnicový referenční systém (ten je možno změnit kliknutím na tlačítko
 |CRS| :sup:`Vyberte SRS`). V této záložce je možné nastavit i viditelnost v
-závislosti na měřítku (:num:`#obecneraster`).
+závislosti na měřítku (:numref:`obecneraster`).
 
 .. _obecneraster:
 
@@ -54,7 +54,7 @@ Styl
 Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okně. Je
 možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
 být barvy invertované, dá se vylepšit kontrast, sytost, jas, rozsah
-vykreslovaných hodnot (:num:`#stylraster`).
+vykreslovaných hodnot (:numref:`stylraster`).
 
 .. _stylraster:
 
@@ -79,14 +79,14 @@ vykreslovaných hodnot (:num:`#stylraster`).
    položka zleva |mActionLocalCumulativeCutStretch| :sup:`Local Cumulative Cut
    Stretch` automaticky vylepší kontrast na základě minimální a maximální
    hodnoty buňky v aktuální lokální části rastru, přičemž bere do úvahy výchozí
-   limity a odhadnuté hodnoty. Výsledek je na :num:`#stylrstpanel` vlevo. Volba
+   limity a odhadnuté hodnoty. Výsledek je na :numref:`stylrstpanel` vlevo. Volba
    |mActionFullHistogramStretch| :sup:`Roztáhnout histogram na celý dataset`
-   nástrojové lišty vrátí změny zpět jak byly na :num:`#stylraster`, t.j. vyrovná
+   nástrojové lišty vrátí změny zpět jak byly na :numref:`stylraster`, t.j. vyrovná
    kontrast vzhledem na celý rastr dle skutečných hodnot. Pokud pravým
    kliknutím na název vrstvy zvolíme z kontextového menu :item:`Zoom na
    nejvhodnější měřítko (100%)`, klikneme na |mActionLocalCumulativeCutStretch|
    :sup:`Local Cumulative Cut Stretch` a zvolíme |mIconZoom| :sup:`Přiblížit na
-   vrstvu`, čímž vytvoříme styl znázorněný na :num:`#stylrstpanel` vpravo. 
+   vrstvu`, čímž vytvoříme styl znázorněný na :numref:`stylrstpanel` vpravo. 
 
    .. _stylrstpanel:
 
@@ -107,7 +107,7 @@ uveden později.
 
 Záložka umožňuje nastavit všeobecnou průhlednost, ale taktéž průhlednost pro
 každý pixel. V části o uživatelských nastaveních transparentnosti (viz
-:num:`#rsttransparency` s paletovým typem vykreslení pásma pro rastr) je možné
+:numref:`rsttransparency` s paletovým typem vykreslení pásma pro rastr) je možné
 nastavit hodnoty pomocí tlačítek |symbologyAdd| :sup:`Zadat hodnoty ručně` nebo
 |mActionContextHelp| :sup:`Přidat hodnoty z obrazovky`, dále možno
 |symbologyRemove| :sup:`Odstranit vybrané řádky`, hodnoty |mActionFileOpen|
@@ -148,7 +148,7 @@ nejčastěji jde o metodu průměru (*Average*) nebo metodu nejbližšího souse
 Histogram
 ^^^^^^^^^
 QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
-(:num:`#rsthistogram`). Je vytvořen automaticky po kliknutí na volbu
+(:numref:`rsthistogram`). Je vytvořen automaticky po kliknutí na volbu
 :item:`Vypočíst histogram`.
 
 .. _rsthistogram:

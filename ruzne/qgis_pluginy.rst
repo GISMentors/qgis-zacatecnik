@@ -79,7 +79,7 @@ Správce zásuvných modulů
 
 V prvním kroku v menu zvolíme :menuselection:`Zásuvné moduly --> Spravovat a instalovat
 zásuvné moduly`, ikona |plug1|.
-Spustí se dialogové okno (:num:`#vse`), které slouží k prohlížení, vypínání a
+Spustí se dialogové okno (:numref:`vse`), které slouží k prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
 
 .. _vse:
@@ -95,7 +95,7 @@ lze dočasně povolit nebo zakázat zaškrtnutím ikonky |checkbox_unchecked|.
 V případě, že klikneme na některý z modulů, zobrazí se jeho charakteristika nebo
 účel, spolu s dalšími informacemi jako je název, popis, počet hodnocení a
 stáhnutí modulu, reprezentující ikona, kategorie, instalovaná nebo dostupná
-verze, autor, seznam změn a další. Na :num:`plugininfo`  je znázorněný příklad
+verze, autor, seznam změn a další. Na :numref:`plugininfo`  je znázorněný příklad
 zásuvného modulu s názvem |q2t| :sup:`Qgis2threejs`.
 
 .. _plugininfo:
@@ -108,7 +108,7 @@ zásuvného modulu s názvem |q2t| :sup:`Qgis2threejs`.
 Seznam všech dostupných pluginů je možno zobrazit a konkrétní modul načíst zvolením
 |plugin| :sup:`Nenainstalováno` a spuštěním `Instalovat zásuvný modul`.
 Následně se dá tento modul přeinstalovat nebo úplně odinstalovat 
-(:num:`#p-instal`).  
+(:numref:`p-instal`).  
 
 
 .. _p-instal:
@@ -124,7 +124,7 @@ Pod záložkou |plugin-upgrade| :sup:`Aktualizovatelný` se nachází zásuvné 
 které jsou dostupné i v novější verzi. Záložka |mActionTransformSettings| 
 :sup:`Nastavení` obsahuje nastavení týkající se kontroly aktualizací modulů,
 experimentálních a neschválených modulů a zobrazuje i seznam repozitářů, které
-lze přidávat, editovat nebo mazat, viz :num:`#akt-nast`.
+lze přidávat, editovat nebo mazat, viz :numref:`akt-nast`.
 Po zaškrtnutí políček |checkbox_unchecked|  při položkách `Zobrazit také 
 experimentální` a `neschválené moduly` je k dispozici téměř 500 zásuvných
 modulů.
@@ -138,7 +138,7 @@ modulů.
 
 .. tip:: Seznam zásuvných modulů může uživatel uspořádat dle svých potřeb.
    Po stisknutí pravého tlačítka myši v seznamu modulů je k dispozici jejich
-   uspořádání dle abecedy, počtu stáhnutí, hlasů nebo stavu (:num:`#rad`).
+   uspořádání dle abecedy, počtu stáhnutí, hlasů nebo stavu (:numref:`rad`).
 
     .. _rad:
 
@@ -212,7 +212,7 @@ soubor je převeden do formátu *Shapefile*.
 Po načtení modulu ze :ref:`správce zásuvných modulů <spravce-plugin>`
 se po kliknutí na ikonu |1| objeví dialogové okno, kde je zapotřebí
 nastavit vstupní ``*.dxf`` soubor, název, cestu a typ nového ``*.shp``
-souboru, viz :num:`#dxf2shp`. Volba |checkbox| :sup:`Exportovat
+souboru, viz :numref:`dxf2shp`. Volba |checkbox| :sup:`Exportovat
 textové značky` vytvoří navíc bodovou vrstvu s označeními a příslušná
 ``*.dbf`` tabulka bude obsahovat "textové" informace ze souboru
 ``*.dxf``.
@@ -225,15 +225,15 @@ textové značky` vytvoří navíc bodovou vrstvu s označeními a příslušná
 
 Tento zásuvný modul se používá velmi jednoduše a umožňuje zobrazení
 souřadnic myši pro dva vybrané souřadnicové systémy. Dialogové okno je
-zobrazeno na :num:`#zis-sur`.  Kliknutím na ikonu |geographic|
+zobrazeno na :numref:`zis-sur`.  Kliknutím na ikonu |geographic|
 nastavíme požadovaný souřadnicový systém, zvolením |2| :sup:`Zapnout
 získávání` se symbol myši změní na |reticle|. Po kliknutí do mapového
 okna se objeví malá červená tečka. Její souřadnice v souřadnicovém  systému
-projektu se zobrazí v okně vedle symbolu |askcor|. Na :num:`#zis-sur`
+projektu se zobrazí v okně vedle symbolu |askcor|. Na :numref:`zis-sur`
 jsou na ukázku zobrazené souřadnice vybraného bodu v souřadnicových
 systémech s EPSG 4326 (WGS 84) a 5514 (S-JTSK (Greenwich) / Krovak East North). 
 Ikona |askcorcopy| umožňuje souřadnice kopírovat do schránky v
-podobě čtyř hodnot (pro :num:`#zis-sur` by to bylo
+podobě čtyř hodnot (pro :numref:`zis-sur` by to bylo
 ``13.71955,49.85887,-796222.963,-1061087.065``).
 
 .. _zis-sur:
@@ -257,8 +257,8 @@ Zásuvný modul aktivujeme v :ref:`panelu správce zásuvných modulů
 <spravce-plugin>`. V liště menu přejdeme na :menuselection:`Vektor --> 
 Silniční graf --> Nastavení`. Zobrazí se okno, kde vyplníme základní nastavení
 jako jednotku času, vzdálenosti, topologickou toleranci a další, viz 
-:num:`#path-nast`. Na nastavení modulu použijeme vektorovou vrstvu cest České
-republiky zobrazenou na :num:`path-vector` dle typu.
+:numref:`path-nast`. Na nastavení modulu použijeme vektorovou vrstvu cest České
+republiky zobrazenou na :numref:`path-vector` dle typu.
 
 .. raw:: latex
 
@@ -286,7 +286,7 @@ Následně nastavíme kritérium, t.j. délku nebo čas a potvrdíme stisknutím
 `Vypočítat`. Po proběhnutí výpočtu  se v mapovém okně zobrazí výsledek v
 podobě polylinie, která se dá exportovat jako nová vektorová vrstva (použitím 
 `Export`). Tlačítko `Vyčistit` slouží na smazání obsahu políček.
-Postup je znázorněný na :num:`#path`.
+Postup je znázorněný na :numref:`path`.
 
 .. raw:: latex
 
@@ -301,7 +301,7 @@ Postup je znázorněný na :num:`#path`.
 
 .. tip:: Pokud nevidíme panel `Nejkratší cesta`, přidáme ho z menu lišty 
    `Zobrazit` (:menuselection:`Zobrazit --> Panely --> Nejkratší cesta`),
-   jak je to znázorněno na :num:`#path-menu`.
+   jak je to znázorněno na :numref:`path-menu`.
   
     .. _path-menu:
     
@@ -329,8 +329,8 @@ výběr, nebo vybíráme z již existujícího výběru.
 
 Ukážeme si to na příkladě výběru všech obcí v České republice (:map:`obce`), ve
 kterých se nachází požární stanice (:map:`pozarni_stanice`). Použití je znázorněné
-na :num:`#p-pr-dot`. Po proběhnutí výběru zvolením `Použít` se otevře
-další okno (na :num:`#p-pr-dot` vpravo). V tomto kroku můžeme tlačítkem 
+na :numref:`p-pr-dot`. Po proběhnutí výběru zvolením `Použít` se otevře
+další okno (na :numref:`p-pr-dot` vpravo). V tomto kroku můžeme tlačítkem 
 |mActionNewVectorLayer| vytvořit vektorovou vrstvu z výběru, |selectcreatelayer|
 můžeme pokračovat s výběrem a provádět dalším podvýběry, volbou |checkbox|
 se dokážeme přibližovat k výsledným objektům, případně zapisovat zprávy.  
@@ -353,9 +353,9 @@ se dokážeme přibližovat k výsledným objektům, případně zapisovat zprá
 
 *OpenLayers Plugin* (:menuselection:`Web --> OpenLayers Plugin`)  umožňuje
 přidávat do mapového okna množství obrazových služeb z Google, Bing, Yahoo a
-OpenStreetMap (:num:`#plp`). Satelitní snímky těchto služeb se mohou lišit jak
+OpenStreetMap (:numref:`plp`). Satelitní snímky těchto služeb se mohou lišit jak
 datumem, tak kvalitou v závislosti od lokality nebo poskytovatele. Podmínkou pro
-použití zásuvného modulu je dobrý přístup k internetu. Na :num:`p-olm`  je
+použití zásuvného modulu je dobrý přístup k internetu. Na :numref:`p-olm`  je
 příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
 
 .. _plp:

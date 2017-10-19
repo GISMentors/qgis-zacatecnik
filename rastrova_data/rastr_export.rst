@@ -23,7 +23,7 @@ vrstvou. Objeví se dialogové okno, kde se dá nastavit režim výstupu
 (surová data nebo vykreslený obrázek), název, souřadnicový systém,
 rozsah, rozlišení, možnosti vytvoření a další parametry nově
 exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
-(:num:`#saveas`).
+(:numref:`saveas`).
 
 .. _saveas:
 
@@ -35,7 +35,7 @@ exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
 
 Pokud potřebujeme rastrovou vrstvu uložit v jiném formátu, použijeme
 :menuselection:`Rastr --> Převod --> Převést na jiný formát` 
-(:num:`#menu-prevod`). V dialogovém okně nastavíme vstupní vrstvu, cílový
+(:numref:`menu-prevod`). V dialogovém okně nastavíme vstupní vrstvu, cílový
 souřadnicový systém a ostatní dle potřeby.
 
 .. _menu-prevod:

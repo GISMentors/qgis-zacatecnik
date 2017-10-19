@@ -11,7 +11,7 @@ Digitální výškový model terénu je užitečný typ dat, ze kterého je mož
 další informace o daném území a tak lépe vystihnout charakter zkoumaného území.
 Nástroje pro terénní analýzy a vizualizace terénu jsou dostupné z menu
 :menuselection:`Rastr --> Analýza --> DEM (modely reliéfu)`, viz
-:num:`#menudem`. S těmito nástroji můžeme odvodit datové sady, které nebyly
+:numref:`menudem`. S těmito nástroji můžeme odvodit datové sady, které nebyly
 úplně evidentní z původního rastru výškopisu. Může jít například o odvození 
 sklonu reliéfu nebo orientaci svahu vůči světovým stranám.
 
@@ -53,7 +53,7 @@ stínovaný reliéf :map:`hillshade`. Abychom lépe viděli detaily, pomocí
 |mActionZoomIn| :sup:`Přiblížit` si ohraničíme část území. Následně způsobem,
 který byl popsaný výše, nastavíme všeobecnou transparentnost rastrové vrstvy
 :map:`hillshade` na hodnotu :item:`60%`. Dostaneme výsledek znázorněný na
-:num:`#rsthillshade`.
+:numref:`rsthillshade`.
 
 .. _rsthillshade:
 
@@ -76,7 +76,7 @@ Sklon (*Slope*)
 Jednou z užitečných informací o terénu je i sklon, který představuje maximální
 změnu (gradient) výšky mezi sousedními buňky rastru. Rastrovou vrstvu sklonu
 vygenerujeme obdobně jako stínovaný reliéf, pouze použijeme režim :item:`Sklon`. Na
-:num:`#rstsklon` je znázorněný výsledek s barevnou paletou *BrBG*, přičemž je
+:numref:`rstsklon` je znázorněný výsledek s barevnou paletou *BrBG*, přičemž je
 použité  rozdělení do 10 stejných intervalů.
 
 .. _rstsklon:

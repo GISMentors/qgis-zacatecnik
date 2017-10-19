@@ -45,7 +45,7 @@ Pokud nejsou ve správci vložená žádná připojení, dá se tak udělat pře
 :item:`Nové`.
 
 Přidání a editace připojení služby WMS nebo WMTS probíhá ve formuláři
-(:num:`wmsedit`). Pro úspěšné vložení (pokud není služba zaheslovaná
+(:numref:`wmsedit`). Pro úspěšné vložení (pokud není služba zaheslovaná
 anebo není potřeba klást na službu speciální požadavky) stačí zadat
 název služby, připojovací URL a potvrdíme tlačítkem :item:`Ok`.
 
@@ -95,7 +95,7 @@ služby. Pro připojení WMTS služby je potřeba v nabídce přidání nového
 spojení zadat URL na platný WMTS server.  Po vybrání služby a
 připojení přes tlačítko :item:`Připojit` proběhne komunikace s WMTS
 serverem. Po navázání spojení se ve správci vrstev aktivuje záložka
-:item:`Sady dlaždic` (:num:`wmts`). Tabulka zobrazuje dostupné vrstvy
+:item:`Sady dlaždic` (:numref:`wmts`). Tabulka zobrazuje dostupné vrstvy
 ze serveru. V jednotlivých sloupcích je možné číst informace o názvu
 vrstvy, poskytovaném formátu i souřadnicovém systému. V tabulce není
 možné vybrat více vrstev najednou, stačí vybrat jednu vrstvu a
@@ -120,7 +120,7 @@ Práce s WMS/WMTS službami v okně prohlížeče
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Procházet, editovat a přidávat WMS/WMTS připojení lze také v panelu
-prohlížeče (:num:`wmsbrowser`). Vyvoláním kontextového menu pravým
+prohlížeče (:numref:`wmsbrowser`). Vyvoláním kontextového menu pravým
 kliknutím na položku můžeme provádět vybrané akce.
 
 - |mIconWms| WMS - vytvoření připojení

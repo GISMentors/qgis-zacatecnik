@@ -35,7 +35,7 @@ Při takovémto nastavení bude mezi jednotlivými parcelami jemná mezera,
 nebude ale působit rušivě. Pokud by bychom preferovali styl bez mezery, tak
 nastavíme barvu ohraničení na stejnou barvu jako je barva výplně.
 Jednotlivé podstatné části nastavení jsou zvýrazněny v
-:num:`#no-outline`.
+:numref:`no-outline`.
 
 .. _no-outline:
 
@@ -57,7 +57,7 @@ podle číselníku `ČÚZK
 <http://www.cuzk.cz/Katastr-nemovitosti/Poskytovani-udaju-z-KN/Ciselniky-ISKN/Ciselniky-k-nemovitosti.aspx#SC_D_POZEMKU>`_.
 Položky legendy lze upravovat přímo.  Ukázka automaticky
 vygenerovaného stylování a již upravených stylů i s popiskami pro
-legendu je na zobrazena :num:`#change1`.
+legendu je na zobrazena :numref:`change1`.
 
 .. _change1:
 
@@ -107,7 +107,7 @@ popisky pro legendu.
    Ruční úprava stylů i popisků legendy je nutná i v tomto případě.
 
 Výsledná kombinace obou stylů vrstev je ještě upravena změnou průhlednosti 
-vrstvy :map:`parcel` (barvy jsou na :num:`#vysledek` jemnější).
+vrstvy :map:`parcel` (barvy jsou na :numref:`vysledek` jemnější).
 
 .. raw:: latex
 
@@ -128,7 +128,7 @@ vrstvy :map:`parcel` (barvy jsou na :num:`#vysledek` jemnější).
    použít u další vrstvy.
 
    Volba pro uložení se nachází přímo v záložce styl ve spodní části. 
-   Tlačítkem :item:`Styl` se otevře menu (:num:`#save`), které slouží jak
+   Tlačítkem :item:`Styl` se otevře menu (:numref:`save`), které slouží jak
    pro uložení stávajícího stylu vrstvy, tak pro načtení uloženého stylu.
 
    .. _save:

@@ -32,8 +32,8 @@ Pokud jsme mapu orientací nazvali :map:`aspect`, výraz bude vypadat následovn
 :code:`(("aspect@1"  >= 315)  AND  ("aspect@1" < 45)) * 1 + (("aspect@1"  
 >= 45)  AND  ("aspect@1" < 135)) * 2 + (("aspect@1"  >= 135)  AND  ("aspect@1" 
 < 225)) * 3 + (("aspect@1"  >= 225)  AND  ("aspect@1" < 315)) * 4`.
-Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:num:`#nesw` a
-:num:`#aspectrecl`).
+Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:numref:`nesw` a
+:numref:`aspectrecl`).
 
 .. _nesw:
 

@@ -64,9 +64,9 @@ hodnotami uložena:
 .. figure:: images/xydata_csv.png
    :scale-latex: 45
 
-   Tabulková data (:num:`#xydata`) převedená do formátu CSV.
+   Tabulková data (:numref:`xydata`) převedená do formátu CSV.
 
-.. note:: Na obrázku :num:`xydatacsv` si můžeme všimnout zápisu
+.. note:: Na obrázku :numref:`xydatacsv` si můžeme všimnout zápisu
   desetinných čísel oddělenými čárkou v souboru s hodnotami oddělenými
   čárkou. V takovém případě musí být hodnota vymezená uvozovkami. Pokud
   by zde uvozovky nebyly, znamenala by čárka oddělení nového sloupce.
@@ -116,7 +116,7 @@ vrstvu s odděleným textem`.
     - |checkbox| :option:`Zrušit prázdná pole` - odstraní prázdné sloupce
     - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme,
       pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou
-      (např. :num:`#xydatacsv`)
+      (např. :numref:`xydatacsv`)
 
 - :item:`Definice geometrie`
 
@@ -209,7 +209,7 @@ Import .gpx souboru
 ^^^^^^^^^^^^^^^^^^^
 - použitím pluginu |gps_importer| :sup:`GPS Nástroje` 
 
-    - po otevření pluginu (:num:`#gps`) zadáme cestu a název souboru,
+    - po otevření pluginu (:numref:`gps`) zadáme cestu a název souboru,
       a to buď ručně, nebo pomocí   tlačítka :guilabel:`Procházet`
     - potvrdíme tlačítkem :guilabel:`OK` a vybereme data, která chceme vložit
    

@@ -55,7 +55,7 @@ zóny...`
   .. note:: Pokud máme vybrané nějaké prvky, je automaticky aktivováno.
   
 - :item:`Segmentů pro aproximaci` |checkbox| - míra aproximace kruhu při tvorbě 
-  obalové zóny (:num:`aprox`)
+  obalové zóny (:numref:`aprox`)
     
     - nízká hodnota (min. 5) - méně uzlů - rychlejší výpočty, ale méně přesné
     - vysoká hodnota (max. 99) - více uzlů - pomalejší výpočty, více odpovídá 

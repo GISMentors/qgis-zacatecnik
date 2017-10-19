@@ -7,7 +7,7 @@ je zapotřebí nastavit vstupní a výstupní soubor, hodnotu intervalu mezi
 vrstevnicemi a případně název atributu výšky ve výsledné vektorové vrstvě. Po
 výpočtu se vektorová vrstva automaticky objeví v mapovém okně. Je 
 potřebné nastavit jí styl, popis a další vlastnosti. Jak může výsledek vypadat,
-je uvedeno na :num:`#izo`.
+je uvedeno na :numref:`izo`.
 
 .. _izo:
 

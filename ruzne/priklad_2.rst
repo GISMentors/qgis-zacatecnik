@@ -78,9 +78,9 @@ použijeme nástroj na ořezání |clipper| :sup:`Ořezávač`. Vstupem bude
 vektor železnic České republiky, ořezávat budeme podle nově vytvořené
 polygonové vrstvy :map:`Praha` a výsledek uložíme jako
 :map:`zeleznice_p`, tedy železnice pouze na území Prahy. Dialogová okna
-nástrojů *Dissolve* a *Clip* jsou zobrazeny na :num:`#dissolve-clip`. Následně
+nástrojů *Dissolve* a *Clip* jsou zobrazeny na :numref:`dissolve-clip`. Následně
 můžeme každé vrstvě :ref:`nastavit styl<styl-vrstvy>`, čímž si vstupní
-data přehledně zobrazíme (:num:`#vstup-ul2`).
+data přehledně zobrazíme (:numref:`vstup-ul2`).
 
 .. _dissolve-clip:
 
@@ -98,7 +98,7 @@ data přehledně zobrazíme (:num:`#vstup-ul2`).
         
    Správní obvody, parcely a železnice Prahy.
 
-.. note:: Na :num:`#vstup-ul2` je pro vektorovou vrstvu :map:`parcely` nastavena
+.. note:: Na :numref:`vstup-ul2` je pro vektorovou vrstvu :map:`parcely` nastavena
    jednoduchá průhledná výplň a šedé ohraničení s transparentností ``10%``, 
    symbol vrstvy :map:`zeleznice_p` je nastavený na ``Resident``, správní obvody
    jsou barevně kategorizované dle pole :dbcolumn:`nazev`, pričemž hodnoty tohoto
@@ -112,7 +112,7 @@ nástroj |buffer| :sup:`Buffer`. V jednom dialogovém okně nastavíme vstup, m�
 aproximace na ``70``,  velikost obalové zóny na ``500 m``, zaklikneme |box_yes| 
 :sup:`Rozpustit výsledky obalové zóny`, aby byla obalová zóna celistvá a výstup
 uložíme jako :map:`zeleznice_pb`, povolíme |box_yes| :sup:`Přidat výsledek do 
-mapového okna` a spustíme ``OK``, viz :num:`#zeleznice-buffer`.
+mapového okna` a spustíme ``OK``, viz :numref:`zeleznice-buffer`.
  
 .. _zeleznice-buffer:
 
@@ -127,7 +127,7 @@ objekt nemá nacházet. V okně vrstev označíme vektor
 :sup:`Vybrat prvky pomocí vzorce`.  V střední části dialogového okna
 najdeme položku ``Pole a hodnoty``, dvouklikem zvolíme ``nazev``, v
 pravé části klikneme na ``všechny jedinečné hodnoty`` a tímto způsobem
-napíšeme do levého okna výraz (:num:`#vyraz678`), kterým z vrstvy
+napíšeme do levého okna výraz (:numref:`vyraz678`), kterým z vrstvy
 správních obvodů vybereme Prahu 6, 7 a 8.
 
 .. code-block:: sql
@@ -161,7 +161,7 @@ Následuje spojení "negativních" zón. Cílem je dostat vektorovou vrstvu, kte
 sjednocením obalové zóny železnic a nepožadovaných správních obvodů. Využijeme
 nástroj |union| :sup:`Sjednotit`. Vznikne výstup (například 
 :map:`oblasti_neg1`), na který opět použijeme  |dissolve| :sup:`Rozpustit`.
-Výsledek pojmenujeme :map:`oblasti_neg` (:num:`#neg`).
+Výsledek pojmenujeme :map:`oblasti_neg` (:numref:`neg`).
 
 .. _neg:
 
@@ -174,7 +174,7 @@ Výsledek pojmenujeme :map:`oblasti_neg` (:num:`#neg`).
 Pak pokračujeme krokem č. 5, viz :ref:`Řešení<reseni-ul2>`. Postup je obdobný
 jako při výběru správních obvodů pomocí |mIconExpressionSelect| 
 :sup:`Vybrat prvky pomocí vzorce`. Výraz ``"vymeraparc" > 200000`` je ten,
-kterým vybereme parcely  s výměrou nad 20 ha (:num:`#parcely20ha`). Vybrané
+kterým vybereme parcely  s výměrou nad 20 ha (:numref:`parcely20ha`). Vybrané
 prvky uložíme jako nový vektor :map:`parcely_20ha` a výběr zrušíme ikonkou 
 |mIconSelectRemove|.
   
@@ -194,7 +194,7 @@ okno |select_location| :sup:`Vybrat podle umíštění`. Najdeme jej v položce
 :sup:`Include input features that intersect the selection features`, |box_yes| 
 :sup:`Zahrnout vstupní prvky, které překrývají/protínají prvky výběru`, a jelikož
 chceme právě ty parcely, které zadané podmínky nesplňují, zvolíme možnost 
-``odstraněním z aktuálního výběru`` (:num:`#vybrat-umisteni`).
+``odstraněním z aktuálního výběru`` (:numref:`vybrat-umisteni`).
   
 
 .. _vybrat-umisteni:
@@ -204,7 +204,7 @@ chceme právě ty parcely, které zadané podmínky nesplňují, zvolíme možno
    Výběr parcel podle umístění metodou odstranění z aktuálního výběru.
 
 Výsledek (podmnožina :map:`parcely_20ha`) uložíme pomocí ``Uložit jako`` a
-zobrazíme na podkladě původního zájmového území (:num:`#vysledok-ul2`).
+zobrazíme na podkladě původního zájmového území (:numref:`vysledok-ul2`).
 Pro lepší detail použijeme |mActionZoomToLayer| :sup:`Přiblížit na vrstvu`. 
 
 .. note:: Pro zvýraznění výsledku je průhlednost vrstvy správních celků 

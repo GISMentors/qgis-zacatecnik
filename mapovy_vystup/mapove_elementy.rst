@@ -40,7 +40,7 @@ Zobrazení pracovních panelů
 Pro příjemnou práci při tvorbě výsledků je vhodné mít nastavené 
 zobrazování jednotlivých panelů. *Vypnout/zapnout* panel je možné v menu
 :menuselection:`Zobrazit --> Panely`, kde se nastaví viditelnost 
-jednotlivým panelům. Na obrázku :num:`#panels` je zobrazeno doporučené 
+jednotlivým panelům. Na obrázku :numref:`panels` je zobrazeno doporučené 
 nastavení zobrazených panelů.
 
 .. raw:: latex
@@ -267,7 +267,7 @@ Měřítko
 Běžnou součástí výstupu je také měřítko. To lze přidat pomocí ikony |add_scale|
 :sup:`Přidat nové grafické měřítko` a vložením prvku do výstupu. Výběr stylu a
 další nastavení je dostupné v záložce :item:`Vlastnosti položky` viz
-:num:`#legenda-nastaveni`. Nejdůležitější je výběr stylu legendy v položce :item:`Styl`. 
+:numref:`legenda-nastaveni`. Nejdůležitější je výběr stylu legendy v položce :item:`Styl`. 
 Lze vybrat z grafických měřítek nebo zvolit číselné měřítko. Dále lze nastavit
 jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měřítka.
 

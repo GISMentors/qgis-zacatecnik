@@ -180,7 +180,7 @@ Základní editace geometrie
   nebo tvorbě nového prvku lze naklikáním nového tvaru změnit tvar
   stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu"
   vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude
-  část s menší plochou vymazána (:num:`#resh1`).
+  část s menší plochou vymazána (:numref:`resh1`).
 
 .. _resh1:
 
@@ -204,7 +204,7 @@ Pro topologicky čistou editaci můžeme pomocí funkce
 přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
 konkrétních vrstev. Pro aktivaci je nutné vybrat parametr :item:`Přichytit
 k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
-(viz :num:`#snapvert` a :num:`snapsegm`).
+(viz :numref:`snapvert` a :numref:`snapsegm`).
 
 .. figure:: images/snapping.png
 
@@ -222,9 +222,9 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
 
     - :option:`Vypnuto` - přichytávání je neaktivní!
     - :option:`K lomovému bodu` - pouze k lomovým bodům
-      (uzlům/vertexům, :num:`#snapvert`)
+      (uzlům/vertexům, :numref:`snapvert`)
     - :option:`K segmentu` - pouze k segmentům
-      (hranám/liniím, :num:`#snapsegm`)
+      (hranám/liniím, :numref:`snapsegm`)
     - :option:`K lomovému bodu a segmentu` - k obojímu
 
 - :item:`Tolerance` |selectnumber| - vzdálenost, od které se kurzor bude
@@ -242,7 +242,7 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
 
 .. tip:: Nastavení přichytávání lze měnit i v momentě, kdy vytváříme
    prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
-   (např. :num:`#snapvert` a :num:`snapsegm`).
+   (např. :numref:`snapvert` a :numref:`snapsegm`).
 
 .. _snapvert:
 
@@ -352,8 +352,7 @@ Levá část okna (:item:`Výraz`) je prostor zadání výrazu, v horní
 části potom náhled výstupu.
 
 .. figure:: images/field_calc_exp.png
-    :scale: 80%
-    :scale-latex: 40
+    :scale-latex: 30
     
     Okno pro zápis výrazu.
 
@@ -367,10 +366,6 @@ pole pomocí okna funkcí se provádí dvojklikem na položku.
    :scale-latex: 45
                           
     Prohledávání funkcí v kategoriích.
-
-.. raw:: latex
-
-   \newpage
 
 Při zadávání parametru pole nebo hodnoty pole (:item:`Pole a hodnoty`)
 je možné nechat si zobrazit všechny hodnoty (tlačítko: :item:`všechny
@@ -391,7 +386,7 @@ atributu.
    definovat vlastní funkce pomocí jazyka Python
 
 .. tip:: Editovat stávající atributy lze i přímo z atributové tabulky, a to 
-    pomocí panelu (:num:`editpanel`), který se aktivuje po přepnutí do režimu 
+    pomocí panelu (:numref:`editpanel`), který se aktivuje po přepnutí do režimu 
     editace . Zde vybereme atribut, který chceme editovat, a zadáme požadovaný 
     výraz (ručně nebo pomocí dialogu |mIconExpression|), potom potvrdíme 
     aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.

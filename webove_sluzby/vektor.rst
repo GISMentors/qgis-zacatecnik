@@ -23,7 +23,7 @@ vrstvu WFS`.
 
 Okno správce umožňuje přidání, odebrání služby a nahrání vrstev do 
 projektu. Formulář přidání nové služby se aktivuje tlačítkem :item:`Nové`. Ve
-formuláři (:num:`wfsform`) stačí v případě nezaheslované služby vyplnit pouze 
+formuláři (:numref:`wfsform`) stačí v případě nezaheslované služby vyplnit pouze 
 URL a pojmenování služby. V případě zaheslované služby jsou vyžadovány 
 přihlašovací údaje.
 
@@ -36,7 +36,7 @@ přihlašovací údaje.
    Formulář přidání WFS služby.
 
 Po potvrzení a připojení ke službě se tlačítkem :item:`Připojit`
-zobrazí seznam vrstev poskytovaných WFS serverem (:num:`wfslayers`).
+zobrazí seznam vrstev poskytovaných WFS serverem (:numref:`wfslayers`).
 
 .. _wfslayers:
 
@@ -55,7 +55,7 @@ Práce s WFS službami v okně prohlížeče
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Procházet, editovat a přidávat WFS připojení lze také z panelu
-prohlížeče (:num:`wfsbrowser`). Vyvoláním kontextového menu pravým
+prohlížeče (:numref:`wfsbrowser`). Vyvoláním kontextového menu pravým
 kliknutím na položku můžeme provádět vybrané akce.
 
 - |mIconWfs| WFS - vytvoření připojení

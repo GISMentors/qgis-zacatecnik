@@ -103,7 +103,7 @@ atributová tabulka)`
 Jakmile máme přidána tabulková data, otevřeme vlastnosti vektorové
 vrstvy, ke které chceme tabulku připojit, zvolíme záložku |join|
 :sup:`Připojení` a přidáme nové připojení pomocí tlačítka
-|symbologyAdd|. V dialogovém okně (:num:`join`) potom nastavíme parametry
+|symbologyAdd|. V dialogovém okně (:numref:`join`) potom nastavíme parametry
 připojení.
 
 .. _join:

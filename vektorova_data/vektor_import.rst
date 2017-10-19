@@ -48,7 +48,7 @@ vektorová data. Potvrzením tlačítkem :item:`Otevřít` QGIS připraví
 všechna dostupná data uložená ve složce k načtení. Objeví se
 potvrzující okno se všemi dostupnými vrstvami. Vrstvy lze buď označit
 všechny, nebo podržením klávesy :kbd:`Ctrl` vybrat jen požadované
-vrstvy (:num:`vecfolder`). Další možností je přidat data pomocí
+vrstvy (:numref:`vecfolder`). Další možností je přidat data pomocí
 vestavěného datového katalogu (prohlížeče souborů)
 viz kapitola :ref:`vectorimport`.
 

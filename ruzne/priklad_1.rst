@@ -80,7 +80,7 @@ projektu. Postup je popsaný v kapitole :ref:`Souřadnicový systém<sour-system
 V dalším kroku kliknutím na |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu`
 do mapového okna přidáme vrstvu :map:`kraje.shp`. Tlačítkem |mActionSelect| 
 :sup:`Vybrat prvky oblastí nebo jednoklikem` klikneme do mapy na místo, kde se
-nachází kraj Hlavního města Prahy (:num:`#u-select-praha`).
+nachází kraj Hlavního města Prahy (:numref:`u-select-praha`).
 
 
 .. note:: V případě, že by šlo o složitější výběr, použijeme 
@@ -104,7 +104,7 @@ vybrané prvky`, protože chceme obalovou zónu jen kolem konkrétního vybrané
 kraje. Míru aproximace zvýšíme na ``70``, protože předvolená hodnota ``5``
 segmentů je málo na to, aby obalová zóna odpovídala kruhu. Dále nastavíme
 velikost obalové zóny v metrech, název výstupního souboru a povolíme |box_yes| 
-:sup:`Přidat výsledek do mapového okna` a potvrdíme  ``OK`` (:num:`#u-p100km`).  
+:sup:`Přidat výsledek do mapového okna` a potvrdíme  ``OK`` (:numref:`u-p100km`).  
 
 
 .. note:: Maximální možný počet segmentů na aproximaci je ``99``. Výhodou je 
@@ -121,7 +121,7 @@ velikost obalové zóny v metrech, název výstupního souboru a povolíme |box_
 
 Do mapového okna se přidá nová vektorová vrstva :map:`P100km`. Nastavíme jí styl
 :menuselection:`pravým tlačítkem myši --> Vlastnosti --> Styl`, například jako
-na :num:`#u-p100km-styl` transparentní výplň, červené ohraničení široké 1 mm.
+na :numref:`u-p100km-styl` transparentní výplň, červené ohraničení široké 1 mm.
 
 .. _u-p100km-styl:
 
@@ -135,7 +135,7 @@ potřebovat na určení plochy ČR. Využijeme nástroj geoprocessingu
 |dissolve| :sup:`Rozpustit`. 
 Před touto funkcí ještě zrušíme výběr kraje Prahy pomocí |mIconSelectRemove| 
 :sup:`Zrušit výber prvků ve všech vrstvách`. Výstupní vektorovou vrstvu
-pojmenujeme :map:`hraniceCR`, viz :num:`#u-dissolve`.
+pojmenujeme :map:`hraniceCR`, viz :numref:`u-dissolve`.
 
 .. _u-dissolve:
 
@@ -150,7 +150,7 @@ liště atributové tabulky |mActionCalculateField| :sup:`Otevřít
 kalkulátor polí`.  Vytvoříme nový atribut (pole) s názvem
 :dbcolumn:`area_sum` (desetinné číslo), do kterého vložíme hodnotu
 plochy polygonu. Datový typ nastavíme tedy jako ``real``, šířka
-např. ``15`` a jako výraz napíšeme ``$area`` (:num:`#u-area`).  Změny
+např. ``15`` a jako výraz napíšeme ``$area`` (:numref:`u-area`).  Změny
 uložíme ikonou |mActionSaveEdits| a editovací režim vypneme opětovným
 stisknutím |mIconEditable|.
 
@@ -169,7 +169,7 @@ stisknutím |mIconEditable|.
    Vytvoření atributu s výměrou České republiky.
 
 Poté použijeme nástroj |intersect| :sup:`Průsečník`, kde vstupem budou vrstvy 
-:map:`hraniceCR` a :map:`P100km`. Výsledek je zobrazen na :num:`#intersect-map`.     
+:map:`hraniceCR` a :map:`P100km`. Výsledek je zobrazen na :numref:`intersect-map`.     
 
 .. _intersect-map:
 
@@ -193,7 +193,7 @@ názvem :dbcolumn:`area`).
 
 Pak přidáme nový atribut :dbcolumn:`procento`, do kterého pomocí mapové
 kalkulačky vložíme výsledek ``"area"/"area_sum * 100"``.  Ten je na 
-:num:`#vysledok-u1` (48,6 % území České republiky je ve vzdálenosti do 100 km od
+:numref:`vysledok-u1` (48,6 % území České republiky je ve vzdálenosti do 100 km od
 hranic Prahy). 
 
 .. _vysledok-u1:

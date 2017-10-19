@@ -48,7 +48,7 @@ můžeme vybrat další možnosti práce s výběrem pomocí atributového dotaz
     Další možnosti práce s výběrem pomocí atributového dotazu.
 
 .. tip:: V levé části stavového řádku vidíme aktuální počet vybraných 
-    prvků (viz :num:`expstatus`).
+    prvků (viz :numref:`expstatus`).
     
 Uvedeme si jednoduchý příklad atributového dotazu. Z vrstvy *Velkoplošných 
 zvláště chráněných území*, potřebujeme vybrat národní parky a jejich ochranná 
@@ -122,7 +122,7 @@ vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je
     - :guilabel:`odstraněním z aktuálního výběru` - z aktuálního výběru odebere 
       prvky, které nadefinujeme
       
-Příklad prostorového dotazu (:num:`sellocpriklad`) - zajímá nás, která
+Příklad prostorového dotazu (:numref:`sellocpriklad`) - zajímá nás, která
 maloplošná chráněná území leží celou rozlohou ve velkoplošném chráněném
 území. Prostorový dotaz bude vypadat takto: vyber prvky z vrstvy
 :map:`maloplosna_uzemi`, které jsou prvky zcela uvnitř prvků ve vrstvě

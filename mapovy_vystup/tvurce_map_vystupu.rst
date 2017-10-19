@@ -5,7 +5,7 @@ Tvůrce mapy (Map Composer)
 ==========================
 
 Systém QGIS dokáže pracovat s různými formáty a zobrazovat je v
-mapovém okně (viz :num:`#map-window`). Obsah mapového okna lze
+mapovém okně (viz :numref:`map-window`). Obsah mapového okna lze
 jednoduše vyexportovat jako obrázku (:menuselection:`Projekt -->
 Uložit jako obrázek`). To však v řadě případů nemusí stačit, hlavně
 když vyžadujeme mapový výstup určený pro tisk.
