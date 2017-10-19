@@ -34,7 +34,6 @@ a pravá část okna (:item:`Funkce`) slouží k rychlému přidání funkcí ne
 parametrů do výrazu.
 
 .. figure:: images/select_exp.png
-    :scale-latex: 60
 
     Okno atributového dotazování.
 
@@ -43,12 +42,12 @@ Po zadání našeho výrazu potvrdíme tlačítkem |mIconExpressionSelect|
 můžeme vybrat další možnosti práce s výběrem pomocí atributového dotazu.
 
 .. figure:: images/select_exp_fun.png
-    :scale: 100%
-    
-    Další možnosti práce s výběrem pomocí atributového dotazu.
+   :scale-latex: 25
+   
+   Další možnosti práce s výběrem pomocí atributového dotazu.
 
 .. tip:: V levé části stavového řádku vidíme aktuální počet vybraných 
-    prvků (viz :numref:`expstatus`).
+   prvků (viz :numref:`expstatus`).
     
 Uvedeme si jednoduchý příklad atributového dotazu. Z vrstvy *Velkoplošných 
 zvláště chráněných území*, potřebujeme vybrat národní parky a jejich ochranná 
@@ -131,7 +130,8 @@ maloplošná chráněná území leží celou rozlohou ve velkoplošném chrán�
 .. _sellocpriklad:
  
 .. figure:: images/select_by_location_priklad.png
-    
+   :scale-latex: 40
+   
    Výběr maloplošných chráněných území, které leží uvnitř velkoplošných 
    chráněných územích.
 

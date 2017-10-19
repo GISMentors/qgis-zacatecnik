@@ -352,9 +352,9 @@ Levá část okna (:item:`Výraz`) je prostor zadání výrazu, v horní
 části potom náhled výstupu.
 
 .. figure:: images/field_calc_exp.png
-    :scale-latex: 30
+   :scale-latex: 25
     
-    Okno pro zápis výrazu.
+   Okno pro zápis výrazu.
 
 Pravá část okna (:item:`Funkce`) slouží k rychlému zadání funkcí
 nebo parametrů do výrazu, v pravé části se k vybrané funkci/parametru
@@ -363,9 +363,9 @@ prohledáním příslušných kategorií. Přidání funkce nebo hodnoty
 pole pomocí okna funkcí se provádí dvojklikem na položku.
 
 .. figure:: images/field_calc_fun.png
-   :scale-latex: 45
+   :scale-latex: 40
                           
-    Prohledávání funkcí v kategoriích.
+   Prohledávání funkcí v kategoriích.
 
 Při zadávání parametru pole nebo hodnoty pole (:item:`Pole a hodnoty`)
 je možné nechat si zobrazit všechny hodnoty (tlačítko: :item:`všechny
@@ -373,14 +373,16 @@ jedinečné hodnoty`) nebo prvních 10 hodnot (tlačítko: :item:`10 vzorků`)
 atributu.
 
 .. figure:: images/field_calc_fun_field.png
-
-    Zobrazení všech hodnot konkrétního atributu pomocí tlačítka
-    :item:`všechny jedinečné hodnoty`.
+   :scale-latex: 45
+		 
+   Zobrazení všech hodnot konkrétního atributu pomocí tlačítka
+   :item:`všechny jedinečné hodnoty`.
 
 .. figure:: images/field_calc_area.png
-
-    Příklad jednoduchého výpočtu plochy polygonů vypsáním výrazu
-    "$area".
+   :scale-latex: 45
+		 
+   Příklad jednoduchého výpočtu plochy polygonů vypsáním výrazu
+   "$area".
 
 .. noteadvanced:: Druhá záložka - :item:`Editor funkcí` umožňuje
    definovat vlastní funkce pomocí jazyka Python
