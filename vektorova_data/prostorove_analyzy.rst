@@ -13,6 +13,10 @@ V prostředí QGIS máme k dispozici širokou škálu funkcí pro prostorové an
 vektorových dat. Základní funkce nalezneme v hlavním menu 
 :menuselection:`Vektor --> Nástroje geoprocessingu`.
 
+.. raw:: latex
+
+   \newpage
+   
 .. noteadvanced:: Další možností jak 
     spouštět analýzy je pomocí okna :item:`Nástroje zpracování`, které sdružuje 
     funkce z knihovny GDAL a dalších dostupných externích nástrojů, jako jsou 
@@ -102,7 +106,7 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 
 .. figure:: images/prost_okno.png
    :class: small
-   :scale-latex: 35
+   :scale-latex: 30
     
    Okno funkce překryvné analýzy (Oříznout...).
     
@@ -116,7 +120,7 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 
 .. figure:: images/prost_puvod.png
    :class: middle
-   :scale-latex: 50
+   :scale-latex: 45
 
    Původní vrstvy vstupující do ukázkových příkladů.
 
@@ -127,7 +131,7 @@ Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Ka�
 prvek nese atributy obou vstupních vrstev. 
 
 .. figure:: images/prost_prus.png 
-   :scale-latex: 35
+   :scale-latex: 30
 
    Výsledek funkce Průsečík.
 
@@ -178,10 +182,6 @@ nabídce `Rozdíl ve vrstvě`.
     
    Výsledek funkce Rozdíl - vrstva čtverce s rozdílem ve vrstvě kruhu.
 
-.. raw:: latex
-
-   \newpage
-
 Rozpustit
 ^^^^^^^^^
 
@@ -190,9 +190,13 @@ jednoho. V nabídce :item:`Pole rozpuštění` můžeme vybrat atribut, pro kter
 chceme rozpuštění aplikovat. Pokud chceme aplikovat pro všechny prvky, 
 zvolíme :item:`--- Rozpustit vše ---`.
 
+.. raw:: latex
+
+   \newpage
+	 
 .. figure:: images/prost_rozp_okno.png
    :class: small
-   :scale-latex: 32
+   :scale-latex: 25
     
    Okno funkce Rozpustit.
     
@@ -205,7 +209,7 @@ V následujícím příkladu provedeme sjednocení vrstvy velkoplošných chrán
 území a obalové zóny dálnic (10 km).
    
 .. figure:: images/prost_sjed_priklad.png
-   :scale-latex: 75
+   :scale-latex: 55
  
    Sjednocení vrstvy velkoplošných chráněných území a obalové zóny dálnic 
    (10 km).

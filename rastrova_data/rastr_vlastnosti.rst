@@ -44,7 +44,7 @@ závislosti na měřítku (:numref:`obecneraster`).
 .. _obecneraster:
 
 .. figure:: images/obecne_raster.png
-   :scale-latex: 70
+   :scale-latex: 60
    
    Vlastnosti rastrové vrstvy.
 
@@ -60,7 +60,7 @@ vykreslovaných hodnot (:numref:`stylraster`).
 
 .. figure:: images/styl_raster.png
    :class: large
-   :scale-latex: 90
+   :scale-latex: 75
        
    Různé styly té samé rastrové vrstvy: šedé pásmo (vlevo), pseudobarvy (vpravo).
     
@@ -92,6 +92,7 @@ vykreslovaných hodnot (:numref:`stylraster`).
 
    .. figure:: images/styl_rst_panel.png
       :class: middle
+      :scale-latex: 60
 
       Změna stylu rastrové vrstvy pomocí nástrojové lišty :item:`Rastr`.
 

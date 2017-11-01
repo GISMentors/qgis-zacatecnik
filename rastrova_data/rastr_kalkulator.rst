@@ -21,11 +21,16 @@ operace s rastrovými mapami, které jsou reprezentovány jako matice
 matematickými, ale i jinými operacemi kombinovat více rastrových
 vrstev a vytvářet tak nové vrstvy.
 
+.. raw:: latex
+
+   \newpage
+	 
 .. _rstcalculator:
 
 .. figure:: images/rstcalculator.png
    :class: small
-        
+   :scale-latex: 45
+   
    Princip mapové algebry.
 
 Pokud jsme mapu orientací nazvali :map:`aspect`, výraz bude vypadat následovně:
@@ -39,7 +44,7 @@ Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:numref:`nes
 
 .. figure:: images/nesw.png
    :class: large
-   :scale-latex: 65
+   :scale-latex: 75
 
    Reklasfikace orientace svahů vůči světovým stranám pomocí mapového kalkulátoru.
 
@@ -47,6 +52,7 @@ Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:numref:`nes
 
 .. figure:: images/aspect_recl.png
    :class: middle
+   :scale-latex: 65
 
    Reklasifikovaná mapa orientací svahů vůči světovým stranám. 
 

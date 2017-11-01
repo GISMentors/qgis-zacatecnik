@@ -19,13 +19,13 @@ dostupný z menu :menuselection:`Projekt --> Tvůrce mapy`.
           
 .. figure:: images/map_window.png
    :class: large
-   :scale-latex: 80
+   :scale-latex: 70
  
    Mapové okno zobrazující vrstvy dle jejich stylování.
        
 .. figure:: images/composer_output.png
    :class: large
-   :scale-latex: 80
+   :scale-latex: 70
  
    Ukázka mapového výstupu vytvořeného v Map Composeru.
 
@@ -49,7 +49,7 @@ tvůrců mapy`.
 
 .. figure:: images/composer_manager.png
    :class: large
-   :scale-latex: 80
+   :scale-latex: 70
  
    Otevření Správce tvorby mapy z menu.
 
@@ -59,7 +59,7 @@ pomocí tlačítka :item:`Přidat` se dá vytvořit nový.
 
 .. figure:: images/add_new_composer.png
    :class: small
-   :scale-latex: 45
+   :scale-latex: 35
  
    Zakládání nového mapového výstupu.
 
@@ -92,7 +92,7 @@ nastavení najdeme v pravé části v záložce :item:`Kompozice` část
 
 .. figure:: images/composer_plain.png
    :class: large
-   :scale-latex: 70
+   :scale-latex: 60
  
    Okno nového mapového výstupu.
 

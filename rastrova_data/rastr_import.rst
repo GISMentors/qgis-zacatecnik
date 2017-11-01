@@ -21,7 +21,8 @@ je znázorněna rastrová vrstva :map:`dmt.tiff` z datasetu :data:`EU-DEM
 
 .. figure:: images/add_raster.png
    :class: middle
-        
+   :scale-latex: 60
+
    Nahrání rastrové vrstvy do QGIS.  
 
 .. note::

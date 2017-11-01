@@ -29,7 +29,7 @@ exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
 
 .. figure:: images/saveas.png
    :class: large
-   :scale-latex: 85
+   :scale-latex: 75
    
    Export rastrové vrstvy pomocí :item:`Uložit rastrovou vrstvu jako ...`.
 

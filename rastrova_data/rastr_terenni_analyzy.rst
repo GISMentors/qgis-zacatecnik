@@ -83,7 +83,7 @@ použité  rozdělení do 10 stejných intervalů.
 
 .. figure:: images/rst_sklon.png
    :class: middle
-   :scale-latex: 65
+   :scale-latex: 55
               
    Rastrová vrstva sklonu reliéfu.
 
@@ -97,7 +97,7 @@ Pro vytvoření mapy orientace svahu vůči světovým stranám použijeme reži
 
 .. figure:: images/aspekt.png
    :class: middle
-   :scale-latex: 65
+   :scale-latex: 55
               
    Rastrová vrstva orientace svahu.
 

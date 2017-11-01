@@ -88,7 +88,7 @@ nebo uchopení za jeho obsah a posun.
         
    .. figure:: images/map_items.png
       :class: small
-      :scale-latex: 35
+      :scale-latex: 30
  
       Výřez s obsahem mapového okna a jeho detailní nastavení.
            
@@ -106,7 +106,7 @@ okně :item:`Zobrazit rozsah v mapovém okně`.
 
 .. figure:: images/map_main_properties.png
    :class: small
-   :scale-latex: 40
+   :scale-latex: 30
  
    Nastavení měřítka a extentu pro mapové okno.
 
@@ -127,13 +127,13 @@ vykreslování.
              projektu.
 
 .. figure:: images/map_coordinates.png
-   :scale-latex: 75
+   :scale-latex: 70
    
    Mapové okno s gridem a souřadnicemi.
        
 .. figure:: images/map_grids.png
    :class: small
-   :scale-latex: 45
+   :scale-latex: 35
         
    Nastavení gridu pro mapové okno.
  
@@ -187,7 +187,7 @@ změnit text i zařazení jednotlivých položek v rámci legendy samotné.
 
 .. figure:: images/composer_legend.png
    :class: large
-   :scale-latex: 60
+   :scale-latex: 55
  
    Přidaná legenda a úprava jejích položek.
 
@@ -213,7 +213,7 @@ atributovou tabulku do mapového výstupu.
 
 .. figure:: images/composer_table.png
    :class: large
-   :scale-latex: 60
+   :scale-latex: 55
  
    Atributová tabulka vybrané vrstvy přidaná v mapovém výstupu.
        
@@ -254,7 +254,7 @@ symboly pro začátek a konec šipky.
 
 .. figure:: images/arrow.png
    :class: small
-   :scale-latex: 45
+   :scale-latex: 35
  
    Detailní nastavení směrové šipky.
 
