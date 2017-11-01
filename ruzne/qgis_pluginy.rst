@@ -82,10 +82,14 @@ zásuvné moduly`, ikona |plug1|.
 Spustí se dialogové okno (:numref:`vse`), které slouží k prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
 
+.. raw:: latex
+
+   \newpage
+	 
 .. _vse:
 
 .. figure:: images/p_vse.png
-   :scale-latex: 45
+   :scale-latex: 55
 
    Správce zásuvných modulů v prostředí QGIS.
 
@@ -101,7 +105,8 @@ zásuvného modulu s názvem |q2t| :sup:`Qgis2threejs`.
 .. _plugininfo:
 
 .. figure:: images/p_info.png
-
+   :scale-latex: 60
+		 
    Charakteristika zásuvného modulu na prohlížení 3D objektů ve webovém
    prohlížeči.
 
@@ -110,12 +115,15 @@ Seznam všech dostupných pluginů je možno zobrazit a konkrétní modul načí
 Následně se dá tento modul přeinstalovat nebo úplně odinstalovat 
 (:numref:`p-instal`).  
 
+.. raw:: latex
+
+   \newpage
 
 .. _p-instal:
 
 .. figure:: images/p_instal.png
    :class: middle
-        
+		 
    Seznam nenainstalovaných modulů :fignote:`(1)`, instalace :fignote:`(2)`,
    možnost odinstalování :fignote:`(3)` nebo přeinstalování :fignote:`(4)`
    kteréhokoli z modulů.
@@ -133,6 +141,7 @@ modulů.
 
 .. figure:: images/p_akt_nast.png
    :class: middle
+   :scale-latex: 60
    
    Záložky související s aktualizacemi a nastavením zásuvných modulů.
 
@@ -143,7 +152,6 @@ modulů.
     .. _rad:
 
     .. figure:: images/p_rad.png
-       :scale: 55%
        :scale-latex: 60
 
        Možnosti seřazení zásuvných modulů.
@@ -260,10 +268,6 @@ jako jednotku času, vzdálenosti, topologickou toleranci a další, viz
 :numref:`path-nast`. Na nastavení modulu použijeme vektorovou vrstvu cest České
 republiky zobrazenou na :numref:`path-vector` dle typu.
 
-.. raw:: latex
-
-   \newpage
-
 .. _path-nast:
 
 .. figure:: images/p_path_nast.png
@@ -275,8 +279,7 @@ republiky zobrazenou na :numref:`path-vector` dle typu.
 .. _path-vector:
 
 .. figure:: images/p_path_vector.png
-   :scale: 60%
-   :scale-latex: 100
+   :class: middle
    
    Silnice České republiky zobrazené dle jejich typu.
 
@@ -361,8 +364,6 @@ příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
 .. _plp:
 
 .. figure:: images/olp.png
-   :scale: 70%
-   :scale-latex: 40
    
    OpenLayers Plugin z lišty menu.
 

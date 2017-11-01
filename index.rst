@@ -146,7 +146,7 @@ Attribution-ShareAlike 4.0 International License
 
 .. figure:: images/cc-by-sa.png 
    :width: 130px
-   :scale-latex: 120
+   :scale-latex: 20
               
 *Verze textu dokumentu:* |release| (sestaveno |today|)
 
