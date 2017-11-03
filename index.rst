@@ -108,8 +108,9 @@ jsou vyvíjeny komunitou kolem QGIS.  Pomocí pluginů je možné dopnit do
 QGIS novou funkcionalitu či podporu pro další formáty či služby jako
 je např. Google Maps, Bing nebo OpenStreetMap. Pro připojení k WFS
 poskytovaným ČÚZK je možné použít plugin \"WFS 2.0\" a pro prohlížení
-souborů ve formátu Výměnného formátu katastru slouží plugin `VFK
-<http://freegis.fsv.cvut.cz/gwiki/VFK_/_QGIS_plugin>`_.
+souborů ve formátu Výměnného formátu katastru slouží VFK plugin (více
+ve :skoleni:`školení pro pokročilé
+<qgis-pokrocily/ruzne/vfk-ruian.html#vymenny-format-katastru-vfk>`).
 
 .. figure:: images/intro_vfk.png
    :scale-latex: 75
