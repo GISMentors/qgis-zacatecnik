@@ -18,7 +18,7 @@
 
 .. only:: html
 
-   .. image:: images/intro_logo.png
+   .. image:: images/qgis_logo.png
       :width: 140px
       :align: left
 
@@ -35,7 +35,7 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
 
 .. only:: latex
 
-   .. figure:: images/intro_logo.png
+   .. figure:: images/qgis_logo.png
       :width-latex: 150
 
       Logo projektu QGIS.
