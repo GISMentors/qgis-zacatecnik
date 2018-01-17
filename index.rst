@@ -65,8 +65,6 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
    <http://training.gismentors.eu/geodata/qgis/dmt.zip>`_
    (97 MB).
 
-.. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
-
 .. raw:: latex
 
    \newpage
