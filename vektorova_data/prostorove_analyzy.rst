@@ -32,8 +32,8 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
 
 .. _buffer:
 
-Obalová zóna (buffer)
----------------------
+Obalová zóna dle pevné vzdálenosti (buffer)
+-------------------------------------------
 
 Jednou z nejzákladnějších prostorových analýz je obalová zóna
 (tzv. buffer). Obalové zóny jsou reprezentovány polygony s hranicí o
@@ -41,24 +41,23 @@ dané vzdálenosti od prvků. U bodových prvků má obalová zóna tvar kruhu
 (nebo aproximace kruhu), u linií a polygonů se hranice obalové zóny
 generuje vzdálenostmi od uzlů. Cílem analýzy je tedy vytvořit novou
 polygonovou vrstvu obalových zón. Tuto funkci najdeme v menu
-:menuselection:`Vektor --> Nástroje geoprocessingu --> Obalové
-zóny...`
+:menuselection:`Vektor --> Nástroje geoprocessingu --> Obalová
+zóna dle pevné vzdálensoti`
+Velikost bufferu lze nastavit i jako proměnlivou hodnotu. Tento nástroj 
+je k dispozici v menu :item:`Nástroje zpracování`.
 
 .. figure:: images/prost_buffer.png
-   :class: small
+   :class: medium
    :scale-latex: 40
 
    Dialogové okno obalové zóny.
     
 
-- :item:`Vstupní vektorová vrsvta` |selectstring| - vstupní vrstva pro 
+- :item:`Vstupní vrsvta` |selectstring| - vstupní vrstva pro 
   vytvoření obalových zón
-- |checkbox|:option:`Použít pouze vybrané prvky` - vytvoří obalovou zónu jen pro 
-  prvky ve výběru
-  
-  .. note:: Pokud máme vybrané nějaké prvky, je automaticky aktivováno.
-  
-- :item:`Segmentů pro aproximaci` |checkbox| - míra aproximace kruhu při tvorbě 
+- :item:`Vzdálenost`  - vzdálenost obalové zóny v metrech 
+  (v závislosti nastavení QGIS a použitého SRS)    
+- :item:`Segmenty`  - míra aproximace kruhu při tvorbě 
   obalové zóny (:numref:`aprox`)
     
     - nízká hodnota (min. 5) - méně uzlů - rychlejší výpočty, ale méně přesné
@@ -72,19 +71,13 @@ zóny...`
 
    Obalová zóna s rozdílným počtem segmentů pro aproximaci 
    (vlevo 5, vpravo 50).
-
-- |checkbox|:option:`Vzdálenost obalové zóny`  - vzdálenost v metrech 
-  (v závislosti nastavení QGIS a použitého SRS)
-- |checkbox|:option:`Pole vzdálenosti obalové zóny` - aktivujeme, pokud máme v 
-  atributové tabulce sloupec, ve kterém máme definovanou vzdálenost. Vhodné, 
-  pokud potřebujeme pro různé prvky různě velké obalové zóny (např. kategorie 
-  vodních toků nebo komunikací)
-- |checkbox|:option:`Rozpustit výsledky obalové zóny` - zaškrtneme, pokud 
+   
+- |checkbox|:option:`Výsledek rozpuštění` - zaškrtneme, pokud 
   nechceme, aby se nám výsledné obalové zóny překrývaly, výsledkem analýzy je 
   jeden prvek
-- :item:`Vstupní shapefile` - zadáme cestu a název výstupního souboru
-- |checkbox|:option:`Přidat výsledek do mapového okna` - výsledná vrstva se 
-  nahraje do projektu
+- :item:`Obalová zóna` - zadáme cestu a název výstupního souboru
+- |checkbox|:option:`Otevřít výstupní soubor po doběhnutí algoritmu` 
+  - výsledná vrstva se přidá do projektu
 
 V následujícím příkladu jsme vytvořili obalovou zónu 10 km kolem dálnic 
 (s možností rozpuštění výsledků).
@@ -105,17 +98,16 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 
 
 .. figure:: images/prost_okno.png
-   :class: small
+   :class: medium
    :scale-latex: 30
     
    Okno funkce překryvné analýzy (Oříznout...).
     
-- :item:`Vstupní vektorová vrsvta` |selectstring| - vstupní vrstva
-- |checkbox|:option:`Použít pouze vybrané prvky` - akce se provede jen pro 
-  prvky ve výběru
-- :item:`...` |selectstring| - druhá vrstva, která vstupuje do analýzy
-- :item:`Vstupní shapefile` - zadáme cestu a název výstupního souboru
-- |checkbox|:option:`Přidat výsledek do mapového okna` - výsledná vrstva se 
+- :item:`Vstupní vrsvta` |selectstring| - vstupní vrstva
+- :item:`Oříznout vrsvtu` |selectstring| - druhá vrstva, která vstupuje do analýzy
+- :item:`Oříznuto` - zadáme cestu a název výstupního souboru
+- |checkbox|:option:`Otevřít výstupní soubor po doběhnutí algoritmu` - 
+  výsledná vrstva se 
   nahraje do projektu
 
 .. figure:: images/prost_puvod.png
@@ -186,16 +178,17 @@ Rozpustit
 ^^^^^^^^^
 
 Vytvoří novou vrstvu, ve které jsou definované prvky jedné vrstvy sloučeny do 
-jednoho. V nabídce :item:`Pole rozpuštění` můžeme vybrat atribut, pro který 
-chceme rozpuštění aplikovat. Pokud chceme aplikovat pro všechny prvky, 
-zvolíme :item:`--- Rozpustit vše ---`.
+jednoho. Pokud chceme aplikovat pro všechny prvky, 
+zvolíme |checkbox|:option:`Dissolve all (do not use fields)`. Pokud chceme
+metodu aplikovat podle atributů, tak v nabídce :item:`Unique ID fields` 
+můžeme vybrat atributy, pro které chceme rozpuštění aplikovat. 
 
 .. raw:: latex
 
    \newpage
 	 
 .. figure:: images/prost_rozp_okno.png
-   :class: small
+   :class: medium
    :scale-latex: 25
     
    Okno funkce Rozpustit.
@@ -220,3 +213,6 @@ různé informace. Například odfiltrováním 10. prvku, tedy prvku, který
 představuje obalovou zónu nezasahující do žádného velkoplošného chráněného 
 území, můžeme snadno vypočítat poměr chráněného území, do kterého zasahuje 
 obalová zóna 10 km od dálnic.
+
+
+ .. note:: Pokud máme vybrané nějaké prvky, je automaticky aktivováno.

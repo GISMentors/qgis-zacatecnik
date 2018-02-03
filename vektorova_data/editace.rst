@@ -74,7 +74,7 @@ Vytváření nového atributu:
   vychází z formátu Esri Shapefile, který je zde použit
 - :item:`Typ` |selectstring|
 
-    - :option:`Text` (String) - formát buněk je text, nelze použít pro
+    - :option:`Textová data` (String) - formát buněk je text, nelze použít pro
       výpočty (max. 255 znaků)
     - :option:`Celé číslo` (Integer) - formát buněk je celé číslo,
       tedy bez desetinných míst (max. 10 znaků)
@@ -85,14 +85,14 @@ Vytváření nového atributu:
 - :item:`Šířka` - počet znaků
 - :item:`Přesnost` - počet desetinných míst
 - pro přidání atributu vrstvy je nutné kliknout na tlačítko
-  |mActionNewAttribute| :item:`Přidat do seznamu atributů`
+  |mActionNewAttribute| :item:`Přidat pole do seznamu`
 
 Ve spodní části okna máme seznam atributů, které máme ve vrstvě
 připravené. Atributy lze odstranit označením a kliknutím na tlačítko
-|mActionDeleteAttribute| :item:`Odstranit atribut`. Automaticky je zde
+|mActionDeleteAttribute| :item:`Odstranit pole`. Automaticky je zde
 přidaný atribut "id", pokud ho nechceme, lze jej také vymazat.
 
-Pokud máme vše nastaveno, potvrdíme tlačítkem :item:`OK`. V okně zvolíme
+Pokud máme vše nastaveno, potvrdíme tlačítkem :item:`OK`. V dalším okně zvolíme
 název vrstvy a adresář, ve kterém se vrstva vytvoří, a potvrdíme
 tlačítkem :item:`Uložit`. Vytvořená vrstva se automaticky nahraje
 do projektu.
@@ -122,6 +122,18 @@ zeptá, zda chceme provedené změny uložit, či nikoliv.
 
 .. tip:: |mActionAllEdits| :sup:`Aktuální změny` - hromadné ovládání
    změn a zapínání/vypínaní editací ve vrstvách.
+   
+.. tip:: Základní nástroje editace jsou dostupné ve výchozím nastavení 
+   mezi ostatními `Nástrojovými lištami`. Některké nástroje jsou ale 
+   dostupné v samostatné liště :item:`Pokročilá digitalizace`. 
+   Tu můžeme aktivovat v seznamu všech dostupních položek a to pomocí 
+   pravého kliku a následné `aktivace` vybrané položky.  
+   
+   .. figure:: images/advanced_digitizing.png
+    :scale: 90%
+    :scale-latex: 40
+    
+    Zapnutí panelu `Pokročilá digitalizace`.
 
 Základní editace geometrie
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -210,11 +222,11 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
 
     Základní okno možnosti přichytávání.
 
-- :item:`Režim přichytávání...` |selectstring|
+- :item:`Výběr vrstvy` |selectstring|
 
     - :option:`Aktuální vrstva` - přichytávání pouze v rámci editované
       vrstvy, ostatní vrstvy ignoruje
-    - :option:`Všechny vrstvy` - přichytávání ke všem vektorovým
+    - :option:`Všechny viditelné vrstvy` - přichytávání ke všem viditelným vektorovým
       vrstvám projektu
     - :option:`Pokročilé` - samostatné nastavení pro jednotlivé vrstvy
 
@@ -236,7 +248,7 @@ k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
   bod přichycení obou prvků najednou. Pokud není aktivní, lomový bod
   lze oddělit
 
-- :item:`povolit přichytávání na prolnutí` |checkbox| - při aktivaci se
+- :item:`Povolit přichytávání na protnutí` |checkbox| - při aktivaci se
   bude kurzor přichytávat i na případné místo "překřížení" segmentů
   (linií)
 
@@ -269,20 +281,21 @@ Pokročílý režim přichytávání
    Okno nastavení pokročilého režimu přichytávání.
 
 V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
-zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Avoid
-intersection`, která zabraňuje polygonům jejich překryv, jednoduše
+zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Vyvarovat 
+se protnutí`, která zabraňuje polygonům jejich překryv, jednoduše
 řečeno - nový polygon můžeme zakreslit s přesahem do sousedícího
 polygonu, tento přesah bude potom automaticky vymazán. Takto snadno
 docílíme čistě navazujících polygonů.
 
 .. figure:: images/snapping_avoid.png
 
-    Příklad použití :option:`Avoid intersection`. a) bez :option:`Avoid
-    intersection` - polygon se vytvoří tak, jak jsme ho zakreslili, a
+    Příklad použití :option:`Vyvarovat se protnutí`. 
+    a) bez :option:`Vyvarovat se protnutí` - polygon se vytvoří tak, 
+    jak jsme ho zakreslili, a
     překrývá předchozí polygon. Při odstranění nového polygonu bychom
-    viděli opět hranici polygonu jako v prvním kroku. b) :option:`Avoid
-    intersection` - polygon se vytvoří bez překryvu, hranice na sebe
-    čistě navazuje.
+    viděli opět hranici polygonu jako v prvním kroku. 
+    b) :option:`Vyvarovat se protnutí` - polygon se vytvoří bez 
+    překryvu, hranice na sebe čistě navazuje.
 
 .. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter|
    :sup:`split by lines` ze zásuvného modulu |plugin| :guilabel:`Digitizing

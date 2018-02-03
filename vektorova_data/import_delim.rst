@@ -220,6 +220,7 @@ Import .gpx souboru
 Vytvoření .gpx souboru
 ^^^^^^^^^^^^^^^^^^^^^^
     
-- pomocí tlačítka |create_gpx| :sup:`Vytvořit novou vrstvu GPX`
+- pomocí tlačítka |create_gpx| :sup:`Vytvořit novou vrstvu GPX` (přidá 
+  se do panelu na práci s vrstvami)
 - export bodové nebo liniové vrstvy pomocí :guilabel:`Uložit jako...` s 
   výběrem formátu .gpx

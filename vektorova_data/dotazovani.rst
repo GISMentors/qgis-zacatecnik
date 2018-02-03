@@ -65,13 +65,13 @@ do dialogového okna:
     
 .. code-block:: sql
 
-    "KAT" = 'OP' or "KAT" = 'NP' 
+    "kat" = 'OP' or "kat" = 'NP' 
     
 .. figure:: images/select_exp_vzchu.png
    :class: middle
    :scale-latex: 70
    
-   Výsledek atributového dotazu ("KAT" = 'OP' or "KAT" = 'NP') ve vrstvě 
+   Výsledek atributového dotazu ("kat" = 'OP' or "kat" = 'NP') ve vrstvě 
    Velkoplošných zvláště chráněných území .
     
 .. _expstatus:
@@ -97,23 +97,29 @@ vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je
    
    Okno :guilabel:`Vybrat podle umístění`.
 
-- :guilabel:`Vybrat vrstvy v` |selectstring| - vybereme vrstvu, ve které chceme 
-  tvořit výběr 
-- :guilabel:`které protínají prvky v` |selectstring| - vybereme vrstvu, podle 
-  které se prvky budou vybírat
-- |checkbox| :guilabel:`Include input features that intersect the selection 
-  features` - vybere prvky, které se jakkoliv protínají
-- |checkbox| :guilabel:`Zahrnout vstupní prvky, které se dotýkají prvků 
-  výběru` - vybere prvky se společnou hranicí nebo lomovým bodem
-- |checkbox| :guilabel:`Zahrnout vstupní prvky, které překrývají/protínají prvky 
-  výběru` - vybere pouze prvky, které se protínají jen z části
-- |checkbox| :guilabel:`Zahrnout vstupní prvky zcela uvnitř prvků 
-  výběru` - vybere pouze prvky, které se protínají celou rozlohou (např. celý 
-  polygon uvnitř polygonu)
-- |checkbox| :guilabel:`Pouze vybrané prvky` - nový výběr se bude vytvářet nad 
-  aktuálním výběrem
-- možnosti výběru |selectstring| 
-        
+- :guilabel:`Vrstva ze které se bude vybírat` |selectstring| - 
+  vybereme vrstvu, ve které chceme tvořit výběr 
+- :guilabel:`Přídavná vrstva (průniková vrstva)` |selectstring| - 
+  vybereme vrstvu, podle které se prvky budou vybírat
+- :guilabel:`Geometric predicate` (typ vztahu, který se bude vyhodnocovat), 
+  množina možností se generuje podle vstupních vrstev 
+    - |checkbox| :guilabel:`protíná` - vybere prvky, které se jakkoliv
+      protínají
+    - |checkbox| :guilabel:`dotýká se` - vybere prvky se společnou hranicí 
+      nebo lomovým bodem
+    - |checkbox| :guilabel:`obsahuje` - vybere pouze prvky, které se protínají 
+      celou rozlohou (např. celý polygon uvnitř polygonu)
+    - |checkbox| :guilabel:`překryvy` - vybere pouze prvky, které se protínají 
+      alespoň z části 
+    - |checkbox| :guilabel:`rozděluje` - prvek dělí prvek z druhé vrstvy na 
+      samostatné části
+    - |checkbox| :guilabel:`uvnitř` - vybere pouze prvky, které se protínají 
+      celou rozlohou (např. celý polygon uvnitř polygonu), opačné pořadí než 
+      `obsahuje`
+    - |checkbox| :guilabel:`je rovno` - prvky jsou totožné
+    - |checkbox| :guilabel:`kříží` - prvky se křižují
+- Upravit aktuální výběr pomocí |selectstring| 
+            
     - :guilabel:`vytvořením nového výběru` - zruší stávající výběr a vytvoří 
       zcela nový
     - :guilabel:`přidáním do aktuálního výběru` - k aktuálnímu výběru přidá 

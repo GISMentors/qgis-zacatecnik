@@ -120,7 +120,7 @@ připojení.
   vrstvy), ke kterému se bude tabulka připojovat
 - |checkbox| :item:`Kešovat připojenou vrstvu ve virtuální paměti` -
   pro rychlejší práci s daty
-- |checkbox| :item:`Choose which fields are joined` - zaškrtneme, pokud
+- |checkbox| :item:`Vyberte, která pole se připojí` - zaškrtneme, pokud
   chceme připojit pouze některé atributy
 - |checkbox| :item:`Custom field name prefix` - zde můžeme zvolit vlastní
   předponu názvů připojených atributů (jejich sloupců)
