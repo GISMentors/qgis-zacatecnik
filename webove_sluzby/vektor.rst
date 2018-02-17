@@ -48,7 +48,7 @@ Výběr více vrstev pro přidání lze opět uskutečnit pomocí klávesy :kbd:
 vrstvy se v takovém případě nahrají do seznamu vrstev samostatně 
 (jako při přidávání lokálních dat). Tak jako v případě WMS lze změnit 
 souřadnicový systém sloužící ke stahování dat. Změna se provádí pod tlačítkem
-:item:`Změnit ...` ve spodní pravé části okna. Potvrzením :item:`Ok` proběhne 
+:item:`Změnit ...` ve spodní pravé části okna. Potvrzením :item:`Přidat` proběhne 
 přidání vrstev do mapy.
 
 Práce s WFS službami v okně prohlížeče
