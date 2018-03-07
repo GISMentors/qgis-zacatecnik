@@ -26,7 +26,7 @@
    single: GIS
    single: geografický informační systém
 
-`QGIS <http://qgis.org/en/site/>`_  je Open Source *geografický informační systém*
+`QGIS <http://qgis.org/en/site/>`_  je open source *geografický informační systém*
 (:wikipedia:`GIS`) publikovaný pod všeobecnou licencí GNU GPL.
 Projekt QGIS vznikl v roce 2002, verze s označením 1.0 vyšla později v roce 2009.
 Mezi hlavní výhody patří zejména rychlost vývoje a rozšiřování jeho funkcionality.
@@ -76,9 +76,10 @@ naprogramováno pomocí knihovny Qt. Díky použití těchto rozšířených
 programovacích prostředků je QGIS multiplatformní, tudíž jej lze
 využívat na většině používaných operačních systémech jako je MS
 Windows, GNU/Linux nebo OS X. QGIS využívá pro práci s geografickými
-daty v rastrové anebo vektorové reprezentaci knihovnu `GDAL
-<http://gdal.org>`_, díky tomu je možné v QGISu pracovat se širokým
-spektrem formátů a webových služeb OGC, ale i jiných formátů.
+daty v rastrové anebo vektorové reprezentaci knihovnu :skoleni:`GDAL
+<open-source-gis/knihovny/gdal.html>`, díky tomu je možné v QGISu
+pracovat se širokým spektrem formátů a webových služeb OGC, ale i
+jiných formátů.
 
 .. figure:: images/intro_qgis.png
    :scale-latex: 65
@@ -86,11 +87,12 @@ spektrem formátů a webových služeb OGC, ale i jiných formátů.
         
    Ukázka uživatelského rozhraní QGIS.
 
-Program nabízí přehledné uživatelské prostředí. Uživatel má k dispozici širokou
-škálu nástrojů pro prohlížení, modifikaci a export dat.
-Od verze 2.0 QGIS obsahuje \"Print Composer\", tedy nástroj pro vytváření map.
-V tiskovém modulu lze vytvářet z nahraných dat výstupy se všemy kartografickými
-náležitostmi. Výsledky je možné exportovat do formátu PDF nebo obrázku.
+Program nabízí přehledné uživatelské prostředí. Uživatel má k
+dispozici širokou škálu nástrojů pro prohlížení, modifikaci a export
+dat.  Od verze 2.0 QGIS obsahuje \"Print Composer\", tedy nástroj pro
+vytváření map.  V tiskovém modulu lze vytvářet z nahraných dat výstupy
+se všemy kartografickými náležitostmi. Výsledky je možné exportovat do
+formátu PDF nebo obrázku, viz :doc:`mapovy_vystup/index`.
 
 .. figure:: images/intro_map.png
    :scale-latex: 65
