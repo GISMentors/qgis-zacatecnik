@@ -17,11 +17,12 @@ je možné jej spustit a začít okamžitě pracovat.
 Spuštění systému QGIS
 =====================
 
-Úspěšně nainstalovaný systém by měl být dostupný z hlavní nabídky operačního systému.
+Úspěšně nainstalovaný systém by měl být dostupný z hlavní nabídky
+operačního systému.
 
 .. raw:: latex
 
-	 \newpage
+   \newpage
 
 .. figure:: images/linux_start.png
 
@@ -40,7 +41,7 @@ Spuštění systému QGIS
    jednoduchým zadáním názvu programu.
              
    .. code-block:: bash
-		
+
       qgis
 
 Po spuštění programu se objeví standardní pracovní rozhraní systému
@@ -57,23 +58,21 @@ přizpůsobuje dle aktuálního nastavení funkčnosti. Popis jednotlivých
 
 .. noteadvanced::
 
-                Pokud máte rozpracované projekty v konkrétní verzi a
-                chcete vyskoušet novou verzi, tak není nutné stávajíci
-                verzi odinstalovat.
+   Pokud máte rozpracované projekty v konkrétní verzi a chcete
+   vyskoušet novou verzi, tak není nutné stávajíci verzi odinstalovat.
                 
-                Jednotlivé verze jsou schopné pracovat vedle sebe.
-                Navíc jsou schopné přebírat nastavení. To například
-                znamená, že pokud používáte určité pluginy, tak budou
-                okamžitě dostupné i v nové verzi. Platí to i zpětně,
-                když přidáte funkcionalitu v nové verzi, tak je možné
-                ji použít i ve starší verzi (platí pro nástroje
-                kompatibilní pro nainstalované verze).
+   Jednotlivé verze jsou schopné pracovat vedle sebe.  Navíc jsou
+   schopné přebírat nastavení. To například znamená, že pokud
+   používáte určité pluginy, tak budou okamžitě dostupné i v nové
+   verzi. Platí to i zpětně, když přidáte funkcionalitu v nové verzi,
+   tak je možné ji použít i ve starší verzi (platí pro nástroje
+   kompatibilní pro nainstalované verze).
                 
-                .. figure:: images/qgis_more_versions.png
-                   :class: small
-                   :scale-latex: 40
+   .. figure:: images/qgis_more_versions.png
+      :class: small
+      :scale-latex: 40
                             
-                   Výběr z vícero verzí QGIS v MS Windows.
+      Výběr z vícero verzí QGIS v MS Windows.
 
 .. index::
    single: QGIS projekt
@@ -87,10 +86,10 @@ nastavení se ukládá do tzv. projektu. Projekt systému QGIS je
 standardní soubor s příponou ``.qgs``. Uložení do projektu umožňuje
 opětovné načtení všech dat i s kompletním nastavením systému.
 
-.. noteadvanced:: QGIS projekt je ukládán jako ``.xml``
-   soubor. Vzhledem k tomu, že se jedná o textový formát, lze jej
-   editovat i mimo samotný QGIS. Je však nutné znát strukturu formátu, a
-   proto tento postup lze doporučit pro opravdu pokročilé uživatele a
-   spíše v extrémních případech.
+.. noteadvanced:: QGIS projekt je ukládán jako XML soubor. Vzhledem k
+   tomu, že se jedná o textový formát, lze jej editovat i mimo samotný
+   QGIS. Je však nutné znát strukturu formátu, a proto tento postup
+   lze doporučit pro opravdu pokročilé uživatele a spíše v extrémních
+   případech.
 
 .. todo:: pridat ikonky ?
