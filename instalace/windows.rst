@@ -5,7 +5,7 @@
    see: MS Windows; Instalace
 
 MS Windows
-----------
+==========
 
 Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 
@@ -18,7 +18,8 @@ Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 
    * *pro pokročilejší uživatele*
    * komplexnější řešení umožňující instalaci dalšího softwaru
-     distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`_
+     distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`__
+   * rychlá a snadná aktualizace
 
 Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS
 <https://www.qgis.org/en/site/forusers/download.html>`_.
@@ -32,31 +33,33 @@ Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS
 .. _samostatny-instalator:
 
 Samostatný instalátor
-=====================
+---------------------
 
-Pokud si uživatel zvolí samostatnou instalaci, tak je nutné, aby si
-vybral již danou verzi. K dispozici je *dlouhodobá stabilní verze* (LTS),
-nebo *krátkodobá verze*.  Krátkodobé verze mají sloužit pro
+V případě samostatné instalace je *dlouhodobá stabilní verze* (LTS),
+nebo *krátkodobá verze*. Krátkodobé verze mají sloužit pro
 zveřejňování nových funkcionalit v kratších intervalech.
 
-.. tip::
-	Pro začínající uživatele je dobré začít nejnovější verzí -
-	není potřeba instalovat dlouhodobou stabilní verzi.
+.. tip:: Pro začínající uživatele je dobré začít nejnovější verzí -
+   není potřeba instalovat dlouhodobou stabilní verzi.
 
-Pak je nutné zvolit instalaci kompatibilní s vaším operačním systémem.
-Zda je váš systém 32 bitový nebo 64 bitový zjistíte otevřením složky
-\"Počítač\", klik pravým tlačítkem do složky, z nabídky vybrat
-vlastnosti. V novém okně lze zjistit typ systému.
+Poté je nutné zvolit instalaci kompatibilní s vaším operačním
+systémem. V současné době je většina počítačů 64bitových, QGIS
+zveřejňuje instalátor také pro starší 32bitové architektury.
 
-.. figure:: images/install_pc.png
-   :scale-latex: 75
+..
+   Zda je váš systém 32 bitový nebo 64 bitový zjistíte otevřením složky
+   \"Počítač\", klik pravým tlačítkem do složky, z nabídky vybrat
+   vlastnosti. V novém okně lze zjistit typ systému.
 
-   Složka \"Počítač\".
+   .. figure:: images/install_pc.png
+      :scale-latex: 75
 
-.. figure:: images/install_pc_type.png
-   :scale-latex: 75
+      Složka \"Počítač\".
 
-   Typ operačního systému.
+   .. figure:: images/install_pc_type.png
+      :scale-latex: 75
+
+      Typ operačního systému.
 
 .. raw:: latex
 
@@ -65,8 +68,8 @@ vlastnosti. V novém okně lze zjistit typ systému.
 Proces instalace
 ^^^^^^^^^^^^^^^^
 
-Po výběru verze k instalaci se tento stáhne a spustí (jako správce).
-Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
+Instalátor spustíme jako správce. Samotná instalace má 5 kroků, které
+jsou zobrazeny a popsány níže.
 
 .. figure:: images/install_1.png
 
@@ -95,8 +98,13 @@ Samotná instalace má 5 kroků, které jsou zobrazeny a popsány níže.
    Dokončení instalace.
 
 Pok úspěšné instalaci se na pracovní ploše i v nabídce Start objeví
-položka QGIS 2.10.1, kterou je možné jednoduše spustit.
+položka QGIS, kterou je možné jednoduše spustit.
 
+.. important:: Součástí instalace QGIS je i systém **GRASS GIS** (více ve
+   školení :skoleni:`GRASS GIS pro začátečníky
+   <grass-gis-zacatecnik>` a jeho propojení s QGISem ve školení
+   :skoleni:`QGIS pro pokročilé <qgis-pokrocily/grass/index.html>`).
+               
 .. index::
    single: OSGeo4W
    see: OSGeo4W; Instalace
@@ -104,16 +112,35 @@ položka QGIS 2.10.1, kterou je možné jednoduše spustit.
 .. _osgeo4w-instalator:
 
 OSGeo4W instalátor
-==================
+------------------
 
 Instalátor OSGeo4W je dostupný na adrese:
 https://trac.osgeo.org/osgeo4w/.
 
-Pokud si uživatel zvolí tento instalátor, tak se nejedná jenom o
-instalaci QGISu, ale i dalších součástí jako např. GRASS GIS, SAGA GIS
-a další.  I zde si můžete vybrat mezi dlouhodobou stabilní nebo
-krátkodobou verzi QGISu.  Instalátor funguje podobně jako ten pro
-samostatnou instalaci QGISu a není potřebné ho popisovat samostatně.
+Pomocí tohoto instalátoru lze kromě QGISu nainstalovat i dalších
+softwary jako např. GRASS GIS, SAGA GIS a další. I zde si můžete
+vybrat mezi dlouhodobou stabilní (`Advanced Install`,
+:menuselection:`Desktop --> qgis-ltr`) anebo krátkodobou verzi QGISu
+(`Express Desktop Install`).
 
+.. figure:: images/osgeo4w_install_1.png
 
-.. note:: Tento způsob instalace QGISu není pro začátečníky vhodný.
+   Spuštění instalátoru.
+
+.. figure:: images/osgeo4w_install_2.png
+
+   Výběr softwarových balíčků pro instalaci.
+   
+.. figure:: images/osgeo4w_install_3.png
+
+   Licenční podmínky.
+
+.. figure:: images/osgeo4w_install_4.png
+
+   Ukončení instalace.
+
+.. tip:: Aktualizace softwarových balíčků je narozdíl od samostatné
+         instalace naprosto triviální. Stačí instalátor spustit a
+         projít bez změny nastavení jednotlivé stránky. Nové verze
+         softwaru se stáhnou a nainstalují automaticky.
+
