@@ -23,15 +23,15 @@ Atributové a prostorové dotazování
 Atributové dotazování
 ---------------------
 
-Atributové dotazování slouží k vytvoření výběru prvků z vektorové vrstvy 
-dle námi zadaných kritérií. 
-Funkce, která toto umožňuje, je |mIconExpressionSelect| :sup:`Vybrat prvky pomocí 
-vzorce` a můžeme ji spustit buď z nástrojového panelu, nebo z atributové tabulky 
-dané vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí 
-|mActionCalculateField| a zadávání výrazu zde funguje na stejném principu. 
-Tedy v levé části okna (:item:`Výraz`) je prostor pro zadání požadovaného výrazu 
-a pravá část okna (:item:`Funkce`) slouží k rychlému přidání funkcí nebo 
-parametrů do výrazu.
+Atributové dotazování slouží k vytvoření výběru prvků z vektorové
+vrstvy dle námi zadaných kritérií.  Funkce, která toto umožňuje, je
+|mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce` a můžeme ji
+spustit buď z nástrojového panelu, nebo z atributové tabulky dané
+vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí
+|mActionCalculateField| a zadávání výrazu zde funguje na stejném
+principu.  Tedy v levé části okna (:item:`Výraz`) je prostor pro
+zadání požadovaného výrazu a pravá část okna (:item:`Funkce`) slouží k
+rychlému přidání funkcí nebo parametrů do výrazu.
 
 .. figure:: images/select_exp.png
 
@@ -42,6 +42,7 @@ Po zadání našeho výrazu potvrdíme tlačítkem |mIconExpressionSelect|
 můžeme vybrat další možnosti práce s výběrem pomocí atributového dotazu.
 
 .. figure:: images/select_exp_fun.png
+   :width: 200px
    :scale-latex: 25
    
    Další možnosti práce s výběrem pomocí atributového dotazu.
