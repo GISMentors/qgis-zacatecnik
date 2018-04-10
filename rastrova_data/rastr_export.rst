@@ -18,7 +18,7 @@ množství různých běžně používaných formátů.
 Data je možné exportovat dvěma způsoby. Pokud potřebujeme vrstvu
 uložit (exportovat) v tom samém formátu, protože pracujeme například
 jenom s částí zájmového území, použijeme volbu :item:`Uložit
-jako`. Tato volba je dostupná z kontextového menu na vybranou
+jako...`. Tato volba je dostupná z kontextového menu na vybranou
 vrstvou. Objeví se dialogové okno, kde se dá nastavit režim výstupu
 (surová data nebo vykreslený obrázek), název, souřadnicový systém,
 rozsah, rozlišení, možnosti vytvoření a další parametry nově
@@ -31,7 +31,7 @@ exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
    :class: large
    :scale-latex: 75
    
-   Export rastrové vrstvy pomocí :item:`Uložit rastrovou vrstvu jako ...`.
+   Export rastrové vrstvy pomocí :item:`Uložit rastrovou vrstvu jako...`.
 
 Pokud potřebujeme rastrovou vrstvu uložit v jiném formátu, použijeme
 :menuselection:`Rastr --> Převod --> Převést na jiný formát` 

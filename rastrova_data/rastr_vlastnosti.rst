@@ -66,9 +66,6 @@ vykreslovaných hodnot (:numref:`stylraster`).
     
 .. note:: 
 
-   Po nastavení barevné palety je potřebné nezapomenout na tlačítko
-   :item:`Klasifikovat`, které vygeneruje barvy pro konkrétní režim, v našem
-   případě lineární barevná interpolace a invertovaná spojitá paleta *RdYIGn*.
    Nastavení hodnoty směrodatné odchylky dokáže zabezpečit, aby hodnoty, které
    se příliš liší od průměru pro vrstvu, nebyly zobrazené.     
   
@@ -150,7 +147,7 @@ Histogram
 ^^^^^^^^^
 QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
 (:numref:`rsthistogram`). Je vytvořen automaticky po kliknutí na volbu
-:item:`Vypočíst histogram`.
+:item:`Vypočítat histogram`.
 
 .. _rsthistogram:
 
