@@ -20,6 +20,12 @@
    :width: 1.5em  
 .. |remove| image:: ../images/icon/symbologyRemove.png
    :width: 1.5em 
+.. |add_nodes| image:: ../images/icon/mActionAddNodesShape.png
+   :width: 1.5em 
+.. |add_html| image:: ../images/icon/mActionAddHtml.png
+   :width: 1.5em 
+.. |add_shape| image:: ../images/icon/mActionAddBasicShape.png
+   :width: 1.5em 
 
 .. index::
    single: mapové elementy
@@ -152,8 +158,8 @@ zda se zobrazuje, pozici vůči rámu, orientaci a řazení.
 .. index::
    pair: mapové elementy; titulek
    
-Titulek
-^^^^^^^
+Text (titulek, tiráž, doprovodný text)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Obvyklým požadavkem pro mapový výstup je textové pole s titulkem.
 Textové pole se přidá pomocí ikonky |add_label| :sup:`Přidat nový 
@@ -162,7 +168,8 @@ u mapového výřezu.
 
 Jednotlivá nastavení pro obsah tohoto pole jsou opět dostupná přes
 záložku :item:`Vlastnosti položky`. Lze zde nastavit samotný text, jeho
-font, zarovnání, orámování, pozadí a další různé.
+font, zarovnání, orámování, pozadí a další různé. Textové pole se dále využivá 
+např. pro vložení tiráže či dalšího doprovodného textu
 
 .. index::
    pair: mapové elementy; legenda
@@ -234,29 +241,6 @@ tabulky do mapového výstupu.
 .. figure:: images/attribute_setting.png
 
    Nastavení zobrazení atributové tabulky v mapovém výstupu.
- 
-.. index::
-   pair: mapové elementy; směrová růžice
-
-Směrová šipka (růžice)
-^^^^^^^^^^^^^^^^^^^^^^
-
-Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony |add_arrow| 
-:sup:`Přidat šipku`. Směrová růžice může být vykreslena různou symbologií. 
-Výběr symbologie a další nastavení jsou dostupné v záložce :item:`Vlastnosti 
-položky`. Lze zde ponechat defaultní styl prvku, kdy se vykresluje jednoduchá 
-šipka. Je možné použít i složitější nastavení - například použít vlastní svg 
-symboly pro začátek a konec šipky.
-
-.. raw:: latex
-
-   \newpage
-
-.. figure:: images/arrow.png
-   :class: small
-   :scale-latex: 35
- 
-   Detailní nastavení směrové šipky.
 
 .. index::
    pair: mapové elementy; měřítko
@@ -278,12 +262,53 @@ jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měří
    :scale-latex: 30 
  
    Detailní nastavení měřítka.
+ 
+.. index::
+   pair: mapové elementy; směrová růžice
+
+Směrová růžice
+^^^^^^^^^^^^^^
+
+Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony |add_image| 
+:sup:`Přidat obrázek`. Tato funkce umožňuje přidat do výstupu libovolný obrázek 
+(logo, ilustrační fotografie atd., směrová růžice). Pokud nemáme žádný obrázek 
+růžice, najdeme několik typů růžic v základní QGIS SVG knihovně. Tudíž můžeme
+jednoduše přidání obrázku využít k našemu účelu. Zdrojový obrázek zvolíme v 
+záložce :item:`Vlastnosti položky`, zde jsou dostupná také další nastavení, 
+např. rotace, která je za určitých okolností u směrové růžice nutná.
+
+.. figure:: images/composer_arrow.png
+   :class: small
+   :scale-latex: 35
+ 
+   Nastavení směrové růžice.
+
+Šipka
+=====
+
+Alternativní možností vytvoření směrové ružice může být pomocí ikony |add_arrow| 
+:sup:`Přidat šipku`. Tato funkce je primárně určena ke kreslení šipek ve smyslu 
+znázornění vztahů mezi jednotlivými součástmi mapové kompozice Držením klávesy 
+:item:`Shift` při kreslení šipky se nám kurzor bude přichytávat po 45°. 
+Směrová růžice může být vykreslena různou symbologií. Výběr symbologie a další 
+nastavení jsou dostupné v záložce :item:`Vlastnosti položky`. Lze zde ponechat 
+defaultní styl prvku, kdy se vykresluje jednoduchá šipka. Je možné použít i 
+složitější nastavení - například použít vlastní svg symboly pro začátek a konec 
+šipky.
+
+.. raw:: latex
+
+   \newpage
+
+.. figure:: images/arrow.png
+   :class: small
+   :scale-latex: 35
+ 
+   Detailní nastavení směrové šipky.
 
 .. index::
    pair: mapové elementy; další prvky mapového výstupu
 
 Další prvky
 ^^^^^^^^^^^
-
-Jako součást mapového výstupu se dá použít i například obrázek. Lze jej přidat 
-pomocí ikony  |add_image| :sup:`Přidat obrázek`.
+Do mapového výstupu můžeme také přidat základní geometrické tvary |add_shape| :sup:`Přidat tvar`, rýsovat polygony a linie |add_nodes| :sup:`Add Node item`, nebo přidat HTML kód |add_html| :sup:`Přidat HTML rám`.
