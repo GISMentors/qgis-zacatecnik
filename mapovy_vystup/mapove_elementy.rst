@@ -278,8 +278,8 @@ záložce :item:`Vlastnosti položky`, zde jsou dostupná také další nastaven
 např. rotace, která je za určitých okolností u směrové růžice nutná.
 
 .. figure:: images/composer_arrow.png
-   :class: small
-   :scale-latex: 35
+   :class: large
+   :scale-latex: 55
  
    Nastavení směrové růžice.
 
