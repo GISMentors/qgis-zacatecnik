@@ -288,7 +288,7 @@ např. rotace, která je za určitých okolností u směrové růžice nutná.
 
 Alternativní možností vytvoření směrové ružice může být pomocí ikony |add_arrow| 
 :sup:`Přidat šipku`. Tato funkce je primárně určena ke kreslení šipek ve smyslu 
-znázornění vztahů mezi jednotlivými součástmi mapové kompozice Držením klávesy 
+znázornění vztahů mezi jednotlivými součástmi mapové kompozice. Držením klávesy 
 :item:`Shift` při kreslení šipky se nám kurzor bude přichytávat po 45°. 
 Směrová růžice může být vykreslena různou symbologií. Výběr symbologie a další 
 nastavení jsou dostupné v záložce :item:`Vlastnosti položky`. Lze zde ponechat 
