@@ -82,9 +82,11 @@ další.
 
 .. _styl-vrstvy:
 
-Styl (symbologie)
-^^^^^^^^^^^^^^^^^
+Styl
+^^^^
 
+Styl (symbologie)
+*****************
 Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
 
 - :guilabel:`jednoduchý symbol` - zde máme na výběr z uložených
@@ -125,7 +127,7 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
    Odstupňovaná symbologie.
     
 Popisky
-^^^^^^^
+*******
 
 Kromě rozlišení prvků pomocí symbologie lze také přidat k jednotlivým
 prvkům popisek na základě jednoho z atributů.
@@ -151,6 +153,33 @@ vybreme zdrojový atribut popisku.
     přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru 
     |mIconExpression|.
 
+Práce se styly
+**************
+
+Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Layer styling`, který lze aktivovat pravým kliknutím na prázdné místo v hlavním panelu a výběrem z nabídky nebo mocí klávesové zkratky :item:`F7`. Výhodou panelu stylování je, že  lze rychle, bez znovuotevírání okna, přepínat mezi vrstvyami,veškeré provedené změny v symbologii se vykreslí ihned, a také je zde možnost kroku zpět na předchozí symbologii, nebo přímo procházení historie všech změn.
+
+.. figure:: images/styl_panel.png 
+   :class: small 
+   :scale-latex: 40 
+
+   Panel stylování
+
+V rámci vrstvy lze vytvořit různé "verze" nastylování, které můžeme podle 
+potřeby měnit. Tato funkce může být užitečná např. při vytváření mapových 
+výstupů jednoho zdroje dat s různou symbologií. Styly lze ovládat (přídání, smazání, přejmenování, zvolení, export) pomocí tlačítka ve spodní části okna vlastností, nebo z kontextového menu vrstvy (pravý klik na vrstvu v panelu vrstev), zde je přepínání jednotlivých stylů rychlejší. V panelu stylování se styly ovládají v samostatné záložce :guilabel:`Správce stylů`.
+
+.. figure:: images/styl_kat.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Výběr stylu pomocí kontextového menu z panelu vrstev
+
+.. figure:: images/styl_kont.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Výběr stylu pomocí kontextového menu z panelu vrstev
+
 Metadata
 ^^^^^^^^
 
@@ -165,3 +194,4 @@ V záložce :item:`Metadata` je možné získat základní metadata vektorové v
    :scale-latex: 65
 
    Příklad výpisu metadat vrstvy ve formátu PostGIS.
+   
