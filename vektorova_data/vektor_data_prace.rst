@@ -164,21 +164,27 @@ Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Lay
 
    Panel stylování
 
-V rámci vrstvy lze vytvořit různé "verze" nastylování, které můžeme podle 
-potřeby měnit. Tato funkce může být užitečná např. při vytváření mapových 
-výstupů jednoho zdroje dat s různou symbologií. Styly lze ovládat (přídání, smazání, přejmenování, zvolení, export) pomocí tlačítka ve spodní části okna vlastností, nebo z kontextového menu vrstvy (pravý klik na vrstvu v panelu vrstev), zde je přepínání jednotlivých stylů rychlejší. V panelu stylování se styly ovládají v samostatné záložce :guilabel:`Správce stylů`.
+.. noteadvanced:: V rámci vrstvy lze vytvořit různé "verze" nastylování,
+	které můžeme podle potřeby měnit. Tato funkce může být užitečná 
+	např. při vytváření mapových výstupů jednoho zdroje dat s různou 
+	symbologií. Styly lze ovládat (přídání, smazání, přejmenování, 
+	zvolení, export) pomocí tlačítka ve spodní části okna vlastností, 
+	nebo z kontextového menu vrstvy (pravý klik na vrstvu v panelu 
+	vrstev), zde je přepínání jednotlivých stylů rychlejší. V panelu 
+	stylování se styly ovládají v samostatné záložce :guilabel:`Správce 
+	stylů`.
 
-.. figure:: images/styl_kat.png 
-   :class: middle 
-   :scale-latex: 40 
+	.. figure:: images/styl_kat.png 
+	   :class: middle 
+	   :scale-latex: 40 
 
-   Výběr stylu pomocí kontextového menu z panelu vrstev
+	   Výběr stylu pomocí kontextového menu z panelu vrstev
 
-.. figure:: images/styl_kont.png 
-   :class: middle 
-   :scale-latex: 40 
+	.. figure:: images/styl_kont.png 
+	   :class: middle 
+	   :scale-latex: 40 
 
-   Výběr stylu pomocí kontextového menu z panelu vrstev
+	   Výběr stylu pomocí kontextového menu z panelu vrstev
 
 Metadata
 ^^^^^^^^
