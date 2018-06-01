@@ -105,20 +105,22 @@ vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je
 - :guilabel:`Geometric predicate` (typ vztahu, který se bude vyhodnocovat), 
   množina možností se generuje podle vstupních vrstev 
     - |checkbox| :guilabel:`protíná` - vybere prvky, které se jakkoliv
-      protínají
+      protínají s prvky v průnikové vrstvě
     - |checkbox| :guilabel:`dotýká se` - vybere prvky se společnou hranicí 
-      nebo lomovým bodem
-    - |checkbox| :guilabel:`obsahuje` - vybere pouze prvky, které se protínají 
-      celou rozlohou (např. celý polygon uvnitř polygonu)
-    - |checkbox| :guilabel:`překryvy` - vybere pouze prvky, které se protínají 
-      alespoň z části 
-    - |checkbox| :guilabel:`rozděluje` - prvek dělí prvek z druhé vrstvy na 
-      samostatné části
-    - |checkbox| :guilabel:`uvnitř` - vybere pouze prvky, které se protínají 
-      celou rozlohou (např. celý polygon uvnitř polygonu), opačné pořadí než 
-      `obsahuje`
-    - |checkbox| :guilabel:`je rovno` - prvky jsou totožné
-    - |checkbox| :guilabel:`kříží` - prvky se křižují
+      nebo lomovým bodem s prvky v průnikové vrstvě
+    - |checkbox| :guilabel:`obsahuje` - vybere pouze prvky, které osahují
+      prvky z průnikové vrstvy (např. celý polygon uvnitř polygonu) 
+    - |checkbox| :guilabel:`překryvy` - vybere pouze prvky, které se svoji 
+      částí protínají s prvky v průnikové vrstvě 
+    - |checkbox| :guilabel:`rozděluje` - vybere prvky, které nijak 
+      neprotínají prvky v průnikové vrstě
+    - |checkbox| :guilabel:`uvnitř` - vybere pouze prvky, které leží celou 
+      rozlohou uvnitř prvku průnikové vrstvy (např. celý polygon uvnitř 
+      polygonu) 
+    - |checkbox| :guilabel:`je rovno` - vybere prvky, které jsou totožné
+    - |checkbox| :guilabel:`kříží` - vybere prvky, které se křižují s 
+      prvky v průnikové vrstvě (u linií)
+    
 - Upravit aktuální výběr pomocí |selectstring| 
             
     - :guilabel:`vytvořením nového výběru` - zruší stávající výběr a vytvoří 
