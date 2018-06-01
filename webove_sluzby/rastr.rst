@@ -6,10 +6,11 @@
    :width: 1.5em
    
    
-Webové služby poskytující rastrová data
-=======================================
+Připojení WMS/WMTS služby
+=========================
 
-Existuje více variant. Nejrozšířenější službou je :skoleni:`WMS
+Existuje více variant webových služeb poskytujících rastrová data.
+Nejrozšířenější službou je :skoleni:`WMS
 <open-source-gis/standardy/ogc/wms.html>`. Rychlejší, ale méně
 používanou alternativou k WMS je :skoleni:`WMTS
 <open-source-gis/standardy/ogc/wmts.html>`, kde \"T\" v názvu znamená
