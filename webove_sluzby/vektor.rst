@@ -5,11 +5,8 @@
 .. |mIconConnect| image:: ../images/icon/mIconConnect.png
    :width: 1.5em
 
-Webové služby poskytující vektorová data
-========================================
-
 Připojení WFS služby
---------------------
+====================
 
 Správce :skoleni:`WFS <open-source-gis/standardy/ogc/wfs.html>`
 spustíme v záložce :menuselection:`Vrstva --> Přidat vrstvu --> Přidat
