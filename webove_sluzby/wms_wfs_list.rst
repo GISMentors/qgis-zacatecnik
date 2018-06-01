@@ -30,4 +30,8 @@ WFS
 AOPK - `https://portal.nature.cz/ <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=6142>`_
 
   - Chráněná území - :code:`http://gis.nature.cz/arcgis/services/UzemniOchrana/ChranUzemi/MapServer/WFSServer`
+
+ČGS - `http://www.geology.cz <http://www.geology.cz/extranet/mapy/mapy-online/stahovaci-sluzby>`_
+
+  -  ČGS Podložní a povrchová geologie - OneGeology-Europe - INSPIRE stahovací služba pro téma geologie - :code:`http://inspire.geology.cz/geoserver/wfs`
  
