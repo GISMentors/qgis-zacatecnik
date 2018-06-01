@@ -10,11 +10,19 @@ WMS
   
 AOPK - `https://portal.nature.cz/ <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=6142>`_
 
+  - Přírodní biotopy a habitaty - :code:`http://gis.nature.cz/arcgis/services/Biotopy/PrirBiotopHabitat/MapServer/WmsServer`
+
 INSPIRE - `https://geoportal.gov.cz/ <https://geoportal.gov.cz/web/guest/wms%3Bjsessionid=09ADEB431C9340ABD96760959DD03FA2/>`_
+
+  - Speciální mapy III. vojenského mapování - :code:`http://geoportal.gov.cz/ArcGIS/services/CENIA/cenia_rt_III_vojenske_mapovani/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0`
 
 ČGS - `http://www.geology.cz <http://www.geology.cz/extranet/mapy/mapy-online/wms>`_
 
   - Geologická mapa České republiky 1 : 50 000 (GEOČR50) - :code:`http://mapy.geology.cz/arcgis/services/Geologie/geocr50/MapServer/WMSServer`
+
+ÚHÚL - `http://www.uhul.cz/ <http://www.uhul.cz/mapy-a-data/webove-sluzby>`_
+
+  - OPRL - :code:`http://gp2.uhul.cz/wms_oprl/service.svc/get`
 
 
 WFS
