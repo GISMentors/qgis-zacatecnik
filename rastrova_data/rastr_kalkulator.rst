@@ -34,7 +34,7 @@ vrstev a vytvářet tak nové vrstvy.
    Princip mapové algebry.
 
 Pokud jsme mapu orientací nazvali :map:`aspect`, výraz bude vypadat následovně:
-:code:`(("aspect@1"  >= 315)  AND  ("aspect@1" < 45)) * 1 + (("aspect@1"  
+:code:`(("aspect@1"  >= 315)  OR  ("aspect@1" < 45)) * 1 + (("aspect@1"  
 >= 45)  AND  ("aspect@1" < 135)) * 2 + (("aspect@1"  >= 135)  AND  ("aspect@1" 
 < 225)) * 3 + (("aspect@1"  >= 225)  AND  ("aspect@1" < 315)) * 4`.
 Reklasifikované vrstvě následně nastavíme  barevnost a popisy (:numref:`nesw` a
