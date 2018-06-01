@@ -21,4 +21,5 @@ Service) a :skoleni:`WFS <open-source-gis/standardy/ogc/wfs.html>`
 
    rastr.rst
    vektor.rst
+   wms_wfs_list.rst
 
