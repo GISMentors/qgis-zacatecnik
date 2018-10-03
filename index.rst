@@ -176,4 +176,3 @@ Zdrojové texty školení jsou dostupné na adrese:
 
 * https://github.com/GISMentors/qgis-zacatecnik
 
-
