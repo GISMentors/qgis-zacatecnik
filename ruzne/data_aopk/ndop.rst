@@ -1,8 +1,8 @@
-Nálezová databáze ochrany přírody
-=================================
-Agentura Ochrany Přírody a Krajiny ČR (`AOPK ČR <http://www.ochranaprirody.cz/>`_) poskytuje různá data týkající se ochrany přírody (oblasti chráněných území, `VMB - vrstva mapování biotopů <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=1035>`_ , nálezy organizmů) v různé podobě (souborové formáty, webové služby - WMS,WFS, ...) Obecné informace k získávání a poskytování dat můžeme nalézt na Portálu informačního systému ochrany přírody (`Portál ISOP <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=3&nabidka=hlavni>`_). Obecně jsou data poskytována ve třech úrovních a to jako otevřená data, otevřená data po registraci, a data poskytovaná na základě žádosti (smlouvy).
+Data AOPK
+=========
+Agentura Ochrany Přírody a Krajiny ČR (`AOPK ČR <http://www.ochranaprirody.cz/>`_) poskytuje různá data týkající se ochrany přírody (oblasti chráněných území, `VMB - vrstva mapování biotopů <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=1035>`_ , nálezy organismů) v různé podobě (souborové formáty, webové služby - WMS,WFS, ...) Obecné informace k získávání a poskytování dat můžeme nalézt na Portálu informačního systému ochrany přírody (`Portál ISOP <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=3&nabidka=hlavni>`_). Obecně jsou data poskytována ve třech úrovních a to jako otevřená data, otevřená data po registraci, a data poskytovaná na základě žádosti (smlouvy).
 
-Jako rozcestník k získání dat můžeme použít stránky `https://data.nature.cz/ <https://data.nature.cz/>`_ . Ke každé datové sadě je zde základní popis, licenční podmínky odkaz ke stažení popř. odkaz na webovou službu.
+Jako rozcestník k získání dat můžeme použít stránky `https://data.nature.cz/ <https://data.nature.cz/>`_. Ke každé datové sadě je zde základní popis, licenční podmínky, odkaz ke stažení dat popř. na webovou službu.
 
 .. figure:: images/data_nature.png 
    :class: middle 
@@ -10,7 +10,7 @@ Jako rozcestník k získání dat můžeme použít stránky `https://data.natur
 
    Přehled dostupných dat AOPK na `https://data.nature.cz/` 
 
-V případě že datová sada vyžaduje registraci, odkaz stažení dat Vás přesměřuje na přihlášení do ISOP (pokud již nejste přihlášení). Pokud nemáte zaregistrovaný účet můžete použít odkaz `Založit nový účet v informačním systému AOPK ČR <https://idm.nature.cz/idm/#/registration>`_ přímo z přihlašovacího formuláře.
+V případě, že datová sada vyžaduje registraci, odkaz stažení dat Vás přesměřuje na přihlášení do ISOP (pokud již nejste přihlášení). Pokud nemáte zaregistrovaný účet můžete použít odkaz `Založit nový účet v informačním systému AOPK ČR <https://idm.nature.cz/idm/#/registration>`_ přímo z přihlašovacího formuláře.
 
 .. figure:: images/login.png 
    :class: small 
@@ -19,7 +19,6 @@ V případě že datová sada vyžaduje registraci, odkaz stažení dat Vás př
    Přihlašovací formulář ISOP
 
 V současné době je nutná registrace u datových sad **Aktualizace základního mapování biotopů** a **Nálezová databáze ochrany přírody**.
-
 
 .. figure:: images/registrace.png 
    :class: small 
@@ -74,7 +73,7 @@ U každého nálezu je k dispozici mnoho údajů:
     - KDE - území, souřadnice (v případě území - centroid), typ zákresu, id lokalizace
     - KDY - datum, id akce
     - KDO - autor
-    - projekt, datová sada
+    - zdroj dat - projekt, datová sada
     - věrohodnost, validace - lze zpochybnit
     - mapa zákresu, popř. fotografie
 
@@ -83,9 +82,6 @@ U každého nálezu je k dispozici mnoho údajů:
    :scale-latex: 40 
 
    Karta konkrétního nálezu
-
-
-
 
 Ve spodní části výpisu filtru máme možnost exportu tabulkových dat (CSV, XML, HTML, TXT) i lokalizace nálezů (SHP):
 
@@ -105,11 +101,3 @@ Ve spodní části výpisu filtru máme možnost exportu tabulkových dat (CSV, 
    :scale-latex: 40 
 
    Export tavulkových dat výsledku filtru
-
-
-
-
-
-
-    
-    
