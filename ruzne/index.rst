@@ -8,3 +8,4 @@ Různé
    qgis_pluginy
    priklady
    styly
+   data_aopk/ndop
