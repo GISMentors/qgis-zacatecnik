@@ -106,9 +106,9 @@ U každého nálezu je k dispozici mnoho údajů:
 
     - ID nálezu
     - CO - informace o druhu -  název druhu, taxonomické zařazení, ochrana;
-    doplňující informace -  počet, druh pozorování, poznámky
+      doplňující informace -  počet, druh pozorování, poznámky
     - KDE - území, souřadnice (v případě území - centroid), typ zákresu, id
-    lokalizace
+      lokalizace
     - KDY - datum, id akce
     - KDO - autor
     - zdroj dat - projekt, datová sada
