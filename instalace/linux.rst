@@ -50,13 +50,13 @@ musíte přidat repositář do zdrojů softwaru systému, a to přes aplikaci
    deb     *repository* *codename* main
    deb-src *repository* *codename* main
 
-Příklad pro případnou instalaci LTR verze na Ubuntu 16.04 (LTS)
-Xenial:
+Příklad pro případnou instalaci LTR verze na Ubuntu 18.04 (LTS)
+Bionic:
 
 .. code-block:: bash
 		
-   deb     http://qgis.org/debian-ltr xenial main
-   deb-src http://qgis.org/debian-ltr xenial main
+   deb     http://qgis.org/ubuntu-ltr bionic main
+   deb-src http://qgis.org/ubuntu-ltr bionic main
 
 Poté již můžete QGIS nainstalovat podobným způsobem jako z UbuntuGIS
 (zde uvedeno s dalšími užitečnými balíčky).

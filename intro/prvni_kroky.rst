@@ -26,7 +26,7 @@ operačního systému.
 
 .. figure:: images/linux_start.png
 
-   Spuštění systému QGIS v Ubuntu 14.04 (položka QGIS Desktop).
+   Spuštění systému QGIS v Ubuntu 18.04.
    
 
 .. figure:: images/qgis_start_win.png
@@ -83,13 +83,26 @@ QGIS projekt
 
 Aktuální nastavení systému QGIS při práci je možné uložit. Takovéto
 nastavení se ukládá do tzv. projektu. Projekt systému QGIS je
-standardní soubor s příponou ``.qgs``. Uložení do projektu umožňuje
+standardní soubor s příponou :file:`.qgs`. Uložení do projektu umožňuje
 opětovné načtení všech dat i s kompletním nastavením systému.
+
+Uložit projekt lze ve dvou základních variantách. Jednou z nich je
+samostatný :file:`.qgs` soubor. Druhou je volba kompimovaného souboru.
+:file:`.qgz`, který obsahuje samotný projekt ve formě :file:`.qgs` a
+:file:`.qgd` kde se ukládají různá lokální nastavení a parametry.
+
+ .. figure:: images/project.png
+    :class: small
+    :scale-latex: 85
+
+    Volba typu uložení projektu.
 
 .. noteadvanced:: QGIS projekt je ukládán jako XML soubor. Vzhledem k
    tomu, že se jedná o textový formát, lze jej editovat i mimo samotný
    QGIS. Je však nutné znát strukturu formátu, a proto tento postup
    lze doporučit pro opravdu pokročilé uživatele a spíše v extrémních
-   případech.
+   případech. Soubor :file:`.qgd` je souborová SQLite databáze projektu.
+   Lze ji také upravovat nezávisle na projektu pomocí běžných nástrojů
+   pro SQLite databázi.
 
 .. todo:: pridat ikonky ?
