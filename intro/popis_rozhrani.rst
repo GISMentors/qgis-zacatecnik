@@ -6,7 +6,7 @@
    :width: 1.5em
 .. |removescale| image:: ../images/icon/symbologyRemove.png
    :width: 1.5em
-.. |geographic| image:: ../images/icon/geographic.png
+.. |geographic| image:: ../images/icon/CRS.png
    :width: 1.5em
 .. |log| image:: ../images/icon/mIconInfo.png
    :width: 1.5em
