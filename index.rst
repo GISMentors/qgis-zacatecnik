@@ -46,7 +46,7 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
 Přechod na verzi 3.x je spojen s postupem technologií, konkrétně zejména povýšení:
   * Python 2.7 na Python 3
   * Qt4 na Qt5
-  * PyQt4 na PyQt5. 
+
 S touto změnou přicházejí nejenom novější a lepší technologické nástroje, ale
 také jasná zpráva o tom, že QGIS se neustále vyvíjí a drží krok a nezastarává.
 Součástí velkých změn je i v tomto případě nutnost se adaptovat na ně, co závisí
