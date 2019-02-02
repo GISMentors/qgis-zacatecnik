@@ -8,7 +8,7 @@
    :width: 1.5em
 .. |geographic| image:: ../images/icon/CRS.png
    :width: 1.5em
-.. |log| image:: ../images/icon/mIconInfo.png
+.. |log| image:: ../images/icon/mMessageLog.png
    :width: 1.5em
 .. |mActionZoomOut| image:: ../images/icon/mActionZoomOut.png
    :width: 1.5em
@@ -50,6 +50,8 @@
     :width: 1.5em
 .. |mActionIdentify| image:: ../images/icon/mActionIdentify.png
     :width: 1.5em
+.. |rendering_bar| image:: ../images/icon/rendering_bar.png
+    :width: 4.5em
 
 
 .. index::
@@ -126,10 +128,64 @@ Jednotlivé části jsou posány níže.
 .. index::
    pair: souřadnice mapového okna; stavový řádek
 
+
+Lokátor (vyhledávač)
+^^^^^^^^^^^^^^^^^^^^ 
+
+Pro lepší orientaci mezi algoritmy, nástroji, vrstvami a dalšími součástmi je
+možné používat okno pro vyhledávání - :item:`Lokátor`.
+Zadáním části názvu vyhledávané vrstvy nebo nástroje se filtruje mezi všemi
+položkami. Výledky jsou řazeny do kategorií. Na obrázku je vidět, že po zadání
+textu se vyhedají vrstvy obsahující vložený text, níže pak algoritmy s
+odpovídajícím názvem, ale i nástroje aplikovatelné na vybrané vrstvy. 
+
+.. figure:: images/locator_search_bar.png
+   :class: medium
+   
+   Vyhledávací okno s ukázkou nalezených výsledků toztříděných do jednotlivých
+   kategorií.
+   
+.. tip:: Pokud chceme vyhledávat v konkrétní sekci, například pouze vrstvu, nebo
+   pouze nístroj, tak můžu nastavit filtrování pouze v konkrétní kategorii.
+   Třídění je možné ovlyvnit zadáním parametru před samotným textem. Parametr
+   je možné napsat přímo jako text, anebo si vybrat ze seznamu. Seznam se
+   aktivuje po kliknutí do vyhledávacího řádku. Zkratku buď opíšeme a přidáme
+   za ni mezeru, anebo ji dvouklikem vložíme. Za zkratku pak píšeme část
+   textu pro vyhledávání.
+   Poslední variantou je výběr v menu, které se otevře po kliknutí na symbol
+   lupy.
+   
+   .. figure:: images/locator_thema.png
+      :class: large
+   
+      Vyhledávací okno s vyhledáváním omezeným pouze na vrstvy v projektu s
+      ukázkou nalezených výsledků.
+      
+   V případě potřeby je možné upravit nastavení vyhledávání. Je možné nastavit
+   ve kterých skupinách se vyhledává, nebo jakými zkratkami se nastavují.
+   Nastavení je vhorním menu :menuselection:`Nastavení --> Možnosti`, záložka
+   :item:`Lokátor`.
+
+   .. figure:: images/locator_settings.png
+      :class: medium
+   
+      Nastavení fungování lokátoru, aktivní skupiny a jejich zkratky.
+   
+Informace o stavu  
+^^^^^^^^^^^^^^^^^ 
+
+Pole za vyhledávačem je místo, kde se uživateli zobrazují běžné informace.
+Příkladem je vypsání zprávy o uložení projektu s vypsáním cesty k souboru
+projektu. Kousek dál je místo, kde se zobrazuje ikonka při překreslování 
+mapového okna. Pokud je zde vykreslená ikonka načítání |rendering_bar|, tak
+se aktuálně překresluje obsah mapového okna. Po ukončení vykreslování tato
+ikonka zmizí. Délka překreslování záleží na vykreslovaném obsahu. 
+
+
 Souřadnice
 ^^^^^^^^^^ 
 
-První část stavového řádku slouží pro orientaci v mapovém okně. Zde se
+Další část stavového řádku slouží pro orientaci v mapovém okně. Zde se
 zobrazuje buď aktuální souřadnice ukazatele myši v mapovém okně, nebo tzv.
 extent (rozsah území aktuálně zobrazeného v mapovém okně). Ukázka obou možností
 je zobrazena na následujícím obrázku. Jako přepínač mezi uvedenými fukcemi
@@ -187,8 +243,9 @@ překreslování není potřebné, tak je možné jej potlačit - mapové okno s
 překreslovat. Pro takovéto nastavení je ve stavovém řádku položka s checkboxem
 :item:`Vykreslování`.
 
-.. tip:: Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné 
-   provést stisknutím klávesy :item:`Esc`.
+.. tip:: Pokud potřebujete přerušit vykreslování tak je možné to provést pomocí
+         vypnutí překreslování. To se může hodit zejména při vykreslování 
+         náročných vrstev, když je zapotřebí pouze změnit obsah mapového okna. 
 
 .. index::
    pair: souřadnicový systém mapového okna; stavový řádek

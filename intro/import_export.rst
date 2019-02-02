@@ -104,6 +104,8 @@ vrstev. Pravým kliknutím na vrstvu vyvoláme kontextové menu a vybereme
 
 Jak exportovat konkrétní data se dozvíme v jednotlivých kapitolách.
 
+.. _sour-system:
+
 Výběr souřadnicového systému
 ----------------------------
 
