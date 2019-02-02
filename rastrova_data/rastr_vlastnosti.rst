@@ -32,13 +32,25 @@ Dialogové okno obsahuje šest záložek : *Všeobecné*, *Styl*,
 *Průhlednost*, *Pyramidy*, *Histogram* a *Metadata*.
 
 
-Všeobecné
+Informace
 ^^^^^^^^^
+Tato záložka by měla poskytovat informace o dané rastrové vrstvě. Jedná se
+zejména o technické parametry dat - počet sloupců a řádků, rozsah, způsob
+uložení hodnot, místo uložení, souřadnicový systém, velikost pixelu,
+počet pásem a jejich statistiky. 
+Metadata popisující obsah, poskytovatele a další infromace jsou v samostatné
+záložce :item:`Metadata`. 
+
+
+Zdroj
+^^^^^
 
 První záložka poskytuje základní informace o vrstvě jako je název souboru, název
-vrstvy v legendě s možností editace, zdroj vrstvy, počet sloupců a řádků,
-souřadnicový referenční systém (ten je možno změnit kliknutím na tlačítko
-|CRS| :sup:`Vyberte SRS`). V této záložce je možné nastavit i viditelnost v
+vrstvy v legendě s možností editace a
+souřadnicový referenční systém (ten je možno nastavit kliknutím na tlačítko
+|CRS| :sup:`Vyberte SRS`). 
+
+V této záložce je možné nastavit i viditelnost v
 závislosti na měřítku (:numref:`obecneraster`).
 
 .. _obecneraster:
@@ -48,8 +60,8 @@ závislosti na měřítku (:numref:`obecneraster`).
    
    Vlastnosti rastrové vrstvy.
 
-Styl
-^^^^
+Symbologie
+^^^^^^^^^^
 
 Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okně. Je
 možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
@@ -121,28 +133,6 @@ taky nastavení *no data* hodnoty (tzv. žádná data).
 
    Možnosti nastavení průhlednosti rastrové vrstvy.
 
-
-Pyramidy
-^^^^^^^^
-
-Pyramidy jsou datové struktury, které typicky obsahují menší množství dat.
-Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, že se kromě
-původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
-rozlišením pro konkrétní přiblížení). Na převzorkování se použijí různé metody, 
-nejčastěji jde o metodu průměru (*Average*) nebo metodu nejbližšího souseda 
-(*Nearest Neighbour*).
-
-.. note::
-
-   Pro vytvoření pyramid musíte mít právo zápisu do adresáře s
-   původními daty.
-
-.. important::
-
-   Je potřebné vědět, že vytvoření pyramid může pozměnit originální rastr, a
-   proto se doporučuje vytvoření zálohy původní bezpyramidové verze dat.
-
-
 Histogram
 ^^^^^^^^^
 QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
@@ -155,11 +145,60 @@ QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
    :class: middle
 
    Výpočet histogramu rastrové vrstvy digitálního výškového modelu terénu.
-       
+
+Vykreslování
+^^^^^^^^^^^^
+
+U některých vrstev, rastrových i vektorových, se může stát, že jejich
+vykreslování v mapovém okně má smysl pouze v rozmezí určitých měřítek.
+Toto nastavení je možné provést v záložce :item:`Vykreslování`. 
+Typickým příkladem může být rastrové vykreslení druhů pozemků v kontextu
+celé republiky
+
+Toto nastavení se často používá při WMS.
+
+.. figure:: images/scale_visibility.png
+   :class: middle
+
+   Nastavení měřítkového rozsahu ve které se vrstva bude vykreslovat.
+
+
+Pyramidy
+^^^^^^^^
+
+Pyramidy jsou datové struktury, které typicky obsahují menší množství dat.
+Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, že se kromě
+původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
+rozlišením pro konkrétní přiblížení). Na převzorkování se použijí různé metody, 
+nejčastěji jde o metodu průměru (*Average*) nebo metodu nejbližšího souseda 
+(*Nearest Neighbour*).
+
+.. figure:: images/pyramids.png
+   :class: small
+
+   Schéma vzniku pyramid jako zjednodušených náhledových vrstev.
+
+.. note::
+
+   Pro vytvoření pyramid musíte mít právo zápisu do adresáře s
+   původními daty.
+
+.. important::
+
+   Je potřebné vědět, že vytvoření pyramid může pozměnit originální rastr, a
+   proto se doporučuje vytvoření zálohy původní bezpyramidové verze dat.
+
+
 Metadata
 ^^^^^^^^
-Tato záložka by měla poskytovat informace o dané rastrové vrstvě (pokud
-existují). Jedná se zejména o základní popis dat (nadpis, abstrakt, seznam
-klíčových slov), URL metadat a legendy či jiné vlastnosti (ovladač, popis
-datasetu, velikost pixelu, souřadnicový systém, rozsah vrstvy a další).
+
+Zde je možné  číst a editovat metadatové údaje o vrstvě. Uvádění těchto 
+definic je nutné zejména v případě, že se jedná o oficiálně poskytovaná data
+a je dobré u nich uvádět detaily o poskytovateli, jako i o datech samotných. 
+
+.. figure:: images/raster_metadata.png
+   :class: middle
+
+   Metadatové položky u rastrové vrstvy.   
+
 
