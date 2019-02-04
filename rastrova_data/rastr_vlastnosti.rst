@@ -133,6 +133,8 @@ taky nastavení *no data* hodnoty (tzv. žádná data).
 
    Možnosti nastavení průhlednosti rastrové vrstvy.
 
+Některé rastry můžou obsahovat samostatný kanál, ve kterém je zapsán předpis pro průhlednost jednotlivých buněk. Pokud takovýto kanál data obsahují, tak je možné nastavit průhlednost přímo pomocí nastavení tohoto kanálu. 
+
 Histogram
 ^^^^^^^^^
 QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
