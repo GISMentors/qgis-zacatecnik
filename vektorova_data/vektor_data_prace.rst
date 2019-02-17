@@ -18,9 +18,9 @@
    :width: 1.5em
 .. |mActionSelectedToTop| image:: ../images/icon/mActionSelectedToTop.png
    :width: 1.5em
-.. |symbologyUp| image:: ../images/icon/symbologyUp.png
+.. |mActionArrowUp| image:: ../images/icon/mActionArrowUp.png
    :width: 1.5em
-.. |symbologyDown| image:: ../images/icon/symbologyDown.png
+.. |mActionArrowDown| image:: ../images/icon/mActionArrowDown.png
    :width: 1.5em
 .. |locked| image:: ../images/icon/locked.png
    :width: 1.5em
@@ -35,6 +35,18 @@
 .. |mActionPanToSelected| image:: ../images/icon/mActionPanToSelected.png
    :width: 1.5em
 .. |mActionZoomToSelected| image:: ../images/icon/mActionZoomToSelected.png
+   :width: 1.5em
+.. |rendererSingleSymbol| image:: ../images/icon/rendererSingleSymbol.png
+   :width: 1.5em
+.. |rendererGraduatedSymbol| image:: ../images/icon/rendererGraduatedSymbol.png
+   :width: 1.5em
+.. |rendererCategorizedSymbol| image:: ../images/icon/rendererCategorizedSymbol.png
+   :width: 1.5em
+.. |symbology| image:: ../images/icon/symbology.png
+   :width: 1.5em
+.. |mActionLabeling| image:: ../images/icon/mActionLabeling.png
+   :width: 1.5em
+.. |stylepreset| image:: ../images/icon/stylepreset.png
    :width: 1.5em
 
 
@@ -99,31 +111,41 @@ Vlastnosti
 Vlastnosti vyvoláme dvojklikem na vrstvu nebo pravým tlačítkem myši
 kontextové menu a zvolíme :item:`Vlastnosti`.
 
-Obecné
-^^^^^^
+Informace
+^^^^^^^^^
 
-V první záložce nalezneme základní informace o nahrané vrstvě jako
-název vrstvy, zdroj, kódování znaků, souřadnicový systém (SRS) a
-další.
+Jako první vidíme ve vlastnostech vrstvy záložku informace. Zde najdeme
+základní popis zdrojových dat - cesta k souboru, kódování, souřadnicový systém,
+ale i počet prvků a seznam atributů
+
+.. figure:: images/info.png
+
+    Informace vektorové vrstvy.
+
+Zdroj
+^^^^^
+
+Zde nalezneme základní nastavení ke zdroji vrstvy -
+název vrstvy, kódování textu, souřadnicový systém (SRS) a
+nastavení filtru.
 
 .. figure:: images/properties.png
 
-    Vlastnosti vektorové vrstvy.
+    Zdroj vektorové vrstvy.
 
 .. _styl-vrstvy:
 
 Styl
 ^^^^
 
-Styl (symbologie)
-*****************
+|symbology| Symbologie
+**********************
 Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
 
-- :guilabel:`jednoduchý symbol` - zde máme na výběr z uložených
-  symbolů. V levém sloupci máme zobrazený typ symbolu a jeho jednotlivé
-  části. Při kliknutí na konkrétní složku symbolu můžeme měnit
-  její vlastnosti (Barvy, Typ výplně, Šířka ohraničení atd.).
-
+- |rendererSingleSymbol|:sup:`Jednoduchý symbol` - zde máme na výběr z
+  uložených symbolů. V levém sloupci máme zobrazený typ symbolu a jeho
+  jednotlivé části. Při kliknutí na konkrétní složku symbolu můžeme měnit
+  její vlastnosti (barvy, typ výplně, šířka ohraničení atd.).
 
 .. figure:: images/symbol_simple.png
 
@@ -132,10 +154,11 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
 
 .. tip:: Pomocí tlačítek můžeme další složky symbolu přidávat 
          |symbologyAdd|, odebírat |symbologyRemove|, zamykat |locked| nebo 
-         měnit jejich pořadí |symbologyUp|, |symbologyDown|. Tímto způsobem 
+         měnit jejich pořadí |mActionArrowUp|, |mActionArrowDown|. Tímto způsobem 
          si můžeme vytvořit vlastní symbologii.
 
-- :guilabel:`kategorizovaný` - vhodný pro kategoriální proměnné
+- |rendererCategorizedSymbol|:sup:`Kategorizovaný` - vhodný pro kategoriální
+  proměnné
 
     - :guilabel:`sloupec` - pro výběr atributu
     - :guilabel:`barevný rozsah` - výběr barev
@@ -146,18 +169,20 @@ Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
 
    Kategorizovaná symbologie.
 
-- :guilabel:`odstupňovaný` - vhodný pro spojité proměnné
+- |rendererGraduatedSymbol|:sup:`Odstupňovaný` - vhodný pro spojité proměnné
 
-    - nastavení obdobné jako u možnosti :guilabel:`kategorizovaný`
+    - nastavení obdobné jako u možnosti
+      |rendererCategorizedSymbol|:sup:`Kategorizovaný`
     - možnost režimu intervalů a počet tříd
+    - možnost zobrazení histogramu
 
 .. figure:: images/symbol_odst.png
    :scale-latex: 60
 
    Odstupňovaná symbologie.
     
-Popisky
-*******
+|mActionLabeling| Popisky
+*************************
 
 Kromě rozlišení prvků pomocí symbologie lze také přidat k jednotlivým
 prvkům popisek na základě jednoho z atributů.
@@ -168,7 +193,7 @@ prvkům popisek na základě jednoho z atributů.
    Vlastnosti popisků vrstvy.
 
 Na této záložce je nejdříve nutné vybrat z rolovací nabídky |selectstring| 
-polužku  :guilabel:`Zobrazit popisky pro tuto vrstvu`. Tím se nám otevřou 
+položku |mActionLabeling|:sup:`Single labels`. Tím se nám otevřou 
 možnosti stylizace popisků, kde můžeme nastavit formát textu, obalovou zónu 
 kolem textu, pozadí, stínování, možnosti umístění a vykreslování. Nejdříve je 
 ale nutné nastavit zdroj popisku. Pomocí rolovací nabídky :guilabel:`Popisky z` 
@@ -186,7 +211,7 @@ vybreme zdrojový atribut popisku.
 Práce se styly
 **************
 
-Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Layer styling`, který lze aktivovat pravým kliknutím na prázdné místo v hlavním panelu a výběrem z nabídky nebo mocí klávesové zkratky :item:`F7`. Výhodou panelu stylování je, že  lze rychle, bez znovuotevírání okna, přepínat mezi vrstvyami,veškeré provedené změny v symbologii se vykreslí ihned, a také je zde možnost kroku zpět na předchozí symbologii, nebo přímo procházení historie všech změn.
+Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Stylování vrstvy`, který lze aktivovat pravým kliknutím na prázdné místo v hlavním panelu a výběrem z nabídky nebo mocí klávesové zkratky :item:`F7`. Výhodou panelu stylování je, že  lze rychle, bez znovuotevírání okna, přepínat mezi vrstvyami,veškeré provedené změny v symbologii se vykreslí ihned, a také je zde možnost kroku zpět na předchozí symbologii, nebo přímo procházení historie všech změn.
 
 .. figure:: images/styl_panel.png 
    :class: small 
@@ -201,8 +226,8 @@ Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Lay
 	zvolení, export) pomocí tlačítka ve spodní části okna vlastností, 
 	nebo z kontextového menu vrstvy (pravý klik na vrstvu v panelu 
 	vrstev), zde je přepínání jednotlivých stylů rychlejší. V panelu 
-	stylování se styly ovládají v samostatné záložce :guilabel:`Správce 
-	stylů`.
+	stylování se styly ovládají v samostatné záložce
+    |stylepreset|:sup:`Správce 	stylů`.
 
 	.. figure:: images/styl_kat.png 
 	   :class: middle 
