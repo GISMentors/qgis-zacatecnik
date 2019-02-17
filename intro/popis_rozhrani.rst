@@ -389,12 +389,12 @@ prvky, se kterými hodláme dále pracovat. Tato označení se nazývá
   naklikáním polygonu
 - |mActionSelectFreehand| :sup:`Vybrat prvky kreslením od ruky`
 - |mActionSelectRadius| :sup:`Vybrat prvky poloměrem`
-
 - |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce` - viz kapitola
   :ref:`atrdotaz`
-
 - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` -
   zruší veškerý výběr
+- |mActionInvertSelection| :sup:`Převrátit výběr prvků` - invertuje výběr.
+Zruší se aktuální výběr a vytvoří se výběr prvků, které ve výběru nebyly.
 
 .. tip:: Nástroje pro pohyb v okně na základě výběru
 
