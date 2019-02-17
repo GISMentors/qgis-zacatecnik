@@ -32,6 +32,10 @@
    :width: 1.5em
 .. |mDockify| image:: ../images/icon/mDockify.png
    :width: 1.5em
+.. |mActionPanToSelected| image:: ../images/icon/mActionPanToSelected.png
+   :width: 1.5em
+.. |mActionZoomToSelected| image:: ../images/icon/mActionZoomToSelected.png
+   :width: 1.5em
 
 
 
