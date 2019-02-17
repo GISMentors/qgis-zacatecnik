@@ -51,19 +51,17 @@ vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
 
 **Zákaldní funkce attributové tabulky**
 
-Kliknutím na název pole, lze hodnoty seřadit.
+- Kliknutím na název pole, lze hodnoty seřadit.
 
-Kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru
+- Kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru
 
-Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
+- Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
 nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
 vybraná data zpřehlední.
 
-Dále můžeme použít funkce výběru, které jsou dostupné i v hlavním okně:
+- Dále lze použít funkce výběru, které jsou dostupné i v hlavním okně:
 
-Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`
-můžeme invertovat výběr. Zruší se aktuální výběr a 
-vytvoří se výběr prvků, které ve výběru nebyly.
+
 
 |mDockify|
 
