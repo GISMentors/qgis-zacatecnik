@@ -12,9 +12,9 @@
    :width: 1.5em
 .. |add_attributes| image:: ../images/icon/grass_edit_attributes.png
    :width: 1.5em
-.. |up| image:: ../images/icon/symbologyUp.png
+.. |up| image:: ../images/icon/mActionArrowUp.png
    :width: 1.5em
-.. |down| image:: ../images/icon/symbologyDown.png
+.. |down| image:: ../images/icon/mActionArrowDown.png
    :width: 1.5em
 .. |add| image:: ../images/icon/symbologyAdd.png
    :width: 1.5em  
