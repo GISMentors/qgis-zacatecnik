@@ -89,18 +89,20 @@ vrstvu s odděleným textem`.
     Okno funkce |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s
     odděleným textem`.
 
-- :item:`Jméno souboru` - cesta a název souboru, můžeme vyhledat soubor
+- :item:`Název souboru` - cesta a název souboru, můžeme vyhledat soubor
   pomocí tlačítka :item:`Procházet...`
 - :item:`Název vrstvy` - název nově vzniklé vrstvy
 - :item:`Formát souboru` |radiobuttonon| - vybereme typ oddělení hodnot
   v textovém souboru
+- :item:`Kódování` |selectstring| - vybereme kódování textu
+
 
     - |radiobuttonon| :sup:`CSV (hodnoty oddělené čárkou)` - standardní
       .csv soubor s hodnotami oddělenými čárkou
-    - |radiobuttonon| :sup:`Vlastní oddělovače` - výběr libovolného
-      oddělovače
     - |radiobuttonon| :sup:`Oddělovač regulárního výrazu` - použití
       regulárního výrazu
+    - |radiobuttonon| :sup:`Vlastní oddělovače` - výběr libovolného
+      oddělovače
 
 - :item:`Možnost záznamu`
 
@@ -109,7 +111,8 @@ vrstvu s odděleným textem`.
     - |checkbox| :item:`První záznam obsahuje názvy polí` - zaškrtneme,
       pokud máme v tabulce jako první řádek názvy sloupců
 
-- :item:`Možnosti pole`
+- :item:`Record and Fields Options`
+.. - :item:`Možnosti záznamu a polí`
 
     - |checkbox| :option:`Oříznout pole` - smaže přebytečné mezery v
       datech např. na konci nebo začátku záznamu
@@ -117,8 +120,10 @@ vrstvu s odděleným textem`.
     - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme,
       pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou
       (např. :numref:`xydatacsv`)
+    - |checkbox| :option:`Detect field types` - detekuje datový typ sloupce
 
-- :item:`Definice geometrie`
+- :item:`Geometry definition`
+.. - :item:`Definice geometrie`
 
     - |radiobuttonon| :sup:`Souřadnice bodu` - body definovány souřadnicemi
       X a Y (XY Data)
@@ -137,23 +142,24 @@ vrstvu s odděleným textem`.
         - :option:`Geometrický typ` |selectstring| - typ geometrie
 
     - |radiobuttonon| :sup:`Žádna geometrie (pouze atributová tabulka)` -
-      přidá pouze tabulku, stejného výsledku dosáhneme, když do projektu
-      přidáme .csv soubor přetažením z prohlížeče souborů
+      přidá pouze tabulku
+      
+    - |selectstring| :sup:`SRS geometrie` - souřadnicový systém, ve kterém
+      jsou souřadnice uložené
 
-- :item:`Nastavení vrstvy`
+- :item:`Layer settings`
+.. - :item:`Nastavení vrstvy`
 
     - |checkbox| :option:`Použít prostorový index` - vytvoří prostorový
       index pro rychlejší práci s daty - vhodnější pro objemné soubory
-    - |checkbox| :option:`Use subset index` - vytvoří index podmnožiny prvků
+    - |checkbox| :option:`Použít index subsady` - vytvoří index podmnožiny prvků
     - |checkbox| :option:`Sledovat soubor` - sledování změn souboru za
       běhu QGIS, při aktualizaci |mActionRefresh| se projeví změny souboru
       (např. přidání dalších dat do řádků) ve vrstvě
 
     - ve spodní části okna vidíme náhled vkládaných dat
 
-Po potvrzení importu stisknutím tlačítka :item:`Ok` se objeví okno,
-kde musíme definovat souřadnicový systém, ve kterém jsou importované
-souřadnice zapsány. Pokud chceme naimportovaná data uložit jako vrstvu, musíme 
+Pokud chceme naimportovaná data uložit jako vrstvu, musíme 
 exportovat (:guilabel:`Uložit jako...`).
 
 .. figure:: images/xydata_vysledek.png
