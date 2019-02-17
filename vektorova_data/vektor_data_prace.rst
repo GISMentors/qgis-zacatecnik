@@ -241,18 +241,18 @@ Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Sty
 
 	   Výběr stylu pomocí kontextového menu z panelu vrstev
 
-Metadata
-^^^^^^^^
+..  Metadata
+    ^^^^^^^^
 
-V záložce :item:`Metadata` je možné získat základní metadata vektorové vrstvy.
+    V záložce :item:`Metadata` je možné získat základní metadata vektorové vrstvy.
 
-.. figure:: images/vector_metadata.png
-   :scale-latex: 65
+    .. figure:: images/vector_metadata.png
+       :scale-latex: 65
 
-   Příklad výpisu metadat vrstvy ve formátu ESRI shapefile.
+       Příklad výpisu metadat vrstvy ve formátu ESRI shapefile.
 
-.. figure:: images/postgis_metadata.png
-   :scale-latex: 65
+    .. figure:: images/postgis_metadata.png
+       :scale-latex: 65
 
-   Příklad výpisu metadat vrstvy ve formátu PostGIS.
-   
+       Příklad výpisu metadat vrstvy ve formátu PostGIS.
+
