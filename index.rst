@@ -45,14 +45,10 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
 
 .. only:: html
 
-.. tip::
-   Text školení je dostupný i v tisknutelné formě `PDF
-   <./skoleni-qgis-zacatecnik.pdf>`_.
-   
-.. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 2.18 Las Palmas
-               <https://www.qgis.org/en/site/forusers/download.html>`_. V
-               jiných verzích není zaručena funkčnost uvedených příkladů. Dále
-               předpokládáme zapnutou *českou lokalizaci*.
+.. important:: Školení je zaměřeno na aktuální LTR verzi **QGIS 2.18
+               Las Palmas**. V jiných verzích není zaručena funkčnost
+               uvedených příkladů. Dále předpokládáme zapnutou *českou
+               lokalizaci*.
 
 .. index::
    pair: datové sady; ke stažení
@@ -65,6 +61,10 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
    <http://training.gismentors.eu/geodata/qgis/dmt.zip>`_
    (97 MB).
 
+.. tip::
+   Text školení je dostupný i v tisknutelné formě `PDF
+   <./skoleni-qgis-zacatecnik.pdf>`_.
+   
 .. raw:: latex
 
    \newpage
