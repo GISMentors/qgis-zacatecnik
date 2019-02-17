@@ -104,6 +104,19 @@ vykreslovaných hodnot (:numref:`stylraster`).
       :scale-latex: 60
 
       Změna stylu rastrové vrstvy pomocí nástrojové lišty :item:`Rastr`.
+      
+Pokud potřebujeme používat opakovaně stejné nastavení symbologie, nebo jen
+poskytnout nastavení i jiným uživatelům, tak je možné styl uložit stejným
+způsobem jako u vektorových dat. Ve spodní části záložky :item:`Symbologie`
+se nachází talčítko :item:`Styl`. Zde se nachází jak možnost uložit aktulání
+styl do souboru, tak možnost načíst styl ze souboru a nastavit ho tak danému
+rastru. Styly se ukládají v souboru s přídponou :file:`.qml`.
+Tento soubor je v podstatě :file:`.xml` soubor, takže je možné ho případně
+editovat podle potřeb.
+
+.. figure:: images/save_style.png
+   :class: small
+ 
 
 Průhlednost
 ^^^^^^^^^^^

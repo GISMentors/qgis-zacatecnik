@@ -5,7 +5,7 @@
    pair: rastrová data; export dat
 
 Export rastrových údajů
-^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 .. Díky knihovně |gdal| :sup:`GDAL` (Geospatial Data Abstraction Library) je možné
    čtení a zápis rastrových GIS formátů v prostředí QGIS. Pro všechny podporované
