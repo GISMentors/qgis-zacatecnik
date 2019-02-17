@@ -112,7 +112,6 @@ vrstvu s odděleným textem`.
       pokud máme v tabulce jako první řádek názvy sloupců
 
 - :item:`Record and Fields Options`
-.. - :item:`Možnosti záznamu a polí`
 
     - |checkbox| :option:`Oříznout pole` - smaže přebytečné mezery v
       datech např. na konci nebo začátku záznamu
@@ -123,7 +122,6 @@ vrstvu s odděleným textem`.
     - |checkbox| :option:`Detect field types` - detekuje datový typ sloupce
 
 - :item:`Geometry definition`
-.. - :item:`Definice geometrie`
 
     - |radiobuttonon| :sup:`Souřadnice bodu` - body definovány souřadnicemi
       X a Y (XY Data)
@@ -148,7 +146,6 @@ vrstvu s odděleným textem`.
       jsou souřadnice uložené
 
 - :item:`Layer settings`
-.. - :item:`Nastavení vrstvy`
 
     - |checkbox| :option:`Použít prostorový index` - vytvoří prostorový
       index pro rychlejší práci s daty - vhodnější pro objemné soubory
