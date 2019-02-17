@@ -51,19 +51,23 @@ vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
 
 **Zákaldní funkce attributové tabulky**
 
-- Kliknutím na název pole, lze hodnoty seřadit.
+- kliknutím na název pole, lze hodnoty seřadit.
 
-- Kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru
+- kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru
 
-- Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
+- pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
 nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
 vybraná data zpřehlední.
 
-- Dále lze použít funkce výběru, které jsou dostupné i v hlavním okně:
+- lze použít funkce výběru, které jsou dostupné i v hlavním okně:
+
+|mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`, |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách`,
+|mActionInvertSelection| :sup:`Převrátit výběr prvků` 
 
 
-
-|mDockify|
+Okno atributové tabulky lze otevírat ve dvou režimech buď v samostatném okně,
+nebo jako panel. Přepínat tyto režimy lze pomocí funkce
+|mDockify|:sup:`Dock Attribute Panel` 
 
 .. tip:: Pomocí nabídky |mActionFilterMap| v levém dolním rohu lze zvolit filtr 
    zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny 
