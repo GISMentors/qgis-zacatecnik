@@ -55,12 +55,7 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 
 .. only:: html
 
-.. tip::
-   Text školení je dostupný i v tisknutelné formě `PDF
-   <./skoleni-qgis-zacatecnik.pdf>`_.
-   
-.. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 3.4 Madeira
-               <https://www.qgis.org/en/site/forusers/download.html>`_. V
+.. important:: Školení je zaměřeno na aktuální LTR verzi **QGIS 3.4 Madeira**. V
                jiných verzích není zaručena funkčnost uvedených příkladů. Dále
                předpokládáme zapnutou *českou lokalizaci*.
 
@@ -75,6 +70,10 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
    <http://training.gismentors.eu/geodata/qgis/dmt.zip>`_
    (97 MB).
 
+.. tip::
+   Text školení je dostupný i v tisknutelné formě `PDF
+   <./skoleni-qgis-zacatecnik.pdf>`_.
+   
 .. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
 
 .. raw:: latex
