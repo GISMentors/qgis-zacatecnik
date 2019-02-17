@@ -8,7 +8,13 @@
    :width: 1.5em
 .. |mActionOpenTable| image:: ../images/icon/mActionOpenTable.png
    :width: 1.5em
+.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
+    :width: 1.5em
+.. |mActionUnselectAttributes| image:: ../images/icon/mActionUnselectAttributes.png
+    :width: 1.5em
 .. |mActionInvertSelection| image:: ../images/icon/mActionInvertSelection.png
+   :width: 1.5em
+.. |mActionSelectAll| image:: ../images/icon/mActionSelectAll.png
    :width: 1.5em
 .. |mActionSelectedToTop| image:: ../images/icon/mActionSelectedToTop.png
    :width: 1.5em
@@ -61,13 +67,17 @@ vybraná data zpřehlední.
 
 - lze použít funkce výběru, které jsou dostupné i v hlavním okně:
 
-|mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`, |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách`,
-|mActionInvertSelection| :sup:`Převrátit výběr prvků` 
+    - |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`
+    - |mActionSelectAll| :sup:`Vybrat prvky pomocí vzorce`
+    - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` 
+    - |mActionInvertSelection| :sup:`Převrátit výběr prvků`
+    - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
+    - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
 
 
 Okno atributové tabulky lze otevírat ve dvou režimech buď v samostatném okně,
 nebo jako panel. Přepínat tyto režimy lze pomocí funkce
-|mDockify|:sup:`Dock Attribute Panel` 
+|mDockify|:sup:`Dock Attribute Panel`.
 
 .. tip:: Pomocí nabídky |mActionFilterMap| v levém dolním rohu lze zvolit filtr 
    zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny 
