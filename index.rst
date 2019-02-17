@@ -64,7 +64,7 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
 .. tip::
    Text školení je dostupný i v tisknutelné formě `PDF
    <./skoleni-qgis-zacatecnik.pdf>`_.
-   
+
 .. raw:: latex
 
    \newpage
