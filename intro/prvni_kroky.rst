@@ -67,7 +67,8 @@ přizpůsobuje dle aktuálního nastavení funkčnosti. Popis jednotlivých
    verzi. Platí to i zpětně, když přidáte funkcionalitu v nové verzi,
    tak je možné ji použít i ve starší verzi (platí pro nástroje
    kompatibilní pro nainstalované verze).
-                
+
+..
    .. figure:: images/qgis_more_versions.png
       :class: small
       :scale-latex: 40
@@ -92,7 +93,6 @@ samostatný :file:`.qgs` soubor. Druhou je volba kompimovaného souboru.
 :file:`.qgd` kde se ukládají různá lokální nastavení a parametry.
 
  .. figure:: images/project.png
-    :class: small
     :scale-latex: 85
 
     Volba typu uložení projektu.
