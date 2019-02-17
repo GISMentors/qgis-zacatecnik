@@ -18,12 +18,15 @@
    :width: 1.5em
 .. |locked| image:: ../images/icon/locked.png
    :width: 1.5em
-.. |mActionFilter| image:: ../images/icon/mActionFilter.png
+.. |mActionFilterMap| image:: ../images/icon/mActionFilterMap.png
    :width: 1.5em
 .. |mIconExpression| image:: ../images/icon/mIconExpression.png
    :width: 1.5em
-.. |rendererCategorizedSymbol| image:: ../images/icon/rendererCategorizedSymbol.png
+.. |mActionConditionalFormatting| image:: ../images/icon/mActionConditionalFormatting.png
    :width: 1.5em
+.. |mDockify| image:: ../images/icon/mDockify.png
+   :width: 1.5em
+
 
 
 Vlastnosti vrstvy
@@ -31,34 +34,45 @@ Vlastnosti vrstvy
 Atributová tabulka
 ------------------
 
+Vektorová data se skládájí ze dvou základních složek -- geometrie (body,
+linie, polygony) a informací o jednotlivých prvcích tzv. atributů.
+
 Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít
 atributovou tabulku` nebo pravým kliknutím vyvoláme kontextové menu
 a zvolíme :item:`Otevřít atributovou tabulku`. Tabulka slouží
-k prohlížení a editaci atributové složky dat. Kliknutím na číslo
-řádku můžeme označit jednotlivé prvky do výběru. V názvu okna je
-vypsaný název vrstvy, celkový počet prvků (`Features total`), počet
-odfiltrovaných prvků (`filtered`) a počet prvků ve výběru (`selected`).
-
+k prohlížení a editaci atributové složky dat. V názvu okna je vypsaný název
+vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
+(`filtered`) a počet prvků ve výběru (`selected`).
 
 .. figure:: images/at_table.png
    :scale-latex: 60
 
    Atributová tabulka vrstvy.
 
-.. tip:: Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
-   nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
-   vybraná data zpřehlední.
+Zákaldní funkce attributové tabulky
 
-   Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`
-   můžeme invertovat výběr. Zruší se aktuální výběr a 
-   vytvoří se výběr prvků, které ve výběru nebyly.
+Kliknutím na název pole, lze hodnoty seřadit.
 
-   Pomocí nabídky |mActionFilter| v levém dolním rohu lze zvolit filtr 
+Kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru
+
+Pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
+nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
+vybraná data zpřehlední.
+
+Dále můžeme použít funkce výběru, které jsou dostupné i v hlavním okně:
+
+Pomocí tlačítka |mActionInvertSelection| :sup:`Invertovat výběr`
+můžeme invertovat výběr. Zruší se aktuální výběr a 
+vytvoří se výběr prvků, které ve výběru nebyly.
+
+|mDockify|
+
+.. tip:: Pomocí nabídky |mActionFilterMap| v levém dolním rohu lze zvolit filtr 
    zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny 
-   prvky ve vrstvě, tedy hodnota: |mActionFilter| :item:`Zobrazit všechny 
+   prvky ve vrstvě, tedy hodnota: |mActionFilterMap| :item:`Zobrazit všechny 
    prvky`
 
-.. noteadvanced:: Pomocí funkce |rendererCategorizedSymbol| :sup:`Pravidla 
+   Pomocí funkce |mActionConditionalFormatting| :sup:`Pravidla 
    podmíněného formátování` lze pole v atributové tabulce  stylizovat na 
    podle námi definovaných pravidel
 
