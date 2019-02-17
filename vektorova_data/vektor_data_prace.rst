@@ -100,7 +100,7 @@ nebo jako panel. Přepínat tyto režimy lze pomocí funkce
    prvky ve vrstvě, tedy hodnota: |mActionFilterMap| :item:`Zobrazit všechny 
    prvky`
 
-   Pomocí funkce |mActionConditionalFormatting| :sup:`Pravidla 
+   Pomocí funkce |mActionConditionalFormatting| :sup:`Pravidla`
    podmíněného formátování` lze pole v atributové tabulce  stylizovat na 
    podle námi definovaných pravidel
 
