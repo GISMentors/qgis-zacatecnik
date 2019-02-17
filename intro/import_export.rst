@@ -46,11 +46,13 @@ Stejného výsledku lze dosáhnout i pomocí ikon v nástrojovém panelu
    Nástrojový panel pro přidávání vrstev Spravovat vrstvy
 
 Další možností je přidat data pomocí vestavěného datového katalogu
-(prohlížeče souborů), a to buď dvojitým kliknutím, nebo jednoduchým
+(prohlížeče souborů), a to buď dvojitým kliknutím, jednoduchým
 přetažením souboru do mapového okna nebo okna vrstev
-(:numref:`browser`). Pomocí kláves :kbd:`CTRL` nebo :kbd:`SHIFT` můžeme
-vybrat a přidat přetažením více souborů najednou. Pomocí datového
+(:numref:`browser`) anebo přes kontextové memu dané vrstvy.
+Pomocí kláves :kbd:`CTRL` nebo :kbd:`SHIFT` můžeme vybrat a přidat
+přetažením více souborů najednou. Pomocí datového
 katalogu lze také procházet a přidávat soubory přímo z archivu zip.
+
 
 .. tip:: Pomocí přetažení lze přidat data také přímo ze správce
          souborů v operačním systému.
@@ -66,6 +68,11 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 
 .. index::
    pair: export dat; rozhraní - popis
+   
+.. tip:: Přes panel nástrojů je možné dosáhnout i další funkčnost.
+         Jednou z nich je nově **mazání** dat, nejenom jejich
+         odstranění z projektu. Další fukncionalita je závislá od typu
+         dat (souborovvá databáze - přidávání dat tažením).
 
 Export dat
 ----------
@@ -76,13 +83,14 @@ V seznamu vrstev označíme vrstvu, kterou chceme exportovat, a vybereme
 z hlavního menu :menuselection:`Vrstva --> Uložit jako...`
 
 .. figure:: images/saveas.png
+   :class: small
    :scale-latex: 40
 
    Spuštění exportu z hlavního menu.
 
 Elegantnější a rychlejší způsob je spuštění exportu ze seznamu
 vrstev. Pravým kliknutím na vrstvu vyvoláme kontextové menu a vybereme
-:menuselection:`Uložit jako...`
+:menuselection:`Export --> Save Features As`.
 
 .. figure:: images/layer_saveas.png
    :class: small
@@ -90,7 +98,13 @@ vrstev. Pravým kliknutím na vrstvu vyvoláme kontextové menu a vybereme
 
    Spuštění exportu z kontextového menu v seznamu vrstev.
 
+.. tip:: Exportování dat umožňuje i změnu kódování textu, změnu souřadnicového
+         systému (transformaci) a další funkce, které jsou základními
+         operacemi pro každodenní praxi.
+
 Jak exportovat konkrétní data se dozvíme v jednotlivých kapitolách.
+
+.. _sour-system:
 
 Výběr souřadnicového systému
 ----------------------------
@@ -99,8 +113,13 @@ Při vkládání rastrových nebo vektorových dat se může stát, že po
 potvrzení výběru je vyžadována specifikace souřadnicového systému
 vkládaných dat (:numref:`srs`). Okno se zobrazí v případě, pokud
 vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému,
-jako například ESRI Shapefile bez souboru končícího příponou \*.prj. V
-okně výběru je možné vyhledat souřadnicové systémy pomocí
+jako například ESRI Shapefile bez souboru končícího příponou :file:`\*.prj`,
+s uvedeným EPSG kódem, který by odpovídal kódu které používá QGIS (z
+knihovny proj4).
+Soubory typu :file:`shapefile` QGIS opatří dalším souborem :file:`.qpj`,
+který vytváří sám pro jasné přiřazení souř. systému vrstvě. 
+
+V okně výběru je možné vyhledat souřadnicové systémy pomocí
 filtru. Zvolení správného souřadnicového systému je velice důležité,
 pokud máte v mapovém okně načtena data v různých souřadnicových
 systémech, a dochází tak k transformaci, při měření nebo připojování k
@@ -112,10 +131,27 @@ webovým službám.
    :scale-latex: 47
 
    Volba souřadnicového systému při vkládání dat.
+   
+Mezi souřadnicovými systémy je možné filtrovat pomocí jejich názvů. Na obrázku
+:numref:`srs` je vidět filtr pomocí textu \"jtsk\". Pokud v poli s vybranými
+systémy označíme jeden, tak se níže vypíše jeho definice (zapsání
+matematických koeficientů) a vykreslí rozsah území,pro který se používá.
+
+Naposledy použité souř. systémy se pak budou objevovat v horní části pro
+rychlý výběr a budou i v rychlých nabídkách jiných nástrojů, které umožňují
+výběr souř. systému.
 
 .. tip:: Po přidání dat můžeme zkontrolovat jejich pozici v prostoru
    pomocí funkce |mActionZoomToLayer| :sup:`Přiblížení na vrstvu`, nebo
    pomocí funkce |mActionZoomFullExtent| :sup:`Přiblížit na rozměry okna`
    pozici vůči ostatním vrstvám projektu. Změnu špatně zvoleného systému
-   lze provést ve vlastnostech dané vrstvy v záložce :item:`Obecné`.
+   lze provést ve vlastnostech dané vrstvy v záložce :item:`Zdroj`.
 
+
+.. warning :: Pokud má vrstva přiřazený špatný sořadnicový systém, tak
+              není vhodné pracovat  s takovouto vrstvou. Vrstva může působit,
+              že funguje korektně, ale některé nástroje mohou fungovat
+              jinak než  uživatel očekává. Některé nástroje při interakci
+              vrstev mohou vyžadovat, aby vstupní vrstvy byly ve stejném
+              souřadnicovém systému.
+              

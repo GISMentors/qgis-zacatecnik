@@ -6,9 +6,9 @@
    :width: 1.5em
 .. |removescale| image:: ../images/icon/symbologyRemove.png
    :width: 1.5em
-.. |geographic| image:: ../images/icon/geographic.png
+.. |geographic| image:: ../images/icon/CRS.png
    :width: 1.5em
-.. |log| image:: ../images/icon/mIconInfo.png
+.. |log| image:: ../images/icon/mMessageLog.png
    :width: 1.5em
 .. |mActionZoomOut| image:: ../images/icon/mActionZoomOut.png
    :width: 1.5em
@@ -50,6 +50,20 @@
     :width: 1.5em
 .. |mActionIdentify| image:: ../images/icon/mActionIdentify.png
     :width: 1.5em
+.. |rendering_bar| image:: ../images/icon/rendering_bar.png
+    :width: 4.5em
+.. |raster| image:: ../images/icon/mIconRaster.png
+    :width: 1.2em
+.. |polygon| image:: ../images/icon/polygon.png
+    :width: 1.2em
+.. |polyline| image:: ../images/icon/polyline.png
+    :width: 1.2em
+.. |point| image:: ../images/icon/point.png
+    :width: 1.2em
+.. |mActionAddGroup| image:: ../images/icon/mActionAddGroup.png
+    :width: 1.5em
+.. |mActionRemoveLayer| image:: ../images/icon/mActionRemoveLayer.png
+    :width: 1.5em
 
 
 .. index::
@@ -80,12 +94,18 @@ Na obrázku níže jsou označeny základní části systému.
 Mapové okno (1)
 ===============
 
-V tomto okně se vykreslují všechny mapové vrstvy.
+V tomto okně se vykreslují všechny zapnuté mapové vrstvy. Vykreslování
+odpovídá nastavení každé jednotlivé vrstvy.
+Pořadí vykreslování vrstev odpovídá pořadí v panelu vrstev. Ty se tedy
+překreslují přes sebe všechny i když se vzájemně plně nebo jenom částečně
+překrývají.
+Pokud překreslování mapového okna trvá delší dobu je vhodné nechat překeslovat
+pouze nezbytné vrstvy.
 
 .. index::  
    pair: přepínač vrstev; rozhraní - popis
 
-Přepínač vrstev / Panel prohlížeče (2)
+Panel vrstev / Panel prohlížeče (2)
 ======================================
 
 Přepínač vrstev zobrazuje všechny přidané vrstvy. Jejich zobrazení
@@ -93,6 +113,37 @@ poskytuje rychlou informaci o jejich pozici a grafickém zobrazení v
 mapovém okně.  Kliknutím pravého tlačítka na vybranou vrstvu se vyvolá
 kontextové menu k dané vrstvě. V tomto menu je možné najít vše od
 stylování vrstvy až po export dat.
+
+Podle typu ikonky před názvem vrstvy je možné rychle identifikovat,
+zda se jedná o vektorovou nebo o |raster| rastrovou vrstvu. U vektorové vrstvy
+se typicky rozlišuje mezi |polygon| polygonovou (plošnou), |polyline| liniovou
+anebo |point| bodovou vrstvou. Zobrazení symbolů záleží na aktuálního
+nastavení symbologie dané vrstvy. Pokud nejde o jednoduchý symbol, tak je možné
+pomocí trojúhelníčku na začátku řádku rozbalit všechny položky stylování dané
+vrstvy.
+Pokud chceme rychle změnit konkrétní symbol, tak je možné se pomocí dvoukliku
+přepnout přímo do editace symbolu. 
+Pokud má vrstva vícero  různých symbolů, tak je možné zapínat symboly každé skupiny zvlášť přímo pomocí zaškrtávátka u každého symbolu. Není proto nutné dělat
+zmeny v nastavení symbologie (platí u vektorových vrstev)
+
+Vykreslování vrstvy v mapovém okně lze zapnou pomocí zatrhnutí okénka na
+úrovni každé vrstvy.
+
+Změnit pořadí vrstev lze pomocí tažení vrstvy na jinou pozici.
+
+V případě práce s velkým počtem vrstev je možné shlukovat tématicky vrstvy do
+tzv. skupin. Vytvoření skupiny je pomocí tlačítka |mActionAddGroup| 
+:sup:`Přidat skupinu`. Ta se automaticky přidá do seznamu vrstev s výchozím
+názvem, který je možné změnit (přes kontextové menu skupiny). Vrstvy lze do
+skupiny přidat pomocí přetažení. U skupiny lze vykonávat některé vybrané
+funkce, jako i u běžných vrstev a některé jsou specifické.
+
+Vrstvu lze z projektu odstranit. Neznamená to, že by se smazala, pouze nebude
+součástí aktuálního projektu. Odstranit vrstvu lze z jejího kontektového menu,
+nebo pomocí tlačítka |mActionRemoveLayer| :sup:`Odstranit vrtvu/skupinu`.
+Tuto akci lze provést i pro více vrstev naráz. Ty lze ozbačit za pomocí kláves
+:kbd:`Ctrl` anebo :kbd:`Shift` a pak vyvolat kontextové menu pro všechny
+označené vrstvy.
 
 Panel prohlížeče slouží k zjednodušení přístupu ke geodatům. Umožňuje
 přistupovat k různým typům dat, např. vektorovým, rastrovým, databázím,
@@ -126,10 +177,64 @@ Jednotlivé části jsou posány níže.
 .. index::
    pair: souřadnice mapového okna; stavový řádek
 
+
+Lokátor (vyhledávač)
+^^^^^^^^^^^^^^^^^^^^ 
+
+Pro lepší orientaci mezi algoritmy, nástroji, vrstvami a dalšími součástmi je
+možné používat okno pro vyhledávání - :item:`Lokátor`.
+Zadáním části názvu vyhledávané vrstvy nebo nástroje se filtruje mezi všemi
+položkami. Výledky jsou řazeny do kategorií. Na obrázku je vidět, že po zadání
+textu se vyhedají vrstvy obsahující vložený text, níže pak algoritmy s
+odpovídajícím názvem, ale i nástroje aplikovatelné na vybrané vrstvy. 
+
+.. figure:: images/locator_search_bar.png
+   :class: medium
+   
+   Vyhledávací okno s ukázkou nalezených výsledků toztříděných do jednotlivých
+   kategorií.
+   
+.. tip:: Pokud chceme vyhledávat v konkrétní sekci, například pouze vrstvu, nebo
+   pouze nístroj, tak můžu nastavit filtrování pouze v konkrétní kategorii.
+   Třídění je možné ovlyvnit zadáním parametru před samotným textem. Parametr
+   je možné napsat přímo jako text, anebo si vybrat ze seznamu. Seznam se
+   aktivuje po kliknutí do vyhledávacího řádku. Zkratku buď opíšeme a přidáme
+   za ni mezeru, anebo ji dvouklikem vložíme. Za zkratku pak píšeme část
+   textu pro vyhledávání.
+   Poslední variantou je výběr v menu, které se otevře po kliknutí na symbol
+   lupy.
+   
+   .. figure:: images/locator_thema.png
+      :class: large
+   
+      Vyhledávací okno s vyhledáváním omezeným pouze na vrstvy v projektu s
+      ukázkou nalezených výsledků.
+      
+   V případě potřeby je možné upravit nastavení vyhledávání. Je možné nastavit
+   ve kterých skupinách se vyhledává, nebo jakými zkratkami se nastavují.
+   Nastavení je vhorním menu :menuselection:`Nastavení --> Možnosti`, záložka
+   :item:`Lokátor`.
+
+   .. figure:: images/locator_settings.png
+      :class: medium
+   
+      Nastavení fungování lokátoru, aktivní skupiny a jejich zkratky.
+   
+Informace o stavu  
+^^^^^^^^^^^^^^^^^ 
+
+Pole za vyhledávačem je místo, kde se uživateli zobrazují běžné informace.
+Příkladem je vypsání zprávy o uložení projektu s vypsáním cesty k souboru
+projektu. Kousek dál je místo, kde se zobrazuje ikonka při překreslování 
+mapového okna. Pokud je zde vykreslená ikonka načítání |rendering_bar|, tak
+se aktuálně překresluje obsah mapového okna. Po ukončení vykreslování tato
+ikonka zmizí. Délka překreslování záleží na vykreslovaném obsahu. 
+
+
 Souřadnice
 ^^^^^^^^^^ 
 
-První část stavového řádku slouží pro orientaci v mapovém okně. Zde se
+Další část stavového řádku slouží pro orientaci v mapovém okně. Zde se
 zobrazuje buď aktuální souřadnice ukazatele myši v mapovém okně, nebo tzv.
 extent (rozsah území aktuálně zobrazeného v mapovém okně). Ukázka obou možností
 je zobrazena na následujícím obrázku. Jako přepínač mezi uvedenými fukcemi
@@ -187,8 +292,9 @@ překreslování není potřebné, tak je možné jej potlačit - mapové okno s
 překreslovat. Pro takovéto nastavení je ve stavovém řádku položka s checkboxem
 :item:`Vykreslování`.
 
-.. tip:: Pokud potřebujete přerušit vykreslování jednorázově, tak je to možné 
-   provést stisknutím klávesy :item:`Esc`.
+.. tip:: Pokud potřebujete přerušit vykreslování tak je možné to provést pomocí
+         vypnutí překreslování. To se může hodit zejména při vykreslování 
+         náročných vrstev, když je zapotřebí pouze změnit obsah mapového okna. 
 
 .. index::
    pair: souřadnicový systém mapového okna; stavový řádek

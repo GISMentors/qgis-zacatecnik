@@ -41,7 +41,17 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
       Logo projektu QGIS.
 
 Současným konceptem ve vývoji je pravidelné a intenzivní publikování nových verzí.
-Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
+Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi. 
+
+Přechod na verzi 3.x je spojen s postupem technologií, konkrétně zejména povýšení:
+  * Python 2.7 na Python 3
+  * Qt4 na Qt5
+
+S touto změnou přicházejí nejenom novější a lepší technologické nástroje, ale
+také jasná zpráva o tom, že QGIS se neustále vyvíjí a drží krok a nezastarává.
+Součástí velkých změn je i v tomto případě nutnost se adaptovat na ně, co závisí
+hlavně od způsobu jakým QGIS uživatel využívá. Všechny změny ale vycházejí z
+dlouhodobého plánování a hlavně z požadavků uživatelů.
 
 .. only:: html
 
@@ -49,7 +59,7 @@ Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi.
    Text školení je dostupný i v tisknutelné formě `PDF
    <./skoleni-qgis-zacatecnik.pdf>`_.
    
-.. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 2.18 Las Palmas
+.. important:: Školení je zaměřeno na aktuální LTR verzi `QGIS 3.4 Madeira
                <https://www.qgis.org/en/site/forusers/download.html>`_. V
                jiných verzích není zaručena funkčnost uvedených příkladů. Dále
                předpokládáme zapnutou *českou lokalizaci*.
@@ -108,17 +118,17 @@ QGIS je populární i pro svou rozšiřitelnost pomocí takzvaných
 zásuvných modulů (tzv. "pluginů").  Pluginy jsou dílčí nástroje, které
 jsou vyvíjeny komunitou kolem QGIS.  Pomocí pluginů je možné dopnit do
 QGIS novou funkcionalitu či podporu pro další formáty či služby jako
-je např. Google Maps, Bing nebo OpenStreetMap. Pro připojení k WFS
-poskytovaným ČÚZK je možné použít plugin \"WFS 2.0\" a pro prohlížení
-souborů ve formátu Výměnného formátu katastru slouží VFK plugin (více
-ve :skoleni:`školení pro pokročilé
-<qgis-pokrocily/ruzne/vfk-ruian.html#vymenny-format-katastru-vfk>`).
+je např. Google Maps, Bing nebo OpenStreetMap.
 
-.. figure:: images/intro_vfk.png
+Oficiální repozitář, který je defaultně k dispozici jako zdroj pluginů je 
+dostupný `zde <https://plugins.qgis.org/plugins/>`_. Instalace konkrétního
+pluginu je pak možná přímo v okně pro správu zásuvných modulů (pluginů).
+
+.. figure:: images/intro_profile.png
    :scale-latex: 75
    :class: middle
         
-   Ukázka práce s katastrálními daty v QGIS pomocí VFK pluginu.
+   Ukázka měření terénního profilu pomocí nástroje \"Profile tool\".
 
 .. only:: html
              
