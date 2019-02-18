@@ -46,6 +46,8 @@
    :width: 1.5em
 .. |mIconExpression| image:: ../images/icon/mIconExpression.png
    :width: 1.5em
+.. |mActionMoveFeatureCopy| image:: ../images/icon/mActionMoveFeatureCopy.png
+   :width: 1.5em
 .. |mActionNewVectorLayer| image:: ../images/icon/mActionNewVectorLayer.png
    :width: 1.5em
 
@@ -122,28 +124,28 @@ zeptá, zda chceme provedené změny uložit, či nikoliv.
 
 .. tip:: |mActionAllEdits| :sup:`Aktuální změny` - hromadné ovládání
    změn a zapínání/vypínaní editací ve vrstvách.
-   
-.. tip:: Základní nástroje editace jsou dostupné ve výchozím nastavení 
-   mezi ostatními `Nástrojovými lištami`. Některké nástroje jsou ale 
-   dostupné v samostatné liště :item:`Pokročilá digitalizace`. 
-   Tu můžeme aktivovat v seznamu všech dostupních položek a to pomocí 
-   pravého kliku a následné `aktivace` vybrané položky.  
-   
-   .. figure:: images/advanced_digitizing.png
+
+Základní nástroje editace jsou dostupné ve výchozím nastavení 
+mezi ostatními `Nástrojovými lištami`. Některké nástroje jsou ale 
+dostupné v samostatné liště :item:`Pokročilá digitalizace`. 
+Tu můžeme aktivovat v seznamu všech dostupních položek a to pomocí 
+pravého kliku a následné `aktivace` vybrané položky.  
+
+.. figure:: images/advanced_digitizing.png
     :scale: 90%
     :scale-latex: 40
-    
-    Zapnutí panelu `Pokročilá digitalizace`.
+
+Zapnutí panelu `Pokročilá digitalizace`.
 
 Základní editace geometrie
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-- |mActionCapturePoint|, |mActionCaptureLine|, |mActionCapturePolygon|
-  :sup:`přidat prvek` - kliknutím vytvoříme prvek (bod), nebo lomové
-  body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku
-  kliknutím pravým tlačítkem a přidáme případné atributy. Při
-  přidávání lomových bodů je možné se vrátit o krok zpět pomocí
-  klávesy :kbd:`Backspace` nebo :kbd:`Del`.
+|mActionCapturePoint|, |mActionCaptureLine|, |mActionCapturePolygon|
+:sup:`Přidat ... prvek` - kliknutím vytvoříme prvek (bod), nebo lomové
+body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku
+kliknutím pravým tlačítkem a přidáme případné atributy. Při
+přidávání lomových bodů je možné se vrátit o krok zpět pomocí
+klávesy :kbd:`Backspace` nebo :kbd:`Del`.
 
 .. figure:: images/edit_polygon.png
 
@@ -151,23 +153,33 @@ Základní editace geometrie
     byla tvorba prvku pravým kliknutím ukončena, polygon by měl tři uzly
     (tvar trojúhelníku).
 
-- |mActionMoveFeature| :sup:`Přesunout prvek/prvky` - tažením přesuneme
-  jeden prvek nebo více prvků ve výběru
-
-.. figure:: images/edit_polygon_move.png
-
-    Přesun prvku tažením.
-
-- |remove| :sup:`Vymazat vybrané` - smaže vybrané prvky
-
-- |mActionNodeTool| :sup:`Nástroj uzlú` - pomocí nástroje uzlů lze
-  jednotlivé lomové body: přidávat dvojklikem, přesouvat tažením,
-  mazat označením levým klikem a stisknutím klávesy :kbd:`Backspace`
-  nebo :kbd:`Del`
+|mActionNodeTool| :sup:`Vertex tool` - pomocí nástroje uzlů lze
+    - přidávat body kliknutím na křížek ve středu hrany a umístěním bodu 
+    - přidávat body dvojklikem na hranu a umístěním bodu 
+    - posunovat existující body kliknutím na bod a umístěním bodu 
+    - mazat body označením bodu (nebo více bodů pomocí :kbd:`Shift`) a
+      stisknutím klávesy :kbd:`Backspace` nebo :kbd:`Del`
+    - posouvat celé hrany kliknutím na hranu a umístěním hrany
 
 .. figure:: images/edit_polygon_node.png
 
     Přidání a přesunutí lomového bodu (uzlu, vertexu).
+
+Nástroj uzlů lze použít ve dvou módech, buď pouze pro vrstvu kterou editujeme
+, nebo pro všechny vrstvy které jsou v módu editace
+
+|remove| :sup:`Vymazat vybrané` - smaže vybrané prvky
+
+|mActionMoveFeature| :sup:`Přesunout prvek/prvky` - jednotlivé prvky přesuneme kliknutím na prvek, posunutím a opětovným klliknutím
+
+.. figure:: images/edit_polygon_move.png
+
+    Přesun prvku.
+
+Další variantou funkce je |mActionMoveFeatureCopy|:sup:`Kopírovat a přesunout prvek/prvky`, kdy stejným principem prvky kopírujeme.
+Pro přesun nebo kopírování více prvků můžeme pracovat s více prvky,
+které máme ve výběru.
+
 
 - |mActionSplitFeatures| :sup:`Rozdělit objekt` - naklikáme "řez" přes
   místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem,
