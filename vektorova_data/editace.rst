@@ -50,6 +50,8 @@
    :width: 1.5em
 .. |mActionNewVectorLayer| image:: ../images/icon/mActionNewVectorLayer.png
    :width: 1.5em
+.. |mIconSnapping| image:: ../images/icon/mIconSnapping.png
+   :width: 1.5em
 
 Tvorba nových vrstev a jejich editace
 =====================================
@@ -224,11 +226,12 @@ vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude
 Přichytávání (snapping)
 .......................
 
-Pro topologicky čistou editaci můžeme pomocí funkce
-:menuselection:`Nastavení --> Možnosti přichytávání` nastavit
+Pro topologicky čistou editaci můžeme pomocí lišty
+:menuselection:`Přichytávání` nastavit
 přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
-konkrétních vrstev. Pro aktivaci je nutné vybrat parametr :item:`Přichytit
-k`. Přichycení kurzoru se zobrazí výrazně růžovým křížkem
+konkrétních vrstev. Přichitávání je nejdříve nutné aktivaovat kliknutím na
+ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
+:kbd:`S`. Přichycení kurzoru se zobrazí výrazně růžovým čtverečkem nebo křížkem
 (viz :numref:`snapvert` a :numref:`snapsegm`).
 
 .. figure:: images/snapping.png
