@@ -65,8 +65,10 @@ vrstvu --> Nová Shapefile vrstva`.
    
    Nová vektorová vrstva.
 
-Při vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový
-systém vrstvy, a pokud je třeba, přidáme nové atributy.
+V první řadě je nutné zadat cetu, kam se nová vrstva vytvoří. Dále při
+vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový
+systém vrstvy, a pokud je třeba, přidáme nové atributy. Také lze nastavit
+vytvoření Z hodnot (nadmořské výšky) nebo M hodnot (další měřené hodnoty).
 
 Vytváření nového atributu:
 
@@ -82,20 +84,18 @@ Vytváření nového atributu:
       číslo (max. 10 znaků)
     - :option:`Datum` (Date) - formát buněk je datum (max. 20 znaků)
 
-- :item:`Šířka` - počet znaků
+- :item:`Délka` - počet znaků
 - :item:`Přesnost` - počet desetinných míst
 - pro přidání atributu vrstvy je nutné kliknout na tlačítko
-  |mActionNewAttribute| :item:`Přidat pole do seznamu`
+  |mActionNewAttribute| :item:`Add to Fields List`
 
 Ve spodní části okna máme seznam atributů, které máme ve vrstvě
 připravené. Atributy lze odstranit označením a kliknutím na tlačítko
-|mActionDeleteAttribute| :item:`Odstranit pole`. Automaticky je zde
+|mActionDeleteAttribute| :item:`Remove Field`. Automaticky je zde
 přidaný atribut "id", pokud ho nechceme, lze jej také vymazat.
 
-Pokud máme vše nastaveno, potvrdíme tlačítkem :item:`OK`. V dalším okně zvolíme
-název vrstvy a adresář, ve kterém se vrstva vytvoří, a potvrdíme
-tlačítkem :item:`Uložit`. Vytvořená vrstva se automaticky nahraje
-do projektu.
+Pokud máme vše nastaveno, potvrdíme tlačítkem :item:`OK` a nová vrstva se 
+automaticky nahraje do projektu.
 
 Editace vrstvy
 --------------
