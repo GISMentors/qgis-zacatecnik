@@ -180,31 +180,32 @@ Další variantou funkce je |mActionMoveFeatureCopy|:sup:`Kopírovat a přesunou
 Pro přesun nebo kopírování více prvků můžeme pracovat s více prvky,
 které máme ve výběru.
 
-
-- |mActionSplitFeatures| :sup:`Rozdělit objekt` - naklikáme "řez" přes
-  místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem,
-  prvek se nám v místech průsečíků rozdělí
+|mActionSplitFeatures| :sup:`Rozdělit objekt` - naklikáme "řez" přes
+místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem,
+prvek se nám v místech průsečíků rozdělí
 
 .. figure:: images/edit_polygon_split.png
 
     Rozdělení polygonu na dva.
 
 
-- |mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí
-  výběru označíme navazující objekty, které chceme spojit. Při sloučení
-  vyskočí okno, ve kterém je možné zadat atributy "nového" - sloučeného
-  prvku. Výchozí hodnota atributů je :option:`NULL`, tedy žádná hodnota.
+|mActionMergeFeatures| :sup:`Sloučit vybrané prvky` - nejdříve pomocí
+výběru označíme prvky, které chceme spojit. Při sloučení
+vyskočí okno, ve kterém je možné zadat hodnoty atributů "nového" - sloučeného
+prvku. Tyto hodnoty můžeme odvodit z konkrétního vstupního prvku, nebo je lze
+vypočítat (např. suma, průměr). Výchozí hodnota atributů je :option:`NULL`,
+tedy žádná hodnota.
 
 .. figure:: images/edit_polygon_merge.png
    :class: middle
         
    Sloučení sousedních polygonů.
 
-- |mActionReshape| :sup:`Změnit tvar prvků` - obdobně jako při rozdělení
-  nebo tvorbě nového prvku lze naklikáním nového tvaru změnit tvar
-  stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu"
-  vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude
-  část s menší plochou vymazána (:numref:`resh1`).
+|mActionReshape| :sup:`Změnit tvar prvků` - obdobně jako při rozdělení
+nebo tvorbě nového prvku lze naklikáním nového tvaru změnit tvar
+stávajícího prvku. Pro změnu tvaru musí být při naklikávání "řezu"
+vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude
+část s menší plochou vymazána (:numref:`resh1`).
 
 .. _resh1:
 
