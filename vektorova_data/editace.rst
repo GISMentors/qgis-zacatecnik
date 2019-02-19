@@ -240,15 +240,14 @@ ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
 
 - :item:`Výběr vrstvy` |selectstring|
 
-    - :option:`Aktuální vrstva` - přichytávání pouze v rámci editované
-      vrstvy, ostatní vrstvy ignoruje
     - :option:`Všechny viditelné vrstvy` - přichytávání ke všem viditelným vektorovým
       vrstvám projektu
+    - :option:`Aktuální vrstva` - přichytávání pouze v rámci editované
+      vrstvy, ostatní vrstvy ignoruje
     - :option:`Pokročilé` - samostatné nastavení pro jednotlivé vrstvy
 
 - :item:`Přichytit k` |selectstring|
 
-    - :option:`Vypnuto` - přichytávání je neaktivní!
     - :option:`K lomovému bodu` - pouze k lomovým bodům
       (uzlům/vertexům, :numref:`snapvert`)
     - :option:`K segmentu` - pouze k segmentům
