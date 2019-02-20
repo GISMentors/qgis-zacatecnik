@@ -60,7 +60,15 @@ procesoru - při ukládání nebo exportu vybereme formát \*.csv.
 
 Existují dva hlavní způsoby jak nahrát tabulková data jako vrstvu do QGIS:
 
-1. Stejně jako vektorovou vrstvu, přetažením z prohlížeče nebo pomocí
+1. Pomocí |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s odděleným
+textem` stejně jako při přidání XY dat, pouze zvolíme
+|radiobuttonon| :sup:`Žádna geometrie (pouze atributová tabulka)`
+
+    \- nelze editovat přímo v QGIS
+
+    \+ rozpozná typ atributu (:option:`text`, :option:`Celé číslo` atd.)
+
+2. Stejně jako vektorovou vrstvu, přetažením z prohlížeče nebo pomocí
 |mActionAddOgrLayer| :sup:`Přidat vektorovou vrstvu`.
 
     \+ lze editovat přímo v QGIS
@@ -78,14 +86,6 @@ Existují dva hlavní způsoby jak nahrát tabulková data jako vrstvu do QGIS:
 
    Ukázka tabulkových dat ve formátu \*.csv (vlevo) a odpovídající
    soubor \*.csvt (vpravo)
-
-2. Pomocí |mActionAddDelimitedTextLayer| :sup:`Přidat vrstvu s odděleným
-textem`, kde bychom zvolili |radiobuttonon| :sup:`Žádna geometrie (pouze
-atributová tabulka)`
-
-    \- nelze editovat přímo v QGIS
-
-    \+ rozpozná typ atributu (:option:`text`, :option: `Celé číslo` atd.)
 
 .. figure:: images/join_layer.png
     :scale: 70%
@@ -113,11 +113,18 @@ připojení.
 
    Okno přidání připojení.
 
+Základní nastavení připojení
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 - :item:`Připojit vrstvu` |selectstring| - vybereme vrstvu (.csv tabulku)
-- :item:`Připojit pole` |selectstring| - vybereme atribut (týká se tabulky .csv),
-  přes který chceme data připojit
+- :item:`Připojit pole` |selectstring| - vybereme atribut (týká se tabulky
+  .csv),  přes který chceme data připojit
 - :item:`Cílové pole` |selectstring| - vybereme souhlasný atribut (vektorové 
   vrstvy), ke kterému se bude tabulka připojovat
+
+Další volitelné nastavení
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
 - |checkbox| :item:`Kešovat připojenou vrstvu ve virtuální paměti` -
   pro rychlejší práci s daty
 - |checkbox| :item:`Vyberte, která pole se připojí` - zaškrtneme, pokud
