@@ -238,32 +238,36 @@ ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
 
     Základní okno možnosti přichytávání.
 
-- :item:`Výběr vrstvy` |selectstring|
+- Nastavení |selectstring|:
 
-    - :option:`Všechny viditelné vrstvy` - přichytávání ke všem viditelným vektorovým
+    - :option:`All Layers` - přichytávání ke všem viditelným vektorovým
       vrstvám projektu
-    - :option:`Aktuální vrstva` - přichytávání pouze v rámci editované
+    - :option:`Active Layer` - přichytávání pouze v rámci editované
       vrstvy, ostatní vrstvy ignoruje
-    - :option:`Pokročilé` - samostatné nastavení pro jednotlivé vrstvy
+    - :option:`Pokročilé nastavení` - režim pokročilého nastavení, lze nastavit
+      různé nastavení pro jednotlivé vrstvy a nabízí možnost `Vyvarovat 
+      se protnutí`
+    - :option:`Open snapping Options...` - otevře nastavené přichytávání v
+      samostatném okně
 
-- :item:`Přichytit k` |selectstring|
+- Přichytit k |selectstring|:
 
-    - :option:`K lomovému bodu` - pouze k lomovým bodům
+    - :option:`Lomový bod` - pouze k lomovým bodům
       (uzlům/vertexům, :numref:`snapvert`)
-    - :option:`K segmentu` - pouze k segmentům
+    - :option:`Vertex and Segment` - k obojímu
+    - :option:`Segmentu` - pouze k segmentům
       (hranám/liniím, :numref:`snapsegm`)
-    - :option:`K lomovému bodu a segmentu` - k obojímu
 
-- :item:`Tolerance` |selectnumber| - vzdálenost, od které se kurzor bude
+- Tolerance |selectnumber| - vzdálenost, od které se kurzor bude
   k lomovému bodu nebo segmentu přichytávat, hodnotu lze zadat v mapových
   jednotkách (vzdálenost na mapě) nebo pixelech (vzdálenost na monitoru)
 
-- :item:`Povolit topologickou editaci` |checkbox| - při aktivaci lze
+- `Zapnout topologickou editaci` - při aktivaci lze
   pomocí |mActionNodeTool| :sup:`Nástroj uzlú` posouvat společný lomový
   bod přichycení obou prvků najednou. Pokud není aktivní, lomový bod
   lze oddělit
 
-- :item:`Povolit přichytávání na protnutí` |checkbox| - při aktivaci se
+- `Zapnout přichytávání na protnutí` - při aktivaci se
   bude kurzor přichytávat i na případné místo "překřížení" segmentů
   (linií)
 
@@ -288,12 +292,12 @@ ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
 Pokročílý režim přichytávání 
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
-(:item:`Režim přichytávání...` |selectstring| - :option:`Pokročilé`)
+:item:`Režim přichytávání...` |selectstring| - :option:`Pokročilé`
 
 .. figure:: images/snapping_adv.png
    :scale-latex: 60
 
-   Okno nastavení pokročilého režimu přichytávání.
+   Režim pokročilého nastavení přichytávání.
 
 V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
 zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Vyvarovat 
