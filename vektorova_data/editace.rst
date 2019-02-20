@@ -293,7 +293,7 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
    :class: middle 
    :scale-latex: 40 
 
-   Popis obrázku
+   Trasovaní k linii při tvorbě polygonu.
 
 .. _snapping_trace_poly:
 
@@ -301,7 +301,7 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
    :class: middle 
    :scale-latex: 40 
 
-   Popis obrázku
+   Trasovaní s nejkratší vzdáleností při tvorbě line.
 
 .. tip:: Nastavení přichytávání lze měnit i v momentě, kdy vytváříme
    prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
@@ -355,9 +355,9 @@ změny vrstvy` i mazat vybrané prvky |remove| :sup:`Vymazat vybrané`:
 
     - kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty
       tabulky
-    - |mActionNewAttribute| :sup:`Nový sloupec` - přidá nový atribut
+    - |mActionNewAttribute| :sup:`Nové pole` - přidá nový atribut
       do tabulky
-    - |mActionDeleteAttribute| :sup:`Smazat sloupec` - vyvolá nabídku,
+    - |mActionDeleteAttribute| :sup:`Smazat pole` - vyvolá nabídku,
       ze které vybereme sloupce k vymazání
     - |mActionCalculateField| :sup:`Otevřít kalkulátor polí` - pomocí 
       kalkulátoru polí lze vytvářet nebo aktualizovat sloupce (atributy) na 
