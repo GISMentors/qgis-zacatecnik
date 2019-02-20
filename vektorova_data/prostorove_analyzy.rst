@@ -116,7 +116,6 @@ vektorových vrstev. Pro dosažení správného výsledku je nutné, aby vrstvy 
 ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu 
 :menuselection:`Vektor --> Nástroje geoprocessingu`.
 
-
 .. figure:: images/prost_okno.png
    :class: medium
    :scale-latex: 30
@@ -136,8 +135,19 @@ ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
 
    Původní vrstvy vstupující do ukázkových příkladů.
 
-Průsečík
-^^^^^^^^
+Ořezávač (`Clip`)
+^^^^^^^^^^^^^^^^^
+Vytvoří novou vrstvu, ve které je `Vstupní vektorová vrstva` ořezána 
+vrstvou vybranou v nabídce `Oříznout vrstvu`. Prvky výstupní vrstvy 
+nesou atributy pouze z vrstvy zadané jako `Vstupní vektorová vrstva`.
+
+.. figure:: images/prost_orez.png
+   :scale-latex: 35
+
+   Výsledek funkce Ořezání... - čtverec jsme ořezali podle kruhu.
+
+Průsečík (`Interesction`)
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Každý 
 prvek nese atributy obou vstupních vrstev. 
@@ -147,8 +157,8 @@ prvek nese atributy obou vstupních vrstev.
 
    Výsledek funkce Průsečík.
 
-Sjednotit
-^^^^^^^^^
+Sjednotit (`Union`)
+^^^^^^^^^^^^^^^^^^^
 
 Vytvoří novou vrstvu se všemi původními prvky, v místech překryvu vrstev jsou 
 vytvořeny nové prvky.
@@ -158,8 +168,8 @@ vytvořeny nové prvky.
 
    Výsledek funkce Sjednotit.
     
-Symetrický rozdíl
-^^^^^^^^^^^^^^^^^
+Symetrický rozdíl (`Symmetric difference`)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Vytvoří novou vrstvu, kde v místech překryvu vrstev nejsou vytvořeny prvky. 
 Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.
@@ -171,19 +181,8 @@ Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.
 
 .. _orez:
 
-Ořezávač
-^^^^^^^^
-Vytvoří novou vrstvu, ve které je `Vstupní vektorová vrstva` ořezána 
-vrstvou vybranou v nabídce `Oříznout vrstvu`. Prvky výstupní vrstvy 
-nesou atributy pouze z vrstvy zadané jako `Vstupní vektorová vrstva`.
-
-.. figure:: images/prost_orez.png
-   :scale-latex: 35
-
-   Výsledek funkce Ořezání... - čtverec jsme ořezali podle kruhu.
-
-Rozdíl
-^^^^^^
+Rozdíl (`Difference`)
+^^^^^^^^^^^^^^^^^^^^^
 
 Vytvoří novou vrstvu, která je rozdílem vstupních vrstev. Ve `Vstupní 
 vektorové vrstvě` se odstraní plochy, které se překrývají s vrstvou v 
@@ -194,8 +193,8 @@ nabídce `Rozdíl ve vrstvě`.
     
    Výsledek funkce Rozdíl - vrstva čtverce s rozdílem ve vrstvě kruhu.
 
-Rozpustit
-^^^^^^^^^
+Rozpustit (`Dissolve`)
+^^^^^^^^^^^^^^^^^^^^^^
 
 Vytvoří novou vrstvu, ve které jsou definované prvky jedné vrstvy sloučeny do 
 jednoho. Pokud chceme aplikovat pro všechny prvky, 
