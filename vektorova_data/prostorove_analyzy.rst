@@ -42,9 +42,8 @@ dané vzdálenosti od prvků. U bodových prvků má obalová zóna tvar kruhu
 generuje vzdálenostmi od uzlů. Cílem analýzy je tedy vytvořit novou
 polygonovou vrstvu obalových zón. Tuto funkci najdeme v menu
 :menuselection:`Vektor --> Nástroje geoprocessingu --> Obalová
-zóna dle pevné vzdálensoti`
-Velikost bufferu lze nastavit i jako proměnlivou hodnotu. Tento nástroj 
-je k dispozici v menu :item:`Nástroje zpracování`.
+zóna dle pevné vzdálensoti`. Velikost bufferu lze nastavit i jako proměnlivou
+hodnotu.
 
 .. figure:: images/prost_buffer.png
    :class: medium
@@ -57,12 +56,20 @@ je k dispozici v menu :item:`Nástroje zpracování`.
   vytvoření obalových zón
 - :item:`Vzdálenost`  - vzdálenost obalové zóny v metrech 
   (v závislosti nastavení QGIS a použitého SRS)    
-- :item:`Segmenty`  - míra aproximace kruhu při tvorbě 
+- :item:`Segmenty` - počet liniových segmentů při zaoblených částěch 
   obalové zóny (:numref:`aprox`)
     
     - nízká hodnota (min. 5) - méně uzlů - rychlejší výpočty, ale méně přesné
-    - vysoká hodnota (max. 99) - více uzlů - pomalejší výpočty, více odpovídá 
-      kruhu 
+    - vysoká hodnota (max. 99) - více uzlů - pomalejší výpočty, zaoblené
+      části více odpovídají kruhu 
+      kruhu
+
+
+- :item:`Styl zakončení` - styl zakončení obalové zóny na konci linií (`kulatý`
+  , `plochý`, `čtverec`)
+- :item:`Připojit styl` - styl obalové zóny při rozích (`kulatý`, `kosý`,
+  `zaoblený`)
+- :item:`Miter limit` - pouze pro kosé spoje, maximální vzdálenost od odsazené křivky při vytváření kosého spoje
 
 .. _aprox:
 
