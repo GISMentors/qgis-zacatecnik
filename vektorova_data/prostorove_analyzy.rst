@@ -64,13 +64,6 @@ hodnotu.
       části více odpovídají kruhu 
       kruhu
 
-
-- :item:`Styl zakončení` - styl zakončení obalové zóny na konci linií (`kulatý`
-  , `plochý`, `čtverec`)
-- :item:`Připojit styl` - styl obalové zóny při rozích (`kulatý`, `kosý`,
-  `zaoblený`)
-- :item:`Miter limit` - pouze pro kosé spoje, maximální vzdálenost od odsazené křivky při vytváření kosého spoje
-
 .. _aprox:
 
 .. figure:: images/prost_buffer_seg.png
@@ -78,7 +71,27 @@ hodnotu.
 
    Obalová zóna s rozdílným počtem segmentů pro aproximaci 
    (vlevo 5, vpravo 50).
-   
+
+- :item:`Styl zakončení` - styl zakončení obalové zóny na konci linií (`kulatý`
+  , `plochý`, `čtverec`) :numref:`zakonceni`
+- :item:`Připojit styl` - styl obalové zóny při rozích (`kulatý`, `kosý`,
+  `zaoblený`) :numref:`spoj`
+- :item:`Miter limit` - maximální vzdálenost od odsazené křivky při vytváření kosého spoje
+
+.. _zakonceni:
+
+.. figure:: images/prost_buffer_zak.png
+   :scale-latex: 45
+
+   Typy stylů zakončení (`kulatý` , `plochý`, `čtverec`).
+
+.. _spoj:
+
+.. figure:: images/prost_buffer_spoj.png
+   :scale-latex: 45
+
+   Typy stylů připojení (`kulatý`, `kosý`, `zaoblený`).
+
 - |checkbox|:option:`Výsledek rozpuštění` - zaškrtneme, pokud 
   nechceme, aby se nám výsledné obalové zóny překrývaly, výsledkem analýzy je 
   jeden prvek
