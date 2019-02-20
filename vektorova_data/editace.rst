@@ -231,8 +231,9 @@ Pro topologicky čistou editaci můžeme pomocí lišty
 přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
 konkrétních vrstev. Přichitávání je nejdříve nutné aktivaovat kliknutím na
 ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
-:kbd:`S`. Přichycení kurzoru se zobrazí výrazně růžovým čtverečkem nebo křížkem
-(viz :numref:`snapvert` a :numref:`snapsegm`).
+:kbd:`S`. Přichycení kurzoru se zobrazí výrazně růžovým čtverečkem v případě
+lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
+(:numref:`snapsegm`).
 
 .. figure:: images/snapping.png
 
@@ -270,6 +271,10 @@ ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
 - `Zapnout přichytávání na protnutí` - při aktivaci se
   bude kurzor přichytávat i na případné místo "překřížení" segmentů
   (linií)
+  
+- `Zapnout trasování` - trasování umožňuje vytvářet nové prky tak aby na sebe
+  přímo navazovaly (topologicky čistá data). Funguje na principu vyhledání
+  nejkratší vzdálensoti na segmentech mezi zvolenými lomovými body
 
 .. tip:: Nastavení přichytávání lze měnit i v momentě, kdy vytváříme
    prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
@@ -291,8 +296,6 @@ ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
 
 Pokročílý režim přichytávání 
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-
-:item:`Režim přichytávání...` |selectstring| - :option:`Pokročilé`
 
 .. figure:: images/snapping_adv.png
    :scale-latex: 60
@@ -316,18 +319,18 @@ docílíme čistě navazujících polygonů.
     b) :option:`Vyvarovat se protnutí` - polygon se vytvoří bez 
     překryvu, hranice na sebe čistě navazuje.
 
-.. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter|
-   :sup:`split by lines` ze zásuvného modulu |plugin| :guilabel:`Digitizing
-   tools`. Touto funkcí můžeme nahradit :option:`Avoid intersection` - u linií
-   není možná. Nechtěnou část polygonu potom ručně odstraníme. Takto
-   můžeme vytvořit topologicky čistou hranici polygon-linie. Také lze takto
-   "vklínit" liniový prvek (cestu, vodní tok, transekt) do polygonu, který
-   tímto rozdělíme na více částí:
+..       .. noteadvanced:: Funkce rozdělení polygonu pomocí linie - |splitter|
+           :sup:`split by lines` ze zásuvného modulu |plugin| :guilabel:`Digitizing
+           tools`. Touto funkcí můžeme nahradit :option:`Avoid intersection` - u linií
+           není možná. Nechtěnou část polygonu potom ručně odstraníme. Takto
+           můžeme vytvořit topologicky čistou hranici polygon-linie. Také lze takto
+           "vklínit" liniový prvek (cestu, vodní tok, transekt) do polygonu, který
+           tímto rozdělíme na více částí:
 
-    - nejprve je třeba výběrem označit jak polygon, který chceme rozdělit,
-      tak linii, která bude polygon rozdělovat
-    - spustíme funkci ``->`` v nabídce |selectstring| vybereme liniovou vrstvu
-      (ve které je vybraný prvek a který bude polygon rozdělovat)
+            - nejprve je třeba výběrem označit jak polygon, který chceme rozdělit,
+              tak linii, která bude polygon rozdělovat
+            - spustíme funkci ``->`` v nabídce |selectstring| vybereme liniovou vrstvu
+              (ve které je vybraný prvek a který bude polygon rozdělovat)
 
 Editace atributové tabulky
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
