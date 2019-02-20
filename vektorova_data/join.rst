@@ -148,7 +148,7 @@ připojení editovat |symbologyEdit| nebo odstranit |symbologyRemove|.
 
 .. _join:
 
-.. figure:: images/join.png
+.. figure:: images/join_list.png
    :scale-latex: 40
 
    Seznam připojení ve vlastnostech vrstvy.
