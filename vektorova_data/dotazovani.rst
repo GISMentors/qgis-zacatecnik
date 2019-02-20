@@ -93,7 +93,7 @@ Pro rychlé a zjednodušené atributové dotazovaní lze také využít formulá
    :class: middle 
    :scale-latex: 40 
 
-   Popis obrázku
+   Formulář funkce |mIconFormSelect|:sup:`Vybrat prvky podle hodnoty...`
 
  
 Prostorové dotazování
