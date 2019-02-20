@@ -37,12 +37,6 @@ vrstvy je možné označením :item:`Typ zdroje` - |checkbox|
 navigační okno s možností vybrat soubor s vektorovými daty. Po
 potvrzení se označená vrstva načte do mapového okna.
 
-.. figure:: images/vector_import_layer.png
-   :class: large
-   :scale-latex: 85
-   
-   Nahrání vektorové vrstvy do QGIS.
-
 Volba :item:`Adresář` umožňuje označit složku, ve které se nachází
 vektorová data. Potvrzením tlačítkem :item:`Otevřít` QGIS připraví
 všechna dostupná data uložená ve složce k načtení. Objeví se
@@ -63,22 +57,20 @@ Export vektorových dat
 ----------------------
 
 Pravým kliknutím na vrstvu vyvoláme kontextové menu, vybereme možnost
-:item:`Uložit jako...` a zadáme parametry exportu. Můžeme zde zvolit
-výstupní formát (např. ``*.kml``, ``*.shp``, ``*.gpx``), souřadnicový
-systém vrstvy a další volitelné parametry.
+:item:`Export -> Save Features As...` a zadáme parametry exportu. Můžeme zde zvolit výstupní formát (např. ``*.kml``, ``*.shp``, ``*.gpx``), souřadnicový systém vrstvy a další volitelné parametry.
 
 .. figure:: images/vector_saveas.png
    :scale-latex: 45
 
    Okno exportu vektorové vrstvy.
 
-
-.. tip:: Pokud potřebujeme exportovat pouze část prvků vrstvy nebo
-    konkrétní zájmové prvky, musíme tyto prvky nejprve označit
-    výběrem (např. |mActionSelectRectangle| :sup:`Vybrat prvky oblastí
-    nebo jednoklikem` nebo |mIconExpressionSelect| :sup:`Vabrat prvky
-    pomocí vzorce`). Potom se nám v okně exportu aktivuje možnost
-    |checkbox| :sup:`Uložit pouze vybrané prvky`.
+Pokud potřebujeme exportovat pouze část prvků vrstvy nebo
+konkrétní zájmové prvky, musíme tyto prvky nejprve označit
+výběrem (např. |mActionSelectRectangle| :sup:`Vybrat prvky oblastí
+nebo jednoklikem` nebo |mIconExpressionSelect| :sup:`Vabrat prvky
+pomocí vzorce`). Potom se nám v okně exportu aktivuje možnost
+|checkbox| :sup:`Uložit pouze vybrané prvky`, nebo pro export použijeme
+druhou volbu z kontextového menu :item:`Export -> Save Features As...`
 
 .. tip:: Pro uložení pouze atributové tabulky vrstvy lze zvolit
     výstupní formát ``*.csv``.
