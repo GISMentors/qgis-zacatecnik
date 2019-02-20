@@ -172,4 +172,4 @@ přímo ve vektorové vrstvě (např. měnit symbol, provádět dotazování a a
     - po odebrání tabulky ze seznamu vrstev, nebo přímo vymazání souboru
       .csv se připojení zruší
     - pro trvalé uložení připojených dat do vektorové vrstvy lze použít
-      funkci exportu vrstvy (:item:`Export -> Save Features As...`)
+      funkci exportu vrstvy (:menuselection:`Export --> Save Features As...`)
