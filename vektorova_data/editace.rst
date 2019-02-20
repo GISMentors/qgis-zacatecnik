@@ -321,10 +321,10 @@ Pokročílý režim přichytávání
 
 V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
 zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Vyvarovat 
-se protnutí`, která zabraňuje polygonům jejich překryv, což lze mimo jiné využít jako
-alternativu k funkci trasování. Nový polygon potom můžeme zakreslit s přesahem
- do sousedícího polygonu, tento přesah bude potom automaticky vymazán. Takto
- snadno docílíme čistě navazujících polygonů.
+se protnutí`, která zabraňuje polygonům jejich překryv, což lze mimo jiné
+využít jako alternativu k funkci trasování. Nový polygon potom můžeme zakreslit
+ s přesahem do sousedícího polygonu, tento přesah bude potom automaticky
+ vymazán. Takto snadno docílíme čistě navazujících polygonů.
 
 .. figure:: images/snapping_avoid.png
 
@@ -440,10 +440,10 @@ atributu.
    definovat vlastní funkce pomocí jazyka Python
 
 .. tip:: Editovat stávající atributy lze i přímo z atributové tabulky, a to 
-    pomocí panelu (:numref:`editpanel`), který se aktivuje po přepnutí do režimu 
-    editace . Zde vybereme atribut, který chceme editovat, a zadáme požadovaný 
-    výraz (ručně nebo pomocí dialogu |mIconExpression|), potom potvrdíme 
-    aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.
+    pomocí panelu (:numref:`editpanel`), který se aktivuje po přepnutí do
+    režimu editace. Zde vybereme atribut, který chceme editovat, a zadáme
+    požadovaný výraz (ručně nebo pomocí dialogu |mIconExpression|), potom
+    potvrdíme aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.
 
     .. _editpanel:
     
@@ -451,5 +451,3 @@ atributu.
        :class: middle
             
        Panel editace atributů v atributové tabulce.
-
-
