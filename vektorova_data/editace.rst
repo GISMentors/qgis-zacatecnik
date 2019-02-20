@@ -272,9 +272,15 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
   bude kurzor přichytávat i na případné místo "překřížení" segmentů
   (linií)
   
-- `Zapnout trasování` - trasování umožňuje vytvářet nové prky tak aby na sebe
+- `Zapnout trasování` - trasování umožňuje vytvářet nové prvky tak aby na sebe
   přímo navazovaly (topologicky čistá data). Funguje na principu vyhledání
-  nejkratší vzdálensoti na segmentech mezi zvolenými lomovými body
+  nejkratší vzdálensoti na segmentech mezi zvolenými lomovými body.
+
+.. figure:: images/snapping_trace_line.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Popis obrázku
 
 .. tip:: Nastavení přichytávání lze měnit i v momentě, kdy vytváříme
    prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
@@ -304,10 +310,10 @@ Pokročílý režim přichytávání
 
 V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
 zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Vyvarovat 
-se protnutí`, která zabraňuje polygonům jejich překryv, jednoduše
-řečeno - nový polygon můžeme zakreslit s přesahem do sousedícího
-polygonu, tento přesah bude potom automaticky vymazán. Takto snadno
-docílíme čistě navazujících polygonů.
+se protnutí`, která zabraňuje polygonům jejich překryv, což lze využít jako
+alternativu k funkci trasování. Nový polygon potom můžeme zakreslit s přesahem
+ do sousedícího polygonu, tento přesah bude potom automaticky vymazán. Takto
+ snadno docílíme čistě navazujících polygonů.
 
 .. figure:: images/snapping_avoid.png
 
