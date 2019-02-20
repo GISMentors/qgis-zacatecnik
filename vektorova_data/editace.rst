@@ -239,6 +239,19 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
 
     Základní okno možnosti přichytávání.
 
+.. _snapvert:
+
+.. figure:: images/snapping_vertex.png
+
+    Přichycení kurzoru pouze k lomovému bodu.
+
+
+.. _snapsegm:
+
+.. figure:: images/snapping_segment.png
+
+    Přichycení kurzoru k segmentu.
+
 - Nastavení |selectstring|:
 
     - :option:`All Layers` - přichytávání ke všem viditelným vektorovým
@@ -274,9 +287,17 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
   
 - `Zapnout trasování` - trasování umožňuje vytvářet nové prvky tak aby na sebe
   přímo navazovaly (topologicky čistá data). Funguje na principu vyhledání
-  nejkratší vzdálensoti na segmentech mezi zvolenými lomovými body.
+  nejkratší vzdálensoti na segmentech mezi zadanými body. Trasování může být problematické v případě, že máme vrstvu s více navazujícími polygony, kdy nejkratší vzdálenost nemusí vést po vnější hraně skupiny polygonů (:numref:`snapping_trace_poly`). To lze vyřešit přidáním více bodů při trasování, popř. u polygonů využitím funkce `Vyvarovat se protnutní`
 
 .. figure:: images/snapping_trace_line.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Popis obrázku
+
+.. _snapping_trace_poly:
+
+.. figure:: images/snapping_trace_poly.png 
    :class: middle 
    :scale-latex: 40 
 
@@ -285,20 +306,6 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
 .. tip:: Nastavení přichytávání lze měnit i v momentě, kdy vytváříme
    prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
    (např. :numref:`snapvert` a :numref:`snapsegm`).
-
-.. _snapvert:
-
-.. figure:: images/snapping_vertex.png
-
-    Přichycení kurzoru pouze k lomovému bodu.
-
-
-.. _snapsegm:
-
-.. figure:: images/snapping_segment.png
-
-    Přichycení kurzoru k segmentu.
-
 
 Pokročílý režim přichytávání 
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -310,7 +317,7 @@ Pokročílý režim přichytávání
 
 V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
 zvlášť, navíc je zde u polygonových vrstev funkce |checkbox| `Vyvarovat 
-se protnutí`, která zabraňuje polygonům jejich překryv, což lze využít jako
+se protnutí`, která zabraňuje polygonům jejich překryv, což lze mimo jiné využít jako
 alternativu k funkci trasování. Nový polygon potom můžeme zakreslit s přesahem
  do sousedícího polygonu, tento přesah bude potom automaticky vymazán. Takto
  snadno docílíme čistě navazujících polygonů.
