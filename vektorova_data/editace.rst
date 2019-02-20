@@ -261,7 +261,7 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
     - :option:`Pokročilé nastavení` - režim pokročilého nastavení, lze nastavit
       různé nastavení pro jednotlivé vrstvy a nabízí možnost `Vyvarovat 
       se protnutí`
-    - :option:`Open snapping Options...` - otevře nastavené přichytávání v
+    - :option:`Open snapping Options...` - otevře nastavení přichytávání v
       samostatném okně
 
 - Přichytit k |selectstring|:
@@ -287,7 +287,11 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
   
 - `Zapnout trasování` - trasování umožňuje vytvářet nové prvky tak aby na sebe
   přímo navazovaly (topologicky čistá data). Funguje na principu vyhledání
-  nejkratší vzdálensoti na segmentech mezi zadanými body. Trasování může být problematické v případě, že máme vrstvu s více navazujícími polygony, kdy nejkratší vzdálenost nemusí vést po vnější hraně skupiny polygonů (:numref:`snapping_trace_poly`). To lze vyřešit přidáním více bodů při trasování, popř. u polygonů využitím funkce `Vyvarovat se protnutní`
+  nejkratší vzdálensoti na segmentech mezi zadanými body. Trasování může být
+  problematické v případě, že máme vrstvu s více navazujícími polygony, kdy
+  nejkratší vzdálenost nemusí vést po vnější hraně skupiny polygonů
+  (:numref:`snapping_trace_poly`). To lze vyřešit přidáním více bodů při
+  trasování, popř. u polygonů využitím funkce `Vyvarovat se protnutní`
 
 .. figure:: images/snapping_trace_line.png 
    :class: middle 
