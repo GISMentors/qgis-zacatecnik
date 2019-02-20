@@ -57,7 +57,9 @@ Export vektorových dat
 ----------------------
 
 Pravým kliknutím na vrstvu vyvoláme kontextové menu, vybereme možnost
-:item:`Export -> Save Features As...` a zadáme parametry exportu. Můžeme zde zvolit výstupní formát (např. ``*.kml``, ``*.shp``, ``*.gpx``), souřadnicový systém vrstvy a další volitelné parametry.
+:menuselection:`Export -> Save Features As...` a zadáme parametry exportu.
+Můžeme zde zvolit výstupní formát (např. ``*.kml``, ``*.shp``, ``*.gpx``), 
+souřadnicový systém vrstvy a další volitelné parametry.
 
 .. figure:: images/vector_saveas.png
    :scale-latex: 45
@@ -70,7 +72,8 @@ výběrem (např. |mActionSelectRectangle| :sup:`Vybrat prvky oblastí
 nebo jednoklikem` nebo |mIconExpressionSelect| :sup:`Vabrat prvky
 pomocí vzorce`). Potom se nám v okně exportu aktivuje možnost
 |checkbox| :sup:`Uložit pouze vybrané prvky`, nebo pro export použijeme
-druhou volbu z kontextového menu :item:`Export -> Save Features As...`
+druhou volbu z kontextového menu
+:menuselection:`Export --> Save Features As...`
 
 .. tip:: Pro uložení pouze atributové tabulky vrstvy lze zvolit
     výstupní formát ``*.csv``.
