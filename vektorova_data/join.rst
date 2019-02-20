@@ -127,6 +127,17 @@ Další volitelné nastavení
 
 - |checkbox| :item:`Kešovat připojenou vrstvu ve virtuální paměti` -
   pro rychlejší práci s daty
+- |checkbox| :item:`Dynamický formulář` - automatické načtení, v případě změn
+  hodnot v "Cílovém poli"
+- |checkbox| :item:`Editable join layer` - umožňuje editovat atributy připojené
+  vrstvy z atributové tabulky cílové vrstvy. Obě vrstvy musí být v režimu
+  editace
+
+    - |checkbox| :item:`Upsert on edit` - při vytvoření nového prvku v cílové
+      vrstvě se automaticky vytvoří záznam v připojené vrstvě
+    - |checkbox| :item:`Delete cascade` - při smazání prvku v cílové vrstvě se
+      automaticky smaže záznam v připojené vrstvě
+
 - |checkbox| :item:`Joined Fields` - lze zvolit konkrétní atributy pro
   připojení
 - |checkbox| :item:`Custom Field Name Prefix` - zde můžeme zvolit vlastní
@@ -161,4 +172,4 @@ přímo ve vektorové vrstvě (např. měnit symbol, provádět dotazování a a
     - po odebrání tabulky ze seznamu vrstev, nebo přímo vymazání souboru
       .csv se připojení zruší
     - pro trvalé uložení připojených dat do vektorové vrstvy lze použít
-      funkci exportu vrstvy (:item:`Uložit jako...`)
+      funkci exportu vrstvy (:item:`Export -> Save Features As...`)
