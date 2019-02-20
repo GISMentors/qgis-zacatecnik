@@ -135,7 +135,15 @@ Další volitelné nastavení
 Po přidání se připojení a jeho nastavení objeví v seznamu. Pomocí tlačítek lze
 připojení editovat |symbologyEdit| nebo odstranit |symbologyRemove|.
 
-Uobrazením  atributové tabulky vrstvy můžeme překontrolovat připojení.
+.. _join:
+
+.. figure:: images/join.png
+   :scale-latex: 40
+
+   Seznam připojení ve vlastnostech vrstvy.
+
+
+Zobrazením  atributové tabulky vrstvy můžeme překontrolovat připojení.
 Připojené atributy se zobrazí na konci tabulky.
   
 .. figure:: images/join_priklad.png
