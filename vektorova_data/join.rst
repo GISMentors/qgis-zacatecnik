@@ -127,27 +127,24 @@ Další volitelné nastavení
 
 - |checkbox| :item:`Kešovat připojenou vrstvu ve virtuální paměti` -
   pro rychlejší práci s daty
-- |checkbox| :item:`Vyberte, která pole se připojí` - zaškrtneme, pokud
-  chceme připojit pouze některé atributy
-- |checkbox| :item:`Custom field name prefix` - zde můžeme zvolit vlastní
+- |checkbox| :item:`Joined Fields` - lze zvolit konkrétní atributy pro
+  připojení
+- |checkbox| :item:`Custom Field Name Prefix` - zde můžeme zvolit vlastní
   předponu názvů připojených atributů (jejich sloupců)
 
-- po přidání se připojení objeví v seznamu
+Po přidání se připojení a jeho nastavení objeví v seznamu. Pomocí tlačítek lze
+připojení editovat |symbologyEdit| nebo odstranit |symbologyRemove|.
 
-    - pomocí tlačítka |symbologyEdit| lze připojení editovat
-    - pomocí tlačítka |symbologyRemove| lze připojení zručit
-
-- zavřeme vlastnosti a můžeme překontrolovat připojení zobrazením 
-  atributové tabulky vrstvy. Připojené atributy se zobrazí na konci tabulky.
+Uobrazením  atributové tabulky vrstvy můžeme překontrolovat připojení.
+Připojené atributy se zobrazí na konci tabulky.
   
 .. figure:: images/join_priklad.png
    :class: middle
         
    Výsledek spojení tabulek.
    
-- s takto připojenou tabulkou můžeme dále pracovat stejně, jako by byla
-  přímo ve vektorové vrstvě (např. měnit symbol, provádět dotazování
-  a analýzy)
+S takto připojenou tabulkou můžeme dále pracovat stejně, jako by byla
+přímo ve vektorové vrstvě (např. měnit symbol, provádět dotazování a analýzy)
 
 .. note:: Při připojení se zdrojová data (vektorové vrstvy ani připojené
    tabulky) nemění. Data z tabulky jsou připojením pouze odkazována k
@@ -157,5 +154,3 @@ Další volitelné nastavení
       .csv se připojení zruší
     - pro trvalé uložení připojených dat do vektorové vrstvy lze použít
       funkci exportu vrstvy (:item:`Uložit jako...`)
-
-
