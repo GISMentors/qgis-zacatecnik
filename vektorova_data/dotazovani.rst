@@ -12,8 +12,8 @@
    :width: 1.5em
 .. |checkbox| image:: ../images/icon/checkbox.png
    :width: 1.5em  
-
-
+.. |mIconFormSelect| image:: ../images/icon/mIconFormSelect.png
+   :width: 1.5em  
 
 Atributové a prostorové dotazování
 ==================================
@@ -24,7 +24,7 @@ Atributové dotazování
 ---------------------
 
 Atributové dotazování slouží k vytvoření výběru prvků z vektorové
-vrstvy dle námi zadaných kritérií.  Funkce, která toto umožňuje, je
+vrstvy dle námi zadaných kritérií. Funkce, která toto umožňuje, je
 |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce` a můžeme ji
 spustit buď z nástrojového panelu, nebo z atributové tabulky dané
 vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí
@@ -83,7 +83,19 @@ do dialogového okna:
    
    Výpis počtu vybraných prvků (v levé části stavového řádku).
    
-    
+Vybrat prvky podle hodnoty
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+Pro rychlé a zjednodušené atributové dotazovaní lze také využít formulář funkce
+|mIconFormSelect|:sup:`Vybrat prvky podle hodnoty...` (klávesová zkratka
+:kbd:`F3`), kde lze zadat hodnoty a pravidla výběru k jednotlivým atributům.
+
+.. figure:: images/select_att.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Popis obrázku
+
+ 
 Prostorové dotazování
 ---------------------
 
