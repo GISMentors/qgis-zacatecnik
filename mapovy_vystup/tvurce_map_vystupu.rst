@@ -1,19 +1,20 @@
 .. index::
    see: tvůrce map
 
-Tvůrce mapy (Map Composer)
-==========================
+Tiskové rozvržení (Print Layout)
+================================
 
 Systém QGIS dokáže pracovat s různými formáty a zobrazovat je v
 mapovém okně (viz :numref:`map-window`). Obsah mapového okna lze
 jednoduše vyexportovat jako obrázku (:menuselection:`Projekt -->
-Uložit jako obrázek`). To však v řadě případů nemusí stačit, hlavně
-když vyžadujeme mapový výstup určený pro tisk.
+Import/Export --> Eport Map to image.../pdf`). 
+To však v řadě případů nemusí stačit, hlavně když vyžadujeme mapový
+výstup určený pro tisk.
 
 Pro vytvoření mapového výstupu určeného pro tisk, který si zachová
 nastavení vrstev (stylování, popisky a další) z projektu, slouží
-samostatný nástroj *Tvůrce mapy (Map Composer)*. Tento nástroj je
-dostupný z menu :menuselection:`Projekt --> Tvůrce mapy`.
+samostatný nástroj *Rozvržení (Print Layout)*. Tento nástroj je
+dostupný z menu :menuselection:`Projekt --> Layout manager...`.
 
 .. _map-window:
           
@@ -27,10 +28,10 @@ dostupný z menu :menuselection:`Projekt --> Tvůrce mapy`.
    :class: large
    :scale-latex: 70
  
-   Ukázka mapového výstupu vytvořeného v Map Composeru.
+   Ukázka možného výstupu z nástroje Rozvržení.
 
-Map Composer umožňuje vytvořit na základě dat mapový výstup v běžně
-používaných formátech, jakými jsou např. PDF, PNG, JPEG a
+Nástroj Rozvržení umožňuje vytvořit na základě dat mapový výstup v běžně
+používaných formátech, jakými jsou např. :file:`PDF, PNG, JPEG` a
 další. Takovýmto způsobem je možné prezentovat jednotlivá data, jejich
 kombinaci nebo výsledky různých analýz i bez potřeby speciálních
 kartografických systémů.
@@ -39,23 +40,21 @@ kartografických systémů.
    pair: tvůrce map; správce tvorby mapy
 
 
-Správce tvorby mapy
--------------------
+Správce vytváření map
+---------------------
 
 Systém QGIS umožňuje vytvářet víc než jeden mapový výstup na daný
-projekt. Zpravování jednotlivých mapových výstupů umožňuje *Správce 
-tvorby mapy* dostupný z menu :menuselection:`Projekt --> Správce 
-tvůrců mapy`.
+projekt. Zpravování jednotlivých mapových výstupů umožňuje *Layout manager* dostupný z menu :menuselection:`Projekt --> Layout manager...`.
 
 .. figure:: images/composer_manager.png
    :class: large
    :scale-latex: 70
  
-   Otevření Správce tvorby mapy z menu.
+   Otevření Správce pro vytváření mapových výstupů.
 
 Zde se nachází okno, kde jsou uvedeny všechny vytvořené mapové
 výstupy. Pokud není doposud žádný vytvořený, tak je seznam prázdný a
-pomocí tlačítka :item:`Přidat` se dá vytvořit nový.
+pomocí tlačítka :item:`Create...` se dá vytvořit nový.
 
 .. figure:: images/add_new_composer.png
    :class: small
@@ -70,14 +69,14 @@ výstupu.
         
         
 .. tip:: Existující mapový výstup lze zkopírovat pomocí tlačítka
-         :item:`Duplikovat`. Mapový výstup ke zkopírování se označí
+         :item:`Duplicate...`. Mapový výstup ke zkopírování se označí
          a pak se stiskne zmíněné tlačítko. V otevřeném okně se
          pak nastaví nový název mapového výstupu.
 
 Pokud chcete otevřít existující mapový výstup, tak jej v seznamu
-*Správce tvorby mapy* vyberte a tlačítkem :item:`Zobrazit` otevřete.
+*Layout manager* vyberte a tlačítkem :item:`Zobrazit` otevřete.
 Všechny existující mapové výstupy jsou přístupné také z menu
-:menuselection:`Projekt --> Tvorba map`.
+:menuselection:`Projekt --> Rozvržení`.
 
 .. index::
    pair: tvůrce map; nastavení pracovní plochy
@@ -86,25 +85,39 @@ Všechny existující mapové výstupy jsou přístupné také z menu
 Nastavení pracovní plochy
 -------------------------
 
-Jako první je nutné nastavit vlastnosti pracovní plochy. Toto
-nastavení najdeme v pravé části v záložce :item:`Kompozice` část
-:item:`Papír a kvalita`.
+Jako první je nutné nastavit základní vlastnosti pro pracovní plochu a pro
+export. 
+
+První část je nastavení stránky. Toto je dostupné po kliknutí pravým tlačítkem
+na plochu stránky pod položkou :item:`Vlastnosti stránky...`. V pravé části se
+otevře nastavení stránky v záložce :item:`Vlastnosti položky`. 
 
 .. figure:: images/composer_plain.png
    :class: large
    :scale-latex: 60
  
-   Okno nového mapového výstupu.
+   Okno nového rozvržení výstupu.
 
 .. figure:: images/paper_settings.png
    :class: small
    :scale-latex: 40
    
-   Zakládání nového mapového výstupu - vlastnosti podkladu.
+   Zakládání nového rozvržení- vlastnosti stránky.
 
-Zde se nastaví velikost "papíru", jeho orientace, barva pozadí a
-rozlišení v DPI při exportu. Tyto hodnoty lze přenastavit i v průběhu
-práce. Do takto nastavené pracovní plochy lze začít přidávat
+Zde se nastaví velikost "papíru", jeho orientace a barva pozadí. Tyto hodnoty
+lze přenastavit i v průběhu práce. 
+
+
+Další část nastavení je v záložce :item:`Rozvržení`. Zde je možné nastavit
+další části výstupu jako je nastavení výstupu při exportu.
+
+.. figure:: images/composer_layout.png
+   :class: small
+   :scale-latex: 40
+   
+   Zakládání nového rozvržení - export.
+
+Do takto nastavené pracovní plochy lze začít přidávat
 jednotlivé prvky.
 
 .. tip:: Při tvorbě profesionálních mapových výstupů se doporučuje
