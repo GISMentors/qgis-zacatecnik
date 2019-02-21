@@ -40,24 +40,29 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
 
       Logo projektu QGIS.
 
-Současným konceptem ve vývoji je pravidelné a intenzivní publikování nových verzí.
-Dlouhodobá stabilní verze (LTR) je doplněna dvěma krátkodobými verzemi. 
+Současným konceptem ve vývoji je pravidelné a intenzivní publikování
+nových verzí.  Dlouhodobá stabilní verze (LTR) je doplněna dvěma
+krátkodobými verzemi (viz `QGIS release schedule
+<https://qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule>`__).
 
 Přechod na verzi 3.x je spojen s postupem technologií, konkrétně zejména povýšení:
   * Python 2.7 na Python 3
   * Qt4 na Qt5
 
 S touto změnou přicházejí nejenom novější a lepší technologické nástroje, ale
-také jasná zpráva o tom, že QGIS se neustále vyvíjí a drží krok a nezastarává.
-Součástí velkých změn je i v tomto případě nutnost se adaptovat na ně, co závisí
+také jasná zpráva o tom, že QGIS se neustále vyvíjí, drží krok a nezastarává.
+Součástí velkých změn je i v tomto případě nutnost se adaptovat na ně, což závisí
 hlavně od způsobu jakým QGIS uživatel využívá. Všechny změny ale vycházejí z
 dlouhodobého plánování a hlavně z požadavků uživatelů.
 
 .. only:: html
 
-.. important:: Školení je zaměřeno na aktuální LTR verzi **QGIS 3.4 Madeira**. V
-               jiných verzích není zaručena funkčnost uvedených příkladů. Dále
-               předpokládáme zapnutou *českou lokalizaci*.
+.. important:: Školení je zaměřeno na aktuální LTR verzi **QGIS 3.4
+   Madeira**. V jiných verzích není zaručena funkčnost
+   uvedených příkladů. Dále předpokládáme zapnutou *českou
+   lokalizaci*, :menuselection:`Možnosti --> Obecné`.
+
+   .. figure:: images/qgis_locale.svg
 
 .. index::
    pair: datové sady; ke stažení
@@ -65,10 +70,8 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 .. notedata::
 
    *Data ke školení* jsou stažitelná jako `zip archiv
-   <http://training.gismentors.eu/geodata/qgis/data.zip>`_ (436
-   MB), rastrová data `DMT
-   <http://training.gismentors.eu/geodata/qgis/dmt.zip>`_
-   (97 MB).
+   <http://training.gismentors.eu/geodata/qgis/data.zip>`__ (614
+   MB).
 
 .. tip::
    Text školení je dostupný i v tisknutelné formě `PDF
@@ -80,15 +83,14 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 
    \newpage
 
-QGIS je psán v programovacím jazyce C++ a uživatelské prostředí je
-naprogramováno pomocí knihovny Qt. Díky použití těchto rozšířených
+QGIS je napsán v programovacím jazyce C++ a uživatelské prostředí je
+postaveno na frameworku Qt. Díky použití těchto rozšířených
 programovacích prostředků je QGIS multiplatformní, tudíž jej lze
 využívat na většině používaných operačních systémech jako je MS
 Windows, GNU/Linux nebo OS X. QGIS využívá pro práci s geografickými
 daty v rastrové anebo vektorové reprezentaci knihovnu :skoleni:`GDAL
 <open-source-gis/knihovny/gdal.html>`, díky tomu je možné v QGISu
-pracovat se širokým spektrem formátů a webových služeb OGC, ale i
-jiných formátů.
+pracovat se širokým spektrem datových formátů a webových služeb OGC.
 
 .. figure:: images/intro_qgis.png
    :scale-latex: 65
@@ -115,13 +117,15 @@ formátu PDF nebo obrázku, viz :doc:`mapovy_vystup/index`.
 
 QGIS je populární i pro svou rozšiřitelnost pomocí takzvaných
 zásuvných modulů (tzv. "pluginů").  Pluginy jsou dílčí nástroje, které
-jsou vyvíjeny komunitou kolem QGIS.  Pomocí pluginů je možné dopnit do
-QGIS novou funkcionalitu či podporu pro další formáty či služby jako
-je např. Google Maps, Bing nebo OpenStreetMap.
+jsou vyvíjeny uživatelskou komunitou projektu QGIS.  Pomocí pluginů je
+možné dopnit do QGIS novou funkcionalitu či podporu pro další formáty
+či služby jako je např. Google Maps, Bing nebo OpenStreetMap.
 
-Oficiální repozitář, který je defaultně k dispozici jako zdroj pluginů je 
-dostupný `zde <https://plugins.qgis.org/plugins/>`_. Instalace konkrétního
-pluginu je pak možná přímo v okně pro správu zásuvných modulů (pluginů).
+Oficiální repozitář, který je defaultně k dispozici jako zdroj pluginů
+je dostupný `zde <https://plugins.qgis.org/plugins/>`_. Instalace
+konkrétního pluginu je pak možná přímo v okně pro správu zásuvných
+modulů (pluginů) :menuselection:`Zásuvné moduly --> Spravovat a
+instalovat zásuvné moduly...`.
 
 .. figure:: images/intro_profile.png
    :scale-latex: 75
@@ -171,6 +175,7 @@ Za `GISMentors <http://www.gismentors.cz/>`_:
 * `Ľudmila Furtkevičová <http://www.gismentors.cz/mentors/furtkevicova/>`_
 * `Oto Kaláb <http://www.gismentors.cz/mentors/kalab/>`_ 
 * `Vojtěch Dubrovský <http://www.gismentors.cz/mentors/dubrovsky/>`_
+* `Martin Landa <http://www.gismentors.cz/mentors/landa/>`_  
 
 Text dokumentu
 --------------
@@ -185,3 +190,6 @@ Zdrojové texty školení jsou dostupné na adrese:
 
 * https://github.com/GISMentors/qgis-zacatecnik
 
+Případné chyby nebo náměty na vylepšení můžete hlásit:
+
+* https://github.com/GISMentors/qgis-zacatecnik/issues
