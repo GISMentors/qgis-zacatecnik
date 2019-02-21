@@ -26,6 +26,8 @@
    :width: 1.5em 
 .. |add_shape| image:: ../images/icon/mActionAddBasicShape.png
    :width: 1.5em 
+.. |mActionMoveItemContent| image:: ../images/icon/mActionMoveItemContent.png
+   :width: 1.5em 
 
 .. index::
    single: mapové elementy
@@ -79,7 +81,9 @@ výřezu načte obsah mapového okna.
    Výřez s obsahem mapového okna a jeho detailní nastavení.
        
 Velikost výřezu a jeho polohu lze měnit pomocí tahání za jeho hrany
-nebo uchopení za jeho obsah a posun.
+nebo uchopení za jeho obsah a posun. Pokud potřebujeme posunout obsah mapy,
+pak použijeme nástroj |mActionMoveItemContent| :sup:`Posunout obsah položky`
+a interaktivně změníme rozsah pomocí tažení.
 
 .. raw:: latex
 
@@ -102,7 +106,7 @@ Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu
 mapového okna. Překreslení dle pozměněného mapového okna je možné v
 detailu prvku :item:`Vlastnosti položky` v části :item:`Hlavní vlastnosti`
 pomocí tlačítka :item:`Aktualizovat náhled`. V této části též lze nastavit
-přesné měřítko mapového okna.
+přesné měřítko mapového okna nebo jeho natočení.
 
 V části :item:`Rozsahy` lze přesně nadefinovat rozsah mapového okna v
 souřadnicovém systému mapového projektu. Pomocí tlačítek lze také
@@ -201,7 +205,7 @@ změnit text i zařazení jednotlivých položek v rámci legendy samotné.
 
 .. tip:: Pokud upravujete legendu, tak se může stát, že se změnami nebudete 
    spokojeni. V případě, že nechcete změny v nastavení provést ručně, můžete 
-   legendu vygenerovat z dat znova pomocí tlačítka :item:`Aktualizovat vše`.
+   legendu vygenerovat z dat znova pomocí tlačítka :item:`Update all`.
 
 .. index::
    pair: mapové elementy; atributová tabulka
