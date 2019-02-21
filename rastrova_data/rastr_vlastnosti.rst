@@ -1,26 +1,3 @@
-.. |mActionFullHistogramStretch| image:: 
-   ../images/icon/mActionFullHistogramStretch.png
-   :width: 1.5em
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |CRS| image:: ../images/icon/CRS.png
-   :width: 1.5em
-.. |mActionLocalCumulativeCutStretch| image:: 
-   ../images/icon/mActionLocalCumulativeCutStretch.png
-   :width: 1.5em
-.. |mIconZoom| image:: ../images/icon/mIconZoom.png
-   :width: 1.5em
-.. |symbologyAdd| image:: ../images/icon/symbologyAdd.png
-   :width: 1.5em
-.. |mActionContextHelp| image:: ../images/icon/mActionContextHelp.png
-   :width: 1.5em
-.. |mActionFileOpen| image:: ../images/icon/mActionFileOpen.png
-   :width: 1.5em
-.. |symbologyRemove| image:: ../images/icon/symbologyRemove.png
-   :width: 1.5em
-.. |mActionFileSave| image:: ../images/icon/mActionFileSave.png
-   :width: 1.5em
-
 Vlastnosti rastrové vrstvy
 --------------------------
 
@@ -110,7 +87,7 @@ poskytnout nastavení i jiným uživatelům, tak je možné styl uložit stejný
 způsobem jako u vektorových dat. Ve spodní části záložky :item:`Symbologie`
 se nachází talčítko :item:`Styl`. Zde se nachází jak možnost uložit aktulání
 styl do souboru, tak možnost načíst styl ze souboru a nastavit ho tak danému
-rastru. Styly se ukládají v souboru s přídponou :file:`.qml`.
+rastru. Styly se ukládají v souboru s příponou :file:`.qml`.
 Tento soubor je v podstatě :file:`.xml` soubor, takže je možné ho případně
 editovat podle potřeb.
 
@@ -151,8 +128,8 @@ Některé rastry můžou obsahovat samostatný kanál, ve kterém je zapsán př
 Histogram
 ^^^^^^^^^
 QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
-(:numref:`rsthistogram`). Je vytvořen automaticky po kliknutí na volbu
-:item:`Vypočítat histogram`.
+(:numref:`rsthistogram`). Je vytvořen automaticky po vybrání záložky
+:item:`Histogram` ve vlastnostech vrtsvy.
 
 .. _rsthistogram:
 
@@ -168,7 +145,7 @@ U některých vrstev, rastrových i vektorových, se může stát, že jejich
 vykreslování v mapovém okně má smysl pouze v rozmezí určitých měřítek.
 Toto nastavení je možné provést v záložce :item:`Vykreslování`. 
 Typickým příkladem může být rastrové vykreslení druhů pozemků v kontextu
-celé republiky
+celé republiky.
 
 Toto nastavení se často používá při WMS.
 

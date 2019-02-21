@@ -35,7 +35,7 @@ použití komprese, nebo i vytvoření pyramid.
    :class: large
    :scale-latex: 75
    
-   Export rastrové vrstvy pomocí :item:`Uložit rastrovou vrstvu jako...`.
+   Export rastrové vrstvy pomocí :item:`Uložit jako...`.
 
 Pokud potřebujeme rastrovou vrstvu uložit v jiném formátu, použijeme
 :menuselection:`Rastr --> Převod --> Převést na jiný formát` 

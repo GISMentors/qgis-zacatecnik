@@ -14,9 +14,8 @@ Rastrová data je možné do prostředí QGIS přidat kliknutím na tlačítko
 :menuselection:`Vrstva --> Přidat vrstvu --> Přidat rastrovou vrstvu`
 nebo současným stlačením kláves :kbd:`Ctrl+Shift+R`.
 Přidání je samozřejmě možné i přes panel :item:`Prohlížeče`.
-Na :numref:`addraster` je znázorněna rastrová vrstva :map:`dmt.tiff` z 
+Na :numref:`addraster` je znázorněna rastrová vrstva :map:`dmt.tif` z 
 datasetu :data:`EU-DEM (GeoTIFF)`.
-
 
 .. _addraster:
 

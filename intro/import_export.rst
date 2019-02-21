@@ -1,14 +1,9 @@
-.. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
-   :width: 1.5em
-.. |mActionZoomFullExtent| image:: ../images/icon/mActionZoomFullExtent.png
-   :width: 1.5em
-
 .. _importexport:
 
 Přidávání a export geodat
 =========================
 
-QGIS podporuje široké spektrum geodat. Prostorová data můžeme rozdělit
+QGIS podporuje široké spektrum geodat. Geografická data můžeme rozdělit
 podle způsobu uložení na lokální a distribuovaná (síťová).  V obou
 kategoriích se následně vyskytují data rastrová a vektorová.  V této
 kapitole jsou popsány základní principy připojení a exportu geodat v
@@ -26,7 +21,7 @@ Přidávání dat
 
 Data lze přidat z hlavního menu :menuselection:`Vrstva --> Přidat
 vrstvu-->...`. Na základě vybraného typu dat se nám zobrazí konkrétní
-dialogové okno s nastavením importu dat.
+dialogové okno s nastavením pro nahrání dat.
 
 .. _addlayer:
 
@@ -72,7 +67,7 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 .. tip:: Přes panel nástrojů je možné dosáhnout i další funkčnost.
          Jednou z nich je nově **mazání** dat, nejenom jejich
          odstranění z projektu. Další fukncionalita je závislá od typu
-         dat (souborovvá databáze - přidávání dat tažením).
+         dat (souborová databáze - přidávání dat tažením).
 
 Export dat
 ----------
@@ -113,11 +108,13 @@ Při vkládání rastrových nebo vektorových dat se může stát, že po
 potvrzení výběru je vyžadována specifikace souřadnicového systému
 vkládaných dat (:numref:`srs`). Okno se zobrazí v případě, pokud
 vkládaný soubor neobsahuje vlastní specifikaci souřadnicového systému,
-jako například ESRI Shapefile bez souboru končícího příponou :file:`\*.prj`,
-s uvedeným EPSG kódem, který by odpovídal kódu které používá QGIS (z
-knihovny proj4).
-Soubory typu :file:`shapefile` QGIS opatří dalším souborem :file:`.qpj`,
-který vytváří sám pro jasné přiřazení souř. systému vrstvě. 
+jako například ESRI Shapefile bez souboru končícího příponou
+:file:`\*.prj`, s uvedeným EPSG kódem, který by odpovídal kódu které
+používá QGIS (z knihovny proj4).
+
+.. note:: Soubory typu ESRI Shapefile QGIS opatří dalším souborem
+          :file:`.qpj`, který vytváří sám pro jasné přiřazení
+          souřadnicového systému vrstvě.
 
 V okně výběru je možné vyhledat souřadnicové systémy pomocí
 filtru. Zvolení správného souřadnicového systému je velice důležité,
@@ -135,11 +132,11 @@ webovým službám.
 Mezi souřadnicovými systémy je možné filtrovat pomocí jejich názvů. Na obrázku
 :numref:`srs` je vidět filtr pomocí textu \"jtsk\". Pokud v poli s vybranými
 systémy označíme jeden, tak se níže vypíše jeho definice (zapsání
-matematických koeficientů) a vykreslí rozsah území,pro který se používá.
+matematických koeficientů) a vykreslí rozsah území, pro který se používá.
 
-Naposledy použité souř. systémy se pak budou objevovat v horní části pro
+Naposledy použité souřadnicové systémy se pak budou objevovat v horní části pro
 rychlý výběr a budou i v rychlých nabídkách jiných nástrojů, které umožňují
-výběr souř. systému.
+výběr souřadnicového systému.
 
 .. tip:: Po přidání dat můžeme zkontrolovat jejich pozici v prostoru
    pomocí funkce |mActionZoomToLayer| :sup:`Přiblížení na vrstvu`, nebo
