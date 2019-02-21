@@ -1,71 +1,3 @@
-.. |extents| image:: ../images/icon/extents.png
-   :width: 1.5em
-.. |tracking| image:: ../images/icon/tracking.png
-   :width: 1.5em
-.. |addscale| image:: ../images/icon/symbologyAdd.png
-   :width: 1.5em
-.. |removescale| image:: ../images/icon/symbologyRemove.png
-   :width: 1.5em
-.. |geographic| image:: ../images/icon/CRS.png
-   :width: 1.5em
-.. |log| image:: ../images/icon/mMessageLog.png
-   :width: 1.5em
-.. |mActionZoomOut| image:: ../images/icon/mActionZoomOut.png
-   :width: 1.5em
-.. |mActionZoomIn| image:: ../images/icon/mActionZoomIn.png
-   :width: 1.5em
-.. |mActionZoomLast| image:: ../images/icon/mActionZoomLast.png
-   :width: 1.5em
-.. |mActionZoomNext| image:: ../images/icon/mActionZoomNext.png
-   :width: 1.5em
-.. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
-   :width: 1.5em
-.. |mActionZoomFullExtent| image:: ../images/icon/mActionZoomFullExtent.png
-   :width: 1.5em
-.. |mActionPan| image:: ../images/icon/mActionPan.png
-   :width: 1.5em
-.. |mActionRefresh| image:: ../images/icon/mActionRefresh.png
-    :width: 1.5em
-.. |mActionSelectRectangle| image:: ../images/icon/mActionSelectRectangle.png
-    :width: 1.5em
-.. |mActionSelectPolygon| image:: ../images/icon/mActionSelectPolygon.png
-    :width: 1.5em
-.. |mActionSelectFreehand| image:: ../images/icon/mActionSelectFreehand.png
-    :width: 1.5em
-.. |mActionSelectRadius| image:: ../images/icon/mActionSelectRadius.png
-    :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
-    :width: 1.5em
-.. |mActionUnselectAttributes| image:: ../images/icon/mActionUnselectAttributes.png
-    :width: 1.5em
-.. |mActionZoomToSelected| image:: ../images/icon/mActionZoomToSelected.png
-    :width: 1.5em
-.. |mActionPanToSelected| image:: ../images/icon/mActionPanToSelected.png
-    :width: 1.5em
-.. |mActionMeasureArea| image:: ../images/icon/mActionMeasureArea.png
-    :width: 1.5em
-.. |mActionMeasure| image:: ../images/icon/mActionMeasure.png
-    :width: 1.5em
-.. |mActionMeasureAngle| image:: ../images/icon/mActionMeasureAngle.png
-    :width: 1.5em
-.. |mActionIdentify| image:: ../images/icon/mActionIdentify.png
-    :width: 1.5em
-.. |rendering_bar| image:: ../images/icon/rendering_bar.png
-    :width: 4.5em
-.. |raster| image:: ../images/icon/mIconRaster.png
-    :width: 1.2em
-.. |polygon| image:: ../images/icon/polygon.png
-    :width: 1.2em
-.. |polyline| image:: ../images/icon/polyline.png
-    :width: 1.2em
-.. |point| image:: ../images/icon/point.png
-    :width: 1.2em
-.. |mActionAddGroup| image:: ../images/icon/mActionAddGroup.png
-    :width: 1.5em
-.. |mActionRemoveLayer| image:: ../images/icon/mActionRemoveLayer.png
-    :width: 1.5em
-
-
 .. index::
    single: rozhraní - popis
 
@@ -82,7 +14,7 @@ Na obrázku níže jsou označeny základní části systému.
    přizpůsobit si tak pracovní prostředí. Pokud budete rozšiřovat
    funkčnost systému, tak je dobré si vhodně umístit nové nástroje.
 
-.. figure:: images/menu_description.png
+.. figure:: images/menu_description.svg
    :class: large
    :scale-latex: 80
 
@@ -95,12 +27,11 @@ Mapové okno (1)
 ===============
 
 V tomto okně se vykreslují všechny zapnuté mapové vrstvy. Vykreslování
-odpovídá nastavení každé jednotlivé vrstvy.
-Pořadí vykreslování vrstev odpovídá pořadí v panelu vrstev. Ty se tedy
-překreslují přes sebe všechny i když se vzájemně plně nebo jenom částečně
-překrývají.
-Pokud překreslování mapového okna trvá delší dobu je vhodné nechat překeslovat
-pouze nezbytné vrstvy.
+odpovídá nastavení každé jednotlivé vrstvy.  Pořadí vykreslování
+vrstev odpovídá pořadí v panelu vrstev. Ty se tedy překreslují přes
+sebe všechny i když se vzájemně plně nebo jenom částečně překrývají.
+Pokud překreslování mapového okna trvá delší dobu je vhodné nechat
+překreslit pouze nezbytné vrstvy.
 
 .. index::  
    pair: přepínač vrstev; rozhraní - popis
@@ -115,16 +46,17 @@ kontextové menu k dané vrstvě. V tomto menu je možné najít vše od
 stylování vrstvy až po export dat.
 
 Podle typu ikonky před názvem vrstvy je možné rychle identifikovat,
-zda se jedná o vektorovou nebo o |raster| rastrovou vrstvu. U vektorové vrstvy
-se typicky rozlišuje mezi |polygon| polygonovou (plošnou), |polyline| liniovou
-anebo |point| bodovou vrstvou. Zobrazení symbolů záleží na aktuálního
-nastavení symbologie dané vrstvy. Pokud nejde o jednoduchý symbol, tak je možné
-pomocí trojúhelníčku na začátku řádku rozbalit všechny položky stylování dané
-vrstvy.
-Pokud chceme rychle změnit konkrétní symbol, tak je možné se pomocí dvoukliku
-přepnout přímo do editace symbolu. 
-Pokud má vrstva vícero  různých symbolů, tak je možné zapínat symboly každé skupiny zvlášť přímo pomocí zaškrtávátka u každého symbolu. Není proto nutné dělat
-zmeny v nastavení symbologie (platí u vektorových vrstev)
+zda se jedná o |mIconLineLayer| vektorovou nebo o |mIconRaster| rastrovou vrstvu. U
+vektorové vrstvy se typicky rozlišuje mezi |polygon| polygonovou
+(plošnou), |polyline| liniovou anebo |point| bodovou
+vrstvou. Zobrazení symbolů záleží na aktuálního nastavení symbologie
+dané vrstvy. Pokud nejde o jednoduchý symbol, tak je možné pomocí
+trojúhelníčku na začátku řádku rozbalit všechny položky stylování dané
+vrstvy.  Pokud chceme rychle změnit konkrétní symbol, tak je možné se
+pomocí dvoukliku přepnout přímo do editace symbolu.  Pokud má vrstva
+vícero různých symbolů, tak je možné zapínat symboly každé skupiny
+zvlášť přímo pomocí zaškrtávátka u každého symbolu. Není proto nutné
+dělat změny v nastavení symbologie (platí u vektorových vrstev).
 
 Vykreslování vrstvy v mapovém okně lze zapnou pomocí zatrhnutí okénka na
 úrovni každé vrstvy.
@@ -153,10 +85,14 @@ službám.
    pair: postranní menu; rozhraní - popis
 
 
-Postranní menu (3)
+Datový prohlížeč (3)
 ==================
 
-Menu s nástroji pro přidávání vrstev, nebo vytváření nových.  
+Slouží pro správu datových zdrojů jako jsou adresáře se souborovými
+formáty jako např. ESRI Shapefile, databázové zdroje jako PostgreSQL,
+MSSQL a pod a v neposlední řadě webové služby, viz
+:doc:`../webove_sluzby/index`.
+
 
 .. index::
    single: stavový řádek
@@ -184,8 +120,8 @@ Lokátor (vyhledávač)
 Pro lepší orientaci mezi algoritmy, nástroji, vrstvami a dalšími součástmi je
 možné používat okno pro vyhledávání - :item:`Lokátor`.
 Zadáním části názvu vyhledávané vrstvy nebo nástroje se filtruje mezi všemi
-položkami. Výledky jsou řazeny do kategorií. Na obrázku je vidět, že po zadání
-textu se vyhedají vrstvy obsahující vložený text, níže pak algoritmy s
+položkami. Výsledky jsou řazeny do kategorií. Na obrázku je vidět, že po zadání
+textu se vyhledají vrstvy obsahující vložený text, níže pak algoritmy s
 odpovídajícím názvem, ale i nástroje aplikovatelné na vybrané vrstvy. 
 
 .. figure:: images/locator_search_bar.png
@@ -194,15 +130,15 @@ odpovídajícím názvem, ale i nástroje aplikovatelné na vybrané vrstvy.
    Vyhledávací okno s ukázkou nalezených výsledků toztříděných do jednotlivých
    kategorií.
    
-.. tip:: Pokud chceme vyhledávat v konkrétní sekci, například pouze vrstvu, nebo
-   pouze nístroj, tak můžu nastavit filtrování pouze v konkrétní kategorii.
-   Třídění je možné ovlyvnit zadáním parametru před samotným textem. Parametr
-   je možné napsat přímo jako text, anebo si vybrat ze seznamu. Seznam se
-   aktivuje po kliknutí do vyhledávacího řádku. Zkratku buď opíšeme a přidáme
-   za ni mezeru, anebo ji dvouklikem vložíme. Za zkratku pak píšeme část
-   textu pro vyhledávání.
-   Poslední variantou je výběr v menu, které se otevře po kliknutí na symbol
-   lupy.
+.. tip:: Pokud chceme vyhledávat v konkrétní sekci, například pouze
+   vrstvu nebo nástroj, tak můžete nastavit filtrování pouze v
+   konkrétní kategorii. Třídění je možné ovlivnit zadáním parametru
+   před samotným textem. Parametr je možné napsat přímo jako text,
+   anebo si vybrat ze seznamu. Seznam se aktivuje po kliknutí do
+   vyhledávacího řádku. Zkratku buď opíšeme a přidáme za ni mezeru,
+   anebo ji dvouklikem vložíme. Za zkratku pak píšeme část textu pro
+   vyhledávání.  Poslední variantou je výběr v menu, které se otevře
+   po kliknutí na symbol lupy.
    
    .. figure:: images/locator_thema.png
       :class: large
@@ -210,9 +146,9 @@ odpovídajícím názvem, ale i nástroje aplikovatelné na vybrané vrstvy.
       Vyhledávací okno s vyhledáváním omezeným pouze na vrstvy v projektu s
       ukázkou nalezených výsledků.
       
-   V případě potřeby je možné upravit nastavení vyhledávání. Je možné nastavit
+   V případě potřeby je možné upravit nastavení vyhledávání. Je možné nastavit,
    ve kterých skupinách se vyhledává, nebo jakými zkratkami se nastavují.
-   Nastavení je vhorním menu :menuselection:`Nastavení --> Možnosti`, záložka
+   Nastavení je v horním menu :menuselection:`Nastavení --> Možnosti`, záložka
    :item:`Lokátor`.
 
    .. figure:: images/locator_settings.png
@@ -264,8 +200,8 @@ předdefinovaného seznamu měřítek.
 .. tip:: Seznam předdefinovaných měřítek je možné upravit. V menu 
    :menuselection:`Nastavení --> Možnosti...` záložka :item:`Nástroje mapy` je
    část :item:`Předdefinovaná měřítka`. Nové měřítko je možné přidat pomocí ikonky 
-   |addscale| :sup:`Přidat předdefinované měřítko` a nebo odstranit pomocí
-   |removescale| :sup:`Odstranit vybrané`. 
+   |symbologyAdd| :sup:`Přidat předdefinované měřítko` a nebo odstranit pomocí
+   |symbologyRemove| :sup:`Odstranit vybrané`. 
 
          .. figure:: images/predefined_scales.png
             :class: middle
@@ -285,16 +221,17 @@ kresba v mapovém okně překresluje při následujících akcích:
     * změna velikosti QGIS okna
     * změna viditelnosti vrstvy
     
-V některých případech může překreslování mapového okna trvat déle, než je
-vhodné. V takovýchto případech je možné upravit nastavení vykreslování a
-:ref:`stylování <styl-vrstvy>` jednotlivých vrstev.  V případě, že
-překreslování není potřebné, tak je možné jej potlačit - mapové okno se nebude
-překreslovat. Pro takovéto nastavení je ve stavovém řádku položka s checkboxem
-:item:`Vykreslování`.
+V některých případech může překreslování mapového okna trvat déle, než
+je vhodné. V takovýchto případech je možné upravit nastavení
+vykreslování a :ref:`stylování <styl-vrstvy>` jednotlivých vrstev.  V
+případě, že překreslování není potřebné, tak je možné jej potlačit -
+mapové okno se nebude překreslovat. Pro takovéto nastavení je ve
+stavovém řádku položka se zaškrtávátkem :item:`Vykreslování`.
 
-.. tip:: Pokud potřebujete přerušit vykreslování tak je možné to provést pomocí
-         vypnutí překreslování. To se může hodit zejména při vykreslování 
-         náročných vrstev, když je zapotřebí pouze změnit obsah mapového okna. 
+.. tip:: Pokud potřebujete přerušit vykreslování, tak je to možné
+         provést pomocí vypnutí překreslování. To se může hodit
+         zejména při vykreslování náročných vrstev, když je zapotřebí
+         pouze změnit obsah mapového okna.
 
 .. index::
    pair: souřadnicový systém mapového okna; stavový řádek
@@ -302,9 +239,9 @@ překreslovat. Pro takovéto nastavení je ve stavovém řádku položka s check
 Souřadnicový systém
 ^^^^^^^^^^^^^^^^^^^        
 
-Mezi nejdůležitější nastavení patří nastavení souřadnicového systému mapového
-okna. Aktuální EPSG kód souřadnicového systému je vidět přímo ve stavovém řádku
-vedle ikony |geographic|.
+Mezi nejdůležitější nastavení patří nastavení souřadnicového systému
+mapového okna. Aktuální EPSG kód souřadnicového systému je vidět přímo
+ve stavovém řádku vedle ikony |CRS|.
 
 .. note:: Podrobnější informace k problematice souřadnicových systémů
           ve školení :skoleni:`Open Source GIS
@@ -315,14 +252,14 @@ vedle ikony |geographic|.
    (:epsg:`4326`). Pro potřeby zpracování geodat na území ČR se však
    většinou používá souřadnicový systém :epsg:`5514`
    (S-JTSK). Nastavení přes stavový řádek je však platné jenom pro
-   aktuální projekt. Po opětovném spuštění se systém spustí v
-   defaultním souřadnicovém systému. Jak nastavit defaultní
-   souřadnicový systém je popsáno v kapitole :ref:`sour-system`.
+   aktuální projekt. Po opětovném spuštění se systém nastaví opět na
+   výchozí souřadnicový systém. Jak nastavit výchozí souřadnicový
+   systém je popsáno v kapitole :ref:`sour-system`.
 
 .. noteadvanced:: Pokud potřebujete zjistit detaily o jakékoli aktivitě
    systému, tak si nechte vypisovat tzv. logovací zprávy. Záložku s
    jednotlivými logovacími zprávami je možné otevřít pomocí ikonky
-   |log| :sup:`Zprávy`. Tyto zprávy jsou podstatné zejména v případě
+   |mMessageLog| :sup:`Zprávy`. Tyto zprávy jsou podstatné zejména v případě
    neočekávaného chování systému.
 
 .. index::
@@ -393,8 +330,6 @@ prvky, se kterými hodláme dále pracovat. Tato označení se nazývá
   :ref:`atrdotaz`
 - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` -
   zruší veškerý výběr
-- |mActionInvertSelection| :sup:`Převrátit výběr prvků` - invertuje výběr.
-Zruší se aktuální výběr a vytvoří se výběr prvků, které ve výběru nebyly.
 
 .. tip:: Nástroje pro pohyb v okně na základě výběru
 

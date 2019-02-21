@@ -41,9 +41,11 @@ umožňuje i modifikaci zdrojového kódu a jeho následné šíření.
       Logo projektu QGIS.
 
 Současným konceptem ve vývoji je pravidelné a intenzivní publikování
-nových verzí.  Dlouhodobá stabilní verze (LTR) je doplněna dvěma
+nových verzí. Dlouhodobá stabilní verze (LTR) je doplněna dvěma
 krátkodobými verzemi (viz `QGIS release schedule
-<https://qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule>`__).
+<https://qgis.org/en/site/getinvolved/development/roadmap.html#release-schedule>`__). Krátkodobé
+verze mají sloužit pro zveřejňování nových funkcionalit v kratších
+intervalech.
 
 Přechod na verzi 3.x je spojen s postupem technologií, konkrétně zejména povýšení:
   * Python 2.7 na Python 3
