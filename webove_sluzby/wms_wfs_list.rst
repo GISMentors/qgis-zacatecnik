@@ -22,14 +22,14 @@ INSPIRE - `https://geoportal.gov.cz/ <https://geoportal.gov.cz/web/guest/wms%3Bj
 
 ÚHÚL - `http://www.uhul.cz/ <http://www.uhul.cz/mapy-a-data/webove-sluzby>`_
 
-  - OPRL - :code:`http://gp2.uhul.cz/wms_oprl/service.svc/get`
+  - OPRL - :code:`http://gp2.uhul.cz/wms_oprl/service.svc/sget`
 
 
 WFS
 ---
 AOPK - `https://portal.nature.cz/ <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=6142>`_
 
-  - Chráněná území - :code:`http://gis.nature.cz/arcgis/services/UzemniOchrana/ChranUzemi/MapServer/WFSServer`
+  - Chráněná území - :code:`http://gis.nature.cz/arcgis/services/Aplikace/Opendata/MapServer/WFSServer`
 
 ČGS - `http://www.geology.cz <http://www.geology.cz/extranet/mapy/mapy-online/stahovaci-sluzby>`_
 
