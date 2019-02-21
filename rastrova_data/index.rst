@@ -27,4 +27,3 @@ doplňujícími informacemi je dostupný na `stránce projektu
    rastr_terenni_analyzy
    rastr_kalkulator
    vrstevnice
-   zobrazovani_3D
