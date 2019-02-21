@@ -279,7 +279,8 @@ Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony |add_
 růžice, najdeme několik typů růžic v základní QGIS SVG knihovně. Tudíž můžeme
 jednoduše přidání obrázku využít k našemu účelu. Zdrojový obrázek zvolíme v 
 záložce :item:`Vlastnosti položky`, zde jsou dostupná také další nastavení, 
-např. rotace, která je za určitých okolností u směrové růžice nutná.
+např. rotace, která je za určitých okolností u směrové růžice nutná a lze ji
+nastavit automaticky.
 
 .. figure:: images/composer_arrow.png
    :class: large
