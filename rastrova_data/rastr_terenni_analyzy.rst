@@ -122,7 +122,8 @@ je možné určovat ji jako trigonometrický úhel.
 
 Místa, které jsou vodorovné nemají žádnou orientaci a standardně se jim přiřadí
 hodnota `-9999`. Pro přiřazení hodnoty `0` je k dispozici opět samostatný
-parametr.
+parametr. Toto nastavení je důležité z  hlediska vizualizace, ale i navazujících
+výpočtů.
 
 .. _rstaspekt:
 
