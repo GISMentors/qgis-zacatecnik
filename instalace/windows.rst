@@ -12,14 +12,15 @@ Systém QGIS je možné pod MS Windows nainstalovat *dvěma způsoby*:
 #. pomocí :ref:`samostaného instalátoru<samostatny-instalator>`
 
    * *pro začátečníky*
-   * dostupná dlouhodobá stabilní verze, ale i nejnovější (krátkodobá) 
 
 #. v rámci :ref:`OSGeo4W instalátoru <osgeo4w-instalator>`
 
    * *pro pokročilejší uživatele*
+   * rychlá a snadná aktualizace
    * komplexnější řešení umožňující instalaci dalšího softwaru
      distribuovaného pod hlavičkou `OSGeo <http://www.osgeo.org/>`__
-   * rychlá a snadná aktualizace
+
+V obou výše uvedených případech lze vybrat mezi nejnovejší verzí a LTR.
 
 Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS
 <https://www.qgis.org/en/site/forusers/download.html>`_.
@@ -35,16 +36,9 @@ Oba uvedené způsoby jsou dostupné přímo ze stránek `QGIS
 Samostatný instalátor
 ---------------------
 
-V případě samostatné instalace je *dlouhodobá stabilní verze* (LTS),
-nebo *krátkodobá verze*. Krátkodobé verze mají sloužit pro
-zveřejňování nových funkcionalit v kratších intervalech.
-
-.. tip:: Pro začínající uživatele je dobré začít nejnovější verzí -
-   není potřeba instalovat dlouhodobou stabilní verzi.
-
-Poté je nutné zvolit instalaci kompatibilní s vaším operačním
-systémem. V současné době je většina počítačů 64bitových, QGIS
-zveřejňuje instalátor také pro starší 32bitové architektury.
+Zvolte instalaci kompatibilní s vaším operačním systémem. V současné
+době je většina počítačů 64bitových, QGIS zveřejňuje instalátor také
+pro starší 32bitové architektury.
 
 ..
    Zda je váš systém 32 bitový nebo 64 bitový zjistíte otevřením složky
@@ -97,7 +91,7 @@ jsou zobrazeny a popsány níže.
 
    Dokončení instalace.
 
-Pok úspěšné instalaci se na pracovní ploše i v nabídce Start objeví
+Po úspěšné instalaci se na pracovní ploše i v nabídce Start objeví
 položka QGIS, kterou je možné jednoduše spustit.
 
 .. important:: Součástí instalace QGIS je i systém **GRASS GIS** (více ve
@@ -141,6 +135,6 @@ vybrat mezi dlouhodobou stabilní (`Advanced Install`,
 
 .. tip:: Aktualizace softwarových balíčků je narozdíl od samostatné
          instalace naprosto triviální. Stačí instalátor spustit a
-         projít bez změny nastavení jednotlivé stránky. Nové verze
-         softwaru se stáhnou a nainstalují automaticky.
+         projít bez změny nastavení jednotlivé stránky průvodce. Nové
+         verze softwaru se stáhnou a nainstalují automaticky.
 
