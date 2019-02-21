@@ -52,6 +52,143 @@ vykreslovaných hodnot (:numref:`stylraster`).
    :scale-latex: 75
        
    Různé styly té samé rastrové vrstvy: šedé pásmo (vlevo), pseudobarvy (vpravo).
+  
+Typ vykreslování    
+""""""""""""""""
+
+Rastry se používají na spojitou definici vybraného jevu v prostoru. Z tohoto
+důvodu se pro zobrazování nejčastěji používají barevné přechody. Všechny
+dostupné typy stylování jsou vyjmenovány v položce :item:`Typy vykreslování`,
+jak je vidět na obrázku :numref:`styletyperaster`.
+    
+.. _styletyperaster:
+
+.. figure:: images/style_types.png
+   :class: middle
+   :scale-latex: 60
+       
+   Typy vykreslování u rastrových dat.
+   
+- **Mnohopásmová barva** - Pokud máme vícekanálový rastr, můžeme použít míchání
+    kanálů pro jednotlivá barevná pásma (červené, zelené a modré).
+    
+    .. figure:: images/multiband_style.png
+       :class: middle
+       :scale-latex: 60
+       
+       Nastavení stylování pomocí míchání barev.
+       
+- **Paleta/Jedinečné hodnoty** - V případě dat charakterizující přesně dané
+    kategorie nebo nespojitá data. (Příkladem je například orientace vůči
+    světovým stranám). Pro generování barev je možné vybrat předdefinované
+    škály, ale i položku :item:`Random Colors`. Použitím tlačítka
+    :item:`Klasifikovat`  vygenerujeme všechny hodnoty pro vybraný kanál.
+    Vygenerované kategorie je možné upravit pro zobrazení barev ale i změnit
+    popisky pro legendu.
+    
+    .. figure:: images/unique_vals_style.png
+       :class: middle
+       :scale-latex: 60
+       
+       Stylování unikátních nespojitých hodnot.
+
+- **Jedno pásmo - šedi** - Vykreslování spojitých veličin v odstínech bílé až
+    černé. Pro zvolený kanál se vybere jedna ze dvou možností barevného
+    přechodu. Dle požadavku na zobrazení je možné použít některou z metod pro
+    vylepšení kontrastu.
+    
+    .. figure:: images/greyscale_style.png
+       :class: middle
+       :scale-latex: 60
+       
+       Stylování spojité veličiny pro 1 kanál v odstínech šedi
+       
+- **Jedno pásmo - pseudobarvy** - Vykreslování spojítých veličin pomocí různých
+    barevných palet - rozsahů. Pomocí dalších nastavení můžeme dosáhnout různé
+    efekty. Prvním nastavením je :item:`Interpolace`
+    
+    - **Nespojitý** - Klasifikace s tímto nastavením určí přesný počet barevných
+        tříd i s jejich rozsahem.
+    
+        .. figure:: images/pseudocolors_style1.png
+           :class: middle
+           :scale-latex: 60
+       
+           Stylování spojité pro nespojitou interpolaci spolu s ukázkou výstupu.
+ 
+    - **Lineární** - Barevný rozsah je spojitě rozdělen celému rozsahu hodnot.
+    
+        .. figure:: images/pseudocolors_style2.png
+           :class: middle
+           :scale-latex: 60
+       
+           Stylování spojité pro lineární interpolaci spolu s ukázkou výstupu.
+           
+    - **Přesný** - K vybranému barevnému rozsahu jsou vygenerovány přesné hodnoty
+        spolu s barvou, kterou se budou vykreslovat. Vykreslují se pouze ty
+        hodnoty, které jsou v tabulce uvedeny. Všechny ostatní se nezobrazují.
+    
+        .. figure:: images/pseudocolors_style3.png
+           :class: middle
+           :scale-latex: 60
+       
+           Stylování spojité pro přesné hodnoty spolu s ukázkou výstupu.
+           
+    
+    Dalším nastavením, kterým lze ovlyvnit zobrazení je parametr :item:`Modus`.
+    Ten ovlyvňuje určování mezních hodnot pro jednotlivé kategorie symbolů.
+    
+    - **Spojitý** - Při tomto nastavení se pouze jednoduše proloží barevná
+        škála zvoleným rozsahem.
+    - **Stejný interval** - Při tomto nastavení je barevná škála rozdělena do
+        stanoveného počtu intervalů bez ohledu na četnost výskytů hodnot z
+        těchto intervalů.
+    - **Kvantil** - Rozdělení do stanovenáho počtu kategorií podle počtu
+        výskytů, tak aby kategorie měli stejný počet výskytů mezi sebou. 
+              
+    Volba nastavení počtu tříd je aktivní pouze u některých typů
+    nastavení.  
+    
+Měnit hodnoty i barvy ve vygenerovaném nastavení lze interakvtivně.
+    
+Pro generování stylů je nutné mít definovaný rozsah hodnot, pro které se
+stylování bude generovat. Toto nastavení má vícero variant. Jak je vidět na
+obrázku :numref:`minmax`, tak se jedná o automaticky vypočtené hodnoty, nebo
+o uživatelem určené hodnoty. Výpočet hodnot se buď vztahuje na celý rastr,
+nebo na jeho část. 
+    
+.. _minmax:
+
+.. figure:: images/min_max_style.png
+   :class: middle
+   :scale-latex: 60
+       
+   Nastavení výpočtu minimální a maximální hodnoty.    
+   
+
+Možnost nastavení barevné škály je různých typů vykreslování. Vybírat je možné
+z předdefinovaných škál pomocí otevření menu přes šipku.
+Základní funkce je výběr z existujících škál, nebo její obrácení. Škály lze
+také upravovat, nebo upravit existující na novou a pak ji uložit.
+
+.. figure:: images/color_ramp_menu.png
+   :class: middle
+   :scale-latex: 60
+       
+   Menu pro práci s barevnými škálami. 
+   
+Menu pro úpravu škály vychází z nastavení přechodu mezi 2 základními barvami.
+Mezi tyto 2 výchozí barvy lze přidat další body a upravit jejich barevnost
+nebo průhlednost. Ve spodní části je možné upravovat škálu z hlediska jejich
+vlastností jako je :item:`Odstín`, :item:`Sytost`, :item:`Světlost` a
+:item:`Průhlednost`.
+
+.. figure:: images/edit_color_ramp.png
+   :class: middle
+   :scale-latex: 60
+       
+   Upravení barevné škály.
+ 
     
 .. note:: 
 
