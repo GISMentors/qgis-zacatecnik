@@ -15,5 +15,11 @@ je uvedeno na :numref:`izo`.
    :class: large
 
    Tvorba vektorové mapy vrstevnic z rastru digitálního modelu terénu.
+   
+ 
+Zpracování dat popisujících výškové poměry vede k zobrazování dat ve 3D.
+Od verze 3.0 je součástí QGISu **3D mapové okno**, kde lze zobrazovat data jako
+prostorová a ne jenom rovinná. Práce s tímto nástrojem je součástí kurzu pro
+pokročilé.
 
-
+.. todo:: Po vypublikování přidat odkaz na přílslušnou kapitolu v pokročilých
