@@ -52,6 +52,24 @@
    :width: 1.5em
 .. |mIconSnapping| image:: ../images/icon/mIconSnapping.png
    :width: 1.5em
+.. |mIconSnappingAllLayers| image:: ../images/icon/mIconSnappingAllLayers.png
+   :width: 1.5em
+.. |mIconSnappingAdvanced| image:: ../images/icon/mIconSnappingAdvanced.png
+   :width: 1.5em
+.. |mIconSnappingActiveLayer| image:: ../images/icon/mIconSnappingActiveLayer.png
+   :width: 1.5em
+.. |mIconSnappingVertexAndSegment| image:: ../images/icon/mIconSnappingVertexAndSegment.png
+   :width: 1.5em
+.. |mIconSnappingSegment| image:: ../images/icon/mIconSnappingSegment.png
+   :width: 1.5em
+.. |mIconSnappingVertex| image:: ../images/icon/mIconSnappingVertex.png
+   :width: 1.5em
+.. |mIconSnappingIntersection| image:: ../images/icon/mIconSnappingIntersection.png
+   :width: 1.5em
+.. |mActionTracing| image:: ../images/icon/mActionTracing.png
+   :width: 1.5em
+.. |mIconTopologicalEditing| image:: ../images/icon/mIconTopologicalEditing.png
+   :width: 1.5em
 
 Tvorba nových vrstev a jejich editace
 =====================================
@@ -254,44 +272,45 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
 
 - Nastavení |selectstring|:
 
-    - :option:`All Layers` - přichytávání ke všem viditelným vektorovým
-      vrstvám projektu
-    - :option:`Active Layer` - přichytávání pouze v rámci editované
-      vrstvy, ostatní vrstvy ignoruje
-    - :option:`Pokročilé nastavení` - režim pokročilého nastavení, lze nastavit
-      různé nastavení pro jednotlivé vrstvy a nabízí možnost `Vyvarovat 
-      se protnutí`
+    - |mIconSnappingAllLayers|:sup:`All Layers` - přichytávání ke všem
+      viditelným vektorovým vrstvám projektu
+    - |mIconSnappingActiveLayer|:sup:`Active Layer` - přichytávání pouze v
+      rámci editované vrstvy, ostatní vrstvy ignoruje
+    - |mIconSnappingAdvanced|:sup:`Pokročilé nastavení` - režim pokročilého
+      nastavení, lze nastavit různé nastavení pro jednotlivé vrstvy a nabízí
+      možnost `Vyvarovat  se protnutí`
     - :option:`Open snapping Options...` - otevře nastavení přichytávání v
       samostatném okně
 
 - Přichytit k |selectstring|:
 
-    - :option:`Lomový bod` - pouze k lomovým bodům
+    - |mIconSnappingVertex|:sup:`Lomový bod` - pouze k lomovým bodům
       (uzlům/vertexům, :numref:`snapvert`)
-    - :option:`Vertex and Segment` - k obojímu
-    - :option:`Segmentu` - pouze k segmentům
+    - |mIconSnappingVertexAndSegment|:sup:`Vertex and Segment` - k obojímu
+    - |mIconSnappingSegment|:sup:`Segmentu` - pouze k segmentům
       (hranám/liniím, :numref:`snapsegm`)
 
 - Tolerance |selectnumber| - vzdálenost, od které se kurzor bude
   k lomovému bodu nebo segmentu přichytávat, hodnotu lze zadat v mapových
   jednotkách (vzdálenost na mapě) nebo pixelech (vzdálenost na monitoru)
 
-- `Zapnout topologickou editaci` - při aktivaci lze
-  pomocí |mActionNodeTool| :sup:`Nástroj uzlú` posouvat společný lomový
+- |mIconTopologicalEditing|:sup:`Zapnout topologickou editaci` - při aktivaci
+  lze pomocí |mActionNodeTool| :sup:`Nástroj uzlú` posouvat společný lomový
   bod přichycení obou prvků najednou. Pokud není aktivní, lomový bod
   lze oddělit
 
-- `Zapnout přichytávání na protnutí` - při aktivaci se
-  bude kurzor přichytávat i na případné místo "překřížení" segmentů
+- |mIconSnappingIntersection|:sup:`Zapnout přichytávání na protnutí` - při
+  aktivaci se bude kurzor přichytávat i na případné místo "překřížení" segmentů
   (linií)
   
-- `Zapnout trasování` - trasování umožňuje vytvářet nové prvky tak aby na sebe
-  přímo navazovaly (topologicky čistá data). Funguje na principu vyhledání
-  nejkratší vzdálensoti na segmentech mezi zadanými body. Trasování může být
-  problematické v případě, že máme vrstvu s více navazujícími polygony, kdy
-  nejkratší vzdálenost nemusí vést po vnější hraně skupiny polygonů
-  (:numref:`snapping_trace_poly`). To lze vyřešit přidáním více bodů při
-  trasování, popř. u polygonů využitím funkce `Vyvarovat se protnutní`
+- |mActionTracing|:sup:`Zapnout trasování` - trasování umožňuje vytvářet nové
+  prvky tak aby na sebe přímo navazovaly (topologicky čistá data). Funguje na
+  principu vyhledání nejkratší vzdálensoti na segmentech mezi zadanými body.
+  Trasování může být problematické v případě, že máme vrstvu s více
+  navazujícími polygony, kdy nejkratší vzdálenost nemusí vést po vnější hraně
+  skupiny polygonů (:numref:`snapping_trace_poly`). To lze vyřešit přidáním
+  více bodů při trasování, popř. u polygonů využitím funkce `Vyvarovat se
+  protnutní`
 
 .. figure:: images/snapping_trace_line.png 
    :class: middle 
