@@ -76,7 +76,8 @@ hodnotu.
   , `plochý`, `čtverec`) :numref:`zakonceni`
 - :item:`Připojit styl` - styl obalové zóny při rozích (`kulatý`, `kosý`,
   `zaoblený`) :numref:`spoj`
-- :item:`Miter limit` - maximální vzdálenost od odsazené křivky při vytváření kosého spoje
+- :item:`Miter limit` - maximální vzdálenost od odsazené křivky při vytváření
+  kosého spoje
 
 .. _zakonceni:
 
