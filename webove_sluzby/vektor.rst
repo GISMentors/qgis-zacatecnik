@@ -1,10 +1,3 @@
-.. |mActionAddWfsLayer| image:: ../images/icon/mActionAddWfsLayer.png
-   :width: 1.5em
-.. |mIconWfs| image:: ../images/icon/mIconWfs.png
-   :width: 1.5em
-.. |mIconConnect| image:: ../images/icon/mIconConnect.png
-   :width: 1.5em
-
 Připojení WFS služby
 ====================
 

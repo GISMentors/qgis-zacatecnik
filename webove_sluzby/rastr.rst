@@ -1,11 +1,3 @@
-.. |mActionAddWmsLayer| image:: ../images/icon/mActionAddWmsLayer.png
-   :width: 1.5em
-.. |mIconWms| image:: ../images/icon/mIconWms.png
-   :width: 1.5em
-.. |mIconConnect| image:: ../images/icon/mIconConnect.png
-   :width: 1.5em
-   
-   
 Připojení WMS/WMTS služby
 =========================
 
