@@ -1,38 +1,4 @@
-.. |srs| image:: ../images/icon/mActionSetProjection.png
-   :width: 1.5em
 .. |box_yes| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |box_no| image:: ../images/icon/checkbox_unchecked.png
-   :width: 1.5em
-.. |mIconVectorLayer| image:: ../images/icon/mIconVectorLayer.png
-   :width: 1.5em
-.. |mActionSelect| image:: ../images/icon/mActionSelect.png
-   :width: 1.5em
-.. |buffer| image:: ../images/icon/buffer.png
-   :width: 1.5em
-.. |dissolve| image:: ../images/icon/dissolve.png
-   :width: 1.5em
-.. |mIconSelectRemove| image:: ../images/icon/mIconSelectRemove.png
-   :width: 1.5em
-.. |mIconEditable| image:: ../images/icon/mIconEditable.png
-   :width: 1.5em
-.. |mActionDeleteAttribute| image:: ../images/icon/mActionDeleteAttribute.png
-   :width: 1.5em
-.. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
-   :width: 1.5em
-.. |intersect| image:: ../images/icon/intersect.png
-   :width: 1.5em
-.. |mActionSaveEdits| image:: ../images/icon/mActionSaveEdits.png
-   :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
-   :width: 1.5em
-.. |union| image:: ../images/icon/union.png
-   :width: 1.5em
-.. |select_location| image:: ../images/icon/select_location.png
-   :width: 1.5em
-.. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
-   :width: 1.5em
-.. |clipper| image:: ../images/icon/clip.png
    :width: 1.5em
 
 Ukázka jednoduchých prostorových funkcí
@@ -67,17 +33,19 @@ přednastavený na WGS 84 (:epsg:`4236`), což lze zkontrolovat ve
 stavovém řádku vpravo dole. Budeme pracovat s daty České republiky,
 kde se obvykle používá souřadnicový systém S-JTSK (:epsg:`5514`).
 
-V prvním kroku proto nastavíme souřadnicový systém projektu. Z menu lišty
-vybereme :menuselection:`Nastavení --> Možnosti`. Otevře se dialogové okno, kde
-v záložce :item:`SRS` nastavíme ``Vždy začít nové projekty s tímto SRS`` na
-``EPSG:5514 - S-JTSK (Greenwich)/Krovak East North``, a to kliknutím na ikonku 
-|srs| :sup:`Vyberte SRS`. Tento souřadnicový systém nastavíme i pro nové vrstvy
-v položce ``SRS pro nové vrstvy`` a ``Použít výchozí SRS``. Na závěr povolíme 
-|box_yes| ``"on-the-fly" SRS transformaci`` pro případ, že bychom v projektu
-pracovali s vrstvami v souřadnicovém systému, který je odlišný od systému
-projektu. Postup je popsaný v kapitole :ref:`Souřadnicový systém<sour-system>`.
+V prvním kroku proto nastavíme souřadnicový systém projektu. Z menu
+lišty vybereme :menuselection:`Nastavení --> Možnosti`. Otevře se
+dialogové okno, kde v záložce :item:`SRS` nastavíme ``Vždy začít nové
+projekty s tímto SRS`` na ``EPSG:5514 - S-JTSK (Greenwich)/Krovak East
+North``, a to kliknutím na ikonku |mActionSetProjection| :sup:`Vyberte
+SRS`. Tento souřadnicový systém nastavíme i pro nové vrstvy v položce
+``SRS pro nové vrstvy`` a ``Použít výchozí SRS``. Na závěr povolíme
+|box_yes| ``"on-the-fly" SRS transformaci`` pro případ, že bychom v
+projektu pracovali s vrstvami v souřadnicovém systému, který je
+odlišný od systému projektu. Postup je popsaný v kapitole
+:ref:`Souřadnicový systém<sour-system>`.
     
-V dalším kroku kliknutím na |mIconVectorLayer| :sup:`Přidat vektorovou vrstvu`
+V dalším kroku kliknutím na |mActionAddOgrLayer| :sup:`Přidat vektorovou vrstvu`
 do mapového okna přidáme vrstvu :map:`kraje.shp`. Tlačítkem |mActionSelect| 
 :sup:`Vybrat prvky oblastí nebo jednoklikem` klikneme do mapy na místo, kde se
 nachází kraj Hlavního města Prahy (:numref:`u-select-praha`).
@@ -97,7 +65,7 @@ nachází kraj Hlavního města Prahy (:numref:`u-select-praha`).
    Výběr území Prahy kliknutím do mapového okna.
 
 Následně vytvoříme obalovou zónu 100 km od hranice Prahy. Použijeme prostorovou
-analýzu |buffer| :sup:`Buffer`. Z menu lišty vybereme :menuselection:`Vektor 
+analýzu |mAlgorithmBuffer| :sup:`Buffer`. Z menu lišty vybereme :menuselection:`Vektor 
 --> Nástroje geoprocessingu --> Obalové zóny`. V dialogovém okně nastavíme
 vstupní vrstvu, t.j. :map:`kraje`, zaklikneme |box_yes| :sup:`Použít pouze 
 vybrané prvky`, protože chceme obalovou zónu jen kolem konkrétního vybraného
@@ -132,7 +100,7 @@ na :numref:`u-p100km-styl` transparentní výplň, červené ohraničení širok
 
 Dále provedeme sjednocení všech krajů, resp. vrstvu České republiky. Budeme ji
 potřebovat na určení plochy ČR. Využijeme nástroj geoprocessingu 
-|dissolve| :sup:`Rozpustit`. 
+|mAlgorithmDissolve| :sup:`Rozpustit`. 
 Před touto funkcí ještě zrušíme výběr kraje Prahy pomocí |mIconSelectRemove| 
 :sup:`Zrušit výber prvků ve všech vrstvách`. Výstupní vektorovou vrstvu
 pojmenujeme :map:`hraniceCR`, viz :numref:`u-dissolve`.
@@ -168,7 +136,7 @@ stisknutím |mIconEditable|.
         
    Vytvoření atributu s výměrou České republiky.
 
-Poté použijeme nástroj |intersect| :sup:`Průsečník`, kde vstupem budou vrstvy 
+Poté použijeme nástroj |mAlgorithmIntersect| :sup:`Průsečník`, kde vstupem budou vrstvy 
 :map:`hraniceCR` a :map:`P100km`. Výsledek je zobrazen na :numref:`intersect-map`.     
 
 .. _intersect-map:
