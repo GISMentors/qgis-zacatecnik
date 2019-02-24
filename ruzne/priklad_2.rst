@@ -1,38 +1,8 @@
-.. |srs| image:: ../images/icon/mActionSetProjection.png
-   :width: 1.5em
 .. |box_yes| image:: ../images/icon/checkbox.png
    :width: 1.5em
 .. |box_no| image:: ../images/icon/checkbox_unchecked.png
    :width: 1.5em
-.. |mIconVectorLayer| image:: ../images/icon/mIconVectorLayer.png
-   :width: 1.5em
-.. |mActionSelect| image:: ../images/icon/mActionSelect.png
-   :width: 1.5em
-.. |buffer| image:: ../images/icon/buffer.png
-   :width: 1.5em
-.. |dissolve| image:: ../images/icon/dissolve.png
-   :width: 1.5em
-.. |mIconSelectRemove| image:: ../images/icon/mIconSelectRemove.png
-   :width: 1.5em
-.. |mIconEditable| image:: ../images/icon/mIconEditable.png
-   :width: 1.5em
-.. |mActionDeleteAttribute| image:: ../images/icon/mActionDeleteAttribute.png
-   :width: 1.5em
-.. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
-   :width: 1.5em
-.. |intersect| image:: ../images/icon/intersect.png
-   :width: 1.5em
-.. |mActionSaveEdits| image:: ../images/icon/mActionSaveEdits.png
-   :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
-   :width: 1.5em
-.. |union| image:: ../images/icon/union.png
-   :width: 1.5em
 .. |select_location| image:: ../images/icon/select_location.png
-   :width: 1.5em
-.. |mActionZoomToLayer| image:: ../images/icon/mActionZoomToLayer.png
-   :width: 1.5em
-.. |clipper| image:: ../images/icon/clip.png
    :width: 1.5em
 
 Ukázka kombinace prostorových funkcí a dotazů
@@ -66,15 +36,15 @@ Data
 Postup v QGIS
 ^^^^^^^^^^^^^
 
-Do mapového okna pomocí |mIconVectorLayer| :sup:`Přidat vektorovou
+Do mapového okna pomocí |mActionAddOgrLayer| :sup:`Přidat vektorovou
 vrstvu` přidáme potřebná :ref:`data <data-ul2>`. Vidíme, že vrstva
 železnic je pro celou Českou republiku. Části mimo Prahy ale nebudeme
 potřebovat, proto vrstvu ořežeme. Musíme si vytvořit hranici města. Z
 menu :menuselection:`Vektor --> Nástroje geoprocessingu` vybereme
-nástroj |dissolve| :sup:`Rozpustit`, kde jako vstupní vektorovou
+nástroj |mAlgorithmDissolve| :sup:`Rozpustit`, kde jako vstupní vektorovou
 vrstvu nastavíme :map:`spravniobvody`, pole rozpuštění na ``---
 Rozpustit vše ---`` a výstup uložíme jako :map:`praha`.  Potom
-použijeme nástroj na ořezání |clipper| :sup:`Ořezávač`. Vstupem bude
+použijeme nástroj na ořezání |mAlgorithmClip| :sup:`Ořezávač`. Vstupem bude
 vektor železnic České republiky, ořezávat budeme podle nově vytvořené
 polygonové vrstvy :map:`Praha` a výsledek uložíme jako
 :map:`zeleznice_p`, tedy železnice pouze na území Prahy. Dialogová okna
@@ -108,7 +78,7 @@ data přehledně zobrazíme (:numref:`vstup-ul2`).
 	 :menuselection:`Projekt --> Uložit`. 
 
 Teď přistoupíme k tvorbě obalové zóny kolem pražských železnic, na to využijeme
-nástroj |buffer| :sup:`Buffer`. V jednom dialogovém okně nastavíme vstup, míru
+nástroj |mAlgorithmBuffer| :sup:`Buffer`. V jednom dialogovém okně nastavíme vstup, míru
 aproximace na ``70``,  velikost obalové zóny na ``500 m``, zaklikneme |box_yes| 
 :sup:`Rozpustit výsledky obalové zóny`, aby byla obalová zóna celistvá a výstup
 uložíme jako :map:`zeleznice_pb`, povolíme |box_yes| :sup:`Přidat výsledek do 
@@ -159,8 +129,8 @@ zaškrtnuté |box_yes| a zkontrolujeme i souřadnicový systém
 
 Následuje spojení "negativních" zón. Cílem je dostat vektorovou vrstvu, která je
 sjednocením obalové zóny železnic a nepožadovaných správních obvodů. Využijeme
-nástroj |union| :sup:`Sjednotit`. Vznikne výstup (například 
-:map:`oblasti_neg1`), na který opět použijeme  |dissolve| :sup:`Rozpustit`.
+nástroj |mAlgorithmUnion| :sup:`Sjednotit`. Vznikne výstup (například 
+:map:`oblasti_neg1`), na který opět použijeme  |mAlgorithmDissolve| :sup:`Rozpustit`.
 Výsledek pojmenujeme :map:`oblasti_neg` (:numref:`neg`).
 
 .. _neg:
