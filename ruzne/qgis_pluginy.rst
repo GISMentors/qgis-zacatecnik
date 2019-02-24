@@ -1,16 +1,6 @@
-.. |plug1| image:: ../images/icon/mActionShowPluginManager.png
-   :width: 1.5em
 .. |checkbox_unchecked| image:: ../images/icon/checkbox_unchecked.png
    :width: 1.5em
-.. |plugin| image:: ../images/icon/plugin.png
-   :width: 1.5em
-.. |plugin-installed| image:: ../images/icon/plugin-installed.png
-   :width: 1.5em
 .. |q2t| image:: ../images/icon/q2t.png
-   :width: 1.5em
-.. |plugin-upgrade| image:: ../images/icon/plugin-upgrade.png
-   :width: 1.5em
-.. |mActionTransformSettings| image:: ../images/icon/mActionTransformSettings.png
    :width: 1.5em
 .. |star| image:: ../images/icon/osm_star.png
    :width: 1.5em
@@ -41,8 +31,6 @@
 .. |askcor| image:: ../ruzne/images/p_askcor.png
    :width: 1.5em
 .. |askcorcopy| image:: ../ruzne/images/p_askcorcopy.png
-   :width: 1.5em
-.. |mActionNewVectorLayer| image:: ../images/icon/mActionNewVectorLayer.png
    :width: 1.5em
 .. |selectcreatelayer| image:: ../images/icon/selectcreatelayer.png
    :width: 1.5em
@@ -78,7 +66,7 @@ Správce zásuvných modulů
 ========================
 
 V prvním kroku v menu zvolíme :menuselection:`Zásuvné moduly --> Spravovat a instalovat
-zásuvné moduly`, ikona |plug1|.
+zásuvné moduly`, ikona |mActionShowPluginManager|.
 Spustí se dialogové okno (:numref:`vse`), které slouží k prohlížení, vypínání a
 zapínání  dostupných modulů příslušné verze QGISu.
 
@@ -129,7 +117,7 @@ Následně se dá tento modul přeinstalovat nebo úplně odinstalovat
    kteréhokoli z modulů.
 
 Pod záložkou |plugin-upgrade| :sup:`Aktualizovatelný` se nachází zásuvné moduly,
-které jsou dostupné i v novější verzi. Záložka |mActionTransformSettings| 
+které jsou dostupné i v novější verzi. Záložka |settings| 
 :sup:`Nastavení` obsahuje nastavení týkající se kontroly aktualizací modulů,
 experimentálních a neschválených modulů a zobrazuje i seznam repozitářů, které
 lze přidávat, editovat nebo mazat, viz :numref:`akt-nast`.
