@@ -1,12 +1,3 @@
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
-   :width: 1.5em
-.. |mActionSelectRectangle| image:: ../images/icon/mActionSelectRectangle.png
-   :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
-   :width: 1.5em
-
 Přidání a export dat
 ====================
 

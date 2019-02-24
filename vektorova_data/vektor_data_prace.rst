@@ -1,58 +1,6 @@
-.. |symbology image:: ../images/icon/symbology.png
-   :width: 2em
-.. |selectstring| image:: ../images/icon/selectstring.png
-   :width: 2.5em
-.. |symbologyAdd| image:: ../images/icon/symbologyAdd.png
-   :width: 1.5em
-.. |symbologyRemove| image:: ../images/icon/symbologyRemove.png
-   :width: 1.5em
-.. |mActionOpenTable| image:: ../images/icon/mActionOpenTable.png
-   :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
-    :width: 1.5em
-.. |mActionUnselectAttributes| image:: ../images/icon/mActionUnselectAttributes.png
-    :width: 1.5em
-.. |mActionInvertSelection| image:: ../images/icon/mActionInvertSelection.png
-   :width: 1.5em
-.. |mActionSelectAll| image:: ../images/icon/mActionSelectAll.png
-   :width: 1.5em
-.. |mActionSelectedToTop| image:: ../images/icon/mActionSelectedToTop.png
-   :width: 1.5em
-.. |mActionArrowUp| image:: ../images/icon/mActionArrowUp.png
-   :width: 1.5em
-.. |mActionArrowDown| image:: ../images/icon/mActionArrowDown.png
-   :width: 1.5em
-.. |locked| image:: ../images/icon/locked.png
-   :width: 1.5em
-.. |mActionFilterMap| image:: ../images/icon/mActionFilterMap.png
-   :width: 1.5em
-.. |mIconExpression| image:: ../images/icon/mIconExpression.png
-   :width: 1.5em
-.. |mActionConditionalFormatting| image:: ../images/icon/mActionConditionalFormatting.png
-   :width: 1.5em
-.. |mDockify| image:: ../images/icon/mDockify.png
-   :width: 1.5em
-.. |mActionPanToSelected| image:: ../images/icon/mActionPanToSelected.png
-   :width: 1.5em
-.. |mActionZoomToSelected| image:: ../images/icon/mActionZoomToSelected.png
-   :width: 1.5em
-.. |rendererSingleSymbol| image:: ../images/icon/rendererSingleSymbol.png
-   :width: 1.5em
-.. |rendererGraduatedSymbol| image:: ../images/icon/rendererGraduatedSymbol.png
-   :width: 1.5em
-.. |rendererCategorizedSymbol| image:: ../images/icon/rendererCategorizedSymbol.png
-   :width: 1.5em
-.. |symbology| image:: ../images/icon/symbology.png
-   :width: 1.5em
-.. |mActionLabeling| image:: ../images/icon/mActionLabeling.png
-   :width: 1.5em
-.. |stylepreset| image:: ../images/icon/stylepreset.png
-   :width: 1.5em
-
-
-
 Vlastnosti vrstvy
 =================
+
 Atributová tabulka
 ------------------
 
@@ -77,9 +25,9 @@ vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
 
 - kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru
 
-- pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr 
-nahoru` lze zobrazit vybrané prvky na prvním místě tabulky, což nám 
-vybraná data zpřehlední.
+- pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr nahoru`
+lze zobrazit vybrané prvky na prvním místě tabulky, což nám vybraná
+data zpřehlední.
 
 - lze použít funkce výběru, které jsou dostupné i v hlavním okně:
 
@@ -95,9 +43,9 @@ Okno atributové tabulky lze otevírat ve dvou režimech buď v samostatném okn
 nebo jako panel. Přepínat tyto režimy lze pomocí funkce
 |mDockify|:sup:`Dock Attribute Panel`.
 
-.. tip:: Pomocí nabídky |mActionFilterMap| v levém dolním rohu lze zvolit filtr 
+.. tip:: Pomocí nabídky |mActionFilter2| v levém dolním rohu lze zvolit filtr 
    zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny 
-   prvky ve vrstvě, tedy hodnota: |mActionFilterMap| :item:`Zobrazit všechny 
+   prvky ve vrstvě, tedy hodnota: |mActionFilter2| :item:`Zobrazit všechny 
    prvky`
 
    Pomocí funkce |mActionConditionalFormatting| :sup:`Pravidla`
@@ -140,6 +88,7 @@ Styl
 
 |symbology| Symbologie
 **********************
+
 Pomocí rolovací nabídky |selectstring| vybereme typ symbologie:
 
 - |rendererSingleSymbol|:sup:`Jednoduchý symbol` - zde máme na výběr z

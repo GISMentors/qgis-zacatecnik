@@ -1,76 +1,3 @@
-.. |selectstring| image:: ../images/icon/selectstring.png
-   :width: 2.5em
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |checkbox_unchecked| image:: ../images/icon/checkbox_unchecked.png
-   :width: 1.5em
-.. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
-   :width: 1.5em
-.. |mActionAllEdits| image:: ../images/icon/mActionAllEdits.png
-   :width: 1.5em
-.. |mActionDeleteAttribute| image:: ../images/icon/mActionDeleteAttribute.png
-   :width: 1.5em
-.. |mActionNewAttribute| image:: ../images/icon/mActionNewAttribute.png
-   :width: 1.5em
-.. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
-   :width: 1.5em
-.. |mActionReshape| image:: ../images/icon/mActionReshape.png
-   :width: 1.5em
-.. |mActionMergeFeatures| image:: ../images/icon/mActionMergeFeatures.png
-   :width: 1.5em
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |mActionSplitFeatures| image:: ../images/icon/mActionSplitFeatures.png
-   :width: 1.5em
-.. |mActionNodeTool| image:: ../images/icon/mActionNodeTool.png
-   :width: 1.5em
-.. |mActionMoveFeature| image:: ../images/icon/mActionMoveFeature.png
-   :width: 1.5em
-.. |mActionCapturePolygon| image:: ../images/icon/mActionCapturePolygon.png
-   :width: 1.5em
-.. |mActionCapturePoint| image:: ../images/icon/mActionCapturePoint.png
-   :width: 1.5em
-.. |selectnumber| image:: ../images/icon/selectnumber.png
-   :width: 2.5em
-.. |mActionCaptureLine| image:: ../images/icon/mActionCaptureLine.png
-   :width: 1.5em
-.. |mActionToggleEditing| image:: ../images/icon/mActionToggleEditing.png
-   :width: 1.5em
-.. |mActionSaveAllEdits| image:: ../images/icon/mActionSaveAllEdits.png
-   :width: 1.5em
-.. |splitter| image:: ../images/icon/digitizing_tools/splitter.png
-   :width: 1.5em
-.. |plugin| image:: ../images/icon/plugin.png
-   :width: 1.5em
-.. |remove| image:: ../images/icon/remove.png
-   :width: 1.5em
-.. |mIconExpression| image:: ../images/icon/mIconExpression.png
-   :width: 1.5em
-.. |mActionMoveFeatureCopy| image:: ../images/icon/mActionMoveFeatureCopy.png
-   :width: 1.5em
-.. |mActionNewVectorLayer| image:: ../images/icon/mActionNewVectorLayer.png
-   :width: 1.5em
-.. |mIconSnapping| image:: ../images/icon/mIconSnapping.png
-   :width: 1.5em
-.. |mIconSnappingAllLayers| image:: ../images/icon/mIconSnappingAllLayers.png
-   :width: 1.5em
-.. |mIconSnappingAdvanced| image:: ../images/icon/mIconSnappingAdvanced.png
-   :width: 1.5em
-.. |mIconSnappingActiveLayer| image:: ../images/icon/mIconSnappingActiveLayer.png
-   :width: 1.5em
-.. |mIconSnappingVertexAndSegment| image:: ../images/icon/mIconSnappingVertexAndSegment.png
-   :width: 1.5em
-.. |mIconSnappingSegment| image:: ../images/icon/mIconSnappingSegment.png
-   :width: 1.5em
-.. |mIconSnappingVertex| image:: ../images/icon/mIconSnappingVertex.png
-   :width: 1.5em
-.. |mIconSnappingIntersection| image:: ../images/icon/mIconSnappingIntersection.png
-   :width: 1.5em
-.. |mActionTracing| image:: ../images/icon/mActionTracing.png
-   :width: 1.5em
-.. |mIconTopologicalEditing| image:: ../images/icon/mIconTopologicalEditing.png
-   :width: 1.5em
-
 Tvorba nových vrstev a jejich editace
 =====================================
 
@@ -188,7 +115,7 @@ klávesy :kbd:`Backspace` nebo :kbd:`Del`.
 Nástroj uzlů lze použít ve dvou módech, buď pouze pro vrstvu kterou editujeme
 , nebo pro všechny vrstvy které jsou v módu editace
 
-|remove| :sup:`Vymazat vybrané` - smaže vybrané prvky
+|mActionRemove| :sup:`Vymazat vybrané` - smaže vybrané prvky
 
 |mActionMoveFeature| :sup:`Přesunout prvek/prvky` - jednotlivé prvky přesuneme kliknutím na prvek, posunutím a opětovným klliknutím
 
@@ -374,7 +301,7 @@ Editace atributové tabulky
 Pokud máme aktivní editaci (|mActionToggleEditing| :sup:`Přepnout editaci`),
 můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy. V okně
 atributové tabulky lze editaci ukládat |mActionSaveAllEdits| :sup:`Uložit
-změny vrstvy` i mazat vybrané prvky |remove| :sup:`Vymazat vybrané`:
+změny vrstvy` i mazat vybrané prvky |mActionDeleteSelected| :sup:`Vymazat vybrané`:
 
     - kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty
       tabulky
