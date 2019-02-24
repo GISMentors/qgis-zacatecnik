@@ -1,8 +1,3 @@
-.. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
-   :width: 1.5em
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
-   :width: 1.5em
-
 Ukázka zpracování dat
 ---------------------
 
