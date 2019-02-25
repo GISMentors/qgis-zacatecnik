@@ -66,6 +66,10 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 
    .. figure:: images/qgis_locale.png
 
+   K dispozici jsou i historické školící materiály k verzím QGIS
+   :skoleni:`2.14 <qgis-zacatecnik/2.14>` a :skoleni:`2.18
+   <qgis-zacatecnik/2.18>`.
+
 .. index::
    pair: datové sady; ke stažení
 
