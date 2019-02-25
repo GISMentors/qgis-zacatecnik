@@ -12,7 +12,7 @@ do jiných formátů je možný pomocí knihovny nástrojů.
 
 Pro převod mezi formáty se používá knihovna `GDAL
 <http://gdal.org/>`_.  Seznam podporovaných vektorových formátů i s
-doplňujícími informacemi je dostupný na `stránce projektu
+doplňujícími informacemi je dostupný na `stránce projektu GDAL
 <http://gdal.org/ogr_formats.html>`_.
 
 .. toctree::
