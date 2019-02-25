@@ -14,7 +14,7 @@ Na obrázku níže jsou označeny základní části systému.
    přizpůsobit si tak pracovní prostředí. Pokud budete rozšiřovat
    funkčnost systému, tak je dobré si vhodně umístit nové nástroje.
 
-.. figure:: images/menu_description.svg
+.. figure:: images/menu_description.png
    :class: large
    :scale-latex: 80
 

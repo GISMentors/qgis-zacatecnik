@@ -64,7 +64,7 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
    uvedených příkladů. Dále předpokládáme zapnutou *českou
    lokalizaci*, :menuselection:`Možnosti --> Obecné`.
 
-   .. figure:: images/qgis_locale.svg
+   .. figure:: images/qgis_locale.png
 
 .. index::
    pair: datové sady; ke stažení
