@@ -3,10 +3,9 @@ Data AOPK
 Agentura Ochrany Přírody a Krajiny ČR
 (`AOPK ČR <http://www.ochranaprirody.cz/>`_) poskytuje různá data týkající se
 ochrany přírody (oblasti chráněných území, `VMB - vrstva mapování biotopů <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=1035>`_ , nálezy
-organismů) v různé podobě (souborové formáty, webové služby - WMS,WFS, ...)
+organismů) v různé podobě (souborové formáty, webové služby - WMS,WFS, ...).
 Obecné informace k získávání a poskytování dat můžeme nalézt na Portálu
-informačního systému ochrany přírody (`Portál ISOP <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=3&nabidka=hlavni>`_)
-. Obecně jsou data poskytována ve třech úrovních a to jako otevřená data,
+informačního systému ochrany přírody (`Portál ISOP <https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=3&nabidka=hlavni>`_). Obecně jsou data poskytována ve třech úrovních a to jako otevřená data,
 otevřená data po registraci, a data poskytovaná na základě žádosti (smlouvy).
 
 Jako rozcestník k získání dat můžeme použít stránky `https://data.nature.cz/
@@ -21,7 +20,7 @@ licenční podmínky, odkaz ke stažení dat popř. na webovou službu.
 
 V případě, že datová sada vyžaduje registraci, odkaz stažení dat Vás přesměřuje
 na přihlášení do ISOP (pokud již nejste přihlášení). Pokud nemáte zaregistrovaný
- účet můžete použít odkaz `Založit nový účet v informačním systému AOPK ČR <https://idm.nature.cz/idm/#/registration>`_ přímo z přihlašovacího formuláře.
+účet můžete použít odkaz `Založit nový účet v informačním systému AOPK ČR <https://idm.nature.cz/idm/#/registration>`_ přímo z přihlašovacího formuláře.
 
 .. figure:: images/login.png 
    :class: small 
@@ -43,7 +42,7 @@ Nálezová databáze ochrany přírody
 
 `Nálezová databáze ochrany přírody <https://portal.nature.cz/nd/>`_ je databáze
 nálezů organismů, které jsou lokalizované v čase a prostoru. Od roku 2017 je
-databáze, s výjimkou neveřejných nálezů chráněných druhů, plně dostupná
+databáze, s výjimkou citlivých nálezů chráněných druhů, plně dostupná
 veřejnosti, nutné je pouze se zaregistrovat. Přístup do nálezové databáze
 ochrany přírody je umožněn prostřednictvím aplikce `Filtr nálezových dat <https://portal.nature.cz/nd/find.php?>`_. Pokud potřebujeme přístup ke všem
 druhům bez výjimky, lze požádat o *plný přístup*. Ten je potom poskytován na
@@ -67,10 +66,10 @@ rok zde přibývá přibližně 1 až 1.5 milionu nových záznamů.
 Filtr nálezových dat
 ********************
 Na úvodní stránce nálezové databáze lze zadat název druhu, a po zadání vyhledání
- nás stránka přesměřuje na *Filtr nálezových dat*, kde můžeme data filtrovat
- na základě více parametrů např: autora nálezu, datumu/období, území (katastry,
- CHÚ, síťové mapování, ...), ručně zakresleného území v mapě (max. 25km:sup:`2`)
- , kategorie ochrany, ...
+nás stránka přesměřuje na *Filtr nálezových dat*, kde můžeme data filtrovat
+na základě více parametrů např: autora nálezu, datumu/období, území (katastry,
+CHÚ, síťové mapování, ...), ručně zakresleného území v mapě (max. 25km:sup:`2`)
+, kategorie ochrany, ...
 
 .. figure:: images/filtr.png 
    :class: middle 
@@ -82,8 +81,8 @@ Na úvodní stránce nálezové databáze lze zadat název druhu, a po zadání 
 Po zadání parametrů pro filtrování stiskneme tlačítko :item:`Filtrovat`.
 Výsledky filtru se nám vypíší jako jednotlivé záznamy, ve formě tabulky. Zde
 uvidíme základní a nejdůležitější informace o nálezu (co? - kde? - kdy? - kdo?).
- Výsledky je také možné zobrazit v mapě nebo síťové mapě, popř. pokud jsme
- nefiltrovaly na základě druhů lze využít *Sumarizace výsledků podle druhů*.
+Výsledky je také možné zobrazit v mapě nebo síťové mapě, popř. pokud jsme
+nefiltrovaly na základě druhů lze využít *Sumarizace výsledků podle druhů*.
 
 
 .. figure:: images/priklad_filtr.png 
