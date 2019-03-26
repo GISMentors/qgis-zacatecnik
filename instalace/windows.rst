@@ -109,17 +109,23 @@ OSGeo4W instalátor
 ------------------
 
 Instalátor OSGeo4W je dostupný na adrese:
-https://trac.osgeo.org/osgeo4w/.
+https://trac.osgeo.org/osgeo4w/ (`32bit
+<http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86.exe>`__ nebo
+`64bit <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`__
+verze).
 
 Pomocí tohoto instalátoru lze kromě QGISu nainstalovat i dalších
 softwary jako např. GRASS GIS, SAGA GIS a další. I zde si můžete
-vybrat mezi dlouhodobou stabilní (`Advanced Install`,
-:menuselection:`Desktop --> qgis-ltr`) anebo krátkodobou verzi QGISu
-(`Express Desktop Install`).
+vybrat mezi *dlouhodobou stabilní* (``Advanced Install``,
+:menuselection:`Desktop --> qgis-ltr` nebo
+:menuselection:`qgis-ltr-full` včetně všech doporučených závislostí
+jako je GRASS GIS anebo SAGA) anebo *krátkodobou verzi* QGISu
+(``Express Desktop Install``).
 
 .. figure:: images/osgeo4w_install_1.png
 
-   Spuštění instalátoru.
+   Spuštění instalátoru, níže je uveden postup pro instalaci
+   krátkodobé verze QGISu.
 
 .. figure:: images/osgeo4w_install_2.png
 
