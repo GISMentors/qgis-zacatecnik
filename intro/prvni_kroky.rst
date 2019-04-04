@@ -87,7 +87,7 @@ nastavení se ukládá do tzv. projektu. Uložení do projektu umožňuje
 opětovné načtení všech dat i s kompletním nastavením systému.
 
 Uložit projekt lze ve dvou základních variantách. Jednou z nich je
-samostatný :file:`.qgs` soubor. Druhou je volba kompimovaného souboru.
+samostatný :file:`.qgs` soubor. Druhou je volba komprimovaného souboru
 :file:`.qgz`, který obsahuje samotný projekt ve formě :file:`.qgs` a
 :file:`.qgd` kde se ukládají různá lokální nastavení a parametry.
 
