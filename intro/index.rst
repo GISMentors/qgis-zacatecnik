@@ -8,6 +8,7 @@ První kroky
    ../instalace/index
    prvni_kroky
    popis_rozhrani
+   zakladni_nastaveni
    import_export
 
 
