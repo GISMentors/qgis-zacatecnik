@@ -157,38 +157,7 @@ vybreme zdrojový atribut popisku.
     přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru 
     |mIconExpression|.
 
-Práce se styly
-**************
 
-Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Stylování vrstvy`, který lze aktivovat pravým kliknutím na prázdné místo v hlavním panelu a výběrem z nabídky nebo mocí klávesové zkratky :item:`F7`. Výhodou panelu stylování je, že  lze rychle, bez znovuotevírání okna, přepínat mezi vrstvyami,veškeré provedené změny v symbologii se vykreslí ihned, a také je zde možnost kroku zpět na předchozí symbologii, nebo přímo procházení historie všech změn.
-
-.. figure:: images/styl_panel.png 
-   :class: small 
-   :scale-latex: 40 
-
-   Panel stylování
-
-.. tip:: V rámci vrstvy lze vytvořit různé "verze" nastylování, které 
-        můžeme podle potřeby měnit. Tato funkce může být užitečná 
-        např. při vytváření mapových výstupů jednoho zdroje dat s různou 
-        symbologií. Styly lze ovládat (přídání, smazání, přejmenování, 
-        zvolení, export) pomocí tlačítka ve spodní části okna vlastností, 
-        nebo z kontextového menu vrstvy (pravý klik na vrstvu v panelu 
-        vrstev), zde je přepínání jednotlivých stylů rychlejší. V panelu 
-        stylování se styly ovládají v samostatné záložce
-        stylepreset|:sup:`Správce stylů`.
-
-	.. figure:: images/styl_kat.png 
-	   :class: middle 
-	   :scale-latex: 40 
-
-	   Výběr stylu pomocí kontextového menu z panelu vrstev
-
-	.. figure:: images/styl_kont.png 
-	   :class: middle 
-	   :scale-latex: 40 
-
-	   Výběr stylu pomocí kontextového menu z panelu vrstev
 
 ..  Metadata
     ^^^^^^^^
@@ -205,3 +174,81 @@ Pro pohodlnější práci se stylováním, slouží panel stylování :item:`Sty
 
        Příklad výpisu metadat vrstvy ve formátu PostGIS.
 
+
+Panel stylování
+---------------
+
+Pro pohodlnější práci se stylováním, slouží panel stylování 
+:item:`Stylování vrstvy`, který lze aktivovat pravým kliknutím na 
+prázdné místo v hlavním panelu a výběrem z nabídky nebo mocí klávesové 
+zkratky :item:`F7`. Výhodou panelu stylování je, že  lze rychle, bez 
+znovuotevírání okna, přepínat mezi vrstvyami,veškeré provedené změny v 
+symbologii se vykreslí ihned, a také je zde možnost kroku zpět na 
+předchozí symbologii, nebo přímo procházení historie všech změn.
+
+.. figure:: images/styl_panel.png 
+   :class: small 
+   :scale-latex: 40 
+
+   Panel stylování
+
+
+Práce se styly
+--------------
+
+
+Více stylů u vrstvy
+^^^^^^^^^^^^^^^^^^^
+
+V rámci projektu lze vytvořit různé "verze" nastylování u konkrétní 
+vrstvy. Takto přednastavený styl můžeme potom podle potřeby měnit. Tato 
+funkce může být užitečná např. při vytváření mapových výstupů 
+jednoho zdroje dat s různou symbologií. Styly lze ovládat 
+(přídání, smazání, přejmenování, zvolení, export) pomocí 
+tlačítka ve spodní části okna vlastností, nebo z kontextového 
+menu vrstvy (pravý klik na vrstvu v panelu vrstev), zde je 
+přepínání jednotlivých stylů rychlejší. V panelu stylování se 
+styly ovládají v samostatné záložce |stylepreset|:sup:`Správce 
+stylů`.
+
+.. figure:: images/styl_kat.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Výběr stylu pomocí kontextového menu z panelu vrstev
+
+.. figure:: images/styl_kont.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Výběr stylu pomocí kontextového menu z panelu vrstev
+
+..  Kopírování stylů
+    ^^^^^^^^^^^^^^^^
+
+
+Uložení a načtení nastevení vrstvy pomocí souboru
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Celé nastavení (styl, formuláře, atd.) vrstvy lze také uložit do 
+samostatného souboru (*.qml, *.sld), což můžeme využít pro sdílení mezi kolegy, 
+nebo pro pozdější použití nastavení vrstvy v jiném projektu.
+
+Možnost uložení a načtení najdeme v okně `Vlastnoti vrstvy`
+kliknutím na tlačítko :item:`Styl`. První dvě možnosti v 
+nabídce umožní :item:`Načíst styl...` a :item:`Uložit styl...`.
+
+.. figure:: images/styl_soubor_menu.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Možnosti práce se styly 
+
+
+U QML souboru můžeme zvolit (stejně jako při kopírování stylů), které 
+součásti nastavení se budou ukládat popř. načítat.
+
+.. figure:: images/styl_soubor_nacteni.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Načítání nastavení vrstvy ze souboru
