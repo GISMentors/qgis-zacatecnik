@@ -230,15 +230,15 @@ stylů`.
 Uložení a načtení nastevení vrstvy pomocí souboru
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Celé nastavení (styl, formuláře, atd.) vrstvy lze také uložit do 
-samostatného souboru (*.qml, *.sld), což můžeme využít pro sdílení mezi kolegy, 
-nebo pro pozdější použití nastavení vrstvy v jiném projektu.
+samostatného souboru (*.qml, *.sld), což můžeme využít pro sdílení mezi 
+kolegy, nebo pro pozdější použití nastavení vrstvy v jiném projektu.
 
 Možnost uložení a načtení najdeme v okně `Vlastnoti vrstvy`
 kliknutím na tlačítko :item:`Styl`. První dvě možnosti v 
 nabídce umožní :item:`Načíst styl...` a :item:`Uložit styl...`.
 
 .. figure:: images/styl_soubor_menu.png 
-   :class: middle 
+   :class: small 
    :scale-latex: 40 
 
    Možnosti práce se styly 
@@ -248,7 +248,7 @@ U QML souboru můžeme zvolit (stejně jako při kopírování stylů), které
 součásti nastavení se budou ukládat popř. načítat.
 
 .. figure:: images/styl_soubor_nacteni.png 
-   :class: middle 
+   :class: small 
    :scale-latex: 40 
 
    Načítání nastavení vrstvy ze souboru
