@@ -75,33 +75,6 @@ přizpůsobuje dle aktuálního nastavení funkčnosti. Popis jednotlivých
                             
       Výběr z vícero verzí QGIS v MS Windows.
 
-.. index::
-   single: QGIS projekt
 
-
-QGIS projekt
-============
-
-Aktuální nastavení systému QGIS při práci je možné uložit. Takovéto
-nastavení se ukládá do tzv. projektu. Uložení do projektu umožňuje
-opětovné načtení všech dat i s kompletním nastavením systému.
-
-Uložit projekt lze ve dvou základních variantách. Jednou z nich je
-samostatný :file:`.qgs` soubor. Druhou je volba komprimovaného souboru
-:file:`.qgz`, který obsahuje samotný projekt ve formě :file:`.qgs` a
-:file:`.qgd` kde se ukládají různá lokální nastavení a parametry.
-
- .. figure:: images/project.png
-    :scale-latex: 85
-
-    Volba typu uložení projektu.
-
-.. noteadvanced:: QGIS projekt je ukládán jako XML soubor. Vzhledem k
-   tomu, že se jedná o textový formát, lze jej editovat i mimo samotný
-   QGIS. Je však nutné znát strukturu formátu, a proto tento postup
-   lze doporučit pro opravdu pokročilé uživatele a spíše v extrémních
-   případech. Soubor :file:`.qgd` je souborová SQLite databáze projektu.
-   Lze ji také upravovat nezávisle na projektu pomocí běžných nástrojů
-   pro SQLite databázi.
 
 .. todo:: pridat ikonky ?

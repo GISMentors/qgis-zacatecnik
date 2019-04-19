@@ -53,11 +53,14 @@ nebo jako panel. Přepínat tyto režimy lze pomocí funkce
    podle námi definovaných pravidel
 
 
+
 Vlastnosti
 ----------
 
 Vlastnosti vyvoláme dvojklikem na vrstvu nebo pravým tlačítkem myši
 kontextové menu a zvolíme :item:`Vlastnosti`.
+
+.. _vektor-informace:
 
 Informace
 ^^^^^^^^^
