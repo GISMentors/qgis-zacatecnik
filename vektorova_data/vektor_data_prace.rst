@@ -19,7 +19,7 @@ vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
 
    Atributová tabulka vrstvy.
 
-**Zákaldní funkce attributové tabulky**
+**Základní funkce attributové tabulky**
 
 - kliknutím na název pole, lze hodnoty seřadit.
 
