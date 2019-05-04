@@ -42,7 +42,7 @@ dané vzdálenosti od prvků. U bodových prvků má obalová zóna tvar kruhu
 generuje vzdálenostmi od uzlů. Cílem analýzy je tedy vytvořit novou
 polygonovou vrstvu obalových zón. Tuto funkci najdeme v menu
 :menuselection:`Vektor --> Nástroje geoprocessingu --> Obalová
-zóna dle pevné vzdálensoti`. Velikost bufferu lze nastavit i jako proměnlivou
+zóna dle pevné vzdálenosti`. Velikost bufferu lze nastavit i jako proměnlivou
 hodnotu.
 
 .. figure:: images/prost_buffer.png
@@ -72,8 +72,8 @@ hodnotu.
    Obalová zóna s rozdílným počtem segmentů pro aproximaci 
    (vlevo 5, vpravo 50).
 
-- :item:`Styl zakončení` - styl zakončení obalové zóny na konci linií (`kulatý`
-  , `plochý`, `čtverec`) :numref:`zakonceni`
+- :item:`Styl zakončení` - styl zakončení obalové zóny na konci linií (`kulatý`, 
+`plochý`, `čtverec`) :numref:`zakonceni`
 - :item:`Připojit styl` - styl obalové zóny při rozích (`kulatý`, `kosý`,
   `zaoblený`) :numref:`spoj`
 - :item:`Miter limit` - maximální vzdálenost od odsazené křivky při vytváření
