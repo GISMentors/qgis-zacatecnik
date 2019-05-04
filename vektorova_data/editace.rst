@@ -14,7 +14,7 @@ vrstvu --> Nová Shapefile vrstva`.
    
    Nová vektorová vrstva.
 
-V první řadě je nutné zadat cetu, kam se nová vrstva vytvoří. Dále při
+V první řadě je nutné zadat cestu, kam se nová vrstva vytvoří. Dále při
 vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový
 systém vrstvy, a pokud je třeba, přidáme nové atributy. Také lze nastavit
 vytvoření Z hodnot (nadmořské výšky) nebo M hodnot (další měřené hodnoty).
