@@ -166,35 +166,3 @@ Chování lze nastavit dle potřeb v :menuselection:`Nastavení --> Možnosti`,
 záložka :item:`SRS` sekce :item:`Výchozí transformace souřadnic`.
               
 
-První volba |checkbox| :sup:`Ask for datum transformation if several are
-available` zabezpečí, že se vždy při přidávání dat s vícero možnostmi
-transformace otevře dialogové okno výběru. Na obrázku :numref:`trans` jsou
-ukázány různé transformace, které jsou k dispozici v daném páru zdrojového
-a cílového souř. sys. Přejsnější popis každé je k dispozici v spodní části
-okna po jejím označení v seznamu. 
-
-.. _trans:
-
-.. figure:: images/choose_transformation.png
-   :class: medium
-
-   Volba transformačního klíče.
-   
-Druhou volnou můžeme přednastavit vybranou transformaci, která se bude
-automaticky používat u každého výskytu dané kombinace souř. systémů.
-Pomocí tlačítka |mActionSignPlus| přidáme novou kombinaci. V nově
-otevřeném dialogu vybereme zdroojový a cílový souř. systém (buď z nabídky
-rolovacího menu, nebo přes ikonku na konci řádku).
-Po zadání obou položek se do tabulky vypíšou všechny dostupné transformace,
-totožně jako v předchozí variantě.
-Po výběru jedné transformace a uložení tohoto nastvení se tato volba uloží
-a při dalším výkytu této kombinace se vybere nastavená transformace.
-
-Toto nastavení je vhodné provést pro každou kombinaci používaných souř.
-systému, u kterých je možná volba z více transformací.
-
-
-
-
-
-              
