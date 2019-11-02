@@ -7,7 +7,7 @@
 .. only:: html
 
    `GISMentors <http://gismentors.cz>`_ | Školení `GRASS GIS
-   <http://gismentors.cz/skoleni/grass-gis>`_ | `QGIS
+   <http://gismentors.cz/skoleni/grass-gis>`_ | `QGIS 
    <http://gismentors.cz/skoleni/qgis>`_ | `PostGIS
    <http://gismentors.cz/skoleni/postgis>`_ | `GeoPython
    <http://gismentors.cz/skoleni/geopython>`_
@@ -175,7 +175,7 @@ Attribution-ShareAlike 4.0 International License
 Autoři
 ------
 
-Za `GISMentors <http://www.gismentors.cz/>`_:
+Za `GISMentors tým <http://www.gismentors.cz/>`_:
 
 * `Alžbeta Gardoňová <http://www.gismentors.cz/mentors/gardonova/>`_
 * `Ľudmila Furtkevičová <http://www.gismentors.cz/mentors/furtkevicova/>`_

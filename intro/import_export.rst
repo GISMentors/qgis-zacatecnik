@@ -146,9 +146,55 @@ výběr souřadnicového systému.
 
 
 .. warning :: Pokud má vrstva přiřazený špatný sořadnicový systém, tak
-              není vhodné pracovat  s takovouto vrstvou. Vrstva může působit,
+              není vhodné pracovat s takovouto vrstvou. Vrstva může působit,
               že funguje korektně, ale některé nástroje mohou fungovat
               jinak než  uživatel očekává. Některé nástroje při interakci
               vrstev mohou vyžadovat, aby vstupní vrstvy byly ve stejném
               souřadnicovém systému.
+              
+              
+Transformace
+------------
+
+Výchozí nastavení QGIS-u používá tzv. \"on-the-fly\" transformaci, což
+umožňuje pracovat v projektu s daty v jiných souřadnicových systémech, než
+jaký má projekt. Prakticky to znamená, že při každém překreslení mapového
+okna se všechny vrstvy v jiném souřadnicovém systému, než jaký má projekt,
+přepočítávají.
+Některé souř. systémy můžou mít víc než jednu možnost tansformace.
+Chování lze nastavit dle potřeb v :menuselection:`Nastavení --> Možnosti`,
+záložka :item:`SRS` sekce :item:`Výchozí transformace souřadnic`.
+              
+
+První volba |checkbox| :sup:`Ask for datum transformation if several are
+available` zabezpečí, že se vždy při přidávání dat s vícero možnostmi
+transformace otevře dialogové okno výběru. Na obrázku :numref:`trans` jsou
+ukázány různé transformace, které jsou k dispozici v daném páru zdrojového
+a cílového souř. sys. Přejsnější popis každé je k dispozici v spodní části
+okna po jejím označení v seznamu. 
+
+.. _trans:
+
+.. figure:: images/choose_transformation.png
+   :class: medium
+
+   Volba transformačního klíče.
+   
+Druhou volnou můžeme přednastavit vybranou transformaci, která se bude
+automaticky používat u každého výskytu dané kombinace souř. systémů.
+Pomocí tlačítka |mActionSignPlus| přidáme novou kombinaci. V nově
+otevřeném dialogu vybereme zdroojový a cílový souř. systém (buď z nabídky
+rolovacího menu, nebo přes ikonku na konci řádku).
+Po zadání obou položek se do tabulky vypíšou všechny dostupné transformace,
+totožně jako v předchozí variantě.
+Po výběru jedné transformace a uložení tohoto nastvení se tato volba uloží
+a při dalším výkytu této kombinace se vybere nastavená transformace.
+
+Toto nastavení je vhodné provést pro každou kombinaci používaných souř.
+systému, u kterých je možná volba z více transformací.
+
+
+
+
+
               
