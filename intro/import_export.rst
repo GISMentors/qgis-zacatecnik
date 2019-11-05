@@ -164,5 +164,7 @@ přepočítávají.
 Některé souř. systémy můžou mít víc než jednu možnost tansformace.
 Chování lze nastavit dle potřeb v :menuselection:`Nastavení --> Možnosti`,
 záložka :item:`SRS` sekce :item:`Výchozí transformace souřadnic`.
+
+test
               
 
