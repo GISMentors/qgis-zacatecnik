@@ -1,3 +1,6 @@
+.. |ndop_downloader| image:: images/icon.png
+   :width: 1.5em
+
 Data AOPK
 =========
 Agentura Ochrany Přírody a Krajiny ČR
@@ -63,8 +66,73 @@ jednotlivých zdrojů lze prohlížet ve `statistikách
 <https://portal.nature.cz/nd/x_nd_statistiky.php>`_ na stránkách ISOP. Každý
 rok zde přibývá přibližně 1 až 1.5 milionu nových záznamů.
 
-Filtr nálezových dat
-********************
+
+NDOP Downloader
+***************
+
+Pro stažení nálezových dat přímo v QGIS můžeme použít zásuvný modul 
+`NDOP Downloader  <https://opengeolabs.github.io/qgis-ndop-downloader/>`_
+|ndop_downloader|. Tento zásuvný modul lze nainstalovat pomocí menu 
+`Zásuvné moduly --> Spravovat a instalovat zásuvné moduly`. První je 
+nutné povolit experimentální zásuvné moduly. V záložce nastavení 
+zaškrtneme políčko `Zobrazit také experimentální zásuvné moduly`.
+
+Po zadání přihlašovacích údajů lze stáhnout nálezy podle 
+zadaného taxonu nebo oblasti (KÚ,ZCHÚ). Pokud zaškrtnete položku `Uložit 
+přihlašovací údaje`, údaje se uloží do konfiguračního souboru `.ndop.cfg` 
+v domovském adresáři.
+
+.. figure:: images/ndop_downloader.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Okno NDOP Downloaderu v QGIS
+
+Výstupem jsou dostupná data lokalizací (.shp komprimované v .zip) a 
+tabulková data (.csv) pro všechny záznamy. Lokalizace se po ukončení 
+stahování nahrají do projektu. Tabulková data se nahrají do projektu 
+jako Oddělený text a zobrazí se jako body (na základě souřadnic v 
+tabulce). Tato data obsahují body a centroidy většiny polygonů a linií.
+
+**Parametry**:
+
+- **Taxon** - Lze vybrat pomocí rolovací nabídky, nebo vepsáním názvu s funkcí
+  našeptávače. Lze zadávat česká i latinská jména.
+
+- **Region** - Obdobně jako u taxonu. V případě že položka zůstane nevyplněná, 
+  získáme data z clého území ČR. Naopak, pokud vybyreme území 
+  regionu a necháme prázdné políčko taxonu, získáme data všech taxonů ve 
+  vybraném regionu.
+
+- **Výstupní složka** - Vybereme výsupní složku kam se nám data uloží. Pokud 
+  ponecháme prázdné, stáhnou se data do složky dočasných souborů. 
+  V případě, že nechceme stahovat tabulková data zaškrtneme možnost 
+  `Nestahovat tabulková data`. Stažené soubory se nahrají do projektu a 
+  ponesou název odvozený od použitého filtru a typu dat. Pokud je do 
+  filtru zadán taxon, bude název odvozen od názvu druhu 
+  (např. `Mantis_religiosa_shp_b` - bodová vrstva (.shp)). Poukd 
+  filtrujeme pouze podle regionu bude název odvozen od názvu regionu. 
+
+Po potvrzení tlačítkem Ok se okno zavře a spustí se filtrace a stahování. 
+QGIS během stahování **nelze v současné době používat**. Stejně jako při 
+použití oficiálního webové filtru, stahování může trvat několik minut, 
+v závislosti na počtu záznamů, stažení tabulkových dat atd.
+
+V informačním panelu v horní části obrazovky uvidíte informace o průběhu 
+stahování. Při stahování se také vypíše počet záznamů a hrubý odhad doby 
+trvání konkrétního kroku. Po úspěšném stažení se objeví zelený panel s 
+odkazem na složku kam byla data stažena.
+
+.. figure:: images/ndop_result.png 
+   :class: middle 
+   :scale-latex: 40 
+
+   Data stažené pomocí zásuvného modulu NDOP Downloader
+
+Webový filtr nálezových dat
+***************************
+Základní způsob jak stahovat data z nálezové databáze je použití webového filtru 
+přímo na stránkách `Nálezová databáze ochrany přírody AOPK <https://portal.nature.cz/nd/>`_. 
 Na úvodní stránce nálezové databáze lze zadat název druhu, a po zadání vyhledání
 nás stránka přesměřuje na *Filtr nálezových dat*, kde můžeme data filtrovat
 na základě více parametrů např: autora nálezu, datumu/období, území (katastry,
