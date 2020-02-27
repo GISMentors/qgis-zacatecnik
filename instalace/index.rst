@@ -10,7 +10,7 @@ Vývoj projektu QGIS začal v roce 2002 pod názvem *Quantum GIS*. Verze
 
 .. figure:: images/qgis_versions.png
    :class: large
-   
+
    Úvodní obrazovka verze 1.0, 2.18 a 3.4.
 
 Program QGIS je multiplatformní, lze jej tedy nainstalovat na různé
@@ -23,7 +23,7 @@ instalaci na všech dostupních platformách jsou dostupné `zde
 
 
 .. only:: html
-          
+
    .. rubric:: Návod
       :class: secnotoc
 
@@ -33,8 +33,4 @@ instalaci na všech dostupních platformách jsou dostupné `zde
 
    linux.rst
    windows.rst
-
-
-
-
-
+   macos.rst
