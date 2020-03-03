@@ -174,7 +174,7 @@ Přichytávání (snapping)
 Pro topologicky čistou editaci můžeme pomocí lišty
 :menuselection:`Přichytávání` nastavit
 přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
-konkrétních vrstev. Přichitávání je nejdříve nutné aktivaovat kliknutím na
+konkrétních vrstev. Přichitávání je nejdříve nutné aktivovat kliknutím na
 ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
 :kbd:`S`. Přichycení kurzoru se zobrazí výrazně růžovým čtverečkem v případě
 lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu

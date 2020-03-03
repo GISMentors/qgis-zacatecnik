@@ -230,7 +230,7 @@ stylů`.
     ^^^^^^^^^^^^^^^^
 
 
-Uložení a načtení nastevení vrstvy pomocí souboru
+Uložení a načtení nastavení vrstvy pomocí souboru
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Celé nastavení (styl, formuláře, atd.) vrstvy lze také uložit do 
 samostatného souboru (*.qml, *.sld), což můžeme využít pro sdílení mezi 
