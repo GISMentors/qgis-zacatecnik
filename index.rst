@@ -67,8 +67,8 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
    .. figure:: images/qgis_locale.png
 
    K dispozici jsou i historické školící materiály k verzím QGIS
-   :skoleni:`2.14 <qgis-zacatecnik/2.14>` a :skoleni:`2.18
-   <qgis-zacatecnik/2.18>`.
+   :skoleni:`2.14 <qgis-zacatecnik/2.14>`, :skoleni:`2.18
+   <qgis-zacatecnik/2.18>` a :skoleni:`3.4 <qgis-zacatecnik/3.4>`.
 
 .. index::
    pair: datové sady; ke stažení
@@ -83,8 +83,6 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
    Text školení je dostupný i v tisknutelné formě `PDF
    <./skoleni-qgis-zacatecnik.pdf>`_.
    
-.. warning:: :red:`Toto je pracovní verze školení, která je aktuálně ve vývoji!`
-
 .. raw:: latex
 
    \newpage
