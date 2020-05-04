@@ -17,7 +17,7 @@ copyright = u'2014-%d GISMentors' % get_year()
 # built documents.
 #
 # The short X.Y version.
-version = '3.0beta'
+version = '3.0'
 # The full version, including alpha/beta/rc tags.
 release = '%s' % version
 
