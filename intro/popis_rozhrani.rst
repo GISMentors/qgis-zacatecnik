@@ -37,7 +37,7 @@ překreslit pouze nezbytné vrstvy.
    pair: přepínač vrstev; rozhraní - popis
 
 Panel vrstev / Panel prohlížeče (2)
-======================================
+===================================
 
 Přepínač vrstev zobrazuje všechny přidané vrstvy. Jejich zobrazení
 poskytuje rychlou informaci o jejich pozici a grafickém zobrazení v
@@ -86,7 +86,7 @@ službám.
 
 
 Datový prohlížeč (3)
-==================
+====================
 
 Slouží pro správu datových zdrojů jako jsou adresáře se souborovými
 formáty jako např. ESRI Shapefile, databázové zdroje jako PostgreSQL,
@@ -216,10 +216,11 @@ Překreslování mapového okna
 
 Vykreslování v mapovém okně je možné nastavit různým způsobem. Standardně se
 kresba v mapovém okně překresluje při následujících akcích:
-    * přidání nové vrstvy
-    * posun nebo zoomování mapového okna
-    * změna velikosti QGIS okna
-    * změna viditelnosti vrstvy
+
+* přidání nové vrstvy
+* posun nebo zoomování mapového okna
+* změna velikosti QGIS okna
+* změna viditelnosti vrstvy
     
 V některých případech může překreslování mapového okna trvat déle, než
 je vhodné. V takovýchto případech je možné upravit nastavení
@@ -304,8 +305,9 @@ Základní nástroje pro pohyb v okně
   přiblíží na všechny vrstvy v projektu
 - |mActionPan| :sup:`Posun mapy` - umožní posun v mapovém okně tažením,
   tuto funkci lze nahradit stisknutím kolečka myši a následným tažením
-        .. tip:: Při posunu pomocí stisknutí kolečka myši můžeme mít
-           aktivní jinou funkci, např. výběr, vytváření nových prvků atd.
+  
+  .. tip:: Při posunu pomocí stisknutí kolečka myši můžeme mít
+     aktivní jinou funkci, např. výběr, vytváření nových prvků atd.
 - |mActionRefresh| :sup:`Obnovit` - obnoví zobrazení všech nahraných dat
 
 .. index::
