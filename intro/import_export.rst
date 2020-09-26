@@ -165,6 +165,32 @@ Některé souř. systémy můžou mít víc než jednu možnost tansformace.
 Chování lze nastavit dle potřeb v :menuselection:`Nastavení --> Možnosti`,
 záložka :item:`SRS` sekce :item:`Výchozí transformace souřadnic`.
 
-test
+.. figure:: images/transformation_params_menu.png
+   :class: medium
+
+   Nastavení požadovaných transformačních klíčů v menu.
+   
+V případě souřadnicového systému S-JTSK je vohdné tuto transformaci nastavit.
+Pomocí tlačítka |mActionSignPlus| zvolíme možnost přidání nové zvolené
+transformace.
+Jako první je nutné zvolit dvojici :item:`zdojový` a :item:`cílový` souř. 
+systém, který chceme přesně nadefinovat. V tomto případě se jedná o dvojici 
+EPSG 4326 a 5514.
+Po zadání této dvojice se vypíšou všechny dostupné transformace.
+Pro detailní popis je potřeba na zvolenou transformaci kliknout a ve spodní
+části se náseldně vypíše detailní popis. 
+Zde je možné zjistit přesné číselné parametry, textový popis, ale zejména
+číselnou identifikaci konkrétní transformace.
+
+.. figure:: images/transformation_params_set.png
+   :class: medium
+
+   Výběr transformace pro konkrétní dvojici EPSG kódů.
+   
+Jeden zápis definuje jeden konkrétní převod. Pro opačnou transformaci je nutné
+udělat nový zápis se správným pořadím zdrojového a cílového souř. systému.
+
+V případě, že existuje víc možností transformace a žádná není nastavená jako
+preferovaná, tak bude uživatel opakovaně vyzýván při každé přidávané vrstvě zvlášť.
               
 

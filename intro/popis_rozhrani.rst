@@ -319,7 +319,7 @@ Základní nástroje výběru
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní
-prvky, se kterými hodláme dále pracovat. Tato označení se nazývá
+prvky, se kterými hodláme dále pracovat. Toto označení se nazývá
 :option:`Výběr`.
 
 - |mActionSelectRectangle| :sup:`Vybrat prvky oblastí nebo jednoklikem` -
@@ -352,6 +352,9 @@ Měření v mapovém okně
    účel je nutné mít správně nastavený mapový souřadnicový
    systém. Měření v mapovém okně také respektuje nastavení
    přichytávání (tzv. snapping).
+   U měření délky a plochy je rovněž volba typu výpočtu. Buď se výpočet
+   provádí jako *kartézský* - výpočet v kartézských souřadnicích (rovina),
+   nebo *elipsoidický* - výpočet na sféře (elipsoidu).
 
 V mapovém okně lze použít pro měření následující nástroje z hlavního menu.
 
@@ -375,8 +378,9 @@ všech délek.
 
 .. figure:: images/measure_line.png
    :scale-latex: 50
+   :class: large
     
-   Měření délky - délky segmentů a celková délka.
+   Měření délky - délky segmentů a celková délka, volba typu výpočtu délky.
 
 .. tip:: Nastavení měření se nachází v menu :menuselection:`Nastavení -->
          Možnosti...` záložka :item:`Nástroje mapy` část :item:`Nástroj pro
