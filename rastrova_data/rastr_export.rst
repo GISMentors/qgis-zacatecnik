@@ -78,4 +78,21 @@ původního rastru.
    
    Ořez rastru pomocí polygonové vrstvy, porovnání s výsledkem ořezu rozsahem.
 
+Pokud při ořezání nezatrhneme volbu :item:`Výstupní alfa kanál`, tak je
+výstupem rastr s jedním kanálem, kde je použita hodnota "no data" mimo oblast
+pokrytí masky. V místě pokrytí je pak ponechána hodnota původního rastru. Ukázka
+je na obrázku :numref:`raster-ext-alpha` v levé sekci.
+
+Pokud použijeme volbu na vytvoření alfa kanálu, tak výstupní rastr obsahuje
+dva kanály, místo původního jednoho. V pravé části obrázku :numref:`raster-ext-alpha` je pak vidět hodnoty ve výstupním rastru, který obsahuje i alfa kanál.
+
+ 
+.. _raster-ext-alpha: 
+
+.. figure:: images/extract_alpha_channel.png
+   :class: large
+   :scale-latex: 45
+
+   Porovnání ořezu rastru s použitím alfa kanálu a bez něj.
+
 

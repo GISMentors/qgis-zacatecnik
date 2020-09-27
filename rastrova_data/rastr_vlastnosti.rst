@@ -5,8 +5,9 @@ Dialog pro nastavení vlastností dané rastrové vrstvy vyvoláme buď
 levým dvouklikem nad danou vrstvou, nebo pravým klikem z kontextového
 menu zvolíme položku :item:`Vlastnosti`.
 
-Dialogové okno obsahuje šest záložek : *Všeobecné*, *Styl*,
-*Průhlednost*, *Pyramidy*, *Histogram* a *Metadata*.
+Dialogové okno obsahuje deset záložek : *Informace*, *Zdroj*, *Symbologie*,
+*Průhlednost*, *Histogram*, *Vykreslování*, *Pyramidy*, *Metadata*,
+*Legenda* a *QGIS Server*.
 
 
 Informace
@@ -26,9 +27,6 @@ První záložka poskytuje základní informace o vrstvě jako je název souboru
 vrstvy v legendě s možností editace a
 souřadnicový referenční systém (ten je možno nastavit kliknutím na tlačítko
 |CRS| :sup:`Vyberte SRS`). 
-
-V této záložce je možné nastavit i viditelnost v
-závislosti na měřítku (:numref:`obecneraster`).
 
 .. _obecneraster:
 
@@ -295,7 +293,7 @@ Toto nastavení se často používá při WMS.
 Pyramidy
 ^^^^^^^^
 
-Pyramidy jsou datové struktury, které typicky obsahují menší množství dat.
+Pyramidy jsou datové struktury, které typicky obsahují větší množství dat.
 Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, že se kromě
 původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
 rozlišením pro konkrétní přiblížení). Na převzorkování se použijí různé metody, 
@@ -330,4 +328,28 @@ a je dobré u nich uvádět detaily o poskytovateli, jako i o datech samotných.
 
    Metadatové položky u rastrové vrstvy.   
 
+
+Legenda
+^^^^^^^
+
+Tato položka v menu umožňuje rozšiřovat funkcionalitu dostupnou přímo v panelu
+vrstev.
+Ve vchozím nastavení je možné přidat pouze ovládání průhlednosti.
+Přidání dalších nástrojů je možné pomocí rozšiřujících pluginů.
+Přidávání a odebírání je možné pomocí šipek |mActionArrowRight| nebo 
+|mActionArrowLeft|.
+
+
+.. figure:: images/raster_legend_widget.png
+   :class: middle
+
+   Dialog pro přidávání tzv. "widgets". Následně je pak dostupný v panelu vrstev.  
+
+
+QGIS Server
+^^^^^^^^^^^
+
+Pomocí nastavení v této záložce je možné pracovat se základními parametry pro
+publikaci dat pomocí technologie QGIS Server. 
+Jedná se o pokročilou finkcionalitu.
 
