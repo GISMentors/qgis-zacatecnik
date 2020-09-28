@@ -103,10 +103,10 @@ textem` stejně jako při přidání XY dat, pouze zvolíme
 Jakmile máme přidána tabulková data, otevřeme vlastnosti vektorové
 vrstvy, ke které chceme tabulku připojit, zvolíme záložku |join|
 :sup:`Připojení` a přidáme nové připojení pomocí tlačítka
-|symbologyAdd|. V dialogovém okně (:numref:`join`) potom nastavíme parametry
+|symbologyAdd|. V dialogovém okně (:numref:`join_dial`) potom nastavíme parametry
 připojení.
 
-.. _join:
+.. _join_dial:
 
 .. figure:: images/join.png
    :scale-latex: 40
