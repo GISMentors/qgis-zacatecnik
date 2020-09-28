@@ -36,11 +36,11 @@ Vytváření nového atributu:
 - :item:`Délka` - počet znaků
 - :item:`Přesnost` - počet desetinných míst
 - pro přidání atributu vrstvy je nutné kliknout na tlačítko
-  |mActionNewAttribute| :item:`Add to Fields List`
+  |mActionNewAttribute| :item:`Přidat do seznamu polí`
 
 Ve spodní části okna máme seznam atributů, které máme ve vrstvě
 připravené. Atributy lze odstranit označením a kliknutím na tlačítko
-|mActionDeleteAttribute| :item:`Remove Field`. Automaticky je zde
+|mActionDeleteAttribute| :item:`Odstranit pole`. Automaticky je zde
 přidaný atribut "id", pokud ho nechceme, lze jej také vymazat.
 
 Pokud máme vše nastaveno, potvrdíme tlačítkem :item:`OK` a nová vrstva se 
@@ -100,7 +100,7 @@ klávesy :kbd:`Backspace` nebo :kbd:`Del`.
     byla tvorba prvku pravým kliknutím ukončena, polygon by měl tři uzly
     (tvar trojúhelníku).
 
-|mActionNodeTool| :sup:`Vertex tool` - pomocí nástroje uzlů lze
+|mActionNodeTool| :sup:`Nástroj na lomové body` - pomocí nástroje uzlů lze
     - přidávat body kliknutím na křížek ve středu hrany a umístěním bodu 
     - přidávat body dvojklikem na hranu a umístěním bodu 
     - posunovat existující body kliknutím na bod a umístěním bodu 
@@ -199,9 +199,9 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
 
 - Nastavení |selectstring|:
 
-    - |mIconSnappingAllLayers|:sup:`All Layers` - přichytávání ke všem
+    - |mIconSnappingAllLayers|:sup:`Všechny vrstvy` - přichytávání ke všem
       viditelným vektorovým vrstvám projektu
-    - |mIconSnappingActiveLayer|:sup:`Active Layer` - přichytávání pouze v
+    - |mIconSnappingActiveLayer|:sup:`Aktivní vrstva` - přichytávání pouze v
       rámci editované vrstvy, ostatní vrstvy ignoruje
     - |mIconSnappingAdvanced|:sup:`Pokročilé nastavení` - režim pokročilého
       nastavení, lze nastavit různé nastavení pro jednotlivé vrstvy a nabízí
@@ -213,7 +213,7 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
 
     - |mIconSnappingVertex|:sup:`Lomový bod` - pouze k lomovým bodům
       (uzlům/vertexům, :numref:`snapvert`)
-    - |mIconSnappingVertexAndSegment|:sup:`Vertex and Segment` - k obojímu
+    - |mIconSnappingVertexAndSegment|:sup:`Lomový bod a segment` - k obojímu
     - |mIconSnappingSegment|:sup:`Segmentu` - pouze k segmentům
       (hranám/liniím, :numref:`snapsegm`)
 
