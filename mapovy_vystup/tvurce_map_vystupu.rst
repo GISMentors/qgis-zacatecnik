@@ -7,14 +7,14 @@ Tiskové rozvržení (Print Layout)
 Systém QGIS dokáže pracovat s různými formáty a zobrazovat je v
 mapovém okně (viz :numref:`map-window`). Obsah mapového okna lze
 jednoduše vyexportovat jako obrázku (:menuselection:`Projekt -->
-Import/Export --> Eport Map to image.../pdf`). 
+Import/Export --> Eportovat mapu jako obrázek.../pdf`). 
 To však v řadě případů nemusí stačit, hlavně když vyžadujeme mapový
 výstup určený pro tisk.
 
 Pro vytvoření mapového výstupu určeného pro tisk, který si zachová
 nastavení vrstev (stylování, popisky a další) z projektu, slouží
 samostatný nástroj *Rozvržení (Print Layout)*. Tento nástroj je
-dostupný z menu :menuselection:`Projekt --> Layout manager...`.
+dostupný z menu :menuselection:`Projekt --> Správce rozvržení...`.
 
 .. _map-window:
           
@@ -44,7 +44,7 @@ Správce vytváření map
 ---------------------
 
 Systém QGIS umožňuje vytvářet víc než jeden mapový výstup na daný
-projekt. Zpravování jednotlivých mapových výstupů umožňuje *Layout manager* dostupný z menu :menuselection:`Projekt --> Layout manager...`.
+projekt. Zpravování jednotlivých mapových výstupů umožňuje *Správce rozvržení* dostupný z menu :menuselection:`Projekt --> Správce rozvržení...`.
 
 .. figure:: images/composer_manager.png
    :class: large
@@ -74,7 +74,7 @@ výstupu.
          pak nastaví nový název mapového výstupu.
 
 Pokud chcete otevřít existující mapový výstup, tak jej v seznamu
-*Layout manager* vyberte a tlačítkem :item:`Zobrazit` otevřete.
+*Správce rozvržení* vyberte a tlačítkem :item:`Zobrazit` otevřete.
 Všechny existující mapové výstupy jsou přístupné také z menu
 :menuselection:`Projekt --> Rozvržení`.
 
