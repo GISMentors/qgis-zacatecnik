@@ -1,23 +1,3 @@
-.. |selectstring| image:: ../images/icon/selectstring.png
-   :width: 2.5em
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |radiobuttonon| image:: ../images/icon/radiobuttonon.png
-   :width: 1.5em
-.. |symbologyAdd| image:: ../images/icon/symbologyAdd.png
-   :width: 1.5em
-.. |symbologyRemove| image:: ../images/icon/symbologyRemove.png
-   :width: 1.5em
-.. |symbologyEdit| image:: ../images/icon/symbologyEdit.png
-   :width: 1.5em
-.. |join| image:: ../images/icon/join.png
-   :width: 1.5em
-.. |mActionAddDelimitedTextLayer| image::
-   ../images/icon/mActionAddDelimitedTextLayer.png
-   :width: 1.5em
-.. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
-   :width: 1.5em
-
 Připojení tabulkových dat
 =========================
 
