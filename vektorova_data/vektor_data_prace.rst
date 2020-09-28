@@ -26,8 +26,8 @@ vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
 - kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru
 
 - pomocí tlačítka |mActionSelectedToTop| :sup:`Přesunout výběr nahoru`
-lze zobrazit vybrané prvky na prvním místě tabulky, což nám vybraná
-data zpřehlední.
+  lze zobrazit vybrané prvky na prvním místě tabulky, což nám vybraná
+  data zpřehlední.
 
 - lze použít funkce výběru, které jsou dostupné i v hlavním okně:
 
