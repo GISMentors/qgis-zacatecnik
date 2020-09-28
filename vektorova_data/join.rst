@@ -1,23 +1,3 @@
-.. |selectstring| image:: ../images/icon/selectstring.png
-   :width: 2.5em
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |radiobuttonon| image:: ../images/icon/radiobuttonon.png
-   :width: 1.5em
-.. |symbologyAdd| image:: ../images/icon/symbologyAdd.png
-   :width: 1.5em
-.. |symbologyRemove| image:: ../images/icon/symbologyRemove.png
-   :width: 1.5em
-.. |symbologyEdit| image:: ../images/icon/symbologyEdit.png
-   :width: 1.5em
-.. |join| image:: ../images/icon/join.png
-   :width: 1.5em
-.. |mActionAddDelimitedTextLayer| image::
-   ../images/icon/mActionAddDelimitedTextLayer.png
-   :width: 1.5em
-.. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
-   :width: 1.5em
-
 Připojení tabulkových dat
 =========================
 
@@ -103,10 +83,10 @@ textem` stejně jako při přidání XY dat, pouze zvolíme
 Jakmile máme přidána tabulková data, otevřeme vlastnosti vektorové
 vrstvy, ke které chceme tabulku připojit, zvolíme záložku |join|
 :sup:`Připojení` a přidáme nové připojení pomocí tlačítka
-|symbologyAdd|. V dialogovém okně (:numref:`join`) potom nastavíme parametry
+|symbologyAdd|. V dialogovém okně (:numref:`join_dial`) potom nastavíme parametry
 připojení.
 
-.. _join:
+.. _join_dial:
 
 .. figure:: images/join.png
    :scale-latex: 40
@@ -129,18 +109,18 @@ Další volitelné nastavení
   pro rychlejší práci s daty
 - |checkbox| :item:`Dynamický formulář` - automatické načtení, v případě změn
   hodnot v "Cílovém poli"
-- |checkbox| :item:`Editable join layer` - umožňuje editovat atributy připojené
+- |checkbox| :item:`Editovatelné spojení na vrstvu` - umožňuje editovat atributy připojené
   vrstvy z atributové tabulky cílové vrstvy. Obě vrstvy musí být v režimu
   editace
 
-    - |checkbox| :item:`Upsert on edit` - při vytvoření nového prvku v cílové
+    - |checkbox| :item:`Vložit nebo aktualizovat řádek při editaci` - při vytvoření nového prvku v cílové
       vrstvě se automaticky vytvoří záznam v připojené vrstvě
-    - |checkbox| :item:`Delete cascade` - při smazání prvku v cílové vrstvě se
+    - |checkbox| :item:`Kaskádové mazání` - při smazání prvku v cílové vrstvě se
       automaticky smaže záznam v připojené vrstvě
 
-- |checkbox| :item:`Joined Fields` - lze zvolit konkrétní atributy pro
+- |checkbox| :item:`Připojená pole` - lze zvolit konkrétní atributy pro
   připojení
-- |checkbox| :item:`Custom Field Name Prefix` - zde můžeme zvolit vlastní
+- |checkbox| :item:`Vlastní předpona názvu pole` - zde můžeme zvolit vlastní
   předponu názvů připojených atributů (jejich sloupců)
 
 Po přidání se připojení a jeho nastavení objeví v seznamu. Pomocí tlačítek lze

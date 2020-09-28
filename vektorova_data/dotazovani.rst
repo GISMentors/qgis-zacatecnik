@@ -25,7 +25,7 @@ Atributové dotazování
 
 Atributové dotazování slouží k vytvoření výběru prvků z vektorové
 vrstvy dle námi zadaných kritérií. Funkce, která toto umožňuje, je
-|mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce` a můžeme ji
+|mIconExpressionSelect| :sup:`Vybrat prvky pomocí výrazu...` a můžeme ji
 spustit buď z nástrojového panelu, nebo z atributové tabulky dané
 vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí
 |mActionCalculateField| a zadávání výrazu zde funguje na stejném
@@ -38,8 +38,10 @@ rychlému přidání funkcí nebo parametrů do výrazu.
     Okno atributového dotazování.
 
 Po zadání našeho výrazu potvrdíme tlačítkem |mIconExpressionSelect|
-:item:`Vybrat`, čímž se nám vytvoří požadovaný výběr. Z nabídky vedle tlačítka 
-můžeme vybrat další možnosti práce s výběrem pomocí atributového dotazu.
+:item:`Vybrat prvky`, čímž se nám vytvoří požadovaný výběr. Z nabídky 
+vedle tlačítka můžeme vybrat další možnosti práce s výběrem pomocí 
+atributového dotazu. Tlačítkem :item:`Přiblížit na prvky` přblížíme na 
+výsledné prvky bez provedení výběru.
 
 .. figure:: images/select_exp_fun.png
    :width: 200px
@@ -82,7 +84,9 @@ do dialogového okna:
    :scale-latex: 55
    
    Výpis počtu vybraných prvků (v levé části stavového řádku).
-   
+
+.. _vybrat-prvky:
+
 Vybrat prvky podle hodnoty
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Pro rychlé a zjednodušené atributové dotazovaní lze také využít formulář funkce
@@ -110,28 +114,31 @@ vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je
    
    Okno :guilabel:`Vybrat podle umístění`.
 
-- :guilabel:`Vrstva ze které se bude vybírat` |selectstring| - 
+- :guilabel:`Vybrat prvky z` |selectstring| - 
   vybereme vrstvu, ve které chceme tvořit výběr 
-- :guilabel:`Přídavná vrstva (průniková vrstva)` |selectstring| - 
-  vybereme vrstvu, podle které se prvky budou vybírat
 - :guilabel:`Geometric predicate` (typ vztahu, který se bude vyhodnocovat), 
   množina možností se generuje podle vstupních vrstev 
-    - |checkbox| :guilabel:`protíná` - vybere prvky, které se jakkoliv
+    - |checkbox| :guilabel:`protínají` - vybere prvky, které se jakkoliv
       protínají s prvky v průnikové vrstvě
-    - |checkbox| :guilabel:`dotýká se` - vybere prvky se společnou hranicí 
+    - |checkbox| :guilabel:`dotýkájí se` - vybere prvky se společnou hranicí 
       nebo lomovým bodem s prvky v průnikové vrstvě
-    - |checkbox| :guilabel:`obsahuje` - vybere pouze prvky, které osahují
+    - |checkbox| :guilabel:`obsahují` - vybere pouze prvky, které osahují
       prvky z průnikové vrstvy (např. celý polygon uvnitř polygonu) 
-    - |checkbox| :guilabel:`překryvy` - vybere pouze prvky, které se svoji 
+    - |checkbox| :guilabel:`překrývají se` - vybere pouze prvky, které se svoji 
       částí protínají s prvky v průnikové vrstvě 
     - |checkbox| :guilabel:`rozděluje` - vybere prvky, které nijak 
       neprotínají prvky v průnikové vrstě
-    - |checkbox| :guilabel:`uvnitř` - vybere pouze prvky, které leží celou 
+    - |checkbox| :guilabel:`jsou uvnitř` - vybere pouze prvky, které leží celou 
       rozlohou uvnitř prvku průnikové vrstvy (např. celý polygon uvnitř 
       polygonu) 
-    - |checkbox| :guilabel:`je rovno` - vybere prvky, které jsou totožné
-    - |checkbox| :guilabel:`kříží` - vybere prvky, které se křižují s 
+    - |checkbox| :guilabel:`jsou si rovny` - vybere prvky, které jsou totožné
+    - |checkbox| :guilabel:`kříží se` - vybere prvky, které se křižují s 
       prvky v průnikové vrstvě (u linií)
+    
+- :guilabel:`Porovnáním s prvky z` |selectstring| - vybereme vrstvu, 
+  podle které se prvky budou vybírat
+    - |checkbox| :guilabel:`Pouze vybrané prvky` - pokud chceme aby 
+      vstupovaly pouze vybrané prvky vrstvy
     
 - Upravit aktuální výběr pomocí |selectstring| 
             
@@ -139,6 +146,8 @@ vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je
       zcela nový
     - :guilabel:`přidáním do aktuálního výběru` - k aktuálnímu výběru přidá 
       nadefinovaný výběr
+    - :guilabel:`vybráním v rámci aktuálního výběru` - vytvoří nový výběr pouze z prvků 
+      které jsou aktuálně ve výběru
     - :guilabel:`odstraněním z aktuálního výběru` - z aktuálního výběru odebere 
       prvky, které nadefinujeme
       
