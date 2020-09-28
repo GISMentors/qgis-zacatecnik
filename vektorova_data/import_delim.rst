@@ -1,27 +1,3 @@
-.. |selectstring| image:: ../images/icon/selectstring.png
-   :width: 2.5em
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |radiobuttonon| image:: ../images/icon/radiobuttonon.png
-   :width: 1.5em
-.. |selectnumber| image:: ../images/icon/selectnumber.png
-   :width: 2.5em
-.. |mActionAddDelimitedTextLayer| image::
-   ../images/icon/mActionAddDelimitedTextLayer.png
-   :width: 1.5em
-.. |mActionRefresh| image:: ../images/icon/mActionRefresh.png
-   :width: 1.5em
-.. |gps_importer| image:: ../images/icon/gps_importer.png
-   :width: 1.5em
-.. |create_gpx| image:: ../images/icon/create_gpx.png
-   :width: 1.5em  
-.. |import_gpx| image:: ../images/icon/import_gpx.png
-   :width: 1.5em  
-.. |inputtext| image:: ../images/icon/inputtext.png
-   :width: 1.5em
-.. |mActionAddOgrLayer| image:: ../images/icon/mActionAddOgrLayer.png
-   :width: 1.5em
-
 Import dat s oddělenými hodnotami a GPS dat
 ===========================================
 
