@@ -1,8 +1,3 @@
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em
-.. |selectstring| image:: ../images/icon/selectstring.png
-   :width: 1.5em
-
 .. todo:: přidat u překryvných analýz obrázky prakticých příkladů 
    (i na bodech)
 
@@ -27,8 +22,7 @@ vektorových dat. Základní funkce nalezneme v hlavním menu
        :class: small
        :scale-latex: 40
        
-       Okno :item:`Nástroje zpracování` (Advanced interface - pokročilé 
-       zobrazení).
+       Okno :item:`Nástroje zpracování`.
 
 .. _buffer:
 
