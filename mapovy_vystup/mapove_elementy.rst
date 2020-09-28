@@ -100,25 +100,32 @@ a interaktivně změníme rozsah pomocí tažení.
       :class: small
       :scale-latex: 30
  
-      Výřez s obsahem mapového okna a jeho detailní nastavení.
+      Dostupné položky u nastavení mapového okna.
            
 Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu
-mapového okna. Překreslení dle pozměněného mapového okna je možné v
-detailu prvku :item:`Vlastnosti položky` v části :item:`Hlavní vlastnosti`
-pomocí tlačítka :item:`Aktualizovat náhled`. V této části též lze nastavit
-přesné měřítko mapového okna nebo jeho natočení.
+mapového okna. Manipulace obashu mapy a jeho překreslování je možné ovládat pomocí sady tlačítek v horní části detailu prvku :item:`Vlastnosti položky`.
+
+- |mActionRefresh| :sup:`Aktualizovat náhled mapy` - aktualizace obsahu mapového okna
+- |mActionSetToCanvasExtent| :sup:`Nastavit rozsah mapy tak, aby odpovídal hlavnímu rozsahu plátna`
+- |mActionViewExtentInCanvas| :sup:`Zobrazit aktuální rozsah mapy na hlavním plátně`
+- |mActionSetToCanvasScale| :sup:`Nastavit měřítko mapy tak, aby odpovídalo měřítku hlavního plátna`
+- |mActionViewScaleInCanvas| :sup:`Nastavit hlavní plátno tak, aby odpovídalo aktuálnímu měřítku mapy`
+- |mActionShowBookmarks| :sup:`Záložky` nastavení mapového okna dle existujících záložek
+- |mActionMoveItemContent| :sup:`Interaktivně upravit rozsah mapy` totožná funkcionalita pro změnu rosahu tažením
+- |labels| :sup:`Nastavení tvorby popisků` speciální chování popisků v mapovém výstupu - jejich posun na okrajích, blokování popisků
+
+
+V první sekci nastavení lze nastavit přesné měřítko mapového okna, 
+jeho natočení, nebo specifický souřadnicový systém.
 
 V části :item:`Rozsahy` lze přesně nadefinovat rozsah mapového okna v
-souřadnicovém systému mapového projektu. Pomocí tlačítek lze také
-nastavit rozsah (extent) z mapového okna :item:`Nastavit na rozsah
-mapového okna` nebo naopak, zobrazit nadefinovaný extent v mapovém
-okně :item:`Zobrazit rozsah v mapovém okně`.
+souřadnicovém systému mapového projektu. 
 
 .. figure:: images/map_main_properties.png
    :class: small
    :scale-latex: 30
  
-   Nastavení měřítka a extentu pro mapové okno.
+   Hlavní nastavení položky mapového okna.
 
 .. raw:: latex
 
@@ -188,6 +195,8 @@ předchozích položek.
 
 Obsah legendy je vygenerován v momentě jejího umístění a na základě
 nastavení stylů jednotlivých vrstev zobrazovaných v mapovém okně.
+V ideálním případě se všechny úpravy provádí v nastavení vrstev tak, 
+aby byl minimalizovaný počet ručních úprav v tomto kroku.
 
 Obsah legendy je možné upravovat podobným způsobem jako ostatní prvky
 (:item:`Vlastnosti položky`). Lze upravit název, zarovnání, odsazování
@@ -205,7 +214,7 @@ změnit text i zařazení jednotlivých položek v rámci legendy samotné.
 
 .. tip:: Pokud upravujete legendu, tak se může stát, že se změnami nebudete 
    spokojeni. V případě, že nechcete změny v nastavení provést ručně, můžete 
-   legendu vygenerovat z dat znova pomocí tlačítka :item:`Update all`.
+   legendu vygenerovat z dat znova pomocí tlačítka :item:`Aktualizovat vše`.
 
 .. index::
    pair: mapové elementy; atributová tabulka
@@ -273,14 +282,15 @@ jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měří
 Směrová růžice
 ^^^^^^^^^^^^^^
 
-Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony |add_image| 
-:sup:`Přidat obrázek`. Tato funkce umožňuje přidat do výstupu libovolný obrázek 
-(logo, ilustrační fotografie atd., směrová růžice). Pokud nemáme žádný obrázek 
-růžice, najdeme několik typů růžic v základní QGIS SVG knihovně. Tudíž můžeme
-jednoduše přidání obrázku využít k našemu účelu. Zdrojový obrázek zvolíme v 
+Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony |north_arrow| 
+:sup:`Přidat směrovou růžici`. Pokud nemáme žádný obrázek růžice, najdeme několik typů růžic v základní QGIS SVG knihovně. Zdrojový obrázek zvolíme v 
 záložce :item:`Vlastnosti položky`, zde jsou dostupná také další nastavení, 
 např. rotace, která je za určitých okolností u směrové růžice nutná a lze ji
 nastavit automaticky.
+
+Na obrázku :numref:`arrow` je vidět nastavení synchornizace s vybraným mapovým oknem a nastevní na *skutečný sever*, které nastaví rotaci růžice automaticky.
+
+.. _arrow:
 
 .. figure:: images/composer_arrow.png
    :class: large
@@ -288,8 +298,17 @@ nastavit automaticky.
  
    Nastavení směrové růžice.
 
+Obrázek
+^^^^^^^
+
+Tento nástroj je totožný s nástrojem pro přidání směrové růžice. Je dobré si
+uvědomit, že obsah přidaného obrázku je pouze na uživateli a do mapového výstupu
+může přidat různý obsah.
+
+
+
 Šipka
-=====
+^^^^^
 
 Alternativní možností vytvoření směrové ružice může být pomocí ikony |add_arrow| 
 :sup:`Přidat šipku`. Tato funkce je primárně určena ke kreslení šipek ve smyslu 
