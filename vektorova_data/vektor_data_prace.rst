@@ -8,16 +8,26 @@ Vektorová data se skládájí ze dvou základních složek -- geometrie (body,
 linie, polygony) a informací o jednotlivých prvcích tzv. atributů.
 
 Atributovou tabulku otevřeme pomocí ikony |mActionOpenTable| :sup:`Otevřít
-atributovou tabulku` nebo pravým kliknutím vyvoláme kontextové menu
-a zvolíme :item:`Otevřít atributovou tabulku`. Tabulka slouží
-k prohlížení a editaci atributové složky dat. V názvu okna je vypsaný název
-vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
-(`filtered`) a počet prvků ve výběru (`selected`).
+atributovou tabulku` (klávesová zkratka :kbd:`F6`), nebo pravým kliknutím 
+vyvoláme kontextové menu a zvolíme :item:`Otevřít atributovou tabulku`. 
+Tabulka slouží k prohlížení a editaci atributové složky dat. V názvu 
+okna je vypsaný název vrstvy, celkový počet prvků (`Features total`), 
+počet odfiltrovaných prvků (`filtered`) a počet prvků ve výběru 
+(`selected`).
 
 .. figure:: images/at_table.png
    :scale-latex: 60
 
    Atributová tabulka vrstvy.
+
+Okno atributové tabulky lze otevírat ve dvou režimech, a to buď v 
+samostatném okně, nebo jako panel. Přepínat tyto režimy lze  v liště 
+atributové tabulky pomocí funkce|mDockify|:sup:`Atributová tabulka jako panel`. 
+Výchozí chování lze nastavit v hlavním nastavení QGISu
+(:menuselection:`Nastavení -> Nastavení...` záložka :item:`Zdroje dat`).
+
+V okně atributové tabulky můžeme zobrazit jak atributovou tabulku (výchozí),
+tak i formulář atributů. Tato zobrazení se přepínají pomocí tlačítek v pravém dolním rohu: |attributes|:sup:`Přepnout na zobrazení tabulky` a |mActionFormView|:sup:`Přepnout na zobrazení formuláře`.
 
 **Základní funkce attributové tabulky**
 
@@ -33,15 +43,21 @@ vrstvy, celkový počet prvků (`Features total`), počet odfiltrovaných prvků
 
     - |mIconExpressionSelect| :sup:`Vybrat prvky pomocí vzorce`
     - |mActionSelectAll| :sup:`Vybrat prvky pomocí vzorce`
-    - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` 
     - |mActionInvertSelection| :sup:`Převrátit výběr prvků`
-    - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
+    - |mActionUnselectAttributes|:sup:`Zrušit výběr ve všech vrstvách` 
     - |mActionPanToSelected| :sup:`Posunout mapu na výběr`
+    - |mActionZoomToSelected| :sup:`Přiblížit na výběr`
 
+- tlačítko |mActionFilter2|:sup:`Vybrat/filtrovat prvky pomocí formuláře (Ctrl+F)` umožňuje vytvářet výběr nebo fltrovat prvky za pomocí formuláře (viz :ref:`vybrat-prvky` ). Pro návrat do atributové tabulky stiskněte tlačítko |attributes|:sup:`Přepnout na zobrazení tabulky`.
 
-Okno atributové tabulky lze otevírat ve dvou režimech buď v samostatném okně,
-nebo jako panel. Přepínat tyto režimy lze pomocí funkce
-|mDockify|:sup:`Dock Attribute Panel`.
+- pomocí tlačítka |organiseColumns|:sup:`Uspořádat sloupce tabulky` lze 
+  měnit pořadí sloupců, nebo jednotlivé sloupce skrýt.
+
+.. figure:: images/at_table_sort.png
+   :scale-latex: 60
+
+   Možnost uspořádání sloupců.
+
 
 .. tip:: Pomocí nabídky |mActionFilter2| v levém dolním rohu lze zvolit filtr 
    zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny 

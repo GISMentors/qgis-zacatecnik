@@ -82,7 +82,9 @@ do dialogového okna:
    :scale-latex: 55
    
    Výpis počtu vybraných prvků (v levé části stavového řádku).
-   
+
+.. _vybrat-prvky:
+
 Vybrat prvky podle hodnoty
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 Pro rychlé a zjednodušené atributové dotazovaní lze také využít formulář funkce
