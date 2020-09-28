@@ -1,20 +1,3 @@
-.. |mIconExpressionSelect| image:: ../images/icon/mIconExpressionSelect.png
-    :width: 1.5em
-.. |mActionCalculateField| image:: ../images/icon/mActionCalculateField.png
-   :width: 1.5em
-.. |select_location| image:: ../images/icon/select_location.png
-   :width: 1.5em
-.. |random_selection| image:: ../images/icon/random_selection.png
-   :width: 1.5em 
-.. |sub_selection| image:: ../images/icon/random_selection.png
-   :width: 1.5em 
-.. |selectstring| image:: ../images/icon/selectstring.png
-   :width: 1.5em
-.. |checkbox| image:: ../images/icon/checkbox.png
-   :width: 1.5em  
-.. |mIconFormSelect| image:: ../images/icon/mIconFormSelect.png
-   :width: 1.5em  
-
 Atributové a prostorové dotazování
 ==================================
 
@@ -105,7 +88,7 @@ Prostorové dotazování
 
 Prostorové dotazování slouží k vytvoření výběru prvků na základě prostorového 
 vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je 
-|select_location| :sup:`Vybrat podle umístění...` a najdeme ji v menu 
+|mAlgorithmSelectLocation| :sup:`Vybrat podle umístění...` a najdeme ji v menu 
 :menuselection:`Vektor --> Výzkumné nástroje --> Vybrat podle umístění...`
 
 .. figure:: images/select_by_location.png
@@ -166,6 +149,6 @@ maloplošná chráněná území leží celou rozlohou ve velkoplošném chrán�
    chráněných územích.
 
 .. noteadvanced:: Pomocí funkcí 
-   |random_selection| :sup:`Náhodný výběr...`/|sub_selection| :sup:`Náhodný 
+   |mAlgorithmSelectRandom| :sup:`Náhodný výběr...`/|mAlgorithmSelectRandom| :sup:`Náhodný 
    výběr v podmonožinách...` můžeme tvořit náhodné výběry z prvků. Tyto 
    funkce najdeme v hlavním menu :menuselection:`Vektor --> Výzkumné nástroje`.
