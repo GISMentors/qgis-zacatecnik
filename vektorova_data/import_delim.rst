@@ -94,8 +94,6 @@ vrstvu s odděleným textem`.
 - :item:`Název vrstvy` - název nově vzniklé vrstvy
 - :item:`Formát souboru` |radiobuttonon| - vybereme typ oddělení hodnot
   v textovém souboru
-- :item:`Kódování` |selectstring| - vybereme kódování textu
-
 
     - |radiobuttonon| :sup:`CSV (hodnoty oddělené čárkou)` - standardní
       .csv soubor s hodnotami oddělenými čárkou
@@ -104,30 +102,29 @@ vrstvu s odděleným textem`.
     - |radiobuttonon| :sup:`Vlastní oddělovače` - výběr libovolného
       oddělovače
 
-- :item:`Možnost záznamu`
+- :item:`Kódování` |selectstring| - vybereme kódování textu
+- :item:`Možnosti záznamu a polí`
 
-    - :item:`Počet řádků k vypuštění` |selectnumber| - vynechá
+    - :item:`Počet řádků nadpisů k vypuštění` |selectnumber| - vynechá
       zadaný počet rádků na začátku
     - |checkbox| :item:`První záznam obsahuje názvy polí` - zaškrtneme,
       pokud máme v tabulce jako první řádek názvy sloupců
-
-- :item:`Record and Fields Options`
-
-    - |checkbox| :option:`Oříznout pole` - smaže přebytečné mezery v
-      datech např. na konci nebo začátku záznamu
-    - |checkbox| :option:`Zrušit prázdná pole` - odstraní prázdné sloupce
+    - |checkbox| :option:`Detekovat typy polí` - detekuje datový typ sloupce
     - |checkbox| :option:`Desetinný oddělovač je čárka` - zaškrtneme,
       pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou
       (např. :numref:`xydatacsv`)
-    - |checkbox| :option:`Detect field types` - detekuje datový typ sloupce
+    - |checkbox| :option:`Oříznout pole` - smaže přebytečné mezery v
+      datech např. na konci nebo začátku záznamu
+    - |checkbox| :option:`Zrušit prázdná pole` - odstraní prázdné sloupce
 
-- :item:`Geometry definition`
+- :item:`Definice geometrie`
 
     - |radiobuttonon| :sup:`Souřadnice bodu` - body definovány souřadnicemi
       X a Y (XY Data)
 
-        - :option:`X pole`, `Y pole` |selectstring| - výběr sloupců,
-          ve kterých jsou zapsané souřadnice
+        - :option:`X pole`, :option:`Y pole`  |selectstring| - výběr sloupců,
+          ve kterých jsou zapsané souřadnice. :option:`Z pole`, :option:`M pole`
+          vybíráme, pokud data obsahují hodnoty `Z` a `M`
         - |checkbox| :option:`DMS souřadnice` - zaškrtneme, pokud máme
           souřadnice ve tvaru DMS (degrees-minutes-seconds) - stupně,
           minuty, vteříny
@@ -145,11 +142,12 @@ vrstvu s odděleným textem`.
     - |selectstring| :sup:`SRS geometrie` - souřadnicový systém, ve kterém
       jsou souřadnice uložené
 
-- :item:`Layer settings`
+- :item:`Nastavení vrstvy`
 
     - |checkbox| :option:`Použít prostorový index` - vytvoří prostorový
       index pro rychlejší práci s daty - vhodnější pro objemné soubory
-    - |checkbox| :option:`Použít index subsady` - vytvoří index podmnožiny prvků
+    - |checkbox| :option:`Použít index subsady` - vytvoří index podmnožiny
+      (filtrovaných) prvků
     - |checkbox| :option:`Sledovat soubor` - sledování změn souboru za
       běhu QGIS, při aktualizaci |mActionRefresh| se projeví změny souboru
       (např. přidání dalších dat do řádků) ve vrstvě
