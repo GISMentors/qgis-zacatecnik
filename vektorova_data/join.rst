@@ -129,18 +129,18 @@ Další volitelné nastavení
   pro rychlejší práci s daty
 - |checkbox| :item:`Dynamický formulář` - automatické načtení, v případě změn
   hodnot v "Cílovém poli"
-- |checkbox| :item:`Editable join layer` - umožňuje editovat atributy připojené
+- |checkbox| :item:`Editovatelné spojení na vrstvu` - umožňuje editovat atributy připojené
   vrstvy z atributové tabulky cílové vrstvy. Obě vrstvy musí být v režimu
   editace
 
-    - |checkbox| :item:`Upsert on edit` - při vytvoření nového prvku v cílové
+    - |checkbox| :item:`Vložit nebo aktualizovat řádek při editaci` - při vytvoření nového prvku v cílové
       vrstvě se automaticky vytvoří záznam v připojené vrstvě
-    - |checkbox| :item:`Delete cascade` - při smazání prvku v cílové vrstvě se
+    - |checkbox| :item:`Kaskádové mazání` - při smazání prvku v cílové vrstvě se
       automaticky smaže záznam v připojené vrstvě
 
-- |checkbox| :item:`Joined Fields` - lze zvolit konkrétní atributy pro
+- |checkbox| :item:`Připojená pole` - lze zvolit konkrétní atributy pro
   připojení
-- |checkbox| :item:`Custom Field Name Prefix` - zde můžeme zvolit vlastní
+- |checkbox| :item:`Vlastní předpona názvu pole` - zde můžeme zvolit vlastní
   předponu názvů připojených atributů (jejich sloupců)
 
 Po přidání se připojení a jeho nastavení objeví v seznamu. Pomocí tlačítek lze
