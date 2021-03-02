@@ -59,6 +59,15 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 
 .. only:: html
 
+.. index::
+   pair: datové sady; ke stažení
+
+.. important::
+
+   **Data ke školení** jsou stažitelná jako `zip archiv
+   <http://training.gismentors.eu/geodata/qgis/data.zip>`__ (614
+   MB).
+
 .. important:: Školení je zaměřeno na LTR verzi **QGIS 3.10**.
    V jiných verzích není zaručena funkčnost
    uvedených příkladů. Dále předpokládáme zapnutou *českou
@@ -69,15 +78,6 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
    K dispozici jsou i historické školící materiály k verzím QGIS
    :skoleni:`2.14 <qgis-zacatecnik/2.14>`, :skoleni:`2.18
    <qgis-zacatecnik/2.18>` a :skoleni:`3.4 <qgis-zacatecnik/3.4>`.
-
-.. index::
-   pair: datové sady; ke stažení
-
-.. notedata::
-
-   **Data ke školení** jsou stažitelná jako `zip archiv
-   <http://training.gismentors.eu/geodata/qgis/data.zip>`__ (614
-   MB).
 
 .. tip::
    Text školení je dostupný i v tisknutelné formě `PDF
