@@ -59,8 +59,8 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 
 .. only:: html
 
-.. important:: Školení je zaměřeno na aktuální LTR verzi **QGIS 3.4
-   Madeira**. V jiných verzích není zaručena funkčnost
+.. important:: Školení je zaměřeno na LTR verzi **QGIS 3.10**.
+   V jiných verzích není zaručena funkčnost
    uvedených příkladů. Dále předpokládáme zapnutou *českou
    lokalizaci*, :menuselection:`Možnosti --> Obecné`.
 
@@ -75,7 +75,7 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 
 .. notedata::
 
-   *Data ke školení* jsou stažitelná jako `zip archiv
+   **Data ke školení** jsou stažitelná jako `zip archiv
    <http://training.gismentors.eu/geodata/qgis/data.zip>`__ (614
    MB).
 
