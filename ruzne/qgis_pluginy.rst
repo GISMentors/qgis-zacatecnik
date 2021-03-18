@@ -300,10 +300,13 @@ Postup je znázorněný na :numref:`path`.
 .. note:: Tento modul je možno nahradit interním algoritmem, který je dostupný
    mezi nástroji zpracování.
 
+.. _p-path-proc:
+
 .. figure:: images/p_path_proc.png
    :class: middle
    :scale-latex: 35
 
+   Dialogové okno algoritmu pro hledání nejkratší cesty.
 
 |4| :sup:`Quick Map Services`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -344,7 +347,7 @@ Na :numref:`p-geodata` je dialogové okno pluginu.
 
    Ukázka dialogového okna pluginu
 
-|5| :sup:`RUIAN`
+|6| :sup:`RUIAN`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 *RUIAN Plugin* umožňuje přidávat do mapového okna dat z registru RÚIAN
