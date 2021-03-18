@@ -54,16 +54,24 @@ takto specifikované svahy.
 
 Výstupem pak je mapa s hodnotami 0 a 1, kde hodnotu 1 mají pixely, které splnily naši podmínku.
 
+.. _soc1:
+
 .. figure:: images/soc1.png
    :class: large
    :scale-latex: 75
 
+   Zájmová místa pro solární elektrárnu.
+
 Vrstvu můžeme pak nastylovat tak, aby hodnota 0 byla průhledná a hodnota 1 měla výraznou
 barvu viditelnou na podkladu, např. žlutou.
+
+.. _soc2:
 
 .. figure:: images/soc2.png
    :class: large
    :scale-latex: 75
+
+   Stylování zájmových ploch pro solární elektrárnu.
 
 Použití rastrového kalkulátoru pro reklasifikaci
 ------------------------------------------------
