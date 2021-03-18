@@ -182,8 +182,9 @@ zásuvních modulů programu QGIS:
 | |6| :sup:`RUIAN`		 | načítání dat z RÚIAN             |
 +------------------------------------------------+-------------------------------------------------+
 
+
 |1| :sup:`Another DXF Importer`
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 V případě, že máme k dispozici soubor AutoCAD DXF (`Drawing Exchange Format 
 <https://en.wikipedia.org/wiki/AutoCAD_DXF>`_), do prostředí programu QGIS ho
