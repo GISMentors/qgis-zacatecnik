@@ -4,17 +4,17 @@
    :width: 1.5em
 .. |star| image:: ../images/icon/osm_star.png
    :width: 1.5em
-.. |1| image:: ../images/icon/dxf2shp_converter.png
-   :width: 1.5em
-.. |3| image:: ../images/icon/roadgraph.png
+.. |1| image:: ../images/icon/another_dxf_importer.png
    :width: 1.5em
 .. |2| image:: ../images/icon/coordinate_capture.png
    :width: 1.5em
-.. |4| image:: ../images/icon/spatialquery.png
+.. |3| image:: ../images/icon/roadgraph.png
    :width: 1.5em
-.. |5| image:: ../images/icon/olp.png
+.. |4| image:: ../images/icon/quickmapservices.png
    :width: 1.5em
-.. |6| image:: ../images/icon/mGeorefRun.png
+.. |5| image:: ../images/icon/geodata_cz_sk.png
+   :width: 1.5em
+.. |6| image:: ../images/icon/ruian.png
    :width: 1.5em
 .. |7| image:: ../images/icon/evis_icon.png
    :width: 1.5em
@@ -152,7 +152,7 @@ modulů.
 .. tip:: Pokud známe alespoň přibližný název konkrétního modulu, při vyhledávání
    může pomoci vyplnění políčka `Hledat` v dialogovém okně. 
 
-Příklady zásuvních modulů
+Příklady zásuvných modulů
 =========================
 
 V další části si částečně ukážeme některé z užitečných a často používaných
@@ -169,49 +169,40 @@ zásuvních modulů programu QGIS:
 +------------------------------------------------+-------------------------------------------------+
 | Zásuvný modul                			 | Charakteristika  	  	                   |
 +================================================+=================================================+
-| |1| :sup:`Konvertor Dxf2Shp` 			 | konvertuje formát ``*.dxf`` do formátu ``*.shp``|
+| |1| :sup:`Another DXF Importer` 			 | importuje formát ``*.dxf``|
 +------------------------------------------------+-------------------------------------------------+
 | |2| :sup:`Získání souřadnic`     		 | získává souřadnice myši                         |
 +------------------------------------------------+-------------------------------------------------+
 | |3| :sup:`Zásuvný modul síťových analýz` 	 | řeší problém nejkratší cesty                    |
 +------------------------------------------------+-------------------------------------------------+
-| |4| :sup:`Zásuvný modul prostorových dotazů`   | tvorba prostorových dotazů			   |
+| |4| :sup:`Quick Map Services`   | načítání mapových služeb			   |
 +------------------------------------------------+-------------------------------------------------+
-| |5| :sup:`OpenLayers Plugin`                   | OpenLayers vrstvy			           |
+| |5| :sup:`GeoData CZ/SK`                   | mapové služby a jiné zdroje z ČR a SR	           |
 +------------------------------------------------+-------------------------------------------------+
-| |6| :sup:`Georeferencovač GDAL`		 | georeferencování rastrů pomocí GDAL             |
-+------------------------------------------------+-------------------------------------------------+
-| |7| :sup:`eVis`             			 | nástroj vizualizace událostí                    |
-+------------------------------------------------+-------------------------------------------------+
-| |8| :sup:`GPS nástroje`      			 | nástroje pro načtení a import dat GPS           |
-+------------------------------------------------+-------------------------------------------------+
-| |9| :sup:`Zásuvný modul analýzy terénu rastru` | nástroj pro analýzu terénu 		           |
+| |6| :sup:`RUIAN`		 | načítání dat z RÚIAN             |
 +------------------------------------------------+-------------------------------------------------+
 
-
-|1| :sup:`Konvertor Dxf2Shp`
+|1| :sup:`Another DXF Importer`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 V případě, že máme k dispozici soubor AutoCAD DXF (`Drawing Exchange Format 
 <https://en.wikipedia.org/wiki/AutoCAD_DXF>`_), do prostředí programu QGIS ho
-umíme načíst díky zásuvnému modulu *Konvertor Dxf2Shp*. Již z názvu vyplývá, že
-soubor je převeden do formátu *Shapefile*.
+umíme načíst buď přímo přes GDAL/OGR, pokud však import nedopadne podle očekávání
+pak je možné využít zásovný modul Another DXF Importer. V předchozích verzích byl
+dostupný také modul Konvertor Dxf2Shp, ten se však již dále nevyvíjí.
 
 .. _dxf2shp:
 
-.. figure:: images/p_dxf2shp.png
+.. figure:: images/p_anotherdxfimporter.png
    :scale: 70%
    :scale-latex: 45
    
-   Dialogové okno modulu na převod AutoCAD DXF souboru na soubor Shapefile.
+   Dialogové okno modulu pro import AutoCAD DXF souboru.
 
 Po načtení modulu ze :ref:`správce zásuvných modulů <spravce-plugin>`
 se po kliknutí na ikonu |1| objeví dialogové okno, kde je zapotřebí
 nastavit vstupní ``*.dxf`` soubor, název, cestu a typ nového ``*.shp``
-souboru, viz :numref:`dxf2shp`. Volba |checkbox| :sup:`Exportovat
-textové značky` vytvoří navíc bodovou vrstvu s označeními a příslušná
-``*.dbf`` tabulka bude obsahovat "textové" informace ze souboru
-``*.dxf``.
+souboru nebo GeoPackage.
 
 .. note:: Pokud se po spuštění modulu tlačítkem :item:`OK` zobrazí dialogové
    okno související se souřadnicovými systémy, systém nastavíme.
@@ -237,6 +228,9 @@ podobě čtyř hodnot (pro :numref:`zis-sur` by to bylo
 .. figure:: images/p_zis_sur2.png
 
    Dialogové okno modulu na zobrazení souřadnic z mapového okna.
+
+.. note:: Pro novou verzi QGIS byl tento modul portován a aktuálně není
+   přeložen do češtiny. Funkcionalita však zústává v zásadě stejná.
 
 |3| :sup:`Zásuvný modul síťových analýz`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -302,66 +296,66 @@ Postup je znázorněný na :numref:`path`.
        
        Zobrazení dialogového okna na výpočet nejkratší cesty.
 
-|4| :sup:`Zásuvný modul prostorových dotazů`
+.. note:: Tento modul je možno nahradit interním algoritmem, který je dostupný
+   mezi nástroji zpracování.
+
+.. figure:: images/p_path_proc.png
+   :class: middle
+   :scale-latex: 35
+
+
+|4| :sup:`Quick Map Services`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Pomocí tohoto zásuvného modulu lze vykonávat různé prostorové dotazy. Mezi dostupné
-prostorové  vztahy patří vztah dotyku, rozpojení, křížení, protínání nebo
-překryvu. Funkcionalita je založená na knihovně 
-`GEOS <https://en.wikipedia.org/w/index.php?title=JTS_Topology_Suite&redirect=no#GEOS_Library>`_.
-Vždy je nutné pracovat s vrstvou obsahující zdrojové prvky a vrstvou s
-referenčními prvky. 
+Pomocí tohoto zásuvného modulu je možné připojovat různé mapové služby
+postavené na protokolech XYZ nebo WMS. V základním nastavení jsou např.
+Open Street Map. Je však možno přidat další a také vyhledávat dle pozice.
+K dispozici jsou např. i mapy.cz.
 
-Se zásuvným modulem začneme pracovat tak, že klikneme na ikonu modulu |4| nebo z
-menu jako :menuselection:`Vektor --> Prostorový dotaz --> Prostorový dotaz`.
-Potom v dialogovém okně s názvem *Prostorový dotaz* nastavíme zdrojové a
-referenční vrstvy, prostorový vztah (operátor) a zvolíme, zda se jedná o nový
-výběr, nebo vybíráme z již existujícího výběru.
+Se zásuvným modulem začneme pracovat tak, že z
+menu jako :menuselection:`Web --> QuickMapServices --> ???` vybereme zdroj, který nás zajímá.
 
-Ukážeme si to na příkladě výběru všech obcí v České republice (:map:`obce`), ve
-kterých se nachází požární stanice (:map:`pozarni_stanice`). Použití je znázorněné
-na :numref:`p-pr-dot`. Po proběhnutí výběru zvolením `Použít` se otevře
-další okno (na :numref:`p-pr-dot` vpravo). V tomto kroku můžeme tlačítkem 
-|mActionNewVectorLayer| vytvořit vektorovou vrstvu z výběru, |selectcreatelayer|
-můžeme pokračovat s výběrem a provádět dalším podvýběry, volbou |checkbox|
-se dokážeme přibližovat k výsledným objektům, případně zapisovat zprávy.  
+.. _p-qms-dot:
 
-.. _p-pr-dot:
-
-.. figure:: images/p_pd_menu.png
+.. figure:: images/p_qms_menu.png
    :class: middle
         
-   Použití zásuvného modulu prostorových dotazů (prvek obsahuje ...).
+   Použití zásuvného modulu Quick Map Services
 
-.. _p-pr-vysl:
+.. _p-qms-vysl:
 
-.. figure:: images/p_pd_vysl.png
+.. figure:: images/p_qms_vysl.png
 
-   Obce České republiky s požární stanicí.
+   Přidáná mapová služba Open Street Map.
 
-|5| :sup:`OpenLayers Plugin` 
+|5| :sup:`GeoData CZ/SK`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-*OpenLayers Plugin* (:menuselection:`Web --> OpenLayers Plugin`)  umožňuje
-přidávat do mapového okna množství obrazových služeb z Google, Bing, Yahoo a
-OpenStreetMap (:numref:`plp`). Satelitní snímky těchto služeb se mohou lišit jak
-datumem, tak kvalitou v závislosti od lokality nebo poskytovatele. Podmínkou pro
-použití zásuvného modulu je dobrý přístup k internetu. Na :numref:`p-olm`  je
-příklad načtení čtyř různých vrstev s detailem pro určitou oblast.
+*GeoData CZ/SK Plugin* (:menuselection:`Zásuvné moduly --> GeoData --> Procházet datové zdroje`)
+umožňuje přidávat do mapového okna množství dat z oblasti České a SLovenské republiky
+obrazových služeb z XYZ a WMS zdrojů a také jiných typů zdrojů
+Na :numref:`p-geodata` je dialogové okno pluginu.
 
-.. _plp:
+.. _p-geodata:
 
-.. figure:: images/olp.png
-   
-   OpenLayers Plugin z lišty menu.
-
-.. _p-olm:
-
-.. figure:: images/p_olm.png
+.. figure:: images/p_geodata_cz_sk.png
    :class: large
 
-   Ukázka vrstev OpenStreetMap :fignote:`(1)`, OpenCycleMap :fignote:`(2)`, Bing
-   Road :fignote:`(3)` a MapQuest-OSM :fignote:`(4)` pro vybranou část Prahy.
+   Ukázka dialogového okna pluginu
+
+|5| :sup:`RUIAN`
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*RUIAN Plugin* umožňuje přidávat do mapového okna dat z registru RÚIAN
+(Registr územní identifikace, adres a nemovitostí).
+Na :numref:`p-ruian`  je dialogové okno pluginu.
+
+.. _p-ruian:
+
+.. figure:: images/p_ruian.png
+   :class: large
+
+   Ukázka dialogového okna pluginu
 
 .. note:: Další ze zmíněných modulů budou obsahem školení QGIS pro
           pokročilé, a to především GRASS plugin.
