@@ -16,14 +16,9 @@ INSPIRE - `https://geoportal.gov.cz/ <https://geoportal.gov.cz/web/guest/wms%3Bj
 
   - Speciální mapy III. vojenského mapování - :code:`http://geoportal.gov.cz/ArcGIS/services/CENIA/cenia_rt_III_vojenske_mapovani/MapServer/WMSServer?service=WMS&request=GetCapabilities&version=1.3.0`
 
-ČGS - `http://www.geology.cz <http://www.geology.cz/extranet/mapy/mapy-online/wms>`_
-
-  - Geologická mapa České republiky 1 : 50 000 (GEOČR50) - :code:`http://mapy.geology.cz/arcgis/services/Geologie/geocr50/MapServer/WMSServer`
-
 ÚHÚL - `http://www.uhul.cz/ <http://www.uhul.cz/mapy-a-data/webove-sluzby>`_
 
-  - OPRL - :code:`http://gp2.uhul.cz/wms_oprl/service.svc/sget`
-
+  - OPRL - :code:`http://geoportal.uhul.cz/wms_oprl/service.svc/get`
 
 WFS
 ---
