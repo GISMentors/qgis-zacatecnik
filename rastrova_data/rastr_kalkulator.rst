@@ -19,7 +19,7 @@ Při tvorbě mapy orientace vůči světovým stranám je lepší reklasifikovat
 (4), přičemž sever znamená :item:`0°` a východ :item:`90°`. Jednou z možností je
 využití tzv. rastrového kalkulátoru. Ten je dostupný v menu :item:`Nástroje
 zpracování`, které je dostupné přes |processingAlgorithm| :sup:`Sada nástrojů`. Nástroj je ve složce |providerQgis| :item:`Rastrová analáza` pod názvem 
-:item:`Raster calculator`.
+:item:`Raster calculator` nebo přes menu :menuselection:`Raster --> Rastrový kalkulátor`
 
 Rastrový kalkulátor souvisí s mapovou algebrou. Jedná se o matematické
 operace s rastrovými mapami, které jsou reprezentovány jako matice
@@ -38,7 +38,36 @@ vrstev a vytvářet tak nové vrstvy.
    :scale-latex: 45
    
    Princip mapové algebry.
-   
+
+Použití rastrového kalkulátoru pro určení míst potenciálně vhodných pro umístění solární elektrárny
+---------------------------------------------------------------------------------------------------
+
+Níže uvedený příklad je výpočet, kdy se konbinují dva rastry.
+První z nich je sklon svahu a druhý je orientace svahu.
+
+Pokud nás zajímají pouze místa se sklonem menším 15 stupňů, protože na svahy s
+větším sklonem se solární elektrárny špatně instalují a pak svahy orientované
+primárně na jih, pak můžeme zadat následující vzorec, který nám vrátí výstup, kde budou pouze
+takto specifikované svahy.
+
+:code:`"Sklon@1" < 15 and "Aspekt@1" > 180 and "Aspekt@1" < 270`.
+
+Výstupem pak je mapa s hodnotami 0 a 1, kde hodnotu 1 mají pixely, které splnily naši podmínku.
+
+.. figure:: images/soc1.png
+   :class: large
+   :scale-latex: 75
+
+Vrstvu můžeme pak nastylovat tak, aby hodnota 0 byla průhledná a hodnota 1 měla výraznou
+barvu viditelnou na podkladu, např. žlutou.
+
+.. figure:: images/soc2.png
+   :class: large
+   :scale-latex: 75
+
+Použití rastrového kalkulátoru pro reklasifikaci
+------------------------------------------------
+
 Níže uvedený příklad je výpočet tzv. reklasifiakce. Jde vlastně o přepočet
 hodnot podle pravidla. Na tento konkrétní úkol je možné použít i specifický
 nástroj určený pro reklasifikaci, například :item:`Reclassify by table`.

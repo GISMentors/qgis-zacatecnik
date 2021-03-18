@@ -133,6 +133,9 @@ hodnota `-9999`. Pro přiřazení hodnoty `0` je k dispozici opět samostatný
 parametr. Toto nastavení je důležité z  hlediska vizualizace, ale i navazujících
 výpočtů.
 
+Orientace svahu je ve stupních, přičemž server má hodnotu 45°.
+Severní strana má tedy rozsah 0°-90°. Jižní strana pak 180°-270°.
+
 .. _rstaspekt:
 
 .. figure:: images/aspekt.png
