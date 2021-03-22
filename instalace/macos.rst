@@ -62,7 +62,7 @@ Při vysypání koše bude QGIS trvale z počítače odinstalován.
 Spuštění QGISu
 --------------
 
-Pro rychlé spuštění QGISu na macOS zmáčněte klávesy :kbd:`command ⌘ + mezerník`,
+Pro rychlé spuštění QGISu na macOS zmáčněte klávesy :kbd:`command + mezerník`,
 otevře se okno spotlight kam pouze napište QGIS a zmáčkněte :kbd:`Enter`.
 
 .. figure:: images/07_spusteni.png
