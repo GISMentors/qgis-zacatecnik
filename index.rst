@@ -180,6 +180,7 @@ Za `GISMentors tým <http://www.gismentors.cz/>`_:
 * `Oto Kaláb <http://www.gismentors.cz/mentors/kalab/>`_ 
 * `Vojtěch Dubrovský <http://www.gismentors.cz/mentors/dubrovsky/>`_
 * `Martin Landa <http://www.gismentors.cz/mentors/landa/>`_  
+* `Jan Růžička <http://www.gismentors.cz/mentors/ruzicka/>`_  
 
 Text dokumentu
 --------------
