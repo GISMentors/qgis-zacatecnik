@@ -68,7 +68,7 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
    <http://training.gismentors.eu/geodata/qgis/data.zip>`__ (614
    MB).
 
-.. important:: Školení je zaměřeno na LTR verzi **QGIS 3.10**.
+.. important:: Školení je zaměřeno na LTR verzi **QGIS 3.28**.
    V jiných verzích není zaručena funkčnost
    uvedených příkladů. Dále předpokládáme zapnutou *českou
    lokalizaci*, :menuselection:`Možnosti --> Obecné`.
@@ -77,7 +77,7 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
 
    K dispozici jsou i historické školící materiály k verzím QGIS
    :skoleni:`2.14 <qgis-zacatecnik/2.14>`, :skoleni:`2.18
-   <qgis-zacatecnik/2.18>` a :skoleni:`3.4 <qgis-zacatecnik/3.4>`.
+   <qgis-zacatecnik/2.18>`, :skoleni:`3.4 <qgis-zacatecnik/3.4>` a :skoleni:`3.10 <qgis-zacatecnik/3.10>`.
 
 .. tip::
    Text školení je dostupný i v tisknutelné formě `PDF
@@ -109,7 +109,7 @@ vytváření map.  V tiskovém modulu lze vytvářet z nahraných dat výstupy
 se všemy kartografickými náležitostmi. Výsledky je možné exportovat do
 formátu PDF nebo obrázku, viz :doc:`mapovy_vystup/index`.
 
-.. figure:: images/intro_map.png
+.. figure:: images/example_map.png
    :scale-latex: 65
    :class: middle
         
@@ -125,7 +125,7 @@ jsou vyvíjeny uživatelskou komunitou projektu QGIS.  Pomocí pluginů je
 možné dopnit do QGIS novou funkcionalitu či podporu pro další formáty
 či služby jako je např. Google Maps, Bing nebo OpenStreetMap.
 
-Oficiální repozitář, který je defaultně k dispozici jako zdroj pluginů
+Oficiální repozitář, který je nativně k dispozici jako zdroj pluginů
 je dostupný `zde <https://plugins.qgis.org/plugins/>`_. Instalace
 konkrétního pluginu je pak možná přímo v okně pro správu zásuvných
 modulů (pluginů) :menuselection:`Zásuvné moduly --> Spravovat a
