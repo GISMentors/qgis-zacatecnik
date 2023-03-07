@@ -361,6 +361,7 @@ V mapovém okně lze použít pro měření následující nástroje z hlavního
 - |mActionMeasure| :sup:`Měřit linii` :kbd:`Ctrl+Shift+M`
 - |mActionMeasureArea| :sup:`Měřit plochu` :kbd:`Ctrl+Shift+J`
 - |mActionMeasureAngle| :sup:`Měřit úhel` 
+- |mActionMeasureBearing| :sup:`Měřit azimut`
 
 Pro měření se kliknutím vybere požadovaný nástroj. Zobrazí se dialogové okno k
 danému typu měření, kde lze vybrat jednotky měření. Kliknutím do mapy se začne

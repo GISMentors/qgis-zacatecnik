@@ -64,14 +64,14 @@ katalogu lze také procházet a přidávat soubory přímo z archivu zip.
 .. index::
    pair: export dat; rozhraní - popis
    
-.. tip:: Přes panel nástrojů je možné dosáhnout i další funkčnost.
+.. tip:: Přes panel nástrojů je možné dosáhnout i dalších funkčností.
          Jednou z nich je nově **mazání** dat, nejenom jejich
          odstranění z projektu. Další fukncionalita je závislá od typu
          dat (souborová databáze - přidávání dat tažením).
 
 Export dat
 ----------
-Pro export vrstvy nebo její částí se používá funkce
+Pro export vrstvy nebo její části se používá funkce
 :menuselection:`Uložit jako...`. Funkci můžeme spustit dvěma způsoby:
 
 V seznamu vrstev označíme vrstvu, kterou chceme exportovat, a vybereme
@@ -170,7 +170,7 @@ záložka :item:`SRS` sekce :item:`Výchozí transformace souřadnic`.
 
    Nastavení požadovaných transformačních klíčů v menu.
    
-V případě souřadnicového systému S-JTSK je vohdné tuto transformaci nastavit.
+V případě souřadnicového systému S-JTSK je vhodné tuto transformaci nastavit.
 Pomocí tlačítka |mActionSignPlus| zvolíme možnost přidání nové zvolené
 transformace.
 Jako první je nutné zvolit dvojici :item:`zdojový` a :item:`cílový` souř. 
@@ -178,7 +178,7 @@ systém, který chceme přesně nadefinovat. V tomto případě se jedná o dvoj
 EPSG 4326 a 5514.
 Po zadání této dvojice se vypíšou všechny dostupné transformace.
 Pro detailní popis je potřeba na zvolenou transformaci kliknout a ve spodní
-části se náseldně vypíše detailní popis. 
+části se následně vypíše detailní popis. 
 Zde je možné zjistit přesné číselné parametry, textový popis, ale zejména
 číselnou identifikaci konkrétní transformace.
 
