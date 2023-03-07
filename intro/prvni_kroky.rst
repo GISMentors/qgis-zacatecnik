@@ -24,9 +24,9 @@ operačního systému.
 
    \newpage
 
-.. figure:: images/linux_start.png
+.. figure:: images/linux_start_2204.png
 
-   Spuštění systému QGIS v Ubuntu 18.04.
+   Spuštění systému QGIS v Ubuntu 22.4.
    
 
 .. figure:: images/qgis_start_win.png
