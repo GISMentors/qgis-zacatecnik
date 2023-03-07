@@ -29,7 +29,7 @@ Výchozí chování lze nastavit v hlavním nastavení QGISu
 V okně atributové tabulky můžeme zobrazit jak atributovou tabulku (výchozí),
 tak i formulář atributů. Tato zobrazení se přepínají pomocí tlačítek v pravém dolním rohu: |attributes|:sup:`Přepnout na zobrazení tabulky` a |mActionFormView|:sup:`Přepnout na zobrazení formuláře`.
 
-**Základní funkce attributové tabulky**
+**Základní funkce atributové tabulky**
 
 - kliknutím na název pole, lze hodnoty seřadit.
 
@@ -65,7 +65,7 @@ tak i formulář atributů. Tato zobrazení se přepínají pomocí tlačítek v
    prvky`
 
    Pomocí funkce |mActionConditionalFormatting| :sup:`Pravidla`
-   podmíněného formátování` lze pole v atributové tabulce  stylizovat na 
+   podmíněného formátování lze pole v atributové tabulce  stylizovat na 
    podle námi definovaných pravidel
 
 

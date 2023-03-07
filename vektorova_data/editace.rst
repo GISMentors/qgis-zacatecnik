@@ -112,12 +112,12 @@ klávesy :kbd:`Backspace` nebo :kbd:`Del`.
 
     Přidání a přesunutí lomového bodu (uzlu, vertexu).
 
-Nástroj uzlů lze použít ve dvou módech, buď pouze pro vrstvu kterou editujeme
-, nebo pro všechny vrstvy které jsou v módu editace
+Nástroj uzlů lze použít ve dvou módech, buď pouze pro vrstvu kterou editujeme, 
+nebo pro všechny vrstvy které jsou v módu editace
 
 |mActionRemove| :sup:`Vymazat vybrané` - smaže vybrané prvky
 
-|mActionMoveFeature| :sup:`Přesunout prvek/prvky` - jednotlivé prvky přesuneme kliknutím na prvek, posunutím a opětovným klliknutím
+|mActionMoveFeature| :sup:`Přesunout prvek/prvky` - jednotlivé prvky přesuneme kliknutím na prvek, posunutím a opětovným kliknutím
 
 .. figure:: images/edit_polygon_move.png
 
@@ -129,7 +129,7 @@ které máme ve výběru.
 
 |mActionSplitFeatures| :sup:`Rozdělit objekt` - naklikáme "řez" přes
 místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem,
-prvek se nám v místech průsečíků rozdělí
+prvek se nám v místech průsečíků rozdělí.
 
 .. figure:: images/edit_polygon_split.png
 
@@ -141,7 +141,7 @@ výběru označíme prvky, které chceme spojit. Při sloučení
 vyskočí okno, ve kterém je možné zadat hodnoty atributů "nového" - sloučeného
 prvku. Tyto hodnoty můžeme odvodit z konkrétního vstupního prvku, nebo je lze
 vypočítat (např. suma, průměr). Výchozí hodnota atributů je :option:`NULL`,
-tedy žádná hodnota.
+tedy prázdná hodnota.
 
 .. figure:: images/edit_polygon_merge.png
    :class: middle
@@ -174,7 +174,7 @@ Přichytávání (snapping)
 Pro topologicky čistou editaci můžeme pomocí lišty
 :menuselection:`Přichytávání` nastavit
 přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
-konkrétních vrstev. Přichitávání je nejdříve nutné aktivovat kliknutím na
+konkrétních vrstev. Přichytávání je nejdříve nutné aktivovat kliknutím na
 ikonu |mIconSnapping|:sup:`Enable Snapping`, nebo využít klávesovou zkratku
 :kbd:`S`. Přichycení kurzoru se zobrazí výrazně růžovým čtverečkem v případě
 lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
@@ -257,7 +257,7 @@ lomového bodu (viz :numref:`snapvert`) nebo křížkem v případě segmentu
    prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
    (např. :numref:`snapvert` a :numref:`snapsegm`).
 
-Pokročílý režim přichytávání 
+Pokročilý režim přichytávání 
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 
 .. figure:: images/snapping_adv.png
@@ -309,6 +309,7 @@ změny vrstvy` i mazat vybrané prvky |mActionDeleteSelected| :sup:`Vymazat vybr
       do tabulky
     - |mActionDeleteAttribute| :sup:`Smazat pole` - vyvolá nabídku,
       ze které vybereme sloupce k vymazání
+    - |mActionEditTable| :sup:`Spravovat sloupce` - vyvolá nabídku, ve které můžete upravit viditelnost sloupce
     - |mActionCalculateField| :sup:`Otevřít kalkulátor polí` - pomocí 
       kalkulátoru polí lze vytvářet nebo aktualizovat sloupce (atributy) na 
       základě zadaného výrazu (vzorce)
