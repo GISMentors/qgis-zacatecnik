@@ -139,65 +139,65 @@ exportovat (:guilabel:`Uložit jako...`).
     Výsledná vrstva bodů.
 
 
-GPS data
---------
+.. GPS data
+  --------
 
-K práci s GPS daty QGIS používá plugin :guilabel:`GPS Nástroje`, který
-by měl být v základní instalaci QGIS nainstalovaný a aktivní. V panelu
-nástrojů se plugin zobrazí jako ikona |import_gpx| :sup:`GPS
-nástroje`. Pro ukládání GPS dat je mnoho různých formátů. QGIS používá
-standardní výměnný formát :wikipedia-en:`GPX <GPS_Exchange_Format>`
-(GPS eXchange format).
+  K práci s GPS daty QGIS používá plugin :guilabel:`GPS Nástroje`, který
+  by měl být v základní instalaci QGIS nainstalovaný a aktivní. V panelu
+  nástrojů se plugin zobrazí jako ikona |import_gpx| :sup:`GPS
+  nástroje`. Pro ukládání GPS dat je mnoho různých formátů. QGIS používá
+  standardní výměnný formát :wikipedia-en:`GPX <GPS_Exchange_Format>`
+  (GPS eXchange format).
 
-.. _gps:
+  .. _gps:
 
-.. figure:: images/gpstools.png
+  .. figure:: images/gpstools.png
+      :scale: 60 %
+      :scale-latex: 50
+
+      Okno pluginu GPS Nástroje.
+
+  Získání .gpx souboru z GPS přístroje
+  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  .. figure:: images/gpstools2.png
     :scale: 60 %
-    :scale-latex: 50
+    :scale-latex: 45
 
-    Okno pluginu GPS Nástroje.
+    Získání GPX souboru z GPS přístroje pomocí pluginu GPS nástroje.
 
-Získání .gpx souboru z GPS přístroje
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: images/gpstools2.png
-   :scale: 60 %
-   :scale-latex: 45
-
-   Získání GPX souboru z GPS přístroje pomocí pluginu GPS nástroje.
-
-- pomocí pluginu |gps_importer| :sup:`GPS Nástroje` v záložce 
-  :guilabel:`Stáhnout z GPS`
-        
-   - :guilabel:`GPS zařízení` |selectstring| - typ našeho GPS přístroje
-   - :guilabel:`Port` |selectstring| - např. usb
-   - :guilabel:`Typ prvku` |selectstring| - prvky, které chceme stáhnout z 
-     GPS
-   - :guilabel:`Název vrstvy` - jak se bude vrstva jmenovat
-   - :guilabel:`Výstupní soubor` - zadáme cestu a název 
-     souboru, a to buď ručně, nebo pomocí tlačítka :guilabel:`Uložit jako...`
-        
-- použitím externího software pro získání .gpx souboru
-        
-        - software od výrobce GPS
-        - volně dostupný software 
-..      - volně dostupný software `EasyGPS <http://www.easygps.com/>`_ 
-    
-Import .gpx souboru
-^^^^^^^^^^^^^^^^^^^
-- použitím pluginu |gps_importer| :sup:`GPS Nástroje` 
-
-    - po otevření pluginu (:numref:`gps`) zadáme cestu a název souboru,
-      a to buď ručně, nebo pomocí   tlačítka :guilabel:`Procházet`
-    - potvrdíme tlačítkem :guilabel:`OK` a vybereme data, která chceme vložit
-   
-- stejně jako přidání vektorových dat |mActionAddOgrLayer| :sup:`přidání 
-  vektorové vrstvy` nebo přetažením z prohlížeče souborů - v tomto případě 
-  data nelze editovat!
+  - pomocí pluginu |gps_importer| :sup:`GPS Nástroje` v záložce 
+    :guilabel:`Stáhnout z GPS`
+          
+    - :guilabel:`GPS zařízení` |selectstring| - typ našeho GPS přístroje
+    - :guilabel:`Port` |selectstring| - např. usb
+    - :guilabel:`Typ prvku` |selectstring| - prvky, které chceme stáhnout z 
+      GPS
+    - :guilabel:`Název vrstvy` - jak se bude vrstva jmenovat
+    - :guilabel:`Výstupní soubor` - zadáme cestu a název 
+      souboru, a to buď ručně, nebo pomocí tlačítka :guilabel:`Uložit jako...`
+          
+  - použitím externího software pro získání .gpx souboru
+          
+          - software od výrobce GPS
+          - volně dostupný software 
+  ..      - volně dostupný software `EasyGPS <http://www.easygps.com/>`_ 
       
-Vytvoření .gpx souboru
-^^^^^^^^^^^^^^^^^^^^^^
+  Import .gpx souboru
+  ^^^^^^^^^^^^^^^^^^^
+  - použitím pluginu |gps_importer| :sup:`GPS Nástroje` 
+
+      - po otevření pluginu (:numref:`gps`) zadáme cestu a název souboru,
+        a to buď ručně, nebo pomocí   tlačítka :guilabel:`Procházet`
+      - potvrdíme tlačítkem :guilabel:`OK` a vybereme data, která chceme vložit
     
-- pomocí tlačítka |create_gpx| :sup:`Vytvořit novou vrstvu GPX` (přidá 
-  se do panelu na práci s vrstvami)
-- export bodové nebo liniové vrstvy pomocí :guilabel:`Uložit jako...` s 
-  výběrem formátu .gpx
+  - stejně jako přidání vektorových dat |mActionAddOgrLayer| :sup:`přidání 
+    vektorové vrstvy` nebo přetažením z prohlížeče souborů - v tomto případě 
+    data nelze editovat!
+        
+  Vytvoření .gpx souboru
+  ^^^^^^^^^^^^^^^^^^^^^^
+      
+  - pomocí tlačítka |create_gpx| :sup:`Vytvořit novou vrstvu GPX` (přidá 
+    se do panelu na práci s vrstvami)
+  - export bodové nebo liniové vrstvy pomocí :guilabel:`Uložit jako...` s 
+    výběrem formátu .gpx.
