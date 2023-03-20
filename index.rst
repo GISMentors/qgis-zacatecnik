@@ -68,7 +68,7 @@ dlouhodobého plánování a hlavně z požadavků uživatelů.
    <http://training.gismentors.eu/geodata/qgis/data.zip>`__ (614
    MB).
 
-.. important:: Školení je zaměřeno na LTR verzi **QGIS 3.28**.
+.. important:: Školení je zaměřeno na LTR verzi QGIS 3.28.
    V jiných verzích není zaručena funkčnost
    uvedených příkladů. Dále předpokládáme zapnutou *českou
    lokalizaci*, :menuselection:`Možnosti --> Obecné`.
