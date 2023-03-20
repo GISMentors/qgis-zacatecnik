@@ -2,7 +2,7 @@ Zdroje webových služeb
 ======================
 WMS
 ---
-ČÚZK - `http://geoportal.cuzk.cz <http://geoportal.cuzk.cz/(S(dyiumdlw4adcenkt452vaq4p))/Default.aspx?mode=TextMeta&side=wms.verejne&text=WMS.verejne.uvod&head_tab=sekce-03-gp&menu=311>`_
+ČÚZK - `https://services.cuzk.cz/wms/wms.asp?request=GetCapabilities&service=wms`_
 
   - Katastrální mapy - :code:`http://services.cuzk.cz/wms/wms.asp`
   - Ortofoto - :code:`http://geoportal.cuzk.cz/WMS_ORTOFOTO_PUB/WMService.aspx`
