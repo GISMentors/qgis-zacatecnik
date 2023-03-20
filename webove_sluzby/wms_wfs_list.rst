@@ -18,7 +18,7 @@ INSPIRE - `https://geoportal.gov.cz/ <https://geoportal.gov.cz/web/guest/wms%3Bj
 
 ÚHÚL - `http://www.uhul.cz/ <http://www.uhul.cz/mapy-a-data/webove-sluzby>`_
 
-  - OPRL - :code:`http://geoportal.uhul.cz/wms_oprl/service.svc/get`
+  - OPRL - :code:`https://geoportal.uhul.cz/wms_oprl/service.svc/get`
 
 WFS
 ---
