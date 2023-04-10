@@ -18,11 +18,6 @@ jobs:
       with:
         fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
-    # - name: Install dependencies
-    #   run: |
-    #     sudo apt install --yes pandoc
-    #     sudo apt install --yes graphviz
-
     - name: Install locales
       run: |
         sudo apt-get install --yes locales-all --reinstall
@@ -36,7 +31,8 @@ jobs:
       with:
         documentation_path: ./
         # requirements_path: ./docs/requirements.txt
-
+        sphinx_version: 4.5.0
+          
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
