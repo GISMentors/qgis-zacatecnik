@@ -23,6 +23,10 @@ jobs:
     #     sudo apt install --yes pandoc
     #     sudo apt install --yes graphviz
 
+    - name: Install locales
+      run: |
+        sudo apt-get update && apt-get install locales-all --reinstall -y
+
     - name: Download template
       run: |
         git clone https://github.com/GISMentors/sphinx-template.git /home/runner/work/qgis-zacatecnik/sphinx-template
