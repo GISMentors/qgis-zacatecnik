@@ -25,7 +25,7 @@ jobs:
 
     - name: Install locales
       run: |
-        sudo apt-get install --yess locales-all --reinstall
+        sudo apt-get install --yes locales-all --reinstall
 
     - name: Download template
       run: |
