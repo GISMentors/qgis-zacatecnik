@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Vlastnosti vrstvy &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Tvorba nových vrstev a jejich editace" href="editace.html" />
+    <link rel="prev" title="Přidání a export dat" href="vektor_import.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="vektor_import.html" title="Přidání a export dat"
+             accesskey="P">předchozí</a> |
+          <a href="editace.html" title="Tvorba nových vrstev a jejich editace"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="vlastnosti-vrstvy">
+<h1>Vlastnosti vrstvy<a class="headerlink" href="#vlastnosti-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<section id="atributova-tabulka">
+<h2>Atributová tabulka<a class="headerlink" href="#atributova-tabulka" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Vektorová data se skládájí ze dvou základních složek – geometrie (body,
+linie, polygony) a informací o jednotlivých prvcích tzv. atributů.</p>
+<p>Atributovou tabulku otevřeme pomocí ikony <a class="reference internal" href="../_images/mActionOpenTable.png"><img alt="mActionOpenTable" src="../_images/mActionOpenTable.png" style="width: 1.5em;" /></a> <sup>Otevřít
+atributovou tabulku</sup> (klávesová zkratka <kbd class="kbd docutils literal notranslate">F6</kbd>), nebo pravým kliknutím
+vyvoláme kontextové menu a zvolíme <span class="item">Otevřít atributovou tabulku</span>.
+Tabulka slouží k prohlížení a editaci atributové složky dat. V názvu
+okna je vypsaný název vrstvy, celkový počet prvků (<cite>Features total</cite>),
+počet odfiltrovaných prvků (<cite>filtered</cite>) a počet prvků ve výběru
+(<cite>selected</cite>).</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/at_table.png" src="../_images/at_table.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 56 </span><span class="caption-text">Atributová tabulka vrstvy.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Okno atributové tabulky lze otevírat ve dvou režimech, a to buď v
+samostatném okně, nebo jako panel. Přepínat tyto režimy lze  v liště
+atributové tabulky pomocí funkce|mDockify|:sup:<cite>Atributová tabulka jako panel</cite>.
+Výchozí chování lze nastavit v hlavním nastavení QGISu
+(<span class="menuselection">Nastavení -&gt; Nastavení…</span> záložka <span class="item">Zdroje dat</span>).</p>
+<p>V okně atributové tabulky můžeme zobrazit jak atributovou tabulku (výchozí),
+tak i formulář atributů. Tato zobrazení se přepínají pomocí tlačítek v pravém dolním rohu: <a class="reference internal" href="../_images/attributes.png"><img alt="attributes" src="../_images/attributes.png" style="width: 1.5em;" /></a><sup>Přepnout na zobrazení tabulky</sup> a <a class="reference internal" href="../_images/mActionFormView.png"><img alt="mActionFormView" src="../_images/mActionFormView.png" style="width: 1.5em;" /></a><sup>Přepnout na zobrazení formuláře</sup>.</p>
+<p><strong>Základní funkce atributové tabulky</strong></p>
+<ul>
+<li><p>kliknutím na název pole, lze hodnoty seřadit.</p></li>
+<li><p>kliknutím na číslo řádku můžeme označit jednotlivé prvky do výběru</p></li>
+<li><p>pomocí tlačítka <a class="reference internal" href="../_images/mActionSelectedToTop.png"><img alt="mActionSelectedToTop" src="../_images/mActionSelectedToTop.png" style="width: 1.5em;" /></a> <sup>Přesunout výběr nahoru</sup>
+lze zobrazit vybrané prvky na prvním místě tabulky, což nám vybraná
+data zpřehlední.</p></li>
+<li><p>lze použít funkce výběru, které jsou dostupné i v hlavním okně:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky pomocí vzorce</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionSelectAll.png"><img alt="mActionSelectAll" src="../_images/mActionSelectAll.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky pomocí vzorce</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionInvertSelection.png"><img alt="mActionInvertSelection" src="../_images/mActionInvertSelection.png" style="width: 1.5em;" /></a> <sup>Převrátit výběr prvků</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionUnselectAttributes.png"><img alt="mActionUnselectAttributes" src="../_images/mActionUnselectAttributes.png" style="width: 1.5em;" /></a><sup>Zrušit výběr ve všech vrstvách</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionPanToSelected.png"><img alt="mActionPanToSelected" src="../_images/mActionPanToSelected.png" style="width: 1.5em;" /></a> <sup>Posunout mapu na výběr</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionZoomToSelected.png"><img alt="mActionZoomToSelected" src="../_images/mActionZoomToSelected.png" style="width: 1.5em;" /></a> <sup>Přiblížit na výběr</sup></p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>tlačítko <a class="reference internal" href="../_images/mActionFilter2.png"><img alt="mActionFilter2" src="../_images/mActionFilter2.png" style="width: 1.5em;" /></a><sup>Vybrat/filtrovat prvky pomocí formuláře (Ctrl+F)</sup> umožňuje vytvářet výběr nebo fltrovat prvky za pomocí formuláře (viz <a class="reference internal" href="dotazovani.html#vybrat-prvky"><span class="std std-ref">Vybrat prvky podle hodnoty</span></a> ). Pro návrat do atributové tabulky stiskněte tlačítko <a class="reference internal" href="../_images/attributes.png"><img alt="attributes" src="../_images/attributes.png" style="width: 1.5em;" /></a><sup>Přepnout na zobrazení tabulky</sup>.</p></li>
+<li><p>pomocí tlačítka <a class="reference internal" href="../_images/organiseColumns.png"><img alt="organiseColumns" src="../_images/organiseColumns.png" style="width: 1.5em;" /></a><sup>Uspořádat sloupce tabulky</sup> lze
+měnit pořadí sloupců, nebo jednotlivé sloupce skrýt.</p></li>
+</ul>
+<figure class="align-center" id="id6">
+<img alt="../_images/at_table_sort.png" src="../_images/at_table_sort.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 57 </span><span class="caption-text">Možnost uspořádání sloupců.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pomocí nabídky <a class="reference internal" href="../_images/mActionFilter2.png"><img alt="mActionFilter2" src="../_images/mActionFilter2.png" style="width: 1.5em;" /></a> v levém dolním rohu lze zvolit filtr
+zobrazených prvků. Ve výchozím nastavení filtr zobrazuje všechny
+prvky ve vrstvě, tedy hodnota: <a class="reference internal" href="../_images/mActionFilter2.png"><img alt="mActionFilter2" src="../_images/mActionFilter2.png" style="width: 1.5em;" /></a> <span class="item">Zobrazit všechny
+prvky</span></p>
+<p>Pomocí funkce <a class="reference internal" href="../_images/mActionConditionalFormatting.png"><img alt="mActionConditionalFormatting" src="../_images/mActionConditionalFormatting.png" style="width: 1.5em;" /></a> <sup>Pravidla</sup>
+podmíněného formátování lze pole v atributové tabulce  stylizovat na
+podle námi definovaných pravidel</p>
+</div>
+</section>
+<section id="vlastnosti">
+<h2>Vlastnosti<a class="headerlink" href="#vlastnosti" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Vlastnosti vyvoláme dvojklikem na vrstvu nebo pravým tlačítkem myši
+kontextové menu a zvolíme <span class="item">Vlastnosti</span>.</p>
+<section id="informace">
+<span id="vektor-informace"></span><h3>Informace<a class="headerlink" href="#informace" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Jako první vidíme ve vlastnostech vrstvy záložku informace. Zde najdeme
+základní popis zdrojových dat - cesta k souboru, kódování, souřadnicový systém,
+ale i počet prvků a seznam atributů</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/info1.png" src="../_images/info1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 58 </span><span class="caption-text">Informace vektorové vrstvy.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="zdroj">
+<h3>Zdroj<a class="headerlink" href="#zdroj" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Zde nalezneme základní nastavení ke zdroji vrstvy -
+název vrstvy, kódování textu, souřadnicový systém (SRS) a
+nastavení filtru.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/properties.png" src="../_images/properties.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 59 </span><span class="caption-text">Zdroj vektorové vrstvy.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="styl">
+<span id="styl-vrstvy"></span><h3>Styl<a class="headerlink" href="#styl" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<section id="symbology-symbologie">
+<h4><a class="reference internal" href="../_images/symbology.png"><img alt="symbology" src="../_images/symbology.png" style="width: 1.5em;" /></a> Symbologie<a class="headerlink" href="#symbology-symbologie" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<p>Pomocí rolovací nabídky <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> vybereme typ symbologie:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/rendererSingleSymbol.png"><img alt="rendererSingleSymbol" src="../_images/rendererSingleSymbol.png" style="width: 1.5em;" /></a><sup>Jednoduchý symbol</sup> - zde máme na výběr z
+uložených symbolů. V levém sloupci máme zobrazený typ symbolu a jeho
+jednotlivé části. Při kliknutí na konkrétní složku symbolu můžeme měnit
+její vlastnosti (barvy, typ výplně, šířka ohraničení atd.).</p></li>
+</ul>
+<figure class="align-center" id="id9">
+<img alt="../_images/symbol_simple.png" src="../_images/symbol_simple.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 60 </span><span class="caption-text">Jednoduchá symbologie. V levé části vlastnosti označené
+složky symbolu.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pomocí tlačítek můžeme další složky symbolu přidávat
+<a class="reference internal" href="../_images/symbologyAdd.png"><img alt="symbologyAdd" src="../_images/symbologyAdd.png" style="width: 1.5em;" /></a>, odebírat <a class="reference internal" href="../_images/symbologyRemove.png"><img alt="symbologyRemove" src="../_images/symbologyRemove.png" style="width: 1.5em;" /></a>, zamykat <a class="reference internal" href="../_images/locked.png"><img alt="locked" src="../_images/locked.png" style="width: 1.5em;" /></a> nebo
+měnit jejich pořadí <a class="reference internal" href="../_images/mActionArrowUp.png"><img alt="mActionArrowUp" src="../_images/mActionArrowUp.png" style="width: 1.5em;" /></a>, <a class="reference internal" href="../_images/mActionArrowDown.png"><img alt="mActionArrowDown" src="../_images/mActionArrowDown.png" style="width: 1.5em;" /></a>. Tímto způsobem
+si můžeme vytvořit vlastní symbologii.</p>
+</div>
+<ul>
+<li><p><a class="reference internal" href="../_images/rendererCategorizedSymbol.png"><img alt="rendererCategorizedSymbol" src="../_images/rendererCategorizedSymbol.png" style="width: 1.5em;" /></a><sup>Kategorizovaný</sup> - vhodný pro kategoriální
+proměnné</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">sloupec</span> - pro výběr atributu</p></li>
+<li><p><span class="guilabel">barevný rozsah</span> - výběr barev</p></li>
+<li><p>pro vytvoření kategorii kliknout na <span class="guilabel">klasifikovat</span></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<figure class="align-center" id="id10">
+<img alt="../_images/symbol_kat.png" src="../_images/symbol_kat.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 61 </span><span class="caption-text">Kategorizovaná symbologie.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p><a class="reference internal" href="../_images/rendererGraduatedSymbol.png"><img alt="rendererGraduatedSymbol" src="../_images/rendererGraduatedSymbol.png" style="width: 1.5em;" /></a><sup>Odstupňovaný</sup> - vhodný pro spojité proměnné</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>nastavení obdobné jako u možnosti
+<a class="reference internal" href="../_images/rendererCategorizedSymbol.png"><img alt="rendererCategorizedSymbol" src="../_images/rendererCategorizedSymbol.png" style="width: 1.5em;" /></a><sup>Kategorizovaný</sup></p></li>
+<li><p>možnost režimu intervalů a počet tříd</p></li>
+<li><p>možnost zobrazení histogramu</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<figure class="align-center" id="id11">
+<img alt="../_images/symbol_odst.png" src="../_images/symbol_odst.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 62 </span><span class="caption-text">Odstupňovaná symbologie.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="mactionlabeling-popisky">
+<h4><a class="reference internal" href="../_images/mActionLabeling.png"><img alt="mActionLabeling" src="../_images/mActionLabeling.png" style="width: 1.5em;" /></a> Popisky<a class="headerlink" href="#mactionlabeling-popisky" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<p>Kromě rozlišení prvků pomocí symbologie lze také přidat k jednotlivým
+prvkům popisek na základě jednoho z atributů.</p>
+<figure class="align-center" id="id12">
+<img alt="../_images/labels1.png" src="../_images/labels1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 63 </span><span class="caption-text">Vlastnosti popisků vrstvy.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Na této záložce je nejdříve nutné vybrat z rolovací nabídky <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a>
+položku <a class="reference internal" href="../_images/mActionLabeling.png"><img alt="mActionLabeling" src="../_images/mActionLabeling.png" style="width: 1.5em;" /></a><sup>Single labels</sup>. Tím se nám otevřou
+možnosti stylizace popisků, kde můžeme nastavit formát textu, obalovou zónu
+kolem textu, pozadí, stínování, možnosti umístění a vykreslování. Nejdříve je
+ale nutné nastavit zdroj popisku. Pomocí rolovací nabídky <span class="guilabel">Popisky z</span>
+vybreme zdrojový atribut popisku.</p>
+<figure class="align-center" id="id13">
+<img alt="../_images/labels_sample.png" src="../_images/labels_sample.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 64 </span><span class="caption-text">Příklad popisků s použitím obalové zóny textu.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Jako zdroj popisků lze použít i vzorec, a to buď
+přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru
+<a class="reference internal" href="../_images/mIconExpression.png"><img alt="mIconExpression" src="../_images/mIconExpression.png" style="width: 1.5em;" /></a>.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="panel-stylovani">
+<h2>Panel stylování<a class="headerlink" href="#panel-stylovani" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pro pohodlnější práci se stylováním, slouží panel stylování
+<span class="item">Stylování vrstvy</span>, který lze aktivovat pravým kliknutím na
+prázdné místo v hlavním panelu a výběrem z nabídky nebo mocí klávesové
+zkratky <span class="item">F7</span>. Výhodou panelu stylování je, že  lze rychle, bez
+znovuotevírání okna, přepínat mezi vrstvyami,veškeré provedené změny v
+symbologii se vykreslí ihned, a také je zde možnost kroku zpět na
+předchozí symbologii, nebo přímo procházení historie všech změn.</p>
+<figure class="align-center" id="id14">
+<img alt="../_images/styl_panel.png" class="small" src="../_images/styl_panel.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 65 </span><span class="caption-text">Panel stylování</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="prace-se-styly">
+<h2>Práce se styly<a class="headerlink" href="#prace-se-styly" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<section id="vice-stylu-u-vrstvy">
+<h3>Více stylů u vrstvy<a class="headerlink" href="#vice-stylu-u-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>V rámci projektu lze vytvořit různé „verze“ nastylování u konkrétní
+vrstvy. Takto přednastavený styl můžeme potom podle potřeby měnit. Tato
+funkce může být užitečná např. při vytváření mapových výstupů
+jednoho zdroje dat s různou symbologií. Styly lze ovládat
+(přídání, smazání, přejmenování, zvolení, export) pomocí
+tlačítka ve spodní části okna vlastností, nebo z kontextového
+menu vrstvy (pravý klik na vrstvu v panelu vrstev), zde je
+přepínání jednotlivých stylů rychlejší. V panelu stylování se
+styly ovládají v samostatné záložce <a class="reference internal" href="../_images/stylepreset.png"><img alt="stylepreset" src="../_images/stylepreset.png" style="width: 1.5em;" /></a><sup>Správce
+stylů</sup>.</p>
+<figure class="align-center" id="id15">
+<img alt="../_images/styl_kat.png" class="middle" src="../_images/styl_kat.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 66 </span><span class="caption-text">Výběr stylu pomocí kontextového menu z panelu vrstev</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id16">
+<img alt="../_images/styl_kont.png" class="middle" src="../_images/styl_kont.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 67 </span><span class="caption-text">Výběr stylu pomocí kontextového menu z panelu vrstev</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ulozeni-a-nacteni-nastaveni-vrstvy-pomoci-souboru">
+<h3>Uložení a načtení nastavení vrstvy pomocí souboru<a class="headerlink" href="#ulozeni-a-nacteni-nastaveni-vrstvy-pomoci-souboru" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Celé nastavení (styl, formuláře, atd.) vrstvy lze také uložit do
+samostatného souboru (<a href="#id1"><span class="problematic" id="id2">*</span></a>.qml, <a href="#id3"><span class="problematic" id="id4">*</span></a>.sld), což můžeme využít pro sdílení mezi
+kolegy, nebo pro pozdější použití nastavení vrstvy v jiném projektu.</p>
+<p>Možnost uložení a načtení najdeme v okně <cite>Vlastnoti vrstvy</cite>
+kliknutím na tlačítko <span class="item">Styl</span>. První dvě možnosti v
+nabídce umožní <span class="item">Načíst styl…</span> a <span class="item">Uložit styl…</span>.</p>
+<figure class="align-center" id="id17">
+<img alt="../_images/styl_soubor_menu.png" class="small" src="../_images/styl_soubor_menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 68 </span><span class="caption-text">Možnosti práce se styly</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>U QML souboru můžeme zvolit (stejně jako při kopírování stylů), které
+součásti nastavení se budou ukládat popř. načítat.</p>
+<figure class="align-center" id="id18">
+<img alt="../_images/styl_soubor_nacteni.png" class="small" src="../_images/styl_soubor_nacteni.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 69 </span><span class="caption-text">Načítání nastavení vrstvy ze souboru</span><a class="headerlink" href="#id18" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s vektorovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join.html">Připojení tabulkových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="vektor_import.html" title="Přidání a export dat"
+              >předchozí</a> |
+            <a href="editace.html" title="Tvorba nových vrstev a jejich editace"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

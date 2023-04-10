@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Připojení WFS služby &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Zdroje webových služeb" href="wms_wfs_list.html" />
+    <link rel="prev" title="Připojení WMS/WMTS služby" href="rastr.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="rastr.html" title="Připojení WMS/WMTS služby"
+             accesskey="P">předchozí</a> |
+          <a href="wms_wfs_list.html" title="Zdroje webových služeb"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pripojeni-wfs-sluzby">
+<h1>Připojení WFS služby<a class="headerlink" href="#pripojeni-wfs-sluzby" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Správce <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wfs.html">WFS</a>
+spustíme v záložce <span class="menuselection">Vrstva ‣ Přidat vrstvu ‣ Přidat
+vrstvu WFS</span> nebo pomocí ikony <a class="reference internal" href="../_images/mActionAddWfsLayer.png"><img alt="mActionAddWfsLayer" src="../_images/mActionAddWfsLayer.png" style="width: 1.5em;" /></a> <sup>Přidání
+vrstvu WFS</sup>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/qgis_ogc_addwfs_manager.png" src="../_images/qgis_ogc_addwfs_manager.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 166 </span><span class="caption-text">Okno správce WFS služeb.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Okno správce umožňuje přidání, odebrání služby a nahrání vrstev do
+projektu. Formulář přidání nové služby se aktivuje tlačítkem <span class="item">Nové</span>. Ve
+formuláři (<a class="reference internal" href="#wfsform"><span class="std std-numref">Obr. 167</span></a>) stačí v případě nezaheslované služby vyplnit pouze
+URL a pojmenování služby. V případě zaheslované služby jsou vyžadovány
+přihlašovací údaje.</p>
+<figure class="align-center" id="id2">
+<span id="wfsform"></span><img alt="../_images/qgis_ogc_addwfs_add.png" class="small" src="../_images/qgis_ogc_addwfs_add.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 167 </span><span class="caption-text">Formulář přidání WFS služby.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Po potvrzení a připojení ke službě se tlačítkem <span class="item">Připojit</span>
+zobrazí seznam vrstev poskytovaných WFS serverem (<a class="reference internal" href="#wfslayers"><span class="std std-numref">Obr. 168</span></a>).</p>
+<figure class="align-center" id="id3">
+<span id="wfslayers"></span><img alt="../_images/qgis_ogc_addwfs_choose.png" src="../_images/qgis_ogc_addwfs_choose.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 168 </span><span class="caption-text">Seznam dostupných vrstev na připojeném WFS serveru.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Výběr více vrstev pro přidání lze opět uskutečnit pomocí klávesy <kbd class="kbd docutils literal notranslate">CTRL</kbd>,
+vrstvy se v takovém případě nahrají do seznamu vrstev samostatně
+(jako při přidávání lokálních dat). Tak jako v případě WMS lze změnit
+souřadnicový systém sloužící ke stahování dat. Změna se provádí pod tlačítkem
+<span class="item">Změnit …</span> ve spodní pravé části okna. Potvrzením <span class="item">Přidat</span> proběhne
+přidání vrstev do mapy.</p>
+<section id="prace-s-wfs-sluzbami-v-okne-prohlizece">
+<h2>Práce s WFS službami v okně prohlížeče<a class="headerlink" href="#prace-s-wfs-sluzbami-v-okne-prohlizece" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Procházet, editovat a přidávat WFS připojení lze také z panelu
+prohlížeče (<a class="reference internal" href="#wfsbrowser"><span class="std std-numref">Obr. 169</span></a>). Vyvoláním kontextového menu pravým
+kliknutím na položku můžeme provádět vybrané akce.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/mIconWfs.png"><img alt="mIconWfs" src="../_images/mIconWfs.png" style="width: 1.5em;" /></a> WFS - vytvoření připojení</p></li>
+<li><p><a class="reference internal" href="../_images/mIconWfs.png"><img alt="mIconWfs" src="../_images/mIconWfs.png" style="width: 1.5em;" /></a> konkrétní připojení - editace, odstranění</p></li>
+<li><p><a class="reference internal" href="../_images/mIconConnect.png"><img alt="mIconConnect" src="../_images/mIconConnect.png" style="width: 1.5em;" /></a> konkrétní vrstva - přidání do projektu, vlastnosti</p></li>
+</ul>
+<p>Přidat požadovanou vrstvu do projektu jde obdobně jako u lokálních dat,
+dvojitým kliknutím nebo přetažením z datového katalogu (prohlížeče).</p>
+<figure class="align-center" id="id4">
+<span id="wfsbrowser"></span><img alt="../_images/qgis_ogc_addwfs_browser.png" class="small" src="../_images/qgis_ogc_addwfs_browser.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 169 </span><span class="caption-text">Práce s WFS službami v okně prohlížeče.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s webovými službami OGC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rastr.html">Připojení WMS/WMTS služby</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Připojení WFS služby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wms_wfs_list.html">Zdroje webových služeb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="rastr.html" title="Připojení WMS/WMTS služby"
+              >předchozí</a> |
+            <a href="wms_wfs_list.html" title="Zdroje webových služeb"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

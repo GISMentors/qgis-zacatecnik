@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Připojení tabulkových dat &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Atributové a prostorové dotazování" href="dotazovani.html" />
+    <link rel="prev" title="Import dat s oddělenými hodnotami a GPS dat" href="import_delim.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="import_delim.html" title="Import dat s oddělenými hodnotami a GPS dat"
+             accesskey="P">předchozí</a> |
+          <a href="dotazovani.html" title="Atributové a prostorové dotazování"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pripojeni-tabulkovych-dat">
+<h1>Připojení tabulkových dat<a class="headerlink" href="#pripojeni-tabulkovych-dat" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>V této kapitole si ukážeme funkci <a class="reference internal" href="../_images/join.png"><img alt="join" src="../_images/join.png" style="width: 1.5em;" /></a> <sup>Připojení</sup> resp. její
+využití k připojení tabulkových dat k atributové tabulce vrstvy, kterou
+máme v projektu. Funkce připojení umožňuje na základě shodných hodnot
+jednoho atributu připojit atributovou tabulku k vektorové vrstvě. Takto k
+sobě můžeme připojit atributové tabulky dvou vektorových vrstev. Díky
+knihovně GDAL však lze jako atributovou tabulku nahrát i tabulková data bez
+geometrie (formáty *.csv, *.dbf, *.ods, *.xls aj.). To má využití
+zejména pokud potřebujeme připojit získané tabulky s informacemi
+o prvcích ve vektorové vrstvě nebo pokud potřebujeme připojit data
+naměřená v terénu ke známým prvkům nebo např. naměřeným GPS bodům.</p>
+<p>Postup si ukážeme na připojení tabulky získané z databáze chráněných území
+(<a class="reference external" href="http://drusop.nature.cz">http://drusop.nature.cz</a>) k vektorové vrstvě velkoplošných zvláště chráněných území
+(AOPK). Připojením získáme informaci, pod jaké orgány ochrany přírody spadají
+jednotlivá území.</p>
+<section id="postup-pripojeni">
+<h2>Postup připojení<a class="headerlink" href="#postup-pripojeni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Nejprve je vhodné převést naši tabulku na data s oddělenými hodnotami,
+např. formát <a class="reference external" href="http://cs.wikipedia.org/wiki/CSV">CSV</a>, což provedeme přímo v tabulkovém
+procesoru - při ukládání nebo exportu vybereme formát *.csv.</p>
+<p>Existují dva hlavní způsoby jak nahrát tabulková data jako vrstvu do QGIS:</p>
+<p>1. Pomocí <a class="reference internal" href="../_images/mActionAddDelimitedTextLayer.png"><img alt="mActionAddDelimitedTextLayer" src="../_images/mActionAddDelimitedTextLayer.png" style="width: 1.5em;" /></a> <sup>Přidat vrstvu s odděleným
+textem</sup> stejně jako při přidání XY dat, pouze zvolíme
+<a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <sup>Žádna geometrie (pouze atributová tabulka)</sup></p>
+<blockquote>
+<div><p>- nelze editovat přímo v QGIS</p>
+<p>+ rozpozná typ atributu (<code class="xref std std-option docutils literal notranslate"><span class="pre">text</span></code>, <code class="xref std std-option docutils literal notranslate"><span class="pre">Celé</span> <span class="pre">číslo</span></code> atd.)</p>
+</div></blockquote>
+<p>2. Stejně jako vektorovou vrstvu, přetažením z prohlížeče nebo pomocí
+<a class="reference internal" href="../_images/mActionAddOgrLayer.png"><img alt="mActionAddOgrLayer" src="../_images/mActionAddOgrLayer.png" style="width: 1.5em;" /></a> <sup>Přidat vektorovou vrstvu</sup>.</p>
+<blockquote>
+<div><p>+ lze editovat přímo v QGIS</p>
+<p>- interpretuje všechny atributy jako <code class="xref std std-option docutils literal notranslate"><span class="pre">text</span></code>, lze ošetřit
+vytvořením doplňujícího textového souboru *.csvt</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>*.csvt soubor musí být umístěn ve stejném adresáři a mít stejný název
+jako přidávaný *.csv soubor. Dále musí obsahovat pouze jeden
+řádek, ve kterém jsou uvedeny typy atributů k odpovídajícím
+sloupcům *.csv („Integer“,“Real“,“String“).</p></li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+<figure class="align-center" id="id1">
+<img alt="../_images/join_csvt.png" src="../_images/join_csvt.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 96 </span><span class="caption-text">Ukázka tabulkových dat ve formátu *.csv (vlevo) a odpovídající
+soubor *.csvt (vpravo)</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/join_layer.png"><img alt="../_images/join_layer.png" src="../_images/join_layer.png" style="width: 189.0px; height: 105.69999999999999px;" /></a>
+<figcaption>
+<p><span class="caption-number">Obr. 97 </span><span class="caption-text">Zobrazení tabulkových dat v seznamu vrstev.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id3">
+<img alt="../_images/join_atribut.png" src="../_images/join_atribut.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 98 </span><span class="caption-text">Atributové tabulky vektorové vrstvy (nahoře) a importované tabulky (dole).
+V tomto případě budeme připojovat pomocí atributů „kod“ a „Kód“, které jsou
+souhlasné.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Jakmile máme přidána tabulková data, otevřeme vlastnosti vektorové
+vrstvy, ke které chceme tabulku připojit, zvolíme záložku <a class="reference internal" href="../_images/join.png"><img alt="join" src="../_images/join.png" style="width: 1.5em;" /></a>
+<sup>Připojení</sup> a přidáme nové připojení pomocí tlačítka
+<a class="reference internal" href="../_images/symbologyAdd.png"><img alt="symbologyAdd" src="../_images/symbologyAdd.png" style="width: 1.5em;" /></a>. V dialogovém okně (<a class="reference internal" href="#join-dial"><span class="std std-numref">Obr. 99</span></a>) potom nastavíme parametry
+připojení.</p>
+<figure class="align-center" id="id4">
+<span id="join-dial"></span><img alt="../_images/join1.png" src="../_images/join1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 99 </span><span class="caption-text">Okno přidání připojení.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="zakladni-nastaveni-pripojeni">
+<h3>Základní nastavení připojení<a class="headerlink" href="#zakladni-nastaveni-pripojeni" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<ul class="simple">
+<li><p><span class="item">Připojit vrstvu</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme vrstvu (.csv tabulku)</p></li>
+<li><p><span class="item">Připojit pole</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme atribut (týká se tabulky
+.csv),  přes který chceme data připojit</p></li>
+<li><p><span class="item">Cílové pole</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme souhlasný atribut (vektorové
+vrstvy), ke kterému se bude tabulka připojovat</p></li>
+</ul>
+</section>
+<section id="dalsi-volitelne-nastaveni">
+<h3>Další volitelné nastavení<a class="headerlink" href="#dalsi-volitelne-nastaveni" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<ul>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Kešovat připojenou vrstvu ve virtuální paměti</span> -
+pro rychlejší práci s daty</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Dynamický formulář</span> - automatické načtení, v případě změn
+hodnot v „Cílovém poli“</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Editovatelné spojení na vrstvu</span> - umožňuje editovat atributy připojené
+vrstvy z atributové tabulky cílové vrstvy. Obě vrstvy musí být v režimu
+editace</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Vložit nebo aktualizovat řádek při editaci</span> - při vytvoření nového prvku v cílové
+vrstvě se automaticky vytvoří záznam v připojené vrstvě</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Kaskádové mazání</span> - při smazání prvku v cílové vrstvě se
+automaticky smaže záznam v připojené vrstvě</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Připojená pole</span> - lze zvolit konkrétní atributy pro
+připojení</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Vlastní předpona názvu pole</span> - zde můžeme zvolit vlastní
+předponu názvů připojených atributů (jejich sloupců)</p></li>
+</ul>
+<p>Po přidání se připojení a jeho nastavení objeví v seznamu. Pomocí tlačítek lze
+připojení editovat <a class="reference internal" href="../_images/symbologyEdit.png"><img alt="symbologyEdit" src="../_images/symbologyEdit.png" style="width: 1.5em;" /></a> nebo odstranit <a class="reference internal" href="../_images/symbologyRemove.png"><img alt="symbologyRemove" src="../_images/symbologyRemove.png" style="width: 1.5em;" /></a>.</p>
+<figure class="align-center" id="id5">
+<span id="join"></span><img alt="../_images/join_list.png" src="../_images/join_list.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 100 </span><span class="caption-text">Seznam připojení ve vlastnostech vrstvy.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Zobrazením  atributové tabulky vrstvy můžeme překontrolovat připojení.
+Připojené atributy se zobrazí na konci tabulky.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/join_priklad.png" class="middle" src="../_images/join_priklad.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 101 </span><span class="caption-text">Výsledek spojení tabulek.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>S takto připojenou tabulkou můžeme dále pracovat stejně, jako by byla
+přímo ve vektorové vrstvě (např. měnit symbol, provádět dotazování a analýzy)</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Při připojení se zdrojová data (vektorové vrstvy ani připojené
+tabulky) nemění. Data z tabulky jsou připojením pouze odkazována k
+odpovídajícím prvkům atributové tabulce vrstvy.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>po odebrání tabulky ze seznamu vrstev, nebo přímo vymazání souboru
+.csv se připojení zruší</p></li>
+<li><p>pro trvalé uložení připojených dat do vektorové vrstvy lze použít
+funkci exportu vrstvy (<span class="menuselection">Export ‣ Save Features As…</span>)</p></li>
+</ul>
+</div></blockquote>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s vektorovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Připojení tabulkových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="import_delim.html" title="Import dat s oddělenými hodnotami a GPS dat"
+              >předchozí</a> |
+            <a href="dotazovani.html" title="Atributové a prostorové dotazování"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

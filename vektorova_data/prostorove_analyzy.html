@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Prostorové analýzy &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Práce s rastrovými daty" href="../rastrova_data/index.html" />
+    <link rel="prev" title="Atributové a prostorové dotazování" href="dotazovani.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="dotazovani.html" title="Atributové a prostorové dotazování"
+             accesskey="P">předchozí</a> |
+          <a href="../rastrova_data/index.html" title="Práce s rastrovými daty"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="prostorove-analyzy">
+<h1>Prostorové analýzy<a class="headerlink" href="#prostorove-analyzy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>V prostředí QGIS máme k dispozici širokou škálu funkcí pro prostorové analýzy
+vektorových dat. Základní funkce nalezneme v hlavním menu
+<span class="menuselection">Vektor ‣ Nástroje geoprocessingu</span>.</p>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Další možností jak
+spouštět analýzy je pomocí okna <span class="item">Nástroje zpracování</span>, které sdružuje
+funkce z knihovny GDAL a dalších dostupných externích nástrojů, jako jsou
+například GRASS GIS, SAGA nebo R. Jednotlivé funkce lze rychle vyhledávat
+pomocí filtru v horní části okna (nutno zadat anglický název funkce).</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/geoprocess.png" class="small" src="../_images/geoprocess.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 110 </span><span class="caption-text">Okno <span class="item">Nástroje zpracování</span>.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<section id="obalova-zona-dle-pevne-vzdalenosti-buffer">
+<span id="buffer"></span><h2>Obalová zóna dle pevné vzdálenosti (buffer)<a class="headerlink" href="#obalova-zona-dle-pevne-vzdalenosti-buffer" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jednou z nejzákladnějších prostorových analýz je obalová zóna
+(tzv. buffer). Obalové zóny jsou reprezentovány polygony s hranicí o
+dané vzdálenosti od prvků. U bodových prvků má obalová zóna tvar kruhu
+(nebo aproximace kruhu), u linií a polygonů se hranice obalové zóny
+generuje vzdálenostmi od uzlů. Cílem analýzy je tedy vytvořit novou
+polygonovou vrstvu obalových zón. Tuto funkci najdeme v menu
+<span class="menuselection">Vektor ‣ Nástroje geoprocessingu ‣ Obalová
+zóna dle pevné vzdálenosti</span>. Velikost bufferu lze nastavit i jako proměnlivou
+hodnotu.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/prost_buffer.png" class="medium" src="../_images/prost_buffer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 111 </span><span class="caption-text">Dialogové okno obalové zóny.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p><span class="item">Vstupní vrsvta</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vstupní vrstva pro
+vytvoření obalových zón</p></li>
+<li><p><span class="item">Vzdálenost</span>  - vzdálenost obalové zóny v metrech
+(v závislosti nastavení QGIS a použitého SRS)</p></li>
+<li><p><span class="item">Segmenty</span> - počet liniových segmentů při zaoblených částěch
+obalové zóny (<a class="reference internal" href="#aprox"><span class="std std-numref">Obr. 112</span></a>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>nízká hodnota (min. 5) - méně uzlů - rychlejší výpočty, ale méně přesné</p></li>
+<li><p>vysoká hodnota (max. 99) - více uzlů - pomalejší výpočty, zaoblené
+části více odpovídají kruhu
+kruhu</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<figure class="align-center" id="id4">
+<span id="aprox"></span><img alt="../_images/prost_buffer_seg.png" src="../_images/prost_buffer_seg.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 112 </span><span class="caption-text">Obalová zóna s rozdílným počtem segmentů pro aproximaci
+(vlevo 5, vpravo 50).</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><span class="item">Styl zakončení</span> - styl zakončení obalové zóny na konci linií (<cite>kulatý</cite>,</p></li>
+</ul>
+<p><cite>plochý</cite>, <cite>čtverec</cite>) <a class="reference internal" href="#zakonceni"><span class="std std-numref">Obr. 113</span></a>
+- <span class="item">Připojit styl</span> - styl obalové zóny při rozích (<cite>kulatý</cite>, <cite>kosý</cite>,</p>
+<blockquote>
+<div><p><cite>zaoblený</cite>) <a class="reference internal" href="#spoj"><span class="std std-numref">Obr. 114</span></a></p>
+</div></blockquote>
+<ul class="simple">
+<li><p><span class="item">Miter limit</span> - maximální vzdálenost od odsazené křivky při vytváření
+kosého spoje</p></li>
+</ul>
+<figure class="align-center" id="id5">
+<span id="zakonceni"></span><img alt="../_images/prost_buffer_zak.png" src="../_images/prost_buffer_zak.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 113 </span><span class="caption-text">Typy stylů zakončení (<cite>kulatý</cite> , <cite>plochý</cite>, <cite>čtverec</cite>).</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<span id="spoj"></span><img alt="../_images/prost_buffer_spoj.png" src="../_images/prost_buffer_spoj.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 114 </span><span class="caption-text">Typy stylů připojení (<cite>kulatý</cite>, <cite>kosý</cite>, <cite>zaoblený</cite>).</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a><code class="xref std std-option docutils literal notranslate"><span class="pre">Výsledek</span> <span class="pre">rozpuštění</span></code> - zaškrtneme, pokud
+nechceme, aby se nám výsledné obalové zóny překrývaly, výsledkem analýzy je
+jeden prvek</p></li>
+<li><p><span class="item">Obalová zóna</span> - zadáme cestu a název výstupního souboru</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a><code class="xref std std-option docutils literal notranslate"><span class="pre">Otevřít</span> <span class="pre">výstupní</span> <span class="pre">soubor</span> <span class="pre">po</span> <span class="pre">doběhnutí</span> <span class="pre">algoritmu</span></code>
+- výsledná vrstva se přidá do projektu</p></li>
+</ul>
+<p>V následujícím příkladu jsme vytvořili obalovou zónu 10 km kolem dálnic
+(s možností rozpuštění výsledků).</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/prost_buffer_dalnice.png" src="../_images/prost_buffer_dalnice.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 115 </span><span class="caption-text">Příklad obalové zóny 10 km okolo dálnic.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="prekryvne-analyzy">
+<h2>Překryvné analýzy<a class="headerlink" href="#prekryvne-analyzy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Další skupinou prostorových analýz jsou tzv. překryvné analýzy. Principem je
+vytvořit novou vektorovou vrstvu na základě interakce prvků jedné nebo více
+vektorových vrstev. Pro dosažení správného výsledku je nutné, aby vrstvy byly
+ve shodném souřadnicovém systému. Překryvné operace opět nalezneme v menu
+<span class="menuselection">Vektor ‣ Nástroje geoprocessingu</span>.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/prost_okno.png" class="medium" src="../_images/prost_okno.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 116 </span><span class="caption-text">Okno funkce překryvné analýzy (Oříznout…).</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><span class="item">Vstupní vrsvta</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vstupní vrstva</p></li>
+<li><p><span class="item">Oříznout vrsvtu</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - druhá vrstva, která vstupuje do analýzy</p></li>
+<li><p><span class="item">Oříznuto</span> - zadáme cestu a název výstupního souboru</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a><code class="xref std std-option docutils literal notranslate"><span class="pre">Otevřít</span> <span class="pre">výstupní</span> <span class="pre">soubor</span> <span class="pre">po</span> <span class="pre">doběhnutí</span> <span class="pre">algoritmu</span></code> -
+výsledná vrstva se
+nahraje do projektu</p></li>
+</ul>
+<figure class="align-center" id="id9">
+<img alt="../_images/prost_puvod.png" class="middle" src="../_images/prost_puvod.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 117 </span><span class="caption-text">Původní vrstvy vstupující do ukázkových příkladů.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="orezavac-clip">
+<h3>Ořezávač (<cite>Clip</cite>)<a class="headerlink" href="#orezavac-clip" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Vytvoří novou vrstvu, ve které je <cite>Vstupní vektorová vrstva</cite> ořezána
+vrstvou vybranou v nabídce <cite>Oříznout vrstvu</cite>. Prvky výstupní vrstvy
+nesou atributy pouze z vrstvy zadané jako <cite>Vstupní vektorová vrstva</cite>.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/prost_orez.png" src="../_images/prost_orez.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 118 </span><span class="caption-text">Výsledek funkce Ořezání… - čtverec jsme ořezali podle kruhu.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="prusecik-interesction">
+<h3>Průsečík (<cite>Interesction</cite>)<a class="headerlink" href="#prusecik-interesction" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Každý
+prvek nese atributy obou vstupních vrstev.</p>
+<figure class="align-center" id="id11">
+<img alt="../_images/prost_prus.png" src="../_images/prost_prus.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 119 </span><span class="caption-text">Výsledek funkce Průsečík.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="sjednotit-union">
+<h3>Sjednotit (<cite>Union</cite>)<a class="headerlink" href="#sjednotit-union" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Vytvoří novou vrstvu se všemi původními prvky, v místech překryvu vrstev jsou
+vytvořeny nové prvky.</p>
+<figure class="align-center" id="id12">
+<img alt="../_images/prost_sjed.png" src="../_images/prost_sjed.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 120 </span><span class="caption-text">Výsledek funkce Sjednotit.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="symetricky-rozdil-symmetric-difference">
+<h3>Symetrický rozdíl (<cite>Symmetric difference</cite>)<a class="headerlink" href="#symetricky-rozdil-symmetric-difference" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Vytvoří novou vrstvu, kde v místech překryvu vrstev nejsou vytvořeny prvky.
+Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.</p>
+<figure class="align-center" id="id13">
+<img alt="../_images/prost_sym.png" src="../_images/prost_sym.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 121 </span><span class="caption-text">Výsledek funkce Symetrický rozdíl.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="rozdil-difference">
+<span id="orez"></span><h3>Rozdíl (<cite>Difference</cite>)<a class="headerlink" href="#rozdil-difference" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Vytvoří novou vrstvu, která je rozdílem vstupních vrstev. Ve <cite>Vstupní
+vektorové vrstvě</cite> se odstraní plochy, které se překrývají s vrstvou v
+nabídce <cite>Rozdíl ve vrstvě</cite>.</p>
+<figure class="align-center" id="id14">
+<img alt="../_images/prost_rozd.png" src="../_images/prost_rozd.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 122 </span><span class="caption-text">Výsledek funkce Rozdíl - vrstva čtverce s rozdílem ve vrstvě kruhu.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="rozpustit-dissolve">
+<h3>Rozpustit (<cite>Dissolve</cite>)<a class="headerlink" href="#rozpustit-dissolve" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Vytvoří novou vrstvu, ve které jsou definované prvky jedné vrstvy sloučeny do
+jednoho. Pokud chceme aplikovat pro všechny prvky,
+zvolíme <a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a><code class="xref std std-option docutils literal notranslate"><span class="pre">Dissolve</span> <span class="pre">all</span> <span class="pre">(do</span> <span class="pre">not</span> <span class="pre">use</span> <span class="pre">fields)</span></code>. Pokud chceme
+metodu aplikovat podle atributů, tak v nabídce <span class="item">Unique ID fields</span>
+můžeme vybrat atributy, pro které chceme rozpuštění aplikovat.</p>
+<figure class="align-center" id="id15">
+<img alt="../_images/prost_rozp_okno.png" class="medium" src="../_images/prost_rozp_okno.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 123 </span><span class="caption-text">Okno funkce Rozpustit.</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id16">
+<img alt="../_images/prost_rozp.png" src="../_images/prost_rozp.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 124 </span><span class="caption-text">Výsledek funkce Rozpustit (vstupní vrstva: výsledek Sjednocení).</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V následujícím příkladu provedeme sjednocení vrstvy velkoplošných chráněných
+území a obalové zóny dálnic (10 km).</p>
+<figure class="align-center" id="id17">
+<img alt="../_images/prost_sjed_priklad.png" src="../_images/prost_sjed_priklad.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 125 </span><span class="caption-text">Sjednocení vrstvy velkoplošných chráněných území a obalové zóny dálnic
+(10 km).</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Díky tomu, že vytvořená vrstva sjednocení nese atributy obou vstupních vrstev
+(obalová zóna nesla pouze atribut „typ“ s hodnotou „dalnice“), můžeme zjistit
+různé informace. Například odfiltrováním 10. prvku, tedy prvku, který
+představuje obalovou zónu nezasahující do žádného velkoplošného chráněného
+území, můžeme snadno vypočítat poměr chráněného území, do kterého zasahuje
+obalová zóna 10 km od dálnic.</p>
+<blockquote>
+<div><div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pokud máme vybrané nějaké prvky, je automaticky aktivováno.</p>
+</div>
+</div></blockquote>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s vektorovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join.html">Připojení tabulkových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="dotazovani.html" title="Atributové a prostorové dotazování"
+              >předchozí</a> |
+            <a href="../rastrova_data/index.html" title="Práce s rastrovými daty"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

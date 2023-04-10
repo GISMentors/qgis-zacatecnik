@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Příklad stylování kategorizovanou obrysovou čárou &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Data AOPK" href="data_aopk/ndop.html" />
+    <link rel="prev" title="Ukázka zpracování dat" href="priklad_3.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="priklad_3.html" title="Ukázka zpracování dat"
+             accesskey="P">předchozí</a> |
+          <a href="data_aopk/ndop.html" title="Data AOPK"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="priklad-stylovani-kategorizovanou-obrysovou-carou">
+<h1>Příklad stylování kategorizovanou obrysovou čárou<a class="headerlink" href="#priklad-stylovani-kategorizovanou-obrysovou-carou" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>V některých případech, zejména pokud tvoříme symbologii pro prezentaci dat, je
+nutné věnovat stylování dat větší péči.
+Níže je uveden případ stylování dvou vrstev - <span class="map">parcel a budov</span>, které se
+vzájemně překrývají. Data jsou získána z RÚIANu.</p>
+<section id="zadani">
+<h2>Zadání<a class="headerlink" href="#zadani" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Nastavit styl vrstvy <span class="map">parcel</span> podle <em>druhu pozemku</em>.  Podobně
+nastavit styl vrstvy <span class="map">stavebních objektů</span> a to na základě <em>typu
+stavebního objektu</em>.  Jelikož se obě vrstvy vzájemně překrývají, tak
+bude vrstva <span class="map">stavebních objektů</span> vykreslena pouze obrysem, tedy
+bez výplně.</p>
+</section>
+<section id="nastaveni-stylu-vrstvy-parcel">
+<h2>Nastavení stylu vrstvy parcel<a class="headerlink" href="#nastaveni-stylu-vrstvy-parcel" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Druh pozemku (orná půda/zahrada/zastavěná plocha a nádvoří/…) je
+uveden jako jeden z atributů pomocí příslušného kódu -
+<span class="dbcolumn">druhpozemkukod</span>.</p>
+<p>Ve vlastnostech vrstvy <span class="map">parcely</span> v záložce Styl zvolíme typ stylování
+<code class="docutils literal notranslate"><span class="pre">kategorizovaný</span></code>. U položky <span class="item">Sloupec</span> vybereme atribut, podle kterého
+chceme stylovat - v našem případě <span class="dbcolumn">druhpozemkukod</span>.
+Vzhledem k tomu, že přes vrstvu parcel budeme vykreslovat ještě vrstvu budov,
+tak budeme parcely stylovat pouze výplní bez ohraničení.
+V nastavení <span class="item">Symbolu</span> proto upravíme položku <span class="item">Styl ohraničení</span>
+na hodnotu <code class="docutils literal notranslate"><span class="pre">Bez</span> <span class="pre">čáry</span></code>.</p>
+<p>Při takovémto nastavení bude mezi jednotlivými parcelami jemná mezera,
+nebude ale působit rušivě. Pokud by bychom preferovali styl bez mezery, tak
+nastavíme barvu ohraničení na stejnou barvu jako je barva výplně.
+Jednotlivé podstatné části nastavení jsou zvýrazněny v
+<a class="reference internal" href="#no-outline"><span class="std std-numref">Obr. 232</span></a>.</p>
+<figure class="align-center" id="id1">
+<span id="no-outline"></span><img alt="../_images/style_no_outline.png" class="large" src="../_images/style_no_outline.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 232 </span><span class="caption-text">Jednotlivé kroky nastavení kategorizovaného stylování a úprava výchozího
+symbolu.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Dalším krokem je vytvoření barevného stylu pro každou hodnotu druhu
+pozemku.  Pomocí tlačítka <span class="item">Klasifikovat</span> se vygenerují všechny
+existující hodnoty pro zvolený atribut a jedna navíc.  V tomto případě
+pro generování používáme <code class="docutils literal notranslate"><span class="pre">náhodnou</span> <span class="pre">paletu</span> <span class="pre">barev</span></code>. Zvolené barvy
+ručně opravíme dle svého uvážení. Kliknutím do položky <span class="item">symbol</span>
+u každé hodnoty si můžeme nastavit barvu.  Dalším požadavkem je, aby
+se nám v legendě nezobrazoval kód druhu pozemku ale přesná hodnota
+podle číselníku <a class="reference external" href="http://www.cuzk.cz/Katastr-nemovitosti/Poskytovani-udaju-z-KN/Ciselniky-ISKN/Ciselniky-k-nemovitosti.aspx#SC_D_POZEMKU">ČÚZK</a>.
+Položky legendy lze upravovat přímo.  Ukázka automaticky
+vygenerovaného stylování a již upravených stylů i s popiskami pro
+legendu je na zobrazena <a class="reference internal" href="#change1"><span class="std std-numref">Obr. 233</span></a>.</p>
+<figure class="align-center" id="id2">
+<span id="change1"></span><img alt="../_images/style_colour_and_legend.png" class="large" src="../_images/style_colour_and_legend.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 233 </span><span class="caption-text">Automaticky vygenerované stylování podle zvoleného atributu a jeho manuální
+úprava - symbologie i legendy.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Výsledek stylování se projeví po uložení stylu v mapovém okně (symbologie) i
+panelu vrstev (legenda).</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/style_parcely.png" class="large" src="../_images/style_parcely.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 234 </span><span class="caption-text">Výsledek předchozích kroků stylování v mapovém okně a panelu vrstev.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="nastaveni-stylu-stavebnich-objektu">
+<h2>Nastavení stylu stavebních objektů<a class="headerlink" href="#nastaveni-stylu-stavebnich-objektu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Stavební objekty vykreslíme pouze obvodem nad vrstvou <span class="map">parcel</span>.
+Styl vykreslení jejich obvodu se bude lišit podle hodnoty atributu
+<span class="dbcolumn">typstavebnihoobjektukod</span>.</p>
+<p>Ve vlastnostech vrstvy <span class="map">stavby</span> v záložce opět zvolíme typ
+stylování <code class="docutils literal notranslate"><span class="pre">kategorizovaný</span></code>.  U položky <span class="item">Sloupec</span> vybereme
+atribut <span class="dbcolumn">typstavebnihoobjektukod</span>.  V položce nastavení
+<span class="item">symbolu</span> změníme Typ vrstvy symbolů na položku
+<code class="docutils literal notranslate"><span class="pre">Obrys:Jednoduchá</span> <span class="pre">čára</span></code>.  Dle potřeby nastavíme i <span class="item">šířku pera
+a styl</span>.  V případě potřeby je ještě možné použít různé typy efektů
+pro vykreslování.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/style_outline.png" class="large" src="../_images/style_outline.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 235 </span><span class="caption-text">Nastavení symbolu pro vykreslování pouze obrysové čáry prvků.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Tak jako v předchozím kroku provedeme klasifikaci podle zvoleného atributu.
+V tomto případě zvolený atribut obsahuje pouze 3 různé hodnoty.
+Každý vygenerovaný styl si opět můžeme upravit podle vlastních potřeb, jako i
+popisky pro legendu.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/style_colour_and_legend2.png" class="large" src="../_images/style_colour_and_legend2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 236 </span><span class="caption-text">Ruční úprava stylů i popisků legendy je nutná i v tomto případě.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Výsledná kombinace obou stylů vrstev je ještě upravena změnou průhlednosti
+vrstvy <span class="map">parcel</span> (barvy jsou na <a class="reference internal" href="#vysledek"><span class="std std-numref">Obr. 237</span></a> jemnější).</p>
+<figure class="align-center" id="id6">
+<span id="vysledek"></span><img alt="../_images/style_parcely_stavby.png" class="large" src="../_images/style_parcely_stavby.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 237 </span><span class="caption-text">Zobrazení obou vrstev v mapovém okně. V panelu vrstev je vidět upravené
+legendy u každé vrstvy.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Vytvořený styl se ukládá jako součást QGIS projektu.
+Styl každé vrstvy je však možné uložit jako samostatný soubor a pak jej
+použít u další vrstvy.</p>
+<p>Volba pro uložení se nachází přímo v záložce styl ve spodní části.
+Tlačítkem <span class="item">Styl</span> se otevře menu (<a class="reference internal" href="#save"><span class="std std-numref">Obr. 238</span></a>), které slouží jak
+pro uložení stávajícího stylu vrstvy, tak pro načtení uloženého stylu.</p>
+<figure class="align-center" id="id7">
+<span id="save"></span><img alt="../_images/style_save.png" src="../_images/style_save.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 238 </span><span class="caption-text">Možnost exportu a import stylů pro vrstvu.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Styly je možné uložit do dvou různých formátů - <em>SLD</em> (OGC Styled
+Layer Descriptor) a <em>QML</em> (interní soubor pro ukládání stylů
+QGISu). Oba formáty jsou soubor typu XML, takže je možné jej
+jednoduše editovat i mimo QGIS.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Různé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qgis_pluginy.html">QGIS pluginy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="priklady.html">Příklady GIS analýz</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Příklad stylování kategorizovanou obrysovou čárou</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_aopk/ndop.html">Data AOPK</a></li>
+</ul>
+</li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="priklad_3.html" title="Ukázka zpracování dat"
+              >předchozí</a> |
+            <a href="data_aopk/ndop.html" title="Data AOPK"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Prvky mapového výstupu &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Export" href="export.html" />
+    <link rel="prev" title="Tiskové rozvržení (Print Layout)" href="tvurce_map_vystupu.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="tvurce_map_vystupu.html" title="Tiskové rozvržení (Print Layout)"
+             accesskey="P">předchozí</a> |
+          <a href="export.html" title="Export"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="prvky-mapoveho-vystupu">
+<span id="index-0"></span><h1>Prvky mapového výstupu<a class="headerlink" href="#prvky-mapoveho-vystupu" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Mapový výstup může obsahovat různé součásti (mapové pole, legenda,
+titulek, měřítko a jiné). Nastavení celého výstupu je popsáno krok po
+kroku až po export výstupu.</p>
+<section id="zobrazeni-pracovnich-panelu">
+<span id="index-1"></span><h2>Zobrazení pracovních panelů<a class="headerlink" href="#zobrazeni-pracovnich-panelu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pro příjemnou práci při tvorbě výsledků je vhodné mít nastavené
+zobrazování jednotlivých panelů. <em>Vypnout/zapnout</em> panel je možné v menu
+<span class="menuselection">Zobrazit ‣ Panely</span>, kde se nastaví viditelnost
+jednotlivým panelům. Na obrázku <a class="reference internal" href="#panels"><span class="std std-numref">Obr. 177</span></a> je zobrazeno doporučené
+nastavení zobrazených panelů.</p>
+<figure class="align-center" id="id1">
+<span id="panels"></span><img alt="../_images/panels.png" src="../_images/panels.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 177 </span><span class="caption-text">Nastavení zobrazení a skrytí jednotlivých panelů.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="obsah-mapoveho-okna">
+<span id="index-2"></span><h2>Obsah mapového okna<a class="headerlink" href="#obsah-mapoveho-okna" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pomocí ikony <a class="reference internal" href="../_images/mActionAddMap1.png"><img alt="add_map" src="../_images/mActionAddMap1.png" style="width: 1.5em;" /></a> <sup>Přidat novou mapu</sup> se aktivuje funkce pro
+přidání výřezu s mapovým oknem. Dalším krokem je umístění výřezu pro
+mapové okno do pracovní plochy pomocí tažení myši.  Po umístění se do
+výřezu načte obsah mapového okna.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/map_input.png" class="large" src="../_images/map_input.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 178 </span><span class="caption-text">Výřez s obsahem mapového okna a jeho detailní nastavení.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Velikost výřezu a jeho polohu lze měnit pomocí tahání za jeho hrany
+nebo uchopení za jeho obsah a posun. Pokud potřebujeme posunout obsah mapy,
+pak použijeme nástroj <a class="reference internal" href="../_images/mActionMoveItemContent1.png"><img alt="mActionMoveItemContent" src="../_images/mActionMoveItemContent1.png" style="width: 1.5em;" /></a> <sup>Posunout obsah položky</sup>
+a interaktivně změníme rozsah pomocí tažení.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Výřez s mapovým oknem má vícero dalších nastavení. Rozšířené
+nastavení je dostupné pro každý prvek přidaný do mapového
+výstupu. V části <span class="item">Položky</span> se nachází přehled všech
+prvků přidaných v mapovém výstupu. Označením vybraného prvku
+se v části <span class="item">Vlastnosti položky</span> otevře detailní
+nastavení konkrétního mapového prvku.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/map_items.png" class="small" src="../_images/map_items.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 179 </span><span class="caption-text">Dostupné položky u nastavení mapového okna.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Obsah výřezu byl při jeho umístění vygenerován dle aktuálního rozsahu
+mapového okna. Manipulace obashu mapy a jeho překreslování je možné ovládat pomocí sady tlačítek v horní části detailu prvku <span class="item">Vlastnosti položky</span>.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/mActionRefresh.png"><img alt="mActionRefresh" src="../_images/mActionRefresh.png" style="width: 1.5em;" /></a> <sup>Aktualizovat náhled mapy</sup> - aktualizace obsahu mapového okna</p></li>
+<li><p><a class="reference internal" href="../_images/mActionSetToCanvasExtent.png"><img alt="mActionSetToCanvasExtent" src="../_images/mActionSetToCanvasExtent.png" style="width: 1.5em;" /></a> <sup>Nastavit rozsah mapy tak, aby odpovídal hlavnímu rozsahu plátna</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionViewExtentInCanvas.png"><img alt="mActionViewExtentInCanvas" src="../_images/mActionViewExtentInCanvas.png" style="width: 1.5em;" /></a> <sup>Zobrazit aktuální rozsah mapy na hlavním plátně</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionSetToCanvasScale.png"><img alt="mActionSetToCanvasScale" src="../_images/mActionSetToCanvasScale.png" style="width: 1.5em;" /></a> <sup>Nastavit měřítko mapy tak, aby odpovídalo měřítku hlavního plátna</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionViewScaleInCanvas.png"><img alt="mActionViewScaleInCanvas" src="../_images/mActionViewScaleInCanvas.png" style="width: 1.5em;" /></a> <sup>Nastavit hlavní plátno tak, aby odpovídalo aktuálnímu měřítku mapy</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionShowBookmarks.png"><img alt="mActionShowBookmarks" src="../_images/mActionShowBookmarks.png" style="width: 1.5em;" /></a> <sup>Záložky</sup> nastavení mapového okna dle existujících záložek</p></li>
+<li><p><a class="reference internal" href="../_images/mActionMoveItemContent1.png"><img alt="mActionMoveItemContent" src="../_images/mActionMoveItemContent1.png" style="width: 1.5em;" /></a> <sup>Interaktivně upravit rozsah mapy</sup> totožná funkcionalita pro změnu rosahu tažením</p></li>
+<li><p><a class="reference internal" href="../_images/labels.png"><img alt="labels" src="../_images/labels.png" style="width: 1.5em;" /></a> <sup>Nastavení tvorby popisků</sup> speciální chování popisků v mapovém výstupu - jejich posun na okrajích, blokování popisků</p></li>
+</ul>
+<p>V první sekci nastavení lze nastavit přesné měřítko mapového okna,
+jeho natočení, nebo specifický souřadnicový systém.</p>
+<p>V části <span class="item">Rozsahy</span> lze přesně nadefinovat rozsah mapového okna v
+souřadnicovém systému mapového projektu.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/map_main_properties.png" class="small" src="../_images/map_main_properties.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 180 </span><span class="caption-text">Hlavní nastavení položky mapového okna.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p id="index-3">Častou součástí mapového výřezu je i souřadnicová mřížka - grid s
+popisem souřadnic. Grid lze přidat a nastavit v položce
+<span class="item">Mřížky</span>. Lze nastavit styl gridu (linie, křížky, jiné symboly,
+jenom rám se souřadnicemi) a dále nastavit interval a styl
+vykreslování.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pro grid lze definovat souřadnicový systém odlišný od
+projektu.</p>
+</div>
+<figure class="align-center" id="id5">
+<img alt="../_images/map_coordinates.png" src="../_images/map_coordinates.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 181 </span><span class="caption-text">Mapové okno s gridem a souřadnicemi.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<img alt="../_images/map_grids.png" class="small" src="../_images/map_grids.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 182 </span><span class="caption-text">Nastavení gridu pro mapové okno.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Nastavení popisků gridu je umístěno v části <span class="item">Vykreslit
+souřadnice</span>. Lze nastavit formát vystupu, počet desetinných míst font
+i barvu.  Popisky jsou rozděleny do jednotlivých částí mapového okna
+(levá, pravá, horní, dolní). Každou stranu lze nastavit samostatně -
+zda se zobrazuje, pozici vůči rámu, orientaci a řazení.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/map_decoration.png" class="small" src="../_images/map_decoration.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 183 </span><span class="caption-text">Nastavení zobrazování popisových souřadnic gridu.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="text-titulek-tiraz-doprovodny-text">
+<span id="index-4"></span><h2>Text (titulek, tiráž, doprovodný text)<a class="headerlink" href="#text-titulek-tiraz-doprovodny-text" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Obvyklým požadavkem pro mapový výstup je textové pole s titulkem.
+Textové pole se přidá pomocí ikonky <a class="reference internal" href="../_images/mActionLabel1.png"><img alt="add_label" src="../_images/mActionLabel1.png" style="width: 1.5em;" /></a> <sup>Přidat nový
+popísek</sup>. Umístění textového pole probíhá stejně jako je popsané
+u mapového výřezu.</p>
+<p>Jednotlivá nastavení pro obsah tohoto pole jsou opět dostupná přes
+záložku <span class="item">Vlastnosti položky</span>. Lze zde nastavit samotný text, jeho
+font, zarovnání, orámování, pozadí a další různé. Textové pole se dále využivá
+např. pro vložení tiráže či dalšího doprovodného textu</p>
+</section>
+<section id="legenda">
+<span id="index-5"></span><h2>Legenda<a class="headerlink" href="#legenda" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Další obvyklou součástí mapového výstupu je legenda. Ta má popisovat
+jednotlivé prvky, které jsou zobrazovány.  Přidání legendy do mapového
+výstupu je možné pomocí ikonky <a class="reference internal" href="../_images/mActionAddLegend1.png"><img alt="add_legend" src="../_images/mActionAddLegend1.png" style="width: 1.5em;" /></a> <sup>Přidat novou legendu</sup>.
+Umístění položky legendy do mapového okna je provedeno stejně jako u
+předchozích položek.</p>
+<p>Obsah legendy je vygenerován v momentě jejího umístění a na základě
+nastavení stylů jednotlivých vrstev zobrazovaných v mapovém okně.
+V ideálním případě se všechny úpravy provádí v nastavení vrstev tak,
+aby byl minimalizovaný počet ručních úprav v tomto kroku.</p>
+<p>Obsah legendy je možné upravovat podobným způsobem jako ostatní prvky
+(<span class="item">Vlastnosti položky</span>). Lze upravit název, zarovnání, odsazování
+a další vizuální nastavení pro zobrazování legendy.</p>
+<p>Dále lze upravit i jednotlivé položky legendy, ubrat, přidat novou,
+změnit text i zařazení jednotlivých položek v rámci legendy samotné.</p>
+<figure class="align-center" id="id8">
+<img alt="../_images/composer_legend.png" class="large" src="../_images/composer_legend.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 184 </span><span class="caption-text">Přidaná legenda a úprava jejích položek.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud upravujete legendu, tak se může stát, že se změnami nebudete
+spokojeni. V případě, že nechcete změny v nastavení provést ručně, můžete
+legendu vygenerovat z dat znova pomocí tlačítka <span class="item">Aktualizovat vše</span>.</p>
+</div>
+</section>
+<section id="atributova-tabulka">
+<span id="index-6"></span><h2>Atributová tabulka<a class="headerlink" href="#atributova-tabulka" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>V některých případech je vhodné umístit do mapového výstupu i část
+atributové tabulky. Tuto lze přidat pomocí tlačítka <a class="reference internal" href="../_images/grass_edit_attributes.png"><img alt="add_attributes" src="../_images/grass_edit_attributes.png" style="width: 1.5em;" /></a>
+<sup>Přidat atributovou tabulku</sup>.</p>
+<p>Všeobecná nastavení tabulky a jejího vzhledu se nachází v části
+<span class="item">Vlastnosti položky</span>. Pokud je v projektu přidáno vícero vrstev,
+které mají atributovou tabulku, tak se nastaví zdrojová vrstva pro
+atributovou tabulku do mapového výstupu.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/composer_table.png" class="large" src="../_images/composer_table.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 185 </span><span class="caption-text">Atributová tabulka vybrané vrstvy přidaná v mapovém výstupu.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Úprava samotné tabulky se nachází pod tlačítkem
+<span class="item">Atributy…</span>. V tomto menu jsou 2 základní části. V první
+části se manipuluje s atributy. Zde se vyberou všechny atributy, které
+se v tabulce mají zobrazit <a class="reference internal" href="../_images/symbologyAdd1.png"><img alt="add" src="../_images/symbologyAdd1.png" style="width: 1.5em;" /></a> <a class="reference internal" href="../_images/symbologyRemove1.png"><img alt="remove" src="../_images/symbologyRemove1.png" style="width: 1.5em;" /></a>, jejich pořadí <a class="reference internal" href="../_images/mActionArrowUp1.png"><img alt="up" src="../_images/mActionArrowUp1.png" style="width: 1.5em;" /></a> <a class="reference internal" href="../_images/mActionArrowDown1.png"><img alt="down" src="../_images/mActionArrowDown1.png" style="width: 1.5em;" /></a>,
+může se zde nastavit titulek pro atribut, ale i zarovnávání hodnot.</p>
+<p>V druhé části se nastavuje řazení dat v tabulce. Řazení se řídí
+definovanými pravidly. Každé pravidlo musí obsahovat atribut, podle
+kterého se tabulka bude řadit, a typ řazení (sestupně nebo
+vzestupně). Takto nadefinované pravidlo se pak tlačítkem <a class="reference internal" href="../_images/symbologyAdd1.png"><img alt="add" src="../_images/symbologyAdd1.png" style="width: 1.5em;" /></a> přidá
+do seznamu pravidel. Jednotlivá pravidla se vypisují do pole pod
+sebe. Jejich pořadí je možné měnit a ovlivnit tak přesné vypsání
+tabulky do mapového výstupu.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/attribute_setting.png" src="../_images/attribute_setting.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 186 </span><span class="caption-text">Nastavení zobrazení atributové tabulky v mapovém výstupu.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="meritko">
+<span id="index-7"></span><h2>Měřítko<a class="headerlink" href="#meritko" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Běžnou součástí výstupu je také měřítko. To lze přidat pomocí ikony <a class="reference internal" href="../_images/mActionScaleBar1.png"><img alt="add_scale" src="../_images/mActionScaleBar1.png" style="width: 1.5em;" /></a>
+<sup>Přidat nové grafické měřítko</sup> a vložením prvku do výstupu. Výběr stylu a
+další nastavení je dostupné v záložce <span class="item">Vlastnosti položky</span> viz
+<a class="reference internal" href="#legenda-nastaveni"><span class="std std-numref">Obr. 187</span></a>. Nejdůležitější je výběr stylu legendy v položce <span class="item">Styl</span>.
+Lze vybrat z grafických měřítek nebo zvolit číselné měřítko. Dále lze nastavit
+jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měřítka.</p>
+<figure class="align-center" id="id11">
+<span id="legenda-nastaveni"></span><img alt="../_images/legenda_nastaveni.png" class="small" src="../_images/legenda_nastaveni.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 187 </span><span class="caption-text">Detailní nastavení měřítka.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="smerova-ruzice">
+<span id="index-8"></span><h2>Směrová růžice<a class="headerlink" href="#smerova-ruzice" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony <a class="reference internal" href="../_images/north_arrow.png"><img alt="north_arrow" src="../_images/north_arrow.png" style="width: 1.5em;" /></a>
+<sup>Přidat směrovou růžici</sup>. Pokud nemáme žádný obrázek růžice, najdeme několik typů růžic v základní QGIS SVG knihovně. Zdrojový obrázek zvolíme v
+záložce <span class="item">Vlastnosti položky</span>, zde jsou dostupná také další nastavení,
+např. rotace, která je za určitých okolností u směrové růžice nutná a lze ji
+nastavit automaticky.</p>
+<p>Na obrázku <a class="reference internal" href="#arrow"><span class="std std-numref">Obr. 188</span></a> je vidět nastavení synchornizace s vybraným mapovým oknem a nastevní na <em>skutečný sever</em>, které nastaví rotaci růžice automaticky.</p>
+<figure class="align-center" id="id12">
+<span id="arrow"></span><img alt="../_images/composer_arrow.png" class="large" src="../_images/composer_arrow.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 188 </span><span class="caption-text">Nastavení směrové růžice.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="obrazek">
+<h2>Obrázek<a class="headerlink" href="#obrazek" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Tento nástroj je totožný s nástrojem pro přidání směrové růžice. Je dobré si
+uvědomit, že obsah přidaného obrázku je pouze na uživateli a do mapového výstupu
+může přidat různý obsah.</p>
+</section>
+<section id="sipka">
+<h2>Šipka<a class="headerlink" href="#sipka" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Alternativní možností vytvoření směrové ružice může být pomocí ikony <a class="reference internal" href="../_images/mActionAddArrow1.png"><img alt="add_arrow" src="../_images/mActionAddArrow1.png" style="width: 1.5em;" /></a>
+<sup>Přidat šipku</sup>. Tato funkce je primárně určena ke kreslení šipek ve smyslu
+znázornění vztahů mezi jednotlivými součástmi mapové kompozice. Držením klávesy
+<span class="item">Shift</span> při kreslení šipky se nám kurzor bude přichytávat po 45°.
+Směrová růžice může být vykreslena různou symbologií. Výběr symbologie a další
+nastavení jsou dostupné v záložce <span class="item">Vlastnosti položky</span>. Lze zde ponechat
+defaultní styl prvku, kdy se vykresluje jednoduchá šipka. Je možné použít i
+složitější nastavení - například použít vlastní svg symboly pro začátek a konec
+šipky.</p>
+<figure class="align-center" id="id13">
+<img alt="../_images/arrow.png" class="small" src="../_images/arrow.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 189 </span><span class="caption-text">Detailní nastavení směrové šipky.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="dalsi-prvky">
+<span id="index-9"></span><h2>Další prvky<a class="headerlink" href="#dalsi-prvky" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Do mapového výstupu můžeme také přidat základní geometrické tvary <a class="reference internal" href="../_images/mActionAddBasicShape1.png"><img alt="add_shape" src="../_images/mActionAddBasicShape1.png" style="width: 1.5em;" /></a> <sup>Přidat tvar</sup>, rýsovat polygony a linie <a class="reference internal" href="../_images/mActionAddNodesShape.png"><img alt="add_nodes" src="../_images/mActionAddNodesShape.png" style="width: 1.5em;" /></a> <sup>Add Node item</sup>, nebo přidat HTML kód <a class="reference internal" href="../_images/mActionAddHtml1.png"><img alt="add_html" src="../_images/mActionAddHtml1.png" style="width: 1.5em;" /></a> <sup>Přidat HTML rám</sup>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tvorba mapového výstupu</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="tvurce_map_vystupu.html">Tiskové rozvržení (Print Layout)</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Prvky mapového výstupu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="tvurce_map_vystupu.html" title="Tiskové rozvržení (Print Layout)"
+              >předchozí</a> |
+            <a href="export.html" title="Export"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

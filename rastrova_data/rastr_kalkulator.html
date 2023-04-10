@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Použití rastrového kalkulátoru &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Generování vrstevnic" href="vrstevnice.html" />
+    <link rel="prev" title="Terénní analýzy" href="rastr_terenni_analyzy.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="rastr_terenni_analyzy.html" title="Terénní analýzy"
+             accesskey="P">předchozí</a> |
+          <a href="vrstevnice.html" title="Generování vrstevnic"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pouziti-rastroveho-kalkulatoru">
+<span id="index-0"></span><h1>Použití rastrového kalkulátoru<a class="headerlink" href="#pouziti-rastroveho-kalkulatoru" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Při tvorbě mapy orientace vůči světovým stranám je lepší reklasifikovat
+(rozdělit) rozsah hodnot do kategorií sever (1), východ (2), jih (3) a západ
+(4), přičemž sever znamená <span class="item">0°</span> a východ <span class="item">90°</span>. Jednou z možností je
+využití tzv. rastrového kalkulátoru. Ten je dostupný v menu <span class="item">Nástroje
+zpracování</span>, které je dostupné přes <a class="reference internal" href="../_images/processingAlgorithm1.png"><img alt="processingAlgorithm" src="../_images/processingAlgorithm1.png" style="width: 1.5em;" /></a> <sup>Sada nástrojů</sup>. Nástroj je ve složce <a class="reference internal" href="../_images/providerQgis1.png"><img alt="providerQgis" src="../_images/providerQgis1.png" style="width: 1.5em;" /></a> <span class="item">Rastrová analáza</span> pod názvem
+<span class="item">Raster calculator</span> nebo přes menu <span class="menuselection">Raster ‣ Rastrový kalkulátor</span></p>
+<p>Rastrový kalkulátor souvisí s mapovou algebrou. Jedná se o matematické
+operace s rastrovými mapami, které jsou reprezentovány jako matice
+čísel s prostorovým umístěním. Pomocí mapové algebry je možné
+matematickými, ale i jinými operacemi kombinovat více rastrových
+vrstev a vytvářet tak nové vrstvy.</p>
+<figure class="align-center" id="id1">
+<span id="rstcalculator"></span><img alt="../_images/rstcalculator.png" class="small" src="../_images/rstcalculator.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 155 </span><span class="caption-text">Princip mapové algebry.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pouziti-rastroveho-kalkulatoru-pro-urceni-mist-potencialne-vhodnych-pro-umisteni-solarni-elektrarny">
+<h1>Použití rastrového kalkulátoru pro určení míst potenciálně vhodných pro umístění solární elektrárny<a class="headerlink" href="#pouziti-rastroveho-kalkulatoru-pro-urceni-mist-potencialne-vhodnych-pro-umisteni-solarni-elektrarny" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Níže uvedený příklad je výpočet, kdy se konbinují dva rastry.
+První z nich je sklon svahu a druhý je orientace svahu.</p>
+<p>Pokud nás zajímají pouze místa se sklonem menším 15 stupňů, protože na svahy s
+větším sklonem se solární elektrárny špatně instalují a pak svahy orientované
+primárně na jih, pak můžeme zadat následující vzorec, který nám vrátí výstup, kde budou pouze
+takto specifikované svahy.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">&quot;Sklon&#64;1&quot;</span> <span class="pre">&lt;</span> <span class="pre">15</span> <span class="pre">and</span> <span class="pre">&quot;Aspekt&#64;1&quot;</span> <span class="pre">&gt;</span> <span class="pre">180</span> <span class="pre">and</span> <span class="pre">&quot;Aspekt&#64;1&quot;</span> <span class="pre">&lt;</span> <span class="pre">270</span></code>.</p>
+<p>Výstupem pak je mapa s hodnotami 0 a 1, kde hodnotu 1 mají pixely, které splnily naši podmínku.</p>
+<figure class="align-center" id="id2">
+<span id="soc1"></span><img alt="../_images/soc1.png" class="large" src="../_images/soc1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 156 </span><span class="caption-text">Zájmová místa pro solární elektrárnu.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Vrstvu můžeme pak nastylovat tak, aby hodnota 0 byla průhledná a hodnota 1 měla výraznou
+barvu viditelnou na podkladu, např. žlutou.</p>
+<figure class="align-center" id="id3">
+<span id="soc2"></span><img alt="../_images/soc2.png" class="large" src="../_images/soc2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 157 </span><span class="caption-text">Stylování zájmových ploch pro solární elektrárnu.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pouziti-rastroveho-kalkulatoru-pro-reklasifikaci">
+<h1>Použití rastrového kalkulátoru pro reklasifikaci<a class="headerlink" href="#pouziti-rastroveho-kalkulatoru-pro-reklasifikaci" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Níže uvedený příklad je výpočet tzv. reklasifiakce. Jde vlastně o přepočet
+hodnot podle pravidla. Na tento konkrétní úkol je možné použít i specifický
+nástroj určený pro reklasifikaci, například <span class="item">Reclassify by table</span>.</p>
+<p>Pokud jsme mapu orientací nazvali <span class="map">aspect</span>, výraz bude vypadat následovně:
+<code class="code docutils literal notranslate"><span class="pre">((&quot;aspect&#64;1&quot;</span>&#160; <span class="pre">&gt;=</span> <span class="pre">315)</span>&#160; <span class="pre">OR</span>&#160; <span class="pre">(&quot;aspect&#64;1&quot;</span> <span class="pre">&lt;</span> <span class="pre">45))</span> <span class="pre">*</span> <span class="pre">1</span> <span class="pre">+</span> <span class="pre">((&quot;aspect&#64;1&quot;</span>
+<span class="pre">&gt;=</span> <span class="pre">45)</span>&#160; <span class="pre">AND</span>&#160; <span class="pre">(&quot;aspect&#64;1&quot;</span> <span class="pre">&lt;</span> <span class="pre">135))</span> <span class="pre">*</span> <span class="pre">2</span> <span class="pre">+</span> <span class="pre">((&quot;aspect&#64;1&quot;</span>&#160; <span class="pre">&gt;=</span> <span class="pre">135)</span>&#160; <span class="pre">AND</span>&#160; <span class="pre">(&quot;aspect&#64;1&quot;</span>
+<span class="pre">&lt;</span> <span class="pre">225))</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">((&quot;aspect&#64;1&quot;</span>&#160; <span class="pre">&gt;=</span> <span class="pre">225)</span>&#160; <span class="pre">AND</span>&#160; <span class="pre">(&quot;aspect&#64;1&quot;</span> <span class="pre">&lt;</span> <span class="pre">315))</span> <span class="pre">*</span> <span class="pre">4</span></code>.
+Reklasifikované vrstvě následně nastavíme  barevnost a popisy (<a class="reference internal" href="#nesw"><span class="std std-numref">Obr. 158</span></a> a
+<a class="reference internal" href="#aspectrecl"><span class="std std-numref">Obr. 159</span></a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Je nutné vyplnit velikost buňky a i extent, automatické přiřazení
+hodnot prozatím nefunguje správně a výpočet vyhodí chybu.
+Nastavení souřadnicového systému není volitelný, ale povinný, jinak výpočet
+neproběhne a vypíše chybu.</p>
+</div>
+<figure class="align-center" id="id4">
+<span id="nesw"></span><img alt="../_images/nesw.png" class="large" src="../_images/nesw.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 158 </span><span class="caption-text">Reklasfikace orientace svahů vůči světovým stranám pomocí mapového kalkulátoru.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Symbologie se nastaví na přesné hodnoty 1,2,3,4, pomocí histogramu je možné
+skontrolovat, zda jsme neudělali chybu a rastr neobsahuje jiné než očekávané
+hodnoty. Pokud hodnoty v rastru reprezentují jakoukoli charakteristiku, tak
+použít nastavení pospisků pro jednotlivé hodnoty či skupiny.</p>
+<p>V případě ukázky je vidět, že rastr obsahuje bílé plochy. To je způsobeno tím,
+že v těchto místech je rovná plocha - bez orientace a tyto místa mají extrémní
+hodnotu tzv. &quot;No data&quot;.  Tyto hodnoty nejsou uvedeny v legendě, v případě
+potřeby je možné těmto hodnotámnastavit samostatnou kategorii.</p>
+<figure class="align-center" id="id5">
+<span id="aspectrecl"></span><img alt="../_images/aspect_recl.png" class="middle" src="../_images/aspect_recl.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 159 </span><span class="caption-text">Reklasifikovaná mapa orientací svahů vůči světovým stranám.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Při reklasifikacích se obvykle používá modul systému GRASS
+<a class="reference external" href="http://grass.osgeo.org/grass80/manuals/r.reclass.html">r.reclass</a> (viz školení <a class="reference external" href="http://training.gismentors.eu/grass-gis-zacatecnik">GRASS GIS pro
+začátečníky</a>).  Na to je však potřebné
+nainstalovat zásuvný modul <span class="item">GRASS</span>, který není dostupný v
+každé verzi <em>QGIS</em>. Cílem bylo ukázat, že reklasifikace je možná i
+bez pluginů.</p>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s rastrovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rastr_import.html">Nahrání rastrových údajů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_export.html">Export rastrových údajů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_vlastnosti.html">Vlastnosti rastrové vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_terenni_analyzy.html">Terénní analýzy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Použití rastrového kalkulátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pouziti-rastroveho-kalkulatoru-pro-urceni-mist-potencialne-vhodnych-pro-umisteni-solarni-elektrarny">Použití rastrového kalkulátoru pro určení míst potenciálně vhodných pro umístění solární elektrárny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pouziti-rastroveho-kalkulatoru-pro-reklasifikaci">Použití rastrového kalkulátoru pro reklasifikaci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vrstevnice.html">Generování vrstevnic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="rastr_terenni_analyzy.html" title="Terénní analýzy"
+              >předchozí</a> |
+            <a href="vrstevnice.html" title="Generování vrstevnic"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

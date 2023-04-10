@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>QGIS pluginy &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Příklady GIS analýz" href="priklady.html" />
+    <link rel="prev" title="Různé" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Různé"
+             accesskey="P">předchozí</a> |
+          <a href="priklady.html" title="Příklady GIS analýz"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="qgis-pluginy">
+<h1>QGIS pluginy<a class="headerlink" href="#qgis-pluginy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>QGIS umožňuje práci se zásuvnými moduly, tzv. <a class="reference external" href="http://cs.wikipedia.org/wiki/https://en.wikipedia.org/wiki/Plug-in_(computing)">pluginy</a>. Ve všeobecnosti se
+jedná o software, které nepracuje samostatně, ale jako doplňkový modul jiné
+aplikace a tím rozšiřuje její funkčnost. V současnosti existuje pro QGIS víc než
+300 zásuvných modulů. Všechny jsou napsané v programovacím jazyku <a class="reference external" href="https://www.python.org/">Python</a> nebo <a class="reference external" href="https://isocpp.org/">C++</a>. Mnohé z nich jsou
+stále ve vývoji. Jejich kompletní seznam spolu s příslušnou charakteristikou,
+informacemi například o použití, potřebné minimální verzi QGISu, domovské
+stránce, autorech, o počtu stáhnutí, o tom, které jsou označené jako
+nejoblíbenější je dostupný <a class="reference external" href="https://plugins.qgis.org/plugins/">zde</a>.</p>
+<p>Moduly jsou udržované vývojovým týmem QGISu (<a class="reference external" href="http://qgis-development-team.software.informer.com/">QGIS Development Team</a>) a jsou
+automaticky součástí každé jeho distribuce. Externí pluginy jsou
+napsané v programovacím jazyce Python a jsou udržovány příslušnými
+autory. Chyby, angl.  <em>bugy</em> v modulech by měly být zveřejnovány a
+dostupné na stránkách <a class="reference external" href="http://hub.qgis.org/projects/qgis-user-plugins">projektu</a>.</p>
+<section id="spravce-zasuvnych-modulu">
+<span id="spravce-plugin"></span><h2>Správce zásuvných modulů<a class="headerlink" href="#spravce-zasuvnych-modulu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>V prvním kroku v menu zvolíme <span class="menuselection">Zásuvné moduly ‣ Spravovat a instalovat
+zásuvné moduly</span>, ikona <a class="reference internal" href="../_images/mActionShowPluginManager.png"><img alt="mActionShowPluginManager" src="../_images/mActionShowPluginManager.png" style="width: 1.5em;" /></a>.
+Spustí se dialogové okno (<a class="reference internal" href="#vse"><span class="std std-numref">Obr. 190</span></a>), které slouží k prohlížení, vypínání a
+zapínání  dostupných modulů příslušné verze QGISu.</p>
+<figure class="align-center" id="id1">
+<span id="vse"></span><img alt="../_images/p_vse.png" src="../_images/p_vse.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 190 </span><span class="caption-text">Správce zásuvných modulů v prostředí QGIS.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pod položkou <a class="reference internal" href="../_images/plugin-installed.png"><img alt="plugin-installed" src="../_images/plugin-installed.png" style="width: 1.5em;" /></a> <sup>Instalované</sup> najdeme ty, které byly
+nainstalované automaticky při instalaci QGISu. Z nich jsou některé načtené, jiné
+lze dočasně povolit nebo zakázat zaškrtnutím ikonky <a class="reference internal" href="../_images/checkbox_unchecked1.png"><img alt="checkbox_unchecked" src="../_images/checkbox_unchecked1.png" style="width: 1.5em;" /></a>.
+V případě, že klikneme na některý z modulů, zobrazí se jeho charakteristika nebo
+účel, spolu s dalšími informacemi jako je název, popis, počet hodnocení a
+stáhnutí modulu, reprezentující ikona, kategorie, instalovaná nebo dostupná
+verze, autor, seznam změn a další. Na <a class="reference internal" href="#plugininfo"><span class="std std-numref">Obr. 191</span></a>  je znázorněný příklad
+zásuvného modulu s názvem <a class="reference internal" href="../_images/q2t.png"><img alt="q2t" src="../_images/q2t.png" style="width: 1.5em;" /></a> <sup>Qgis2threejs</sup>.</p>
+<figure class="align-center" id="id2">
+<span id="plugininfo"></span><img alt="../_images/p_info.png" src="../_images/p_info.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 191 </span><span class="caption-text">Charakteristika zásuvného modulu na prohlížení 3D objektů ve webovém
+prohlížeči.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Seznam všech dostupných pluginů je možno zobrazit a konkrétní modul načíst zvolením
+<a class="reference internal" href="../_images/plugin.png"><img alt="plugin" src="../_images/plugin.png" style="width: 1.5em;" /></a> <sup>Nenainstalováno</sup> a spuštěním <cite>Instalovat zásuvný modul</cite>.
+Následně se dá tento modul přeinstalovat nebo úplně odinstalovat
+(<a class="reference internal" href="#p-instal"><span class="std std-numref">Obr. 192</span></a>).</p>
+<figure class="align-center" id="id3">
+<span id="p-instal"></span><img alt="../_images/p_instal.png" class="middle" src="../_images/p_instal.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 192 </span><span class="caption-text">Seznam nenainstalovaných modulů <span class="fignote">(1)</span>, instalace <span class="fignote">(2)</span>,
+možnost odinstalování <span class="fignote">(3)</span> nebo přeinstalování <span class="fignote">(4)</span>
+kteréhokoli z modulů.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pod záložkou <a class="reference internal" href="../_images/plugin-upgrade.png"><img alt="plugin-upgrade" src="../_images/plugin-upgrade.png" style="width: 1.5em;" /></a> <sup>Aktualizovatelný</sup> se nachází zásuvné moduly,
+které jsou dostupné i v novější verzi. Záložka <a class="reference internal" href="../_images/settings.png"><img alt="settings" src="../_images/settings.png" style="width: 1.5em;" /></a>
+<sup>Nastavení</sup> obsahuje nastavení týkající se kontroly aktualizací modulů,
+experimentálních a neschválených modulů a zobrazuje i seznam repozitářů, které
+lze přidávat, editovat nebo mazat, viz <a class="reference internal" href="#akt-nast"><span class="std std-numref">Obr. 193</span></a>.
+Po zaškrtnutí políček <a class="reference internal" href="../_images/checkbox_unchecked1.png"><img alt="checkbox_unchecked" src="../_images/checkbox_unchecked1.png" style="width: 1.5em;" /></a>  při položkách <cite>Zobrazit také
+experimentální</cite> a <cite>neschválené moduly</cite> je k dispozici téměř 500 zásuvných
+modulů.</p>
+<figure class="align-center" id="id4">
+<span id="akt-nast"></span><img alt="../_images/p_akt_nast.png" class="middle" src="../_images/p_akt_nast.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 193 </span><span class="caption-text">Záložky související s aktualizacemi a nastavením zásuvných modulů.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Seznam zásuvných modulů může uživatel uspořádat dle svých potřeb.
+Po stisknutí pravého tlačítka myši v seznamu modulů je k dispozici jejich
+uspořádání dle abecedy, počtu stáhnutí, hlasů nebo stavu (<a class="reference internal" href="#rad"><span class="std std-numref">Obr. 194</span></a>).</p>
+<blockquote>
+<div><figure class="align-center" id="id5">
+<span id="rad"></span><img alt="../_images/p_rad.png" src="../_images/p_rad.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 194 </span><span class="caption-text">Možnosti seřazení zásuvných modulů.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Je zapotřebí připomenout, že zásuvné moduly v oficiálních repozitářech
+byly testovány, nicméně jednotlivé repozitáře mohou obsahovat i méně ověřené
+moduly různé kvality a stadia vývoje. Proto je dobrou pomůckou zobrazení
+hodnocení či počtu  <a class="reference internal" href="../_images/osm_star.png"><img alt="star" src="../_images/osm_star.png" style="width: 1.5em;" /></a> <a class="reference internal" href="../_images/osm_star.png"><img alt="star" src="../_images/osm_star.png" style="width: 1.5em;" /></a> <a class="reference internal" href="../_images/osm_star.png"><img alt="star" src="../_images/osm_star.png" style="width: 1.5em;" /></a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud známe alespoň přibližný název konkrétního modulu, při vyhledávání
+může pomoci vyplnění políčka <cite>Hledat</cite> v dialogovém okně.</p>
+</div>
+</section>
+<section id="priklady-zasuvnych-modulu">
+<h2>Příklady zásuvných modulů<a class="headerlink" href="#priklady-zasuvnych-modulu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>V další části si částečně ukážeme některé z užitečných a často používaných
+zásuvních modulů programu QGIS:</p>
+<section class="border" id="another-dxf-importer">
+<h3><a class="reference internal" href="../_images/another_dxf_importer.png"><img alt="1" src="../_images/another_dxf_importer.png" style="width: 1.5em;" /></a> <sup>Another DXF Importer</sup><a class="headerlink" href="#another-dxf-importer" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>V případě, že máme k dispozici soubor AutoCAD DXF (<a class="reference external" href="https://en.wikipedia.org/wiki/AutoCAD_DXF">Drawing Exchange Format</a>), do prostředí programu QGIS ho
+umíme načíst buď přímo přes GDAL/OGR, pokud však import nedopadne podle očekávání
+pak je možné využít zásovný modul Another DXF Importer. V předchozích verzích byl
+dostupný také modul Konvertor Dxf2Shp, ten se však již dále nevyvíjí.</p>
+<figure class="align-center" id="id6">
+<span id="dxf2shp"></span><a class="reference internal image-reference" href="../_images/p_anotherdxfimporter.png"><img alt="../_images/p_anotherdxfimporter.png" src="../_images/p_anotherdxfimporter.png" style="width: 385.0px; height: 348.59999999999997px;" /></a>
+<figcaption>
+<p><span class="caption-number">Obr. 195 </span><span class="caption-text">Dialogové okno modulu pro import AutoCAD DXF souboru.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Po načtení modulu ze <a class="reference internal" href="#spravce-plugin"><span class="std std-ref">správce zásuvných modulů</span></a>
+se po kliknutí na ikonu <a class="reference internal" href="../_images/another_dxf_importer.png"><img alt="1" src="../_images/another_dxf_importer.png" style="width: 1.5em;" /></a> objeví dialogové okno, kde je zapotřebí
+nastavit vstupní <code class="docutils literal notranslate"><span class="pre">*.dxf</span></code> soubor, název, cestu a typ nového <code class="docutils literal notranslate"><span class="pre">*.shp</span></code>
+souboru nebo GeoPackage.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pokud se po spuštění modulu tlačítkem <span class="item">OK</span> zobrazí dialogové
+okno související se souřadnicovými systémy, systém nastavíme.</p>
+</div>
+</section>
+<section id="ziskani-souradnic">
+<h3><a class="reference internal" href="../_images/coordinate_capture.png"><img alt="2" src="../_images/coordinate_capture.png" style="width: 1.5em;" /></a> <sup>Získání souřadnic</sup><a class="headerlink" href="#ziskani-souradnic" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Tento zásuvný modul se používá velmi jednoduše a umožňuje zobrazení
+souřadnic myši pro dva vybrané souřadnicové systémy. Dialogové okno je
+zobrazeno na <a class="reference internal" href="#zis-sur"><span class="std std-numref">Obr. 196</span></a>.  Kliknutím na ikonu <a class="reference internal" href="../_images/checkbox1.png"><img alt="geographic" src="../_images/checkbox1.png" style="width: 1.5em;" /></a>
+nastavíme požadovaný souřadnicový systém, zvolením <a class="reference internal" href="../_images/coordinate_capture.png"><img alt="2" src="../_images/coordinate_capture.png" style="width: 1.5em;" /></a> <sup>Zapnout
+získávání</sup> se symbol myši změní na <a class="reference internal" href="../_images/p_reticle.png"><img alt="reticle" src="../_images/p_reticle.png" style="width: 1.5em;" /></a>. Po kliknutí do mapového
+okna se objeví malá červená tečka. Její souřadnice v souřadnicovém  systému
+projektu se zobrazí v okně vedle symbolu <a class="reference internal" href="../_images/p_askcor.png"><img alt="askcor" src="../_images/p_askcor.png" style="width: 1.5em;" /></a>. Na <a class="reference internal" href="#zis-sur"><span class="std std-numref">Obr. 196</span></a>
+jsou na ukázku zobrazené souřadnice vybraného bodu v souřadnicových
+systémech s EPSG 4326 (WGS 84) a 5514 (S-JTSK (Greenwich) / Krovak East North).
+Ikona <a class="reference internal" href="../_images/p_askcorcopy.png"><img alt="askcorcopy" src="../_images/p_askcorcopy.png" style="width: 1.5em;" /></a> umožňuje souřadnice kopírovat do schránky v
+podobě čtyř hodnot (pro <a class="reference internal" href="#zis-sur"><span class="std std-numref">Obr. 196</span></a> by to bylo
+<code class="docutils literal notranslate"><span class="pre">13.71955,49.85887,-796222.963,-1061087.065</span></code>).</p>
+<figure class="align-center" id="id7">
+<span id="zis-sur"></span><img alt="../_images/p_zis_sur2.png" src="../_images/p_zis_sur2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 196 </span><span class="caption-text">Dialogové okno modulu na zobrazení souřadnic z mapového okna.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pro novou verzi QGIS byl tento modul portován a aktuálně není
+přeložen do češtiny. Funkcionalita však zústává v zásadě stejná.</p>
+</div>
+</section>
+<section id="zasuvny-modul-sitovych-analyz">
+<h3><a class="reference internal" href="../_images/roadgraph.png"><img alt="3" src="../_images/roadgraph.png" style="width: 1.5em;" /></a> <sup>Zásuvný modul síťových analýz</sup><a class="headerlink" href="#zasuvny-modul-sitovych-analyz" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Ve vrstvě polylinií modul vypočte a následně vykreslí nejkratší cestu mezi dvěma
+zvolenými body. Je napsaný v programovacím jazyku C++. Umožňuje určit
+optimální trasu  na základě délky nebo času. Výsledek je automaticky
+exportován jako nová vektorová vrstva.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Při výpočtu nejkratší cesty se doporučuje nastavit souřadnicový systém
+projektu dle souřadnicového systému vrstvy polylinií.</p>
+</div>
+<p>Zásuvný modul aktivujeme v <a class="reference internal" href="#spravce-plugin"><span class="std std-ref">panelu správce zásuvných modulů</span></a>. V liště menu přejdeme na <span class="menuselection">Vektor ‣
+Silniční graf ‣ Nastavení</span>. Zobrazí se okno, kde vyplníme základní nastavení
+jako jednotku času, vzdálenosti, topologickou toleranci a další, viz
+<a class="reference internal" href="#path-nast"><span class="std std-numref">Obr. 197</span></a>. Na nastavení modulu použijeme vektorovou vrstvu cest České
+republiky zobrazenou na <a class="reference internal" href="#path-vector"><span class="std std-numref">Obr. 198</span></a> dle typu.</p>
+<figure class="align-center" id="id8">
+<span id="path-nast"></span><img alt="../_images/p_path_nast.png" class="small" src="../_images/p_path_nast.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 197 </span><span class="caption-text">Nastavení zásuvného modulu cestného grafu.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id9">
+<span id="path-vector"></span><img alt="../_images/p_path_vector.png" class="middle" src="../_images/p_path_vector.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 198 </span><span class="caption-text">Silnice České republiky zobrazené dle jejich typu.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V panelu <cite>Nejkratší cesta</cite> použijeme <a class="reference internal" href="../_images/coordinate_capture.png"><img alt="2" src="../_images/coordinate_capture.png" style="width: 1.5em;" /></a> a v mapovém okně kliknutím zvolíme
+počáteční a koncový bod cesty. Zobrazí se jako zelená, resp. červená tečka.
+Následně nastavíme kritérium, t.j. délku nebo čas a potvrdíme stisknutím
+<cite>Vypočítat</cite>. Po proběhnutí výpočtu  se v mapovém okně zobrazí výsledek v
+podobě polylinie, která se dá exportovat jako nová vektorová vrstva (použitím
+<cite>Export</cite>). Tlačítko <cite>Vyčistit</cite> slouží na smazání obsahu políček.
+Postup je znázorněný na <a class="reference internal" href="#path"><span class="std std-numref">Obr. 199</span></a>.</p>
+<figure class="align-center" id="id10">
+<span id="path"></span><img alt="../_images/p_path.png" class="middle" src="../_images/p_path.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 199 </span><span class="caption-text">Použití zásuvného modulu síťových analýz a výpočet nejoptimálnější cesty.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud nevidíme panel <cite>Nejkratší cesta</cite>, přidáme ho z menu lišty
+<cite>Zobrazit</cite> (<span class="menuselection">Zobrazit ‣ Panely ‣ Nejkratší cesta</span>),
+jak je to znázorněno na <a class="reference internal" href="#path-menu"><span class="std std-numref">Obr. 200</span></a>.</p>
+<blockquote>
+<div><figure class="align-center" id="id11">
+<span id="path-menu"></span><img alt="../_images/p_path_menu.png" class="small" src="../_images/p_path_menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 200 </span><span class="caption-text">Zobrazení dialogového okna na výpočet nejkratší cesty.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Tento modul je možno nahradit interním algoritmem, který je dostupný
+mezi nástroji zpracování.</p>
+</div>
+<figure class="align-center" id="id12">
+<span id="p-path-proc"></span><img alt="../_images/p_path_proc.png" class="middle" src="../_images/p_path_proc.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 201 </span><span class="caption-text">Dialogové okno algoritmu pro hledání nejkratší cesty.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="quick-map-services">
+<h3><a class="reference internal" href="../_images/quickmapservices.png"><img alt="4" src="../_images/quickmapservices.png" style="width: 1.5em;" /></a> <sup>Quick Map Services</sup><a class="headerlink" href="#quick-map-services" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pomocí tohoto zásuvného modulu je možné připojovat různé mapové služby
+postavené na protokolech XYZ nebo WMS. V základním nastavení jsou např.
+Open Street Map. Je však možno přidat další a také vyhledávat dle pozice.
+K dispozici jsou např. i mapy.cz.</p>
+<p>Se zásuvným modulem začneme pracovat tak, že z
+menu jako <span class="menuselection">Web ‣ QuickMapServices ‣ ???</span> vybereme zdroj, který nás zajímá.</p>
+<figure class="align-center" id="id13">
+<span id="p-qms-dot"></span><img alt="../_images/p_qms_menu.png" class="middle" src="../_images/p_qms_menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 202 </span><span class="caption-text">Použití zásuvného modulu Quick Map Services</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id14">
+<span id="p-qms-vysl"></span><img alt="../_images/p_qms_vysl.png" src="../_images/p_qms_vysl.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 203 </span><span class="caption-text">Přidáná mapová služba Open Street Map.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="geodata-cz-sk">
+<h3><a class="reference internal" href="../_images/geodata_cz_sk.png"><img alt="5" src="../_images/geodata_cz_sk.png" style="width: 1.5em;" /></a> <sup>GeoData CZ/SK</sup><a class="headerlink" href="#geodata-cz-sk" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p><em>GeoData CZ/SK Plugin</em> (<span class="menuselection">Zásuvné moduly ‣ GeoData ‣ Procházet datové zdroje</span>)
+umožňuje přidávat do mapového okna množství dat z oblasti České a SLovenské republiky
+obrazových služeb z XYZ a WMS zdrojů a také jiných typů zdrojů
+Na <a class="reference internal" href="#p-geodata"><span class="std std-numref">Obr. 204</span></a> je dialogové okno pluginu.</p>
+<figure class="align-center" id="id15">
+<span id="p-geodata"></span><img alt="../_images/p_geodata_cz_sk.png" class="large" src="../_images/p_geodata_cz_sk.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 204 </span><span class="caption-text">Ukázka dialogového okna pluginu</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="ruian">
+<h3><a class="reference internal" href="../_images/ruian.png"><img alt="6" src="../_images/ruian.png" style="width: 1.5em;" /></a> <sup>RUIAN</sup><a class="headerlink" href="#ruian" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p><em>RUIAN Plugin</em> umožňuje přidávat do mapového okna dat z registru RÚIAN
+(Registr územní identifikace, adres a nemovitostí).
+Na <a class="reference internal" href="#p-ruian"><span class="std std-numref">Obr. 205</span></a>  je dialogové okno pluginu.</p>
+<figure class="align-center" id="id16">
+<span id="p-ruian"></span><img alt="../_images/p_ruian.png" class="large" src="../_images/p_ruian.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 205 </span><span class="caption-text">Ukázka dialogového okna pluginu</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Další ze zmíněných modulů budou obsahem školení QGIS pro
+pokročilé, a to především GRASS plugin.</p>
+</div>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Různé</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">QGIS pluginy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="priklady.html">Příklady GIS analýz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styly.html">Příklad stylování kategorizovanou obrysovou čárou</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_aopk/ndop.html">Data AOPK</a></li>
+</ul>
+</li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Různé"
+              >předchozí</a> |
+            <a href="priklady.html" title="Příklady GIS analýz"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

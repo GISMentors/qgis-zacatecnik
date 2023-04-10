@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Popis rozhraní &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Základní nastavení" href="zakladni_nastaveni.html" />
+    <link rel="prev" title="Úvod do systému QGIS" href="prvni_kroky.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="prvni_kroky.html" title="Úvod do systému QGIS"
+             accesskey="P">předchozí</a> |
+          <a href="zakladni_nastaveni.html" title="Základní nastavení"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="popis-rozhrani">
+<span id="popisrozhrani"></span><span id="index-0"></span><h1>Popis rozhraní<a class="headerlink" href="#popis-rozhrani" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Po spuštění systému QGIS se zobrazí standardní rozhraní.
+Na obrázku níže jsou označeny základní části systému.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Vzhled systému QGIS je možné jednoduše měnit dle
+potřeb. Zobrazování jednotlivých nástrojů je možné upravit a
+přizpůsobit si tak pracovní prostředí. Pokud budete rozšiřovat
+funkčnost systému, tak je dobré si vhodně umístit nové nástroje.</p>
+</div>
+<figure class="align-center" id="id1">
+<img alt="../_images/menu_description.png" class="large" src="../_images/menu_description.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 23 </span><span class="caption-text">Základní části systému QGIS (detailní popis částí je níže).</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="mapove-okno-1">
+<span id="index-1"></span><h2>Mapové okno (1)<a class="headerlink" href="#mapove-okno-1" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>V tomto okně se vykreslují všechny zapnuté mapové vrstvy. Vykreslování
+odpovídá nastavení každé jednotlivé vrstvy.  Pořadí vykreslování
+vrstev odpovídá pořadí v panelu vrstev. Ty se tedy překreslují přes
+sebe všechny i když se vzájemně plně nebo jenom částečně překrývají.
+Pokud překreslování mapového okna trvá delší dobu je vhodné nechat
+překreslit pouze nezbytné vrstvy.</p>
+</section>
+<section id="panel-vrstev-panel-prohlizece-2">
+<span id="index-2"></span><h2>Panel vrstev / Panel prohlížeče (2)<a class="headerlink" href="#panel-vrstev-panel-prohlizece-2" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Přepínač vrstev zobrazuje všechny přidané vrstvy. Jejich zobrazení
+poskytuje rychlou informaci o jejich pozici a grafickém zobrazení v
+mapovém okně.  Kliknutím pravého tlačítka na vybranou vrstvu se vyvolá
+kontextové menu k dané vrstvě. V tomto menu je možné najít vše od
+stylování vrstvy až po export dat.</p>
+<p>Podle typu ikonky před názvem vrstvy je možné rychle identifikovat,
+zda se jedná o <a class="reference internal" href="../_images/mIconLineLayer.png"><img alt="mIconLineLayer" src="../_images/mIconLineLayer.png" style="width: 1.5em;" /></a> vektorovou nebo o <a class="reference internal" href="../_images/mIconRaster.png"><img alt="mIconRaster" src="../_images/mIconRaster.png" style="width: 1.5em;" /></a> rastrovou vrstvu. U
+vektorové vrstvy se typicky rozlišuje mezi <a class="reference internal" href="../_images/polygon.png"><img alt="polygon" src="../_images/polygon.png" style="width: 1.5em;" /></a> polygonovou
+(plošnou), <a class="reference internal" href="../_images/polyline.png"><img alt="polyline" src="../_images/polyline.png" style="width: 1.5em;" /></a> liniovou anebo <a class="reference internal" href="../_images/point.png"><img alt="point" src="../_images/point.png" style="width: 1.5em;" /></a> bodovou
+vrstvou. Zobrazení symbolů záleží na aktuálního nastavení symbologie
+dané vrstvy. Pokud nejde o jednoduchý symbol, tak je možné pomocí
+trojúhelníčku na začátku řádku rozbalit všechny položky stylování dané
+vrstvy.  Pokud chceme rychle změnit konkrétní symbol, tak je možné se
+pomocí dvoukliku přepnout přímo do editace symbolu.  Pokud má vrstva
+vícero různých symbolů, tak je možné zapínat symboly každé skupiny
+zvlášť přímo pomocí zaškrtávátka u každého symbolu. Není proto nutné
+dělat změny v nastavení symbologie (platí u vektorových vrstev).</p>
+<p>Vykreslování vrstvy v mapovém okně lze zapnou pomocí zatrhnutí okénka na
+úrovni každé vrstvy.</p>
+<p>Změnit pořadí vrstev lze pomocí tažení vrstvy na jinou pozici.</p>
+<p>V případě práce s velkým počtem vrstev je možné shlukovat tématicky vrstvy do
+tzv. skupin. Vytvoření skupiny je pomocí tlačítka <a class="reference internal" href="../_images/mActionAddGroup.png"><img alt="mActionAddGroup" src="../_images/mActionAddGroup.png" style="width: 1.5em;" /></a>
+<sup>Přidat skupinu</sup>. Ta se automaticky přidá do seznamu vrstev s výchozím
+názvem, který je možné změnit (přes kontextové menu skupiny). Vrstvy lze do
+skupiny přidat pomocí přetažení. U skupiny lze vykonávat některé vybrané
+funkce, jako i u běžných vrstev a některé jsou specifické.</p>
+<p>Vrstvu lze z projektu odstranit. Neznamená to, že by se smazala, pouze nebude
+součástí aktuálního projektu. Odstranit vrstvu lze z jejího kontektového menu,
+nebo pomocí tlačítka <a class="reference internal" href="../_images/mActionRemoveLayer.png"><img alt="mActionRemoveLayer" src="../_images/mActionRemoveLayer.png" style="width: 1.5em;" /></a> <sup>Odstranit vrtvu/skupinu</sup>.
+Tuto akci lze provést i pro více vrstev naráz. Ty lze ozbačit za pomocí kláves
+<kbd class="kbd docutils literal notranslate">Ctrl</kbd> anebo <kbd class="kbd docutils literal notranslate">Shift</kbd> a pak vyvolat kontextové menu pro všechny
+označené vrstvy.</p>
+<p>Panel prohlížeče slouží k zjednodušení přístupu ke geodatům. Umožňuje
+přistupovat k různým typům dat, např. vektorovým, rastrovým, databázím,
+službám.</p>
+</section>
+<section id="datovy-prohlizec-3">
+<span id="index-3"></span><h2>Datový prohlížeč (3)<a class="headerlink" href="#datovy-prohlizec-3" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Slouží pro správu datových zdrojů jako jsou adresáře se souborovými
+formáty jako např. ESRI Shapefile, databázové zdroje jako PostgreSQL,
+MSSQL a pod a v neposlední řadě webové služby, viz
+<a class="reference internal" href="../webove_sluzby/index.html"><span class="doc">Práce s webovými službami OGC</span></a>.</p>
+</section>
+<section id="stavovy-radek-4">
+<span id="index-4"></span><h2>Stavový řádek (4)<a class="headerlink" href="#stavovy-radek-4" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Obsahuje základní informace o nastavení mapového okna.
+Jednotlivé části jsou posány níže.</p>
+<figure class="align-center" id="id2">
+<img alt="../_images/status_bar.png" class="large" src="../_images/status_bar.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 24 </span><span class="caption-text">Stavový řádek systému QGIS.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="lokator-vyhledavac">
+<span id="index-5"></span><h3>Lokátor (vyhledávač)<a class="headerlink" href="#lokator-vyhledavac" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pro lepší orientaci mezi algoritmy, nástroji, vrstvami a dalšími součástmi je
+možné používat okno pro vyhledávání - <span class="item">Lokátor</span>.
+Zadáním části názvu vyhledávané vrstvy nebo nástroje se filtruje mezi všemi
+položkami. Výsledky jsou řazeny do kategorií. Na obrázku je vidět, že po zadání
+textu se vyhledají vrstvy obsahující vložený text, níže pak algoritmy s
+odpovídajícím názvem, ale i nástroje aplikovatelné na vybrané vrstvy.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/locator_search_bar.png" class="medium" src="../_images/locator_search_bar.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 25 </span><span class="caption-text">Vyhledávací okno s ukázkou nalezených výsledků toztříděných do jednotlivých
+kategorií.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud chceme vyhledávat v konkrétní sekci, například pouze
+vrstvu nebo nástroj, tak můžete nastavit filtrování pouze v
+konkrétní kategorii. Třídění je možné ovlivnit zadáním parametru
+před samotným textem. Parametr je možné napsat přímo jako text,
+anebo si vybrat ze seznamu. Seznam se aktivuje po kliknutí do
+vyhledávacího řádku. Zkratku buď opíšeme a přidáme za ni mezeru,
+anebo ji dvouklikem vložíme. Za zkratku pak píšeme část textu pro
+vyhledávání.  Poslední variantou je výběr v menu, které se otevře
+po kliknutí na symbol lupy.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/locator_thema.png" class="large" src="../_images/locator_thema.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 26 </span><span class="caption-text">Vyhledávací okno s vyhledáváním omezeným pouze na vrstvy v projektu s
+ukázkou nalezených výsledků.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V případě potřeby je možné upravit nastavení vyhledávání. Je možné nastavit,
+ve kterých skupinách se vyhledává, nebo jakými zkratkami se nastavují.
+Nastavení je v horním menu <span class="menuselection">Nastavení ‣ Možnosti</span>, záložka
+<span class="item">Lokátor</span>.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/locator_settings.png" class="medium" src="../_images/locator_settings.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 27 </span><span class="caption-text">Nastavení fungování lokátoru, aktivní skupiny a jejich zkratky.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="informace-o-stavu">
+<h3>Informace o stavu<a class="headerlink" href="#informace-o-stavu" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pole za vyhledávačem je místo, kde se uživateli zobrazují běžné informace.
+Příkladem je vypsání zprávy o uložení projektu s vypsáním cesty k souboru
+projektu. Kousek dál je místo, kde se zobrazuje ikonka při překreslování
+mapového okna. Pokud je zde vykreslená ikonka načítání <a class="reference internal" href="../_images/rendering_bar.png"><img alt="rendering_bar" src="../_images/rendering_bar.png" style="width: 1.5em;" /></a>, tak
+se aktuálně překresluje obsah mapového okna. Po ukončení vykreslování tato
+ikonka zmizí. Délka překreslování záleží na vykreslovaném obsahu.</p>
+</section>
+<section id="souradnice">
+<h3>Souřadnice<a class="headerlink" href="#souradnice" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Další část stavového řádku slouží pro orientaci v mapovém okně. Zde se
+zobrazuje buď aktuální souřadnice ukazatele myši v mapovém okně, nebo tzv.
+extent (rozsah území aktuálně zobrazeného v mapovém okně). Ukázka obou možností
+je zobrazena na následujícím obrázku. Jako přepínač mezi uvedenými fukcemi
+slouží ikona <a class="reference internal" href="../_images/extents.png"><img alt="extents" src="../_images/extents.png" style="width: 1.5em;" /></a> <sup>Přepnout rozšíření a zobrazení pozice myši</sup>, resp.
+<a class="reference internal" href="../_images/tracking.png"><img alt="tracking" src="../_images/tracking.png" style="width: 1.5em;" /></a> <sup>Přepnout rozšíření a zobrazení pozice myši</sup>.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/coordinates_extent.png" src="../_images/coordinates_extent.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 28 </span><span class="caption-text">Možnosti zobrazení souřadnic ukazatele myši nebo rozsahu mapového okna.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="meritko">
+<span id="index-6"></span><h3>Měřítko<a class="headerlink" href="#meritko" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Další funkcí je měřítko. Tato funkce zobrazuje aktuální měřítko mapového okna.
+Umožňuje také překreslení mapového okna do jiného měřítka pomocí výběru z
+předdefinovaného seznamu měřítek.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/choose_scale.png" class="small" src="../_images/choose_scale.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 29 </span><span class="caption-text">Výběr měřítka z předdefinovaného seznamu.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Seznam předdefinovaných měřítek je možné upravit. V menu
+<span class="menuselection">Nastavení ‣ Možnosti…</span> záložka <span class="item">Nástroje mapy</span> je
+část <span class="item">Předdefinovaná měřítka</span>. Nové měřítko je možné přidat pomocí ikonky
+<a class="reference internal" href="../_images/symbologyAdd.png"><img alt="symbologyAdd" src="../_images/symbologyAdd.png" style="width: 1.5em;" /></a> <sup>Přidat předdefinované měřítko</sup> a nebo odstranit pomocí
+<a class="reference internal" href="../_images/symbologyRemove.png"><img alt="symbologyRemove" src="../_images/symbologyRemove.png" style="width: 1.5em;" /></a> <sup>Odstranit vybrané</sup>.</p>
+<blockquote>
+<div><figure class="align-center" id="id8">
+<img alt="../_images/predefined_scales.png" class="middle" src="../_images/predefined_scales.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 30 </span><span class="caption-text">Menu pro upravení předdefinovaných měřítek.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</div>
+</section>
+<section id="prekreslovani-mapoveho-okna">
+<span id="index-7"></span><h3>Překreslování mapového okna<a class="headerlink" href="#prekreslovani-mapoveho-okna" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Vykreslování v mapovém okně je možné nastavit různým způsobem. Standardně se
+kresba v mapovém okně překresluje při následujících akcích:</p>
+<ul class="simple">
+<li><p>přidání nové vrstvy</p></li>
+<li><p>posun nebo zoomování mapového okna</p></li>
+<li><p>změna velikosti QGIS okna</p></li>
+<li><p>změna viditelnosti vrstvy</p></li>
+</ul>
+<p>V některých případech může překreslování mapového okna trvat déle, než
+je vhodné. V takovýchto případech je možné upravit nastavení
+vykreslování a <a class="reference internal" href="../vektorova_data/vektor_data_prace.html#styl-vrstvy"><span class="std std-ref">stylování</span></a> jednotlivých vrstev.  V
+případě, že překreslování není potřebné, tak je možné jej potlačit -
+mapové okno se nebude překreslovat. Pro takovéto nastavení je ve
+stavovém řádku položka se zaškrtávátkem <span class="item">Vykreslování</span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud potřebujete přerušit vykreslování, tak je to možné
+provést pomocí vypnutí překreslování. To se může hodit
+zejména při vykreslování náročných vrstev, když je zapotřebí
+pouze změnit obsah mapového okna.</p>
+</div>
+</section>
+<section id="souradnicovy-system">
+<span id="index-8"></span><h3>Souřadnicový systém<a class="headerlink" href="#souradnicovy-system" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Mezi nejdůležitější nastavení patří nastavení souřadnicového systému
+mapového okna. Aktuální EPSG kód souřadnicového systému je vidět přímo
+ve stavovém řádku vedle ikony <a class="reference internal" href="../_images/CRS.png"><img alt="CRS" src="../_images/CRS.png" style="width: 1.5em;" /></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Podrobnější informace k problematice souřadnicových systémů
+ve školení <a class="reference external" href="http://training.gismentors.eu/open-source-gis/soursystemy/index.html">Open Source GIS</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Souřadnicové systémy je možné vybírat podle EPSG kódu. Po
+instalaci je defaultně nastaven souřadnicový systém WGS 84
+(<a class="reference external" href="http://epsg.io/4326">EPSG:4326</a>). Pro potřeby zpracování geodat na území ČR se však
+většinou používá souřadnicový systém <a class="reference external" href="http://epsg.io/5514">EPSG:5514</a>
+(S-JTSK). Nastavení přes stavový řádek je však platné jenom pro
+aktuální projekt. Po opětovném spuštění se systém nastaví opět na
+výchozí souřadnicový systém. Jak nastavit výchozí souřadnicový
+systém je popsáno v kapitole <a class="reference internal" href="import_export.html#sour-system"><span class="std std-ref">Výběr souřadnicového systému</span></a>.</p>
+</div>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Pokud potřebujete zjistit detaily o jakékoli aktivitě
+systému, tak si nechte vypisovat tzv. logovací zprávy. Záložku s
+jednotlivými logovacími zprávami je možné otevřít pomocí ikonky
+<a class="reference internal" href="../_images/mMessageLog.png"><img alt="mMessageLog" src="../_images/mMessageLog.png" style="width: 1.5em;" /></a> <sup>Zprávy</sup>. Tyto zprávy jsou podstatné zejména v případě
+neočekávaného chování systému.</p>
+</div>
+</section>
+</section>
+<section id="hlavni-menu-5">
+<span id="index-9"></span><h2>Hlavní menu (5)<a class="headerlink" href="#hlavni-menu-5" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Hlavní menu se skládá ze dvou základních částí. První je standardní menu v liště
+a druhou je nástrojová lišta.</p>
+<p>V menu se nachází zejména nástroje pro správu systému a jeho nastavení.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Nastavení systému je možné změnit přes <span class="menuselection">Nastavení ‣
+Možnosti…</span>. Prvním důležitým nastavením je volba souřadnicového systému -
+záložka <span class="item">SRS</span>. Zde se nastaví souřadnicový systém  pro nový projekt a
+zvlášť pro novou vrstvu.</p>
+</div>
+<p>Nástrojová lišta obsahuje základní nástroje pro práci s projektem a vrstvami.
+Vypínání a zapínání jednotlivých nástrojových lišt a oken lze provádět pravým
+kliknutím na panel a výběrem z nabídky.</p>
+<section id="zakladni-nastroje-pro-pohyb-v-okne">
+<span id="index-10"></span><h3>Základní nástroje pro pohyb v okně<a class="headerlink" href="#zakladni-nastroje-pro-pohyb-v-okne" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<ul>
+<li><p><a class="reference internal" href="../_images/mActionZoomIn.png"><img alt="mActionZoomIn" src="../_images/mActionZoomIn.png" style="width: 1.5em;" /></a> <sup>Přiblížit</sup>, <a class="reference internal" href="../_images/mActionZoomOut.png"><img alt="mActionZoomOut" src="../_images/mActionZoomOut.png" style="width: 1.5em;" /></a> <sup>Oddálit</sup> -
+přiblíží/oddálí vybranou oblast, pro přibližování bez vybrání
+oblasti lze použít i kolečko myši</p></li>
+<li><p><a class="reference internal" href="../_images/mActionZoomLast.png"><img alt="mActionZoomLast" src="../_images/mActionZoomLast.png" style="width: 1.5em;" /></a> <sup>Zvětšit podle posledního výřezu</sup>,
+<a class="reference internal" href="../_images/mActionZoomNext.png"><img alt="mActionZoomNext" src="../_images/mActionZoomNext.png" style="width: 1.5em;" /></a> <sup>Přiblížit na další</sup> - lze vrátit na předchozí
+stav přiblížení a zpět</p></li>
+<li><p><a class="reference internal" href="../_images/mActionZoomToLayer.png"><img alt="mActionZoomToLayer" src="../_images/mActionZoomToLayer.png" style="width: 1.5em;" /></a> <sup>Přiblížení na vrstvu</sup> - přiblíží na
+rozsah vybrané vrstvy</p></li>
+<li><p><a class="reference internal" href="../_images/mActionZoomFullExtent.png"><img alt="mActionZoomFullExtent" src="../_images/mActionZoomFullExtent.png" style="width: 1.5em;" /></a> <sup>Přiblížení na všechny vrstvy</sup> -
+přiblíží na všechny vrstvy v projektu</p></li>
+<li><p><a class="reference internal" href="../_images/mActionPan.png"><img alt="mActionPan" src="../_images/mActionPan.png" style="width: 1.5em;" /></a> <sup>Posun mapy</sup> - umožní posun v mapovém okně tažením,
+tuto funkci lze nahradit stisknutím kolečka myši a následným tažením</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Při posunu pomocí stisknutí kolečka myši můžeme mít
+aktivní jinou funkci, např. výběr, vytváření nových prvků atd.</p>
+</div>
+</li>
+<li><p><a class="reference internal" href="../_images/mActionRefresh.png"><img alt="mActionRefresh" src="../_images/mActionRefresh.png" style="width: 1.5em;" /></a> <sup>Obnovit</sup> - obnoví zobrazení všech nahraných dat</p></li>
+</ul>
+</section>
+<section id="zakladni-nastroje-vyberu">
+<span id="index-11"></span><h3>Základní nástroje výběru<a class="headerlink" href="#zakladni-nastroje-vyberu" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní
+prvky, se kterými hodláme dále pracovat. Toto označení se nazývá
+<code class="xref std std-option docutils literal notranslate"><span class="pre">Výběr</span></code>.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/mActionSelectRectangle.png"><img alt="mActionSelectRectangle" src="../_images/mActionSelectRectangle.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky oblastí nebo jednoklikem</sup> -
+nejjednodušší tvorba výběru</p></li>
+<li><p><a class="reference internal" href="../_images/mActionSelectPolygon.png"><img alt="mActionSelectPolygon" src="../_images/mActionSelectPolygon.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky polygonem</sup> - vytvořit výběr
+naklikáním polygonu</p></li>
+<li><p><a class="reference internal" href="../_images/mActionSelectFreehand.png"><img alt="mActionSelectFreehand" src="../_images/mActionSelectFreehand.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky kreslením od ruky</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionSelectRadius.png"><img alt="mActionSelectRadius" src="../_images/mActionSelectRadius.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky poloměrem</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky pomocí vzorce</sup> - viz kapitola
+<a class="reference internal" href="../vektorova_data/dotazovani.html#atrdotaz"><span class="std std-ref">Atributové dotazování</span></a></p></li>
+<li><p><a class="reference internal" href="../_images/mActionUnselectAttributes.png"><img alt="mActionUnselectAttributes" src="../_images/mActionUnselectAttributes.png" style="width: 1.5em;" /></a><sup>Zrušit výběr ve všech vrstvách</sup> -
+zruší veškerý výběr</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Nástroje pro pohyb v okně na základě výběru</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/mActionZoomToSelected.png"><img alt="mActionZoomToSelected" src="../_images/mActionZoomToSelected.png" style="width: 1.5em;" /></a> <sup>Přiblížit na výběr</sup></p></li>
+<li><p><a class="reference internal" href="../_images/mActionPanToSelected.png"><img alt="mActionPanToSelected" src="../_images/mActionPanToSelected.png" style="width: 1.5em;" /></a> <sup>Posunout mapu na výběr</sup></p></li>
+</ul>
+</div>
+</section>
+<section id="mereni-v-mapovem-okne">
+<span id="index-12"></span><h3>Měření v mapovém okně<a class="headerlink" href="#mereni-v-mapovem-okne" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Nástroje pro měření jsou závislé na souřadnicovém
+systému. V případě nastavení zeměpisného souřadnicového systému
+bude výsledek měření (délky a plochy) uveden ve stupních. Pro tento
+účel je nutné mít správně nastavený mapový souřadnicový
+systém. Měření v mapovém okně také respektuje nastavení
+přichytávání (tzv. snapping).
+U měření délky a plochy je rovněž volba typu výpočtu. Buď se výpočet
+provádí jako <em>kartézský</em> - výpočet v kartézských souřadnicích (rovina),
+nebo <em>elipsoidický</em> - výpočet na sféře (elipsoidu).</p>
+</div>
+<p>V mapovém okně lze použít pro měření následující nástroje z hlavního menu.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/mActionMeasure.png"><img alt="mActionMeasure" src="../_images/mActionMeasure.png" style="width: 1.5em;" /></a> <sup>Měřit linii</sup> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">M</kbd></kbd></p></li>
+<li><p><a class="reference internal" href="../_images/mActionMeasureArea.png"><img alt="mActionMeasureArea" src="../_images/mActionMeasureArea.png" style="width: 1.5em;" /></a> <sup>Měřit plochu</sup> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">J</kbd></kbd></p></li>
+<li><p><a class="reference internal" href="../_images/mActionMeasureAngle.png"><img alt="mActionMeasureAngle" src="../_images/mActionMeasureAngle.png" style="width: 1.5em;" /></a> <sup>Měřit úhel</sup></p></li>
+<li><p><a href="#id13"><span class="problematic" id="id14">|mActionMeasureBearing|</span></a> <sup>Měřit azimut</sup></p></li>
+</ul>
+<p>Pro měření se kliknutím vybere požadovaný nástroj. Zobrazí se dialogové okno k
+danému typu měření, kde lze vybrat jednotky měření. Kliknutím do mapy se začne
+kreslit požadovaný útvar pro měření. Během kreslení se určovaná hodnota
+upravuje dle polohy kurzoru.  Definování prkvu kresbou lze ukončit pravým
+kliknutím. Nové měření lze začít pomocí tlačítka <span class="item">Nové</span>.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/measure_area.png" src="../_images/measure_area.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 31 </span><span class="caption-text">Měření plochy - ukázka volby jednotek.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>U měření délek se určuje délka jednotlivých segmentů mezi vrcholy, ale i součet
+všech délek.</p>
+<figure class="align-center" id="id10">
+<img alt="../_images/measure_line.png" class="large" src="../_images/measure_line.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 32 </span><span class="caption-text">Měření délky - délky segmentů a celková délka, volba typu výpočtu délky.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Nastavení měření se nachází v menu <span class="menuselection">Nastavení ‣
+Možnosti…</span> záložka <span class="item">Nástroje mapy</span> část <span class="item">Nástroj pro
+měření</span>.</p>
+<figure class="align-center" id="id11">
+<img alt="../_images/measure_units.png" class="middle" src="../_images/measure_units.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 33 </span><span class="caption-text">Nastavení měření - jednotky, symbologie, hodnoty.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="index-13">
+<span id="identifikace-prvku"></span><h3>Identifikace prvku<a class="headerlink" href="#index-13" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Nástroj pro identifikaci prvku slouží pro získání informací o interaktivně
+vybraném prvku v mapovém okně. Pro identifikaci je možné použít menu
+<span class="menuselection">Zobrazit ‣ Identifikovat prvky</span>, použít klávesovou zkratku
+<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">I</kbd></kbd> nebo ikonu <a class="reference internal" href="../_images/mActionIdentify.png"><img alt="mActionIdentify" src="../_images/mActionIdentify.png" style="width: 1.5em;" /></a> <sup>Identifikovat prvky</sup>.</p>
+<p>Po vyvolání nástroje pro identifikaci se kliknutím v mapě vyberou prvky, které
+chceme identifikovat.</p>
+<figure class="align-center" id="id12">
+<img alt="../_images/feature_info.png" class="small" src="../_images/feature_info.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 34 </span><span class="caption-text">Výsledek identifikace prvku.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Výsledky identifikace se zobrazují v pop-up okně ve formě stromové
+struktury.  Pokud vybíráme prvky ve vícero vrstvách, tak první úrovní
+rozdělení je jméno vrstvy. Na další úrovni je atribut nastavený v menu
+vrstvy <span class="menuselection">Vlastnosti ‣ Zobrazení</span>. Na další úrovni se
+zobrazují 3 skupiny informací:</p>
+<ul class="simple">
+<li><p>Odvozené - informace, které nejsou mezi atributy, ale jsou určené při
+identifikaci (plocha, obvod, délka, poloha - dle typu prvku),</p></li>
+<li><p>Akce - interaktivní položky, které vyvolají akci  (menu vrstvy
+<span class="menuselection">Vlastnosti ‣ Akce</span>),</p></li>
+<li><p>Vlastnosti - seznam atributů daného objektu (z atributové tabulky).</p></li>
+</ul>
+<p>Při vícero vrstvách lze v mapovém okně nastavit režim výběru (v spodní
+části okna) a formu zobrazování.</p>
+<p>Při pravém kliku na detail v tabulce se vyvolá kontextové menu, které
+umožňuje různé možnosti od zoomování na vybraný prvek, kopírování
+hodnot, práci s výběrem až po nastavení dané vrstvy.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">První kroky</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../instalace/index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prvni_kroky.html">Úvod do systému QGIS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Popis rozhraní</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zakladni_nastaveni.html">Základní nastavení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_export.html">Přidávání a export geodat</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="prvni_kroky.html" title="Úvod do systému QGIS"
+              >předchozí</a> |
+            <a href="zakladni_nastaveni.html" title="Základní nastavení"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

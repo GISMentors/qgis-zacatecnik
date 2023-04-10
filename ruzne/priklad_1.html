@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ukázka jednoduchých prostorových funkcí &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Ukázka kombinace prostorových funkcí a dotazů" href="priklad_2.html" />
+    <link rel="prev" title="Příklady GIS analýz" href="priklady.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="priklady.html" title="Příklady GIS analýz"
+             accesskey="P">předchozí</a> |
+          <a href="priklad_2.html" title="Ukázka kombinace prostorových funkcí a dotazů"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ukazka-jednoduchych-prostorovych-funkci">
+<h1>Ukázka jednoduchých prostorových funkcí<a class="headerlink" href="#ukazka-jednoduchych-prostorovych-funkci" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Kolik procent území ČR je ve vzdálenosti do 100 km od hranice Hlavního města Prahy?</p>
+<section id="data">
+<h2>Data<a class="headerlink" href="#data" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p><span class="map">kraje.shp</span></p>
+</section>
+<section id="reseni">
+<h2>Řešení<a class="headerlink" href="#reseni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Nástrojem <em>Buffer</em> vytvoříme obalovou zónu 100 km kolem Prahy.</p></li>
+<li><p>Nástrojem <em>Dissolve</em> sloučíme kraje a vytvoříme hranici ČR.</p></li>
+<li><p>Vypočteme plochu ČR.</p></li>
+<li><p>Nástrojem <em>Intersect</em> vytvoříme průnik obalové zóny s hranicí ČR.</p></li>
+<li><p>Vypočteme plochu průniku a procenta vybrané plochy k původní ploše.</p></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Postup řešení v programu ArcGIS Desktop je dostupný <a class="reference external" href="http://maps.fsv.cvut.cz/frvsgis/web.html">zde</a>. S Open Source programem QGIS
+však lze dosáhnout stejného výsledku.</p>
+</div>
+</section>
+<section id="postup-v-qgis">
+<h2>Postup v QGIS<a class="headerlink" href="#postup-v-qgis" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Po spuštění programu QGIS se zobrazí standardní rozhraní, viz
+<a class="reference internal" href="../intro/popis_rozhrani.html#popisrozhrani"><span class="std std-ref">Popis rozhraní</span></a>. Souřadnicový systém projektu je
+přednastavený na WGS 84 (<a class="reference external" href="http://epsg.io/4236">EPSG:4236</a>), což lze zkontrolovat ve
+stavovém řádku vpravo dole. Budeme pracovat s daty České republiky,
+kde se obvykle používá souřadnicový systém S-JTSK (<a class="reference external" href="http://epsg.io/5514">EPSG:5514</a>).</p>
+<p>V prvním kroku proto nastavíme souřadnicový systém projektu. Z menu
+lišty vybereme <span class="menuselection">Nastavení ‣ Možnosti</span>. Otevře se
+dialogové okno, kde v záložce <span class="item">SRS</span> nastavíme <code class="docutils literal notranslate"><span class="pre">Vždy</span> <span class="pre">začít</span> <span class="pre">nové</span>
+<span class="pre">projekty</span> <span class="pre">s</span> <span class="pre">tímto</span> <span class="pre">SRS</span></code> na <code class="docutils literal notranslate"><span class="pre">EPSG:5514</span> <span class="pre">-</span> <span class="pre">S-JTSK</span> <span class="pre">(Greenwich)/Krovak</span> <span class="pre">East</span>
+<span class="pre">North</span></code>, a to kliknutím na ikonku <a class="reference internal" href="../_images/mActionSetProjection.png"><img alt="mActionSetProjection" src="../_images/mActionSetProjection.png" style="width: 1.5em;" /></a> <sup>Vyberte
+SRS</sup>. Tento souřadnicový systém nastavíme i pro nové vrstvy v položce
+<code class="docutils literal notranslate"><span class="pre">SRS</span> <span class="pre">pro</span> <span class="pre">nové</span> <span class="pre">vrstvy</span></code> a <code class="docutils literal notranslate"><span class="pre">Použít</span> <span class="pre">výchozí</span> <span class="pre">SRS</span></code>. Na závěr povolíme
+<a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a> <code class="docutils literal notranslate"><span class="pre">&quot;on-the-fly&quot;</span> <span class="pre">SRS</span> <span class="pre">transformaci</span></code> pro případ, že bychom v
+projektu pracovali s vrstvami v souřadnicovém systému, který je
+odlišný od systému projektu. Postup je popsaný v kapitole
+<a class="reference internal" href="../intro/import_export.html#sour-system"><span class="std std-ref">Souřadnicový systém</span></a>.</p>
+<p>V dalším kroku kliknutím na <a class="reference internal" href="../_images/mActionAddOgrLayer.png"><img alt="mActionAddOgrLayer" src="../_images/mActionAddOgrLayer.png" style="width: 1.5em;" /></a> <sup>Přidat vektorovou vrstvu</sup>
+do mapového okna přidáme vrstvu <span class="map">kraje.shp</span>. Tlačítkem <a class="reference internal" href="../_images/mActionSelect.png"><img alt="mActionSelect" src="../_images/mActionSelect.png" style="width: 1.5em;" /></a>
+<sup>Vybrat prvky oblastí nebo jednoklikem</sup> klikneme do mapy na místo, kde se
+nachází kraj Hlavního města Prahy (<a class="reference internal" href="#u-select-praha"><span class="std std-numref">Obr. 206</span></a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>V případě, že by šlo o složitější výběr, použijeme
+<a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky pomocí vzorce</sup> a prvky
+vybereme atributovým dotazem.</p>
+</div>
+<figure class="align-center" id="id1">
+<span id="u-select-praha"></span><img alt="../_images/u-select-praha.png" class="middle" src="../_images/u-select-praha.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 206 </span><span class="caption-text">Výběr území Prahy kliknutím do mapového okna.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Následně vytvoříme obalovou zónu 100 km od hranice Prahy. Použijeme prostorovou
+analýzu <a class="reference internal" href="../_images/mAlgorithmBuffer.png"><img alt="mAlgorithmBuffer" src="../_images/mAlgorithmBuffer.png" style="width: 1.5em;" /></a> <sup>Buffer</sup>. Z menu lišty vybereme <span class="menuselection">Vektor
+‣ Nástroje geoprocessingu ‣ Obalové zóny</span>. V dialogovém okně nastavíme
+vstupní vrstvu, t.j. <span class="map">kraje</span>, zaklikneme <a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a> <sup>Použít pouze
+vybrané prvky</sup>, protože chceme obalovou zónu jen kolem konkrétního vybraného
+kraje. Míru aproximace zvýšíme na <code class="docutils literal notranslate"><span class="pre">70</span></code>, protože předvolená hodnota <code class="docutils literal notranslate"><span class="pre">5</span></code>
+segmentů je málo na to, aby obalová zóna odpovídala kruhu. Dále nastavíme
+velikost obalové zóny v metrech, název výstupního souboru a povolíme <a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a>
+<sup>Přidat výsledek do mapového okna</sup> a potvrdíme  <code class="docutils literal notranslate"><span class="pre">OK</span></code> (<a class="reference internal" href="#u-p100km"><span class="std std-numref">Obr. 207</span></a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Maximální možný počet segmentů na aproximaci je <code class="docutils literal notranslate"><span class="pre">99</span></code>. Výhodou je
+sice přesnější výsledek, nicméně výpočty budou trvat delší dobu.</p>
+</div>
+<figure class="align-center" id="id2">
+<span id="u-p100km"></span><a class="small reference internal image-reference" href="../_images/u-p100km.png"><img alt="../_images/u-p100km.png" class="small" src="../_images/u-p100km.png" style="width: 285.75px; height: 300.0px;" /></a>
+<figcaption>
+<p><span class="caption-number">Obr. 207 </span><span class="caption-text">Tvorba obalové zóny velikosti 100 km kolem hranice Prahy.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Do mapového okna se přidá nová vektorová vrstva <span class="map">P100km</span>. Nastavíme jí styl
+<span class="menuselection">pravým tlačítkem myši ‣ Vlastnosti ‣ Styl</span>, například jako
+na <a class="reference internal" href="#u-p100km-styl"><span class="std std-numref">Obr. 208</span></a> transparentní výplň, červené ohraničení široké 1 mm.</p>
+<figure class="align-center" id="id3">
+<span id="u-p100km-styl"></span><img alt="../_images/u-p100km-styl.png" class="middle" src="../_images/u-p100km-styl.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 208 </span><span class="caption-text">Nastavení stylu obalové zóny.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Dále provedeme sjednocení všech krajů, resp. vrstvu České republiky. Budeme ji
+potřebovat na určení plochy ČR. Využijeme nástroj geoprocessingu
+<a class="reference internal" href="../_images/mAlgorithmDissolve.png"><img alt="mAlgorithmDissolve" src="../_images/mAlgorithmDissolve.png" style="width: 1.5em;" /></a> <sup>Rozpustit</sup>.
+Před touto funkcí ještě zrušíme výběr kraje Prahy pomocí <a class="reference internal" href="../_images/mIconSelectRemove.png"><img alt="mIconSelectRemove" src="../_images/mIconSelectRemove.png" style="width: 1.5em;" /></a>
+<sup>Zrušit výber prvků ve všech vrstvách</sup>. Výstupní vektorovou vrstvu
+pojmenujeme <span class="map">hraniceCR</span>, viz <a class="reference internal" href="#u-dissolve"><span class="std std-numref">Obr. 209</span></a>.</p>
+<figure class="align-center" id="id4">
+<span id="u-dissolve"></span><img alt="../_images/u-dissolve.png" class="small" src="../_images/u-dissolve.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 209 </span><span class="caption-text">Spojení všech krajů do jednoho polygonu pomocí nástroje <em>Dissolve</em>.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Otevřeme atributovou tabulku vrstvy <span class="map">hraniceCR</span> (pravým <code class="docutils literal notranslate"><span class="pre">Otevřít</span>
+<span class="pre">atributovou</span> <span class="pre">tabulku</span></code>) a pak použijeme kalkulačku polí - ikona v horní
+liště atributové tabulky <a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> <sup>Otevřít
+kalkulátor polí</sup>.  Vytvoříme nový atribut (pole) s názvem
+<span class="dbcolumn">area_sum</span> (desetinné číslo), do kterého vložíme hodnotu
+plochy polygonu. Datový typ nastavíme tedy jako <code class="docutils literal notranslate"><span class="pre">real</span></code>, šířka
+např. <code class="docutils literal notranslate"><span class="pre">15</span></code> a jako výraz napíšeme <code class="docutils literal notranslate"><span class="pre">$area</span></code> (<a class="reference internal" href="#u-area"><span class="std std-numref">Obr. 210</span></a>).  Změny
+uložíme ikonou <a class="reference internal" href="../_images/mActionSaveEdits.png"><img alt="mActionSaveEdits" src="../_images/mActionSaveEdits.png" style="width: 1.5em;" /></a> a editovací režim vypneme opětovným
+stisknutím <a class="reference internal" href="../_images/mIconEditable.png"><img alt="mIconEditable" src="../_images/mIconEditable.png" style="width: 1.5em;" /></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Výraz nemusíme psát ručně. V středním poli dialogového okna kalkulačky
+je množství položek. V našem případě vybereme
+<span class="menuselection">Geometrie ‣ $area (dvojklik)</span>.</p>
+</div>
+<figure class="align-center" id="id5">
+<span id="u-area"></span><img alt="../_images/u-hraniceCR-area.png" src="../_images/u-hraniceCR-area.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 210 </span><span class="caption-text">Vytvoření atributu s výměrou České republiky.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Poté použijeme nástroj <a class="reference internal" href="../_images/mAlgorithmIntersect.png"><img alt="mAlgorithmIntersect" src="../_images/mAlgorithmIntersect.png" style="width: 1.5em;" /></a> <sup>Průsečník</sup>, kde vstupem budou vrstvy
+<span class="map">hraniceCR</span> a <span class="map">P100km</span>. Výsledek je zobrazen na <a class="reference internal" href="#intersect-map"><span class="std std-numref">Obr. 211</span></a>.</p>
+<figure class="align-center" id="id6">
+<span id="intersect-map"></span><img alt="../_images/u_intersect-map.png" class="middle" src="../_images/u_intersect-map.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 211 </span><span class="caption-text">Výsledek nástroje <em>Intersect</em>, území České republiky ve vzdálenosti 100 km
+od hranic Prahy.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Posledním krokem je určení procentuálního zastoupení plochy republiky do 100 km
+od Prahy. Nejdřív vypočteme plochu průniku <span class="map">hraniceCR_intersect</span>, přičemž
+postupujeme obdobně jako při ploše vrstvy <span class="map">hraniceCR</span> (vytvoříme sloupec s
+názvem <span class="dbcolumn">area</span>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Kvůli přehlednosti vymažeme všechny nepotřebné sloupce v atributové
+tabulce vrstvy <span class="map">hraniceCR_intersect</span> tak, že nejdříve zapneme editovací
+mód kliknutím na <a class="reference internal" href="../_images/mIconEditable.png"><img alt="mIconEditable" src="../_images/mIconEditable.png" style="width: 1.5em;" /></a> <sup>Prepnout režim editaci</sup>, potom zvolíme
+<a class="reference internal" href="../_images/mActionDeleteAttribute.png"><img alt="mActionDeleteAttribute" src="../_images/mActionDeleteAttribute.png" style="width: 1.5em;" /></a> <sup>Smazat sloupec</sup> a označíme názvy těch
+atributů, které chceme vymazat. Ponecháme jenom pole <span class="dbcolumn">area_sum</span> a
+<span class="dbcolumn">area</span>.</p>
+</div>
+<p>Pak přidáme nový atribut <span class="dbcolumn">procento</span>, do kterého pomocí mapové
+kalkulačky vložíme výsledek <code class="docutils literal notranslate"><span class="pre">&quot;area&quot;/&quot;area_sum</span> <span class="pre">*</span> <span class="pre">100&quot;</span></code>.  Ten je na
+<a class="reference internal" href="#vysledok-u1"><span class="std std-numref">Obr. 212</span></a> (48,6 % území České republiky je ve vzdálenosti do 100 km od
+hranic Prahy).</p>
+<figure class="align-center" id="id7">
+<span id="vysledok-u1"></span><img alt="../_images/u-vysledok-u1.png" src="../_images/u-vysledok-u1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 212 </span><span class="caption-text">Výpočet procentuálního zastoupení území ve vzdálenosti do 100 km od Prahy.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Různé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qgis_pluginy.html">QGIS pluginy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="priklady.html">Příklady GIS analýz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styly.html">Příklad stylování kategorizovanou obrysovou čárou</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_aopk/ndop.html">Data AOPK</a></li>
+</ul>
+</li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="priklady.html" title="Příklady GIS analýz"
+              >předchozí</a> |
+            <a href="priklad_2.html" title="Ukázka kombinace prostorových funkcí a dotazů"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

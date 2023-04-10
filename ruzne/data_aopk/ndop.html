@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Data AOPK &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/gismentors.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../../search.html" />
+    <link rel="prev" title="Příklad stylování kategorizovanou obrysovou čárou" href="../styly.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../styly.html" title="Příklad stylování kategorizovanou obrysovou čárou"
+             accesskey="P">předchozí</a> |
+          <a href="../../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="data-aopk">
+<h1>Data AOPK<a class="headerlink" href="#data-aopk" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Agentura Ochrany Přírody a Krajiny ČR
+(<a class="reference external" href="http://www.ochranaprirody.cz/">AOPK ČR</a>) poskytuje různá data týkající se
+ochrany přírody (oblasti chráněných území, <a class="reference external" href="https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=1035">VMB - vrstva mapování biotopů</a> , nálezy
+organismů) v různé podobě (souborové formáty, webové služby - WMS,WFS, …).
+Obecné informace k získávání a poskytování dat můžeme nalézt na Portálu
+informačního systému ochrany přírody (<a class="reference external" href="https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=3&amp;nabidka=hlavni">Portál ISOP</a>). Obecně jsou data poskytována ve třech úrovních a to jako otevřená data,
+otevřená data po registraci, a data poskytovaná na základě žádosti (smlouvy).</p>
+<p>Jako rozcestník k získání dat můžeme použít stránky <a class="reference external" href="https://data.nature.cz/">https://data.nature.cz/</a>. Ke každé datové sadě je zde základní popis,
+licenční podmínky, odkaz ke stažení dat popř. na webovou službu.</p>
+<figure class="align-center" id="id3">
+<img alt="../../_images/data_nature.png" class="middle" src="../../_images/data_nature.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 239 </span><span class="caption-text">Přehled dostupných dat AOPK na <cite>https://data.nature.cz/</cite></span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V případě, že datová sada vyžaduje registraci, odkaz stažení dat Vás přesměřuje
+na přihlášení do ISOP (pokud již nejste přihlášení). Pokud nemáte zaregistrovaný
+účet můžete použít odkaz <a class="reference external" href="https://idm.nature.cz/idm/#/registration">Založit nový účet v informačním systému AOPK ČR</a> přímo z přihlašovacího formuláře.</p>
+<figure class="align-center" id="id4">
+<img alt="../../_images/login.png" class="small" src="../../_images/login.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 240 </span><span class="caption-text">Přihlašovací formulář ISOP</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V současné době je nutná registrace u datových sad <strong>Aktualizace základního
+mapování biotopů</strong> a <strong>Nálezová databáze ochrany přírody</strong>.</p>
+<figure class="align-center" id="id5">
+<img alt="../../_images/registrace.png" class="small" src="../../_images/registrace.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 241 </span><span class="caption-text">Registrační formulář</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="nalezova-databaze-ochrany-prirody">
+<h2>Nálezová databáze ochrany přírody<a class="headerlink" href="#nalezova-databaze-ochrany-prirody" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p><a class="reference external" href="https://portal.nature.cz/nd/">Nálezová databáze ochrany přírody</a> je databáze
+nálezů organismů, které jsou lokalizované v čase a prostoru. Od roku 2017 je
+databáze, s výjimkou citlivých nálezů chráněných druhů, plně dostupná
+veřejnosti, nutné je pouze se zaregistrovat. Přístup do nálezové databáze
+ochrany přírody je umožněn prostřednictvím aplikce <a class="reference external" href="https://portal.nature.cz/nd/find.php?">Filtr nálezových dat</a>. Pokud potřebujeme přístup ke všem
+druhům bez výjimky, lze požádat o <em>plný přístup</em>. Ten je potom poskytován na
+základě smlouvy.</p>
+<figure class="align-center" id="id6">
+<img alt="../../_images/nd_uvod.png" class="middle" src="../../_images/nd_uvod.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 242 </span><span class="caption-text">Úvodní stránka nálezové databáze</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Databáze obsahuje údaje z různorodých zdrojů. Jsou zde uvedeny záznamy z
+vědeckých publikací, informace z odborných pracovišť, výsledky projektů
+zaměřených na mapování a monitoring, importovaná data (Fytocenologická databáze
+, AVIF, …), data z inventarizačních průzkumů, historické záznamy, náhodná
+pozorování, citizen science - data od veřejnosti (aplikace BioLog). Zastoupení
+jednotlivých zdrojů lze prohlížet ve <a class="reference external" href="https://portal.nature.cz/nd/x_nd_statistiky.php">statistikách</a> na stránkách ISOP. Každý
+rok zde přibývá přibližně 1 až 1.5 milionu nových záznamů.</p>
+<section id="ndop-downloader">
+<h3>NDOP Downloader<a class="headerlink" href="#ndop-downloader" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pro stažení nálezových dat přímo v QGIS můžeme použít zásuvný modul
+<a class="reference external" href="https://opengeolabs.github.io/qgis-ndop-downloader/">NDOP Downloader</a>
+<a class="reference internal" href="../../_images/icon.png"><img alt="ndop_downloader" src="../../_images/icon.png" style="width: 1.5em;" /></a>. Tento zásuvný modul lze nainstalovat pomocí menu
+<cite>Zásuvné moduly –&gt; Spravovat a instalovat zásuvné moduly</cite>. První je
+nutné povolit experimentální zásuvné moduly. V záložce nastavení
+zaškrtneme políčko <cite>Zobrazit také experimentální zásuvné moduly</cite>.</p>
+<p>Po zadání přihlašovacích údajů lze stáhnout nálezy podle
+zadaného taxonu nebo oblasti (KÚ,ZCHÚ). Pokud zaškrtnete položku <cite>Uložit
+přihlašovací údaje</cite>, údaje se uloží do konfiguračního souboru <cite>.ndop.cfg</cite>
+v domovském adresáři.</p>
+<figure class="align-center" id="id7">
+<img alt="../../_images/ndop_downloader.png" class="middle" src="../../_images/ndop_downloader.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 243 </span><span class="caption-text">Okno NDOP Downloaderu v QGIS</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Výstupem jsou dostupná data lokalizací (.shp komprimované v .zip) a
+tabulková data (.csv) pro všechny záznamy. Lokalizace se po ukončení
+stahování nahrají do projektu. Tabulková data se nahrají do projektu
+jako Oddělený text a zobrazí se jako body (na základě souřadnic v
+tabulce). Tato data obsahují body a centroidy většiny polygonů a linií.</p>
+<p><strong>Parametry</strong>:</p>
+<ul class="simple">
+<li><p><strong>Taxon</strong> - Lze vybrat pomocí rolovací nabídky, nebo vepsáním názvu s funkcí
+našeptávače. Lze zadávat česká i latinská jména.</p></li>
+<li><p><strong>Region</strong> - Obdobně jako u taxonu. V případě že položka zůstane nevyplněná,
+získáme data z clého území ČR. Naopak, pokud vybyreme území
+regionu a necháme prázdné políčko taxonu, získáme data všech taxonů ve
+vybraném regionu.</p></li>
+<li><p><strong>Výstupní složka</strong> - Vybereme výsupní složku kam se nám data uloží. Pokud
+ponecháme prázdné, stáhnou se data do složky dočasných souborů.
+V případě, že nechceme stahovat tabulková data zaškrtneme možnost
+<cite>Nestahovat tabulková data</cite>. Stažené soubory se nahrají do projektu a
+ponesou název odvozený od použitého filtru a typu dat. Pokud je do
+filtru zadán taxon, bude název odvozen od názvu druhu
+(např. <cite>Mantis_religiosa_shp_b</cite> - bodová vrstva (.shp)). Poukd
+filtrujeme pouze podle regionu bude název odvozen od názvu regionu.</p></li>
+</ul>
+<p>Po potvrzení tlačítkem Ok se okno zavře a spustí se filtrace a stahování.
+QGIS během stahování <strong>nelze v současné době používat</strong>. Stejně jako při
+použití oficiálního webové filtru, stahování může trvat několik minut,
+v závislosti na počtu záznamů, stažení tabulkových dat atd.</p>
+<p>V informačním panelu v horní části obrazovky uvidíte informace o průběhu
+stahování. Při stahování se také vypíše počet záznamů a hrubý odhad doby
+trvání konkrétního kroku. Po úspěšném stažení se objeví zelený panel s
+odkazem na složku kam byla data stažena.</p>
+<figure class="align-center" id="id8">
+<img alt="../../_images/ndop_result.png" class="middle" src="../../_images/ndop_result.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 244 </span><span class="caption-text">Data stažené pomocí zásuvného modulu NDOP Downloader</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="webovy-filtr-nalezovych-dat">
+<h3>Webový filtr nálezových dat<a class="headerlink" href="#webovy-filtr-nalezovych-dat" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Základní způsob jak stahovat data z nálezové databáze je použití webového filtru
+přímo na stránkách <a class="reference external" href="https://portal.nature.cz/nd/">Nálezová databáze ochrany přírody AOPK</a>.
+Na úvodní stránce nálezové databáze lze zadat název druhu, a po zadání vyhledání
+nás stránka přesměřuje na <em>Filtr nálezových dat</em>, kde můžeme data filtrovat
+na základě více parametrů např: autora nálezu, datumu/období, území (katastry,
+CHÚ, síťové mapování, …), ručně zakresleného území v mapě (max. 25km:sup:<cite>2</cite>)
+, kategorie ochrany, …</p>
+<figure class="align-center" id="id9">
+<img alt="../../_images/filtr.png" class="middle" src="../../_images/filtr.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 245 </span><span class="caption-text">Filtr nálezových dat veřejného přístupu</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Po zadání parametrů pro filtrování stiskneme tlačítko <span class="item">Filtrovat</span>.
+Výsledky filtru se nám vypíší jako jednotlivé záznamy, ve formě tabulky. Zde
+uvidíme základní a nejdůležitější informace o nálezu (co? - kde? - kdy? - kdo?).
+Výsledky je také možné zobrazit v mapě nebo síťové mapě, popř. pokud jsme
+nefiltrovaly na základě druhů lze využít <em>Sumarizace výsledků podle druhů</em>.</p>
+<figure class="align-center" id="id10">
+<img alt="../../_images/priklad_filtr.png" class="middle" src="../../_images/priklad_filtr.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 246 </span><span class="caption-text">Příklad filtrování druhu <em>Mantis religiosa</em></span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Ve výpisu výsledků lze otevřít <em>Kartu nálezu</em> - podrobné informace o konkrétním
+nálezu, <em>Kartu akce</em> - podrobné informace o mapovací akci, zobrazit konkrétní
+nález v mapě (<em>Mapa</em>) nebo otevřít <em>Kartu druhu</em>, kde jsou shrnuty informace o
+konkrétním druhu.</p>
+<section id="karta-nalezu-data-o-nalezu">
+<h4>Karta nálezu - data o nálezu<a class="headerlink" href="#karta-nalezu-data-o-nalezu" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<p>U každého nálezu je k dispozici mnoho údajů:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ID nálezu</p></li>
+<li><p>CO - informace o druhu -  název druhu, taxonomické zařazení, ochrana;
+doplňující informace -  počet, druh pozorování, poznámky</p></li>
+<li><p>KDE - území, souřadnice (v případě území - centroid), typ zákresu, id
+lokalizace</p></li>
+<li><p>KDY - datum, id akce</p></li>
+<li><p>KDO - autor</p></li>
+<li><p>zdroj dat - projekt, datová sada</p></li>
+<li><p>věrohodnost, validace - lze zpochybnit</p></li>
+<li><p>mapa zákresu, popř. fotografie</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-center" id="id11">
+<img alt="../../_images/karta_nalezu.png" class="middle" src="../../_images/karta_nalezu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 247 </span><span class="caption-text">Karta konkrétního nálezu</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Ve spodní části výpisu filtru máme možnost exportu tabulkových dat (CSV, XML,
+HTML, TXT) i lokalizace nálezů (SHP):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>tabulková data - lze exportovat i souřadnice centroidů, ty následně</p></li>
+</ul>
+<dl>
+<dt>zorbazit v QGIS jako body</dt><dd><ul class="simple">
+<li><p><em>Stránka</em> - export informací o nálezech na dané stránce</p></li>
+<li><p><em>Vše</em> - export informací o všech naálezech (omezeno na prvních 1000</p></li>
+</ul>
+<p>nálezů)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p><em>Lokalizace</em> -  export lokalizací nálezů v .shp, obsahuje pouze atribut</p></li>
+</ul>
+<p><em>id_lokalizace</em> - po stažení lze spárovat s exportovanými tabulkami</p>
+</div></blockquote>
+<figure class="align-center" id="id12">
+<img alt="../../_images/export.png" class="middle" src="../../_images/export.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 248 </span><span class="caption-text">Možnost exportu ve filtru nálezů</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<img alt="../../_images/export_tab.png" class="middle" src="../../_images/export_tab.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 249 </span><span class="caption-text">Export tavulkových dat výsledku filtru</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Různé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../qgis_pluginy.html">QGIS pluginy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../priklady.html">Příklady GIS analýz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../styly.html">Příklad stylování kategorizovanou obrysovou čárou</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Data AOPK</a></li>
+</ul>
+</li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../styly.html" title="Příklad stylování kategorizovanou obrysovou čárou"
+              >předchozí</a> |
+            <a href="../../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

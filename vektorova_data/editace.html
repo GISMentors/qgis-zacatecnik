@@ -1,0 +1,520 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tvorba nových vrstev a jejich editace &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Import dat s oddělenými hodnotami a GPS dat" href="import_delim.html" />
+    <link rel="prev" title="Vlastnosti vrstvy" href="vektor_data_prace.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="vektor_data_prace.html" title="Vlastnosti vrstvy"
+             accesskey="P">předchozí</a> |
+          <a href="import_delim.html" title="Import dat s oddělenými hodnotami a GPS dat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tvorba-novych-vrstev-a-jejich-editace">
+<h1>Tvorba nových vrstev a jejich editace<a class="headerlink" href="#tvorba-novych-vrstev-a-jejich-editace" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<section id="vytvoreni-shapefile-vrstvy">
+<h2>Vytvoření Shapefile vrstvy<a class="headerlink" href="#vytvoreni-shapefile-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Novou vrstvu lze vytvořit pomocí tlačítka <a class="reference internal" href="../_images/mActionNewVectorLayer.png"><img alt="mActionNewVectorLayer" src="../_images/mActionNewVectorLayer.png" style="width: 1.5em;" /></a> <sup>Nová
+Shapefile vrstva</sup> nebo v hlavním menu <span class="menuselection">Vrstva ‣ Vytvořit
+vrstvu ‣ Nová Shapefile vrstva</span>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/new_layer.png" class="small" src="../_images/new_layer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 70 </span><span class="caption-text">Nová vektorová vrstva.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V první řadě je nutné zadat cestu, kam se nová vrstva vytvoří. Dále při
+vytváření zvolíme typ vrstvy (bod, linie nebo polygon), souřadnicový
+systém vrstvy, a pokud je třeba, přidáme nové atributy. Také lze nastavit
+vytvoření Z hodnot (nadmořské výšky) nebo M hodnot (další měřené hodnoty).</p>
+<p>Vytváření nového atributu:</p>
+<ul>
+<li><p><span class="item">Název</span> - název atributu (max. 10 znaků) - toto omezení
+vychází z formátu Esri Shapefile, který je zde použit</p></li>
+<li><p><span class="item">Typ</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">Textová</span> <span class="pre">data</span></code> (String) - formát buněk je text, nelze použít pro
+výpočty (max. 255 znaků)</p></li>
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">Celé</span> <span class="pre">číslo</span></code> (Integer) - formát buněk je celé číslo,
+tedy bez desetinných míst (max. 10 znaků)</p></li>
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">Desetinné</span> <span class="pre">číslo</span></code> (Real) - formát buněk je desetinné
+číslo (max. 10 znaků)</p></li>
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">Datum</span></code> (Date) - formát buněk je datum (max. 20 znaků)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="item">Délka</span> - počet znaků</p></li>
+<li><p><span class="item">Přesnost</span> - počet desetinných míst</p></li>
+<li><p>pro přidání atributu vrstvy je nutné kliknout na tlačítko
+<a class="reference internal" href="../_images/mActionNewAttribute.png"><img alt="mActionNewAttribute" src="../_images/mActionNewAttribute.png" style="width: 1.5em;" /></a> <span class="item">Přidat do seznamu polí</span></p></li>
+</ul>
+<p>Ve spodní části okna máme seznam atributů, které máme ve vrstvě
+připravené. Atributy lze odstranit označením a kliknutím na tlačítko
+<a class="reference internal" href="../_images/mActionDeleteAttribute.png"><img alt="mActionDeleteAttribute" src="../_images/mActionDeleteAttribute.png" style="width: 1.5em;" /></a> <span class="item">Odstranit pole</span>. Automaticky je zde
+přidaný atribut „id“, pokud ho nechceme, lze jej také vymazat.</p>
+<p>Pokud máme vše nastaveno, potvrdíme tlačítkem <span class="item">OK</span> a nová vrstva se
+automaticky nahraje do projektu.</p>
+</section>
+<section id="editace-vrstvy">
+<h2>Editace vrstvy<a class="headerlink" href="#editace-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Editaci vrstvy spustíme pomocí tlačítka <a class="reference internal" href="../_images/mActionToggleEditing.png"><img alt="mActionToggleEditing" src="../_images/mActionToggleEditing.png" style="width: 1.5em;" /></a>
+<sup>Přepnout editaci</sup> nebo v hlavním menu <span class="menuselection">Vrstva ‣
+Přepnout editaci</span>. Spuštěním režimu editace se aktivují editační funkce
+v panelu a bude nám umožněno vytvářet nové prvky a jejich atributy
+nebo editovat stávající. Vrstva, která je momentálně v režimu editace,
+je v seznamu vrstev znázorněna s editační ikonkou <a class="reference internal" href="../_images/mActionToggleEditing.png"><img alt="mActionToggleEditing" src="../_images/mActionToggleEditing.png" style="width: 1.5em;" /></a>.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/edit_layers_icon.png"><img alt="../_images/edit_layers_icon.png" src="../_images/edit_layers_icon.png" style="width: 271.8px; height: 168.3px;" /></a>
+<figcaption>
+<p><span class="caption-number">Obr. 71 </span><span class="caption-text">Znázornění režimu editace vrstvy v seznamu vrstev.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Režim editace ukončíme opět pomocí tlačítka <a class="reference internal" href="../_images/mActionToggleEditing.png"><img alt="mActionToggleEditing" src="../_images/mActionToggleEditing.png" style="width: 1.5em;" /></a>
+<sup>Přepnout editaci</sup>. Provedené změny je vhodné průběžně ukládat
+pomocí ikony <a class="reference internal" href="../_images/mActionSaveAllEdits.png"><img alt="mActionSaveAllEdits" src="../_images/mActionSaveAllEdits.png" style="width: 1.5em;" /></a> <sup>Uložit změny vrstvy</sup>. Pokud při
+editaci zapomeneme uložit změny, QGIS se nás  při ukončení editace
+zeptá, zda chceme provedené změny uložit, či nikoliv.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference internal" href="../_images/mActionAllEdits.png"><img alt="mActionAllEdits" src="../_images/mActionAllEdits.png" style="width: 1.5em;" /></a> <sup>Aktuální změny</sup> - hromadné ovládání
+změn a zapínání/vypínaní editací ve vrstvách.</p>
+</div>
+<p>Základní nástroje editace jsou dostupné ve výchozím nastavení
+mezi ostatními <cite>Nástrojovými lištami</cite>. Některké nástroje jsou ale
+dostupné v samostatné liště <span class="item">Pokročilá digitalizace</span>.
+Tu můžeme aktivovat v seznamu všech dostupních položek a to pomocí
+pravého kliku a následné <cite>aktivace</cite> vybrané položky.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/advanced_digitizing.png"><img alt="../_images/advanced_digitizing.png" src="../_images/advanced_digitizing.png" style="width: 675.0px; height: 378.90000000000003px;" /></a>
+</figure>
+<p>Zapnutí panelu <cite>Pokročilá digitalizace</cite>.</p>
+<section id="zakladni-editace-geometrie">
+<h3>Základní editace geometrie<a class="headerlink" href="#zakladni-editace-geometrie" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p><a class="reference internal" href="../_images/mActionCapturePoint.png"><img alt="mActionCapturePoint" src="../_images/mActionCapturePoint.png" style="width: 1.5em;" /></a>, <a class="reference internal" href="../_images/mActionCaptureLine.png"><img alt="mActionCaptureLine" src="../_images/mActionCaptureLine.png" style="width: 1.5em;" /></a>, <a class="reference internal" href="../_images/mActionCapturePolygon.png"><img alt="mActionCapturePolygon" src="../_images/mActionCapturePolygon.png" style="width: 1.5em;" /></a>
+<sup>Přidat … prvek</sup> - kliknutím vytvoříme prvek (bod), nebo lomové
+body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku
+kliknutím pravým tlačítkem a přidáme případné atributy. Při
+přidávání lomových bodů je možné se vrátit o krok zpět pomocí
+klávesy <kbd class="kbd docutils literal notranslate">Backspace</kbd> nebo <kbd class="kbd docutils literal notranslate">Del</kbd>.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/edit_polygon.png" src="../_images/edit_polygon.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 72 </span><span class="caption-text">Vytváření nového prvku ve vrstvě polygonů. Pokud by v tomto momentě
+byla tvorba prvku pravým kliknutím ukončena, polygon by měl tři uzly
+(tvar trojúhelníku).</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt><a class="reference internal" href="../_images/mActionNodeTool.png"><img alt="mActionNodeTool" src="../_images/mActionNodeTool.png" style="width: 1.5em;" /></a> <sup>Nástroj na lomové body</sup> - pomocí nástroje uzlů lze</dt><dd><ul class="simple">
+<li><p>přidávat body kliknutím na křížek ve středu hrany a umístěním bodu</p></li>
+<li><p>přidávat body dvojklikem na hranu a umístěním bodu</p></li>
+<li><p>posunovat existující body kliknutím na bod a umístěním bodu</p></li>
+<li><p>mazat body označením bodu (nebo více bodů pomocí <kbd class="kbd docutils literal notranslate">Shift</kbd>) a
+stisknutím klávesy <kbd class="kbd docutils literal notranslate">Backspace</kbd> nebo <kbd class="kbd docutils literal notranslate">Del</kbd></p></li>
+<li><p>posouvat celé hrany kliknutím na hranu a umístěním hrany</p></li>
+</ul>
+</dd>
+</dl>
+<figure class="align-center" id="id4">
+<img alt="../_images/edit_polygon_node.png" src="../_images/edit_polygon_node.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 73 </span><span class="caption-text">Přidání a přesunutí lomového bodu (uzlu, vertexu).</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Nástroj uzlů lze použít ve dvou módech, buď pouze pro vrstvu kterou editujeme,
+nebo pro všechny vrstvy které jsou v módu editace</p>
+<p><a class="reference internal" href="../_images/mActionRemove.png"><img alt="mActionRemove" src="../_images/mActionRemove.png" style="width: 1.5em;" /></a> <sup>Vymazat vybrané</sup> - smaže vybrané prvky</p>
+<p><a class="reference internal" href="../_images/mActionMoveFeature.png"><img alt="mActionMoveFeature" src="../_images/mActionMoveFeature.png" style="width: 1.5em;" /></a> <sup>Přesunout prvek/prvky</sup> - jednotlivé prvky přesuneme kliknutím na prvek, posunutím a opětovným kliknutím</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/edit_polygon_move.png" src="../_images/edit_polygon_move.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 74 </span><span class="caption-text">Přesun prvku.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Další variantou funkce je <a class="reference internal" href="../_images/mActionMoveFeatureCopy.png"><img alt="mActionMoveFeatureCopy" src="../_images/mActionMoveFeatureCopy.png" style="width: 1.5em;" /></a><sup>Kopírovat a přesunout prvek/prvky</sup>, kdy stejným principem prvky kopírujeme.
+Pro přesun nebo kopírování více prvků můžeme pracovat s více prvky,
+které máme ve výběru.</p>
+<p><a class="reference internal" href="../_images/mActionSplitFeatures.png"><img alt="mActionSplitFeatures" src="../_images/mActionSplitFeatures.png" style="width: 1.5em;" /></a> <sup>Rozdělit objekt</sup> - naklikáme „řez“ přes
+místa, které chceme rozdělit a pro ukončení klikneme pravým tlačítkem,
+prvek se nám v místech průsečíků rozdělí.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/edit_polygon_split.png" src="../_images/edit_polygon_split.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 75 </span><span class="caption-text">Rozdělení polygonu na dva.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="../_images/mActionMergeFeatures.png"><img alt="mActionMergeFeatures" src="../_images/mActionMergeFeatures.png" style="width: 1.5em;" /></a> <sup>Sloučit vybrané prvky</sup> - nejdříve pomocí
+výběru označíme prvky, které chceme spojit. Při sloučení
+vyskočí okno, ve kterém je možné zadat hodnoty atributů „nového“ - sloučeného
+prvku. Tyto hodnoty můžeme odvodit z konkrétního vstupního prvku, nebo je lze
+vypočítat (např. suma, průměr). Výchozí hodnota atributů je <code class="xref std std-option docutils literal notranslate"><span class="pre">NULL</span></code>,
+tedy prázdná hodnota.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/edit_polygon_merge.png" class="middle" src="../_images/edit_polygon_merge.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 76 </span><span class="caption-text">Sloučení sousedních polygonů.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p><a class="reference internal" href="../_images/mActionReshape.png"><img alt="mActionReshape" src="../_images/mActionReshape.png" style="width: 1.5em;" /></a> <sup>Změnit tvar prvků</sup> - obdobně jako při rozdělení
+nebo tvorbě nového prvku lze naklikáním nového tvaru změnit tvar
+stávajícího prvku. Pro změnu tvaru musí být při naklikávání „řezu“
+vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude
+část s menší plochou vymazána (<a class="reference internal" href="#resh1"><span class="std std-numref">Obr. 77</span></a>).</p>
+<figure class="align-center" id="id8">
+<span id="resh1"></span><img alt="../_images/edit_polygon_resh.png" src="../_images/edit_polygon_resh.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 77 </span><span class="caption-text">Změna tvaru polygonu - zmenšení.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id9">
+<img alt="../_images/edit_polygon_resh2.png" src="../_images/edit_polygon_resh2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 78 </span><span class="caption-text">Změna tvaru polygonu - zvětšení.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id10">
+<img alt="../_images/edit_line_resh.png" src="../_images/edit_line_resh.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 79 </span><span class="caption-text">Změna tvaru linie.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="prichytavani-snapping">
+<h4>Přichytávání (snapping)<a class="headerlink" href="#prichytavani-snapping" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<p>Pro topologicky čistou editaci můžeme pomocí lišty
+<span class="menuselection">Přichytávání</span> nastavit
+přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
+konkrétních vrstev. Přichytávání je nejdříve nutné aktivovat kliknutím na
+ikonu <a class="reference internal" href="../_images/mIconSnapping.png"><img alt="mIconSnapping" src="../_images/mIconSnapping.png" style="width: 1.5em;" /></a><sup>Enable Snapping</sup>, nebo využít klávesovou zkratku
+<kbd class="kbd docutils literal notranslate">S</kbd>. Přichycení kurzoru se zobrazí výrazně růžovým čtverečkem v případě
+lomového bodu (viz <a class="reference internal" href="#snapvert"><span class="std std-numref">Obr. 81</span></a>) nebo křížkem v případě segmentu
+(<a class="reference internal" href="#snapsegm"><span class="std std-numref">Obr. 82</span></a>).</p>
+<figure class="align-center" id="id11">
+<img alt="../_images/snapping.png" src="../_images/snapping.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 80 </span><span class="caption-text">Základní okno možnosti přichytávání.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id12">
+<span id="snapvert"></span><img alt="../_images/snapping_vertex.png" src="../_images/snapping_vertex.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 81 </span><span class="caption-text">Přichycení kurzoru pouze k lomovému bodu.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id13">
+<span id="snapsegm"></span><img alt="../_images/snapping_segment.png" src="../_images/snapping_segment.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 82 </span><span class="caption-text">Přichycení kurzoru k segmentu.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p>Nastavení <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/mIconSnappingAllLayers.png"><img alt="mIconSnappingAllLayers" src="../_images/mIconSnappingAllLayers.png" style="width: 1.5em;" /></a><sup>Všechny vrstvy</sup> - přichytávání ke všem
+viditelným vektorovým vrstvám projektu</p></li>
+<li><p><a class="reference internal" href="../_images/mIconSnappingActiveLayer.png"><img alt="mIconSnappingActiveLayer" src="../_images/mIconSnappingActiveLayer.png" style="width: 1.5em;" /></a><sup>Aktivní vrstva</sup> - přichytávání pouze v
+rámci editované vrstvy, ostatní vrstvy ignoruje</p></li>
+<li><p><a class="reference internal" href="../_images/mIconSnappingAdvanced.png"><img alt="mIconSnappingAdvanced" src="../_images/mIconSnappingAdvanced.png" style="width: 1.5em;" /></a><sup>Pokročilé nastavení</sup> - režim pokročilého
+nastavení, lze nastavit různé nastavení pro jednotlivé vrstvy a nabízí
+možnost <cite>Vyvarovat  se protnutí</cite></p></li>
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">Open</span> <span class="pre">snapping</span> <span class="pre">Options...</span></code> - otevře nastavení přichytávání v
+samostatném okně</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Přichytit k <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/mIconSnappingVertex.png"><img alt="mIconSnappingVertex" src="../_images/mIconSnappingVertex.png" style="width: 1.5em;" /></a><sup>Lomový bod</sup> - pouze k lomovým bodům
+(uzlům/vertexům, <a class="reference internal" href="#snapvert"><span class="std std-numref">Obr. 81</span></a>)</p></li>
+<li><p><a class="reference internal" href="../_images/mIconSnappingVertexAndSegment.png"><img alt="mIconSnappingVertexAndSegment" src="../_images/mIconSnappingVertexAndSegment.png" style="width: 1.5em;" /></a><sup>Lomový bod a segment</sup> - k obojímu</p></li>
+<li><p><a class="reference internal" href="../_images/mIconSnappingSegment.png"><img alt="mIconSnappingSegment" src="../_images/mIconSnappingSegment.png" style="width: 1.5em;" /></a><sup>Segmentu</sup> - pouze k segmentům
+(hranám/liniím, <a class="reference internal" href="#snapsegm"><span class="std std-numref">Obr. 82</span></a>)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Tolerance <a class="reference internal" href="../_images/selectnumber.png"><img alt="selectnumber" src="../_images/selectnumber.png" style="width: 1.5em;" /></a> - vzdálenost, od které se kurzor bude
+k lomovému bodu nebo segmentu přichytávat, hodnotu lze zadat v mapových
+jednotkách (vzdálenost na mapě) nebo pixelech (vzdálenost na monitoru)</p></li>
+<li><p><a class="reference internal" href="../_images/mIconTopologicalEditing.png"><img alt="mIconTopologicalEditing" src="../_images/mIconTopologicalEditing.png" style="width: 1.5em;" /></a><sup>Zapnout topologickou editaci</sup> - při aktivaci
+lze pomocí <a class="reference internal" href="../_images/mActionNodeTool.png"><img alt="mActionNodeTool" src="../_images/mActionNodeTool.png" style="width: 1.5em;" /></a> <sup>Nástroj uzlú</sup> posouvat společný lomový
+bod přichycení obou prvků najednou. Pokud není aktivní, lomový bod
+lze oddělit</p></li>
+<li><p><a class="reference internal" href="../_images/mIconSnappingIntersection.png"><img alt="mIconSnappingIntersection" src="../_images/mIconSnappingIntersection.png" style="width: 1.5em;" /></a><sup>Zapnout přichytávání na protnutí</sup> - při
+aktivaci se bude kurzor přichytávat i na případné místo „překřížení“ segmentů
+(linií)</p></li>
+<li><p><a class="reference internal" href="../_images/mActionTracing.png"><img alt="mActionTracing" src="../_images/mActionTracing.png" style="width: 1.5em;" /></a><sup>Zapnout trasování</sup> - trasování umožňuje vytvářet nové
+prvky tak aby na sebe přímo navazovaly (topologicky čistá data). Funguje na
+principu vyhledání nejkratší vzdálensoti na segmentech mezi zadanými body.
+Trasování může být problematické v případě, že máme vrstvu s více
+navazujícími polygony, kdy nejkratší vzdálenost nemusí vést po vnější hraně
+skupiny polygonů (<a class="reference internal" href="#snapping-trace-poly"><span class="std std-numref">Obr. 84</span></a>). To lze vyřešit přidáním
+více bodů při trasování, popř. u polygonů využitím funkce <cite>Vyvarovat se
+protnutní</cite></p></li>
+</ul>
+<figure class="align-center" id="id14">
+<img alt="../_images/snapping_trace_line.png" class="middle" src="../_images/snapping_trace_line.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 83 </span><span class="caption-text">Trasovaní k linii při tvorbě polygonu.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id15">
+<span id="snapping-trace-poly"></span><img alt="../_images/snapping_trace_poly.png" class="middle" src="../_images/snapping_trace_poly.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 84 </span><span class="caption-text">Trasovaní s nejkratší vzdáleností při tvorbě line.</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Nastavení přichytávání lze měnit i v momentě, kdy vytváříme
+prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
+(např. <a class="reference internal" href="#snapvert"><span class="std std-numref">Obr. 81</span></a> a <a class="reference internal" href="#snapsegm"><span class="std std-numref">Obr. 82</span></a>).</p>
+</div>
+<section id="pokrocily-rezim-prichytavani">
+<h5>Pokročilý režim přichytávání<a class="headerlink" href="#pokrocily-rezim-prichytavani" title="Trvalý odkaz na tento nadpis">¶</a></h5>
+<figure class="align-center" id="id16">
+<img alt="../_images/snapping_adv.png" src="../_images/snapping_adv.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 85 </span><span class="caption-text">Režim pokročilého nastavení přichytávání.</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>V pokročilém režimu lze jednotlivé parametry nastavit pro každou vrstvu
+zvlášť, navíc je zde u polygonových vrstev funkce <a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <cite>Vyvarovat
+se protnutí</cite>, která zabraňuje polygonům jejich překryv, což lze mimo jiné
+využít jako alternativu k funkci trasování. Nový polygon potom můžeme zakreslit</p>
+<blockquote>
+<div><p>s přesahem do sousedícího polygonu, tento přesah bude potom automaticky
+vymazán. Takto snadno docílíme čistě navazujících polygonů.</p>
+</div></blockquote>
+<figure class="align-center" id="id17">
+<img alt="../_images/snapping_avoid.png" src="../_images/snapping_avoid.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 86 </span><span class="caption-text">Příklad použití <code class="xref std std-option docutils literal notranslate"><span class="pre">Vyvarovat</span> <span class="pre">se</span> <span class="pre">protnutí</span></code>.
+a) bez <code class="xref std std-option docutils literal notranslate"><span class="pre">Vyvarovat</span> <span class="pre">se</span> <span class="pre">protnutí</span></code> - polygon se vytvoří tak,
+jak jsme ho zakreslili, a
+překrývá předchozí polygon. Při odstranění nového polygonu bychom
+viděli opět hranici polygonu jako v prvním kroku.
+b) <code class="xref std std-option docutils literal notranslate"><span class="pre">Vyvarovat</span> <span class="pre">se</span> <span class="pre">protnutí</span></code> - polygon se vytvoří bez
+překryvu, hranice na sebe čistě navazuje.</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="editace-atributove-tabulky">
+<h3>Editace atributové tabulky<a class="headerlink" href="#editace-atributove-tabulky" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pokud máme aktivní editaci (<a class="reference internal" href="../_images/mActionToggleEditing.png"><img alt="mActionToggleEditing" src="../_images/mActionToggleEditing.png" style="width: 1.5em;" /></a> <sup>Přepnout editaci</sup>),
+můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy. V okně
+atributové tabulky lze editaci ukládat <a class="reference internal" href="../_images/mActionSaveAllEdits.png"><img alt="mActionSaveAllEdits" src="../_images/mActionSaveAllEdits.png" style="width: 1.5em;" /></a> <sup>Uložit
+změny vrstvy</sup> i mazat vybrané prvky <a class="reference internal" href="../_images/mActionDeleteSelected.png"><img alt="mActionDeleteSelected" src="../_images/mActionDeleteSelected.png" style="width: 1.5em;" /></a> <sup>Vymazat vybrané</sup>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>kliknutím do libovolného pole můžeme vepisovat a upravovat hodnoty
+tabulky</p></li>
+<li><p><a class="reference internal" href="../_images/mActionNewAttribute.png"><img alt="mActionNewAttribute" src="../_images/mActionNewAttribute.png" style="width: 1.5em;" /></a> <sup>Nové pole</sup> - přidá nový atribut
+do tabulky</p></li>
+<li><p><a class="reference internal" href="../_images/mActionDeleteAttribute.png"><img alt="mActionDeleteAttribute" src="../_images/mActionDeleteAttribute.png" style="width: 1.5em;" /></a> <sup>Smazat pole</sup> - vyvolá nabídku,
+ze které vybereme sloupce k vymazání</p></li>
+<li><p><a class="reference internal" href="../_images/mActionEditTable.png"><img alt="mActionEditTable" src="../_images/mActionEditTable.png" style="width: 1.5em;" /></a> <sup>Spravovat sloupce</sup> - vyvolá nabídku, ve které můžete upravit viditelnost sloupce</p></li>
+<li><p><a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> <sup>Otevřít kalkulátor polí</sup> - pomocí
+kalkulátoru polí lze vytvářet nebo aktualizovat sloupce (atributy) na
+základě zadaného výrazu (vzorce)</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="kalkulator-poli">
+<h2>Kalkulátor polí<a class="headerlink" href="#kalkulator-poli" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pomocí funkce <a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> <sup>Otevřít kalkulátor polí</sup>
+můžeme zadáním výrazu provádět výpočty na základě existujících
+hodnot v atributové tabulce nebo funkcí (např. výpočet rozlohy
+polygonu). Výsledek výrazu můžeme nechat zapsat do nového sloupce,
+do virtuálního sloupce, nebo lze aktualizovat již existující sloupec.</p>
+<figure class="align-center" id="id18">
+<img alt="../_images/field_calc.png" src="../_images/field_calc.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 87 </span><span class="caption-text">Okno kalkulačky polí.</span><a class="headerlink" href="#id18" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Nejdříve je nutné nastavit, zda chceme výsledek zapsat do nového pole,
+virtuálního pole, nebo pouze aktualizovat existující pole.</p>
+<ul>
+<li><p><span class="item">Vytvořit nové pole</span> <a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> - vytvoří nové pole, zde je
+třeba definovat parametry nového atributu</p></li>
+<li><p><span class="item">Vytvořit virtuální pole</span> <a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> - vytvoří virtuální
+pole, které se při každé změně automaticky aktualizuje. Nevýhodou
+může být, že se pole neukládá do zdrojových dat, ale pouze do
+souboru projektu</p></li>
+<li><p><span class="item">Aktualizovat existující pole</span> <a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> - přepíše hodnoty ve
+vybraném poli</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme z nabídky vrstvu, kterou cheme přepsat</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Nyní můžeme přejít k zadání vlastního výrazu - záložka
+<span class="item">Výraz</span>.</p>
+<p>Levá část okna (<span class="item">Výraz</span>) je prostor zadání výrazu, v horní
+části máme několik tlačítek s vybranými operátory a ve spodní
+části potom náhled výstupu.</p>
+<figure class="align-center" id="id19">
+<img alt="../_images/field_calc_exp.png" src="../_images/field_calc_exp.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 88 </span><span class="caption-text">Okno pro zápis výrazu.</span><a class="headerlink" href="#id19" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pravá část okna (<span class="item">Funkce</span>) slouží k rychlému zadání funkcí
+nebo parametrů do výrazu, v pravé části se k vybrané funkci/parametru
+zobrazuje nápověda. Požadované položky lze vyhledat pomocí filtru nebo
+prohledáním příslušných kategorií. Přidání funkce nebo hodnoty
+pole pomocí okna funkcí se provádí dvojklikem na položku.</p>
+<figure class="align-center" id="id20">
+<img alt="../_images/field_calc_fun.png" src="../_images/field_calc_fun.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 89 </span><span class="caption-text">Prohledávání funkcí v kategoriích.</span><a class="headerlink" href="#id20" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Při zadávání parametru pole nebo hodnoty pole (<span class="item">Pole a hodnoty</span>)
+je možné nechat si zobrazit všechny hodnoty (tlačítko: <span class="item">všechny
+jedinečné hodnoty</span>) nebo prvních 10 hodnot (tlačítko: <span class="item">10 vzorků</span>)
+atributu.</p>
+<figure class="align-center" id="id21">
+<img alt="../_images/field_calc_fun_field.png" src="../_images/field_calc_fun_field.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 90 </span><span class="caption-text">Zobrazení všech hodnot konkrétního atributu pomocí tlačítka
+<span class="item">všechny jedinečné hodnoty</span>.</span><a class="headerlink" href="#id21" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id22">
+<img alt="../_images/field_calc_area.png" src="../_images/field_calc_area.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 91 </span><span class="caption-text">Příklad jednoduchého výpočtu plochy polygonů vypsáním výrazu
+„$area“.</span><a class="headerlink" href="#id22" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Druhá záložka - <span class="item">Editor funkcí</span> umožňuje
+definovat vlastní funkce pomocí jazyka Python</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Editovat stávající atributy lze i přímo z atributové tabulky, a to
+pomocí panelu (<a class="reference internal" href="#editpanel"><span class="std std-numref">Obr. 92</span></a>), který se aktivuje po přepnutí do
+režimu editace. Zde vybereme atribut, který chceme editovat, a zadáme
+požadovaný výraz (ručně nebo pomocí dialogu <a class="reference internal" href="../_images/mIconExpression.png"><img alt="mIconExpression" src="../_images/mIconExpression.png" style="width: 1.5em;" /></a>), potom
+potvrdíme aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.</p>
+<figure class="align-center" id="id23">
+<span id="editpanel"></span><img alt="../_images/field_edit_panel.png" class="middle" src="../_images/field_edit_panel.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 92 </span><span class="caption-text">Panel editace atributů v atributové tabulce.</span><a class="headerlink" href="#id23" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s vektorovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join.html">Připojení tabulkových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="vektor_data_prace.html" title="Vlastnosti vrstvy"
+              >předchozí</a> |
+            <a href="import_delim.html" title="Import dat s oddělenými hodnotami a GPS dat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

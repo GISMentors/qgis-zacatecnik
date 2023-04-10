@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Import dat s oddělenými hodnotami a GPS dat &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Připojení tabulkových dat" href="join.html" />
+    <link rel="prev" title="Tvorba nových vrstev a jejich editace" href="editace.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="editace.html" title="Tvorba nových vrstev a jejich editace"
+             accesskey="P">předchozí</a> |
+          <a href="join.html" title="Připojení tabulkových dat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="import-dat-s-oddelenymi-hodnotami-a-gps-dat">
+<h1>Import dat s oddělenými hodnotami a GPS dat<a class="headerlink" href="#import-dat-s-oddelenymi-hodnotami-a-gps-dat" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<section id="data-s-oddelenymi-hodnotami">
+<h2>Data s oddělenými hodnotami<a class="headerlink" href="#data-s-oddelenymi-hodnotami" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jestliže máme tabulková data obsahující geografické souřadnice,
+můžeme tato data poměrně snadno naimportovat a vytvořit z nich
+vektorovou vrstvu. Při importu pracujeme s daty s oddělenými hodnotami
+(<a class="reference external" href="http://en.wikipedia.org/wiki/delimiter-separated values">DSV</a>).</p>
+<section id="tabulkova-data">
+<h3>Tabulková data<a class="headerlink" href="#tabulkova-data" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Data s oddělenými hodnotami jsou tabulková data uložená v textovém
+souboru. V takovém souboru jsou sloupce odděleny specifickým
+oddělovacím znakem a řádky koncem řádku. Pro oddělení hodnot
+můžeme použít jakýkoliv znak, ale nejčastěji se setkáváme s hodnotami
+oddělené čárkou (<a class="reference external" href="http://cs.wikipedia.org/wiki/CSV">CSV</a>) nebo tabulátorem (<a class="reference external" href="http://en.wikipedia.org/wiki/Tab-separated_values">TSV</a>). Soubory tabulkových procesorů lze snadno exportovat
+do textového souboru s oddělenými hodnotami, tyto soubory lze potom
+prohlížet jak pomocí tabulkových procesorů, tak i textových editorů.</p>
+<p>Existují dva způsoby, jak mohou být geodata v souboru s oddělenými
+hodnotami uložena:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>jako x,y souřadnice bodů v oddělených sloupcích (tzv. XY data)</p></li>
+<li><p>jako well-known text (<a class="reference external" href="http://en.wikipedia.org/wiki/Well-known_text">WKT</a>)</p></li>
+</ul>
+</div></blockquote>
+<figure class="align-center" id="id1">
+<span id="xydata"></span><img alt="../_images/xydata.png" src="../_images/xydata.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 93 </span><span class="caption-text">Příklad tabulky s vhodnými XY daty.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<span id="xydatacsv"></span><img alt="../_images/xydata_csv.png" src="../_images/xydata_csv.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 94 </span><span class="caption-text">Tabulková data (<a class="reference internal" href="#xydata"><span class="std std-numref">Obr. 93</span></a>) převedená do formátu CSV.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Na obrázku <a class="reference internal" href="#xydatacsv"><span class="std std-numref">Obr. 94</span></a> si můžeme všimnout zápisu
+desetinných čísel oddělenými čárkou v souboru s hodnotami oddělenými
+čárkou. V takovém případě musí být hodnota vymezená uvozovkami. Pokud
+by zde uvozovky nebyly, znamenala by čárka oddělení nového sloupce.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pokud máme v tabulce souřadnice zapsané v takové formě,
+že je nedokážeme importovat, můžeme pro úpravu použít jednoduché funkce
+tabulkového procesoru (LEFT, RIGHT, MID atd.)</p>
+</div>
+</section>
+<section id="import-dat">
+<h3>Import dat<a class="headerlink" href="#import-dat" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Import se provadí pomocí funkce <a class="reference internal" href="../_images/mActionAddDelimitedTextLayer.png"><img alt="mActionAddDelimitedTextLayer" src="../_images/mActionAddDelimitedTextLayer.png" style="width: 1.5em;" /></a> <sup>Přidat
+vrstvu s odděleným textem</sup>.</p>
+<figure class="align-center" id="id3">
+<span id="delimited"></span><img alt="../_images/delimited.png" src="../_images/delimited.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 95 </span><span class="caption-text">Okno funkce <a class="reference internal" href="../_images/mActionAddDelimitedTextLayer.png"><img alt="mActionAddDelimitedTextLayer" src="../_images/mActionAddDelimitedTextLayer.png" style="width: 1.5em;" /></a> <sup>Přidat vrstvu s
+odděleným textem</sup>.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p><span class="item">Název souboru</span> - cesta a název souboru, můžeme vyhledat soubor
+pomocí tlačítka <span class="item">Procházet…</span></p></li>
+<li><p><span class="item">Název vrstvy</span> - název nově vzniklé vrstvy</p></li>
+<li><p><span class="item">Formát souboru</span> <a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> - vybereme typ oddělení hodnot
+v textovém souboru</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <sup>CSV (hodnoty oddělené čárkou)</sup> - standardní
+.csv soubor s hodnotami oddělenými čárkou</p></li>
+<li><p><a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <sup>Oddělovač regulárního výrazu</sup> - použití
+regulárního výrazu</p></li>
+<li><p><a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <sup>Vlastní oddělovače</sup> - výběr libovolného
+oddělovače</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="item">Kódování</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme kódování textu</p></li>
+<li><p><span class="item">Možnosti záznamu a polí</span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="item">Počet řádků nadpisů k vypuštění</span> <a class="reference internal" href="../_images/selectnumber.png"><img alt="selectnumber" src="../_images/selectnumber.png" style="width: 1.5em;" /></a> - vynechá
+zadaný počet rádků na začátku</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">První záznam obsahuje názvy polí</span> - zaškrtneme,
+pokud máme v tabulce jako první řádek názvy sloupců</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">Detekovat</span> <span class="pre">typy</span> <span class="pre">polí</span></code> - detekuje datový typ sloupce</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">Desetinný</span> <span class="pre">oddělovač</span> <span class="pre">je</span> <span class="pre">čárka</span></code> - zaškrtneme,
+pokud v datech nemáme oddělena desetinná čísla tečkou, ale čárkou
+(např. <a class="reference internal" href="#xydatacsv"><span class="std std-numref">Obr. 94</span></a>)</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">Oříznout</span> <span class="pre">pole</span></code> - smaže přebytečné mezery v
+datech např. na konci nebo začátku záznamu</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">Zrušit</span> <span class="pre">prázdná</span> <span class="pre">pole</span></code> - odstraní prázdné sloupce</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="item">Definice geometrie</span></p>
+<blockquote>
+<div><ul>
+<li><p><a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <sup>Souřadnice bodu</sup> - body definovány souřadnicemi
+X a Y (XY Data)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">X</span> <span class="pre">pole</span></code>, <code class="xref std std-option docutils literal notranslate"><span class="pre">Y</span> <span class="pre">pole</span></code>  <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - výběr sloupců,
+ve kterých jsou zapsané souřadnice. <code class="xref std std-option docutils literal notranslate"><span class="pre">Z</span> <span class="pre">pole</span></code>, <code class="xref std std-option docutils literal notranslate"><span class="pre">M</span> <span class="pre">pole</span></code>
+vybíráme, pokud data obsahují hodnoty <cite>Z</cite> a <cite>M</cite></p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">DMS</span> <span class="pre">souřadnice</span></code> - zaškrtneme, pokud máme
+souřadnice ve tvaru DMS (degrees-minutes-seconds) - stupně,
+minuty, vteříny</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <sup>Well known text (WKT)</sup> - souřadnice uložené
+jako řetězec WKT (např. <code class="docutils literal notranslate"><span class="pre">POINT(1.525622</span> <span class="pre">51.20836)</span></code>)</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">Pole</span> <span class="pre">geometrie</span></code> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - výběr sloupce, ve
+kterém jsou zapsané souřadnice</p></li>
+<li><p><code class="xref std std-option docutils literal notranslate"><span class="pre">Geometrický</span> <span class="pre">typ</span></code> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - typ geometrie</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="../_images/radiobuttonon.png"><img alt="radiobuttonon" src="../_images/radiobuttonon.png" style="width: 1.5em;" /></a> <sup>Žádna geometrie (pouze atributová tabulka)</sup> -
+přidá pouze tabulku</p></li>
+<li><p><a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> <sup>SRS geometrie</sup> - souřadnicový systém, ve kterém
+jsou souřadnice uložené</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="item">Nastavení vrstvy</span></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">Použít</span> <span class="pre">prostorový</span> <span class="pre">index</span></code> - vytvoří prostorový
+index pro rychlejší práci s daty - vhodnější pro objemné soubory</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">Použít</span> <span class="pre">index</span> <span class="pre">subsady</span></code> - vytvoří index podmnožiny
+(filtrovaných) prvků</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <code class="xref std std-option docutils literal notranslate"><span class="pre">Sledovat</span> <span class="pre">soubor</span></code> - sledování změn souboru za
+běhu QGIS, při aktualizaci <a class="reference internal" href="../_images/mActionRefresh.png"><img alt="mActionRefresh" src="../_images/mActionRefresh.png" style="width: 1.5em;" /></a> se projeví změny souboru
+(např. přidání dalších dat do řádků) ve vrstvě</p></li>
+<li><p>ve spodní části okna vidíme náhled vkládaných dat</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Pokud chceme naimportovaná data uložit jako vrstvu, musíme
+exportovat (<span class="guilabel">Uložit jako…</span>).</p>
+<figure class="align-center">
+<img alt="../_images/xydata_vysledek.png" src="../_images/xydata_vysledek.png" />
+</figure>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s vektorovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join.html">Připojení tabulkových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="editace.html" title="Tvorba nových vrstev a jejich editace"
+              >předchozí</a> |
+            <a href="join.html" title="Připojení tabulkových dat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

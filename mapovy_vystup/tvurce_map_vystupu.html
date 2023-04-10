@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Tiskové rozvržení (Print Layout) &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Prvky mapového výstupu" href="mapove_elementy.html" />
+    <link rel="prev" title="Tvorba mapového výstupu" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Tvorba mapového výstupu"
+             accesskey="P">předchozí</a> |
+          <a href="mapove_elementy.html" title="Prvky mapového výstupu"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="tiskove-rozvrzeni-print-layout">
+<span id="index-0"></span><h1>Tiskové rozvržení (Print Layout)<a class="headerlink" href="#tiskove-rozvrzeni-print-layout" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Systém QGIS dokáže pracovat s různými formáty a zobrazovat je v
+mapovém okně (viz <a class="reference internal" href="#map-window"><span class="std std-numref">Obr. 170</span></a>). Obsah mapového okna lze
+jednoduše vyexportovat jako obrázku (<span class="menuselection">Projekt ‣
+Import/Export ‣ Eportovat mapu jako obrázek…/pdf</span>).
+To však v řadě případů nemusí stačit, hlavně když vyžadujeme mapový
+výstup určený pro tisk.</p>
+<p>Pro vytvoření mapového výstupu určeného pro tisk, který si zachová
+nastavení vrstev (stylování, popisky a další) z projektu, slouží
+samostatný nástroj <em>Rozvržení (Print Layout)</em>. Tento nástroj je
+dostupný z menu <span class="menuselection">Projekt ‣ Správce rozvržení…</span>.</p>
+<figure class="align-center" id="id1">
+<span id="map-window"></span><img alt="../_images/map_window.png" class="large" src="../_images/map_window.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 170 </span><span class="caption-text">Mapové okno zobrazující vrstvy dle jejich stylování.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<img alt="../_images/composer_output.png" class="large" src="../_images/composer_output.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 171 </span><span class="caption-text">Ukázka možného výstupu z nástroje Rozvržení.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Nástroj Rozvržení umožňuje vytvořit na základě dat mapový výstup v běžně
+používaných formátech, jakými jsou např. <code class="file docutils literal notranslate"><span class="pre">PDF,</span> <span class="pre">PNG,</span> <span class="pre">JPEG</span></code> a
+další. Takovýmto způsobem je možné prezentovat jednotlivá data, jejich
+kombinaci nebo výsledky různých analýz i bez potřeby speciálních
+kartografických systémů.</p>
+<section id="spravce-vytvareni-map">
+<span id="index-1"></span><h2>Správce vytváření map<a class="headerlink" href="#spravce-vytvareni-map" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Systém QGIS umožňuje vytvářet víc než jeden mapový výstup na daný
+projekt. Zpravování jednotlivých mapových výstupů umožňuje <em>Správce rozvržení</em> dostupný z menu <span class="menuselection">Projekt ‣ Správce rozvržení…</span>.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/composer_manager.png" class="large" src="../_images/composer_manager.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 172 </span><span class="caption-text">Otevření Správce pro vytváření mapových výstupů.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Zde se nachází okno, kde jsou uvedeny všechny vytvořené mapové
+výstupy. Pokud není doposud žádný vytvořený, tak je seznam prázdný a
+pomocí tlačítka <span class="item">Create…</span> se dá vytvořit nový.</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/add_new_composer.png" class="small" src="../_images/add_new_composer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 173 </span><span class="caption-text">Zakládání nového mapového výstupu.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Vyskočí okno pro zadání názvu nově vytvářeného mapového výstupu. Po
+zadání názvu a potvrzení tlačítkem <span class="item">OK</span> se tento vytvoří a
+následně se otevře okno pro editaci a úpravu samotného mapového
+výstupu.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Existující mapový výstup lze zkopírovat pomocí tlačítka
+<span class="item">Duplicate…</span>. Mapový výstup ke zkopírování se označí
+a pak se stiskne zmíněné tlačítko. V otevřeném okně se
+pak nastaví nový název mapového výstupu.</p>
+</div>
+<p>Pokud chcete otevřít existující mapový výstup, tak jej v seznamu
+<em>Správce rozvržení</em> vyberte a tlačítkem <span class="item">Zobrazit</span> otevřete.
+Všechny existující mapové výstupy jsou přístupné také z menu
+<span class="menuselection">Projekt ‣ Rozvržení</span>.</p>
+</section>
+<section id="nastaveni-pracovni-plochy">
+<span id="index-2"></span><h2>Nastavení pracovní plochy<a class="headerlink" href="#nastaveni-pracovni-plochy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jako první je nutné nastavit základní vlastnosti pro pracovní plochu a pro
+export.</p>
+<p>První část je nastavení stránky. Toto je dostupné po kliknutí pravým tlačítkem
+na plochu stránky pod položkou <span class="item">Vlastnosti stránky…</span>. V pravé části se
+otevře nastavení stránky v záložce <span class="item">Vlastnosti položky</span>.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/composer_plain.png" class="large" src="../_images/composer_plain.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 174 </span><span class="caption-text">Okno nového rozvržení výstupu.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id6">
+<img alt="../_images/paper_settings.png" class="small" src="../_images/paper_settings.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 175 </span><span class="caption-text">Zakládání nového rozvržení- vlastnosti stránky.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Zde se nastaví velikost „papíru“, jeho orientace a barva pozadí. Tyto hodnoty
+lze přenastavit i v průběhu práce.</p>
+<p>Další část nastavení je v záložce <span class="item">Rozvržení</span>. Zde je možné nastavit
+další části výstupu jako je nastavení výstupu při exportu.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/composer_layout.png" class="small" src="../_images/composer_layout.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 176 </span><span class="caption-text">Zakládání nového rozvržení - export.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Do takto nastavené pracovní plochy lze začít přidávat
+jednotlivé prvky.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Při tvorbě profesionálních mapových výstupů se doporučuje
+používat 400 DPI. Pro běžné použití je vhodné ponechat
+původní nastavení 300 DPI.</p>
+<p>V některých případech je nutné najít vhodnou kombinaci měřítka
+zobrazovaného mapového výřezu, velikosti podkladového papíru a
+příslušného DPI.</p>
+<p>DPI je zkratka pro <em>Dots per inch</em>, více informací na
+<a class="reference external" href="http://cs.wikipedia.org/wiki/DPI">Wikipedii</a>.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Tvorba mapového výstupu</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Tiskové rozvržení (Print Layout)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mapove_elementy.html">Prvky mapového výstupu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="export.html">Export</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Tvorba mapového výstupu"
+              >předchozí</a> |
+            <a href="mapove_elementy.html" title="Prvky mapového výstupu"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

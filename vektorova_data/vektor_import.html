@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Přidání a export dat &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Vlastnosti vrstvy" href="vektor_data_prace.html" />
+    <link rel="prev" title="Práce s vektorovými daty" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Práce s vektorovými daty"
+             accesskey="P">předchozí</a> |
+          <a href="vektor_data_prace.html" title="Vlastnosti vrstvy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pridani-a-export-dat">
+<h1>Přidání a export dat<a class="headerlink" href="#pridani-a-export-dat" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>V této kapitole je popsán postup přidání a exportu vektorových
+dat. Obecný princip přidávání a exportu dat v QGIS najdeme v kapitole
+<a class="reference internal" href="../intro/import_export.html#importexport"><span class="std std-ref">Přidávání a export geodat</span></a>.  Pro čtení a zápis vektorových formátů používá
+QGIS knihovnu GDAL.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>V režimu čtení lze vektorová data také načíst přímo z archivu
+<em>zip</em> a <em>gzip</em>.</p>
+</div>
+<section id="pridavani-vektorovych-dat">
+<h2>Přidávání vektorových dat<a class="headerlink" href="#pridavani-vektorovych-dat" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Nabídka pro načtení vektorové vrstvy se aktivuje v záložce
+<span class="menuselection">Vrstva ‣ Přidat vrstvu ‣ Přidat vektorovou vrstvu</span>,
+ikonou <a class="reference internal" href="../_images/mActionAddOgrLayer.png"><img alt="mActionAddOgrLayer" src="../_images/mActionAddOgrLayer.png" style="width: 1.5em;" /></a> <sup>přidání vektorové vrstvy</sup> nebo pomocí
+klávesové zkratky <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">V</kbd></kbd>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/qgis_ogc_addvector_icons.png" src="../_images/qgis_ogc_addvector_icons.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 53 </span><span class="caption-text">Dialogové okno přidání vektorové vrstvy.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Nejčastější volbou vkládání dat je soubor nebo adresář. Vložení jedné
+vrstvy je možné označením <span class="item">Typ zdroje</span> - <a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a>
+<code class="xref std std-option docutils literal notranslate"><span class="pre">Soubor</span></code>. Kliknutím na tlačítko <span class="item">Procházet</span> se otevře
+navigační okno s možností vybrat soubor s vektorovými daty. Po
+potvrzení se označená vrstva načte do mapového okna.</p>
+<p>Volba <span class="item">Adresář</span> umožňuje označit složku, ve které se nachází
+vektorová data. Potvrzením tlačítkem <span class="item">Otevřít</span> QGIS připraví
+všechna dostupná data uložená ve složce k načtení. Objeví se
+potvrzující okno se všemi dostupnými vrstvami. Vrstvy lze buď označit
+všechny, nebo podržením klávesy <kbd class="kbd docutils literal notranslate">Ctrl</kbd> vybrat jen požadované
+vrstvy (<a class="reference internal" href="#vecfolder"><span class="std std-numref">Obr. 54</span></a>). Další možností je přidat data pomocí
+vestavěného datového katalogu (prohlížeče souborů)
+viz kapitola <a class="reference internal" href="../intro/import_export.html#vectorimport"><span class="std std-ref">Přidávání dat</span></a>.</p>
+<figure class="align-center" id="id2">
+<span id="vecfolder"></span><img alt="../_images/qgis_ogc_addvector_selectfromfolder.png" src="../_images/qgis_ogc_addvector_selectfromfolder.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 54 </span><span class="caption-text">Výběr jednotlivých vrstev při přidávání vektorových vrstev
+ze složky.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="export-vektorovych-dat">
+<h2>Export vektorových dat<a class="headerlink" href="#export-vektorovych-dat" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pravým kliknutím na vrstvu vyvoláme kontextové menu, vybereme možnost
+<span class="menuselection">Export -&gt; Save Features As…</span> a zadáme parametry exportu.
+Můžeme zde zvolit výstupní formát (např. <code class="docutils literal notranslate"><span class="pre">*.kml</span></code>, <code class="docutils literal notranslate"><span class="pre">*.shp</span></code>, <code class="docutils literal notranslate"><span class="pre">*.gpx</span></code>),
+souřadnicový systém vrstvy a další volitelné parametry.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/vector_saveas.png" src="../_images/vector_saveas.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 55 </span><span class="caption-text">Okno exportu vektorové vrstvy.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud potřebujeme exportovat pouze část prvků vrstvy nebo
+konkrétní zájmové prvky, musíme tyto prvky nejprve označit
+výběrem (např. <a class="reference internal" href="../_images/mActionSelectRectangle.png"><img alt="mActionSelectRectangle" src="../_images/mActionSelectRectangle.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky oblastí
+nebo jednoklikem</sup> nebo <a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a> <sup>Vabrat prvky
+pomocí vzorce</sup>). Potom se nám v okně exportu aktivuje možnost
+<a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <sup>Uložit pouze vybrané prvky</sup>, nebo pro export použijeme
+druhou volbu z kontextového menu
+<span class="menuselection">Export ‣ Save Features As…</span></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Pro uložení pouze atributové tabulky vrstvy lze zvolit
+výstupní formát <code class="docutils literal notranslate"><span class="pre">*.csv</span></code>.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s vektorovými daty</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Přidání a export dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join.html">Připojení tabulkových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Práce s vektorovými daty"
+              >předchozí</a> |
+            <a href="vektor_data_prace.html" title="Vlastnosti vrstvy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

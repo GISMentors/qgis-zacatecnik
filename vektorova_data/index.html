@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Práce s vektorovými daty &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Přidání a export dat" href="vektor_import.html" />
+    <link rel="prev" title="Přidávání a export geodat" href="../intro/import_export.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../intro/import_export.html" title="Přidávání a export geodat"
+             accesskey="P">předchozí</a> |
+          <a href="vektor_import.html" title="Přidání a export dat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="prace-s-vektorovymi-daty">
+<h1>Práce s vektorovými daty<a class="headerlink" href="#prace-s-vektorovymi-daty" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>V systému QGIS lze pracovat s různými formáty vektorových dat.
+Vektorová data se standardně dělí dle typu geometrie na bodová,
+liniová a plošná.  To, jakým způsobem se data ukládají a co daný způsob
+přináší za možnosti, se může velice lišit.</p>
+<p>QGIS s daty pracuje v jejich původním formátu a nepřevádí je. Převod
+do jiných formátů je možný pomocí knihovny nástrojů.</p>
+<p>Pro převod mezi formáty se používá knihovna <a class="reference external" href="http://gdal.org/">GDAL</a>.  Seznam podporovaných vektorových formátů i s
+doplňujícími informacemi je dostupný na <a class="reference external" href="http://gdal.org/ogr_formats.html">stránce projektu GDAL</a>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html#pridavani-vektorovych-dat">Přidávání vektorových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html#export-vektorovych-dat">Export vektorových dat</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html#atributova-tabulka">Atributová tabulka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html#vlastnosti">Vlastnosti</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html#panel-stylovani">Panel stylování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html#prace-se-styly">Práce se styly</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="editace.html#vytvoreni-shapefile-vrstvy">Vytvoření Shapefile vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html#editace-vrstvy">Editace vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html#kalkulator-poli">Kalkulátor polí</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html#data-s-oddelenymi-hodnotami">Data s oddělenými hodnotami</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="join.html">Připojení tabulkových dat</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="join.html#postup-pripojeni">Postup připojení</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html#atributove-dotazovani">Atributové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html#prostorove-dotazovani">Prostorové dotazování</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html#obalova-zona-dle-pevne-vzdalenosti-buffer">Obalová zóna dle pevné vzdálenosti (buffer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html#prekryvne-analyzy">Překryvné analýzy</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Práce s vektorovými daty</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join.html">Připojení tabulkových dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dotazovani.html">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../intro/import_export.html" title="Přidávání a export geodat"
+              >předchozí</a> |
+            <a href="vektor_import.html" title="Přidání a export dat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

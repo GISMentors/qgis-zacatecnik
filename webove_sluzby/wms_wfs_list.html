@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Zdroje webových služeb &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Tvorba mapového výstupu" href="../mapovy_vystup/index.html" />
+    <link rel="prev" title="Připojení WFS služby" href="vektor.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="vektor.html" title="Připojení WFS služby"
+             accesskey="P">předchozí</a> |
+          <a href="../mapovy_vystup/index.html" title="Tvorba mapového výstupu"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="zdroje-webovych-sluzeb">
+<h1>Zdroje webových služeb<a class="headerlink" href="#zdroje-webovych-sluzeb" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<section id="wms">
+<h2>WMS<a class="headerlink" href="#wms" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>ČÚZK - <a href="#id2"><span class="problematic" id="id3">`https://services.cuzk.cz/wms/wms.asp?request=GetCapabilities&amp;service=wms`_</span></a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Katastrální mapy - <code class="code docutils literal notranslate"><span class="pre">http://services.cuzk.cz/wms/wms.asp</span></code></p></li>
+<li><p>Ortofoto - <code class="code docutils literal notranslate"><span class="pre">http://geoportal.cuzk.cz/WMS_ORTOFOTO_PUB/WMService.aspx</span></code></p></li>
+<li><p>ZM50 - <code class="code docutils literal notranslate"><span class="pre">http://geoportal.cuzk.cz/WMS_ZM50_PUB/WMService.aspx</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>AOPK - <a class="reference external" href="https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=6142">https://portal.nature.cz/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Přírodní biotopy a habitaty - <code class="code docutils literal notranslate"><span class="pre">http://gis.nature.cz/arcgis/services/Biotopy/PrirBiotopHabitat/MapServer/WmsServer</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>INSPIRE - <a class="reference external" href="https://geoportal.gov.cz/web/guest/wms%3Bjsessionid=09ADEB431C9340ABD96760959DD03FA2/">https://geoportal.gov.cz/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Speciální mapy III. vojenského mapování - <code class="code docutils literal notranslate"><span class="pre">http://geoportal.gov.cz/ArcGIS/services/CENIA/cenia_rt_III_vojenske_mapovani/MapServer/WMSServer?service=WMS&amp;request=GetCapabilities&amp;version=1.3.0</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>ÚHÚL - <a class="reference external" href="http://www.uhul.cz/mapy-a-data/webove-sluzby">http://www.uhul.cz/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>OPRL - <code class="code docutils literal notranslate"><span class="pre">https://geoportal.uhul.cz/wms_oprl/service.svc/get</span></code></p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="wfs">
+<h2>WFS<a class="headerlink" href="#wfs" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>AOPK - <a class="reference external" href="https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=6142">https://portal.nature.cz/</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Chráněná území - <code class="code docutils literal notranslate"><span class="pre">http://gis.nature.cz/arcgis/services/Aplikace/Opendata/MapServer/WFSServer</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>ČGS - <a class="reference external" href="http://www.geology.cz/extranet/mapy/mapy-online/stahovaci-sluzby">http://www.geology.cz</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>ČGS Podložní a povrchová geologie - OneGeology-Europe - INSPIRE stahovací služba pro téma geologie - <code class="code docutils literal notranslate"><span class="pre">http://inspire.geology.cz/geoserver/wfs</span></code></p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s webovými službami OGC</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rastr.html">Připojení WMS/WMTS služby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor.html">Připojení WFS služby</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Zdroje webových služeb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="vektor.html" title="Připojení WFS služby"
+              >předchozí</a> |
+            <a href="../mapovy_vystup/index.html" title="Tvorba mapového výstupu"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

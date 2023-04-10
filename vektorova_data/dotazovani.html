@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Atributové a prostorové dotazování &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Prostorové analýzy" href="prostorove_analyzy.html" />
+    <link rel="prev" title="Připojení tabulkových dat" href="join.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="join.html" title="Připojení tabulkových dat"
+             accesskey="P">předchozí</a> |
+          <a href="prostorove_analyzy.html" title="Prostorové analýzy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="atributove-a-prostorove-dotazovani">
+<h1>Atributové a prostorové dotazování<a class="headerlink" href="#atributove-a-prostorove-dotazovani" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<section id="atributove-dotazovani">
+<span id="atrdotaz"></span><h2>Atributové dotazování<a class="headerlink" href="#atributove-dotazovani" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Atributové dotazování slouží k vytvoření výběru prvků z vektorové
+vrstvy dle námi zadaných kritérií. Funkce, která toto umožňuje, je
+<a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky pomocí výrazu…</sup> a můžeme ji
+spustit buď z nástrojového panelu, nebo z atributové tabulky dané
+vrstvy. Dialogové okno vypadá obdobně jako okno kalkulátoru polí
+<a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> a zadávání výrazu zde funguje na stejném
+principu.  Tedy v levé části okna (<span class="item">Výraz</span>) je prostor pro
+zadání požadovaného výrazu a pravá část okna (<span class="item">Funkce</span>) slouží k
+rychlému přidání funkcí nebo parametrů do výrazu.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/select_exp.png" src="../_images/select_exp.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 102 </span><span class="caption-text">Okno atributového dotazování.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Po zadání našeho výrazu potvrdíme tlačítkem <a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a>
+<span class="item">Vybrat prvky</span>, čímž se nám vytvoří požadovaný výběr. Z nabídky
+vedle tlačítka můžeme vybrat další možnosti práce s výběrem pomocí
+atributového dotazu. Tlačítkem <span class="item">Přiblížit na prvky</span> přblížíme na
+výsledné prvky bez provedení výběru.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/select_exp_fun.png"><img alt="../_images/select_exp_fun.png" src="../_images/select_exp_fun.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-number">Obr. 103 </span><span class="caption-text">Další možnosti práce s výběrem pomocí atributového dotazu.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>V levé části stavového řádku vidíme aktuální počet vybraných
+prvků (viz <a class="reference internal" href="#expstatus"><span class="std std-numref">Obr. 106</span></a>).</p>
+</div>
+<p>Uvedeme si jednoduchý příklad atributového dotazu. Z vrstvy <em>Velkoplošných
+zvláště chráněných území</em>, potřebujeme vybrat národní parky a jejich ochranná
+pásma. Podmínkou samozřejmě je, že musíme mít takovou informaci o prvcích v
+atributové tabulce.</p>
+<figure class="align-center" id="id3">
+<img alt="../_images/select_exp_vzchu_at.png" src="../_images/select_exp_vzchu_at.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 104 </span><span class="caption-text">Informace o prvcích v atributové tabulce.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Formulace našeho dotazu by v mluveném slově vypadala přibližně takto: „Vyber
+takové prvky, které mají buď atribut <code class="xref std std-option docutils literal notranslate"><span class="pre">KAT</span></code> s hodnotou <code class="xref std std-option docutils literal notranslate"><span class="pre">NP</span></code> nebo
+atribut <code class="xref std std-option docutils literal notranslate"><span class="pre">KAT</span></code> s hodnotou <code class="xref std std-option docutils literal notranslate"><span class="pre">OP</span></code>“. Výraz, který potřebujeme vepsat
+do dialogového okna:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;kat&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;OP&#39;</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="ss">&quot;kat&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;NP&#39;</span>
+</pre></div>
+</div>
+<figure class="align-center" id="id4">
+<img alt="../_images/select_exp_vzchu.png" class="middle" src="../_images/select_exp_vzchu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 105 </span><span class="caption-text">Výsledek atributového dotazu („kat“ = ‚OP‘ or „kat“ = ‚NP‘) ve vrstvě
+Velkoplošných zvláště chráněných území .</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id5">
+<span id="expstatus"></span><img alt="../_images/select_exp_vzchu_status.png" class="middle" src="../_images/select_exp_vzchu_status.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 106 </span><span class="caption-text">Výpis počtu vybraných prvků (v levé části stavového řádku).</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="vybrat-prvky-podle-hodnoty">
+<span id="vybrat-prvky"></span><h3>Vybrat prvky podle hodnoty<a class="headerlink" href="#vybrat-prvky-podle-hodnoty" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pro rychlé a zjednodušené atributové dotazovaní lze také využít formulář funkce
+<a class="reference internal" href="../_images/mIconFormSelect.png"><img alt="mIconFormSelect" src="../_images/mIconFormSelect.png" style="width: 1.5em;" /></a><sup>Vybrat prvky podle hodnoty…</sup> (klávesová zkratka
+<kbd class="kbd docutils literal notranslate">F3</kbd>), kde lze zadat hodnoty a pravidla výběru k jednotlivým atributům.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/select_att.png" class="middle" src="../_images/select_att.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 107 </span><span class="caption-text">Formulář funkce <a class="reference internal" href="../_images/mIconFormSelect.png"><img alt="mIconFormSelect" src="../_images/mIconFormSelect.png" style="width: 1.5em;" /></a><sup>Vybrat prvky podle hodnoty…</sup></span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="prostorove-dotazovani">
+<h2>Prostorové dotazování<a class="headerlink" href="#prostorove-dotazovani" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Prostorové dotazování slouží k vytvoření výběru prvků na základě prostorového
+vztahu dvou vektorových vrstev. Funkce, která toto umožňuje, je
+<a class="reference internal" href="../_images/mAlgorithmSelectLocation.png"><img alt="mAlgorithmSelectLocation" src="../_images/mAlgorithmSelectLocation.png" style="width: 1.5em;" /></a> <sup>Vybrat podle umístění…</sup> a najdeme ji v menu
+<span class="menuselection">Vektor ‣ Výzkumné nástroje ‣ Vybrat podle umístění…</span></p>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../_images/select_by_location.png"><img alt="../_images/select_by_location.png" src="../_images/select_by_location.png" style="width: 798.3000000000001px; height: 522.9px;" /></a>
+<figcaption>
+<p><span class="caption-number">Obr. 108 </span><span class="caption-text">Okno <span class="guilabel">Vybrat podle umístění</span>.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><p><span class="guilabel">Vybrat prvky z</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> -
+vybereme vrstvu, ve které chceme tvořit výběr</p></li>
+<li><p><span class="guilabel">Geometric predicate</span> (typ vztahu, který se bude vyhodnocovat),
+množina možností se generuje podle vstupních vrstev</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">protínají</span> - vybere prvky, které se jakkoliv
+protínají s prvky v průnikové vrstvě</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">dotýkájí se</span> - vybere prvky se společnou hranicí
+nebo lomovým bodem s prvky v průnikové vrstvě</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">obsahují</span> - vybere pouze prvky, které osahují
+prvky z průnikové vrstvy (např. celý polygon uvnitř polygonu)</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">překrývají se</span> - vybere pouze prvky, které se svoji
+částí protínají s prvky v průnikové vrstvě</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">rozděluje</span> - vybere prvky, které nijak
+neprotínají prvky v průnikové vrstě</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">jsou uvnitř</span> - vybere pouze prvky, které leží celou
+rozlohou uvnitř prvku průnikové vrstvy (např. celý polygon uvnitř
+polygonu)</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">jsou si rovny</span> - vybere prvky, které jsou totožné</p></li>
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">kříží se</span> - vybere prvky, které se křižují s
+prvky v průnikové vrstvě (u linií)</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><span class="guilabel">Porovnáním s prvky z</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme vrstvu,
+podle které se prvky budou vybírat</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="guilabel">Pouze vybrané prvky</span> - pokud chceme aby
+vstupovaly pouze vybrané prvky vrstvy</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Upravit aktuální výběr pomocí <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="guilabel">vytvořením nového výběru</span> - zruší stávající výběr a vytvoří
+zcela nový</p></li>
+<li><p><span class="guilabel">přidáním do aktuálního výběru</span> - k aktuálnímu výběru přidá
+nadefinovaný výběr</p></li>
+<li><p><span class="guilabel">vybráním v rámci aktuálního výběru</span> - vytvoří nový výběr pouze z prvků
+které jsou aktuálně ve výběru</p></li>
+<li><p><span class="guilabel">odstraněním z aktuálního výběru</span> - z aktuálního výběru odebere
+prvky, které nadefinujeme</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<p>Příklad prostorového dotazu (<a class="reference internal" href="#sellocpriklad"><span class="std std-numref">Obr. 109</span></a>) - zajímá nás, která
+maloplošná chráněná území leží celou rozlohou ve velkoplošném chráněném
+území. Prostorový dotaz bude vypadat takto: vyber prvky z vrstvy
+<span class="map">maloplosna_uzemi</span>, které jsou prvky zcela uvnitř prvků ve vrstvě
+<span class="map">velkoplosna_uzemi</span>.</p>
+<figure class="align-center" id="id8">
+<span id="sellocpriklad"></span><img alt="../_images/select_by_location_priklad.png" src="../_images/select_by_location_priklad.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 109 </span><span class="caption-text">Výběr maloplošných chráněných území, které leží uvnitř velkoplošných
+chráněných územích.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Pomocí funkcí
+<a class="reference internal" href="../_images/mAlgorithmSelectRandom.png"><img alt="mAlgorithmSelectRandom" src="../_images/mAlgorithmSelectRandom.png" style="width: 1.5em;" /></a> <sup>Náhodný výběr…</sup>/<a class="reference internal" href="../_images/mAlgorithmSelectRandom.png"><img alt="mAlgorithmSelectRandom" src="../_images/mAlgorithmSelectRandom.png" style="width: 1.5em;" /></a> <sup>Náhodný
+výběr v podmonožinách…</sup> můžeme tvořit náhodné výběry z prvků. Tyto
+funkce najdeme v hlavním menu <span class="menuselection">Vektor ‣ Výzkumné nástroje</span>.</p>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s vektorovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="vektor_import.html">Přidání a export dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor_data_prace.html">Vlastnosti vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="editace.html">Tvorba nových vrstev a jejich editace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="import_delim.html">Import dat s oddělenými hodnotami a GPS dat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="join.html">Připojení tabulkových dat</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Atributové a prostorové dotazování</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prostorove_analyzy.html">Prostorové analýzy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="join.html" title="Připojení tabulkových dat"
+              >předchozí</a> |
+            <a href="prostorove_analyzy.html" title="Prostorové analýzy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

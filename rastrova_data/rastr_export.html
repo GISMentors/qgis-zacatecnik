@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Export rastrových údajů &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Vlastnosti rastrové vrstvy" href="rastr_vlastnosti.html" />
+    <link rel="prev" title="Nahrání rastrových údajů" href="rastr_import.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="rastr_import.html" title="Nahrání rastrových údajů"
+             accesskey="P">předchozí</a> |
+          <a href="rastr_vlastnosti.html" title="Vlastnosti rastrové vrstvy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="export-rastrovych-udaju">
+<span id="index-0"></span><h1>Export rastrových údajů<a class="headerlink" href="#export-rastrovych-udaju" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Existuje množství rastrových formátů, které jsou obvykle odlišené dle
+přípony souborů. Díky knihovně GDAL umožňuje QGIS export do velkého
+množství různých běžně používaných formátů.</p>
+<p>Data je možné exportovat dvěma způsoby. Pokud potřebujeme vrstvu
+uložit (exportovat) v tom samém formátu, protože pracujeme například
+jenom s částí zájmového území, použijeme volbu <span class="menuselection">Export ‣
+Uložit jako…</span>. Tato volba je dostupná z kontextového menu na vybranou
+vrstvou. Objeví se dialogové okno, kde se dá nastavit režim výstupu
+(surová data nebo vykreslený obrázek), název, souřadnicový systém,
+rozsah, rozlišení, možnosti vytvoření a další parametry nově
+exportované vrstvy. Po spuštění se nová vrstva přidá do mapového okna
+(<a class="reference internal" href="#saveas"><span class="std std-numref">Obr. 127</span></a>).
+Pomocí volby rozsahu lze vybrat rozsah aktuálního mapového okna, nebo odvodit
+od rozsahu jiné vrstvy (i vektorové). Takto může export sloužit na výběr území,
+transformaci do jiného souřadnicového systému, změnu velikosti buňky rastru,
+použití komprese, nebo i vytvoření pyramid.</p>
+<figure class="align-center" id="id1">
+<span id="saveas"></span><img alt="../_images/saveas1.png" class="large" src="../_images/saveas1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 127 </span><span class="caption-text">Export rastrové vrstvy pomocí <span class="item">Uložit jako…</span>.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud potřebujeme rastrovou vrstvu uložit v jiném formátu, použijeme
+<span class="menuselection">Rastr ‣ Převod ‣ Převést na jiný formát</span>
+(<a class="reference internal" href="#menu-prevod"><span class="std std-numref">Obr. 128</span></a>). V dialogovém okně nastavíme vstupní vrstvu, cílový
+souřadnicový systém a ostatní dle potřeby.</p>
+<figure class="align-center" id="id2">
+<span id="menu-prevod"></span><img alt="../_images/menu_prevod.png" src="../_images/menu_prevod.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 128 </span><span class="caption-text">Export rastrové vrstvy do jiného formátu.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="orezani-rastru">
+<h2>Ořezání rastru<a class="headerlink" href="#orezani-rastru" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Výše popsaný nástroj pro export je poměrně komplexním nástrojem na vytvoření
+odvozeného rastru. V podstatě se jedná o nástroj pro ořezávání rastru rozsahem.
+Ať už zadáním přes mapové okno, nebo pomocí rozsahu jiné vrstvy. Nástroj se
+stejnou funkcionalitou je k dispozici v horním menu <span class="menuselection">Rastr ‣
+Extrakce ‣ Oříznout rastr podle rozsahu…</span>.</p>
+<p>Dalším nástrojem na ořezání rastru je varianta pro ořez podle polygonové vrstvy.
+Tento je umístěn ve stejném menu <span class="menuselection">Rastr ‣
+Extrakce ‣ Oříznout rastr podle masky…</span>.</p>
+<p>Na obrázku <a class="reference internal" href="#raster-extract"><span class="std std-numref">Obr. 129</span></a> je vidět příklad ořezání rastrové vrstvy
+celé ČR pomocí hranic hlavního města Prahy (polygonová vrstva krajů s
+aplikovaným filtrem). Výslední vrstva má tvar pravoúhelné mřížky, za použití
+tzv. „no data“ hodnoty.
+Níže je výsledek ořezání pomocí rozsahu - celý rastr obshauje hodnoty z
+původního rastru.</p>
+<figure class="align-center" id="id3">
+<span id="raster-extract"></span><img alt="../_images/raster_mask.png" class="large" src="../_images/raster_mask.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 129 </span><span class="caption-text">Ořez rastru pomocí polygonové vrstvy, porovnání s výsledkem ořezu rozsahem.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud při ořezání nezatrhneme volbu <span class="item">Výstupní alfa kanál</span>, tak je
+výstupem rastr s jedním kanálem, kde je použita hodnota „no data“ mimo oblast
+pokrytí masky. V místě pokrytí je pak ponechána hodnota původního rastru. Ukázka
+je na obrázku <a class="reference internal" href="#raster-ext-alpha"><span class="std std-numref">Obr. 130</span></a> v levé sekci.</p>
+<p>Pokud použijeme volbu na vytvoření alfa kanálu, tak výstupní rastr obsahuje
+dva kanály, místo původního jednoho. V pravé části obrázku <a class="reference internal" href="#raster-ext-alpha"><span class="std std-numref">Obr. 130</span></a> je pak vidět hodnoty ve výstupním rastru, který obsahuje i alfa kanál.</p>
+<figure class="align-center" id="id4">
+<span id="raster-ext-alpha"></span><img alt="../_images/extract_alpha_channel.png" class="large" src="../_images/extract_alpha_channel.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 130 </span><span class="caption-text">Porovnání ořezu rastru s použitím alfa kanálu a bez něj.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s rastrovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rastr_import.html">Nahrání rastrových údajů</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Export rastrových údajů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_vlastnosti.html">Vlastnosti rastrové vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_terenni_analyzy.html">Terénní analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_kalkulator.html">Použití rastrového kalkulátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_kalkulator.html#pouziti-rastroveho-kalkulatoru-pro-urceni-mist-potencialne-vhodnych-pro-umisteni-solarni-elektrarny">Použití rastrového kalkulátoru pro určení míst potenciálně vhodných pro umístění solární elektrárny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_kalkulator.html#pouziti-rastroveho-kalkulatoru-pro-reklasifikaci">Použití rastrového kalkulátoru pro reklasifikaci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vrstevnice.html">Generování vrstevnic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="rastr_import.html" title="Nahrání rastrových údajů"
+              >předchozí</a> |
+            <a href="rastr_vlastnosti.html" title="Vlastnosti rastrové vrstvy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

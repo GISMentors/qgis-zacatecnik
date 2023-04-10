@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ukázka kombinace prostorových funkcí a dotazů &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Ukázka zpracování dat" href="priklad_3.html" />
+    <link rel="prev" title="Ukázka jednoduchých prostorových funkcí" href="priklad_1.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="priklad_1.html" title="Ukázka jednoduchých prostorových funkcí"
+             accesskey="P">předchozí</a> |
+          <a href="priklad_3.html" title="Ukázka zpracování dat"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ukazka-kombinace-prostorovych-funkci-a-dotazu">
+<h1>Ukázka kombinace prostorových funkcí a dotazů<a class="headerlink" href="#ukazka-kombinace-prostorovych-funkci-a-dotazu" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Najděte vhodné parcely na území Hlavního města Prahy pro výstavbu
+nového stavebního objektu. Kvůli případnému hluku musí být vzdálené
+alespoň 500 m od železnic, jejich výměra musí být minimálně 20 ha a
+měly by se nacházet mimo městské části Praha 6, 7 a Praha 8.</p>
+<section id="data">
+<span id="data-ul2"></span><h2>Data<a class="headerlink" href="#data" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p><span class="map">spravniobvody.shp, parcely.shp, zeleznice.shp</span></p>
+</section>
+<section id="reseni">
+<span id="reseni-ul2"></span><h2>Řešení<a class="headerlink" href="#reseni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Nástrojem <em>Dissolve</em> sloučíme správní obvody a vytvoříme polygonovou vrstvu Prahy.</p></li>
+<li><p>Nástrojem <em>Clip</em> ořežeme vrstvu železnic podle polygonu Prahy.</p></li>
+<li><p>Nástrojem <em>Buffer</em> vytvoříme obalovou zónu 500 m kolem pražských železnic.</p></li>
+<li><p>Vybereme správní obvody Praha 6, 7 a 8 a nástrojem <em>Union</em> je sjednotíme s
+obalovou zónou kolem železnic (negativní oblasti).</p></li>
+<li><p>Vybereme všechny parcely s rozlohou větší než 20 ha.</p></li>
+<li><p>Z vybraných parcel vybereme ty, které nejsou v negativní oblasti.</p></li>
+<li><p>Výsledek zobrazíme.</p></li>
+</ol>
+</section>
+<section id="postup-v-qgis">
+<h2>Postup v QGIS<a class="headerlink" href="#postup-v-qgis" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Do mapového okna pomocí <a class="reference internal" href="../_images/mActionAddOgrLayer.png"><img alt="mActionAddOgrLayer" src="../_images/mActionAddOgrLayer.png" style="width: 1.5em;" /></a> <sup>Přidat vektorovou
+vrstvu</sup> přidáme potřebná <a class="reference internal" href="#data-ul2"><span class="std std-ref">data</span></a>. Vidíme, že vrstva
+železnic je pro celou Českou republiku. Části mimo Prahy ale nebudeme
+potřebovat, proto vrstvu ořežeme. Musíme si vytvořit hranici města. Z
+menu <span class="menuselection">Vektor ‣ Nástroje geoprocessingu</span> vybereme
+nástroj <a class="reference internal" href="../_images/mAlgorithmDissolve.png"><img alt="mAlgorithmDissolve" src="../_images/mAlgorithmDissolve.png" style="width: 1.5em;" /></a> <sup>Rozpustit</sup>, kde jako vstupní vektorovou
+vrstvu nastavíme <span class="map">spravniobvody</span>, pole rozpuštění na <code class="docutils literal notranslate"><span class="pre">---</span>
+<span class="pre">Rozpustit</span> <span class="pre">vše</span> <span class="pre">---</span></code> a výstup uložíme jako <span class="map">praha</span>.  Potom
+použijeme nástroj na ořezání <a class="reference internal" href="../_images/mAlgorithmClip.png"><img alt="mAlgorithmClip" src="../_images/mAlgorithmClip.png" style="width: 1.5em;" /></a> <sup>Ořezávač</sup>. Vstupem bude
+vektor železnic České republiky, ořezávat budeme podle nově vytvořené
+polygonové vrstvy <span class="map">Praha</span> a výsledek uložíme jako
+<span class="map">zeleznice_p</span>, tedy železnice pouze na území Prahy. Dialogová okna
+nástrojů <em>Dissolve</em> a <em>Clip</em> jsou zobrazeny na <a class="reference internal" href="#dissolve-clip"><span class="std std-numref">Obr. 213</span></a>. Následně
+můžeme každé vrstvě <a class="reference internal" href="../vektorova_data/vektor_data_prace.html#styl-vrstvy"><span class="std std-ref">nastavit styl</span></a>, čímž si vstupní
+data přehledně zobrazíme (<a class="reference internal" href="#vstup-ul2"><span class="std std-numref">Obr. 214</span></a>).</p>
+<figure class="align-center" id="id1">
+<span id="dissolve-clip"></span><img alt="../_images/u-dissolve-clip.png" class="middle" src="../_images/u-dissolve-clip.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 213 </span><span class="caption-text">Použití nástrojů <em>Dissolve</em> a <em>Clip</em>.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id2">
+<span id="vstup-ul2"></span><img alt="../_images/u-vstup-ul2.png" class="middle" src="../_images/u-vstup-ul2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 214 </span><span class="caption-text">Správní obvody, parcely a železnice Prahy.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Na <a class="reference internal" href="#vstup-ul2"><span class="std std-numref">Obr. 214</span></a> je pro vektorovou vrstvu <span class="map">parcely</span> nastavena
+jednoduchá průhledná výplň a šedé ohraničení s transparentností <code class="docutils literal notranslate"><span class="pre">10%</span></code>,
+symbol vrstvy <span class="map">zeleznice_p</span> je nastavený na <code class="docutils literal notranslate"><span class="pre">Resident</span></code>, správní obvody
+jsou barevně kategorizované dle pole <span class="dbcolumn">nazev</span>, pričemž hodnoty tohoto
+atributu jsou vykresleny.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>V tomto kroku je dobré si projekt uložit, a to pomocí
+<span class="menuselection">Projekt ‣ Uložit</span>.</p>
+</div>
+<p>Teď přistoupíme k tvorbě obalové zóny kolem pražských železnic, na to využijeme
+nástroj <a class="reference internal" href="../_images/mAlgorithmBuffer.png"><img alt="mAlgorithmBuffer" src="../_images/mAlgorithmBuffer.png" style="width: 1.5em;" /></a> <sup>Buffer</sup>. V jednom dialogovém okně nastavíme vstup, míru
+aproximace na <code class="docutils literal notranslate"><span class="pre">70</span></code>,  velikost obalové zóny na <code class="docutils literal notranslate"><span class="pre">500</span> <span class="pre">m</span></code>, zaklikneme <a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a>
+<sup>Rozpustit výsledky obalové zóny</sup>, aby byla obalová zóna celistvá a výstup
+uložíme jako <span class="map">zeleznice_pb</span>, povolíme <a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a> <sup>Přidat výsledek do
+mapového okna</sup> a spustíme <code class="docutils literal notranslate"><span class="pre">OK</span></code>, viz <a class="reference internal" href="#zeleznice-buffer"><span class="std std-numref">Obr. 215</span></a>.</p>
+<figure class="align-center" id="id3">
+<span id="zeleznice-buffer"></span><img alt="../_images/u-zeleznice-buffer.png" class="small" src="../_images/u-zeleznice-buffer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 215 </span><span class="caption-text">Obalová zóna 500 m kolem vektorové vrstvy pražských železnic.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokračujeme výběrem správních obvodů, kde se parcela pro nový stavební
+objekt nemá nacházet. V okně vrstev označíme vektor
+<span class="map">spravniobvody</span> a v menu klikneme na <a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a>
+<sup>Vybrat prvky pomocí vzorce</sup>.  V střední části dialogového okna
+najdeme položku <code class="docutils literal notranslate"><span class="pre">Pole</span> <span class="pre">a</span> <span class="pre">hodnoty</span></code>, dvouklikem zvolíme <code class="docutils literal notranslate"><span class="pre">nazev</span></code>, v
+pravé části klikneme na <code class="docutils literal notranslate"><span class="pre">všechny</span> <span class="pre">jedinečné</span> <span class="pre">hodnoty</span></code> a tímto způsobem
+napíšeme do levého okna výraz (<a class="reference internal" href="#vyraz678"><span class="std std-numref">Obr. 216</span></a>), kterým z vrstvy
+správních obvodů vybereme Prahu 6, 7 a 8.</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="ss">&quot;nazev&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Praha 6&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="ss">&quot;nazev&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Praha 7&#39;</span><span class="w"> </span><span class="k">OR</span><span class="w"> </span><span class="ss">&quot;nazev&quot;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Praha 8&#39;</span>
+</pre></div>
+</div>
+<p>Pak přes pravé tlačítko myši nad vrstvou <span class="map">spravniobvody</span> výběr
+uložíme pomocí <cite>Uložit jako</cite>, nazveme jej <span class="map">praha_neg</span>. Dbáme na
+to, aby políčko <a class="reference internal" href="../_images/checkbox_unchecked1.png"><img alt="box_no" src="../_images/checkbox_unchecked1.png" style="width: 1.5em;" /></a> <sup>Uložit pouze vybrané prvky</sup> bylo
+zaškrtnuté <a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a> a zkontrolujeme i souřadnicový systém
+<a class="reference external" href="http://epsg.io/5514">EPSG:5514</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Operátor <code class="docutils literal notranslate"><span class="pre">OR</span></code> se nachází v položce <code class="docutils literal notranslate"><span class="pre">Operátory</span></code>.</p>
+</div>
+<figure class="align-center" id="id4">
+<span id="vyraz678"></span><img alt="../_images/u-vyraz678.png" class="middle" src="../_images/u-vyraz678.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 216 </span><span class="caption-text">Výběr správních obvodů, kde budeme hledat vhodné parcely.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Po exportu zrušíme vybrané obvody Prahy pomocí <a class="reference internal" href="../_images/mIconSelectRemove.png"><img alt="mIconSelectRemove" src="../_images/mIconSelectRemove.png" style="width: 1.5em;" /></a>
+<sup>Zrušit výběr prvků ve všech vrstvách</sup>.</p>
+</div>
+<p>Následuje spojení „negativních“ zón. Cílem je dostat vektorovou vrstvu, která je
+sjednocením obalové zóny železnic a nepožadovaných správních obvodů. Využijeme
+nástroj <a class="reference internal" href="../_images/mAlgorithmUnion.png"><img alt="mAlgorithmUnion" src="../_images/mAlgorithmUnion.png" style="width: 1.5em;" /></a> <sup>Sjednotit</sup>. Vznikne výstup (například
+<span class="map">oblasti_neg1</span>), na který opět použijeme  <a class="reference internal" href="../_images/mAlgorithmDissolve.png"><img alt="mAlgorithmDissolve" src="../_images/mAlgorithmDissolve.png" style="width: 1.5em;" /></a> <sup>Rozpustit</sup>.
+Výsledek pojmenujeme <span class="map">oblasti_neg</span> (<a class="reference internal" href="#neg"><span class="std std-numref">Obr. 217</span></a>).</p>
+<figure class="align-center" id="id5">
+<span id="neg"></span><img alt="../_images/u-neg.png" class="large" src="../_images/u-neg.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 217 </span><span class="caption-text">Sjednocení negativních oblastí <span class="fignote">(1)</span>, spojení do souvislého
+vektoru <span class="fignote">(2)</span> a zobrazení v mapovém okně <span class="fignote">(3)</span>.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pak pokračujeme krokem č. 5, viz <a class="reference internal" href="#reseni-ul2"><span class="std std-ref">Řešení</span></a>. Postup je obdobný
+jako při výběru správních obvodů pomocí <a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a>
+<sup>Vybrat prvky pomocí vzorce</sup>. Výraz <code class="docutils literal notranslate"><span class="pre">&quot;vymeraparc&quot;</span> <span class="pre">&gt;</span> <span class="pre">200000</span></code> je ten,
+kterým vybereme parcely  s výměrou nad 20 ha (<a class="reference internal" href="#parcely20ha"><span class="std std-numref">Obr. 218</span></a>). Vybrané
+prvky uložíme jako nový vektor <span class="map">parcely_20ha</span> a výběr zrušíme ikonkou
+<a class="reference internal" href="../_images/mIconSelectRemove.png"><img alt="mIconSelectRemove" src="../_images/mIconSelectRemove.png" style="width: 1.5em;" /></a>.</p>
+<figure class="align-center" id="id6">
+<span id="parcely20ha"></span><img alt="../_images/u-parcely20ha.png" src="../_images/u-parcely20ha.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 218 </span><span class="caption-text">Výběr parcel s výměrou nad 20 hektarů.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Z těchto parcel je potřebné vybrat ty, které nejsou v negativní oblasti.
+Nejdříve označíme všechny prvky vrstvy <span class="map">parcely_25ha</span>, například vybereme
+všechny <code class="docutils literal notranslate"><span class="pre">gml_id</span></code> pomocí <a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a>
+<sup>Vybrat prvky pomocí vzorce</sup>. Následně z hlavní lišty spustíme dialogové
+okno <a class="reference internal" href="../_images/select_location.png"><img alt="select_location" src="../_images/select_location.png" style="width: 1.5em;" /></a> <sup>Vybrat podle umíštění</sup>. Najdeme jej v položce
+<span class="menuselection">Vektor ‣ Výzkumné nástroje</span>. Zaškrtneme <a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a>
+<sup>Include input features that intersect the selection features</sup>, <a class="reference internal" href="../_images/checkbox1.png"><img alt="box_yes" src="../_images/checkbox1.png" style="width: 1.5em;" /></a>
+<sup>Zahrnout vstupní prvky, které překrývají/protínají prvky výběru</sup>, a jelikož
+chceme právě ty parcely, které zadané podmínky nesplňují, zvolíme možnost
+<code class="docutils literal notranslate"><span class="pre">odstraněním</span> <span class="pre">z</span> <span class="pre">aktuálního</span> <span class="pre">výběru</span></code> (<a class="reference internal" href="#vybrat-umisteni"><span class="std std-numref">Obr. 219</span></a>).</p>
+<figure class="align-center" id="id7">
+<span id="vybrat-umisteni"></span><img alt="../_images/u-vybrat-umisteni.png" src="../_images/u-vybrat-umisteni.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 219 </span><span class="caption-text">Výběr parcel podle umístění metodou odstranění z aktuálního výběru.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Výsledek (podmnožina <span class="map">parcely_20ha</span>) uložíme pomocí <code class="docutils literal notranslate"><span class="pre">Uložit</span> <span class="pre">jako</span></code> a
+zobrazíme na podkladě původního zájmového území (<a class="reference internal" href="#vysledok-ul2"><span class="std std-numref">Obr. 220</span></a>).
+Pro lepší detail použijeme <a class="reference internal" href="../_images/mActionZoomToLayer.png"><img alt="mActionZoomToLayer" src="../_images/mActionZoomToLayer.png" style="width: 1.5em;" /></a> <sup>Přiblížit na vrstvu</sup>.</p>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pro zvýraznění výsledku je průhlednost vrstvy správních celků
+nastavena na <code class="docutils literal notranslate"><span class="pre">70</span></code>
+(<span class="menuselection">Vlastnosti ‣ Styl ‣ Průhlednost vrstvy</span>).</p>
+</div>
+<figure class="align-center" id="id8">
+<span id="vysledok-ul2"></span><img alt="../_images/u-vysledok-u2.png" class="middle" src="../_images/u-vysledok-u2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 220 </span><span class="caption-text">Vhodné parcely pro výstavbu nového stavebního objektu.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Různé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qgis_pluginy.html">QGIS pluginy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="priklady.html">Příklady GIS analýz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styly.html">Příklad stylování kategorizovanou obrysovou čárou</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_aopk/ndop.html">Data AOPK</a></li>
+</ul>
+</li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="priklad_1.html" title="Ukázka jednoduchých prostorových funkcí"
+              >předchozí</a> |
+            <a href="priklad_3.html" title="Ukázka zpracování dat"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

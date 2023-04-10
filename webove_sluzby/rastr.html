@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Připojení WMS/WMTS služby &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Připojení WFS služby" href="vektor.html" />
+    <link rel="prev" title="Práce s webovými službami OGC" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Práce s webovými službami OGC"
+             accesskey="P">předchozí</a> |
+          <a href="vektor.html" title="Připojení WFS služby"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pripojeni-wms-wmts-sluzby">
+<h1>Připojení WMS/WMTS služby<a class="headerlink" href="#pripojeni-wms-wmts-sluzby" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Existuje více variant webových služeb poskytujících rastrová data.
+Nejrozšířenější službou je <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wms.html">WMS</a>. Rychlejší, ale méně
+používanou alternativou k WMS je <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wmts.html">WMTS</a>, kde &quot;T&quot; v názvu znamená
+&quot;Tile&quot;, tedy dlaždice. WMTS přistupuje k již předgenerovaným
+dlaždicím, tudíž tolik nezatěžuje server a data se ke klientovi
+dostanou rychleji. Rastrová data je možné ukládat a následně je
+zobrazovat přímo v databázích. QGIS poskytuje možnosti jak pracovat s
+daty v databázích PostGIS nebo Oracle.</p>
+<section id="pripojeni-wms-sluzby">
+<h2>Připojení WMS služby<a class="headerlink" href="#pripojeni-wms-sluzby" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Bezesporu nejpoužívanější webovou službou je <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wms.html">WMS</a> (Web Map Service). Služba
+WMS se postupem času vyvíjela a dnes můžeme narazit na různé verze
+1.0.0, 1.1.1 nebo 1.3.0. QGIS podporuje všechny verze WMS, a tak lze
+bez obav přistupovat k jakékoliv publikované službě. V QGISu je správa
+WMS a WMTS vrstev umístěna do stejného okna.</p>
+<p>Správce WMS a WMTS spustíme v záložce <span class="menuselection">Vrstva ‣ Přidat vrstvu
+‣ Přidat vrstvu WMS</span>, ikonou <a class="reference internal" href="../_images/mActionAddWmsLayer.png"><img alt="mActionAddWmsLayer" src="../_images/mActionAddWmsLayer.png" style="width: 1.5em;" /></a>
+<sup>Přidat vrstvu WMS/WMTS</sup> nebo pomocí klávesové zkratky <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>+<kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">W</kbd></kbd>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/qgis_ogc_addwms_manager.png" src="../_images/qgis_ogc_addwms_manager.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 161 </span><span class="caption-text">Okno správce WM(T)S služeb.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud nejsou ve správci vložená žádná připojení, dá se tak udělat přes tlačítko
+<span class="item">Nové</span>.</p>
+<p>Přidání a editace připojení služby WMS nebo WMTS probíhá ve formuláři
+(<a class="reference internal" href="#wmsedit"><span class="std std-numref">Obr. 162</span></a>). Pro úspěšné vložení (pokud není služba zaheslovaná
+anebo není potřeba klást na službu speciální požadavky) stačí zadat
+název služby, připojovací URL a potvrdíme tlačítkem <span class="item">Ok</span>.</p>
+<figure class="align-center" id="id2">
+<span id="wmsedit"></span><img alt="../_images/qgis_ogc_addwms_add_edit.png" class="small" src="../_images/qgis_ogc_addwms_add_edit.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 162 </span><span class="caption-text">Okno přidání/editace WMS vrstvy.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Pokud je nastaveno připojení ke službě správně, vybráním požadované služby z
+menu a potvrzením tlačítkem <span class="item">Připojit</span> proběhne komunikace se serverem.
+Po úspěšném navázání spojení, v závislosti na nastavení serveru, se zobrazí
+nabídka dostupných vrstev.</p>
+<figure class="align-center" id="id3">
+<span id="wmsedit2"></span><img alt="../_images/qgis_ogc_addwms_choose.png" src="../_images/qgis_ogc_addwms_choose.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 163 </span><span class="caption-text">Nabídka dostupných vrstev a možnosti jejich nahrání.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Tak jako tomu bylo u lokálních vektorových a rastrových dat, k
+označení více vrstev je možné použít klávesu <kbd class="kbd docutils literal notranslate">CTRL</kbd>. Přidání
+vrstvy může proběhnout jak na nejnižší úrovni stromu, kde se zpravidla
+jedná o licenční logo služby, tak je možné označit nejvyšší úroveň,
+čímž budou přidány všechny dostupné vrstvy. Některé servery mohou
+poskytovat data ve více formátech a souřadnicových systémech. Výběr
+formátu kódování obrazových dat můžeme specifikovat pod seznamem
+dostupných vrstev. V levé spodní části okna máme vypsaný použitý
+souřadnicový systém, na stejné úrovni se nachází tlačítko
+<span class="item">Změnit …</span>.  Okno pro změnu souřadnicového systému (SRS) je
+shodné s oknem definování SRS vkládaných lokálních rastrových a
+vektorových dat. QGIS v okně zobrazí pouze podporované souřadnicové
+systémy ze strany serveru. Po nastavení všech parametrů služby a
+výběru vrstev proběhne přidání vrstvy do mapového pole tlačítkem
+<span class="item">Přidat</span>. Pokud bylo vybráno více vrstev, jeví se v seznamu
+vrstev jako jedna.</p>
+</section>
+<section id="pripojeni-wmts-sluzby">
+<h2>Připojení WMTS služby<a class="headerlink" href="#pripojeni-wmts-sluzby" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jak bylo zmíněno, správa WMS a <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wmts.html">WMTS</a> probíhá ve stejném
+dialogovém okně. V předchozím kroku bylo ukázáno jak vkládat WMS
+služby. Pro připojení WMTS služby je potřeba v nabídce přidání nového
+spojení zadat URL na platný WMTS server.  Po vybrání služby a
+připojení přes tlačítko <span class="item">Připojit</span> proběhne komunikace s WMTS
+serverem. Po navázání spojení se ve správci vrstev aktivuje záložka
+<span class="item">Sady dlaždic</span> (<a class="reference internal" href="#wmts"><span class="std std-numref">Obr. 164</span></a>). Tabulka zobrazuje dostupné vrstvy
+ze serveru. V jednotlivých sloupcích je možné číst informace o názvu
+vrstvy, poskytovaném formátu i souřadnicovém systému. V tabulce není
+možné vybrat více vrstev najednou, stačí vybrat jednu vrstvu a
+potvrdit tlačítkem <span class="item">Ok</span>.</p>
+<figure class="align-center" id="id4">
+<span id="wmts"></span><img alt="../_images/qgis_ogc_addwmts_choose.png" src="../_images/qgis_ogc_addwmts_choose.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 164 </span><span class="caption-text">Záložka <span class="item">Sady dlaždic</span> při připojení na WMTS server.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>V současných verzích QGIS musíme při zadání URL WMTS serveru
+přesně specifikovat, že se jedná o WMTS. Za URL tedy přidáme:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>?SERVICE=WMTS&amp;REQUEST=GetCapabilities
+</pre></div>
+</div>
+</div>
+<section id="prace-s-wms-wmts-sluzbami-v-okne-prohlizece">
+<h3>Práce s WMS/WMTS službami v okně prohlížeče<a class="headerlink" href="#prace-s-wms-wmts-sluzbami-v-okne-prohlizece" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Procházet, editovat a přidávat WMS/WMTS připojení lze také v panelu
+prohlížeče (<a class="reference internal" href="#wmsbrowser"><span class="std std-numref">Obr. 165</span></a>). Vyvoláním kontextového menu pravým
+kliknutím na položku můžeme provádět vybrané akce.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../_images/mIconWms.png"><img alt="mIconWms" src="../_images/mIconWms.png" style="width: 1.5em;" /></a> WMS - vytvoření připojení</p></li>
+<li><p><a class="reference internal" href="../_images/mIconConnect.png"><img alt="mIconConnect" src="../_images/mIconConnect.png" style="width: 1.5em;" /></a> konkrétní připojení - editace, odstranění</p></li>
+<li><p><a class="reference internal" href="../_images/mIconWms.png"><img alt="mIconWms" src="../_images/mIconWms.png" style="width: 1.5em;" /></a> konkrétní vrstva - přidání do projektu, vlastnosti</p></li>
+</ul>
+<p>Přidat požadovanou vrstvu do projektu jde obdobně jako u lokálních dat,
+dvojitým kliknutím nebo přetažením z datového katalogu (prohlížeče).</p>
+<figure class="align-center" id="id5">
+<span id="wmsbrowser"></span><img alt="../_images/qgis_ogc_addwms_browser.png" class="small" src="../_images/qgis_ogc_addwms_browser.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 165 </span><span class="caption-text">Práce s WMS/WMTS službami v okně prohlížeče.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s webovými službami OGC</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Připojení WMS/WMTS služby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vektor.html">Připojení WFS služby</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wms_wfs_list.html">Zdroje webových služeb</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Práce s webovými službami OGC"
+              >předchozí</a> |
+            <a href="vektor.html" title="Připojení WFS služby"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

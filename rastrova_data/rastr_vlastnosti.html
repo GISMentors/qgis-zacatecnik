@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Vlastnosti rastrové vrstvy &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Terénní analýzy" href="rastr_terenni_analyzy.html" />
+    <link rel="prev" title="Export rastrových údajů" href="rastr_export.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="rastr_export.html" title="Export rastrových údajů"
+             accesskey="P">předchozí</a> |
+          <a href="rastr_terenni_analyzy.html" title="Terénní analýzy"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="vlastnosti-rastrove-vrstvy">
+<h1>Vlastnosti rastrové vrstvy<a class="headerlink" href="#vlastnosti-rastrove-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Dialog pro nastavení vlastností dané rastrové vrstvy vyvoláme buď
+levým dvouklikem nad danou vrstvou, nebo pravým klikem z kontextového
+menu zvolíme položku <span class="item">Vlastnosti</span>.</p>
+<p>Dialogové okno obsahuje deset záložek : <em>Informace</em>, <em>Zdroj</em>, <em>Symbologie</em>,
+<em>Průhlednost</em>, <em>Histogram</em>, <em>Vykreslování</em>, <em>Pyramidy</em>, <em>Metadata</em>,
+<em>Legenda</em> a <em>QGIS Server</em>.</p>
+<section id="informace">
+<h2>Informace<a class="headerlink" href="#informace" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Tato záložka by měla poskytovat informace o dané rastrové vrstvě. Jedná se
+zejména o technické parametry dat - počet sloupců a řádků, rozsah, způsob
+uložení hodnot, místo uložení, souřadnicový systém, velikost pixelu,
+počet pásem a jejich statistiky.
+Metadata popisující obsah, poskytovatele a další infromace jsou v samostatné
+záložce <span class="item">Metadata</span>.</p>
+</section>
+<section id="zdroj">
+<h2>Zdroj<a class="headerlink" href="#zdroj" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>První záložka poskytuje základní informace o vrstvě jako je název souboru, název
+vrstvy v legendě s možností editace a
+souřadnicový referenční systém (ten je možno nastavit kliknutím na tlačítko
+<a class="reference internal" href="../_images/CRS.png"><img alt="CRS" src="../_images/CRS.png" style="width: 1.5em;" /></a> <sup>Vyberte SRS</sup>).</p>
+<figure class="align-center" id="id1">
+<span id="obecneraster"></span><img alt="../_images/obecne_raster.png" src="../_images/obecne_raster.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 131 </span><span class="caption-text">Vlastnosti rastrové vrstvy.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="symbologie">
+<h2>Symbologie<a class="headerlink" href="#symbologie" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okně. Je
+možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
+být barvy invertované, dá se vylepšit kontrast, sytost, jas, rozsah
+vykreslovaných hodnot (<a class="reference internal" href="#stylraster"><span class="std std-numref">Obr. 132</span></a>).</p>
+<figure class="align-center" id="id2">
+<span id="stylraster"></span><img alt="../_images/styl_raster.png" class="large" src="../_images/styl_raster.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 132 </span><span class="caption-text">Různé styly té samé rastrové vrstvy: šedé pásmo (vlevo), pseudobarvy (vpravo).</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="typ-vykreslovani">
+<h3>Typ vykreslování<a class="headerlink" href="#typ-vykreslovani" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Rastry se používají na spojitou definici vybraného jevu v prostoru. Z tohoto
+důvodu se pro zobrazování nejčastěji používají barevné přechody. Všechny
+dostupné typy stylování jsou vyjmenovány v položce <span class="item">Typy vykreslování</span>,
+jak je vidět na obrázku <a class="reference internal" href="#styletyperaster"><span class="std std-numref">Obr. 133</span></a>.</p>
+<figure class="align-center" id="id3">
+<span id="styletyperaster"></span><img alt="../_images/style_types.png" class="middle" src="../_images/style_types.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 133 </span><span class="caption-text">Typy vykreslování u rastrových dat.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<ul>
+<li><dl>
+<dt><strong>Mnohopásmová barva</strong> - Pokud máme vícekanálový rastr, můžeme použít míchání</dt><dd><p>kanálů pro jednotlivá barevná pásma (červené, zelené a modré).</p>
+<figure class="align-center" id="id4">
+<img alt="../_images/multiband_style.png" class="middle" src="../_images/multiband_style.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 134 </span><span class="caption-text">Nastavení stylování pomocí míchání barev.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Paleta/Jedinečné hodnoty</strong> - V případě dat charakterizující přesně dané</dt><dd><p>kategorie nebo nespojitá data. (Příkladem je například orientace vůči
+světovým stranám). Pro generování barev je možné vybrat předdefinované
+škály, ale i položku <span class="item">Random Colors</span>. Použitím tlačítka
+<span class="item">Klasifikovat</span>  vygenerujeme všechny hodnoty pro vybraný kanál.
+Vygenerované kategorie je možné upravit pro zobrazení barev ale i změnit
+popisky pro legendu.</p>
+<figure class="align-center" id="id5">
+<img alt="../_images/unique_vals_style.png" class="middle" src="../_images/unique_vals_style.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 135 </span><span class="caption-text">Stylování unikátních nespojitých hodnot.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Jedno pásmo - šedi</strong> - Vykreslování spojitých veličin v odstínech bílé až</dt><dd><p>černé. Pro zvolený kanál se vybere jedna ze dvou možností barevného
+přechodu. Dle požadavku na zobrazení je možné použít některou z metod pro
+vylepšení kontrastu.</p>
+<figure class="align-center" id="id6">
+<img alt="../_images/greyscale_style.png" class="middle" src="../_images/greyscale_style.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 136 </span><span class="caption-text">Stylování spojité veličiny pro 1 kanál v odstínech šedi</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</li>
+<li><dl>
+<dt><strong>Jedno pásmo - pseudobarvy</strong> - Vykreslování spojítých veličin pomocí různých</dt><dd><p>barevných palet - rozsahů. Pomocí dalších nastavení můžeme dosáhnout různé
+efekty. Prvním nastavením je <span class="item">Interpolace</span></p>
+<ul>
+<li><dl>
+<dt><strong>Nespojitý</strong> - Klasifikace s tímto nastavením určí přesný počet barevných</dt><dd><p>tříd i s jejich rozsahem.</p>
+<figure class="align-center" id="id7">
+<img alt="../_images/pseudocolors_style1.png" class="middle" src="../_images/pseudocolors_style1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 137 </span><span class="caption-text">Stylování spojité pro nespojitou interpolaci spolu s ukázkou výstupu.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</li>
+<li><p><strong>Lineární</strong> - Barevný rozsah je spojitě rozdělen celému rozsahu hodnot.</p>
+<blockquote>
+<div><figure class="align-center" id="id8">
+<img alt="../_images/pseudocolors_style2.png" class="middle" src="../_images/pseudocolors_style2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 138 </span><span class="caption-text">Stylování spojité pro lineární interpolaci spolu s ukázkou výstupu.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div></blockquote>
+</li>
+<li><dl>
+<dt><strong>Přesný</strong> - K vybranému barevnému rozsahu jsou vygenerovány přesné hodnoty</dt><dd><p>spolu s barvou, kterou se budou vykreslovat. Vykreslují se pouze ty
+hodnoty, které jsou v tabulce uvedeny. Všechny ostatní se nezobrazují.</p>
+<figure class="align-center" id="id9">
+<img alt="../_images/pseudocolors_style3.png" class="middle" src="../_images/pseudocolors_style3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 139 </span><span class="caption-text">Stylování spojité pro přesné hodnoty spolu s ukázkou výstupu.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Dalším nastavením, kterým lze ovlyvnit zobrazení je parametr <span class="item">Modus</span>.
+Ten ovlyvňuje určování mezních hodnot pro jednotlivé kategorie symbolů.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>Spojitý</strong> - Při tomto nastavení se pouze jednoduše proloží barevná</dt><dd><p>škála zvoleným rozsahem.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Stejný interval</strong> - Při tomto nastavení je barevná škála rozdělena do</dt><dd><p>stanoveného počtu intervalů bez ohledu na četnost výskytů hodnot z
+těchto intervalů.</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Kvantil</strong> - Rozdělení do stanovenáho počtu kategorií podle počtu</dt><dd><p>výskytů, tak aby kategorie měli stejný počet výskytů mezi sebou.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Volba nastavení počtu tříd je aktivní pouze u některých typů
+nastavení.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Měnit hodnoty i barvy ve vygenerovaném nastavení lze interakvtivně.</p>
+<p>Pro generování stylů je nutné mít definovaný rozsah hodnot, pro které se
+stylování bude generovat. Toto nastavení má vícero variant. Jak je vidět na
+obrázku <a class="reference internal" href="#minmax"><span class="std std-numref">Obr. 140</span></a>, tak se jedná o automaticky vypočtené hodnoty, nebo
+o uživatelem určené hodnoty. Výpočet hodnot se buď vztahuje na celý rastr,
+nebo na jeho část.</p>
+<figure class="align-center" id="id10">
+<span id="minmax"></span><img alt="../_images/min_max_style.png" class="middle" src="../_images/min_max_style.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 140 </span><span class="caption-text">Nastavení výpočtu minimální a maximální hodnoty.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Možnost nastavení barevné škály je různých typů vykreslování. Vybírat je možné
+z předdefinovaných škál pomocí otevření menu přes šipku.
+Základní funkce je výběr z existujících škál, nebo její obrácení. Škály lze
+také upravovat, nebo upravit existující na novou a pak ji uložit.</p>
+<figure class="align-center" id="id11">
+<img alt="../_images/color_ramp_menu.png" class="middle" src="../_images/color_ramp_menu.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 141 </span><span class="caption-text">Menu pro práci s barevnými škálami.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Menu pro úpravu škály vychází z nastavení přechodu mezi 2 základními barvami.
+Mezi tyto 2 výchozí barvy lze přidat další body a upravit jejich barevnost
+nebo průhlednost. Ve spodní části je možné upravovat škálu z hlediska jejich
+vlastností jako je <span class="item">Odstín</span>, <span class="item">Sytost</span>, <span class="item">Světlost</span> a
+<span class="item">Průhlednost</span>.</p>
+<figure class="align-center" id="id12">
+<img alt="../_images/edit_color_ramp.png" class="middle" src="../_images/edit_color_ramp.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 142 </span><span class="caption-text">Upravení barevné škály.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Nastavení hodnoty směrodatné odchylky dokáže zabezpečit, aby hodnoty, které
+se příliš liší od průměru pro vrstvu, nebyly zobrazené.</p>
+</div>
+<div class="noteadvanced admonition">
+<p class="admonition-title">Poznámka pro pokročilé</p>
+<p>Další možnosti stylování nabízí lišta <span class="item">Rastr</span>, která se zapíná přes
+<span class="menuselection">Zobrazit ‣ Nástrojové lišty ‣ Rastr</span>. Například první
+položka zleva <a class="reference internal" href="../_images/mActionLocalCumulativeCutStretch.png"><img alt="mActionLocalCumulativeCutStretch" src="../_images/mActionLocalCumulativeCutStretch.png" style="width: 1.5em;" /></a> <sup>Local Cumulative Cut
+Stretch</sup> automaticky vylepší kontrast na základě minimální a maximální
+hodnoty buňky v aktuální lokální části rastru, přičemž bere do úvahy výchozí
+limity a odhadnuté hodnoty. Výsledek je na <a class="reference internal" href="#stylrstpanel"><span class="std std-numref">Obr. 143</span></a> vlevo. Volba
+<a class="reference internal" href="../_images/mActionFullHistogramStretch.png"><img alt="mActionFullHistogramStretch" src="../_images/mActionFullHistogramStretch.png" style="width: 1.5em;" /></a> <sup>Roztáhnout histogram na celý dataset</sup>
+nástrojové lišty vrátí změny zpět jak byly na <a class="reference internal" href="#stylraster"><span class="std std-numref">Obr. 132</span></a>, t.j. vyrovná
+kontrast vzhledem na celý rastr dle skutečných hodnot. Pokud pravým
+kliknutím na název vrstvy zvolíme z kontextového menu <span class="item">Zoom na
+nejvhodnější měřítko (100%)</span>, klikneme na <a class="reference internal" href="../_images/mActionLocalCumulativeCutStretch.png"><img alt="mActionLocalCumulativeCutStretch" src="../_images/mActionLocalCumulativeCutStretch.png" style="width: 1.5em;" /></a>
+<sup>Local Cumulative Cut Stretch</sup> a zvolíme <a class="reference internal" href="../_images/mIconZoom.png"><img alt="mIconZoom" src="../_images/mIconZoom.png" style="width: 1.5em;" /></a> <sup>Přiblížit na
+vrstvu</sup>, čímž vytvoříme styl znázorněný na <a class="reference internal" href="#stylrstpanel"><span class="std std-numref">Obr. 143</span></a> vpravo.</p>
+<figure class="align-center" id="id13">
+<span id="stylrstpanel"></span><img alt="../_images/styl_rst_panel.png" class="middle" src="../_images/styl_rst_panel.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 143 </span><span class="caption-text">Změna stylu rastrové vrstvy pomocí nástrojové lišty <span class="item">Rastr</span>.</span><a class="headerlink" href="#id13" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</div>
+<p>Pokud potřebujeme používat opakovaně stejné nastavení symbologie, nebo jen
+poskytnout nastavení i jiným uživatelům, tak je možné styl uložit stejným
+způsobem jako u vektorových dat. Ve spodní části záložky <span class="item">Symbologie</span>
+se nachází talčítko <span class="item">Styl</span>. Zde se nachází jak možnost uložit aktulání
+styl do souboru, tak možnost načíst styl ze souboru a nastavit ho tak danému
+rastru. Styly se ukládají v souboru s příponou <code class="file docutils literal notranslate"><span class="pre">.qml</span></code>.
+Tento soubor je v podstatě <code class="file docutils literal notranslate"><span class="pre">.xml</span></code> soubor, takže je možné ho případně
+editovat podle potřeb.</p>
+<figure class="align-center">
+<img alt="../_images/save_style.png" class="small" src="../_images/save_style.png" />
+</figure>
+</section>
+</section>
+<section id="pruhlednost">
+<h2>Průhlednost<a class="headerlink" href="#pruhlednost" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>QGIS umožňuje zobrazovat každou vrstvu v mapovém okně s různým stupněm
+průhlednosti. To je velmi výhodné, pokud například chceme, aby kromě aktuální
+rastrové vrstvy byla viditelná i jiná vrstva. Typickým příkladem je překryv
+stínovaného reliéfu jakoukoli barevnou rastrovou vrstvou. Překryv a vhodné
+nastavení průhlednosti způsobí prostorový vzhled 2D vrstvy. Konkrétní příklad je
+uveden později.</p>
+<p>Záložka umožňuje nastavit všeobecnou průhlednost, ale taktéž průhlednost pro
+každý pixel. V části o uživatelských nastaveních transparentnosti (viz
+<a class="reference internal" href="#rsttransparency"><span class="std std-numref">Obr. 144</span></a> s paletovým typem vykreslení pásma pro rastr) je možné
+nastavit hodnoty pomocí tlačítek <a class="reference internal" href="../_images/symbologyAdd.png"><img alt="symbologyAdd" src="../_images/symbologyAdd.png" style="width: 1.5em;" /></a> <sup>Zadat hodnoty ručně</sup> nebo
+<a class="reference internal" href="../_images/mActionContextHelp.png"><img alt="mActionContextHelp" src="../_images/mActionContextHelp.png" style="width: 1.5em;" /></a> <sup>Přidat hodnoty z obrazovky</sup>, dále možno
+<a class="reference internal" href="../_images/symbologyRemove.png"><img alt="symbologyRemove" src="../_images/symbologyRemove.png" style="width: 1.5em;" /></a> <sup>Odstranit vybrané řádky</sup>, hodnoty <a class="reference internal" href="../_images/mActionFileOpen.png"><img alt="mActionFileOpen" src="../_images/mActionFileOpen.png" style="width: 1.5em;" /></a>
+<sup>Importovat z</sup> nebo <a class="reference internal" href="../_images/mActionFileSave.png"><img alt="mActionFileSave" src="../_images/mActionFileSave.png" style="width: 1.5em;" /></a> <sup>Exportovat do</sup> souboru. To má
+smysl hlavně u detailnějších, časově náročných prací. Tato záložka umožňuje
+taky nastavení <em>no data</em> hodnoty (tzv. žádná data).</p>
+<figure class="align-center" id="id14">
+<span id="rsttransparency"></span><img alt="../_images/rst_transparency.png" class="middle" src="../_images/rst_transparency.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 144 </span><span class="caption-text">Možnosti nastavení průhlednosti rastrové vrstvy.</span><a class="headerlink" href="#id14" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Některé rastry můžou obsahovat samostatný kanál, ve kterém je zapsán předpis pro průhlednost jednotlivých buněk. Pokud takovýto kanál data obsahují, tak je možné nastavit průhlednost přímo pomocí nastavení tohoto kanálu.</p>
+</section>
+<section id="histogram">
+<h2>Histogram<a class="headerlink" href="#histogram" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
+(<a class="reference internal" href="#rsthistogram"><span class="std std-numref">Obr. 145</span></a>). Je vytvořen automaticky po vybrání záložky
+<span class="item">Histogram</span> ve vlastnostech vrtsvy.</p>
+<figure class="align-center" id="id15">
+<span id="rsthistogram"></span><img alt="../_images/rst_histogram.png" class="middle" src="../_images/rst_histogram.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 145 </span><span class="caption-text">Výpočet histogramu rastrové vrstvy digitálního výškového modelu terénu.</span><a class="headerlink" href="#id15" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="vykreslovani">
+<h2>Vykreslování<a class="headerlink" href="#vykreslovani" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>U některých vrstev, rastrových i vektorových, se může stát, že jejich
+vykreslování v mapovém okně má smysl pouze v rozmezí určitých měřítek.
+Toto nastavení je možné provést v záložce <span class="item">Vykreslování</span>.
+Typickým příkladem může být rastrové vykreslení druhů pozemků v kontextu
+celé republiky.</p>
+<p>Toto nastavení se často používá při WMS.</p>
+<figure class="align-center" id="id16">
+<img alt="../_images/scale_visibility.png" class="middle" src="../_images/scale_visibility.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 146 </span><span class="caption-text">Nastavení měřítkového rozsahu ve které se vrstva bude vykreslovat.</span><a class="headerlink" href="#id16" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pyramidy">
+<h2>Pyramidy<a class="headerlink" href="#pyramidy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pyramidy jsou datové struktury, které typicky obsahují větší množství dat.
+Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, že se kromě
+původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
+rozlišením pro konkrétní přiblížení). Na převzorkování se použijí různé metody,
+nejčastěji jde o metodu průměru (<em>Average</em>) nebo metodu nejbližšího souseda
+(<em>Nearest Neighbour</em>).</p>
+<figure class="align-center" id="id17">
+<img alt="../_images/pyramids1.png" class="small" src="../_images/pyramids1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 147 </span><span class="caption-text">Schéma vzniku pyramid jako zjednodušených náhledových vrstev.</span><a class="headerlink" href="#id17" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Pro vytvoření pyramid musíte mít právo zápisu do adresáře s
+původními daty.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Důležité</p>
+<p>Je potřebné vědět, že vytvoření pyramid může pozměnit originální rastr, a
+proto se doporučuje vytvoření zálohy původní bezpyramidové verze dat.</p>
+</div>
+</section>
+<section id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Zde je možné  číst a editovat metadatové údaje o vrstvě. Uvádění těchto
+definic je nutné zejména v případě, že se jedná o oficiálně poskytovaná data
+a je dobré u nich uvádět detaily o poskytovateli, jako i o datech samotných.</p>
+<figure class="align-center" id="id18">
+<img alt="../_images/raster_metadata.png" class="middle" src="../_images/raster_metadata.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 148 </span><span class="caption-text">Metadatové položky u rastrové vrstvy.</span><a class="headerlink" href="#id18" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="legenda">
+<h2>Legenda<a class="headerlink" href="#legenda" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Tato položka v menu umožňuje rozšiřovat funkcionalitu dostupnou přímo v panelu
+vrstev.
+Ve vchozím nastavení je možné přidat pouze ovládání průhlednosti.
+Přidání dalších nástrojů je možné pomocí rozšiřujících pluginů.
+Přidávání a odebírání je možné pomocí šipek <a class="reference internal" href="../_images/mActionArrowRight.png"><img alt="mActionArrowRight" src="../_images/mActionArrowRight.png" style="width: 1.5em;" /></a> nebo
+<a class="reference internal" href="../_images/mActionArrowLeft.png"><img alt="mActionArrowLeft" src="../_images/mActionArrowLeft.png" style="width: 1.5em;" /></a>.</p>
+<figure class="align-center" id="id19">
+<img alt="../_images/raster_legend_widget.png" class="middle" src="../_images/raster_legend_widget.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 149 </span><span class="caption-text">Dialog pro přidávání tzv. „widgets“. Následně je pak dostupný v panelu vrstev.</span><a class="headerlink" href="#id19" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="qgis-server">
+<h2>QGIS Server<a class="headerlink" href="#qgis-server" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Pomocí nastavení v této záložce je možné pracovat se základními parametry pro
+publikaci dat pomocí technologie QGIS Server.
+Jedná se o pokročilou finkcionalitu.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Práce s rastrovými daty</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rastr_import.html">Nahrání rastrových údajů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_export.html">Export rastrových údajů</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Vlastnosti rastrové vrstvy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_terenni_analyzy.html">Terénní analýzy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_kalkulator.html">Použití rastrového kalkulátoru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_kalkulator.html#pouziti-rastroveho-kalkulatoru-pro-urceni-mist-potencialne-vhodnych-pro-umisteni-solarni-elektrarny">Použití rastrového kalkulátoru pro určení míst potenciálně vhodných pro umístění solární elektrárny</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rastr_kalkulator.html#pouziti-rastroveho-kalkulatoru-pro-reklasifikaci">Použití rastrového kalkulátoru pro reklasifikaci</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vrstevnice.html">Generování vrstevnic</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="rastr_export.html" title="Export rastrových údajů"
+              >předchozí</a> |
+            <a href="rastr_terenni_analyzy.html" title="Terénní analýzy"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

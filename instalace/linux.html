@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ubuntu Linux &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="MS Windows" href="windows.html" />
+    <link rel="prev" title="Instalace" href="index.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="index.html" title="Instalace"
+             accesskey="P">předchozí</a> |
+          <a href="windows.html" title="MS Windows"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ubuntu-linux">
+<span id="index-0"></span><h1>Ubuntu Linux<a class="headerlink" href="#ubuntu-linux" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>Instalace programů v operačním systému Ubuntu je založená na
+tzv. balíčcích, které jsou k dispozici v repozitářích.  Některé
+repozitáře mohou obsahovat starší verze systému QGIS, proto je nutné
+dbát na způsob instalace. Instalace v Ubuntu je popsána ve dvou
+základních způsobech - instalace přes <em>Terminál</em> a pomocí <em>Centra
+softweru pro Ubuntu</em>.</p>
+<section id="terminal">
+<h2>Terminál<a class="headerlink" href="#terminal" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Podrobný postup jak nainstalovat požadovanou verzi (Latest/Long Term) lze
+nálezt v instalační příručce v
+<a class="reference external" href="https://www.qgis.org/en/site/forusers/alldownloads.html#linux">QGIS dokumentaci</a>.
+Zde také naleznete odkazy na repozitáře těchto verzí.</p>
+<p>Instalaci můžeme provézt dvěma základními způsoby, a to buď se závislostmi na
+repozitáři UbuntuGIS či nikoliv.</p>
+<p>V případě <a class="reference external" href="https://launchpad.net/~ubuntugis">UbuntuGIS</a> máte dvě
+možnosti, zvolit repositář <em>Stable</em> či <em>Unstable</em>. Oba repositáře obsahují
+pouze QGIS LTR verzi. Pokud máte zájem o skutečně aktuální verzi QGIS
+LTR zvolte repositář Unstable. Příklad instalace níže.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:ubuntugis/ubuntugis-unstable
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>qgis
+</pre></div>
+</div>
+<p>Další možností je použit oficiální baličky QGIS. V tomto případě
+musíte přidat repositář do zdrojů softwaru systému, a to přes aplikaci
+<span class="item">software-sources</span> nebo editací souboru
+<code class="file docutils literal notranslate"><span class="pre">/etc/apt/sources.list</span></code>. Zdroje přidáme v následujícím tvaru:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deb<span class="w">     </span>*repository*<span class="w"> </span>*codename*<span class="w"> </span>main
+deb-src<span class="w"> </span>*repository*<span class="w"> </span>*codename*<span class="w"> </span>main
+</pre></div>
+</div>
+<p>Příklad pro případnou instalaci LTR verze na Ubuntu 18.04 (LTS)
+Bionic:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>deb<span class="w">     </span>http://qgis.org/ubuntu-ltr<span class="w"> </span>bionic<span class="w"> </span>main
+deb-src<span class="w"> </span>http://qgis.org/ubuntu-ltr<span class="w"> </span>bionic<span class="w"> </span>main
+</pre></div>
+</div>
+<p>Poté již můžete QGIS nainstalovat podobným způsobem jako z UbuntuGIS
+(zde uvedeno s dalšími užitečnými balíčky).</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>qgis<span class="w"> </span>python-qgis<span class="w"> </span>qgis-plugin-grass
+</pre></div>
+</div>
+</section>
+<section id="centrum-softwaru-pro-ubuntu">
+<h2>Centrum softwaru pro Ubuntu<a class="headerlink" href="#centrum-softwaru-pro-ubuntu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jedná se o jednoduchého grafického správce balíčků umožňující jejich
+instalaci. Je dostupný z menu přes ikonu <a class="reference internal" href="../_images/aplikace_ikona.png"><img alt="aplikace_ikona" src="../_images/aplikace_ikona.png" style="width: 1.5em;" /></a>. Ve
+vyhledávacím okně lze zadat „QGIS“ a následně se vypíšou všechny
+dostupné aplikace. Pomocí tlačítka <span class="item">Další informace</span> lze otevřít
+detailní popis nabízeného systému. Hlavní informací je zejména verze
+systému QGIS, kterou instalací získáme. Samotnou instalaci lze provést
+tlačítkem <span class="item">Nainstalovat</span>.</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/centrum_soft.png" class="middle" src="../_images/centrum_soft.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 6 </span><span class="caption-text">Výběr QGISu přes Centrum softwaru pro Ubuntu.</span><a class="headerlink" href="#id1" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../intro/index.html">První kroky</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Instalace</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/prvni_kroky.html">Úvod do systému QGIS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/popis_rozhrani.html">Popis rozhraní</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/zakladni_nastaveni.html">Základní nastavení</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../intro/import_export.html">Přidávání a export geodat</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ruzne/index.html">Různé</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="index.html" title="Instalace"
+              >předchozí</a> |
+            <a href="windows.html" title="MS Windows"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Ukázka zpracování dat &#8212; Školení QGIS pro začátečníky</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/gismentors.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Rejstřík" href="../genindex.html" />
+    <link rel="search" title="Vyhledávání" href="../search.html" />
+    <link rel="next" title="Příklad stylování kategorizovanou obrysovou čárou" href="styly.html" />
+    <link rel="prev" title="Ukázka kombinace prostorových funkcí a dotazů" href="priklad_2.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+        <div class="headertitle"><a
+          href="../index.html">Školení QGIS pro začátečníky</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="priklad_2.html" title="Ukázka kombinace prostorových funkcí a dotazů"
+             accesskey="P">předchozí</a> |
+          <a href="styly.html" title="Příklad stylování kategorizovanou obrysovou čárou"
+             accesskey="N">další</a> |
+          <a href="../genindex.html" title="Obecný rejstřík"
+             accesskey="I">rejstřík</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="ukazka-zpracovani-dat">
+<h1>Ukázka zpracování dat<a class="headerlink" href="#ukazka-zpracovani-dat" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<p>V následující ukázce je popsán postup zpracování informací o obcích ČR,
+které jsou získány z registru <a class="reference external" href="http://www.cuzk.cz/ruian/RUIAN.aspx">RÚIAN</a>. Tato data zkombinujeme z
+daty, která jsou poskytována <a class="reference external" href="https://www.czso.cz/">Českým statistickým úřadem</a>.</p>
+<p>Požadovaným výsledkem je jednak grafická vizualizace různých
+statistických údajů, které jsou odvozeny ze základních ukazatelů, ale
+také kombinace dat pomocí prostorových analýz s jinými datovými
+sadami.</p>
+<section id="podkladova-data">
+<h2>Podkladová data<a class="headerlink" href="#podkladova-data" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jak již bylo zmíněno, budeme používat datovou sadu <em>obcí ČR</em> z datasetu <em>RÚIAN</em>.</p>
+<p>Další datová sada pochází ze statistického úřadu. Tyto data poskytují
+různorodé údaje definující sadu faktorů pro každou obec.  Data
+je možné získat <a class="reference external" href="https://www.czso.cz/csu/czso/csu_a_uzemne_analyticke_podklady">zde</a>
+(<em>Aktuální údaje za všechny obce ČR (data mimo SLDB)</em>) i s popisem
+evidovaných hodnot.</p>
+</section>
+<section id="priprava-dat">
+<h2>Příprava dat<a class="headerlink" href="#priprava-dat" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jako první si načteme vrstvu obcí. Můžeme použít předpřipravená data
+ze <a class="reference external" href="http://training.gismentors.eu/geodata/qgis/data.zip">školení QGIS</a>.</p>
+<p>Data ze statistického úřadu nejprve upravíme. Jako první si odstraníme
+řádky 1-3,5,6 a takto upravenou tabulku si uložíme do formátu
+<a class="reference external" href="http://cs.wikipedia.org/wiki/CSV">CSV</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Varování</p>
+<p>Některé sloupce, které mají číslenou hodnotu je vhodné upravit.
+Například sloupce spadající pod kategorii 30 (výměry druhů pozemků) obsahujou
+pomlčku. Při importu
+takovýchto dat bude pak atribut používán jako <em>textový řetězec</em> a ne jako
+<em>číslo</em>.</p>
+<p>Takovéto hodnoty je lepší hromadně nahradit vhodnou hodnotou.
+Podobný případ se týká například sloupce 8.5 (počet dlouhodobě
+nezaměstnaných). Zde jsou sice uvedeny všude <em>čísla</em>, ale pokud je celé číslo
+čtyřciferné tak jsou stovky a tisíce <em>odděleny mezerou</em>. I tento případ je
+nutné opravit, jinak <em>není možné provádět matematické operace</em>.</p>
+<p>Obě opravy je možné udělat jak před importem, tak až po importu. Výběr záleží
+na uživateli.</p>
+</div>
+<p>Takto upravený soubor načteme podle <a class="reference internal" href="../vektorova_data/import_delim.html"><span class="doc">postupu</span></a> s ohledem na to, že importujeme
+<em>data bez geometrie</em>.  Vrstvu pro naše účely pojmenujeme <span class="map">stat</span>.</p>
+<figure class="align-center" id="id2">
+<span id="imported-data"></span><img alt="../_images/stat_imported_data.png" class="large" src="../_images/stat_imported_data.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 221 </span><span class="caption-text">Import tabulkových dat a zobrazení obou datových sad v QGISu.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="pripojeni-dat">
+<h2>Připojení dat<a class="headerlink" href="#pripojeni-dat" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Dalším krokem je připojení dat z vrstvy <span class="map">stat</span> k vrstvě <span class="map">obce</span> tak,
+abychom u každé obce viděli všechny atributy z obou vrstev.</p>
+<p>Klíčovým je atribut podle kterého se data z obou vrstev propojí. V
+tomto případě použijeme kód obce. Tento atribut se nachází v obou
+vrstvách - v jedné je pojmenován <em>kod_ob</em> a v druhé <em>kodobce</em>. Je to
+číselný identifikátor unikátní pro každou obec v ČR. Samotné připojení
+je popsáno v kapitole <a class="reference internal" href="../vektorova_data/join.html"><span class="doc">Připojení tabulkových dat</span></a>.  V našem případě
+bude definice připojení vypadat jako na následujícím obrázku
+<a class="reference internal" href="../vektorova_data/join.html#join"><span class="std std-numref">Obr. 100</span></a>.</p>
+<figure class="align-center" id="id3">
+<span id="join"></span><img alt="../_images/stat_join.png" class="small" src="../_images/stat_join.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 222 </span><span class="caption-text">Připojení atributů vrstvy stat k vrstvě obce.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Po tomto kroku máme všechna data z vrstvy <span class="map">stat</span> připojené ke
+stávajícím atributům vrstvy <span class="map">obce</span> a můžeme je využít na další
+zpracování.</p>
+</section>
+<section id="vypocet-podilu-zemedelske-pudy-v-obcich">
+<h2>Výpočet podílu zemědělské půdy v obcích<a class="headerlink" href="#vypocet-podilu-zemedelske-pudy-v-obcich" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Data, která jsme si v předchozím kroku připojili obsahují i atribut
+určující <em>rozlohu zemědělské půdy v daném území</em> <span class="dbcolumn">30.12</span> a
+také <em>celkovou rozlohu území obce</em> <span class="dbcolumn">30.13</span>.  Z těchto hodnot
+spočteme <em>podíl zemědělské půdy pro všechny obce v procentech</em>. Tuto
+hodnotu uložíme jako nový atribut (můžeme a nemusíme) a následně
+provedeme vizualizaci těchto hodnot.</p>
+<p>Pomocí <a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> <sup>Kalkulčka polí</sup> si nadefinujeme výpočet
+hledané hodnoty a jejich uložení do nového atributu. Na <a class="reference internal" href="#fieldcalc1"><span class="std std-numref">Obr. 223</span></a>
+je zadáno vytvoření nového atributu <span class="dbcolumn">zem_puda_p</span> (desetiné čílo). Výpočet
+hodnoty je <em>podíl atributu zemědělské plochy k celkové ploše a převod na procenta</em>.</p>
+<figure class="align-center" id="id4">
+<span id="fieldcalc1"></span><img alt="../_images/stat_field_calc1.png" src="../_images/stat_field_calc1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 223 </span><span class="caption-text">Po dokončení výpočtu se přidá nový atribut definující procento území,
+které zabírá zemědělská plocha v každé obci. Nově přidaný atribut je nutné
+uložit.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<section id="dalsim-krokem-je-vizualizace-techto-hodnot">
+<h3>Dalším krokem je vizualizace těchto hodnot<a class="headerlink" href="#dalsim-krokem-je-vizualizace-techto-hodnot" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>U vrstvy obce nastavíme <em>odstupňované stylování</em> podle atributu
+<span class="dbcolumn">zem_puda_p</span> a zvolíme si další možnosti - jako je barevný
+rozsah, počet kategorií a jejich rozdělení a další. Při stylování je
+nutné dbát na následné použití dat.</p>
+<figure class="align-center" id="id5">
+<span id="clasification1"></span><img alt="../_images/stat_clasification1.png" class="large" src="../_images/stat_clasification1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 224 </span><span class="caption-text">Příklad klasifikace a výsledné zobrazení v mapovém okně.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="vypocet-nezamestnanosti-v-obcich">
+<h2>Výpočet nezaměstnanosti v obcích<a class="headerlink" href="#vypocet-nezamestnanosti-v-obcich" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Jedná se o podobný příklad jako je ten předešlý. Použijeme data o <em>počtu
+obyvatelů ve věku 15-64 let</em> <span class="dbcolumn">37.10</span> a <em>počet nezaměstnaných</em> <span class="dbcolumn">8.3</span>.
+Zajímavý může  být i výpočet s hodnotou <em>nezaměstnaných absolventů</em> <span class="dbcolumn">8.4</span>
+anebo <em>nezaměstnaných nad 12 měsíců</em> <span class="dbcolumn">8.5</span>.</p>
+<p>Opět použijeme <a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> <sup>Kalkulčka polí</sup> .
+Vytvoříme nové pole s názvem <span class="dbcolumn">nezam_celk</span> a hodnotu spočteme
+jako <em>podíl nezaměstnaných a obyvatelů mezi 14 a 65 přepočten na
+procenta</em>.  Nově vytvořený atribut obsahuje hodnoty procentuální
+nezaměstnanosti pro každou obec.</p>
+<figure class="align-center" id="fieldcalc2">
+<img alt="../_images/stat_field_calc2.png" src="../_images/stat_field_calc2.png" />
+</figure>
+<p>Pro vizualizaci zopakujeme postup tvorby stylu z předchozího příkladu.
+Možné stylování a výsledek je zobrazen na <a class="reference internal" href="#clasification2"><span class="std std-numref">Obr. 225</span></a>.</p>
+<figure class="align-center" id="id6">
+<span id="clasification2"></span><img alt="../_images/stat_clasification2.png" class="large" src="../_images/stat_clasification2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 225 </span><span class="caption-text">Příklad stylování a výslední zobrazení v mapovém okně.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="vyber-obci-podle-vicero-atributu">
+<h2>Výběr obcí podle vícero atributů<a class="headerlink" href="#vyber-obci-podle-vicero-atributu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>Tato data lze samozřejmě použít i k výběru. Jedním z příkladů je výběr
+území, kde dlouhodobě nezaměstnaní (<span class="dbcolumn">8.5</span>) tvoří víc než 50%
+všech nezaměstnaných (<span class="dbcolumn">8.3</span>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference internal" href="../vektorova_data/dotazovani.html#atrdotaz"><span class="std std-ref">Atributové dotazování</span></a> je popsáno v
+samostatné kapitole.</p>
+</div>
+<p>Použijeme funkci <a class="reference internal" href="../_images/mIconExpressionSelect.png"><img alt="mIconExpressionSelect" src="../_images/mIconExpressionSelect.png" style="width: 1.5em;" /></a> <sup>Vybrat prvky pomocí vzorce</sup>.
+Tento nástroj nám umožní napsat podmínku, pomocí které se vyberou pouze prvky,
+které ji splňují.</p>
+<p>V našem případě bude vypadat vzorec jako na <a class="reference internal" href="#attrib"><span class="std std-numref">Obr. 226</span></a>.  Po
+provedení se výběr aplikuje v mapovém okně i atributové tabulce -
+<a class="reference internal" href="#attrib2"><span class="std std-numref">Obr. 227</span></a>.  Je zde vidět, že z celkového počtu 6253 obcí
+<em>podmínku splňuje 749 obcí</em>.</p>
+<figure class="align-center" id="id7">
+<span id="attrib"></span><img alt="../_images/stat_attribute_select1.png" src="../_images/stat_attribute_select1.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 226 </span><span class="caption-text">Výběr obcí pomocí výrazu podílu dlouhodobě nezaměstnaných nad 50% s
+výsledkem.</span><a class="headerlink" href="#id7" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id8">
+<span id="attrib2"></span><img alt="../_images/stat_attribute_select2.png" class="large" src="../_images/stat_attribute_select2.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 227 </span><span class="caption-text">Výsledek výběru v mapovém okně a atributové tabulce.</span><a class="headerlink" href="#id8" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="vyber-obci-ktere-lezi-do-20-km-od-dalnic-a-do-10km-od-rychlostnich-silnic">
+<h2>Výběr obcí, které leží do 20 km od dálnic a do 10km  od rychlostních silnic<a class="headerlink" href="#vyber-obci-ktere-lezi-do-20-km-od-dalnic-a-do-10km-od-rychlostnich-silnic" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<p>K této analýze potřebujeme vrstvu obcí, jako v předešlých případech.
+Druhou vrstvou je vrstva silnic z datasetu OpenStreetMap - opět lze použít data
+připravené pro školení - <a class="reference external" href="http://training.gismentors.eu/geodata/qgis/data.zip">zde</a>.</p>
+<section id="novy-atribut-s-hodnotou-vzdalenosti">
+<h3>Nový atribut s hodnotou vzdálenosti<a class="headerlink" href="#novy-atribut-s-hodnotou-vzdalenosti" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Ze zadání vyplývá, že budeme hledat obalovou zónu silnic.
+Nejde ale o konstantní vzdálenost, ale o hodnotu odvíjející se od existující
+kategorie silnice.</p>
+<p>Stávající atributy vrstvy <span class="map">silnice</span> doplníme o nový atribut
+<span class="dbcolumn">okoli</span>, který vyplníme pro <em>typ = 1</em> (dálnice) hodnotou 20000 a
+pro <em>typ = 2</em> (rychlostní komunikace) 10000.</p>
+<p>Použijeme <a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> <sup>Kalkulčka polí</sup> pro nový
+atribut typu <em>integer</em> a pomocí výrazu <em>CASE</em> vyplníme hodnoty dle
+požadavku - jako na obrázku <a class="reference internal" href="#fieldcalc3"><span class="std std-numref">Obr. 228</span></a>.</p>
+<figure class="align-center" id="id9">
+<span id="fieldcalc3"></span><img alt="../_images/stat_field_calc3.png" class="large" src="../_images/stat_field_calc3.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 228 </span><span class="caption-text">Podmíněný výpočet nového atributu a ukázka výsledku v atributové tabulce.</span><a class="headerlink" href="#id9" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Poznámka</p>
+<p>Prostorové analýzy pracují s mapovými jednotkami
+souřadnicových systémů. V případě S-JTSK (<a class="reference external" href="http://epsg.io/5514">EPSG:5514</a>) se jedná o
+metry. Proto zadáváme 20 kilometrů jako 20 000 metrů.</p>
+</div>
+</section>
+<section id="vyber-dalnic-a-rychlostnich-silnic">
+<h3>Výběr dálnic a rychlostních silnic<a class="headerlink" href="#vyber-dalnic-a-rychlostnich-silnic" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Dalším krokem je <em>výběr pouze dálnic a rychlostních silnic</em>. Tento
+výběr lze provést různými způsoby:</p>
+<ol class="arabic simple">
+<li><p>použijeme <em>výběr prvku pomocí vzorce</em> a jako vzorec použijeme vzorec
+<code class="docutils literal notranslate"><span class="pre">typ</span> <span class="pre">=</span> <span class="pre">1</span> <span class="pre">OR</span> <span class="pre">typ</span> <span class="pre">=</span> <span class="pre">2</span></code></p></li>
+<li><p>použijeme <em>výběr prvku pomocí vzorce</em> a jako vzorec použijeme nově
+vytvořený atribut <code class="docutils literal notranslate"><span class="pre">okoli</span> <span class="pre">IS</span> <span class="pre">NOT</span> <span class="pre">NULL</span></code> (hodnota NULL je u ostatních
+kategorií) anebo <code class="docutils literal notranslate"><span class="pre">okoli</span> <span class="pre">=</span> <span class="pre">20000</span> <span class="pre">OR</span> <span class="pre">okoli</span> <span class="pre">=</span> <span class="pre">10000</span></code></p></li>
+<li><p>použijeme <em>kategorizované stylování</em> podle atributu
+<span class="dbcolumn">typ</span>, necháme zobrazit pouze hledané kategorie a
+provedeme <em>výběr prvků v mapovém okně</em> (můžeme vybrat pouze prvky,
+které se v mapovém okně zobrazují)</p></li>
+</ol>
+<figure class="align-center" id="id10">
+<span id="selectroads"></span><img alt="../_images/stat_select_roads.png" class="large" src="../_images/stat_select_roads.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 229 </span><span class="caption-text">Tři různé způsoby jak vybrat pouze  silnice a rychlostní cesty.</span><a class="headerlink" href="#id10" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="tvorba-obalove-zony">
+<h3>Tvorba obalové zóny<a class="headerlink" href="#tvorba-obalove-zony" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Pokud máme vybrané jenom požadované kategorie silnic, tak kolem nich
+můžeme vytvořit obalovou zónu.  Použijeme prostorovou analýzu
+<a class="reference internal" href="../vektorova_data/prostorove_analyzy.html#buffer"><span class="std std-ref">obalová zóna</span></a> <span class="menuselection">Vektor ‣ Nástroje
+geoprocessingu ‣ Obalové zóny …</span>.</p>
+<p>Podstatné je použít <em>pouze vybrané prvky</em>, velikost bufferu určíme
+atributem <span class="dbcolumn">okoli</span>. V tomto případě použijeme i možnost
+<em>rozpustit obalovou zónu</em>.</p>
+<p>Výsledkem této analýzy je nová <em>polygonová vrstva</em>.
+Po přidání do mapového okna a překrytí obou vrstev je vidět, že analýza má
+očekávaný výsledek.</p>
+<figure class="align-center" id="id11">
+<span id="buffer"></span><img alt="../_images/stat_buffer.png" class="large" src="../_images/stat_buffer.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 230 </span><span class="caption-text">Nastavení tvorby obalové zóny a zobrazení výsledku v mapovém okně.</span><a class="headerlink" href="#id11" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="prostorovy-dotaz">
+<h3>Prostorový dotaz<a class="headerlink" href="#prostorovy-dotaz" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<p>Posledním krokem je výběr na základě prostorových vztahů. Vybereme
+<em>všechny obce, které se nachází v obalové zóně</em> vytvořené v předchozím
+kroku.</p>
+<p>Použijeme tedy funkci <span class="menuselection">Vektor ‣ Výzkumné nástroje ‣
+Vybrat podle umísténí…</span> . Podstatné je dobře nadefinovat její
+kroky - vybíráme prvky z vrstvy <span class="map">obce</span>, které protínají prvky v
+<span class="map">silnice_okoli</span>. Co je nejdůležitější - jestli chceme vybrat
+obce, které do vrstvy okolí zasahují částečně anebo musí být celé
+uvnitř, což záleží na požadavcích.</p>
+<p>V našem případě hledáme obce, které <em>leží celou svou plochou uvnitř
+obalové zóny</em>.  Celé nastavení výběru, zobrazení výsledku výběru v
+mapovém okně i ukázka atributové tabulky je uvedeno na
+<a class="reference internal" href="#selectedareas"><span class="std std-numref">Obr. 231</span></a>.</p>
+<figure class="align-center" id="id12">
+<span id="selectedareas"></span><img alt="../_images/stat_selected_areas.png" class="large" src="../_images/stat_selected_areas.png" />
+<figcaption>
+<p><span class="caption-number">Obr. 231 </span><span class="caption-text">Prostorový výběr, zobrazení v mapovém okně a detail atributové
+tabulky.</span><a class="headerlink" href="#id12" title="Permalink k tomuto obrázku">¶</a></p>
+</figcaption>
+</figure>
+<p>Výsledkem tohoto výběru je <em>3120 obcí</em>, které se nachází v zadané
+vzdálenosti od dálnic a rychlostních komunikací.</p>
+<p>Pro zobrazení v mapovém okně je nutné pohrát si s vykreslováním
+jednotlivých vrstev a jejich průhledností.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">První kroky</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../vektorova_data/index.html">Práce s vektorovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rastrova_data/index.html">Práce s rastrovými daty</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../webove_sluzby/index.html">Práce s webovými službami OGC</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mapovy_vystup/index.html">Tvorba mapového výstupu</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Různé</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="qgis_pluginy.html">QGIS pluginy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="priklady.html">Příklady GIS analýz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="styly.html">Příklad stylování kategorizovanou obrysovou čárou</a></li>
+<li class="toctree-l2"><a class="reference internal" href="data_aopk/ndop.html">Data AOPK</a></li>
+</ul>
+</li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Vyhledávání</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="OK" />
+            </form>
+          </div>
+
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="priklad_2.html" title="Ukázka kombinace prostorových funkcí a dotazů"
+              >předchozí</a> |
+            <a href="styly.html" title="Příklad stylování kategorizovanou obrysovou čárou"
+              >další</a> |
+            <a href="../genindex.html" title="Obecný rejstřík"
+              >rejstřík</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014-2023 GISMentors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
