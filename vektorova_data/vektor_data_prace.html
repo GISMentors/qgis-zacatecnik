@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Vlastnosti vrstvy &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,9 +46,9 @@
           <div class="body" role="main">
             
   <section id="vlastnosti-vrstvy">
-<h1>Vlastnosti vrstvy<a class="headerlink" href="#vlastnosti-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Vlastnosti vrstvy<a class="headerlink" href="#vlastnosti-vrstvy" title="Permalink to this heading">¶</a></h1>
 <section id="atributova-tabulka">
-<h2>Atributová tabulka<a class="headerlink" href="#atributova-tabulka" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Atributová tabulka<a class="headerlink" href="#atributova-tabulka" title="Permalink to this heading">¶</a></h2>
 <p>Vektorová data se skládájí ze dvou základních složek – geometrie (body,
 linie, polygony) a informací o jednotlivých prvcích tzv. atributů.</p>
 <p>Atributovou tabulku otevřeme pomocí ikony <a class="reference internal" href="../_images/mActionOpenTable.png"><img alt="mActionOpenTable" src="../_images/mActionOpenTable.png" style="width: 1.5em;" /></a> <sup>Otevřít
@@ -110,11 +112,11 @@ podle námi definovaných pravidel</p>
 </div>
 </section>
 <section id="vlastnosti">
-<h2>Vlastnosti<a class="headerlink" href="#vlastnosti" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Vlastnosti<a class="headerlink" href="#vlastnosti" title="Permalink to this heading">¶</a></h2>
 <p>Vlastnosti vyvoláme dvojklikem na vrstvu nebo pravým tlačítkem myši
 kontextové menu a zvolíme <span class="item">Vlastnosti</span>.</p>
 <section id="informace">
-<span id="vektor-informace"></span><h3>Informace<a class="headerlink" href="#informace" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="vektor-informace"></span><h3>Informace<a class="headerlink" href="#informace" title="Permalink to this heading">¶</a></h3>
 <p>Jako první vidíme ve vlastnostech vrstvy záložku informace. Zde najdeme
 základní popis zdrojových dat - cesta k souboru, kódování, souřadnicový systém,
 ale i počet prvků a seznam atributů</p>
@@ -126,7 +128,7 @@ ale i počet prvků a seznam atributů</p>
 </figure>
 </section>
 <section id="zdroj">
-<h3>Zdroj<a class="headerlink" href="#zdroj" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Zdroj<a class="headerlink" href="#zdroj" title="Permalink to this heading">¶</a></h3>
 <p>Zde nalezneme základní nastavení ke zdroji vrstvy -
 název vrstvy, kódování textu, souřadnicový systém (SRS) a
 nastavení filtru.</p>
@@ -138,9 +140,9 @@ nastavení filtru.</p>
 </figure>
 </section>
 <section id="styl">
-<span id="styl-vrstvy"></span><h3>Styl<a class="headerlink" href="#styl" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="styl-vrstvy"></span><h3>Styl<a class="headerlink" href="#styl" title="Permalink to this heading">¶</a></h3>
 <section id="symbology-symbologie">
-<h4><a class="reference internal" href="../_images/symbology.png"><img alt="symbology" src="../_images/symbology.png" style="width: 1.5em;" /></a> Symbologie<a class="headerlink" href="#symbology-symbologie" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<h4><a class="reference internal" href="../_images/symbology.png"><img alt="symbology" src="../_images/symbology.png" style="width: 1.5em;" /></a> Symbologie<a class="headerlink" href="#symbology-symbologie" title="Permalink to this heading">¶</a></h4>
 <p>Pomocí rolovací nabídky <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> vybereme typ symbologie:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="../_images/rendererSingleSymbol.png"><img alt="rendererSingleSymbol" src="../_images/rendererSingleSymbol.png" style="width: 1.5em;" /></a><sup>Jednoduchý symbol</sup> - zde máme na výběr z
@@ -200,7 +202,7 @@ proměnné</p>
 </figure>
 </section>
 <section id="mactionlabeling-popisky">
-<h4><a class="reference internal" href="../_images/mActionLabeling.png"><img alt="mActionLabeling" src="../_images/mActionLabeling.png" style="width: 1.5em;" /></a> Popisky<a class="headerlink" href="#mactionlabeling-popisky" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<h4><a class="reference internal" href="../_images/mActionLabeling.png"><img alt="mActionLabeling" src="../_images/mActionLabeling.png" style="width: 1.5em;" /></a> Popisky<a class="headerlink" href="#mactionlabeling-popisky" title="Permalink to this heading">¶</a></h4>
 <p>Kromě rozlišení prvků pomocí symbologie lze také přidat k jednotlivým
 prvkům popisek na základě jednoho z atributů.</p>
 <figure class="align-center" id="id12">
@@ -231,7 +233,7 @@ přímým vepsáním do nabídky, nebo vytvořením vzorce pomocí kalkulátoru
 </section>
 </section>
 <section id="panel-stylovani">
-<h2>Panel stylování<a class="headerlink" href="#panel-stylovani" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Panel stylování<a class="headerlink" href="#panel-stylovani" title="Permalink to this heading">¶</a></h2>
 <p>Pro pohodlnější práci se stylováním, slouží panel stylování
 <span class="item">Stylování vrstvy</span>, který lze aktivovat pravým kliknutím na
 prázdné místo v hlavním panelu a výběrem z nabídky nebo mocí klávesové
@@ -247,9 +249,9 @@ předchozí symbologii, nebo přímo procházení historie všech změn.</p>
 </figure>
 </section>
 <section id="prace-se-styly">
-<h2>Práce se styly<a class="headerlink" href="#prace-se-styly" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Práce se styly<a class="headerlink" href="#prace-se-styly" title="Permalink to this heading">¶</a></h2>
 <section id="vice-stylu-u-vrstvy">
-<h3>Více stylů u vrstvy<a class="headerlink" href="#vice-stylu-u-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Více stylů u vrstvy<a class="headerlink" href="#vice-stylu-u-vrstvy" title="Permalink to this heading">¶</a></h3>
 <p>V rámci projektu lze vytvořit různé „verze“ nastylování u konkrétní
 vrstvy. Takto přednastavený styl můžeme potom podle potřeby měnit. Tato
 funkce může být užitečná např. při vytváření mapových výstupů
@@ -274,7 +276,7 @@ stylů</sup>.</p>
 </figure>
 </section>
 <section id="ulozeni-a-nacteni-nastaveni-vrstvy-pomoci-souboru">
-<h3>Uložení a načtení nastavení vrstvy pomocí souboru<a class="headerlink" href="#ulozeni-a-nacteni-nastaveni-vrstvy-pomoci-souboru" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Uložení a načtení nastavení vrstvy pomocí souboru<a class="headerlink" href="#ulozeni-a-nacteni-nastaveni-vrstvy-pomoci-souboru" title="Permalink to this heading">¶</a></h3>
 <p>Celé nastavení (styl, formuláře, atd.) vrstvy lze také uložit do
 samostatného souboru (<a href="#id1"><span class="problematic" id="id2">*</span></a>.qml, <a href="#id3"><span class="problematic" id="id4">*</span></a>.sld), což můžeme využít pro sdílení mezi
 kolegy, nebo pro pozdější použití nastavení vrstvy v jiném projektu.</p>
@@ -358,7 +360,7 @@ součásti nastavení se budou ukládat popř. načítat.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

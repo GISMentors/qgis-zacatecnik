@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Ukázka kombinace prostorových funkcí a dotazů &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,17 +46,17 @@
           <div class="body" role="main">
             
   <section id="ukazka-kombinace-prostorovych-funkci-a-dotazu">
-<h1>Ukázka kombinace prostorových funkcí a dotazů<a class="headerlink" href="#ukazka-kombinace-prostorovych-funkci-a-dotazu" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Ukázka kombinace prostorových funkcí a dotazů<a class="headerlink" href="#ukazka-kombinace-prostorovych-funkci-a-dotazu" title="Permalink to this heading">¶</a></h1>
 <p>Najděte vhodné parcely na území Hlavního města Prahy pro výstavbu
 nového stavebního objektu. Kvůli případnému hluku musí být vzdálené
 alespoň 500 m od železnic, jejich výměra musí být minimálně 20 ha a
 měly by se nacházet mimo městské části Praha 6, 7 a Praha 8.</p>
 <section id="data">
-<span id="data-ul2"></span><h2>Data<a class="headerlink" href="#data" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="data-ul2"></span><h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">¶</a></h2>
 <p><span class="map">spravniobvody.shp, parcely.shp, zeleznice.shp</span></p>
 </section>
 <section id="reseni">
-<span id="reseni-ul2"></span><h2>Řešení<a class="headerlink" href="#reseni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="reseni-ul2"></span><h2>Řešení<a class="headerlink" href="#reseni" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Nástrojem <em>Dissolve</em> sloučíme správní obvody a vytvoříme polygonovou vrstvu Prahy.</p></li>
 <li><p>Nástrojem <em>Clip</em> ořežeme vrstvu železnic podle polygonu Prahy.</p></li>
@@ -67,7 +69,7 @@ obalovou zónou kolem železnic (negativní oblasti).</p></li>
 </ol>
 </section>
 <section id="postup-v-qgis">
-<h2>Postup v QGIS<a class="headerlink" href="#postup-v-qgis" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Postup v QGIS<a class="headerlink" href="#postup-v-qgis" title="Permalink to this heading">¶</a></h2>
 <p>Do mapového okna pomocí <a class="reference internal" href="../_images/mActionAddOgrLayer.png"><img alt="mActionAddOgrLayer" src="../_images/mActionAddOgrLayer.png" style="width: 1.5em;" /></a> <sup>Přidat vektorovou
 vrstvu</sup> přidáme potřebná <a class="reference internal" href="#data-ul2"><span class="std std-ref">data</span></a>. Vidíme, že vrstva
 železnic je pro celou Českou republiku. Části mimo Prahy ale nebudeme
@@ -265,7 +267,7 @@ nastavena na <code class="docutils literal notranslate"><span class="pre">70</sp
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

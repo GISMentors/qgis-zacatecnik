@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Připojení WMS/WMTS služby &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="pripojeni-wms-wmts-sluzby">
-<h1>Připojení WMS/WMTS služby<a class="headerlink" href="#pripojeni-wms-wmts-sluzby" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Připojení WMS/WMTS služby<a class="headerlink" href="#pripojeni-wms-wmts-sluzby" title="Permalink to this heading">¶</a></h1>
 <p>Existuje více variant webových služeb poskytujících rastrová data.
 Nejrozšířenější službou je <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wms.html">WMS</a>. Rychlejší, ale méně
 používanou alternativou k WMS je <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wmts.html">WMTS</a>, kde &quot;T&quot; v názvu znamená
@@ -54,7 +56,7 @@ dostanou rychleji. Rastrová data je možné ukládat a následně je
 zobrazovat přímo v databázích. QGIS poskytuje možnosti jak pracovat s
 daty v databázích PostGIS nebo Oracle.</p>
 <section id="pripojeni-wms-sluzby">
-<h2>Připojení WMS služby<a class="headerlink" href="#pripojeni-wms-sluzby" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Připojení WMS služby<a class="headerlink" href="#pripojeni-wms-sluzby" title="Permalink to this heading">¶</a></h2>
 <p>Bezesporu nejpoužívanější webovou službou je <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wms.html">WMS</a> (Web Map Service). Služba
 WMS se postupem času vyvíjela a dnes můžeme narazit na různé verze
 1.0.0, 1.1.1 nebo 1.3.0. QGIS podporuje všechny verze WMS, a tak lze
@@ -109,7 +111,7 @@ výběru vrstev proběhne přidání vrstvy do mapového pole tlačítkem
 vrstev jako jedna.</p>
 </section>
 <section id="pripojeni-wmts-sluzby">
-<h2>Připojení WMTS služby<a class="headerlink" href="#pripojeni-wmts-sluzby" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Připojení WMTS služby<a class="headerlink" href="#pripojeni-wmts-sluzby" title="Permalink to this heading">¶</a></h2>
 <p>Jak bylo zmíněno, správa WMS a <a class="reference external" href="http://training.gismentors.eu/open-source-gis/standardy/ogc/wmts.html">WMTS</a> probíhá ve stejném
 dialogovém okně. V předchozím kroku bylo ukázáno jak vkládat WMS
 služby. Pro připojení WMTS služby je potřeba v nabídce přidání nového
@@ -136,7 +138,7 @@ přesně specifikovat, že se jedná o WMTS. Za URL tedy přidáme:</p>
 </div>
 </div>
 <section id="prace-s-wms-wmts-sluzbami-v-okne-prohlizece">
-<h3>Práce s WMS/WMTS službami v okně prohlížeče<a class="headerlink" href="#prace-s-wms-wmts-sluzbami-v-okne-prohlizece" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Práce s WMS/WMTS službami v okně prohlížeče<a class="headerlink" href="#prace-s-wms-wmts-sluzbami-v-okne-prohlizece" title="Permalink to this heading">¶</a></h3>
 <p>Procházet, editovat a přidávat WMS/WMTS připojení lze také v panelu
 prohlížeče (<a class="reference internal" href="#wmsbrowser"><span class="std std-numref">Obr. 165</span></a>). Vyvoláním kontextového menu pravým
 kliknutím na položku můžeme provádět vybrané akce.</p>
@@ -212,7 +214,7 @@ dvojitým kliknutím nebo přetažením z datového katalogu (prohlížeče).</p
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Prvky mapového výstupu &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,12 +46,12 @@
           <div class="body" role="main">
             
   <section id="prvky-mapoveho-vystupu">
-<span id="index-0"></span><h1>Prvky mapového výstupu<a class="headerlink" href="#prvky-mapoveho-vystupu" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<span id="index-0"></span><h1>Prvky mapového výstupu<a class="headerlink" href="#prvky-mapoveho-vystupu" title="Permalink to this heading">¶</a></h1>
 <p>Mapový výstup může obsahovat různé součásti (mapové pole, legenda,
 titulek, měřítko a jiné). Nastavení celého výstupu je popsáno krok po
 kroku až po export výstupu.</p>
 <section id="zobrazeni-pracovnich-panelu">
-<span id="index-1"></span><h2>Zobrazení pracovních panelů<a class="headerlink" href="#zobrazeni-pracovnich-panelu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-1"></span><h2>Zobrazení pracovních panelů<a class="headerlink" href="#zobrazeni-pracovnich-panelu" title="Permalink to this heading">¶</a></h2>
 <p>Pro příjemnou práci při tvorbě výsledků je vhodné mít nastavené
 zobrazování jednotlivých panelů. <em>Vypnout/zapnout</em> panel je možné v menu
 <span class="menuselection">Zobrazit ‣ Panely</span>, kde se nastaví viditelnost
@@ -63,7 +65,7 @@ nastavení zobrazených panelů.</p>
 </figure>
 </section>
 <section id="obsah-mapoveho-okna">
-<span id="index-2"></span><h2>Obsah mapového okna<a class="headerlink" href="#obsah-mapoveho-okna" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-2"></span><h2>Obsah mapového okna<a class="headerlink" href="#obsah-mapoveho-okna" title="Permalink to this heading">¶</a></h2>
 <p>Pomocí ikony <a class="reference internal" href="../_images/mActionAddMap1.png"><img alt="add_map" src="../_images/mActionAddMap1.png" style="width: 1.5em;" /></a> <sup>Přidat novou mapu</sup> se aktivuje funkce pro
 přidání výřezu s mapovým oknem. Dalším krokem je umístění výřezu pro
 mapové okno do pracovní plochy pomocí tažení myši.  Po umístění se do
@@ -150,7 +152,7 @@ zda se zobrazuje, pozici vůči rámu, orientaci a řazení.</p>
 </figure>
 </section>
 <section id="text-titulek-tiraz-doprovodny-text">
-<span id="index-4"></span><h2>Text (titulek, tiráž, doprovodný text)<a class="headerlink" href="#text-titulek-tiraz-doprovodny-text" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-4"></span><h2>Text (titulek, tiráž, doprovodný text)<a class="headerlink" href="#text-titulek-tiraz-doprovodny-text" title="Permalink to this heading">¶</a></h2>
 <p>Obvyklým požadavkem pro mapový výstup je textové pole s titulkem.
 Textové pole se přidá pomocí ikonky <a class="reference internal" href="../_images/mActionLabel1.png"><img alt="add_label" src="../_images/mActionLabel1.png" style="width: 1.5em;" /></a> <sup>Přidat nový
 popísek</sup>. Umístění textového pole probíhá stejně jako je popsané
@@ -161,7 +163,7 @@ font, zarovnání, orámování, pozadí a další různé. Textové pole se dá
 např. pro vložení tiráže či dalšího doprovodného textu</p>
 </section>
 <section id="legenda">
-<span id="index-5"></span><h2>Legenda<a class="headerlink" href="#legenda" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-5"></span><h2>Legenda<a class="headerlink" href="#legenda" title="Permalink to this heading">¶</a></h2>
 <p>Další obvyklou součástí mapového výstupu je legenda. Ta má popisovat
 jednotlivé prvky, které jsou zobrazovány.  Přidání legendy do mapového
 výstupu je možné pomocí ikonky <a class="reference internal" href="../_images/mActionAddLegend1.png"><img alt="add_legend" src="../_images/mActionAddLegend1.png" style="width: 1.5em;" /></a> <sup>Přidat novou legendu</sup>.
@@ -190,7 +192,7 @@ legendu vygenerovat z dat znova pomocí tlačítka <span class="item">Aktualizov
 </div>
 </section>
 <section id="atributova-tabulka">
-<span id="index-6"></span><h2>Atributová tabulka<a class="headerlink" href="#atributova-tabulka" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-6"></span><h2>Atributová tabulka<a class="headerlink" href="#atributova-tabulka" title="Permalink to this heading">¶</a></h2>
 <p>V některých případech je vhodné umístit do mapového výstupu i část
 atributové tabulky. Tuto lze přidat pomocí tlačítka <a class="reference internal" href="../_images/grass_edit_attributes.png"><img alt="add_attributes" src="../_images/grass_edit_attributes.png" style="width: 1.5em;" /></a>
 <sup>Přidat atributovou tabulku</sup>.</p>
@@ -224,7 +226,7 @@ tabulky do mapového výstupu.</p>
 </figure>
 </section>
 <section id="meritko">
-<span id="index-7"></span><h2>Měřítko<a class="headerlink" href="#meritko" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-7"></span><h2>Měřítko<a class="headerlink" href="#meritko" title="Permalink to this heading">¶</a></h2>
 <p>Běžnou součástí výstupu je také měřítko. To lze přidat pomocí ikony <a class="reference internal" href="../_images/mActionScaleBar1.png"><img alt="add_scale" src="../_images/mActionScaleBar1.png" style="width: 1.5em;" /></a>
 <sup>Přidat nové grafické měřítko</sup> a vložením prvku do výstupu. Výběr stylu a
 další nastavení je dostupné v záložce <span class="item">Vlastnosti položky</span> viz
@@ -239,7 +241,7 @@ jednotky a jejich popisek. Dále jsou pak ostatní nastavení pro vzhled měří
 </figure>
 </section>
 <section id="smerova-ruzice">
-<span id="index-8"></span><h2>Směrová růžice<a class="headerlink" href="#smerova-ruzice" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-8"></span><h2>Směrová růžice<a class="headerlink" href="#smerova-ruzice" title="Permalink to this heading">¶</a></h2>
 <p>Do mapového výstupu lze přidat také směrovou růžici - pomocí ikony <a class="reference internal" href="../_images/north_arrow.png"><img alt="north_arrow" src="../_images/north_arrow.png" style="width: 1.5em;" /></a>
 <sup>Přidat směrovou růžici</sup>. Pokud nemáme žádný obrázek růžice, najdeme několik typů růžic v základní QGIS SVG knihovně. Zdrojový obrázek zvolíme v
 záložce <span class="item">Vlastnosti položky</span>, zde jsou dostupná také další nastavení,
@@ -254,13 +256,13 @@ nastavit automaticky.</p>
 </figure>
 </section>
 <section id="obrazek">
-<h2>Obrázek<a class="headerlink" href="#obrazek" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Obrázek<a class="headerlink" href="#obrazek" title="Permalink to this heading">¶</a></h2>
 <p>Tento nástroj je totožný s nástrojem pro přidání směrové růžice. Je dobré si
 uvědomit, že obsah přidaného obrázku je pouze na uživateli a do mapového výstupu
 může přidat různý obsah.</p>
 </section>
 <section id="sipka">
-<h2>Šipka<a class="headerlink" href="#sipka" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Šipka<a class="headerlink" href="#sipka" title="Permalink to this heading">¶</a></h2>
 <p>Alternativní možností vytvoření směrové ružice může být pomocí ikony <a class="reference internal" href="../_images/mActionAddArrow1.png"><img alt="add_arrow" src="../_images/mActionAddArrow1.png" style="width: 1.5em;" /></a>
 <sup>Přidat šipku</sup>. Tato funkce je primárně určena ke kreslení šipek ve smyslu
 znázornění vztahů mezi jednotlivými součástmi mapové kompozice. Držením klávesy
@@ -278,7 +280,7 @@ složitější nastavení - například použít vlastní svg symboly pro začá
 </figure>
 </section>
 <section id="dalsi-prvky">
-<span id="index-9"></span><h2>Další prvky<a class="headerlink" href="#dalsi-prvky" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-9"></span><h2>Další prvky<a class="headerlink" href="#dalsi-prvky" title="Permalink to this heading">¶</a></h2>
 <p>Do mapového výstupu můžeme také přidat základní geometrické tvary <a class="reference internal" href="../_images/mActionAddBasicShape1.png"><img alt="add_shape" src="../_images/mActionAddBasicShape1.png" style="width: 1.5em;" /></a> <sup>Přidat tvar</sup>, rýsovat polygony a linie <a class="reference internal" href="../_images/mActionAddNodesShape.png"><img alt="add_nodes" src="../_images/mActionAddNodesShape.png" style="width: 1.5em;" /></a> <sup>Add Node item</sup>, nebo přidat HTML kód <a class="reference internal" href="../_images/mActionAddHtml1.png"><img alt="add_html" src="../_images/mActionAddHtml1.png" style="width: 1.5em;" /></a> <sup>Přidat HTML rám</sup>.</p>
 </section>
 </section>
@@ -338,7 +340,7 @@ složitější nastavení - například použít vlastní svg symboly pro začá
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

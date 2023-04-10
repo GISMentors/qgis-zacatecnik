@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Vlastnosti rastrové vrstvy &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="vlastnosti-rastrove-vrstvy">
-<h1>Vlastnosti rastrové vrstvy<a class="headerlink" href="#vlastnosti-rastrove-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Vlastnosti rastrové vrstvy<a class="headerlink" href="#vlastnosti-rastrove-vrstvy" title="Permalink to this heading">¶</a></h1>
 <p>Dialog pro nastavení vlastností dané rastrové vrstvy vyvoláme buď
 levým dvouklikem nad danou vrstvou, nebo pravým klikem z kontextového
 menu zvolíme položku <span class="item">Vlastnosti</span>.</p>
@@ -52,7 +54,7 @@ menu zvolíme položku <span class="item">Vlastnosti</span>.</p>
 <em>Průhlednost</em>, <em>Histogram</em>, <em>Vykreslování</em>, <em>Pyramidy</em>, <em>Metadata</em>,
 <em>Legenda</em> a <em>QGIS Server</em>.</p>
 <section id="informace">
-<h2>Informace<a class="headerlink" href="#informace" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Informace<a class="headerlink" href="#informace" title="Permalink to this heading">¶</a></h2>
 <p>Tato záložka by měla poskytovat informace o dané rastrové vrstvě. Jedná se
 zejména o technické parametry dat - počet sloupců a řádků, rozsah, způsob
 uložení hodnot, místo uložení, souřadnicový systém, velikost pixelu,
@@ -61,7 +63,7 @@ Metadata popisující obsah, poskytovatele a další infromace jsou v samostatn�
 záložce <span class="item">Metadata</span>.</p>
 </section>
 <section id="zdroj">
-<h2>Zdroj<a class="headerlink" href="#zdroj" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Zdroj<a class="headerlink" href="#zdroj" title="Permalink to this heading">¶</a></h2>
 <p>První záložka poskytuje základní informace o vrstvě jako je název souboru, název
 vrstvy v legendě s možností editace a
 souřadnicový referenční systém (ten je možno nastavit kliknutím na tlačítko
@@ -74,7 +76,7 @@ souřadnicový referenční systém (ten je možno nastavit kliknutím na tlač�
 </figure>
 </section>
 <section id="symbologie">
-<h2>Symbologie<a class="headerlink" href="#symbologie" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Symbologie<a class="headerlink" href="#symbologie" title="Permalink to this heading">¶</a></h2>
 <p>Tato záložka slouží na nastavení barevnosti rastrových dat v mapovém okně. Je
 možné nastavit vykreslování pásma, barvy nebo převzorkování. V dané vrstvě mohou
 být barvy invertované, dá se vylepšit kontrast, sytost, jas, rozsah
@@ -86,7 +88,7 @@ vykreslovaných hodnot (<a class="reference internal" href="#stylraster"><span c
 </figcaption>
 </figure>
 <section id="typ-vykreslovani">
-<h3>Typ vykreslování<a class="headerlink" href="#typ-vykreslovani" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Typ vykreslování<a class="headerlink" href="#typ-vykreslovani" title="Permalink to this heading">¶</a></h3>
 <p>Rastry se používají na spojitou definici vybraného jevu v prostoru. Z tohoto
 důvodu se pro zobrazování nejčastěji používají barevné přechody. Všechny
 dostupné typy stylování jsou vyjmenovány v položce <span class="item">Typy vykreslování</span>,
@@ -276,7 +278,7 @@ editovat podle potřeb.</p>
 </section>
 </section>
 <section id="pruhlednost">
-<h2>Průhlednost<a class="headerlink" href="#pruhlednost" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Průhlednost<a class="headerlink" href="#pruhlednost" title="Permalink to this heading">¶</a></h2>
 <p>QGIS umožňuje zobrazovat každou vrstvu v mapovém okně s různým stupněm
 průhlednosti. To je velmi výhodné, pokud například chceme, aby kromě aktuální
 rastrové vrstvy byla viditelná i jiná vrstva. Typickým příkladem je překryv
@@ -301,7 +303,7 @@ taky nastavení <em>no data</em> hodnoty (tzv. žádná data).</p>
 <p>Některé rastry můžou obsahovat samostatný kanál, ve kterém je zapsán předpis pro průhlednost jednotlivých buněk. Pokud takovýto kanál data obsahují, tak je možné nastavit průhlednost přímo pomocí nastavení tohoto kanálu.</p>
 </section>
 <section id="histogram">
-<h2>Histogram<a class="headerlink" href="#histogram" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Histogram<a class="headerlink" href="#histogram" title="Permalink to this heading">¶</a></h2>
 <p>QGIS nabízí nástroj pro generování histogramu rastrové vrstvy
 (<a class="reference internal" href="#rsthistogram"><span class="std std-numref">Obr. 145</span></a>). Je vytvořen automaticky po vybrání záložky
 <span class="item">Histogram</span> ve vlastnostech vrtsvy.</p>
@@ -313,7 +315,7 @@ taky nastavení <em>no data</em> hodnoty (tzv. žádná data).</p>
 </figure>
 </section>
 <section id="vykreslovani">
-<h2>Vykreslování<a class="headerlink" href="#vykreslovani" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Vykreslování<a class="headerlink" href="#vykreslovani" title="Permalink to this heading">¶</a></h2>
 <p>U některých vrstev, rastrových i vektorových, se může stát, že jejich
 vykreslování v mapovém okně má smysl pouze v rozmezí určitých měřítek.
 Toto nastavení je možné provést v záložce <span class="item">Vykreslování</span>.
@@ -328,7 +330,7 @@ celé republiky.</p>
 </figure>
 </section>
 <section id="pyramidy">
-<h2>Pyramidy<a class="headerlink" href="#pyramidy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Pyramidy<a class="headerlink" href="#pyramidy" title="Permalink to this heading">¶</a></h2>
 <p>Pyramidy jsou datové struktury, které typicky obsahují větší množství dat.
 Cílem je snížit výpočetní náročnost při práci s daty. Podstatou je, že se kromě
 původního rastru v plném rozlišení vytvoří zjednodušená verze (kopie s nižším
@@ -353,7 +355,7 @@ proto se doporučuje vytvoření zálohy původní bezpyramidové verze dat.</p>
 </div>
 </section>
 <section id="metadata">
-<h2>Metadata<a class="headerlink" href="#metadata" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this heading">¶</a></h2>
 <p>Zde je možné  číst a editovat metadatové údaje o vrstvě. Uvádění těchto
 definic je nutné zejména v případě, že se jedná o oficiálně poskytovaná data
 a je dobré u nich uvádět detaily o poskytovateli, jako i o datech samotných.</p>
@@ -365,7 +367,7 @@ a je dobré u nich uvádět detaily o poskytovateli, jako i o datech samotných.
 </figure>
 </section>
 <section id="legenda">
-<h2>Legenda<a class="headerlink" href="#legenda" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Legenda<a class="headerlink" href="#legenda" title="Permalink to this heading">¶</a></h2>
 <p>Tato položka v menu umožňuje rozšiřovat funkcionalitu dostupnou přímo v panelu
 vrstev.
 Ve vchozím nastavení je možné přidat pouze ovládání průhlednosti.
@@ -380,7 +382,7 @@ Přidávání a odebírání je možné pomocí šipek <a class="reference inter
 </figure>
 </section>
 <section id="qgis-server">
-<h2>QGIS Server<a class="headerlink" href="#qgis-server" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>QGIS Server<a class="headerlink" href="#qgis-server" title="Permalink to this heading">¶</a></h2>
 <p>Pomocí nastavení v této záložce je možné pracovat se základními parametry pro
 publikaci dat pomocí technologie QGIS Server.
 Jedná se o pokročilou finkcionalitu.</p>
@@ -447,7 +449,7 @@ Jedná se o pokročilou finkcionalitu.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

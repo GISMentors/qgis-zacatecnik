@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>QGIS pluginy &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="qgis-pluginy">
-<h1>QGIS pluginy<a class="headerlink" href="#qgis-pluginy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>QGIS pluginy<a class="headerlink" href="#qgis-pluginy" title="Permalink to this heading">¶</a></h1>
 <p>QGIS umožňuje práci se zásuvnými moduly, tzv. <a class="reference external" href="http://cs.wikipedia.org/wiki/https://en.wikipedia.org/wiki/Plug-in_(computing)">pluginy</a>. Ve všeobecnosti se
 jedná o software, které nepracuje samostatně, ale jako doplňkový modul jiné
 aplikace a tím rozšiřuje její funkčnost. V současnosti existuje pro QGIS víc než
@@ -59,7 +61,7 @@ napsané v programovacím jazyce Python a jsou udržovány příslušnými
 autory. Chyby, angl.  <em>bugy</em> v modulech by měly být zveřejnovány a
 dostupné na stránkách <a class="reference external" href="http://hub.qgis.org/projects/qgis-user-plugins">projektu</a>.</p>
 <section id="spravce-zasuvnych-modulu">
-<span id="spravce-plugin"></span><h2>Správce zásuvných modulů<a class="headerlink" href="#spravce-zasuvnych-modulu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="spravce-plugin"></span><h2>Správce zásuvných modulů<a class="headerlink" href="#spravce-zasuvnych-modulu" title="Permalink to this heading">¶</a></h2>
 <p>V prvním kroku v menu zvolíme <span class="menuselection">Zásuvné moduly ‣ Spravovat a instalovat
 zásuvné moduly</span>, ikona <a class="reference internal" href="../_images/mActionShowPluginManager.png"><img alt="mActionShowPluginManager" src="../_images/mActionShowPluginManager.png" style="width: 1.5em;" /></a>.
 Spustí se dialogové okno (<a class="reference internal" href="#vse"><span class="std std-numref">Obr. 190</span></a>), které slouží k prohlížení, vypínání a
@@ -139,11 +141,11 @@ může pomoci vyplnění políčka <cite>Hledat</cite> v dialogovém okně.</p>
 </div>
 </section>
 <section id="priklady-zasuvnych-modulu">
-<h2>Příklady zásuvných modulů<a class="headerlink" href="#priklady-zasuvnych-modulu" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Příklady zásuvných modulů<a class="headerlink" href="#priklady-zasuvnych-modulu" title="Permalink to this heading">¶</a></h2>
 <p>V další části si částečně ukážeme některé z užitečných a často používaných
 zásuvních modulů programu QGIS:</p>
 <section class="border" id="another-dxf-importer">
-<h3><a class="reference internal" href="../_images/another_dxf_importer.png"><img alt="1" src="../_images/another_dxf_importer.png" style="width: 1.5em;" /></a> <sup>Another DXF Importer</sup><a class="headerlink" href="#another-dxf-importer" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3><a class="reference internal" href="../_images/another_dxf_importer.png"><img alt="1" src="../_images/another_dxf_importer.png" style="width: 1.5em;" /></a> <sup>Another DXF Importer</sup><a class="headerlink" href="#another-dxf-importer" title="Permalink to this heading">¶</a></h3>
 <p>V případě, že máme k dispozici soubor AutoCAD DXF (<a class="reference external" href="https://en.wikipedia.org/wiki/AutoCAD_DXF">Drawing Exchange Format</a>), do prostředí programu QGIS ho
 umíme načíst buď přímo přes GDAL/OGR, pokud však import nedopadne podle očekávání
 pak je možné využít zásovný modul Another DXF Importer. V předchozích verzích byl
@@ -165,7 +167,7 @@ okno související se souřadnicovými systémy, systém nastavíme.</p>
 </div>
 </section>
 <section id="ziskani-souradnic">
-<h3><a class="reference internal" href="../_images/coordinate_capture.png"><img alt="2" src="../_images/coordinate_capture.png" style="width: 1.5em;" /></a> <sup>Získání souřadnic</sup><a class="headerlink" href="#ziskani-souradnic" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3><a class="reference internal" href="../_images/coordinate_capture.png"><img alt="2" src="../_images/coordinate_capture.png" style="width: 1.5em;" /></a> <sup>Získání souřadnic</sup><a class="headerlink" href="#ziskani-souradnic" title="Permalink to this heading">¶</a></h3>
 <p>Tento zásuvný modul se používá velmi jednoduše a umožňuje zobrazení
 souřadnic myši pro dva vybrané souřadnicové systémy. Dialogové okno je
 zobrazeno na <a class="reference internal" href="#zis-sur"><span class="std std-numref">Obr. 196</span></a>.  Kliknutím na ikonu <a class="reference internal" href="../_images/checkbox1.png"><img alt="geographic" src="../_images/checkbox1.png" style="width: 1.5em;" /></a>
@@ -191,7 +193,7 @@ přeložen do češtiny. Funkcionalita však zústává v zásadě stejná.</p>
 </div>
 </section>
 <section id="zasuvny-modul-sitovych-analyz">
-<h3><a class="reference internal" href="../_images/roadgraph.png"><img alt="3" src="../_images/roadgraph.png" style="width: 1.5em;" /></a> <sup>Zásuvný modul síťových analýz</sup><a class="headerlink" href="#zasuvny-modul-sitovych-analyz" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3><a class="reference internal" href="../_images/roadgraph.png"><img alt="3" src="../_images/roadgraph.png" style="width: 1.5em;" /></a> <sup>Zásuvný modul síťových analýz</sup><a class="headerlink" href="#zasuvny-modul-sitovych-analyz" title="Permalink to this heading">¶</a></h3>
 <p>Ve vrstvě polylinií modul vypočte a následně vykreslí nejkratší cestu mezi dvěma
 zvolenými body. Je napsaný v programovacím jazyku C++. Umožňuje určit
 optimální trasu  na základě délky nebo času. Výsledek je automaticky
@@ -258,7 +260,7 @@ mezi nástroji zpracování.</p>
 </figure>
 </section>
 <section id="quick-map-services">
-<h3><a class="reference internal" href="../_images/quickmapservices.png"><img alt="4" src="../_images/quickmapservices.png" style="width: 1.5em;" /></a> <sup>Quick Map Services</sup><a class="headerlink" href="#quick-map-services" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3><a class="reference internal" href="../_images/quickmapservices.png"><img alt="4" src="../_images/quickmapservices.png" style="width: 1.5em;" /></a> <sup>Quick Map Services</sup><a class="headerlink" href="#quick-map-services" title="Permalink to this heading">¶</a></h3>
 <p>Pomocí tohoto zásuvného modulu je možné připojovat různé mapové služby
 postavené na protokolech XYZ nebo WMS. V základním nastavení jsou např.
 Open Street Map. Je však možno přidat další a také vyhledávat dle pozice.
@@ -279,7 +281,7 @@ menu jako <span class="menuselection">Web ‣ QuickMapServices ‣ ???</span> vy
 </figure>
 </section>
 <section id="geodata-cz-sk">
-<h3><a class="reference internal" href="../_images/geodata_cz_sk.png"><img alt="5" src="../_images/geodata_cz_sk.png" style="width: 1.5em;" /></a> <sup>GeoData CZ/SK</sup><a class="headerlink" href="#geodata-cz-sk" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3><a class="reference internal" href="../_images/geodata_cz_sk.png"><img alt="5" src="../_images/geodata_cz_sk.png" style="width: 1.5em;" /></a> <sup>GeoData CZ/SK</sup><a class="headerlink" href="#geodata-cz-sk" title="Permalink to this heading">¶</a></h3>
 <p><em>GeoData CZ/SK Plugin</em> (<span class="menuselection">Zásuvné moduly ‣ GeoData ‣ Procházet datové zdroje</span>)
 umožňuje přidávat do mapového okna množství dat z oblasti České a SLovenské republiky
 obrazových služeb z XYZ a WMS zdrojů a také jiných typů zdrojů
@@ -292,7 +294,7 @@ Na <a class="reference internal" href="#p-geodata"><span class="std std-numref">
 </figure>
 </section>
 <section id="ruian">
-<h3><a class="reference internal" href="../_images/ruian.png"><img alt="6" src="../_images/ruian.png" style="width: 1.5em;" /></a> <sup>RUIAN</sup><a class="headerlink" href="#ruian" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3><a class="reference internal" href="../_images/ruian.png"><img alt="6" src="../_images/ruian.png" style="width: 1.5em;" /></a> <sup>RUIAN</sup><a class="headerlink" href="#ruian" title="Permalink to this heading">¶</a></h3>
 <p><em>RUIAN Plugin</em> umožňuje přidávat do mapového okna dat z registru RÚIAN
 (Registr územní identifikace, adres a nemovitostí).
 Na <a class="reference internal" href="#p-ruian"><span class="std std-numref">Obr. 205</span></a>  je dialogové okno pluginu.</p>
@@ -367,7 +369,7 @@ pokročilé, a to především GRASS plugin.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

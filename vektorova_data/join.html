@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Připojení tabulkových dat &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="pripojeni-tabulkovych-dat">
-<h1>Připojení tabulkových dat<a class="headerlink" href="#pripojeni-tabulkovych-dat" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Připojení tabulkových dat<a class="headerlink" href="#pripojeni-tabulkovych-dat" title="Permalink to this heading">¶</a></h1>
 <p>V této kapitole si ukážeme funkci <a class="reference internal" href="../_images/join.png"><img alt="join" src="../_images/join.png" style="width: 1.5em;" /></a> <sup>Připojení</sup> resp. její
 využití k připojení tabulkových dat k atributové tabulce vrstvy, kterou
 máme v projektu. Funkce připojení umožňuje na základě shodných hodnot
@@ -60,7 +62,7 @@ naměřená v terénu ke známým prvkům nebo např. naměřeným GPS bodům.</
 (AOPK). Připojením získáme informaci, pod jaké orgány ochrany přírody spadají
 jednotlivá území.</p>
 <section id="postup-pripojeni">
-<h2>Postup připojení<a class="headerlink" href="#postup-pripojeni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Postup připojení<a class="headerlink" href="#postup-pripojeni" title="Permalink to this heading">¶</a></h2>
 <p>Nejprve je vhodné převést naši tabulku na data s oddělenými hodnotami,
 např. formát <a class="reference external" href="http://cs.wikipedia.org/wiki/CSV">CSV</a>, což provedeme přímo v tabulkovém
 procesoru - při ukládání nebo exportu vybereme formát *.csv.</p>
@@ -120,7 +122,7 @@ připojení.</p>
 </figcaption>
 </figure>
 <section id="zakladni-nastaveni-pripojeni">
-<h3>Základní nastavení připojení<a class="headerlink" href="#zakladni-nastaveni-pripojeni" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Základní nastavení připojení<a class="headerlink" href="#zakladni-nastaveni-pripojeni" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p><span class="item">Připojit vrstvu</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme vrstvu (.csv tabulku)</p></li>
 <li><p><span class="item">Připojit pole</span> <a class="reference internal" href="../_images/selectstring.png"><img alt="selectstring" src="../_images/selectstring.png" style="width: 2.5em;" /></a> - vybereme atribut (týká se tabulky
@@ -130,7 +132,7 @@ vrstvy), ke kterému se bude tabulka připojovat</p></li>
 </ul>
 </section>
 <section id="dalsi-volitelne-nastaveni">
-<h3>Další volitelné nastavení<a class="headerlink" href="#dalsi-volitelne-nastaveni" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Další volitelné nastavení<a class="headerlink" href="#dalsi-volitelne-nastaveni" title="Permalink to this heading">¶</a></h3>
 <ul>
 <li><p><a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a> <span class="item">Kešovat připojenou vrstvu ve virtuální paměti</span> -
 pro rychlejší práci s daty</p></li>
@@ -248,7 +250,7 @@ funkci exportu vrstvy (<span class="menuselection">Export ‣ Save Features As�
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Tvorba nových vrstev a jejich editace &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,9 +46,9 @@
           <div class="body" role="main">
             
   <section id="tvorba-novych-vrstev-a-jejich-editace">
-<h1>Tvorba nových vrstev a jejich editace<a class="headerlink" href="#tvorba-novych-vrstev-a-jejich-editace" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Tvorba nových vrstev a jejich editace<a class="headerlink" href="#tvorba-novych-vrstev-a-jejich-editace" title="Permalink to this heading">¶</a></h1>
 <section id="vytvoreni-shapefile-vrstvy">
-<h2>Vytvoření Shapefile vrstvy<a class="headerlink" href="#vytvoreni-shapefile-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Vytvoření Shapefile vrstvy<a class="headerlink" href="#vytvoreni-shapefile-vrstvy" title="Permalink to this heading">¶</a></h2>
 <p>Novou vrstvu lze vytvořit pomocí tlačítka <a class="reference internal" href="../_images/mActionNewVectorLayer.png"><img alt="mActionNewVectorLayer" src="../_images/mActionNewVectorLayer.png" style="width: 1.5em;" /></a> <sup>Nová
 Shapefile vrstva</sup> nebo v hlavním menu <span class="menuselection">Vrstva ‣ Vytvořit
 vrstvu ‣ Nová Shapefile vrstva</span>.</p>
@@ -90,7 +92,7 @@ přidaný atribut „id“, pokud ho nechceme, lze jej také vymazat.</p>
 automaticky nahraje do projektu.</p>
 </section>
 <section id="editace-vrstvy">
-<h2>Editace vrstvy<a class="headerlink" href="#editace-vrstvy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Editace vrstvy<a class="headerlink" href="#editace-vrstvy" title="Permalink to this heading">¶</a></h2>
 <p>Editaci vrstvy spustíme pomocí tlačítka <a class="reference internal" href="../_images/mActionToggleEditing.png"><img alt="mActionToggleEditing" src="../_images/mActionToggleEditing.png" style="width: 1.5em;" /></a>
 <sup>Přepnout editaci</sup> nebo v hlavním menu <span class="menuselection">Vrstva ‣
 Přepnout editaci</span>. Spuštěním režimu editace se aktivují editační funkce
@@ -123,7 +125,7 @@ pravého kliku a následné <cite>aktivace</cite> vybrané položky.</p>
 </figure>
 <p>Zapnutí panelu <cite>Pokročilá digitalizace</cite>.</p>
 <section id="zakladni-editace-geometrie">
-<h3>Základní editace geometrie<a class="headerlink" href="#zakladni-editace-geometrie" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Základní editace geometrie<a class="headerlink" href="#zakladni-editace-geometrie" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference internal" href="../_images/mActionCapturePoint.png"><img alt="mActionCapturePoint" src="../_images/mActionCapturePoint.png" style="width: 1.5em;" /></a>, <a class="reference internal" href="../_images/mActionCaptureLine.png"><img alt="mActionCaptureLine" src="../_images/mActionCaptureLine.png" style="width: 1.5em;" /></a>, <a class="reference internal" href="../_images/mActionCapturePolygon.png"><img alt="mActionCapturePolygon" src="../_images/mActionCapturePolygon.png" style="width: 1.5em;" /></a>
 <sup>Přidat … prvek</sup> - kliknutím vytvoříme prvek (bod), nebo lomové
 body prvku (linie, polygon). V druhém případě ukončíme tvorbu prvku
@@ -213,7 +215,7 @@ vždy minimálně dva průsečíky. V případě změny tvaru polygonu bude
 </figcaption>
 </figure>
 <section id="prichytavani-snapping">
-<h4>Přichytávání (snapping)<a class="headerlink" href="#prichytavani-snapping" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<h4>Přichytávání (snapping)<a class="headerlink" href="#prichytavani-snapping" title="Permalink to this heading">¶</a></h4>
 <p>Pro topologicky čistou editaci můžeme pomocí lišty
 <span class="menuselection">Přichytávání</span> nastavit
 přichytávání kurzoru s určitou citlivostí k uzlům či segmentům
@@ -305,7 +307,7 @@ prvek a potřebujeme změnit parametry jen pro přidání konkrétního uzlu
 (např. <a class="reference internal" href="#snapvert"><span class="std std-numref">Obr. 81</span></a> a <a class="reference internal" href="#snapsegm"><span class="std std-numref">Obr. 82</span></a>).</p>
 </div>
 <section id="pokrocily-rezim-prichytavani">
-<h5>Pokročilý režim přichytávání<a class="headerlink" href="#pokrocily-rezim-prichytavani" title="Trvalý odkaz na tento nadpis">¶</a></h5>
+<h5>Pokročilý režim přichytávání<a class="headerlink" href="#pokrocily-rezim-prichytavani" title="Permalink to this heading">¶</a></h5>
 <figure class="align-center" id="id16">
 <img alt="../_images/snapping_adv.png" src="../_images/snapping_adv.png" />
 <figcaption>
@@ -336,7 +338,7 @@ překryvu, hranice na sebe čistě navazuje.</span><a class="headerlink" href="#
 </section>
 </section>
 <section id="editace-atributove-tabulky">
-<h3>Editace atributové tabulky<a class="headerlink" href="#editace-atributove-tabulky" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Editace atributové tabulky<a class="headerlink" href="#editace-atributove-tabulky" title="Permalink to this heading">¶</a></h3>
 <p>Pokud máme aktivní editaci (<a class="reference internal" href="../_images/mActionToggleEditing.png"><img alt="mActionToggleEditing" src="../_images/mActionToggleEditing.png" style="width: 1.5em;" /></a> <sup>Přepnout editaci</sup>),
 můžeme editovat nejen geometrii, ale i atributovou tabulku vrstvy. V okně
 atributové tabulky lze editaci ukládat <a class="reference internal" href="../_images/mActionSaveAllEdits.png"><img alt="mActionSaveAllEdits" src="../_images/mActionSaveAllEdits.png" style="width: 1.5em;" /></a> <sup>Uložit
@@ -358,7 +360,7 @@ základě zadaného výrazu (vzorce)</p></li>
 </section>
 </section>
 <section id="kalkulator-poli">
-<h2>Kalkulátor polí<a class="headerlink" href="#kalkulator-poli" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Kalkulátor polí<a class="headerlink" href="#kalkulator-poli" title="Permalink to this heading">¶</a></h2>
 <p>Pomocí funkce <a class="reference internal" href="../_images/mActionCalculateField.png"><img alt="mActionCalculateField" src="../_images/mActionCalculateField.png" style="width: 1.5em;" /></a> <sup>Otevřít kalkulátor polí</sup>
 můžeme zadáním výrazu provádět výpočty na základě existujících
 hodnot v atributové tabulce nebo funkcí (např. výpočet rozlohy
@@ -509,7 +511,7 @@ potvrdíme aktualizaci buď pro všechny prvky, nebo jen pro prvky vybrané.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Prostorové analýzy &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="prostorove-analyzy">
-<h1>Prostorové analýzy<a class="headerlink" href="#prostorove-analyzy" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Prostorové analýzy<a class="headerlink" href="#prostorove-analyzy" title="Permalink to this heading">¶</a></h1>
 <p>V prostředí QGIS máme k dispozici širokou škálu funkcí pro prostorové analýzy
 vektorových dat. Základní funkce nalezneme v hlavním menu
 <span class="menuselection">Vektor ‣ Nástroje geoprocessingu</span>.</p>
@@ -63,7 +65,7 @@ pomocí filtru v horní části okna (nutno zadat anglický název funkce).</p>
 </figure>
 </div>
 <section id="obalova-zona-dle-pevne-vzdalenosti-buffer">
-<span id="buffer"></span><h2>Obalová zóna dle pevné vzdálenosti (buffer)<a class="headerlink" href="#obalova-zona-dle-pevne-vzdalenosti-buffer" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="buffer"></span><h2>Obalová zóna dle pevné vzdálenosti (buffer)<a class="headerlink" href="#obalova-zona-dle-pevne-vzdalenosti-buffer" title="Permalink to this heading">¶</a></h2>
 <p>Jednou z nejzákladnějších prostorových analýz je obalová zóna
 (tzv. buffer). Obalové zóny jsou reprezentovány polygony s hranicí o
 dané vzdálenosti od prvků. U bodových prvků má obalová zóna tvar kruhu
@@ -145,7 +147,7 @@ jeden prvek</p></li>
 </figure>
 </section>
 <section id="prekryvne-analyzy">
-<h2>Překryvné analýzy<a class="headerlink" href="#prekryvne-analyzy" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Překryvné analýzy<a class="headerlink" href="#prekryvne-analyzy" title="Permalink to this heading">¶</a></h2>
 <p>Další skupinou prostorových analýz jsou tzv. překryvné analýzy. Principem je
 vytvořit novou vektorovou vrstvu na základě interakce prvků jedné nebo více
 vektorových vrstev. Pro dosažení správného výsledku je nutné, aby vrstvy byly
@@ -172,7 +174,7 @@ nahraje do projektu</p></li>
 </figcaption>
 </figure>
 <section id="orezavac-clip">
-<h3>Ořezávač (<cite>Clip</cite>)<a class="headerlink" href="#orezavac-clip" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Ořezávač (<cite>Clip</cite>)<a class="headerlink" href="#orezavac-clip" title="Permalink to this heading">¶</a></h3>
 <p>Vytvoří novou vrstvu, ve které je <cite>Vstupní vektorová vrstva</cite> ořezána
 vrstvou vybranou v nabídce <cite>Oříznout vrstvu</cite>. Prvky výstupní vrstvy
 nesou atributy pouze z vrstvy zadané jako <cite>Vstupní vektorová vrstva</cite>.</p>
@@ -184,7 +186,7 @@ nesou atributy pouze z vrstvy zadané jako <cite>Vstupní vektorová vrstva</cit
 </figure>
 </section>
 <section id="prusecik-interesction">
-<h3>Průsečík (<cite>Interesction</cite>)<a class="headerlink" href="#prusecik-interesction" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Průsečík (<cite>Interesction</cite>)<a class="headerlink" href="#prusecik-interesction" title="Permalink to this heading">¶</a></h3>
 <p>Vytvoří novou vrstvu s prvky pouze v místech překryvu vstupních vrstev. Každý
 prvek nese atributy obou vstupních vrstev.</p>
 <figure class="align-center" id="id11">
@@ -195,7 +197,7 @@ prvek nese atributy obou vstupních vrstev.</p>
 </figure>
 </section>
 <section id="sjednotit-union">
-<h3>Sjednotit (<cite>Union</cite>)<a class="headerlink" href="#sjednotit-union" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Sjednotit (<cite>Union</cite>)<a class="headerlink" href="#sjednotit-union" title="Permalink to this heading">¶</a></h3>
 <p>Vytvoří novou vrstvu se všemi původními prvky, v místech překryvu vrstev jsou
 vytvořeny nové prvky.</p>
 <figure class="align-center" id="id12">
@@ -206,7 +208,7 @@ vytvořeny nové prvky.</p>
 </figure>
 </section>
 <section id="symetricky-rozdil-symmetric-difference">
-<h3>Symetrický rozdíl (<cite>Symmetric difference</cite>)<a class="headerlink" href="#symetricky-rozdil-symmetric-difference" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Symetrický rozdíl (<cite>Symmetric difference</cite>)<a class="headerlink" href="#symetricky-rozdil-symmetric-difference" title="Permalink to this heading">¶</a></h3>
 <p>Vytvoří novou vrstvu, kde v místech překryvu vrstev nejsou vytvořeny prvky.
 Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.</p>
 <figure class="align-center" id="id13">
@@ -217,7 +219,7 @@ Prvky vznikají tedy pouze tam, kde se vstupní vrstvy nepřekrývají.</p>
 </figure>
 </section>
 <section id="rozdil-difference">
-<span id="orez"></span><h3>Rozdíl (<cite>Difference</cite>)<a class="headerlink" href="#rozdil-difference" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="orez"></span><h3>Rozdíl (<cite>Difference</cite>)<a class="headerlink" href="#rozdil-difference" title="Permalink to this heading">¶</a></h3>
 <p>Vytvoří novou vrstvu, která je rozdílem vstupních vrstev. Ve <cite>Vstupní
 vektorové vrstvě</cite> se odstraní plochy, které se překrývají s vrstvou v
 nabídce <cite>Rozdíl ve vrstvě</cite>.</p>
@@ -229,7 +231,7 @@ nabídce <cite>Rozdíl ve vrstvě</cite>.</p>
 </figure>
 </section>
 <section id="rozpustit-dissolve">
-<h3>Rozpustit (<cite>Dissolve</cite>)<a class="headerlink" href="#rozpustit-dissolve" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Rozpustit (<cite>Dissolve</cite>)<a class="headerlink" href="#rozpustit-dissolve" title="Permalink to this heading">¶</a></h3>
 <p>Vytvoří novou vrstvu, ve které jsou definované prvky jedné vrstvy sloučeny do
 jednoho. Pokud chceme aplikovat pro všechny prvky,
 zvolíme <a class="reference internal" href="../_images/checkbox.png"><img alt="checkbox" src="../_images/checkbox.png" style="width: 1.5em;" /></a><code class="xref std std-option docutils literal notranslate"><span class="pre">Dissolve</span> <span class="pre">all</span> <span class="pre">(do</span> <span class="pre">not</span> <span class="pre">use</span> <span class="pre">fields)</span></code>. Pokud chceme
@@ -331,7 +333,7 @@ obalová zóna 10 km od dálnic.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

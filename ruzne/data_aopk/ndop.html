@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Data AOPK &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/translations.js"></script>
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../../genindex.html" />
@@ -41,7 +43,7 @@
           <div class="body" role="main">
             
   <section id="data-aopk">
-<h1>Data AOPK<a class="headerlink" href="#data-aopk" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Data AOPK<a class="headerlink" href="#data-aopk" title="Permalink to this heading">¶</a></h1>
 <p>Agentura Ochrany Přírody a Krajiny ČR
 (<a class="reference external" href="http://www.ochranaprirody.cz/">AOPK ČR</a>) poskytuje různá data týkající se
 ochrany přírody (oblasti chráněných území, <a class="reference external" href="https://portal.nature.cz/publik_syst/ctihtmlpage.php?what=1035">VMB - vrstva mapování biotopů</a> , nálezy
@@ -75,7 +77,7 @@ mapování biotopů</strong> a <strong>Nálezová databáze ochrany přírody</s
 </figcaption>
 </figure>
 <section id="nalezova-databaze-ochrany-prirody">
-<h2>Nálezová databáze ochrany přírody<a class="headerlink" href="#nalezova-databaze-ochrany-prirody" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Nálezová databáze ochrany přírody<a class="headerlink" href="#nalezova-databaze-ochrany-prirody" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference external" href="https://portal.nature.cz/nd/">Nálezová databáze ochrany přírody</a> je databáze
 nálezů organismů, které jsou lokalizované v čase a prostoru. Od roku 2017 je
 databáze, s výjimkou citlivých nálezů chráněných druhů, plně dostupná
@@ -97,7 +99,7 @@ pozorování, citizen science - data od veřejnosti (aplikace BioLog). Zastoupen
 jednotlivých zdrojů lze prohlížet ve <a class="reference external" href="https://portal.nature.cz/nd/x_nd_statistiky.php">statistikách</a> na stránkách ISOP. Každý
 rok zde přibývá přibližně 1 až 1.5 milionu nových záznamů.</p>
 <section id="ndop-downloader">
-<h3>NDOP Downloader<a class="headerlink" href="#ndop-downloader" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>NDOP Downloader<a class="headerlink" href="#ndop-downloader" title="Permalink to this heading">¶</a></h3>
 <p>Pro stažení nálezových dat přímo v QGIS můžeme použít zásuvný modul
 <a class="reference external" href="https://opengeolabs.github.io/qgis-ndop-downloader/">NDOP Downloader</a>
 <a class="reference internal" href="../../_images/icon.png"><img alt="ndop_downloader" src="../../_images/icon.png" style="width: 1.5em;" /></a>. Tento zásuvný modul lze nainstalovat pomocí menu
@@ -152,7 +154,7 @@ odkazem na složku kam byla data stažena.</p>
 </figure>
 </section>
 <section id="webovy-filtr-nalezovych-dat">
-<h3>Webový filtr nálezových dat<a class="headerlink" href="#webovy-filtr-nalezovych-dat" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Webový filtr nálezových dat<a class="headerlink" href="#webovy-filtr-nalezovych-dat" title="Permalink to this heading">¶</a></h3>
 <p>Základní způsob jak stahovat data z nálezové databáze je použití webového filtru
 přímo na stránkách <a class="reference external" href="https://portal.nature.cz/nd/">Nálezová databáze ochrany přírody AOPK</a>.
 Na úvodní stránce nálezové databáze lze zadat název druhu, a po zadání vyhledání
@@ -182,7 +184,7 @@ nálezu, <em>Kartu akce</em> - podrobné informace o mapovací akci, zobrazit ko
 nález v mapě (<em>Mapa</em>) nebo otevřít <em>Kartu druhu</em>, kde jsou shrnuty informace o
 konkrétním druhu.</p>
 <section id="karta-nalezu-data-o-nalezu">
-<h4>Karta nálezu - data o nálezu<a class="headerlink" href="#karta-nalezu-data-o-nalezu" title="Trvalý odkaz na tento nadpis">¶</a></h4>
+<h4>Karta nálezu - data o nálezu<a class="headerlink" href="#karta-nalezu-data-o-nalezu" title="Permalink to this heading">¶</a></h4>
 <p>U každého nálezu je k dispozici mnoho údajů:</p>
 <blockquote>
 <div><ul class="simple">
@@ -294,7 +296,7 @@ HTML, TXT) i lokalizace nálezů (SHP):</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

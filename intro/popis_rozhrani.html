@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Popis rozhraní &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,7 +46,7 @@
           <div class="body" role="main">
             
   <section id="popis-rozhrani">
-<span id="popisrozhrani"></span><span id="index-0"></span><h1>Popis rozhraní<a class="headerlink" href="#popis-rozhrani" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<span id="popisrozhrani"></span><span id="index-0"></span><h1>Popis rozhraní<a class="headerlink" href="#popis-rozhrani" title="Permalink to this heading">¶</a></h1>
 <p>Po spuštění systému QGIS se zobrazí standardní rozhraní.
 Na obrázku níže jsou označeny základní části systému.</p>
 <div class="admonition tip">
@@ -61,7 +63,7 @@ funkčnost systému, tak je dobré si vhodně umístit nové nástroje.</p>
 </figcaption>
 </figure>
 <section id="mapove-okno-1">
-<span id="index-1"></span><h2>Mapové okno (1)<a class="headerlink" href="#mapove-okno-1" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-1"></span><h2>Mapové okno (1)<a class="headerlink" href="#mapove-okno-1" title="Permalink to this heading">¶</a></h2>
 <p>V tomto okně se vykreslují všechny zapnuté mapové vrstvy. Vykreslování
 odpovídá nastavení každé jednotlivé vrstvy.  Pořadí vykreslování
 vrstev odpovídá pořadí v panelu vrstev. Ty se tedy překreslují přes
@@ -70,7 +72,7 @@ Pokud překreslování mapového okna trvá delší dobu je vhodné nechat
 překreslit pouze nezbytné vrstvy.</p>
 </section>
 <section id="panel-vrstev-panel-prohlizece-2">
-<span id="index-2"></span><h2>Panel vrstev / Panel prohlížeče (2)<a class="headerlink" href="#panel-vrstev-panel-prohlizece-2" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-2"></span><h2>Panel vrstev / Panel prohlížeče (2)<a class="headerlink" href="#panel-vrstev-panel-prohlizece-2" title="Permalink to this heading">¶</a></h2>
 <p>Přepínač vrstev zobrazuje všechny přidané vrstvy. Jejich zobrazení
 poskytuje rychlou informaci o jejich pozici a grafickém zobrazení v
 mapovém okně.  Kliknutím pravého tlačítka na vybranou vrstvu se vyvolá
@@ -108,14 +110,14 @@ přistupovat k různým typům dat, např. vektorovým, rastrovým, databázím,
 službám.</p>
 </section>
 <section id="datovy-prohlizec-3">
-<span id="index-3"></span><h2>Datový prohlížeč (3)<a class="headerlink" href="#datovy-prohlizec-3" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-3"></span><h2>Datový prohlížeč (3)<a class="headerlink" href="#datovy-prohlizec-3" title="Permalink to this heading">¶</a></h2>
 <p>Slouží pro správu datových zdrojů jako jsou adresáře se souborovými
 formáty jako např. ESRI Shapefile, databázové zdroje jako PostgreSQL,
 MSSQL a pod a v neposlední řadě webové služby, viz
 <a class="reference internal" href="../webove_sluzby/index.html"><span class="doc">Práce s webovými službami OGC</span></a>.</p>
 </section>
 <section id="stavovy-radek-4">
-<span id="index-4"></span><h2>Stavový řádek (4)<a class="headerlink" href="#stavovy-radek-4" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-4"></span><h2>Stavový řádek (4)<a class="headerlink" href="#stavovy-radek-4" title="Permalink to this heading">¶</a></h2>
 <p>Obsahuje základní informace o nastavení mapového okna.
 Jednotlivé části jsou posány níže.</p>
 <figure class="align-center" id="id2">
@@ -125,7 +127,7 @@ Jednotlivé části jsou posány níže.</p>
 </figcaption>
 </figure>
 <section id="lokator-vyhledavac">
-<span id="index-5"></span><h3>Lokátor (vyhledávač)<a class="headerlink" href="#lokator-vyhledavac" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="index-5"></span><h3>Lokátor (vyhledávač)<a class="headerlink" href="#lokator-vyhledavac" title="Permalink to this heading">¶</a></h3>
 <p>Pro lepší orientaci mezi algoritmy, nástroji, vrstvami a dalšími součástmi je
 možné používat okno pro vyhledávání - <span class="item">Lokátor</span>.
 Zadáním části názvu vyhledávané vrstvy nebo nástroje se filtruje mezi všemi
@@ -170,7 +172,7 @@ Nastavení je v horním menu <span class="menuselection">Nastavení ‣ Možnost
 </div>
 </section>
 <section id="informace-o-stavu">
-<h3>Informace o stavu<a class="headerlink" href="#informace-o-stavu" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Informace o stavu<a class="headerlink" href="#informace-o-stavu" title="Permalink to this heading">¶</a></h3>
 <p>Pole za vyhledávačem je místo, kde se uživateli zobrazují běžné informace.
 Příkladem je vypsání zprávy o uložení projektu s vypsáním cesty k souboru
 projektu. Kousek dál je místo, kde se zobrazuje ikonka při překreslování
@@ -179,7 +181,7 @@ se aktuálně překresluje obsah mapového okna. Po ukončení vykreslování ta
 ikonka zmizí. Délka překreslování záleží na vykreslovaném obsahu.</p>
 </section>
 <section id="souradnice">
-<h3>Souřadnice<a class="headerlink" href="#souradnice" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<h3>Souřadnice<a class="headerlink" href="#souradnice" title="Permalink to this heading">¶</a></h3>
 <p>Další část stavového řádku slouží pro orientaci v mapovém okně. Zde se
 zobrazuje buď aktuální souřadnice ukazatele myši v mapovém okně, nebo tzv.
 extent (rozsah území aktuálně zobrazeného v mapovém okně). Ukázka obou možností
@@ -194,7 +196,7 @@ slouží ikona <a class="reference internal" href="../_images/extents.png"><img 
 </figure>
 </section>
 <section id="meritko">
-<span id="index-6"></span><h3>Měřítko<a class="headerlink" href="#meritko" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="index-6"></span><h3>Měřítko<a class="headerlink" href="#meritko" title="Permalink to this heading">¶</a></h3>
 <p>Další funkcí je měřítko. Tato funkce zobrazuje aktuální měřítko mapového okna.
 Umožňuje také překreslení mapového okna do jiného měřítka pomocí výběru z
 předdefinovaného seznamu měřítek.</p>
@@ -222,7 +224,7 @@ předdefinovaného seznamu měřítek.</p>
 </div>
 </section>
 <section id="prekreslovani-mapoveho-okna">
-<span id="index-7"></span><h3>Překreslování mapového okna<a class="headerlink" href="#prekreslovani-mapoveho-okna" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="index-7"></span><h3>Překreslování mapového okna<a class="headerlink" href="#prekreslovani-mapoveho-okna" title="Permalink to this heading">¶</a></h3>
 <p>Vykreslování v mapovém okně je možné nastavit různým způsobem. Standardně se
 kresba v mapovém okně překresluje při následujících akcích:</p>
 <ul class="simple">
@@ -246,7 +248,7 @@ pouze změnit obsah mapového okna.</p>
 </div>
 </section>
 <section id="souradnicovy-system">
-<span id="index-8"></span><h3>Souřadnicový systém<a class="headerlink" href="#souradnicovy-system" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="index-8"></span><h3>Souřadnicový systém<a class="headerlink" href="#souradnicovy-system" title="Permalink to this heading">¶</a></h3>
 <p>Mezi nejdůležitější nastavení patří nastavení souřadnicového systému
 mapového okna. Aktuální EPSG kód souřadnicového systému je vidět přímo
 ve stavovém řádku vedle ikony <a class="reference internal" href="../_images/CRS.png"><img alt="CRS" src="../_images/CRS.png" style="width: 1.5em;" /></a>.</p>
@@ -277,7 +279,7 @@ neočekávaného chování systému.</p>
 </section>
 </section>
 <section id="hlavni-menu-5">
-<span id="index-9"></span><h2>Hlavní menu (5)<a class="headerlink" href="#hlavni-menu-5" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<span id="index-9"></span><h2>Hlavní menu (5)<a class="headerlink" href="#hlavni-menu-5" title="Permalink to this heading">¶</a></h2>
 <p>Hlavní menu se skládá ze dvou základních částí. První je standardní menu v liště
 a druhou je nástrojová lišta.</p>
 <p>V menu se nachází zejména nástroje pro správu systému a jeho nastavení.</p>
@@ -292,7 +294,7 @@ zvlášť pro novou vrstvu.</p>
 Vypínání a zapínání jednotlivých nástrojových lišt a oken lze provádět pravým
 kliknutím na panel a výběrem z nabídky.</p>
 <section id="zakladni-nastroje-pro-pohyb-v-okne">
-<span id="index-10"></span><h3>Základní nástroje pro pohyb v okně<a class="headerlink" href="#zakladni-nastroje-pro-pohyb-v-okne" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="index-10"></span><h3>Základní nástroje pro pohyb v okně<a class="headerlink" href="#zakladni-nastroje-pro-pohyb-v-okne" title="Permalink to this heading">¶</a></h3>
 <ul>
 <li><p><a class="reference internal" href="../_images/mActionZoomIn.png"><img alt="mActionZoomIn" src="../_images/mActionZoomIn.png" style="width: 1.5em;" /></a> <sup>Přiblížit</sup>, <a class="reference internal" href="../_images/mActionZoomOut.png"><img alt="mActionZoomOut" src="../_images/mActionZoomOut.png" style="width: 1.5em;" /></a> <sup>Oddálit</sup> -
 přiblíží/oddálí vybranou oblast, pro přibližování bez vybrání
@@ -316,7 +318,7 @@ aktivní jinou funkci, např. výběr, vytváření nových prvků atd.</p>
 </ul>
 </section>
 <section id="zakladni-nastroje-vyberu">
-<span id="index-11"></span><h3>Základní nástroje výběru<a class="headerlink" href="#zakladni-nastroje-vyberu" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="index-11"></span><h3>Základní nástroje výběru<a class="headerlink" href="#zakladni-nastroje-vyberu" title="Permalink to this heading">¶</a></h3>
 <p>Pomocí těchto nástrojů lze ve vektorových datech označit konkrétní
 prvky, se kterými hodláme dále pracovat. Toto označení se nazývá
 <code class="xref std std-option docutils literal notranslate"><span class="pre">Výběr</span></code>.</p>
@@ -342,7 +344,7 @@ zruší veškerý výběr</p></li>
 </div>
 </section>
 <section id="mereni-v-mapovem-okne">
-<span id="index-12"></span><h3>Měření v mapovém okně<a class="headerlink" href="#mereni-v-mapovem-okne" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="index-12"></span><h3>Měření v mapovém okně<a class="headerlink" href="#mereni-v-mapovem-okne" title="Permalink to this heading">¶</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Varování</p>
 <p>Nástroje pro měření jsou závislé na souřadnicovém
@@ -395,7 +397,7 @@ měření</span>.</p>
 </div>
 </section>
 <section id="index-13">
-<span id="identifikace-prvku"></span><h3>Identifikace prvku<a class="headerlink" href="#index-13" title="Trvalý odkaz na tento nadpis">¶</a></h3>
+<span id="identifikace-prvku"></span><h3>Identifikace prvku<a class="headerlink" href="#index-13" title="Permalink to this heading">¶</a></h3>
 <p>Nástroj pro identifikaci prvku slouží pro získání informací o interaktivně
 vybraném prvku v mapovém okně. Pro identifikaci je možné použít menu
 <span class="menuselection">Zobrazit ‣ Identifikovat prvky</span>, použít klávesovou zkratku
@@ -486,7 +488,7 @@ hodnot, práci s výběrem až po nastavení dané vrstvy.</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>

@@ -4,7 +4,7 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>Ukázka jednoduchých prostorových funkcí &#8212; Školení QGIS pro začátečníky</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
@@ -12,7 +12,9 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/translations.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
@@ -44,14 +46,14 @@
           <div class="body" role="main">
             
   <section id="ukazka-jednoduchych-prostorovych-funkci">
-<h1>Ukázka jednoduchých prostorových funkcí<a class="headerlink" href="#ukazka-jednoduchych-prostorovych-funkci" title="Trvalý odkaz na tento nadpis">¶</a></h1>
+<h1>Ukázka jednoduchých prostorových funkcí<a class="headerlink" href="#ukazka-jednoduchych-prostorovych-funkci" title="Permalink to this heading">¶</a></h1>
 <p>Kolik procent území ČR je ve vzdálenosti do 100 km od hranice Hlavního města Prahy?</p>
 <section id="data">
-<h2>Data<a class="headerlink" href="#data" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Data<a class="headerlink" href="#data" title="Permalink to this heading">¶</a></h2>
 <p><span class="map">kraje.shp</span></p>
 </section>
 <section id="reseni">
-<h2>Řešení<a class="headerlink" href="#reseni" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Řešení<a class="headerlink" href="#reseni" title="Permalink to this heading">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Nástrojem <em>Buffer</em> vytvoříme obalovou zónu 100 km kolem Prahy.</p></li>
 <li><p>Nástrojem <em>Dissolve</em> sloučíme kraje a vytvoříme hranici ČR.</p></li>
@@ -66,7 +68,7 @@ však lze dosáhnout stejného výsledku.</p>
 </div>
 </section>
 <section id="postup-v-qgis">
-<h2>Postup v QGIS<a class="headerlink" href="#postup-v-qgis" title="Trvalý odkaz na tento nadpis">¶</a></h2>
+<h2>Postup v QGIS<a class="headerlink" href="#postup-v-qgis" title="Permalink to this heading">¶</a></h2>
 <p>Po spuštění programu QGIS se zobrazí standardní rozhraní, viz
 <a class="reference internal" href="../intro/popis_rozhrani.html#popisrozhrani"><span class="std std-ref">Popis rozhraní</span></a>. Souřadnicový systém projektu je
 přednastavený na WGS 84 (<a class="reference external" href="http://epsg.io/4236">EPSG:4236</a>), což lze zkontrolovat ve
@@ -252,7 +254,7 @@ hranic Prahy).</p>
           
     <div class="footer" role="contentinfo">
         &#169; Copyright 2014-2023 GISMentors.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
         </div>
         <div class="clearer"></div>
