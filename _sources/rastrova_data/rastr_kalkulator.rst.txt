@@ -121,9 +121,7 @@ potřeby je možné těmto hodnotámnastavit samostatnou kategorii.
 
 .. noteadvanced::
 
-   Při reklasifikacích se obvykle používá modul systému GRASS
+   Pro reklasifikaci dat lze použít i nástroj systému GRASS
    :grasscmd:`r.reclass` (viz školení :skoleni:`GRASS GIS pro
-   začátečníky <grass-gis-zacatecnik>`).  Na to je však potřebné
-   nainstalovat zásuvný modul :item:`GRASS`, který není dostupný v
-   každé verzi *QGIS*. Cílem bylo ukázat, že reklasifikace je možná i
-   bez pluginů.
+   začátečníky <grass-gis-zacatecnik>`), který je dostupný z ``Nástrojů
+   zpracování``.
