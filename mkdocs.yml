@@ -1,0 +1,16 @@
+site_name: QGIS pro začátečníky
+site_url:  https://gismentors.github.io/qgis-zacatecnik/
+docs_dir:  docs
+theme: 
+  name: material
+  language: cs
+  features:
+    - content.code.copy
+    - navigation.footer    
+copyright: Copyright &copy; 2014-2024 GISMentors
+use_directory_urls: false
+nav:
+  - index.md
+plugins:
+  - glightbox
+
