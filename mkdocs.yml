@@ -6,11 +6,25 @@ theme:
   language: cs
   features:
     - content.code.copy
-    - navigation.footer    
+    - navigation.footer
+  palette:
+    primary: yellow
 copyright: Copyright &copy; 2014-2024 GISMentors
 use_directory_urls: false
 nav:
   - index.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption  
 plugins:
   - glightbox
-
+  - search
+  - macros
+extra:
+  wikipedia: https://cs.wikipedia.org/wiki
+  skoleni: https://gismentors.github.io
+  rarr: →
