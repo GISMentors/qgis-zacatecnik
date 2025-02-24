@@ -9,10 +9,15 @@ theme:
     - navigation.footer
   palette:
     primary: yellow
-copyright: Copyright &copy; 2014-2024 GISMentors
+copyright: Copyright &copy; 2014-2025 GISMentors
 use_directory_urls: false
 nav:
-  - index.md
+  - intro/index.md
+  - vektorova_data/index.md
+  - rastrova_data/index.md
+  - webove_sluzby/index.md
+  - mapovy_vystup/index.md
+  - ruzne/index.md
 markdown_extensions:
   - admonition
   - pymdownx.details

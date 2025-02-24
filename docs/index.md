@@ -58,7 +58,7 @@ dispozici širokou škálu nástrojů pro prohlížení, modifikaci a export
 dat. Od verze 2.0 QGIS obsahuje "Print Composer", tedy nástroj pro
 vytváření map. V tiskovém modulu lze vytvářet z nahraných dat výstupy
 se všemy kartografickými náležitostmi. Výsledky je možné exportovat do
-formátu PDF nebo obrázku, viz [[Mapový výstup]]. [?](mapovy_vystup/index.md).
+formátu PDF nebo obrázku, viz [Mapový výstup](mapovy_vystup/index.md).
 
 ![](images/example_map.png)
 /// caption
@@ -74,12 +74,12 @@ možné dopnit do QGIS novou funkcionalitu či podporu pro další formáty
 Oficiální repozitář, který je nativně k dispozici jako zdroj pluginů
 je dostupný [zde](https://plugins.qgis.org/plugins/). Instalace
 konkrétního pluginu je pak možná přímo v okně pro správu zásuvných
-modulů (pluginů) :menuselection:`Zásuvné moduly --> Spravovat a
-instalovat zásuvné moduly...`.
+modulů (pluginů) `Zásuvné moduly {{rarr}} Spravovat a instalovat
+zásuvné moduly...`.
 
 ![](images/intro_profile.png)
 /// caption
-Ukázka měření terénního profilu pomocí nástroje \"Profile tool\".
+Ukázka měření terénního profilu pomocí nástroje "Profile tool".
 ///
 
 ## Obsah školení
@@ -96,15 +96,15 @@ License](http://creativecommons.org/licenses/by-sa/4.0/).
 
 Online HTML verze textu školení je dostupná na adrese:
 
-* https://gismentors.github.io/qgis-zacatecnik/
+* <https://gismentors.github.io/qgis-zacatecnik/>
 
 Zdrojové texty školení jsou dostupné na adrese:
 
-* https://github.com/GISMentors/qgis-zacatecnik/
+* <https://github.com/GISMentors/qgis-zacatecnik/>
 
 Případné chyby nebo náměty na vylepšení můžete hlásit:
 
-* https://github.com/GISMentors/qgis-zacatecnik/issues
+* <https://github.com/GISMentors/qgis-zacatecnik/issues>
 
 *Verze textu dokumentu:* |release| (sestaveno |today|)
 
