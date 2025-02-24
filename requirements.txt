@@ -1,6 +1,5 @@
 mkdocs
-pymdown-extensions
-mkdocs-glightbox
 mkdocs-material
+mkdocs-glightbox
 mkdocs-macros-plugin
 
