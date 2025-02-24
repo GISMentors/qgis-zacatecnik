@@ -1,0 +1,49 @@
+site_name: QGIS pro začátečníky
+site_url:  https://gismentors.github.io/qgis-zacatecnik/
+docs_dir:  docs
+theme: 
+  name: material
+  language: cs
+  features:
+    - content.code.copy
+    - navigation.footer
+    - toc.integrate
+  palette:
+    primary: yellow
+copyright: Copyright &copy; 2014-2025 GISMentors
+use_directory_urls: false
+nav:
+  - První kroky:
+      - instalace/index.md
+      - intro/prvni_kroky.md
+      - intro/popis_rozhrani.md
+      - intro/zakladni_nastaveni.md
+      - intro/import_export.md
+  - Vektorová data:
+      - vektorova_data/index.md
+      - vektorova_data/vektor_import.md
+      - vektorova_data/vektor_data_prace.md
+      - vektorova_data/editace.md
+      - vektorova_data/import_delim.md
+      - vektorova_data/join.md
+      - vektorova_data/dotazovani.md
+      - vektorova_data/prostorove_analyzy.md
+  - rastrova_data/index.md
+  - webove_sluzby/index.md
+  - mapovy_vystup/index.md
+  - ruzne/index.md
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - pymdownx.blocks.caption  
+plugins:
+  - glightbox
+  - search
+  - macros
+extra:
+  wikipedia: https://cs.wikipedia.org/wiki
+  skoleni: https://gismentors.github.io
+  rarr: →
