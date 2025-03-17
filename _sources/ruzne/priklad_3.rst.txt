@@ -31,7 +31,7 @@ Příprava dat
 
 Jako první si načteme vrstvu obcí. Můžeme použít předpřipravená data
 ze `školení QGIS
-<http://training.gismentors.eu/geodata/qgis/data.zip>`__.
+<https://gismentors.cz/geodata/qgis/data.zip>`__.
 
 Data ze statistického úřadu nejprve upravíme. Jako první si odstraníme
 řádky 1-3,5,6 a takto upravenou tabulku si uložíme do formátu
@@ -199,7 +199,7 @@ Výběr obcí, které leží do 20 km od dálnic a do 10km  od rychlostních sil
 
 K této analýze potřebujeme vrstvu obcí, jako v předešlých případech. 
 Druhou vrstvou je vrstva silnic z datasetu OpenStreetMap - opět lze použít data
-připravené pro školení - `zde <http://training.gismentors.eu/geodata/qgis/data.zip>`_.
+připravené pro školení - `zde <https://gismentors.cz/geodata/qgis/data.zip>`_.
 
 Nový atribut s hodnotou vzdálenosti
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
