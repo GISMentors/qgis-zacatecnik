@@ -1,7 +1,7 @@
 Školení QGIS pro začínající uživatele
 =====================================
 
-http://training.gismentors.eu/qgis-zacatecnik
+https://gismentors.github.io/qgis-zacatecnik/
 
 Licence
 -------
